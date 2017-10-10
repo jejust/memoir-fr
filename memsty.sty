@@ -1,3 +1,4 @@
+
 %% memsty.sty    For memman
 \ProvidesPackage{memsty}[2010/02/09 for memman]
 
@@ -155,54 +156,55 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{graphicx}
-\ifpdf
-  \usepackage[pdftex,
-              plainpages=false,
-              pdfpagelabels,
-%%%  hyperfootnotes=false,
-              bookmarksnumbered,
-%              colorlinks,
-%              ocgcolorlinks, % this only works for pdflatex
-             ]{hyperref} 
-  \DeclareGraphicsRule{*}{mps}{*}{}
-\else
-  \usepackage[plainpages=false,
-  pdfpagelabels,
-%%%  hyperfootnotes=false,
-  bookmarksnumbered,
-  breaklinks,
-  % colorlinks,
-  ]{hyperref} 
-  \usepackage{breakurl}
-  \DeclareGraphicsRule{*}{eps}{*}{}
-\fi
-%%%  \usepackage{memhfixc} %% now called by hyperref
-
-
-% this is a lillt special, using this one can change the link colors
-% in the manual to blacnmk without changing any file, just use
-%
-% pdflatex "\def\MEMOIRblacklinks{}\input{memman.tex}"
-%
-\@ifundefined{MEMOIRblacklinks}{%
-  \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-  \definecolor{citecolour}{rgb}{0,0.6,0.2}
-  % \definecolor{filecolor}{rgb}{0,0.2,0.6}
-  \definecolor{urlcolour} {rgb}{0.8,0,0.8}
-}{%
-  typeout{Asked for black links, so that is what you are going to get}
-  \definecolor{linkcolour}{rgb}{0,0,0}
-  \definecolor{citecolour}{rgb}{0,0,0}
-  % \definecolor{filecolor}{rgb}{0,0,0}
-  \definecolor{urlcolour} {rgb}{0,0,0}
-  \hypersetup{colorlinks}
-}
-\hypersetup{
-    pdftitle={The memoir class},
-    pdfauthor={Peter Wilson},
-    linkcolor=linkcolour,citecolor=citecolour,
-    filecolor=urlcolour,urlcolor=urlcolour,
-  }
+%%% Moved to "translation-fr.sty"
+% \ifpdf
+%   \usepackage[pdftex,
+%               plainpages=false,
+%               pdfpagelabels,
+% %%%  hyperfootnotes=false,
+%               bookmarksnumbered,
+% %              colorlinks,
+% %              ocgcolorlinks, % this only works for pdflatex
+%              ]{hyperref} 
+%   \DeclareGraphicsRule{*}{mps}{*}{}
+% \else
+%   \usepackage[plainpages=false,
+%   pdfpagelabels,
+% %%%  hyperfootnotes=false,
+%   bookmarksnumbered,
+%   breaklinks,
+%   % colorlinks,
+%   ]{hyperref} 
+%   \usepackage{breakurl}
+%   \DeclareGraphicsRule{*}{eps}{*}{}
+% \fi
+% %%%  \usepackage{memhfixc} %% now called by hyperref
+% 
+% 
+% % this is a lillt special, using this one can change the link colors
+% % in the manual to blacnmk without changing any file, just use
+% %
+% % pdflatex "\def\MEMOIRblacklinks{}\input{memman.tex}"
+% %
+% \@ifundefined{MEMOIRblacklinks}{%
+%   \definecolor{linkcolour}{rgb}{0,0.2,0.6}
+%   \definecolor{citecolour}{rgb}{0,0.6,0.2}
+%   % \definecolor{filecolor}{rgb}{0,0.2,0.6}
+%   \definecolor{urlcolour} {rgb}{0.8,0,0.8}
+% }{%
+%   typeout{Asked for black links, so that is what you are going to get}
+%   \definecolor{linkcolour}{rgb}{0,0,0}
+%   \definecolor{citecolour}{rgb}{0,0,0}
+%   % \definecolor{filecolor}{rgb}{0,0,0}
+%   \definecolor{urlcolour} {rgb}{0,0,0}
+%   \hypersetup{colorlinks}
+% }
+% \hypersetup{
+%     pdftitle={The memoir class},
+%     pdfauthor={Peter Wilson},
+%     linkcolor=linkcolour,citecolor=citecolour,
+%     filecolor=urlcolour,urlcolor=urlcolour,
+%   }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 

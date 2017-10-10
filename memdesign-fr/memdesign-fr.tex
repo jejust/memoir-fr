@@ -30,7 +30,7 @@
 %% LaTeX support is on CTAN in /fonts/webomints                           %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[10pt,letterpaper,extrafontsizes]{memoir}
+\documentclass[10pt,a4paper,extrafontsizes]{memoir}
 %\documentclass[draft,10pt,letterpaper,extrafontsizes]{memoir}
 \listfiles
 \usepackage{comment}
@@ -76,6 +76,7 @@ Information on how to access CTAN is available at
 \par\vspace{\onelineskip}}
 \bibliography{memetc}
 
+\usepackage{translation-fr} %For translation into French
 
 
 %%%% Use the built-in division styling
@@ -91,7 +92,8 @@ Information on how to access CTAN is available at
 
 %%%% Font selection
 %% \textparagraph really only defined in TS1
-\usepackage[TS1]{fontenc}
+%\usepackage[TS1]{fontenc}
+\usepackage[T1]{fontenc} %For translation into French
 \renewcommand*{\encodingdefault}{T1}
 
 \newcommand*{\thisfont}[5]{\fontencoding{T1}%
@@ -344,34 +346,44 @@ First edition:                        & August 2009 \\
 
 \chapter{Preface}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Some fifteen or so years ago I started developing code for typesetting
 documents that would make it easy for designers to get the appearance
 they had in mind.
+\switchFrench
+    Il y a quinze ans
 
+\switchEng
 % In 2001 this resulted in the \Pclass{memoir} class for 
 %use with the \ltx\ typesetting system developed by Leslie Lamport based 
 %on Donald Knuth's \tx\ system.
+\switchFrench
 
+\switchEng
    While doing this I read a lot about book design and have tried my hand
 at printing a variety of books and ephemera using hand set lead type 
 and a hand operated Chandler \& Price 1904 Old Style 8 by 12 platen
 press, pretty much as Gutenberg did some five and a half centuries ago.
 
+\switchEng
    These notes are partly based on my own amateur
 experience and feelings but the majority have been culled from the
 professionals.
 
+\switchEng
 {\raggedleft{\scshape Peter Wilson} \\ Seattle, WA \\ July 2009\par}
 
 
 \vskip 3cm
 
+\switchEng
 \noindent
 This document is maintained by Lars Madsen,
 daleif(at)imf.au.dk. Please write him if you find any typos, errors or
 other omissions.
 
-
+\end{paracol}
 
 
 
@@ -381,11 +393,14 @@ other omissions.
 
 \chapter{Introduction}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     These notes briefly cover some aspects of book design and typography, 
 independently of the means of typesetting. Among
 the several books on the subject listed in the \bibname{} I prefer
 Bringhurst's \btitle{The Elements of Typographic Style}~\autocite{BRINGHURST99}.
 
+\switchEng
     The notes originally formed the first part of a user manual for
 the \Pclass{memoir} class for 
 use with the \ltx\ typesetting system developed by Leslie 
@@ -397,13 +412,15 @@ have been extended the manual also grew to approaching 700 pages~\autocite{MEMMA
 At that point seemed advantageous to separate the design notes from the 
 technicalities, hence this document.
 
-
+\end{paracol}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Terminology}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Like all professions and trades, typographers and printers have their
 specialised vocabulary.
 
@@ -462,7 +479,7 @@ of the tallest character, but different fonts with the same size may have
 very different actual heights. Traditionally font sizes were referred to
 by names (see \tref{tab:fontsizes}) but nowadays just the number of points 
 is used.
-
+\end{paracol}
 
 \begin{table}
 \centering
@@ -502,7 +519,8 @@ Points & Name & Points & Name \\ \midrule
 \end{table}
 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The typographers' and printers' term for the vertical space between
 the lines of normal text is \emph{leading}\index{leading}, which is also
 usually expressed in points and is usually larger than the font size.
@@ -521,12 +539,17 @@ this is normally given in a shorthand form.
 A 10pt font with 11pt leading on a 20pc measure is described as
 \abyb{10/11}{20}, and \abyb{14/16}{22} describes a 14pt font
 with 16pt leading set on a a 22pc measure.
+\end{paracol}
+
 
 \section{Units of measurement}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Typographers and printers use a mixed system of units, some of which
 we met above. The fundamental unit is the point; \tref{tab:units} lists 
 the most common units employed.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -545,6 +568,8 @@ cicero (cc)\index{cicero}\index{cc}         & 1cc = 12dd \\
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Points\index{point} and picas\index{pica} 
 are the traditional printers units used in English-speaking countries. 
 The didot point\index{didot point} and cicero\index{cicero} are the 
@@ -579,7 +604,7 @@ nominally the height of the letter `x' in the current font. You may also
 come across the term \textit{quad}\index{quad}, often as in a phrase
 like `starts with a quad space'. It is a length defined in terms of
 ems; a quad is 1em.
-
+\end{paracol}
 
 \cleardoublepage
 %\pagenumbering{arabic}
@@ -596,6 +621,8 @@ ems; a quad is 1em.
 
 \section{Galloping through the millenia}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The earliest known writing dates back to the Sumerians around 3300\textsc{bc}
 who used pointed sticks or reeds to impress marks into wet clay tablets
 that were subsequently dried. The result is what we call 
@@ -703,9 +730,12 @@ around, for example for `quick' printing such as a daily newspaper.
 1470 and 1948, not all of which he considers to be good. Examples of printed
 pages from the 15th to the 20th century are in the TUG 2007 San Diego Meeting
 keynote presentation~\autocite{TUGKEYNOTE07}.
-
+\end{paracol}
 
 \section{Making type}
+
+\begin{paracol}{2}\TS{0}
+\switchEng
 
 \typesubidx{manufacture|(}
     This is a very brief description of how lead type is made. For
@@ -743,12 +773,15 @@ separated.
 require the matrices but cast the type only when needed. After use the type 
 from these machines is melted down and reused time and time again.
 \typesubidx{manufacture|)}
+\end{paracol}
 
 \section{Book types}
 
 \PWnote{2009/04/25}{Added longish section on book types}
 \PWnote{2009/04/25}{Used endnotes in book types section}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Roughly speaking, there are two kinds of printing type\index{type};
 one, called 
 in general \emph{book type}\index{book type}, 
@@ -760,6 +793,7 @@ advertisements, ephemera and sometimes even book titles, all of which are
 short pieces of text, often intended to catch your eye. There are a multitude
 of display types, some of them almost illegible. Here I want to say a little
 bit about book types.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -817,6 +851,8 @@ Typeface & & Lawson & Bringhurst & Vox \\ \midrule
 \end{table}
 
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     There are several ways of categorizing typefaces, three of which are
 shown in \tref{tab:typecat}. The listed schemes are
 \begin{description}
@@ -844,13 +880,16 @@ more specialized ones, such as for setting chess or for archaic languages
 (e.g., cuneiform, egpytian hieroglyphs, etc.), or scripts for Asian languages.}, 
 which unfortunately does not include types corresponding to all the 
 categories.
+\end{paracol}
 
 
 \subsection{Type-related terminology}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     First, though, some typographical terms related to types, and illustrated 
 in \fref{fig:typeterms}\pagenote[illustrated in \fref{fig:typeterms}]{The \ltx\
-fontfamily names for the typefaces used in the illustration are: 
+fontfamily names for the typefaces used in the illustration are:
 \begin{center}
 \begin{tabular}{llcll}
 Antiqua Turin\facesubseeidx{Antiqua Turin} & \pfontfam{antt} & &
@@ -863,6 +902,8 @@ Times Roman\facesubseeidx{Times Roman} & \pfontfam{ptm} & &
 Utopia\facesubseeidx{Utopia} & \pfontfam{put} \\
 \end{tabular}
 \end{center}}. 
+
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -907,7 +948,8 @@ separate & ligatured & separate & ligatured \\
 \caption{Examples of some typographical type-related terms} \label{fig:typeterms}
 \end{figure}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{labelled}{itlabel}
 \item[Serif:] The\index{serif} cross stroke that finishes the stems or arms of letters.
 \item[Bracketed serif:] A\index{bracketed serif} serif that transitions gradually into 
@@ -960,10 +1002,12 @@ the geometric shape must be changed to simulate the ink spread of the
 letterpress process, but then the question arises as to which of the many
 letterpress impressions is the one to be simulated? Different designers and
 different manufacturers have different ideas about this.}
-
+\end{paracol}
 
 \subsection{Blackletter}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The first type was \emph{Gothic}\typesubidx{Gothic}, or 
 \emph{Blackletter}\typesubidx{Blackletter}, used by 
 Gutenberg\index{Gutenberg, Johannes} which was based on
@@ -997,6 +1041,7 @@ example of a \emph{Fraktur}\typesubidx{Fraktur}
 by Yannis Haralambous\index{Haralambous, Yannis} and is accessed in \ltx\ 
 as the \pfontfam{yfrak} fontfamily.}
 is shown in \fref{fig:fraktur}.%
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -1012,6 +1057,8 @@ is shown in \fref{fig:fraktur}.%
 
 \subsubsection{Venetian}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Early roman types, based on the humanist scribal hand, were cut by 
 Sweynheym \& Pannartz in the Rome area (c. 1467). In Venice Nicolas
 Jenson\index{Jenson, Nicolas} cut what is considered to be the first, 
@@ -1043,11 +1090,14 @@ Deepdene\facesubseeidx{Deepdene} and Californian\facesubseeidx{Californian}, whi
 called Berkely Old Style\facesubseeidx{Berkely Old Style}. One, perhaps the best,
 is Bruce Rogers'\index{Rogers, Bruce} Centaur\facesubseeidx{Centaur} which he created
 in 1914.
+\end{paracol}
 
 
 \subsubsection{Aldine/French}
 \typesubidx{Aldine/French}\typesubidx{Aldine}\typesubidx{French}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Another of the many printers in Venice, 
 Aldus Manutius\index{Manutius, Aldus}, wanted a type
 that was less related to the pen-drawn scribal characters. Aldus employed
@@ -1089,6 +1139,7 @@ An example of Palatino\facesubseeidx{Palatino}%
 font is accessed as the \pfontfam{ppl} fontfamily.}, 
 which was created by Hermann Zapf\index{Zapf, Hermann}
 in 1950, is shown in \fref{fig:palatino}.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -1105,6 +1156,9 @@ in 1950, is shown in \fref{fig:palatino}.
 \subsubsection{Dutch/English}
 \typesubidx{Dutch/English}\typesubidx{Dutch}\typesubidx{English}
 
+
+\begin{paracol}{2}\TS{0}
+\switchEng
     During the sixteenth century the French types were popular throughout
 Europe but then the pendulum swung towards types from the Low Countries.
 The Dutch were principally traders and their printing style became 
@@ -1121,10 +1175,13 @@ was set with Caslon type.
     Modern Dutch/English types include
 Caslon\facesubseeidx{Caslon} (of course),
 and Janson\facesubseeidx{Janson}.
+\end{paracol}
 
 \subsection{Transitional}
 \typesubidx{Transitional}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Transitional types are those based on the Oldstyle\typesubidx{Oldstyle} 
 types but with features of the style called Modern\typesubidx{Modern} 
 
@@ -1159,6 +1216,7 @@ Fournier\facesubseeidx{Fournier},
 Georgian\facesubseeidx{Georgian},
 and URW Antiqua\facesubseeidx{URW Antiqua}\pagenote[and URW Antiqua]{The URW
 Antiqua\index{URW Antiqua} font in \ltx\ is known as the \pfontfam{uaq} fontfamily.} which is shown in \fref{fig:antiqua}.. 
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -1182,6 +1240,8 @@ Antiqua\index{URW Antiqua} font in \ltx\ is known as the \pfontfam{uaq} fontfami
    \label{fig:newcent}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Much later, around the end of the nineteenth century, another kind of 
 Transitional type was introduced, designed for legibility for newspapers 
 when printed on high speed presses. The counter spaces were open, the 
@@ -1206,10 +1266,14 @@ is known as the \pfontfam{pnc} fontfamily.} of typefaces,
 New Century\facesubseeidx{New Century Schoolbook} Schoolbook, designed
 by Morris Benton\index{Benton, Morris},
 is shown in \fref{fig:newcent}.
+\end{paracol}
 
 \subsection{Modern}
 \typesubidx{Modern}
 
+
+\begin{paracol}{2}\TS{0}
+\switchEng
     Modern in this case means with respect to Transitional\typesubidx{Transitional} 
 and applies to a style of type introduced in the eighteenth century.
 
@@ -1219,6 +1283,7 @@ between thick and thin strokes gradually increased. Following Baskerville's
 type, Giambattista Bodoni\index{Bodoni, Giambattista} in Italy and the 
 Didot\index{Didot} foundry in France increased the contrast 
 to extreme limits with the thin strokes degenerating into hairlines.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -1231,6 +1296,9 @@ to extreme limits with the thin strokes degenerating into hairlines.
    \label{fig:didot}
 \end{figure}
 
+
+\begin{paracol}{2}\TS{0}
+\switchEng
 A modern type, GFS Didot\facesubseeidx{GFS Didot}\pagenote[GFS Didot]{The
 \ltx\ fontfamily for GFS Didot\index{GFS Didot} is \pfontfam{udidot}.},
 after the style of 
@@ -1238,14 +1306,18 @@ Didot\index{Didot} is illustrated in \fref{fig:didot}.
 
     The general characteristics are vertical axis, exaggerated contrast, 
 and flat, unbracketed, serifs.
-    
+\end{paracol}
+
 \subsection{Square Serif}
 \typesubidx{Square Serif}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The Victorian printers found that they needed new type forms that
 would work better than the traditional romans when used with the new 
 and faster breeds of printing presses, and particularly for use in
 commercial printing and advertising. 
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -1258,17 +1330,21 @@ commercial printing and advertising.
    \label{fig:beraserif}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The types went out of fashion during the first half of the twentieth
 century but have since become more popular with the 
 Clarendon\facesubseeidx{Clarendon}
 type. An example of Square Serif\pagenote[An example of Square Serif]{The 
 Bera Serif's\index{Bera Serif} fontfamily name in \ltx\ is \pfontfam{fve}.}
 is shown in \fref{fig:beraserif}.
-
+\end{paracol}
 
 \subsection{Sans-serif}
 \typesubidx{Sans-serif}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Sans-serif types were first created around 1830. In England they were
 called Grotesques\index{Grotesques} and in America Gothics\index{Gothics}. 
 Around 1920 there appeared artistic
@@ -1276,6 +1352,7 @@ schools such as Expressionism, Constructivism and Cubism. These had a
 marked effect on typographic styles and the Sans-serif types experienced
 a great burst of popularity, seeming to express `modern' ideas. They tend to
 be geometric in form as opposed to the curvaceous romans.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -1288,6 +1365,8 @@ be geometric in form as opposed to the curvaceous romans.
    \label{fig:berasans}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Examples of modern Sans-serifs are 
 Helvetica\facesubseeidx{Helvetica}, 
 Futura\facesubseeidx{Futura},
@@ -1295,11 +1374,13 @@ and, famously, Gill Sans\facesubseeidx{Gill Sans}.
 Yet another sans\pagenote[Yet another sans]{\pfontfam{fvs} is the \ltx\
 fontfamily name name for the Bera Sans\index{Bera Sans} font.}, 
 Bera Sans\facesubseeidx{Bera Sans}, is shown in \fref{fig:berasans}.
-
+\end{paracol}
 
 \subsection{Script/Cursive}
 \typesubidx{Script/Cursive}\typesubidx{Script}\typesubidx{Cursive}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     This is a very broad category but 
 essentially the forms are closer
 to handwriting rather than printing. Some are based on letter forms created
@@ -1307,6 +1388,7 @@ by drawing with a brush while others are based on forms written using
 a pen. In general they have an informal
 presence but some of the latter kind are used in formal settings such 
 as wedding invitations.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -1331,6 +1413,8 @@ as wedding invitations.
    \label{fig:chancery}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Figure~\ref{fig:brush} shows a brush-based script 
 unimaginatively\pagenote[unimaginatively]{The Brush Script\index{Brush Script}
 font is accessible as the \pfontfam{pbsi} fontfamily.} called 
@@ -1340,10 +1424,13 @@ Zapf Chancery\facesubseeidx{Zapf Chancery}\pagenote[a calligraphic script]{Zapf
 Chancery\index{Zapf Chancery} is called the \pfontfam{pzc} 
 fontfamily in \ltx.},
 is in \fref{fig:chancery}.
+\end{paracol}
 
 \subsection{Display/Decorative}
 \typesubidx{Display/Decorative}\typesubidx{Display}\typesubidx{Decorative}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     This is another very broad category 
 but all the members are designed
 to catch the eye. Display types tend to be used for display purposes and
@@ -1356,6 +1443,7 @@ typeface has been given the \pfontfam{cyklop} fontfamily name for access with \l
 
     As far as bookwork goes the more restrained of these types may occasionally
 be useful for book or chapter titles.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -1372,6 +1460,8 @@ be useful for book or chapter titles.
 
 \PWnote{2009/04/03}{Added bits and pieces about letterpress.}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    Until the last hundred years or so, type has been hand set. Today there
 are still a few printers who still set type by hand, called 
 now letterpress\index{letterpress} printing, and on the odd occasion I am 
@@ -1405,7 +1495,7 @@ seemingly semi-random order while the uppercase, which are used much less
 frequently, are in alphabetical order. The exceptions here are `U' and `J' 
 which are latecomers to the alphabet only being generally accepted in the 16th
 and 17th centuries, respectively --- printing has strong traditions.
-
+\end{paracol}
 
 \begin{figure}
 \centerfloat
@@ -1528,6 +1618,8 @@ and 17th centuries, respectively --- printing has strong traditions.
 \caption{The California job case layout} \label{fig:cacase}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     A line of type is set, or composed, in a hand-held 
 composing\index{composing stick} stick, which
 has an adjustable stop which is set to the required line length. Since the
@@ -1603,10 +1695,12 @@ colour ink replaced by the second colour ink. The original partially printed
 pages are then printed with the next colour. If all is well the differently
 coloured printed characters will all be aligned. Understandably, it is rare 
 that more than two colours are used.
+\end{paracol}
 
- 
 \section{Today}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Today the great majority of printed works are produced with 
 offset\index{offset printing} printer presses, the first of which was
 invented by Ira Washington\index{Rubel, Ira Washington} Rubel in 
@@ -1658,11 +1752,13 @@ from the type then it should be pressed as lightly as possible into the paper,
 but to indicate clearly that it has been letterpress printed, then it is 
 advisable to impress hard enough to leave permanent indentations, no matter
 how slight. As is common, tradeoffs seem inevitable.
-
+\end{paracol}
 
 
 \section{Setting maths}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     I had always wondered how maths was typeset before TeX was available and
 I eventually found an answer in an article by David Wishart~\autocite{WISHART03}.
 The following is based upon his descriptions.
@@ -1751,18 +1847,23 @@ P_{N_1 + m} = \frac{C}{N_{1} + m} \binom{N_{2} - N_{1}}{m}
               \alpha^{m}\beta^{(N_{2}-N_{1}) - m}
 \end{equation}
 \end{lcode}
+\end{paracol}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \chapter{The Parts of a Book}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     This chapter describes the various parts of a book, the 
 ordering of the parts, and the typical page numbering scheme used
 in books. 
+\end{paracol}
 
 \section{\prFrontmatter}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     There are three major divisions in a book: 
 the \pixfrontmatter\ or preliminaries\index{preliminaries}, 
 the \pixmainmatter\ or text, 
@@ -1852,6 +1953,7 @@ a like sort depending on the particular work.
 
     Table~\ref{tab:front} summarises the potential elements in the 
 \pixfrontmatter.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -1876,14 +1978,18 @@ Abbreviations, etc  & recto or verso & yes       & etc. \\
 \end{tabular}
 \end{table}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Note that the titles Foreword, Preface and Introduction are somewhat
 interchangeable. In some books the title Introduction may be used for what
 is described here as the preface, and similar changes may be made among the 
 other terms and titles in other books. 
+\end{paracol}
 
 \subsection{Copyright page}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Most people are familiar with titles, \toc, prefaces, etc., but like
 me are probably
 less familiar with the contents of the copyright page\index{copyright page|(}. 
@@ -1939,9 +2045,12 @@ digit, 2 in the example, is a check digit.
 
     It is left as an exercise for the reader to garner more information about
 obtaining CIP and ISBN data.\index{copyright page|)}
+\end{paracol}
 
 \section{\prMainmatter}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The \pixmainmatter\ forms the heart of the book.
 
     Just as in all the other parts of a book the pages within the 
@@ -2006,9 +2115,12 @@ relatively short piece that the author may
 include. These are not normally treated as prominently as the preceding
 chapters\index{chapter}, and may well be put into the \pixbackmatter\ if they are 
 unnumbered.
+\end{paracol}
 
 \section{\prBackmatter}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The \pixbackmatter\
 is optional but if present conveys information ancilliary
 to that in the \pixmainmatter. The elements are not normally numbered, so an
@@ -2032,11 +2144,13 @@ remainder may start on either recto or verso pages.
 as the final element in a book. This is an inscription which includes 
 information about the production and design of the book and nearly 
 always indicates which fonts\index{font} were used.
-
+\end{paracol}
 
 \section{Signatures and casting off}
 \index{signature|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Professionally printed books have many pages printed per sheet of (large)
 paper\index{paper}, which is then folded and cut where necessary to produce a 
 \emph{gathering}\index{gathering} or \emph{signature} of several smaller 
@@ -2050,6 +2164,7 @@ and eight pages.
 Folding in half again, 
 results in a four sheet \emph{octavo}\index{octavo} signature with eight
 leaves and 16 pages, and so on as listed in \tref{tab:signatures}.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2069,6 +2184,8 @@ Octavo, \emph{8vo} & 3 & $b/4 \times a/2$ & & 4 & & & 8 & & & 16 & \\
 \index{8vo}\index{16mo}\index{32mo}\index{64mo}%
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     In \tref{tab:signatures} the Size column is the untrimmed size of a 
 leaf\index{leaf} in 
 the signature
@@ -2084,6 +2201,7 @@ signature with six leaves and 12 pages.
 
     Paper has always been made in a wide range of sizes for a myriad of uses.
 Table~\ref{tab:uspapersizes} lists some common American paper sizes.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2100,10 +2218,13 @@ Broadsheet      & \abyb{22}{17}  & As used in newsprint \\ \bottomrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Traditionally the sizes are denoted by name but manufacturers did not 
 necessarily make paper of the size that matched the name they gave it.
 Some common names and trimmed sizes for British book work are given in 
 \tref{tab:britpapersizes}.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2126,9 +2247,12 @@ imperial    & \abyb{15}{11}      & \abyb{11}{7.5} \\ \bottomrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 The metric sizes, given in \tref{tab:metricpapersizes}, are those now 
 recommended for book production where the metric system holds sway,
 which includes the UK~\autocite[p. 104]{MCLEAN80}.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2143,11 +2267,13 @@ A5                        &                 & \abyb{210}{148} \\ \bottomrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     In making up the book, the pages in each signature are first fastened
 together, usually by sewing through the folds. The signatures are then bound
 together and the covers, end papers\index{paper!end} and spine are attached to form
 the completed whole.
-
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2165,6 +2291,8 @@ Sheet size & Book trim size & Common use & Pages per sheet (max) \\ \midrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Commercial printers use paper larger than shown in the previous tables;
 they print several (final) pages on a single sheet, then fold it and trim it
 down to the finished page size. Table~\ref{tab:adriansizes} is from
@@ -2225,6 +2353,7 @@ a large map, say, or a triple spread illustration\index{illustration}. The tippe
 are glued into place in the book and may or may not be paginated. For
 tipped in illustrations\index{illustration}, a List of Illustrations may well start with
 a phrase like: `Between pages 52 and 53'.
+\end{paracol}
 
 \index{signature|)}
 
@@ -2232,6 +2361,8 @@ a phrase like: `Between pages 52 and 53'.
 
 \index{paper|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Paper, on which I assume your work will be printed, can be thought of
 in seven categories, six of which are used in the making of books. The 
 categories are: 
@@ -2277,9 +2408,12 @@ Kozo\index{paper!Kozo} paper very useful for repairing documents and, for
 example, as hinges when bookbinding. Although not paper, there are some 
 wonderful Japanese bookcloths for binding covers.
 \end{description}
+\end{paracol}
 
 \index{paper!machine-made|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Machine-made paper, which is the commonest, comes in a number of 
 sometimes overlapping categories, of which the main ones are:
 \begin{description}
@@ -2366,11 +2500,12 @@ digital printers. Each technology (e.g., inkjet, laser) and often
 the particular printer tends to have its own requirements.
 
 \end{description}
-
+\end{paracol}
 
 \index{paper!machine-made|)}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     It is not often that books include information about the paper on which
 they are printed. If they do they are likely to be fine press books or 
 limited editions, but even then most I have seen are silent on the matter. 
@@ -2402,7 +2537,7 @@ Construction 70lb text; Exact Opaque Colors 24/60lb text; Wausau Exact
 Vellum Bristol 67lb (145\gsm); Curious Lightspecs 70lb text; Eames Furniture
 Weave 80lb text; Speckletone Kraft 70lb text; and various Southworth papers. 
 Thus, in different weights (thicknesses), colours and surface finishes.
-
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2449,6 +2584,8 @@ Paper grade & Grammage & Thickness &  Caliper \\
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     As you can see, paper comes in various weights. In most of the world this
 is simply specified as grams per square meter (\gsm, sometimes designated as
 \emph{gsm}). This quantity is properly called \emph{grammage}\index{grammage}
@@ -2489,8 +2626,8 @@ the same kind of paper.
     Approximate paper weight equivalents are shown in \tref{tab:weightequivs}.
 These are approximate because there are trade-offs between the characteristics
 within the same basic weight which vary between manufactures.
+\end{paracol}
 
-   
 
 \index{paper|)}
 
@@ -2498,6 +2635,8 @@ within the same basic weight which vary between manufactures.
 %%%\raggedbottom
 \chapter{The page}  \label{chap:lpage}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Authors usually want their works to be read by others than themselves,
 and this implies that their manuscript will be reproduced in some manner.
 It is to be hoped that the published version of their work will attract 
@@ -2538,10 +2677,12 @@ and the typographer's job is not to
 intrude between the message and the audience, but to subtly increase the
 reader's enjoyment and involvement. If a book shouts `look at me!' then it
 is an advertisement, and a bad one at that, for the designer.
-
+\end{paracol}
 
 \section{The shape of a book}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Books come in many shapes and sizes, but over the centuries certain
 shapes have been found to be more pleasurable and convenient than others.
 Thus books, except for a very very few, are rectangular in shape. The 
@@ -2578,9 +2719,12 @@ civilizations. This is because some proportions are inherently
 more pleasing to the eye than others are. These pleasing proportions are
 also commonly found in nature --- in  physical, biological, and chemical
 systems and constructs. 
+\end{paracol}
 
 \index{proportion!page|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Some examples of pleasing proportions can be
 seen in Japanese wood block prints, such as the \textit{Hoso-ye} size
 (\ratio{2}{1}) which is a double square, the \textit{Oban} (\ratio{3}{2}), %($3 : 2$),
@@ -2636,6 +2780,7 @@ books whose proportions range from the light
 are principally useful for documents that need
 extra width for tables\index{table}, marginal notes\index{marginalia}, 
 or where multi-column\index{column!multiple} printing is preferred. 
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -2687,7 +2832,8 @@ or where multi-column\index{column!multiple} printing is preferred.
 \end{figure}
 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     In books where the illustrations\index{illustration} are the primary 
 concern, the shape of the illustrations\index{illustration} is generally 
 the major influence on the page proportion.
@@ -2708,10 +2854,13 @@ format camera, while those from a 35mm camera (which produces a negative
 with a \ratio{2}{3} proportion) are better accomodated on 
 an \ratio{0.83}{1} page.
 \index{proportion!page|)}
+\end{paracol}
 
 \subsection{The golden section and Fibonacci series}
 
 \index{golden section|(}
+\begin{paracol}{2}\TS{0}
+\switchEng
     Typographers need a modicum of mathematical ability, but no more
 than an average teenager can do --- basically simple arithmetic. You can
 skip this section if you wish as it just provides some background 
@@ -2832,6 +2981,7 @@ close to $\varphi$. According to Dan Brown, the author of
 `\ldots unveils the history and mystery of the remarkable
 number phi in such a way that \ldots you will never again look at a pyramid,
 pinecone, or Picasso in the same light'.
+\end{paracol}
 
 \index{Fibonacci series|)}
 \index{golden section|)}
@@ -2845,6 +2995,8 @@ pinecone, or Picasso in the same light'.
 \index{proportion!page|(}
 \index{proportion!typeblock|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The typeblock\index{typeblock} is that part of the page which is normally 
 covered with type. The same proportions that are useful for the shape of a 
 page are also useful for the shape of the typeblock. This does not mean, 
@@ -2879,7 +3031,7 @@ for a title page, is never the subject of a design but rather the design
 is in terms of the two pages that are on view when a book is opened --- the
 left and right hand pages are considered as a whole. More technically, the
 design is in terms of a \emph{double spread}.
-
+\end{paracol}
 
 
 \begin{table}
@@ -2931,6 +3083,8 @@ $5/7$      & $2/3$   & $w/9$    & $s/2$  & $2s/3$  & $s$     & $s/3$ & \ref{fb:1
 %%\MakeShortVerb{\|}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
   Table~\ref{tlpage:allp} gives some examples of 
 page designs. These are arranged in increasing order of
 fatness. In this table, and afterwards, I have just used a single number
@@ -2982,7 +3136,7 @@ visual comparison --- it is the relative proportions, not the absolute size,
 that are important. I have only shown the pages and the typeblocks to avoid
 confusing the diagrams with headers\index{header}, footers\index{footer} 
 or folios\index{folio}.
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -2998,6 +3152,8 @@ or folios\index{folio}.
          (Right) England, 1970.} \label{fb:1}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Shown in \fref{fb:1} are two modern books. On the left is the layout
 for Robert Bringhurst's\index{Bringhurst, Robert} 
 \btitle{The Elements of Typographical Style} published
@@ -3022,7 +3178,7 @@ are set at the center of the footer\index{footer!design}.
 The ToC is typeset like the standard \ltx\ ToC\index{ToC!design} 
 but with the chapter titles
 in small caps.
-
+\end{paracol}
 
 
 \begin{figure}
@@ -3039,6 +3195,8 @@ in small caps.
          (Right) England, 1964.} \label{fb:2}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Figure~\ref{fb:2} (left) illustrates a small book by Wilfred T.~Grenfell
 entitled \btitle{Adrift on an Ice-Pan} published in 1909 by the Riverside
 Press\index{Riverside Press} of Boston. The text is set with a leading 
@@ -3071,6 +3229,7 @@ in the center of the footer\index{footer!design}. The ToC\index{ToC!design}
 title is centered, and the chapter entries are like standard \ltx\ except
 that the numbers are set in a roman font while the texts, which give a 
 summary of the chapter contents, are typeset in italic.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3086,6 +3245,8 @@ summary of the chapter contents, are typeset in italic.
          (Right) Canada, 1995.} \label{fb:3}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    Jean de Tourmes\index{de Tourmes, Jean}, a Parisian publisher, 
 printed \btitle{Histoire et Chronique}
 by Jean Froissart in 1559. This is a history book with the main text in
@@ -3122,7 +3283,7 @@ numbers). Section titles are in small caps, left justified with the
 page numbers right justified. Titles from the \pixfrontmatter\ 
 and \pixbackmatter, for example the Foreword and 
 Bibliography, are typeset in italics.
-
+\end{paracol}
 
 
 \begin{figure}
@@ -3139,6 +3300,8 @@ Bibliography, are typeset in italics.
          (Right) USA, 1990.} \label{fb:4}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Bruce Rogers\index{Rogers, Bruce} (1870--1957) 
 described how he came to design his Centaur\facesubseeidx{Centaur} typeface in
 \btitle{Centaur Types}, a privately published book by his studio October
@@ -3170,7 +3333,7 @@ are in the center of the footer\index{footer!design} with a short rule
 above them; there are no running headers. The contents\index{ToC!design}
 page is set with the body type; chapter numbers are flushleft with a 
 following period and the page numbers are flushright.
-
+\end{paracol}
 
 
 \begin{figure}
@@ -3187,6 +3350,8 @@ following period and the page numbers are flushright.
          (Right) USA, 1993.} \label{fb:5}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     \btitle{Microcosmographica Academia} by F. M. Cornford is shown in
 \fref{fb:5}. Despite its title, it is written in English and was published
 by Bowes \& Bowes, London, in 1908. It is a dryly humourous look at academic
@@ -3218,7 +3383,7 @@ described. Verso running headers\index{header!design} consist of the book
 title in mixed small caps and centered with the folio\index{folio} flushleft.
 Recto headers have the folio\index{folio} flushright, and centered is the alphabet, 
 typeset in small caps except for the current letter which is enlarged.
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3234,7 +3399,8 @@ typeset in small caps except for the current letter which is enlarged.
          (Right) England, 1968.} \label{fb:6}
 \end{figure}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     W.~A.~Dwiggins was, among many other things, an American book designer.
 Figure~\ref{fb:6} (left) shows his layout of H.~G.~Wells' \btitle{The Time
 Machine} for Random House in 1931. The page size is \abyb{231}{147}{mm}.
@@ -3257,7 +3423,7 @@ in 1930 and continued until 1974. The books usually consisted of a short
 essay on a
 particular topic, so they did not have chapter heads, tables of contents,
 or other appurtenances, apart from a Preface.
-
+\end{paracol}
 
 
 \begin{figure}
@@ -3274,6 +3440,8 @@ or other appurtenances, apart from a Preface.
          (Right) England 1988.} \label{fb:7}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     A modern technical book layout is given in \fref{fb:7}. The book
 is \btitle{Information Modeling the EXPRESS Way} by Douglas Schenck and Peter
 Wilson, published by Oxford University Press (New York) in 1994. This is
@@ -3302,6 +3470,7 @@ the chapter starting at the top of the following verso page.
 Folios\index{folio} are in the footers\index{footer!design} at the outer edge
 of the page. Running headers\index{header!design} contain the chapter
 title in small caps flushright in the outer margin.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3327,6 +3496,8 @@ Typography} (1988)} \label{fig:titleTH}
          (Right) Italy 1499.} \label{fb:8}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
  Many page layouts in earlier days were constructed by
 drawing with compass and ruler, usually based on regular geometric figures; 
 the use of squares, pentagons and hexagons being particularly
@@ -3347,7 +3518,7 @@ published by Aldus Manutius\index{Manutius, Aldus} in Venice in 1499.
 The story of this,
 including some reproductions from the original, is told by Helen
 Barolini~\autocite{BAROLINI92}.
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3363,6 +3534,8 @@ Barolini~\autocite{BAROLINI92}.
          (Right) Gutenberg, C15th.} \label{fb:9}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     In 1519 the Portugese explorer Ferdinand Magellan set sail from 
 Sanl\'{u}car de Barramada, near C\'{a}diz in Spain, 
 with five ships and about 270 men.
@@ -3393,6 +3566,7 @@ proportions are the same (\ratio{3}{2}). The margins\index{margin} are in the
 proportions $2 : 3 : 4 : 6$.
 A graphical method for constructing this, and similar designs, is 
 shown later in \fref{flpage:lgut}.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3408,6 +3582,8 @@ shown later in \fref{flpage:lgut}.
          (Right) USA, 1975.} \label{fb:10}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
      Two versions of the same publication are shown in \fref{fb:10}.
 On the left is a Persian manuscript \btitle{Khamsch of Nizami} written
 about 1525. The page size is about \abybm{324}{216}{mm}. The 
@@ -3418,6 +3594,7 @@ by the Metropolitan Museum of Art, New York, in 1975. The modern version
 has a page size of \abybm{300}{200}{mm}, slightly smaller than the original
 but in the same proportions. The typeblock\index{typeblock} is $32$pc wide 
 and the type is set with a $15$pt leading.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3433,6 +3610,8 @@ and the type is set with a $15$pt leading.
          (Right) England, 1087.} \label{fb:11}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Frederic Goudy\index{Goudy, Frederic} was a prolific American 
 type designer. Shown at the left of
 \fref{fb:11} is the layout of his book \btitle{The Alphabet and Elements
@@ -3455,7 +3634,7 @@ in two columns\index{column!double}, with 44 lines per column ragged right.
 The two columns have slightly different widths. The first part of the book 
 is more meticulously written than the later parts, where the scribe appears 
 to be in haste to finish.
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3471,13 +3650,15 @@ to be in haste to finish.
          (Right) ISO (2).} \label{fb:12}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Figure~\ref{fb:12} shows two different layouts for a page corresponding
 to the ISO international standard proportion of $\sqrt{2}$. In each case
 the typeblock\index{typeblock} is the same and proportioned in the 
 golden section\index{golden section}, but the margins\index{margin} are 
 different. The layout on the left provides adequate
 room for marginal\index{marginalia} notes in the \foredge.
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3493,6 +3674,8 @@ room for marginal\index{marginalia} notes in the \foredge.
          (Right) LaTeX $10$pt book style.} \label{fb:13}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Another of the Cambridge University 
 Printer's\index{Cambridge University Press!Christmas Book} Christmas books 
 is at the left
@@ -3512,9 +3695,9 @@ are no page numbers in this list as the corresponding illustrations
 are not bound into the book, instead thay are loosely inserted in a 
 pocket at the end of the book.
 
-
 On the right is the default layout provided by the
 LaTeX $10$pt book class on US letterpaper\index{paper!size!letterpaper}.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3530,6 +3713,8 @@ LaTeX $10$pt book class on US letterpaper\index{paper!size!letterpaper}.
          (Right) England, 1982.} \label{fb:14}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Adrian Wilson\index{Wilson, Adrian}, who died in 1988, was an 
 acclaimed American book designer.
 His work on book design, \btitle{The Design of Books}, out of print since
@@ -3553,6 +3738,7 @@ There are no running headers. Verso footers\index{footer!design} have the
 chapter title flushleft in small caps with the folio\index{folio}
 to the left of this (i.e., in the margin); recto footers similarly have
 the chapter title flushright and the folio to the right in the margin.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3562,6 +3748,8 @@ the chapter title flushright and the folio to the right in the margin.
 \caption{Title page design based on Adrian Wilson's \btitle{The Design of Books}} \label{fig:titleDB}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 The other layout in this
 figure is B.~W.~Robinson's \btitle{Kuniyoshi: The Warrior Prints} published
 by Phaidon, Oxford in 1982. The page size is \abybm{310}{242}{mm} with a
@@ -3571,6 +3759,7 @@ reproductions of Japanese
 woodblock prints, some of which extend across the binding itself. 
 The majority of the book has no text apart from captioning the many 
 reproduced prints which take up full pages.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3586,6 +3775,8 @@ reproduced prints which take up full pages.
          (Right) Switzerland, 1980.} \label{fb:15}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     \btitle{The Waterways of the Fens} by Peter Eden with drawings by
 Warwick Hutton is another of the Cambridge 
 Printer's\index{Cambridge University Press!Christmas Book} Christmas books.
@@ -3615,6 +3806,7 @@ The section titles are set in a line below the chapter entry, again separated
 by centered dots. In the text, references to 
 illustrations\index{illustration} are placed in the outside margins in 
 a small font.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3631,7 +3823,8 @@ a small font.
          (Right) USA, 1989.} \label{fb:16}
 \end{figure}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Two more layouts for illustrated books are given in \fref{fb:16}.
 In this case the illustrations\index{illustration} are drawings in landscape 
 mode (i.e., they are wider than they are high); the shape of the drawings 
@@ -3667,10 +3860,12 @@ flushleft in small caps. The folio\index{folio} is at the center
 of the foot\index{footer!design}. At the end of the book is a commentary on
 those poems where there are no known illustrations; this is typeset
 raggedright in four columns\index{column!multiple}.
-
+\end{paracol}
 
 \subsection{A geometric construction} \label{sec:gutenbergpage}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Nowadays it is easy to pick and calculate any kind of page proportion
 that takes your fancy, but how did the early printers do it? They certainly
 did not have the use of calculators and I suspect that they had only enough
@@ -3688,7 +3883,7 @@ The construction actually divides the page up into ninths (the point
 diagonal construction lines, is one third of the way down and across both the
 page and the typeblock\index{typeblock}). This construction can be used 
 no matter what the page proportions and will give the same relative result.
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -3721,6 +3916,8 @@ no matter what the page proportions and will give the same relative result.
 \section{The typeblock} \label{sec:tblock}
 
 \index{typeblock|(}
+\begin{paracol}{2}\TS{0}
+\switchEng
     The typeblock is not just a rectangular block of text. If the typeblock
 does consist of text, then this will normally be broken up into 
 paragraphs\index{paragraph}; it is not good authorial style to have 
@@ -3764,7 +3961,7 @@ For example, it suggests that a font with a length of 130pt should be
 set on a measure of about 26pc for a single column\index{column!single} 
 or in an 18pc wide column if there are multiple\index{column!multiple} 
 columns.
- 
+\end{paracol} 
 
 \begin{table}
 %%%\DeleteShortVerb{\|}
@@ -3810,6 +4007,8 @@ Pts. & \multicolumn{8}{c}{Line length in picas} \\
 %%%\MakeShortVerb{\|}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Morten H{\o}gholm\index{H{\o}gholm, Morten} has done some curve fitting
 to the data. He determined that the expressions
 \begin{equation}
@@ -3857,12 +4056,15 @@ and larger
 fonts compared with lighter and smaller fonts. More leading is also
 useful if the text contains many super-\index{superscript} or 
 sub-scripts\index{subscript}, or many uppercase letters.
+\end{paracol}
 
 \index{typeblock|)}
 
 
 \subsection{Page color}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     One of the aims of the typographer is to produce pages that are uniform
 in `color'\index{page color}. By this they mean that the 
 typeblock\index{typeblock} has a reasonably constant
@@ -3891,11 +4093,13 @@ in, say, Computer Modern Roman, Italic, and Sans-serif fonts.
 The books by Rogers~\autocite{ROGERS43}, Lawson~\autocite{LAWSON90},
 Dowding~\autocite{DOWDING98}, and 
 Morison~\autocite{MORISON99} all show pages set in many different fonts.
-
+\end{paracol}
     
 
 \subsection{Legibility}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     One of the principle requirements on the typography of a document is 
 that the document is \emph{legible}. Legibility\index{legibility} 
 means that the document 
@@ -3914,12 +4118,14 @@ chosen to optimise between legibility and `artistic' presentation.
 The design of the document should be almost invisible, giving full 
 compliments to the author's communication. However, if you are a master, 
 like Hermann Zapf\index{Zapf, Hermann}~\autocite{ZAPF00}, you can break the rules.
+\end{paracol}
 
-    
 
 \subsubsection{Typefaces}
 \index{typeface}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The first European letter forms that have survived are Greek inscriptions
 carved into stone. These were freehand carvings with thin strokes. In time,
 the lettering became thicker and serifs started to appear. The Romans
@@ -4049,12 +4255,14 @@ keep the inter-word spacing constant. Text set in narrow
 columns\index{column!narrow} also often
 looks best when set ragged right.
 
-
 \end{enumerate}
+\end{paracol}
+
 
 \subsubsection{Seriffed versus Sans-seriffed fonts}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     As noted earlier there seems to be a permanent debate over the use
 of seriffed and sans fonts. You will have to make up your own mind as
 to what is best for any particular work, but here are a few general
@@ -4148,7 +4356,7 @@ difficult to recognize compared to the simple `circle plus stick'
     Some sort of dyslexia (or eulexia), no doubt, when backwards
 words are nearly as easy to read as normal ones.
 \end{quotation}
-
+\end{paracol}
 
 \index{font!sans|)}
 \index{font!seriffed|)}
@@ -4162,6 +4370,8 @@ words are nearly as easy to read as normal ones.
 
 \subsection{Widows and orphans}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Inconvenient page breaks can also cause a hiatus in the reader's perusal
 of a work. These happen when a page break occurs near the start or end of
 a paragraph\index{paragraph}\index{lonely line}. 
@@ -4191,11 +4401,14 @@ paragraph\index{paragraph} are at the bottom of a page. In German they are
 called \textit{Schusterjungen}\index{Schusterjungen} --- cobbler's apprentices.
 Bringhurt's memory trick for orphans is, `An orphan has a future but no 
 past'.\index{lonely line} 
+\end{paracol}
 
 \subsection{Paragraphs and versals} \label{sec:versal}
 
 \index{paragraph|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Early books did not have paragraphs as we know them nowadays; the text
 was written continuously, except for a break at a major division like the
 start of a new book in a bible. Instead
@@ -4258,11 +4471,13 @@ this can cause problems where a section division
 coincides with a page break. In this case, typographers sometimes use a
 decoration to separate sections (for example, a short centered row of a few
 asterisks).
-   
+\end{paracol}   
 
 %%%%%%%%\clearpage
 %\subsection{Versals}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \drop{S}{}\textsc{ome typographers}\index{versal|(} 
 like to start the first paragraph in a chapter
 with a versal. A \emph{versal} is a large initial letter, either raised or
@@ -4297,12 +4512,15 @@ caps for the first few words. The font difference highlights the start
 of the paragraph but in a much quieter manner than a versal does. Using
 normal sized upper-case instead of the small caps is too much of a 
 contrast with the lower-case.
+\end{paracol}
 
 \index{paragraph|)}
 
 \subsection{Footnotes}
 
 \index{footnote|(}
+\begin{paracol}{2}\TS{0}
+\switchEng
     Footnotes are considered to be part of the typeblock\index{typeblock}. 
 They are typeset in the space allocated for the typeblock\index{typeblock}, 
 in contrast to footers\index{footer}
@@ -4320,13 +4538,15 @@ of the vertical space before the footnotes.
 
     A vertical blank space is often used to set off the footnotes from the
 main text, and sometimes a short horizontal line is also used as demarcation.
+\end{paracol}
 
 \index{footnote|)}
 
 \section{Folios}
 
 \index{folio|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The word \emph{folio} is a homonym. It can mean a leaf 
 (two back-to-back pages) in a book, the size of a book or a book of
 folded sheets (as in Shakespeare's first folio), or the printed page number
@@ -4355,12 +4575,14 @@ Other folio schemes are possible but unusual.
 typeblock\index{typeblock} and page margins\index{margin}. The font used for 
 the folios need not be the same as that for the typeblock\index{typeblock} 
 but must at least be complementary and non-intrusive.
-
+\end{paracol}
 \index{folio|)}
 
 \section{Headers and footers}
 
 \index{header|(}\index{footer|(}
+\begin{paracol}{2}\TS{0}
+\switchEng
     Headers and footers are repetitive material that is placed at either 
 the head or the foot of the page. Typically, folios\index{folio} are headers 
 or footers, but not always as sometimes they are placed in the 
@@ -4400,12 +4622,15 @@ the folio\index{folio}. The type style need not be the same as the style
 for the typeblock\index{typeblock}. For example, headers could be set in italic
 or small caps, which, however, must blend with the style used for the 
 typeblock.\index{typeblock}
+\end{paracol}
 
 \index{footer|)}\index{header|)}
 
 \section{Electronic books}
 \index{electronic books|(}\index{Ebook|see{electronic books}}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     For want of a better term I am calling electronic books, or Ebooks, 
 those documents intended to be read on a computer screen. The vast bulk
 of Ebooks are in the form of email but I'm more interested here in 
@@ -4501,6 +4726,7 @@ they are both readily distinguishable and legible. Yellow on white is almost
 as difficult to read as off-white on white or navy blue on black, all of
 which I have seen on web sites but rarely have I seen the text after I 
 have tried to print the page.
+\end{paracol}
 
 \index{color|)}
 \index{electronic books|)}
@@ -4508,17 +4734,22 @@ have tried to print the page.
 
 \chapter{Styling the elements}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     A book should present a consistent typographic style throughout, although
 some elements, principally those in the \pixfrontmatter\ and \pixbackmatter\ 
 may be treated slightly differently than the main body. 
 
     Much of this chapter is based on my interpretation of my namesake's 
 work~\autocite{ADRIANWILSON93} and the \btitle{Chicago Manual of Style}~\autocite{CMS}.
+\end{paracol}
 
 \section{\prFrontmatter}
 
 \subsection{Title pages}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The main and half-title pages are the gatekeepers to the book. As such,
 they need to be welcoming and give an indication of the `look and feel'
 of the contents. You don't want to scare off potential readers before they
@@ -4555,7 +4786,7 @@ of it. If the book consists of plain text, the title-page should at least
 be in harmony with it. The title itself should not exceed the width of the
 type area, and will normally be narrower\ldots
 \end{quotation}
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -4672,6 +4903,8 @@ Printer's Christmas book \btitle{Words in Their Hands}} \label{fig:titleWH}
 
 \subsubsection{Advertising}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     If the book is one of a series, or the author has been prolific, then
 details of associated works may be provided. Titles by the same author
 are usually set in italic, and a series title perhaps in small caps. The
@@ -4679,30 +4912,42 @@ font size should be no larger than for the main text. This advertising material
 may be put on the copyright page but it is more often on the recto page
 immediately after the half-title, before the title page, or on the verso of 
 the half-title\index{half-title page}\index{page!half-title} page.
+\end{paracol}
 
 \subsubsection{Frontispiece}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The traditional place for a frontispiece\index{frontispiece}, 
 which may be the only
 illustration in the book, is facing the title page. Every attempt must be
 made to make the resulting double spread harmonious.
+\end{paracol}
 
 \subsection{Copyright page}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The copyright\indextwo{copyright}{page} and related publishing 
 information is set in small type
 on the verso of the title page. In some instances the book designer's name may
 be listed among the small print.
+\end{paracol}
 
 \subsection{Dedication}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     A dedication\index{dedication} is nearly always on a recto page and 
 simply typeset. If 
 pages are limited it could be placed at the top of the copyright 
 page\indextwo{copyright}{page} instead.
+\end{paracol}
 
 \subsection{Foreword and preface}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The same type size should be used for the headings 'foreword', `preface',
 `acknowledgements', etc., and the similar ones in the \pixbackmatter. This
 may be the same size as the chapter heads, or smaller. The body type should be
@@ -4714,17 +4959,23 @@ blank verso.
 
     The preface\index{preface}, which is the author's opening statement, 
 is treated like a chapter opening, and commences on a recto page.
+\end{paracol}
 
 \subsection{Acknowledgements}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     If there are any acknowledgements\index{acknowledgements} and they 
 require only a few sentences then they are often put at the end of the 
 preface\index{preface}, if there is one. Otherwise the acknowledgements
 should be treated as a distinct unit, like a foreword or preface, and commence
 on a recto page.
+\end{paracol}
 
 \subsection{Contents and illustration lists}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The table of contents\indextwo{contents}{list} is often laid out so 
 that the page numbers
 are not too distant from the titles, thus reducing the need for dotted lines,
@@ -4739,25 +4990,34 @@ are short, and it follows the
 contents list then it should be set in the same style as the contents. 
 If, however, the list is at the back of the book a smaller font size could 
 be used.
+\end{paracol}
 
 \subsection{Introduction}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The heading for an Introduction\index{introduction} is an unnumbered
 chapter opening on a recto page. The body text is set in the same font 
 as the main body text. 
+\end{paracol}
 
 \subsection{Part title page}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     If the book is divided into Parts\index{part} then the Part One 
 page\indextwo{page}{part title} could either precede or follow the 
 Introduction. Ideally the layout of the title pages for the Parts should
 follow the layout of the book's half-title\indextwo{page}{half-title} page 
 to provide a cohesiveness throughout the work.
+\end{paracol}
 
 \section{\prMainmatter}
 
 \subsection{Chapter openings}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Normally, chapters are the major divisions of a (volume of a) book, 
 but if it is long
 it may have higher divisions, such as parts, or even books. In any event,
@@ -4771,9 +5031,12 @@ or reproduction cost is all important then they may begin on the page
 immediately following the end of the previous chapter, or, in rare cases,
 even on the same page if there is enough space. In any event, the first chapter
 should start on a recto page.
+\end{paracol}
 
 \subsection{Mixed portrait and landscape pages}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     It is usual for all the pages in a document to be in 
 portrait\index{orientation}\index{portrait}\indextwo{orientation}{portrait}
 but this is not always possible if there are illustrations or tabular material
@@ -4798,6 +5061,7 @@ document is held in one position to read the
 portrait\indextwo{orientation}{portrait} pages and is turned
 in a consistent direction, usually to the right, to read the 
 landscape\indextwo{orientation}{landscape} pages. The key is consistency.
+\end{paracol}
 
 \begingroup
 \newcommand*{\tht}{6}
@@ -4861,8 +5125,11 @@ landscape\indextwo{orientation}{landscape} pages. The key is consistency.
 \end{figure}
 
 \endgroup
+
 \subsection{Extracts}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Typographers use `extract'\index{extract} as a generic 
 term for what I would think of as a quotation\index{quotation}. 
 Essentially a quotation is an extract from some source.
@@ -4875,12 +5142,16 @@ combination of these. A size difference of one or two points from the body
 size is usually enough to be distinctive, for instance 11/13 or 10/12 point
 for a 12/14 point body size. In any event, extra space, at least two or 
 three points, should be inserted and below the extract.
+\end{paracol}
 
 \subsection{Footnotes and endnotes}
 
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 \let\oldfootnoterule\footnoterule
 \renewcommand*{\footnoterule}{}
+
+\begin{paracol}{2}\TS{0}
+\switchEng
     This section is a synthesis of the views of Ruari McLean~\autocite{MCLEAN80},
 Jan Tschichold~\autocite{TSCHICHOLD91} and 
 Emerson Wulling~\autocite{WULLING-FOOTNOTES}.
@@ -4969,13 +5240,15 @@ first line set flushleft and any remaining lines indented.
 Whether a note
 is presented as a footnote or an endnote, it should always finish with a
 period\index{period}.
-
+\end{paracol}
 
 \renewcommand*{\thefootnote}{\arabic{footnote}}
 %%%%\afterpage{\let\footnoterule\oldfootnoterule}
 
 \section{\prBackmatter}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Divisions in the \pixbackmatter\ are not numbered.
 
     In commercial printing, saving a page here and a page there can save the
@@ -4984,9 +5257,12 @@ on to the readers. One way of reducing the number of pages is by reducing
 the font size. The material in the \pixbackmatter\ is in some sense auxiliary 
 to the \pixmainmatter, hence of less importance, and some of it may then be 
 reasonably set in smaller type.
+\end{paracol}
 
 \subsection{Appendices}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Appendices\index{appendix} come immediately after the main text. Depending
 on their importance and interest they can be set in the same manner as the 
 main text. If the appendices consist of long supporting documents they could
@@ -4995,9 +5271,12 @@ be set in a type one or two points smaller than the main text.
     In some instances there are appendices at the end of individual chapters,
 where they form the last divisions of the chapters, and are treated as any of
 the other divisions.
+\end{paracol}
 
 \subsection{Endnotes}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    In an endnote\index{endnotes} listing, note numbers are usually 
 either indented or the note
 is set flush-and-hang\index{flush-and-hang} style; that is, with the 
@@ -5012,9 +5291,12 @@ notes never get read.
     The notes are often set in the same sized type as used for footnotes or,
 if they are exceptionally interesting, in a size intermediate with the main 
 text.
+\end{paracol}
 
 \subsection{Bibliography}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    The list of books, etc., that the author has used as source material is
 usually placed at the back of the book under the title `Bibliography'. In
 some works there may be a bibliography\index{bibliography} at the end of 
@@ -5023,9 +5305,12 @@ each chapter and the title `References' is often used for these.
     A font size intermediate between those for quotations and footnotes is
 very reasonable, and a slight extra space between entries, say two points,
 can improve the readability.
+\end{paracol}
 
 \subsection{Glossary}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    The list of definitions of terms or symbols used in the text normally
 comes towards the end of a book, although it could as well come towards
 the end of the \pixfrontmatter, or a symbol list\indextwo{symbol}{list} 
@@ -5036,9 +5321,12 @@ perhaps one or two points extra leading between the entries.
 
     The type size could be the same as for quotations if the glossary is short,
 or the size used for the bibliography for longer lists.
+\end{paracol}
 
 \subsection{Index}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The entries in an index\index{index} are usually short and most indexes
 are set in two, or more columns. As examples, author's names are usually 
 relatively short so an index of names would typically be in two columns;
@@ -5058,6 +5346,7 @@ with `Q' should be signalled by at least one or two blank lines. If the index
 is long, then a suitable character (e.g., `Q') or word should be used as 
 part of the break, indicating what is coming next. The index could be set
 in the same size type as the bibliography\index{bibliography}.
+\end{paracol}
 
 \section{Type size}
 
@@ -5074,23 +5363,31 @@ Footnotes   & 8/9 & 8/8 \\
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     As indicated above, the type size is normally related to the `importance' 
 of what is being set. Chapter headings are set in large type and footnotes 
 set in small type. Of course, it is a matter of judgement as to what 
 `important' means in any given work. Some possible combinations of type sizes
 are given in \tref{tab:reltypesizing} though these should be considered as
 starting points for a design rather than fixed rules.
+\end{paracol}
 
 \section{Poems and plays}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     In literature such as poems\index{poem} or plays\index{play} 
 the length of the line is determined
 by the author whereas in prose works the book designer establishes the measure.
 For this kind of work the designer should respect the author's wishes as 
 far as possible within a maximum text width.
+\end{paracol}
 
 \subsection{Poetry}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     If possible the type and measure should be chosen so that the longest
 poetical line will fit on one printed line, so that the shape of the poem
 is retained.
@@ -5102,9 +5399,12 @@ long are usually indented by a constant amount from the left margin.
 
     In some context verse lines are numbered, often every fifth or tenth line.
 The numbers are usually small and right justified.
+\end{paracol}
 
 \subsection{Plays}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     When presenting a play a list of characters\indextwo{characters}{list} 
 (\textit{Dramatis Personae}\index{Dramatis Personae?\textit{Dramatis Personae}})
 is frequently given at the beginning of the play. It is presented between the
@@ -5138,12 +5438,14 @@ in stage directions, though, are set in roman to distinguish themselves.
 Directions at the start of a scene, such as saying who is entering, are 
 typically centered while in the body of the scene are set flush right, 
 often on a line by themselves.
-
+\end{paracol}
 
 \PWnote{2009/04/26}{Added section on selecting a typeface}
 \section{Selecting a typeface}
 \index{typeface!selecting}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Choosing the `best' typeface to use is first a matter of practicalites
 and secondly a question of aeshetics, feel, judgement, and other 
 imponderables.
@@ -5216,10 +5518,10 @@ that cover the range you need. The same applies if the work is
 multilingual, and especially if it involves different scripts
 like, say, Latin and Greek; try and find matching faces, or at least 
 typefaces that don't clash with each other.
+\end{paracol}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
- 
 
 \begin{figure}
 \begin{adjustwidth}{-0.05\textwidth}{-0.05\textwidth}
@@ -5322,6 +5624,8 @@ and Caslon}\label{fig:poems2}
 \end{figure}
 
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     I was recently letterpress printing some poems and the fonts  
 available in the print shop were Bodoni\facesubseeidx{Bodoni}, 
 Caslon\facesubseeidx{Caslon}, Della Robbia\facesubseeidx{Della Robbia} and 
@@ -5346,20 +5650,25 @@ sidenote they are set here using 12pt instead of the 10pt body text size.
 Poetry\index{poetry} can, with advantage, be set with larger type and 
 leading than prose,
 and in italic instead of roman.
-
+\end{paracol}
 
 
 
 \chapter{Picky points}
 \let\footnoterule\oldfootnoterule
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The main elements of good typography are legibility\index{legibility} 
 and page color\index{color}.
 This chapter discusses some of the smaller points related to 
 these topics.
+\end{paracol}
 
 \section{Word and line spacing}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Research has shown that the competent reader recognises words by
 their overall shape rather than by stringing together the individual letters
 forming the words. A surprisingly narrow gap between words
@@ -5374,6 +5683,7 @@ spots and the eye finds it difficult to move along the line rather than
 jumping to the next word in the next line. 
     Figure~\ref{fig:interword} illustrates different values of interword
 spacing.
+\end{paracol}
 
 \setlength{\unitlength}{\fontdimen2\font}
 \begin{figure}
@@ -5426,6 +5736,8 @@ Extra spacing after punctuation is not necessary.
 \caption{Interword spacings}\label{fig:interword}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     In keeping with avoiding white spots, many typographers do not
 recommend extra spacing after punctuation, although this does depend
 partly on a country's typographic history and partly on the individual.
@@ -5446,6 +5758,7 @@ spacing is used in the samples. When text is set solid there is a tendancy
 for the descenders on one line to touch, or even overlap, the ascenders on the 
 following line.\footnote{\tx\ has a built-in mechanism that tries hard to 
 prevent this from happening.}
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -5493,6 +5806,8 @@ next line instead of the next word. \par
 \section{Letterspacing}
 \index{letterspacing|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     \emph{Letterspacing} is the insertion of spaces between the letters
 of a word.
     Frederic\index{Goudy, Frederic} Goudy (1865--1947), a very respected 
@@ -5519,7 +5834,7 @@ amounts of spaces.
     Figure~\ref{fig:spacesmallcaps} shows similar results for the same word
 set in small caps instead of regular caps. In general you might find that 
 if you do letterspace then uniform spacing is adequate for small caps.
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -5545,18 +5860,23 @@ h\kern0.09em i\kern0.12em s\kern0.1em t\kern0.1em o\kern0.07em r\kern0.1em y & v
 \caption{Letterspacing: small caps}\label{fig:spacesmallcaps}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     There can be occasions, as with emphasis with fraktur fonts, when 
 letterspacing lower case will not get you hung for sheep stealing. These,
 typically, are when dealing with some sans fonts such as a bold condensed
 Univers. But be very careful. Italics should never be letterspaced as they
 come from the handwriting tradition of `joined up letters', as my 
 kindergarten teacher used to call them.
+\end{paracol}
 
 \index{letterspacing|)}
 
 \section{Abbreviations and acronyms}
 
 \index{abbreviation}
+\begin{paracol}{2}\TS{0}
+\switchEng
     The English style with abbreviations is to put a full stop (period) after
 the abbreviation, unless the abbreviation ends with the same letter as the
 full word. Thus, it is Mr for Mister, Dr for Doctor, but Prof.~for Professor.
@@ -5586,11 +5906,13 @@ regular \textsc{unicef} text & \verb?regular \textsc{unicef} text? \\
 regular {\small UNICEF} text & \verb?regular {\small UNICEF} text? \\
 regular {\footnotesize UNICEF} text & \verb?regular {\footnotesize UNICEF} text? 
 \end{tabular}
-
+\end{paracol}
 
 \section{Dashes and ellipses}
 
 \index{dash|(}
+\begin{paracol}{2}\TS{0}
+\switchEng
     Most fonts provide at least three lengths of dashes. The shortest is
 the hyphen (-), then there is the en-dash (--) which is approximately the
 width of the letter `n', and the largest is the em-dash (---) which is
@@ -5641,6 +5963,7 @@ innocent.
   Although he had spent the last 92 years of his life here, 
 Mr --------- was not a Fredericktonian.
 \end{quote}
+\end{paracol}
 
 \index{dash|)}
 
@@ -5649,6 +5972,9 @@ Mr --------- was not a Fredericktonian.
 \subsection{Quotation marks}
 
 \index{quotation marks|(}
+
+\begin{paracol}{2}\TS{0}
+\switchEng
     Quotation marks surrounding speech and associated punctuation 
 are a fruitful source of confusion.
 
@@ -5670,6 +5996,7 @@ Figure~\ref{fig:qmarks} shows the same text typeset in both the English
 and American styles. The example is from Lewis Carroll's 
 \emph{Through the Looking Glass and what Alice Found There} 
 and has an unusually large number of internal quotations\index{quotation}. 
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -5709,6 +6036,8 @@ tone, ``it means just what I choose it to mean --- neither more nor less.''
 \caption{Quotation marks: top English, bottom American}\label{fig:qmarks}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Where to put punctuation marks with quotes is vexatious. Again the
 English and American practice tends to differ. The American tendency is
 to put commas and periods inside the closing quote mark and colons and
@@ -5725,11 +6054,14 @@ In \fref{fig:qmarks} I have tried to use the English and American
 punctuation styles in the respective examples but it is likely that there
 are misplacements in both. I think it's basically a question of doing what
 you think best conveys the sense, provided there is consistency.
+\end{paracol}
 \index{quotation marks|)}
 
 \subsection{Footnote marks}
 
 \index{footnote!mark|(}
+\begin{paracol}{2}\TS{0}
+\switchEng
     Where to put a footnote marker may be another vexed question in spite
 of the general principal being easy to state: The mark goes immediately
 after the text element that the note refers to.
@@ -5748,10 +6080,12 @@ shown both positions\footnote{Marks \ref{fn:phrase} and \ref{fn:sentence}.}
  in the previous paragraph. The 
 general rule that I have deduced is that the mark comes after the 
 punctuation, but there are always those who like to prove a rule.
-
+\end{paracol}
 \index{footnote!mark|)}
 
 \index{symbol|(}
+\begin{paracol}{2}\TS{0}
+\switchEng
    There are other marks that may be associated with a word, like 
 (registered) trademarks. These may produce ugly gaps. Sometimes these
 cannot be avoided but it may be possible to change the text to minimise
@@ -5775,12 +6109,14 @@ trademark of Adobe Systems Incorporated.}, presumably \ldots
 In this case I decided that the footnote\index{footnote} was really tied to the word
 `\pscript', taking the place of the registered symbol, so I put the
 footnote mark\index{footnote!mark} before the comma rather than after it.
+\end{paracol}
 \index{symbol|)}
 
 \subsection{Font changes}
 
 \index{font!change|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Sometimes a word or two may be set in a different font from the 
 surrounding text, such as when emphasizing\index{emphasis} 
 a word by setting it in an
@@ -5795,14 +6131,15 @@ which is typeset using a bold font. The definitions thus commence like \\
 \hspace*{2em} \textbf{memoir,} \textit{n.} \ldots \\
 instead of \\
 \hspace*{2em} \textbf{memoir}, \textit{n}. \ldots 
-
+\end{paracol}
 \index{font!change|)}
 
 \section{Narrow measures}
 
 \index{measure!narrow|(}
 \index{column!narrow|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Typesetting in a narrow column is difficult, especially if you are
 trying to make the text flush left and right. As the lines get shorter
 it becomes more and more difficult to fit the words in without an excessive
@@ -5821,10 +6158,9 @@ the line ends when compared with permitting some hyphenation. Hyphenation
 can be used to reduce the raggedness but somehow short lines ending with
 a hyphen may look a bit odd. This is where you have to exercise your
 judgement and design skills.
-
+\end{paracol}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 %% 109pt could be good for this
@@ -5841,6 +6177,7 @@ designed to produce high-quality typesetting, especially for
 mathamatical works. It is extremely flexible albeit somewhat 
 idiosynchratic. One can typeset justified, flushleft-raggedright,
 centered, or raggedleft-flushright.}
+
 
 \begin{figure}
 \centering
@@ -5873,6 +6210,8 @@ centered, or raggedleft-flushright.}
 \caption{Raggedright text in narrow columns} \label{fig:raggedright}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Figure~\ref{fig:raggedright} shows a text set in a column
 \the\rag{} wide with 
 different raggednesses. Preventing hyphenation, as in the left column, 
@@ -5890,11 +6229,13 @@ the eye, page numbers are normally typeset immediately after the
 name of the indexed topic, so indexes tend to be 
 naturally raggedright\indextwo{index}{raggedright} as a matter of reader 
 convenience.
-
+\end{paracol}
 
 \index{column!narrow|)}
 \index{measure!narrow|)}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Talking of hyphenation\index{hyphenation},
  each language has its own rules for allowable
 hyphenation points. As you might now have come to suspect, English and 
@@ -5906,10 +6247,13 @@ etymology of the word, so there may be different locations depending on
 whether the word came from the Greek or the Latin. If you are not sure
 how a particular word should be hyphenated, look it up in a dictionary
 that indicates the potential break points.
+\end{paracol}
 
 \section{Emphasis}
 
 \index{emphasis|(}
+\begin{paracol}{2}\TS{0}
+\switchEng
     Underlining\index{underline} should \underline{emphatically} \underline{not} be
 used to emphasise something in a typeset document. This is a hangover
 from the days when manuscripts were typewritten and there was little
@@ -5937,13 +6281,15 @@ emphasised
 element, but there is also the desire not to interrupt the general flow
 of the text. Out of the three basic options, changing the shape seems
 to be a reasonable compromise between the need and the desire.
+\end{paracol}
 \index{emphasis|)}
 
 \section{Captions and legends}
 
 \index{caption|(}
 \index{legend|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     I am not entirely sure what is the difference between a
 caption and a legend as both terms refer to the title of an 
 illustration\index{illustration} or table\index{table}. 
@@ -5959,14 +6305,15 @@ of the sans font for captions as well.
 
     The caption for a table\index{table} is normally placed above the 
 table while captions for illustrations\index{illustration} are placed below.
-
+\end{paracol}
 \index{legend|)}
 \index{caption|)}
 
 \section{Tables}
 
 \index{table|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     A table is text or numbers arranged in columns\index{column!multiple}, 
 and nearly always
 with a `legend'\index{legend} above each column describing the meaning of
@@ -5991,14 +6338,15 @@ of information'.
 
     If you want to use vertical lines, just be aware that not everybody
 may appreciate your effort.
-
+\end{paracol}
 
 \index{table|)}
 
 \section{Number formatting}
 
 \index{number!formatting|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Number formatting is country- and language-dependent. Continental 
 Europe differs
 from England, and in its turn the United States differs from England.
@@ -6052,13 +6400,15 @@ old-style figures in the text then be very careful; `mathematical numbers' shoul
 be set with lining figures even if they are in the body of the text. For example: \\
 \ldots from the equation the result is 42 \ldots \\
 \ldots the men of the \Moldstyle{42}nd Foot performed magnificently \ldots.
-
+\end{paracol}
 
 \appendix
 
 \chapter{Some typefaces}
 \index{typeface}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    Most books or articles about typography at least mention some typefaces
 by name, and may provide examples, and in some cases many examples.
 
@@ -6089,6 +6439,7 @@ and then text set at 12pt.
 of each face, principally using those from \tref{tab:typecat}.
 \pagenote[text set at 12pt]{The Latin texts, when
 suitably laid out, and their translations are as follows.
+\end{paracol}
 \vspace{\onelineskip}
 
 \begin{minipage}[t]{0.45\textwidth}

@@ -8,7 +8,8 @@
 %   Maintainer: Lars Madsen (daleif at math dot au dot dk)
 %
 %\listfiles
-\documentclass[10pt,letterpaper,extrafontsizes]{memoir}
+%\documentclass[10pt,letterpaper,extrafontsizes]{memoir}
+\documentclass[10pt,a4paper,extrafontsizes]{memoir}%jejust
 \listfiles
 \usepackage{comment}
 
@@ -124,7 +125,8 @@
 \fxsetup{
   layout=marginnote
 }
- 
+
+\usepackage{translation-fr}%jejust
 
 \begin{document}
 
@@ -257,6 +259,8 @@ Manual last changed \svnyear/\svnmonth/\svnday
 \clearpage
 \vspace*{\fill}
 \begin{quote}
+\begin{paracol}{2}\TS{0}
+\switchEng
 \textbf{memoir,} \textit{n.} a written record set down as material
   for a history or biography: 
   a biographical sketch:
@@ -266,11 +270,24 @@ Manual last changed \svnyear/\svnmonth/\svnday
    \textit{memor}, mindful.] \\[0.5\baselineskip]
   \hspace*{\fill} 
       \textit{Chambers Twentieth Century Dictionary, New Edition}, 1972.
+\switchFrench
+\textbf{memoir,} \textit{n.} a written record set down as material
+  for a history or biography: 
+  a biographical sketch:
+  a record of some study investigated by the writer:
+  (in \textit{pl.}) the transactions of a society.
+  [Fr. \textit{m\'{e}moire} --- L. \textit{memoria,} memory ---
+   \textit{memor}, mindful.] \\[0.5\baselineskip]
+  \hspace*{\fill} 
+      \textit{Chambers Twentieth Century Dictionary, New Edition}, 1972.
+\end{paracol}
 \end{quote}
 
 \vspace{2\baselineskip}
 
 \begin{quote}
+\begin{paracol}{2}\TS{0}
+\switchEng
 \textbf{memoir,} \textit{n.} [Fr. \textit{m\'{e}moire,} masc., a memorandum,
     memoir, fem., memory $<$ L. \textit{memoria,} \textsc{memory}]
   \hspace{1ex} \textbf{1.} a biography or biographical notice, 
@@ -285,15 +302,37 @@ Manual last changed \svnyear/\svnmonth/\svnday
   \hspace{1ex} \textbf{5.} [\textit{pl.}] the record of the proceedings
       of a learned society \\[0.5\baselineskip]
   \hspace*{\fill} \textit{Webster's New World Dictionary, Second College Edition}.
+\switchFrench
+\textbf{memoir,} \textit{n.} [Fr. \textit{m\'{e}moire,} masc., a memorandum,
+    memoir, fem., memory $<$ L. \textit{memoria,} \textsc{memory}]
+  \hspace{1ex} \textbf{1.} a biography or biographical notice, 
+      usually written by a relative or personal friend of the subject 
+  \hspace{1ex} \textbf{2.} [\textit{pl.}] an autobiography, 
+      usually a full or highly personal account
+  \hspace{1ex} \textbf{3.} [\textit{pl.}] a report or record of 
+      important events based on the writer's personal observation, 
+      special knowledge, etc.
+  \hspace{1ex} \textbf{4.} a report or record of a scholarly 
+      investigation, scientific study, etc.
+  \hspace{1ex} \textbf{5.} [\textit{pl.}] the record of the proceedings
+      of a learned society \\[0.5\baselineskip]
+  \hspace*{\fill} \textit{Webster's New World Dictionary, Second College Edition}.
+\end{paracol}
 \end{quote}
 
 \vspace{2\baselineskip}
 
-
 \begin{quote}
+\begin{paracol}{2}\TS{0}
+\switchEng
 \textbf{memoir,} \textit{n.} a fiction designed to flatter the subject 
   and to impress the reader. \\[0.5\baselineskip]
 \hspace*{\fill} With apologies to Ambrose Bierce % and Reuben Thomas
+\switchFrench
+\textbf{memoir,} \textit{n.} a fiction designed to flatter the subject 
+  and to impress the reader. \\[0.5\baselineskip]
+\hspace*{\fill} With apologies to Ambrose Bierce % and Reuben Thomas
+\end{paracol}
 \end{quote}
 
 \vspace*{\fill}
@@ -333,6 +372,15 @@ Manual last changed \svnyear/\svnmonth/\svnday
 
 \chapter{Preface}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
+    From personal experience and also from lurking on the \url{comp.text.tex}
+newsgroup the major problems with using \ltx\ are related to document
+design. Some years ago most questions on \ctt\ were answered by
+someone providing a piece of code that solved a particular problem, and
+again and again. More recently these questions are answered along the
+lines of `Use the ---------{} package', and again and again.
+\switchFrench
     From personal experience and also from lurking on the \url{comp.text.tex}
 newsgroup the major problems with using \ltx\ are related to document
 design. Some years ago most questions on \ctt\ were answered by
@@ -340,6 +388,19 @@ someone providing a piece of code that solved a particular problem, and
 again and again. More recently these questions are answered along the
 lines of `Use the ---------{} package', and again and again.
 
+\switchEng
+    I have used many of the more common of these packages but my filing system
+is not always well ordered and I tend to mislay the various user manuals,
+even for the packages I have written. The \Pclass{memoir} class is an attempt
+to integrate some of the more design-related packages with the LaTeX
+\Pclass{book} class. I chose the \Pclass{book} class as the \Pclass{report} class
+is virtually identical to \Pclass{book}, except that \Pclass{book} does
+not have an \Ie{abstract} environment while \Pclass{report} does; however it is 
+easy to fake an \Ie{abstract} if it is needed. With a little bit of tweaking,
+\Pclass{book} class documents can be made to look just like \Pclass{article}
+class documents, and the \Pclass{memoir} class is designed with tweaking very
+much in mind.
+\switchFrench
     I have used many of the more common of these packages but my filing system
 is not always well ordered and I tend to mislay the various user manuals,
 even for the packages I have written. The \Pclass{memoir} class is an attempt
@@ -352,6 +413,14 @@ easy to fake an \Ie{abstract} if it is needed. With a little bit of tweaking,
 class documents, and the \Pclass{memoir} class is designed with tweaking very
 much in mind.
 
+\switchEng
+    The \Pclass{memoir} class effectively incorporates the facilties that
+are usually accessed by using external packages. In most cases the class
+code is new code reimplementing package functionalities. The exceptions
+tend to be where I have cut and pasted code from some of my packages.
+I could not have written the \Pclass{memoir} class without the excellent 
+work presented by the implementors of \ltx\ and its many packages.
+\switchFrench
     The \Pclass{memoir} class effectively incorporates the facilties that
 are usually accessed by using external packages. In most cases the class
 code is new code reimplementing package functionalities. The exceptions
@@ -359,6 +428,7 @@ tend to be where I have cut and pasted code from some of my packages.
 I could not have written the \Pclass{memoir} class without the excellent 
 work presented by the implementors of \ltx\ and its many packages.
 
+\switchEng
     Apart from packages that I happen to have written I have gained many
 ideas from the other packages listed in the \bibname. One way or another
 their authors have all contributed, albeit unknowingly. 
@@ -366,8 +436,18 @@ The participants in the
 \url{comp.text.tex} newsgroup have also provided valuable input, partly
 by questioning how to do something in \ltx, and partly by providing
 answers. It is a friendly and educational forum.
+\switchFrench
+    Apart from packages that I happen to have written I have gained many
+ideas from the other packages listed in the \bibname. One way or another
+their authors have all contributed, albeit unknowingly. 
+The participants in the
+\url{comp.text.tex} newsgroup have also provided valuable input, partly
+by questioning how to do something in \ltx, and partly by providing
+answers. It is a friendly and educational forum.
+\end{paracol}
 
 {\raggedleft{\scshape Peter Wilson} \\ Seattle, WA \\ June 2001\par}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{comment}
@@ -1257,6 +1337,8 @@ been answered.
 
 \chapter{Introduction to the eighth edition}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 The \Mname\ class and this manual have seen many changes since they
 first saw the light of day. The major functions, and extensions to
 them, were listed in the various introductions to the previous
@@ -1299,10 +1381,12 @@ I assume that you have already used \ltx\ and therefore know how to prepare
 a \ltx\ manuscript, how to run \ltx\ and print the resulting document,
 and that you can also use auxiliary programs like \Lmakeindex\ 
 and \Lbibtex.
-
+\end{paracol}
 
 \section{General considerations}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The class is a large one consisting of about 10,000 lines of \ltx\ code
 documented in a 400 page report; there is no need for most users to look at 
 this~\cite{MEMCODE}. However if you want to see exactly how some part, 
@@ -1339,9 +1423,11 @@ on these, if you want it, is obtained from reading the \ltx\ source itself
 and the \txbook, and perhaps one of the free \tx\ manuals such as
 \btitle{TeX for the Impatient}~\cite{IMPATIENT} or 
 \btitle{TeX by Topic}~\cite{TEXBYTOPIC}.
+\end{paracol}
 
 \section{Class options}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The standard classes provide point options of 10, 11, or 12 points for the
 main body font. \Mname\ extends this by also providing a 9 point option, and 
 options ranging from 14 to 60 points.
@@ -1365,9 +1451,12 @@ each page showing the desired size of the final page with respect to the sheet
 of paper that is used in the printer. This is provided by the \Lopt{showtrims}
 option. A variety of trim marks are provided and you can define your own 
 if you need some other kind.
+\end{paracol}
 
 \section{Sectioning styles}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Handles are provided for designing and using your own styles for chapter
 titles and such. The class comes with over 20 predefined chapter styles ranging
 from the default look to a style that mimics that used in the 
@@ -1398,9 +1487,11 @@ which can be used to put a short version of the section title into the
 table of contents and the page header. \Mname\ extends this with a second 
 optional argument so you can specify one short version for the contents and 
 an even shorter one for page headers where space is at a premium.
+\end{paracol}
 
 \section{Captions}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     \Mname\ incorporates the code from my \Lpack{ccaption} package which
 lets you easily modify the appearance of figure and table captions; bilingual
 captions are available if required, as are captions placed at the side of
@@ -1411,9 +1502,12 @@ the regular floats. The captioning system
 also supports subfigures and subtables along the lines of the \Lpack{subfig}
 package, plus letting you define your own new kinds of floats together
 with the corresponding `\listofx'. 
+\end{paracol}
 
 \section{Tables}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Code from the \Lpack{array}, \Lpack{dcolumn}, \Lpack{delarray} and
 \Lpack{tabularx} packges is integrated within the class. To improve
 the appearance of rules in tabular material the \Lpack{booktabs}
@@ -1467,9 +1561,12 @@ three &  six  & nine  & twelve &  \\
 \end{tabular} 
 \par}
 }
+\end{paracol}
 
 \section{Verse}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The standard classes provide a very simple \Ie{verse} environment for
 typesetting poetry. This is greatly extended in \Mname. For example in the
 standard classes the verse stanzas are at a fixed indentation from the 
@@ -1525,10 +1622,12 @@ Come away with me. \\
 \leavevmode\phantom{Come away with me.} Impossible!
 \end{verse}
 }
-
+\end{paracol}
 
 \section{End matter}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Normally appendices come after the main body of a book. The class provides
 various methods for introducing appendices at the end, or you can place one or 
 more appendices at the end of selected chapters if that suits you better.
@@ -1546,10 +1645,12 @@ symbols, the appearance of which can, of course, be easily altered. The
 %shown in the current version of the Addendum. A recent addition
 Also, the class provides configurable end notes which can be used as well as, 
 or instead of, footnotes. 
-
+\end{paracol}
 
 \section{Miscellaneous}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 %    As already noted, the Manual for \Mname\ runs to some 300 pages and it
 %is impossible to cover everything in a short article. 
 %Suffice it to say that 
@@ -1563,11 +1664,13 @@ You can create new verbatim-like environments, read
 and write information in external files, design your own style of 
 \cs{maketitle}, convert numbers to words, reserve space at the bottom of a 
 page, and so on and so forth.
-
+\end{paracol}
 
 %% \appendix
 \section{Packages}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Most packages work with the \Mname\ class, the main exception being
 the \Lpack{hyperref} package. This package modifies
 many of the internals of the standard classes but does not cater for all of
@@ -1665,11 +1768,12 @@ if you wish, or just use the capabilities of the \Mname\ class.
 
     The class has built in support for the \Lpack{bidi} package for 
 bidirectional typesetting~\cite{BIDI}.
-
+\end{paracol}
 
 \section{Resources} \label{sec:resources}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Scattered throughout
 %, but mainly in Part~\ref{part:art},
 are comments about aspects of book design and typography, in some cases
@@ -1737,9 +1841,12 @@ and how it does it.
 please read the FAQ~\cite{FAQ} before asking a question, and also read
 a few day's worth of messages to check that your question hasn't just
 been answered.
+\end{paracol}
 
 \section{Type conventions}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The following conventions are used:
 \begin{itemize}
 \item \Pclass{The names of \ltx\ classes\index{class} and 
@@ -1754,16 +1861,20 @@ been answered.
 Macro command syntax is enclosed in a rectangular box.\\
 For referential purposes, arguments are denoted by \meta{arg} \\
 \end{syntax}
-
+\end{paracol}
 
 \section{Acknowledgements}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
      Many people have contributed to the \Lclass{memoir} class and this manual
 in the forms of code, solutions to problems, suggestions for new functions, 
 bringing my attention to errors and infelicities in the code 
 and manual, and last but not least in simply being encouraging. 
 I am very grateful to the following for all they have done, whether they
 knew it or not:
+\end{paracol}
+%
 Paul Abrahams,      % code
 William Adams,      % typography
 Tim Arnold,         % among other things, \leavespergathering in general
@@ -1879,7 +1990,8 @@ David Wilson.
 
 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 If I have inadvertently left anyone off the list I apologise, 
 and please let me know so that I can correct the 
 omisssion.% \footnote{Peter is currently occasionably reachable via email
@@ -1893,12 +2005,15 @@ satisfactory and timely response.
 
     Of course, none of this would have been possible without Donald Knuth's
 \tx\ system and the subsequent development of \ltx\ by Leslie Lamport.
+\end{paracol}
 
 \PWnote{2009/07/26}{Added `Remarks to the user' chapter}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{Remarks to the user}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The \Lclass{memoir} class gives you many ways to change the appearance of your
 document, and also provides some ready-made styles that might be
 appropriate for your purposes.
@@ -1925,9 +2040,12 @@ to do so, then copy the code you wish to change into the document's preamble
 or a package of your own or a class of your own (with a different name)
 and make the changes there. Do not expect any help if you change the
 \Lclass{memoir} class code directly.
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 As the years go by support for \Lclass{memoir} will devolve from one
 person to another.\footnote{This is currently (July 2009) happening as
   Lars Madsen is taking over from Peter Wilson.}  Therefore it is
@@ -1942,16 +2060,19 @@ In either case please include the word \texttt{\theclass} in the
 subject, and if possible, please \emph{tag} the question with the
 \texttt{\theclass} tag.  That will help the memoir maintainer keep
 track of memoir related matters.
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \textit{From the maintainer:} It seems that traffic on
 \url{comp.text.tex} is less frequent. So most \theclass\ related
 questions should go to \url{http://tex.stackexchange.com}, please
 remember to tag them properly, that really helps locating the
 \theclass\ related questions. If no-one comes up with an answer, you
 can also write me directly via \texttt{daleif (at) math dot au dot dk}.
-
+\end{paracol}
 
 
 %#% extend
@@ -1969,6 +2090,8 @@ can also write me directly via \texttt{daleif (at) math dot au dot dk}.
 \chapter{Terminology}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Like all professions and trades, typographers and printers have their
 specialised vocabulary.
 
@@ -2030,7 +2153,7 @@ of the tallest character, but different fonts with the same size may have
 very different actual heights. Traditionally font sizes were referred to
 by names (see \tref{tab:fontsizes}) but nowadays just the number of points 
 is used.
-
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2070,7 +2193,8 @@ Points & Name & Points & Name \\ \midrule
 \end{table}
 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The typographers' and printers' term for the vertical space between
 the lines of normal text is \emph{leading}\index{leading}, which is also
 usually expressed in points and is usually larger than the font size.
@@ -2089,12 +2213,16 @@ this is normally given in a shorthand form.
 A 10pt font with 11pt leading on a 20pc measure is described as
 \abyb{10/11}{20}, and \abyb{14/16}{22} describes a 14pt font
 with 16pt leading set on a a 22pc measure.
+\end{paracol}
 
 \section{Units of measurement}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Typographers and printers use a mixed system of units, some of which
 we met above. The fundamental unit is the point; \tref{tab:units} lists 
 the most common units employed.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2113,6 +2241,8 @@ cicero (cc)\index{cicero}\index{cc}         & 1cc = 12dd \\
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Points\index{point} and picas\index{pica} 
 are the traditional printers units used in English-speaking countries. 
 The didot point\index{didot point} and cicero\index{cicero} are the 
@@ -2147,7 +2277,7 @@ nominally the height of the letter `x' in the current font. You may also
 come across the term \textit{quad}\index{quad}, often as in a phrase
 like `starts with a quad space'. It is a length defined in terms of
 an em, often a quad is 1em.
-
+\end{paracol}
 
 %#% extend
 
@@ -2173,15 +2303,19 @@ an em, often a quad is 1em.
 
 \chapter{Starting off} \label{chap:starting}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     As usual, the \Lclass{memoir} class is called by 
 \cmd{\documentclass}\oarg{options}\texttt{\{memoir\}}. The \meta{options}\index{class options}
 include being able to select a paper\indextwo{paper}{size} size from among a range of sizes, 
 selecting a type size, selecting the kind of manuscript, and some related
 specifically to the typesetting of mathematics.
+\end{paracol}
 
 \section{Stock paper size options}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The stock\indextwo{stock}{size} size is the size of a single sheet of the 
 paper\index{paper} you expect to put through the printer. There is a range of 
 stock\indextwo{stock}{size} paper sizes from which to make a selection. 
@@ -2189,6 +2323,7 @@ These are listed in\index{class options!stock size} \tref{tab:sizeoptsmetric}
 through \tref{tab:sizeoptsbrit}. Also 
 included in the tables are commands that will set the stock size or paper size to 
 the same dimensions.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -2388,7 +2523,8 @@ vo} \\
   {Class option for imperial octavo stock paper size.}%
 \end{table}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 There are two options that don't really fit into the tables.
 
 \begin{itemize}
@@ -2411,9 +2547,12 @@ The default stock\indextwo{stock}{default} paper\indextwo{paper}{size} size is
 
    If you want to use a stock size that is not listed there are methods for doing this,
 which will be described later.
+\end{paracol}
 
 \section{Type size options}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The type size option sets the default font size throughout the document. The class 
 offers a wider range of type sizes\index{type size} than usual. These are:\index{class options!type size}
 \begin{itemize}
@@ -2485,9 +2624,12 @@ to 25pt. The option \Lopt{extrafontsizes} indicates that you will be using
 scalable fonts that can exceed 25pt. By default this option makes 
 Latin Modern in the \texttt{T1} encoding as the default font (normally
 Computer Modern in the \texttt{OT1} encoding is the default).
+\end{paracol}
 
 \subsection{Extended font sizes}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     By default, if you use the \Lopt{extrafontsizes} option the default
 font for the document is Latin Modern\facesubseeidx{Latin Modern} 
 in the \texttt{T1} font encoding.
@@ -2575,9 +2717,12 @@ will cause \ltx\  to try and input the \texttt{myfont18.clo} file that
 you should have provided. Use one
 of the supplied \file{clo} files, such as \file{mem10.clo} or \file{mem60.clo}
 as an example of what must be specified in your \file{clo} file.
+\end{paracol}
 
 \section{Printing options}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     This group of options\index{class options!printing} includes:
 
 \begin{itemize}
@@ -2655,9 +2800,12 @@ as an example of what must be specified in your \file{clo} file.
 
     The defaults among the printing options\index{default!printing options} 
 are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
+\end{paracol}
 
 \section{Other options}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The remaining options are:
 \begin{itemize}
 
@@ -2709,9 +2857,12 @@ are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
 \end{itemize}
 
     None of these options are defaulted.
+\end{paracol}
 
 \section{Remarks}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    Calling the class with no options is equivalent to:
 \begin{lcode}
 \documentclass[letterpaper,10pt,twoside,onecolumn,openright,final]{memoir}
@@ -2767,6 +2918,7 @@ want to put \cmd{\raggedbottom} in the preamble\index{preamble}.
 
     If you use the \Lopt{ebook} option you may well also want to use the
 \Lopt{12pt} and \Lopt{oneside} options.
+\end{paracol}
 
 %#% extend
 
@@ -2783,13 +2935,17 @@ want to put \cmd{\raggedbottom} in the preamble\index{preamble}.
 
 \chapter{Laying out the page} \label{chap:layingpage}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 Up until this chapter the \pstyle{headings} pagestyle\index{pagestyle}
 has been used; pagestyles are described in \Sref{sec:pagestyles}.
 This, and later chapters, are typeset with the \pstyle{ruled} pagestyle.
+\end{paracol}
 
 \section{Introduction}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The class provides a default page 
 layout\index{page layout}\indextwo{page layout}{default}, 
 in which the page size is the
@@ -2800,9 +2956,12 @@ produce your own page layout if the default is inappropriate.
 
     If you are happy with the default layout you may skip the rest of this
 chapter.
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The pages of a book carry the text which is intended to educate, entertain
 and/or amuse the reader. The page must be designed to serve the purposes of
 the author and to ease the reader's task in assimilating the author's ideas.
@@ -2823,9 +2982,12 @@ all these.
     Although the form is different, the facilities described in this chapter 
 are similar to those provided by the \Lpack{geometry} 
 package~\cite{GEOMETRY}.
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{adjustwidth}{3em}{3em}
   \itshape
   Note, if your paper choice matches one of the class paper options,
@@ -2860,7 +3022,7 @@ another, please read on.
 % \item At the end (\emph{very important}) we ask the class to put
 %   everything together and check that they make sense.
 % \end{enumerate}
-
+\end{paracol}
 
 
 
@@ -2869,6 +3031,8 @@ another, please read on.
 \section{Stock material}
 \label{sec:stock-material}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Printing is the act of laying symbols onto a piece of
 stock\index{stock} material.  Some print on T-shirts by a process
 called silk screening, where the shapes of the symbols are made in a
@@ -2891,14 +3055,17 @@ pages being printed on each stock\index{stock} piece;
 the stock\index{stock} is then folded, cut and trimmed to form
 the final pages for binding. The class assumes that desktop publishing is 
 the norm.
-
+\end{paracol}
 
 \section{The page}
 \label{sec:page}
- 
+
+\begin{paracol}{2}\TS{0}
+\switchEng
     The class assumes that there will be only a single page on a side of
 each piece of stock\index{stock}; two sides means that there can be two
 pages, one on the front and the other on the back. 
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -2906,6 +3073,8 @@ pages, one on the front and the other on the back.
 \caption{\ltx\ page layout parameters for a recto page} \label{fig:anoddpage}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The parameters\index{page layout!LaTeX parameters?\ltx\ parameters} 
 used by \ltx\ itself to define the page layout are 
 illustrated in \fref{fig:anoddpage}. \ltx\ does not actually care about the
@@ -2933,7 +3102,7 @@ recto page.
 These may be changed individually by \cmd{\setlength} or by using the 
 commands described below. Figure~\ref{fig:evenstock} illustrates the
 same parameters on a verso page.
-
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -2952,7 +3121,8 @@ same parameters on a verso page.
 
 \fancybreak{}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The first step in designing the page layout\index{page layout!design} 
 is to decide on the page size\indextwo{page}{size} and then pick an 
 appropriate stock\indextwo{stock}{size} size. Selecting a standard 
@@ -3032,7 +3202,7 @@ the \lnc{\paperheight}
 and \lnc{\paperwidth} to be specified directly or as one being in a given
 ratio to the other. The potential combinations of arguments and the 
 corresponding results are listed in \tref{tab:rectsize}.
-
+\end{paracol}
 
 \begin{table}
 \centering
@@ -3052,6 +3222,8 @@ corresponding results are listed in \tref{tab:rectsize}.
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     If you have used \cmd{\setstocksize} to redefine the stock\index{stock}, 
 then to get the same page size, do:
 \begin{lcode}
@@ -3122,9 +3294,12 @@ on and specify
 \begin{lcode}
 \settrims{0.5\trimtop}{\trimedge}
 \end{lcode}
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 See also section~\ref{sec:predefined-layouts} --
 \emph{\titleref{sec:predefined-layouts}}, where we present some extra
 commands. For example \cmd{\setpagecc} for placing a trimmed page
@@ -3132,10 +3307,12 @@ centered on the stock.
 
 After trimming the various methods to specify the typeblock, now
 refers to the \emph{trimmed} page, not the stock material.
-
+\end{paracol}
 
 \section{The typeblock} \label{sec:typeblock2}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Like the page, the typeblock\index{proportion!typeblock} is normally 
 rectangular with the height greater than the width.
 %    Consider a typeblock that includes no illustrations\index{illustration} 
@@ -3146,10 +3323,12 @@ long lines of text are difficult to read. Thus, there is a physiological
 upper limit to the width of the typeblock. From a practical viewpoint,
 a line should not be too short because then there is difficulty in justifying
 the text.
+\end{paracol}
 
 \subsection{A note on the width of the typeblock}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Experiments have shown that the number of characters in a line of
 single column\index{column} text on a page should be
 in the range 60 to 70 for ease of reading. The range may be as much
@@ -3174,7 +3353,7 @@ For example, it suggests that a font with a length of 130pt should be
 set on a measure of about 26pc for a single column\index{column!single} 
 or in an 18pc wide column if there are multiple\index{column!multiple} 
 columns.
- 
+\end{paracol}
 
 \begin{table}
 %%%\DeleteShortVerb{\|}
@@ -3223,6 +3402,8 @@ Pts. & \multicolumn{8}{c}{Line length in picas} \\
 %%%\MakeShortVerb{\|}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Morten H{\o}gholm\index{H{\o}gholm, Morten} has done some curve fitting
 to the data. He determined that the expressions
 \begin{equation}
@@ -3360,7 +3541,7 @@ was only 17.607pt.
 Note that, in general, it is inadviseable to put any 
 commands\index{packages before class} before
 \cmd{\documentclass}.
-
+\end{paracol}
 
 
 
@@ -3401,8 +3582,8 @@ commands\index{packages before class} before
 \label{sec:spec-typebl-size}
 
 
-
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The height of the typeblock\index{typeblock!height} should be 
 equivalent to an integral number of lines. The class provides two
 different methods to specify the typeblock. \cmd{\settypeblocksize}
@@ -3509,7 +3690,7 @@ widths. The \cmd{\setlrmargins}\index{margin!specifying size} command maintains 
 \begin{displaymath}
 S + E = K_{w}  = \textrm{constant} \mbox{\space} (= P_{w} - B_{w}).
 \end{displaymath}
-
+\end{paracol}
 
 \begin{table}
 \centering
@@ -3529,6 +3710,8 @@ S + E = K_{w}  = \textrm{constant} \mbox{\space} (= P_{w} - B_{w}).
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 The cases marked ambiguous in the \tablerefname{} are where the particular combination
 of argument values may make it impossible to guarantee the relationship.
 
@@ -3566,6 +3749,7 @@ S + B_{w} + E = \textrm{constant} \mbox{\space} (= P_{w}).
 \end{displaymath}
 The width of the typeblock\index{typeblock} is calculated 
 from $B_{w} = P_{w} - S - E$.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -3585,6 +3769,8 @@ from $B_{w} = P_{w} - S - E$.
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Assuming that we want a 3in wide typeblock\index{typeblock!width} on a 
 5in wide page\index{page!width} and we want the spine 
 margin\index{margin!spine} to be 0.8in and the \foredge{} 
@@ -3664,6 +3850,7 @@ U + L = K_{h}  = \textrm{constant} \mbox{\space} (= P_{h} - B_{h}).
 
     Note that in terms of the traditional \ltx\ parameters memoir's 
 \lnc{\uppermargin} is (\lnc{\topmargin} + \lnc{\headheight} + \lnc{\headsep}).
+\end{paracol}
 
 \begin{table}
 \centering
@@ -3683,6 +3870,8 @@ U + L = K_{h}  = \textrm{constant} \mbox{\space} (= P_{h} - B_{h}).
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\setulmarginsandblock}\marg{upper}\marg{lower}\marg{ratio} \\
 \end{syntax}
@@ -3703,6 +3892,7 @@ U + B_{h} + L = \textrm{constant} \mbox{\space} (P_{h}).
 \end{displaymath}
 The height of the typeblock\index{typeblock!specifying size} 
 is calculated from $B_{h} = P_{h} - U - L$.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -3722,14 +3912,18 @@ is calculated from $B_{h} = P_{h} - U - L$.
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{note}
   Readers may find several folio designs in \cite{MEMDESIGN}.
 \end{note}
-
+\end{paracol}
 
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\setcolsepandrule}\marg{colsep}\marg{thickness} \\
 \end{syntax}
@@ -3759,11 +3953,13 @@ main elements of the page --- the page\index{page!specifying size}
 size, the size of the typeblock\index{typeblock!specifying size} and the 
 margins\index{margin!specifying size} 
 surrounding the typeblock\index{typeblock!location}. 
+\end{paracol}
 
 \section{Headers, footers and marginal notes}
 \label{sec:head-foot-marg}
 \index{header|(}\index{footer|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     A page may have two additional items, and usually has at least one of 
 these. They are the running header and running footer. If the page has a 
 folio\index{folio} then it is located either in the header or in the footer. 
@@ -3782,9 +3978,12 @@ around the book. Some books put the book title into one of the headers,
 usually the verso one, but I see 
 little point in that as presumably the reader knows which particular book he
 is reading, and the space would be better used providing more useful signposts.
+\end{paracol}
 
 \index{header!specifying size|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\setheadfoot}\marg{headheight}\marg{footskip} \\
 \end{syntax}
@@ -3826,6 +4025,7 @@ then the macro \cmd{\setheaderspaces} maintains the relationship
 \begin{displaymath}
 D + H_{s} = C_{h}  = \textrm{constant} \mbox{\space} (= U - H_{h}).
 \end{displaymath}
+\end{paracol}
 
 \begin{table}
 \centering
@@ -3845,6 +4045,8 @@ D + H_{s} = C_{h}  = \textrm{constant} \mbox{\space} (= U - H_{h}).
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 The macro \cmd{\setheaderspaces} is for specifying the spacing above and below
 the page header.
 The possible arguments and results are shown in \tref{tab:headspaces}. Typically,
@@ -3897,6 +4099,7 @@ is set to \meta{push}.
 
   We may add other auto adjusting features to future \theclass\ releases.
 \end{note}
+\end{paracol}
 
 \index{marginalia|)} %|
 
@@ -3904,7 +4107,8 @@ is set to \meta{push}.
 \section{Other}
 \label{sec:other}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\setfootins}\marg{length for normal}\marg{length for minipage} \\
 \end{syntax}
@@ -3919,12 +4123,14 @@ needs special syntax to change it. Instead we have provided an
 interface to set it.\footnote{This interface also sets the equivalent
   lengths used when \cs{twocolumnfootnotes} and friends are being
   used.} The default sizes are \cs{bigskipamount}.
-
+\end{paracol}
 
 
 
 \section{Putting it together}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The page layout parameters\index{page layout!class parameters} 
 just discussed are not always the same
 as those that are expected by \ltx, or by \ltx\ packages. The parameters
@@ -4005,6 +4211,7 @@ you can see the different layout\index{page layout!parameters} parameters
 provided by the class and used by standard
 \ltx. For convenience, and because the figures do not show all
 the parameters, the two sets of parameters are listed in \tref{tab:stockpage}.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -4039,6 +4246,8 @@ Class & \ltx\ \\ \midrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Unless you are satisfied with the default page layout, after specifying 
 the layout that you want you have to call the \cmd{\checkandfixthelayout}
 command to finally implement your specification.
@@ -4124,6 +4333,7 @@ In contrast to \texttt{classic}, \texttt{nearest}
 will get as close to $H$ as possible even if this means that $T$ ends
 up being slightly larger than $H$.
 \end{itemize}
+\end{paracol}
 
 \begin{table}
 \centering
@@ -4143,6 +4353,8 @@ Requested height & \multicolumn{4}{c}{adjusted height in pts, (lines) } \\
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Table~\ref{tab:textht} shows the results from the various \lnc{\textheight}
 adjustment calculations\footnote{For comparison the optimum heights from 
 equation \ref{eq:heightlines} for 10, 11 and 12 lines are respectively
@@ -4209,9 +4421,12 @@ in, say, centimeters. Supported units are \texttt{pt}, \texttt{pc},
 \texttt{mm}, \texttt{cm}, \texttt{in}, \texttt{bp}, \texttt{dd} and
 \texttt{cc}, default being \texttt{pt}, see \tref{tab:units} for more
 information about the units.
+\end{paracol}
 
 \section{Side margins}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     In \Lopt{twoside} printing the spine margin is normally the same on
 both recto and verso pages and, unless the spine and \foredge{} margins are the
 same, the typeblock is shifted side to side when printing the recto and 
@@ -4234,9 +4449,12 @@ is like this (\Lopt{twoside} is the default class option):
 \setlength{\evensidemargin}{\oddsidemargin}% after \checkandfix...
 ...
 \end{lcode}
+\end{paracol}
 
 \section{Printing and viewing}
-  
+
+\begin{paracol}{2}\TS{0}
+\switchEng
     When \pdfltx\ is used to generate a \pixpdf\ version of a \Pclass{memoir}
 document some special setup must be done.
 \begin{syntax}
@@ -4308,9 +4526,12 @@ or \pdfltx{} and \cmd{fixdvipslayout} for the rest.
 % \special{!TeXDict begin <</Tumble true>> setpagedevice end} 
 % \end{lcode}
 % %<< because of emacs ...
+\end{paracol}
 
 \section{Example} \label{sec:pexamp}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Suppose you want a page that will fit on both A4\index{paper!size!A4} 
 and US letterpaper\index{paper!size!letterpaper} stock\index{stock},
 wanting to do the least amount of trimming. The layout requirements
@@ -4379,7 +4600,7 @@ To finish off we have to make sure that the layout is changed
 \begin{lcode}
 \checkandfixthelayout
 \end{lcode}
-
+\end{paracol}
 
 \subsection{The page layout of this manual}
 
@@ -4395,7 +4616,8 @@ To finish off we have to make sure that the layout is changed
 \end{figure}
 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The page layout for this manual is defined in the preamble\index{preamble} as:
 \begin{lcode}
 \settrimmedsize{11in}{210mm}{*}
@@ -4443,11 +4665,13 @@ on A4 paper.
     However, the layout that I have provided will print on both letterpaper
 and A4 sized stock even if it might look better if it was designed for always
 being printed on one or the other.
+\end{paracol}
 
 \section{Predefined layouts}
 \label{sec:predefined-layouts}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The class, like the standard classes, will automatically produce 
 working layouts for \Lopt{letterpaper}
 and \Lopt{a4paper} size options. They might be a bit problematic, though,
@@ -4460,6 +4684,7 @@ package~\cite{LAYOUTS} useful for checking the page layout.
 typeblock with respect to the page. After using any of these commands you
 \emph{must} call \cmd{\checkandfixthelayout} (and after having made any other
 changes to match the new layout).
+\end{paracol}
 
 \begin{figure}[p]
 \begin{leftfullpage}
@@ -4537,7 +4762,8 @@ changes to match the new layout).
 
 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\medievalpage}\oarg{spine} \\
 \end{syntax}
@@ -4594,9 +4820,12 @@ of \cmd{\isopage}.
     Spreads showing a variety of these layouts are in \fref{fig:pagefirstlay} 
 through \ref{fig:pagelastlay}. These were produced with the aid of the
 \Lpack{layouts} package.
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\setpagebl}\marg{height}\marg{width}\marg{ratio} \\
 \cmd{\setpageml}\marg{height}\marg{width}\marg{ratio} \\
@@ -4683,7 +4912,7 @@ bottom right, bottom middle and centered with respect to the stock.
 Remember that after you have finished defining the layout you want you
 have to call \cmd{\checkandfixthelayout} for all the changes to take
 effect.
-
+\end{paracol}
 
 %#% extend
 %#% extstart include text-and-fonts.tex
@@ -4697,16 +4926,20 @@ effect.
 
 \chapter{Text and fonts}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Presumably you will be creating a document that contains at least some
 text. In this chapter I talk a little about the kinds of fonts that you might
 use and how text appears on a page.
-
+\end{paracol}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{Fonts} \label{sec:fonts}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     \alltx{} comes with a standard set of fonts, designed by Donald Knuth,
 and known as the Computer Modern\index{font!Computer Modern} font family. 
 The Knuthian
@@ -4864,6 +5097,7 @@ symbols rather than characters. Table~\ref{tab:palatinoglyphs}, although it
 is specifically for Palatino\facesubseeidx{Palatino}, shows the glyphs 
 typically available. Tables~\ref{tab:symbolglyphs} and~\ref{tab:dingglyphs}
 show the glyphs in the two symbol fonts.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -4886,7 +5120,8 @@ show the glyphs in the two symbol fonts.
 \fonttable{pzdr}
 \end{table}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 These supplied \pscript\ fonts, their respective \ltx\ fontfamily\index{fontfamily} names,
 and running text examples of each, are:
 \begin{description}
@@ -5032,6 +5267,7 @@ The fontfamily name is \pfontfam{pzd}.
 and (c)~the family\index{font characteristic!family}. 
 Table \ref{tab:fontcat} illustrates these and lists the relevant 
 commands\index{font commands} to access the different font categories.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -5080,6 +5316,8 @@ commands\index{font commands} to access the different font categories.
   {Typeset \meta{text} with a Typewriter (monospaced) font.}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The normal body font\index{body font} --- the font used for the bulk 
 of the text ---
 is an upright, medium, roman font of a size specified by the font size
@@ -5098,6 +5336,7 @@ that correspond to the commands listed in \tref{tab:fontcat}. The commands
 are most useful when changing the font for a word or two, while the 
 declarations are more convenient when you want to typeset longer passages
 in a different font.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -5146,6 +5385,8 @@ in a different font.
   {Declaration for using a Typewriter (monospaced) font.}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Do not go wild seeing how many different kinds of fonts you can cram into
 your work as in example~\ref{egbadmf}.
 
@@ -5248,11 +5489,13 @@ newly emphasized text will be typeset using the
 \newcommand*{\eminnershape}{\upshape}
 \end{lcode}
 which you can change if you wish.
-
+\end{paracol}
 
 
 \section{Font sizes}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The Computer Modern \metafont{} fonts come in a fixed number of 
 sizes\index{font size}, with
 each size being subtly different in shape so that they blend harmoniously.
@@ -5272,6 +5515,7 @@ are: 5, 6, 7, 8, 9, 10, 11, 12, 14, 17, 20 and 25pt.
 of this manual.} 
 The actual size of, say, \cs{scriptsize} characters, is not fixed but depends
 on the type size option given for the document. 
+\end{paracol}
 
 \begin{table}
 \centering
@@ -5286,6 +5530,8 @@ on the type size option given for the document.
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
  Standard
 \ltx\ provides ten
 declarations, illustrated in \tref{tab:fontsize}, for setting the type size, 
@@ -5294,6 +5540,7 @@ not easily accessible. Which two depend on the class and the
 selected point size option. However, for normal typesetting four different
 sizes should cover the majority of needs, so there is plenty of scope with
 a mere ten to choose from.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -5314,6 +5561,8 @@ Class option        & 10pt & 11pt & 12pt \\ \midrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The \cmd{\normalsize} is the size that is set as the class 
 option\index{class option} and is the size used for the body\index{body font} 
 text. The \cmd{\footnotesize} is the size normally
@@ -5330,6 +5579,7 @@ and \cmd{\HUGE}, one at each end of the range.
 \tref{tab:fsizenames} together with the name set in the specified size 
 relative to the manual's \cs{normalsize} font.
 font. The corresponding actual sizes are given in \tref{tab:fsizepoints}.
+\end{paracol}
 
 \begin{table}
 \centering 
@@ -5378,6 +5628,8 @@ Class option & \Lopt{9pt} & \Lopt{10pt} & \Lopt{11pt} & \Lopt{12pt} & \Lopt{14pt
 \end{adjustwidth}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Whereas the standard font sizes range from 5pt to 25pt, \Mname\  
 provides for fonts ranging from 4pt to 132pt. That is: \par
 {\fontsize{4}{5}\selectfont from the 4pt size (the 9pt \cs{miniscule} size)} \par
@@ -5393,12 +5645,14 @@ and the \Lopt{extrafontsizes} class option.
 If you are using bitmap fonts\indextwo{bitmap}{font} then, for example,
 the \cmd{\HUGE} font will be automatically limited to 25pt, and the minimum
 size of a \cmd{\miniscule} font is 5pt.
-
+\end{paracol}
 
 \section{Spaces}
 
 \subsection{Paragraphs}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     In traditional typography the first line of a paragraph, unless it comes
 immediately after a chapter or section heading, is indented. Also, there
 is no extra space between paragraphs. Font designers go to great pains
@@ -5479,11 +5733,13 @@ To make the first line of a paragraph flushleft set this to zero:
 \begin{lcode}
 \setlength{\parindent}{0pt}
 \end{lcode}
+\end{paracol}
 
 \subsection{Double spacing}
 
 \index{double spacing|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Some of those that have control over the visual appearance of academic
 theses like them to be `double spaced'. This, of course, will make the thesis
 harder to read\footnote{I certainly found them so when I was having to read
@@ -5659,14 +5915,15 @@ redefine \cmd{\memdskips} to do nothing. Its orginal specification is:
 spaced text then you
 may need to use the \Ie{vminipage} environment instead to get the before and
 after spacing correct.
-
+\end{paracol}
 
 \section{Overfull lines}
 
 \index{overfull lines|(}
 \index{space!interword|(}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     \tx\ tries very hard to keep text lines justified while keeping the 
 interword spacing as constant as possible, but sometimes fails and complains
 about an overfull hbox.
@@ -5712,12 +5969,14 @@ interword spaces than with \cmd{\sloppy}.
 I have used \cmd{\midsloppy} for this manual; it hasn't prevented 
 overfull lines or noticeably different interword spaces, but has markedly 
 reduced them compared with \cmd{\fussy} and \cmd{\sloppy} respectively.
-
+\end{paracol}
 \index{overfull lines|)}
 \index{space!interword|)}
 
 \section{Sloppybottom}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \indextwo{widow}{line}\indextwo{orphan}{line}
     \tx\ does its best to avoid widow and orphan lines --- a widow is where 
 the last line of a paragraph ends up at the top of a page, and an 
@@ -5819,10 +6078,13 @@ though typographers are typically more concerned about widows than orphans ---
 a single line of a paragraph somehow looks worse at the top of a page than
 at the bottom. If all else fails, the solution is either to live with the 
 odd line or to reword the text.
+\end{paracol}
 
 \section{Text case}
 \label{sec:text-case}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 The standard kernel \cmd{\MakeUppercase}\marg{text} and
 \cmd{\MakeLowercase}\marg{text} 
 basically upper or lower case everything it can get its hands on. This
@@ -5833,9 +6095,12 @@ In order to help with this we provide the \cmd{\MakeTextUppercase} and
 (\cite{textcase}) by David Carlisle. The following is DCs own
 documentation of the provided code changed to match the typography we
 use.
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
   \cmd{\MakeTextUppercase}\marg{text}\\
   \cmd{\MakeTextLowercase}\marg{text}
@@ -5916,8 +6181,12 @@ which produces
         \NoCaseChange{\end{tabular}}
    More text}
 \end{quotation}
+\end{paracol}
 
 \subsection{Nested text}
+
+\begin{paracol}{2}\TS{0}
+\switchEng
 The commands defined here only skip math sections and \cmd{\ref} arguments
 if they are not `hidden' inside a \verb|{ }| brace group. All text inside
 such a group will be made uppercase just as with the standard
@@ -5961,10 +6230,12 @@ which produces
 \MakeTextUppercase{%
        Text \fbox{\protect\mathexprone\ and \protect\mathexprtwo}}%
 \end{quotation}
-
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 See also \cite{textcase} for some information about upper casing
 citations using a non-nummeric style.
 
@@ -5995,8 +6266,7 @@ citations using a non-nummeric style.
 
 %  TEXT [1] AND [DAVID CARLISLE 1997]
 % \end{quotation}
-
-
+\end{paracol}
 
 
 %#% extend
@@ -6011,6 +6281,8 @@ citations using a non-nummeric style.
 
 \chapter{Titles}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    The standard classes provide little in the way of help in setting
 the title page(s) for your work, as the \cmd{\maketitle} command
 is principally aimed at generating a title for an article in a technical
@@ -6042,6 +6314,7 @@ type area, and will normally be narrower\ldots
 \end{quotation}
 
     A pastiche of McLean's title page is shown in \fref{figure:titleTH}.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -6058,6 +6331,8 @@ show title pages created using normal \ltx, without bothering
 with \cmd{\maketitle}.
 \end{comment}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
    The typeset format of the \cmd{\maketitle} command is virtually fixed
 within the \ltx\ standard classes. This class
 provides a set of formatting commands that can be used to modify
@@ -6075,6 +6350,7 @@ Hooks are provided so that additional titling elements can be defined
 and printed by \cmd{\maketitle}.
   The \cmd{\thanks} command is enhanced to provide various configurations
 for both the marker symbol and the layout of the thanks\index{thanks} notes.
+\end{paracol}
 
 \begin{figure}
 \centering
@@ -6108,16 +6384,20 @@ for both the marker symbol and the layout of the thanks\index{thanks} notes.
 \caption{Layout of a title page for a book about books}\label{figure:titleGM}
 \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Generally speaking, if you want anything other than minor variations
 on the \cmd{\maketitle} layout then it is better to ignore \cmd{\maketitle}
 and take the whole layout into your own hands so you can place everthing 
 just where you want it on the page.
+\end{paracol}
 
 \section{Styling the titling}
 
 
 \index{title!styling|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
    The facilities provided for typesetting titles are limited, essentially
 catering for the kind of titles of articles published in technical journals.
 They can also be used as a quick and dirty method for typesetting titles
@@ -6514,6 +6794,7 @@ the \cmd{\thanks} commands in each use just stack up the texts for output
 at each use, so each subsequent use of \cmd{\maketitle} will output all 
 previous \cmd{\thanks} texts together with any new ones. To avoid this,
 put \cmd{\emptythanks} before each \cmd{\maketitle} after the first.
+\end{paracol}
 
 \index{title!styling|)}
 
@@ -6522,7 +6803,8 @@ put \cmd{\emptythanks} before each \cmd{\maketitle} after the first.
 
 \index{thanks}
 \index{thanks!styling|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     The class provides a configurable \cmd{\thanks} command.
 
 \begin{syntax}
@@ -6705,7 +6987,7 @@ This is initially defined as:
 \end{lcode}
 so that \cmd{\thanksscript} typesets its argument as a superscript, which
 is the default for thanks notes.
-
+\end{paracol}
 
 
 \begin{comment}
@@ -6777,6 +7059,8 @@ as necessary.
 \end{comment}
 %%%%%%%%%%%%%%%%%%%%
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\makethanksmark} \\
 \cmd{\makethanksmarkhook} \\
@@ -6848,7 +7132,7 @@ and thanks notes, and the default \cmd{\footnoterule} are the same
 You will have to change one or more of these if the vertical spacings of 
 footnotes\index{footnote}
 and thanks notes are meant to be different.
-
+\end{paracol}
 \index{thanks!styling|)}
 
 %#% extend
@@ -6862,7 +7146,8 @@ and thanks notes are meant to be different.
 
 \chapter{Abstracts}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Abstracts\index{abstract} do not normally appear in books but 
 they are often an essential
 part of an article in a technical journal. Reports may or may not
@@ -6882,11 +7167,13 @@ seem to pop up fairly regularly on the
 on \ctt\ is provided in the FAQ,
 the class provides a more author-friendly means
 of accomplishing this. 
+\end{paracol}
 
 \section{Styling}
 
 \index{abstract!styling|(}
-
+\begin{paracol}{2}\TS{0}
+\switchEng
     Much of this part of the class is a reimplementation of the 
 \Lpack{abstract} package~\cite{ABSTRACT}.
 
@@ -7117,7 +7404,7 @@ an earlier \cmd{\maketitle} are printed out as normal.
 of the \Ie{abstract} environment --- it doesn't have to be within the 
 optional argument of the \cmd{\twocolumn} command. In fact, 
 \Ie{onecolabstract} internally uses \Ie{abstract} for the typesetting.
-
+\end{paracol}
 
 \index{abstract!one column|)}
 
@@ -7149,6 +7436,8 @@ optional argument of the \cmd{\twocolumn} command. In fact,
 
 \chapter{Document divisions}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 For this chapter the \cstyle{pedersen} chapterstyle has been used in
 order to demonstrate how it appears.
 
@@ -7162,9 +7451,12 @@ The facilities described here provide roughly the same as you would
 get if you used the \Lpack{titlesec}~\cite{TITLESEC} and
 \Lpack{sectsty}~\cite{SECTSTY} packages together; the commands are
 different, though.
+\end{paracol}
 
 \section{Logical divisions}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     As described earlier there are three main logical divisions to a book;
 the \pixfrontmatter, \pixmainmatter\ and \pixbackmatter. There are three \ltx\
 commands that correspond to these, namely \cmd{\frontmatter},
@@ -7231,11 +7523,14 @@ starts at the next coming recto page. (Even when running under the
 The \cmd{\backmatter} declaration makes no change to the pagination or 
 folios\index{folio} but does prohibit sectional division numbering, and 
 captions\index{caption}, etc., will be numbered continuously.
+\end{paracol}
 
 \fancybreak{}
 
 \LMnote{2009/06/29}{Added the following section}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 If you have other types of floats that might be used in the front-
 main- or backmatter, then you can change some internals to add these
 to be numbered in the same manner as we do with figures and
@@ -7266,12 +7561,14 @@ figure numbering throughout, i.e.,
 \makeatother
 \end{lcode}
 in the preamble.
-
+\end{paracol}
 
 
 
 \section{Sectional divisions}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The \theclass{} class lets you divide a document up into eight levels
 of named divisions. They range from book\index{book}, part\index{part} 
 through chapter\index{chapter} and down to 
@@ -7445,9 +7742,12 @@ possible page break.
 
 The declaration \cmd{\normalbottomsection}, which is the default,
 cancels any previous \cmd{\raggedbottomsection} declaration.
+\end{paracol}
 
 \subsection{Appendices} \label{sec:appendices}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Appendices\index{appendix} normally come after the main text and are 
 often considered to be part
 of the \cmd{\mainmatter} as they are normally numbered (the \cmd{\backmatter}
@@ -7562,11 +7862,13 @@ numerials for sectioning numbers)
 The macro \cmd{sectionname} is a special macro that only lives inside
 the \Ie{subappendices} environment and is only available when
 \cmd{\namedsubappendices} is applied.
-
+\end{paracol}
 
 
 \section{Numbering} \label{sec:secnumbers}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Each type of sectional division\index{division!sectional} has an 
 associated \emph{level}\index{sectional division!level number} as shown 
 in \tref{tab:seclevels}.
@@ -7576,6 +7878,7 @@ is equal to or greater than their level. For example, with
 \setcounter{secnumdepth}{2}
 \end{lcode}
 then subsections up to book\index{book!number} will be numbered.
+\end{paracol}
 
 \begin{table}
 \centering
@@ -7593,6 +7896,8 @@ Division       & Level \\ \midrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\setsecnumdepth}\marg{secname} \\
 \cmd{\maxsecnumdepth}\marg{secname} \\
@@ -7632,12 +7937,15 @@ numbering level to the value specified by \cmd{\maxsecnumdepth}.
 
     The number setting commands come from the \Lpack{tocvsec2}
 package~\cite{TOCVSEC2}.
+\end{paracol}
 
 \section{Book and part headings}
 
 \index{heading!book|(}
 \index{heading!part|(}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Book and part headings \emph{always} start on a new page with the 
 \pstyle{book} and \pstyle{part} pagestyles, respectively. The typical
 book and part heading consists of the name (e.g., `Book' or `Part') 
@@ -7941,7 +8249,7 @@ titling. Something like this may do the trick
     \@afterindentfalse\@afterheading} 
 \makeatother
 \end{lcode}
-
+\end{paracol}
 
 
 \index{heading!part|)}
