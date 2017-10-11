@@ -113,7 +113,7 @@ acs-*.bib
 *.lzs
 
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
-# *.ist
+*.ist
 
 # gnuplottex
 *-gnuplottex-*
@@ -240,9 +240,12 @@ pythontex-files-*/
 TSWLatexianTemp*
 
 ## Editors:
+# (X)Emacs
+*~
+
 # WinEdt
-*.bak
-*.sav
+#*.bak
+#*.sav
 
 # Texpad
 .texpadtmp
@@ -251,7 +254,7 @@ TSWLatexianTemp*
 *.lyx~
 
 # Kile
-*.backup
+#*.backup
 
 # gummi
 .*.swp
