@@ -60,21 +60,23 @@
 \ifthenelse{\equal{#1}{1}}{\def\TScolorA{red}}{\def\TScolorA{white}}%
 \ifthenelse{\equal{#1}{2}}{\def\TScolorB{yellow}}{\def\TScolorB{white}}%
 \ifthenelse{\equal{#1}{3}}{\def\TScolorC{green}}{\def\TScolorC{white}}%
-\begin{tikzpicture}[ampersand replacement=\&]
-\matrix[matrix of nodes,
-        nodes in empty cells,
-        rounded corners,
-        inner sep=.275ex,
-        draw = black,
-        fill = black!50,
-        nodes = {circle, minimum size=1.5ex, anchor=center, draw=black, inner sep=0pt},
-        row 1 column 1/.style={nodes={fill=\TScolorA}},
-        row 1 column 2/.style={nodes={fill=\TScolorB}},
-        row 1 column 3/.style={nodes={fill=\TScolorC}},
-        column sep=.125ex
-       ] {%
- \& \& \\
-} ;
-\end{tikzpicture}
-}
+\marginpar{%
+  \begin{tikzpicture}[ampersand replacement=\&]
+  \matrix[matrix of nodes,
+          nodes in empty cells,
+          rounded corners,
+          inner sep=.275ex,
+          draw = black,
+          fill = black!50,
+          nodes = {circle, minimum size=1.5ex, anchor=center, draw=black, inner sep=0pt},
+          row 1 column 1/.style={nodes={fill=\TScolorA}},
+          row 1 column 2/.style={nodes={fill=\TScolorB}},
+          row 1 column 3/.style={nodes={fill=\TScolorC}},
+          column sep=.125ex
+         ] {%
+   \& \& \\
+  } ;
+  \end{tikzpicture}%
+}% end of \marginpar
+}% end of \newcommand
 
