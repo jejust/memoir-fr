@@ -112,6 +112,9 @@ acs-*.bib
 *.lzo
 *.lzs
 
+# ?? memoir class (jejust, 201710)
+*.ego
+
 # uncomment this for glossaries-extra (will ignore makeindex's style files!)
 *.ist
 

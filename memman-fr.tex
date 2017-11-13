@@ -359,7 +359,7 @@ Manual last changed \svnyear/\svnmonth/\svnday
 
 \chapter{Preface}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     From personal experience and also from lurking on the \url{comp.text.tex}
 newsgroup the major problems with using \ltx\ are related to document
@@ -367,13 +367,8 @@ design. Some years ago most questions on \ctt\ were answered by
 someone providing a piece of code that solved a particular problem, and
 again and again. More recently these questions are answered along the
 lines of `Use the ---------{} package', and again and again.
-\switchFrench
-    From personal experience and also from lurking on the \url{comp.text.tex}
-newsgroup the major problems with using \ltx\ are related to document
-design. Some years ago most questions on \ctt\ were answered by
-someone providing a piece of code that solved a particular problem, and
-again and again. More recently these questions are answered along the
-lines of `Use the ---------{} package', and again and again.
+\switchFrench\TS{1}
+    D'après mon expérience personnelle et celle des membres du groupe de discussion \url{comp.text.tex}, les principaux problèmes liés à l'utilisation de \ltx\ sont liés à la conception des documents. Il y a quelques années, la plupart des questions posées sur \ctt\ recevaient une réponse sous la forme d'un morceau de code qui résolvait un problème particulier, et encore et encore. Plus récemment, la réponse à ces questions est du type \og{}Utilisez l'extension  the ---------{}\fg{}, et encore et encore.
 
 \switchEng
     I have used many of the more common of these packages but my filing system
@@ -387,18 +382,8 @@ easy to fake an \Ie{abstract} if it is needed. With a little bit of tweaking,
 \Pclass{book} class documents can be made to look just like \Pclass{article}
 class documents, and the \Pclass{memoir} class is designed with tweaking very
 much in mind.
-\switchFrench
-    I have used many of the more common of these packages but my filing system
-is not always well ordered and I tend to mislay the various user manuals,
-even for the packages I have written. The \Pclass{memoir} class is an attempt
-to integrate some of the more design-related packages with the LaTeX
-\Pclass{book} class. I chose the \Pclass{book} class as the \Pclass{report} class
-is virtually identical to \Pclass{book}, except that \Pclass{book} does
-not have an \Ie{abstract} environment while \Pclass{report} does; however it is 
-easy to fake an \Ie{abstract} if it is needed. With a little bit of tweaking,
-\Pclass{book} class documents can be made to look just like \Pclass{article}
-class documents, and the \Pclass{memoir} class is designed with tweaking very
-much in mind.
+\switchFrench\TS{1}
+    J'ai utilisé beaucoup des paquets les plus courants, mais mon système de classement n'est pas toujours bien ordonné et j'ai tendance à égarer les divers manuels d'utilisation, même pour les paquets que j'ai écrits. La classe de mémoires est une tentative d'intégration de certains des paquets les plus liés à la conception avec la classe de livres LaTeX. J'ai choisi la classe book car la classe report est virtuellement identique à book, à l'exception du fait que book n'a pas d'environnement d'abstraction alors que report en a un ; cependant, il est facile de simuler une abstraction si nécessaire. Avec un peu d'ajustement, les documents de la classe book peuvent ressembler aux documents de la classe article, et la classe memoir a été conçue en tenant compte de cet ajustement.
 
 \switchEng
     The \Pclass{memoir} class effectively incorporates the facilties that
@@ -407,13 +392,8 @@ code is new code reimplementing package functionalities. The exceptions
 tend to be where I have cut and pasted code from some of my packages.
 I could not have written the \Pclass{memoir} class without the excellent 
 work presented by the implementors of \ltx\ and its many packages.
-\switchFrench
-    The \Pclass{memoir} class effectively incorporates the facilties that
-are usually accessed by using external packages. In most cases the class
-code is new code reimplementing package functionalities. The exceptions
-tend to be where I have cut and pasted code from some of my packages.
-I could not have written the \Pclass{memoir} class without the excellent 
-work presented by the implementors of \ltx\ and its many packages.
+\switchFrench\TS{1}
+    La classe mémoire incorpore effectivement les facilités auxquelles on accède habituellement en utilisant des paquets externes. Dans la plupart des cas, le code de la classe est un nouveau code réimplémentant les fonctionnalités du paquetage. Les exceptions sont les cas où j'ai coupé et collé du code de certains de mes paquets. Je n'aurais pas pu écrire la classe memoir sans l'excellent travail présenté par les implémenteurs de LaTeX et de ses nombreux paquets.
 
 \switchEng
     Apart from packages that I happen to have written I have gained many
@@ -423,14 +403,8 @@ The participants in the
 \url{comp.text.tex} newsgroup have also provided valuable input, partly
 by questioning how to do something in \ltx, and partly by providing
 answers. It is a friendly and educational forum.
-\switchFrench
-    Apart from packages that I happen to have written I have gained many
-ideas from the other packages listed in the \bibname. One way or another
-their authors have all contributed, albeit unknowingly. 
-The participants in the
-\url{comp.text.tex} newsgroup have also provided valuable input, partly
-by questioning how to do something in \ltx, and partly by providing
-answers. It is a friendly and educational forum.
+\switchFrench\TS{1}
+    En dehors des paquets que j'ai écrits, j'ai tiré de nombreuses idées des autres paquets listés dans la bibliographie. D'une manière ou d'une autre, leurs auteurs y ont tous contribué, même si c'est sans le savoir. Les participants du groupe de discussion \url{comp.text.tex} ont également apporté une contribution précieuse, en partie en posant des questions sur la façon de faire quelque chose dans \ltx, et en partie en fournissant des réponses. Il s'agit d'un forum amical et éducatif.
 \end{paracol}
 
 {\raggedleft{\scshape Peter Wilson} \\ Seattle, WA \\ June 2001\par}
@@ -1309,7 +1283,6 @@ and how it does it.
 please read the FAQ~\cite{FAQ} before asking a question, and also read
 a few day's worth of messages to check that your question hasn't just
 been answered.
-
 \end{comment}
 
 %#% extend
@@ -1324,13 +1297,16 @@ been answered.
 
 \chapter{Introduction to the eighth edition}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The \Mname\ class and this manual have seen many changes since they
 first saw the light of day. The major functions, and extensions to
 them, were listed in the various introductions to the previous
 editions of this manual and it would now be tedious to read them.
+\switchFrench\TS{1}
+La classe \Mname\ et ce manuel ont connu de nombreux changements depuis qu'ils ont vu le jour. Les principales fonctions, et leurs extensions, ont été énumérées dans les différentes introductions des éditions précédentes de ce manuel et il serait maintenant fastidieux de les lire.
 
+\switchEng
 The \Mname\ class was first released in 2001 and since then has proven
 to be reasonably popular. The class can be used as a replacement for
 the \Lclass{book} and \Lclass{report} classes, by default generating
@@ -1342,7 +1318,10 @@ single font, double spacing, no hyphenation, and so on. In the
 following I use the term `standard class'\index{standard class} to
 denote the \Lclass{book} and \Lclass{report} classes and, when
 appropriate, the \Lclass{article} class as well.
+\switchFrench\TS{1}
+La classe\Mname\ a été publiée pour la première fois en 2001 et s'est avérée depuis assez populaire. La classe peut être utilisée en remplacement des classes livre et rapport, générant par défaut des documents pratiquement indiscernables de ceux produits par ces classes. La classe comprend quelques options pour produire des documents avec d'autres apparences ; par exemple une apparence de classe article ou un document qui semble avoir été produit sur une machine à écrire avec une seule police, un double espacement, sans césure, etc. Dans ce qui suit, j'utilise le terme "classe standard" pour désigner les classes livre et rapport et, le cas échéant, la classe article également.
 
+\switchEng
     The \Mname\ class includes the functionality of many packages, for
 instance the \Lpack{tocloft} package for controlling the table of contents or
 methods similar to the \Lpack{fancyhdr} package for designing your own
@@ -1352,14 +1331,21 @@ covered by the \Lpack{babel} or \Lpack{hyperref} packages or any related to
 typesetting mathematics. On the other hand it is easy to configure a work
 produced with \Mname\ 
 to meet a university's thesis layout requirements.
+\switchFrench\TS{1}
+La classe \Mname\ inclut les fonctionnalités de nombreux paquets, par exemple le paquet tocloft pour contrôler la table des matières ou des méthodes similaires au paquet fancyhdr pour concevoir vos propres en-têtes. Les fonctions des paquets intégrés sont principalement liées à conception et à la mise en page de documents ; memoir n'aborde pas des domaines comme ceux qui sont couverts par les paquets babel ou hyperref ou tout autre domaine lié aux mathématiques de la composition. En revanche, il est facile de configurer un travail produit avec memoir pour qu'il réponde aux exigences de mise en page de la thèse d'une université. d'une université.
 
+
+\switchEng
     \Mname\ has improved substantially since it was first released ---
 over 50 \ltx ers have provided code or suggestions for improvements.
 The class is included in the \TeXUG\ \tx\ distributions and the latest 
 version of the class and its supporting documentation is always
 available from %
 \ctan\ at \url{latex/contrib/memoir}.
+\switchFrench\TS{1}
+La classe \Mname\ a été considérablement améliorée depuis sa première publication --- plus de 50~LaTeXers ont fourni du code ou des suggestions d'amélioration. La classe est incluse dans les distributions TeX du TeX Users Group et la dernière version de la classe et de sa documentation est toujours disponible auprès du CTAN à latex/contrib/memoir .
 
+\switchEng
     This is not a guide to the general use of \ltx\ but rather concentrates
 on where the \index{class}\Lclass{memoir} class differs from the standard \ltx\
 \Lclass{book} and \Lclass{report} classes. There are other sources that deal 
@@ -1368,11 +1354,13 @@ I assume that you have already used \ltx\ and therefore know how to prepare
 a \ltx\ manuscript, how to run \ltx\ and print the resulting document,
 and that you can also use auxiliary programs like \Lmakeindex\ 
 and \Lbibtex.
+\switchFrench\TS{1}
+Il ne s'agit pas d'un guide sur l'utilisation générale de \ltx, mais plutôt d'une présentation des différences entre la classe de mémoires et les classes de livres et de rapports standard de \ltx. Il existe d'autres sources qui traitent de \ltx\ en général, dont certaines sont mentionnées plus loin. Je suppose que vous avez déjà utilisé \ltx\ et que vous savez donc comment préparer un manuscrit \ltx, comment exécuter LaTeX et imprimer le document résultant, et que vous pouvez également utiliser des programmes auxiliaires comme \Lmakeindex\ et \Lbibtex.
 \end{paracol}
 
 \section{General considerations}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class is a large one consisting of about 10,000 lines of \ltx\ code
 documented in a 400 page report; there is no need for most users to look at 
@@ -1387,20 +1375,30 @@ of course was prepared using \Mname\ itself, the source
 is available for you to read.
 % There is also the \Lpack{memexsupp} package by Lars Madsen~\cite{MEMEXSUPP} 
 % which provides some extra facilities for the class.
+\switchFrench\TS{1}
+Il s'agit d'une classe importante qui comprend environ 10\,000~lignes de code \ltx\ documentées dans un rapport de 400~pages ; la plupart des utilisateurs n'ont pas besoin de le consulter~\cite{MEMCODE}. Cependant, si vous voulez voir exactement comment une partie, ou la totalité, de memoir est définie, vous pouvez le consulter. Le document que vous êtes en train de lire est le Manuel de l'utilisateur complet~\cite{MEMMAN} et séparé qui compte environ 500 pages, et de temps en temps, un Addendum est publié pour indiquer les extensions de la classe\footnote{Pas pour le moment.}. Encore une fois, si vous voulez voir comment quelque chose a été fait dans ce manuel, qui bien sûr a été préparé en utilisant memoir lui-même, la source est disponible pour que vous la lisiez.
 
+\switchEng
     The previous editions of the Manual consisted of two parts. The first
 discussing some aspects of book design and typography in
 general, something that I hadn't come across in the usual \ltx\ books
 and manuals. That was intended to provide a little background for when
 you design your own printed documents. The second, and by far the longest
 part, described the capabilities of \Mname\ and how to use them. 
+\switchFrench\TS{1}
+Les éditions précédentes du manuel étaient composées de deux parties. La première abordait certains aspects de la conception de livres et de la typographie en général, ce que je n'avais pas rencontré dans les livres et manuels LaTeX habituels. Cette partie avait pour but de fournir un peu de contexte pour la conception de vos propres documents imprimés. La seconde partie, de loin la plus longue, décrivait les capacités de memoir et comment les utiliser.
 
+
+\switchEng
     The Manual kept growing until it was approaching 700 pages and I decided
 that it was better to put the original discussion on typography into a
 separate document~\cite{MEMDESIGN}, which is independent of \Mname, and in this
 edition concentrate on how to use \Mname. This has reduced the size of
 this document, but it is still large.
+\switchFrench\TS{1}
+Le manuel n'a cessé de croître jusqu'à approcher les 700~pages et j'ai décidé qu'il était préférable de placer la discussion originale sur la typographie dans un document séparé~\cite{MEMDESIGN}, indépendant des mémoires, et de me concentrer dans cette édition sur la façon d'utiliser les mémoires. Cela a permis de réduire la taille de ce document, mais il est toujours aussi volumineux.
 
+\switchEng
 This manual is not a \ltx\ tutorial; I assume
 that you already know the basics. If you don't then there are several 
 free tutorials available. In some instances I show you the internal code
@@ -1410,10 +1408,12 @@ on these, if you want it, is obtained from reading the \ltx\ source itself
 and the \txbook, and perhaps one of the free \tx\ manuals such as
 \btitle{TeX for the Impatient}~\cite{IMPATIENT} or 
 \btitle{TeX by Topic}~\cite{TEXBYTOPIC}.
+\switchFrench\TS{1}
+Ce manuel n'est pas un tutoriel LaTeX ; je suppose que vous en connaissez déjà les bases. Si ce n'est pas le cas, il existe plusieurs didacticiels gratuits. Dans certains cas, je vous montre le code interne de la classe, ce qui peut impliquer des commandes LaTeX que vous ne rencontrerez pas dans les didacticiels, et aussi parfois des commandes TeX de base. Les informations sur ces commandes, si vous les voulez, sont obtenues en lisant le source LaTeX lui-même et le TeXbook, et peut-être un des manuels TeX gratuits tels que \btitle{\TeX{} for the Impatient}~\cite{IMPATIENT} ou \btitle{\TeX{} by Topic}~\cite{TEXBYTOPIC}.
 \end{paracol}
 
 \section{Class options}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The standard classes provide point options of 10, 11, or 12 points for the
 main body font. \Mname\ extends this by also providing a 9 point option, and 
@@ -1426,23 +1426,31 @@ page layout parameters such as the margins --- both the side margins and
 those at 
 the top and bottom of the page; the methods are similar to those of the
 \Lpack{geometry} package.
+\switchFrench\TS{1}
+Les classes standard offrent des options de 10, 11 ou 12 points pour la police du corps principal. memoir étend ces options en offrant également une option de 9 points et des options allant de 14 à 60 points. La largeur du bloc de texte est automatiquement ajustée en fonction de la taille de point sélectionnée pour essayer de respecter les limites typographiques généralement acceptées pour les longueurs de ligne ; vous pouvez remplacer cela si vous le souhaitez. La classe fournit également des méthodes simples pour spécifier les paramètres de mise en page tels que les marges - à la fois les marges latérales et celles du haut et du bas de la page ; les méthodes sont similaires à celles du paquet géométrique.
 
+\switchEng
     The page layout facilities also include methods, like those provided
 by the \Lpack{fancyhdr} package, for defining your own
 header and footer styles, and you can have as many different ones as you wish.
 In fact the class provides seven styles to choose from before having to
 create your own if none of the built-in styles suit you. 
+\switchFrench\TS{1}
+Les fonctions de mise en page comprennent également des méthodes, comme celles fournies par le package \Lpack{fancyhdr}, pour définir vos propres styles d'en-tête et de pied de page, et vous pouvez en avoir autant que vous le souhaitez. En fait, la classe fournit sept styles parmi lesquels vous pouvez choisir avant de devoir créer le vôtre si aucun des styles intégrés ne vous convient.
 
+\switchEng
    Sometimes it is useful, or even required, to place trimming marks on
 each page showing the desired size of the final page with respect to the sheet
 of paper that is used in the printer. This is provided by the \Lopt{showtrims}
 option. A variety of trim marks are provided and you can define your own 
 if you need some other kind.
+\switchFrench\TS{1}
+Il est parfois utile, voire nécessaire, de placer sur chaque page des marques de rognage indiquant la taille souhaitée de la page finale par rapport à la feuille de papier utilisée dans l'imprimante. C'est ce que permet l'option showtrims. Diverses marques de rognage sont fournies et vous pouvez définir les vôtres si vous avez besoin d'un autre type de marque.
 \end{paracol}
 
 \section{Sectioning styles}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Handles are provided for designing and using your own styles for chapter
 titles and such. The class comes with over 20 predefined chapter styles ranging
@@ -1452,32 +1460,47 @@ words instead of numerals for chapter numbers.
 % The Manual shows 
 %examples of these styles and about 30 are shown in Lars 
 %Madsen's collection~\cite{MEMCHAPS}.
+\switchFrench\TS{1}
+Des poignées\textit{handles} sont fournis pour concevoir et utiliser vos propres styles pour les titres de chapitre et autres. La classe est fournie avec plus de 20~styles de chapitre prédéfinis, allant de l'apparence par défaut à un style qui imite celui utilisé dans la série de livres \emph{\ltx{} Companion}. Il y en a même quelques-uns qui utilisent des mots au lieu de chiffres pour les numéros de chapitre.
 
+\switchEng
    For those who like putting quotations near chapter titles the 
 \Ie{epigraph} environment can be used.
+\switchFrench\TS{1}
+Pour ceux qui aiment mettre des citations près des titres de chapitre, l'environnement \Ie{epigraph} peut être utilisé.
 
+\switchEng
     The options for changing \cs{section} and lower level titles
 are more constrained, but generally speaking document design, unless for
 advertisements or other eye-catching ephemera, should be constrained.
 The class does provide 9 integrated sets of sectional heading styles instead
 of the usual single set.
+\switchFrench\TS{1}
+Les options de modification de \cs{section} et des titres de niveau inférieur sont plus limitées, mais d'une manière générale, la conception des documents, à moins qu'il ne s'agisse de publicités ou d'autres éphémères accrocheurs, doit être limitée. La classe fournit 9~ensembles intégrés de styles d'en-tête de section au lieu de l'ensemble unique habituel.
 
+\switchEng
     Sometimes, but particularly in novels, a sectional division is indicated
 by just leaving a blank line or two between a pair of paragraphs, or there 
 might be some decorative item like three or four asterisks, or a fleuron
 or two. (A \emph{fleuron}\index{fleuron} is a printers ornament looking 
 like a leaf, such as \ding{166} or \ding{167}.) Commands
 are available for typesetting such anonymous divisions.
+\switchFrench\TS{1}
+Parfois, mais surtout dans les romans, une division en sections est indiquée par une ou deux lignes blanches entre deux paragraphes, ou par un élément décoratif comme trois ou quatre astérisques, ou un ou deux fleurons. (Un fleuron\index{fleuron} est un ornement d'imprimerie ressemblant à une feuille, comme \ding{166} ou \ding{167}.) Il existe des commandes pour composer de telles divisions anonymes.
 
+\switchEng
    In the standard classes the sectioning commands have an optional argument
 which can be used to put a short version of the section title into the 
 table of contents and the page header. \Mname\ extends this with a second 
 optional argument so you can specify one short version for the contents and 
 an even shorter one for page headers where space is at a premium.
+\switchFrench\TS{0}
+Dans les classes standard, les commandes de sectionnement ont un argument optionnel qui peut être utilisé pour mettre une version courte du titre de la section dans la table des matières et l'en-tête de page. \Mname\ étend cela avec un second argument optionnel afin que vous puissiez spécifier une version courte pour le contenu et une autre encore plus courte pour les en-têtes de page où l'espace est limité.
+
 \end{paracol}
 
 \section{Captions}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     \Mname\ incorporates the code from my \Lpack{ccaption} package which
 lets you easily modify the appearance of figure and table captions; bilingual
@@ -1488,32 +1511,44 @@ to `non-floating' illustrations or as legends (i.e., unnumbered captions) to
 the regular floats. The captioning system
 also supports subfigures and subtables along the lines of the \Lpack{subfig}
 package, plus letting you define your own new kinds of floats together
-with the corresponding `\listofx'. 
+with the corresponding `\listofx'.
+\switchFrench\TS{1}
+\Mname\ incorpore le code de mon package \Lpack{ccaption} qui vous permet de modifier facilement l'apparence des légendes des figures et des tableaux ; des légendes bilingues sont disponibles si nécessaire, tout comme les légendes placées sur le côté d'une figure ou d'un tableau ou les légendes de continuation, par exemple d'une illustration à l'autre. Le sous-titrage peut également être appliqué à des illustrations \og{}non flottantes\fg{} ou sous forme de légendes (c'est-à-dire des sous-titres non numérotés) aux illustrations flottantes régulières. Le système de sous-titrage prend également en charge les sous-figures et les sous-tables, conformément au package \Lpack{subfig}, et vous permet de définir vos propres nouveaux types de flottants, ainsi que la \og{}liste de\dots\fg{} correspondante.
+
 \end{paracol}
 
 \section{Tables}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Code from the \Lpack{array}, \Lpack{dcolumn}, \Lpack{delarray} and
 \Lpack{tabularx} packges is integrated within the class. To improve
 the appearance of rules in tabular material the \Lpack{booktabs}
 package is also included.
+\switchFrench\TS{1}
 
+
+\switchEng
     Multipage tabulations are often set with the \Lpack{longtable} or
 \Lpack{xtab} packages, which can of course be used with the class. For
 simple tabulations that may continue from one page to the next, \Mname\
 offers a `continuous tabular' environment. This doesn't have all the 
 flexibility provided by the packages but can often serve instead
 of using them.
+\switchFrench\TS{0}
 
+
+\switchEng
     More interestingly, but more limited, the class provides `automatic 
 tabulars'. For these you provide a list of simple entries, like a set of names,
  and a number of
 columns and the entries are automatically put into the appropriate column.
 You choose whether the entries should be added row-by-row, like this with
 the \cs{autorows} command:
+\switchFrench\TS{0}
 
+
+\switchEng
 \begin{lcode}
 \autorows{c}{5}{l}{one, two, three, four,
     five, six, seven, eight, nine, ten,
@@ -1529,7 +1564,24 @@ eleven & twelve & thirteen \\
 \end{tabular} 
 \par}
 }
+\switchFrench\TS{2}
+\begin{lcode}
+\autorows{c}{5}{l}{un, deux, trois, quatre,
+    cinq, six, sept, huit, neuf, dix,
+    onze, douze, treize }
+\end{lcode}
 
+\showit{
+{\centering
+\begin{tabular}{lllll}
+un & deux & trois & quatre & cinq \\
+six & sept & huit & neuf & dix \\
+onze & douze & treize \\
+\end{tabular} 
+\par}
+}
+
+\switchEng
  Or if you use the \cs{autocols} command the entries are listed 
 column-by-column, like this :
 
@@ -1548,24 +1600,73 @@ three &  six  & nine  & twelve &  \\
 \end{tabular} 
 \par}
 }
+\switchFrench\TS{2}
+Si vous utilisez la commande \cs{autocols} (colonnes automatiques),
+les entrées sont listées colonne par colonne, de cette façon:
+
+\begin{lcode}
+\autocols{c}{5}{l}{un, deux, trois, quatre,
+    cinq, six, sept, huit, neuf, dix,
+    onze, douze, treize }
+\end{lcode}
+
+\showit{
+{\centering
+\begin{tabular}{lllll}
+un    & quatre & sept &   dix & treize \\
+deux  &   cinq & huit &  onze &  \\
+trois &    six & neuf & douze &  \\
+\end{tabular} 
+\par}
+}
+
 \end{paracol}
 
 \section{Verse}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The standard classes provide a very simple \Ie{verse} environment for
 typesetting poetry. This is greatly extended in \Mname. For example in the
 standard classes the verse stanzas are at a fixed indentation from the 
 left margin whereas \Mname\ lets you control the amount of indentation so 
 that you can make a poem appear optically centered within the textwidth.
+\switchFrench\TS{0}
 
+
+\switchEng
     Stanzas may be numbered, as can individual lines within a poem. There is
 a special environment for stanzas where lines are alternately indented. Also
 you can define an indentation pattern for stanzas when this is not regular 
 as, for example, in a limerick where the 3rd and 4th of the five lines are 
 indented with respect to the other three as shown below. 
+\switchFrench\TS{0}
 
+
+\switchEng
+\begin{lcode}
+\indentpattern{00110}
+\begin{verse}
+\begin{patverse}
+There was a young man of Quebec \\
+Who was frozen in snow to his neck. \\
+When asked: `Are you friz?' \\
+He replied: `Yes, I is, \\
+But we don't call this cold in Quebec.'
+\end{patverse}
+\end{verse}
+\end{lcode}
+
+\showit{
+\begin{verse}
+There was a young man of Quebec \\
+Who was frozen in snow to his neck. \\
+\hspace*{2em}When asked: `Are you friz?' \\
+\hspace*{2em}He replied: `Yes, I is, \\
+But we don't call this cold in Quebec.'
+\end{verse}
+}
+\switchFrench\TS{0}
 \begin{lcode}
 \indentpattern{00110}
 \begin{verse}
@@ -1589,13 +1690,17 @@ But we don't call this cold in Quebec.'
 \end{verse}
 }
 
+\switchEng
     It is not always possible to fit
 a line into the available space and you can specify the particular indentation
 to be used when a `logical' verse line spills over the available textwidth, 
 thus forming two or more typeset `physical' lines. On other occasions
 where there are two half lines the poet might want the second half line
 to start where the first one finished, like this:
+\switchFrench\TS{0}
 
+
+\switchEng
 \begin{lcode}
 \begin{verse}
 Come away with me. \\
@@ -1609,22 +1714,43 @@ Come away with me. \\
 \leavevmode\phantom{Come away with me.} Impossible!
 \end{verse}
 }
+\switchFrench\TS{0}
+\begin{lcode}
+\begin{verse}
+Come away with me. \\
+\vinphantom{Come away with me.} Impossible!
+\end{verse}
+\end{lcode}
+
+\showit{
+\begin{verse}
+Come away with me. \\
+\leavevmode\phantom{Come away with me.} Impossible!
+\end{verse}
+}
+
 \end{paracol}
 
 \section{End matter}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Normally appendices come after the main body of a book. The class provides
 various methods for introducing appendices at the end, or you can place one or 
 more appendices at the end of selected chapters if that suits you better.
+\switchFrench\TS{0}
 
+
+\switchEng
     \Mname\ also lets you have more than one index and an index can be set in 
 either the normal double column style or as a single column which would be more
 appropriate, say, for an index of first lines in a book of poetry. The titles
 of any bibliography or indexes are added to the table of contents, but you
 can prevent this if you wish.
+\switchFrench\TS{0}
 
+
+\switchEng
     The class provides a set of tools for making glossaries or lists of 
 symbols, the appearance of which can, of course, be easily altered. The 
 \Lmakeindex\ program is used to sort the entries. 
@@ -1636,7 +1762,7 @@ or instead of, footnotes.
 
 \section{Miscellaneous}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 %    As already noted, the Manual for \Mname\ runs to some 300 pages and it
 %is impossible to cover everything in a short article. 
@@ -1651,6 +1777,9 @@ You can create new verbatim-like environments, read
 and write information in external files, design your own style of 
 \cs{maketitle}, convert numbers to words, reserve space at the bottom of a 
 page, and so on and so forth.
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 %% \appendix
@@ -20400,6 +20529,8 @@ this. Please note that \cs{feetatbottom} has no effect whenever
 
 \subsection{A variety of footnotes}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
  \begin{syntax}
  \cmd{\verbfootnote}\oarg{num}\marg{text} \\
  \end{syntax}
@@ -20613,14 +20744,18 @@ package~\cite{FOOTMISC} provides a range of styles.
 A variety of styles also comes with the \Lpack{ledmac} package~\cite{LEDMAC} 
 which additionally provides several classes of footnotes that can be mixed
 on a page.
-
+\end{paracol}
 
 
 \subsection{Styling}
 
 \index{footnote!styling|(}
+
+\begin{paracol}{2}\TS{0}
+\switchEng
      The parameters controlling the vertical spacing of footnotes are 
  illustrated in \fref{fig:fn}.
+\end{paracol}
 
  \begin{figure}
  \centering
@@ -20630,6 +20765,8 @@ on a page.
  \caption{Footnote layout parameters}\label{fig:fn}
  \end{figure}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
      There is a discussion in \Sref{sec:thanks} starting on
 \pref{sec:thanks} about how to style the \cmd{\thanks} command; footnotes
 can be similarly styled. 
@@ -20762,6 +20899,7 @@ the text set as a block paragraph you can try:
 \setlength{\footmarksep}{0em}
 \footmarkstyle{#1\hfill}
 \end{lcode}
+\end{paracol}
 
 \begin{table}
 \begin{adjustwidth}{-5mm}{-5mm}
@@ -20787,6 +20925,8 @@ flush against the text
 \end{adjustwidth}
 \end{table}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     As an example of a rather different scheme, in at least one discipline
 the footnoted text in the main body has a 
 marker\index{footnote!marker!multiple} at each end. It is possible 
@@ -20878,6 +21018,7 @@ This, as shown by \verb?\@fnsymbol{1},...\@fnsymbol{9}? produces the series:
 %\@fnsymbol{10}  % out of bounds
 \makeatother 
 \end{center}
+\end{paracol}
 
 \makeatletter
 \renewcommand*{\@fnsymbol}[1]{\ensuremath{%
@@ -20885,6 +21026,8 @@ This, as shown by \verb?\@fnsymbol{1},...\@fnsymbol{9}? produces the series:
   \mathsection\or \|\or \mathparagraph\or **\or \dagger\dagger
   \or \ddagger\ddagger \else\@ctrerr\fi}}
 \makeatother
+\begin{paracol}{2}\TS{0}
+\switchEng
     Robert Bringhurst quotes the following as the traditional 
 ordering\index{footnote!symbol!order} (at least up
 to \makeatletter\@fnsymbol{6}\makeatother):
@@ -20947,11 +21090,12 @@ and if you later want rules you can write:
 \begin{lcode}
 \let\footnoterule\oldfootnoterule
 \end{lcode} 
-
+\end{paracol}
 
 \fancybreak{}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 In \fref{fig:fn} we see that the footnotes are separated from the text
 by \cs{skip}\cs{footins}. We provide a special interface to set this skip:\Added{2015/04/22}
 \begin{syntax}
@@ -20966,7 +21110,7 @@ The default is similar to
 \end{lcode}
 Internally \cmd{\setfootins} also sets the skips being used by
 \cmd{\twocolumnfootnotes} and friends.
-
+\end{paracol}
 
 
 \index{footnote!styling|)}
@@ -20976,6 +21120,8 @@ Internally \cmd{\setfootins} also sets the skips being used by
  \section{Marginal notes}
 
 \LMnote{2010/01/**}{added a reference back to \cs{setmarginnotes}}
+\begin{paracol}{2}\TS{0}
+\switchEng
      Some marginalia can also be considered to be kinds of floats. 
 The class provides the standard margin notes\index{margin note} 
 via \cmd{\marginpar}. Remember that the width of the margin note, the
@@ -21018,7 +21164,7 @@ macro is named \cmd{\marginparmargin}\marg{placement} with possible
 placements: \emph{left}, \emph{right}, \emph{outer}, and
 \emph{inner}. The interpretation of which is explained in \fref{fig:xmargin}.
 The default corresponds to \verb?\marginparmargin{outer}?.
-
+\end{paracol}
 
 \LMnote{2010/01/**}{instead of explaining the algorithm, each time the
   algorithm is explaine donce and for all in a figure, then we can
@@ -21059,6 +21205,8 @@ The default corresponds to \verb?\marginparmargin{outer}?.
 \LMnote{2010/02/07}{Removed the explanation of the old interface for
   specifying the margin the \cs{marginpar} should go to. The original
   text is still available via subversion.}
+\begin{paracol}{2}\TS{0}
+\switchEng
 The original convoluted methods of specifying the margin for
 \cmd{\marginpar} is deprecated, although still supported; if you need
 to know what they are then you can read all about them in \texttt{memoir.dtx}.
@@ -21071,10 +21219,12 @@ then inserting the \cmd{\strictpagecheck} declaration before
 any \cmd{\marginpar}
 command is used will prevent this, at the cost of at least one additional
 \ltx\ run.
-
+\end{paracol}
 
 \section{Side notes}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The vertical position of margin notes\index{margin note!moved} 
 specified via \cmd{\marginpar}
 is flexible so that adjacent notes are prevented from overlapping.
@@ -21162,16 +21312,18 @@ margin on the verso (even numbered) pages; however, for these pages
 the optional \meta{left} argument is used instead if it is present. For
 two column text the relevent argument is put into the `outer' margin with 
 respect to the column.
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \LMnote{2010/02/07}{Removed the explanation of the old interface for
   specifying the margin the \cs{sidepar} should go to. The original
   text is still available via subversion.}  The original convoluted
 methods of specifying the margin for \cmd{\sidepar} is deprecated,
 although still supported; if you need to know what they are then you
 can read all about them in \texttt{memoir.dtx}.
-
 
 \begin{syntax}
 \cmd{\parnopar} \\
@@ -21206,10 +21358,12 @@ for another form of a side note, the code is shown in
     If you want to try it out, either put the code in your preamble,
 or put it into a package (i.e., \file{.sty} file) without the 
 \cs{makeat...} commands. 
-
+\end{paracol}
 
 \section{Sidebars}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     Sidebars\index{sidebar} are typeset in the margin and usually 
 contain material that is ancilliary to the main text. They may be long 
 and extend for more than one page.\footnote{Donald 
@@ -21410,11 +21564,14 @@ the (new) \lnc{\textheight}. For instance:
 a double column float or starts a new chapter then the top of the sidebar
 comes below the float or the chapter title. I have been unable to eliminate 
 this `feature'.
+\end{paracol}
 
 
 \section{Side footnotes}
 \label{sec:side-footnotes}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Besides three already mentioned macros for writing in the margin
 (\cmd{\marginpar}, \cmd{\sidepar}, and \cmd{\sidebar}) \theclass\ also
 provide a functionality to add side footnotes. Actually two ways: one
@@ -21429,12 +21586,14 @@ the margin.
 its text at the bottom of the page. By issuing \cmd{footnotesinmargin}
 \cmd{\footnote} (and friends like \cmd{\footnotetext})will internally
 use \cmd{\marginpar} to write the footnote to the page.
-
+\end{paracol}
 
 
 \subsection{Bottom aligned side footnotes}
 \label{sec:bottom-aligned-side}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Bottom aligned footnotes works just like regular footnotes, just with
 a separate macro \cmd{\sidefootenote}\marg{text}, and here the side
 footnotes are placed at the bottom of the specified margin (more or
@@ -21455,14 +21614,15 @@ following in the preamble:
 \begin{lcode}
   \letcountercounter{sidefootnote}{footnote}
 \end{lcode}
-
+\end{paracol}
 
 \subsection{Setting the layout for
   \texorpdfstring{\cs{sidefootnote}}{sidefootnote}} 
 \label{sec:sett-layo-texorpdfst}
 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 There are several possibilities to change the appearance of the
 \cmd{\sidefootnote}:
 
@@ -21514,11 +21674,13 @@ following default
 \end{lcode}
 It is recommended to use this macro along with the other macros in the
 preamble to specify document layout.
+\end{paracol}
 
 \subsection{Styling 
   \texorpdfstring{\cs{sidefootnote}}{sidefootnote}} 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
   \cmd{\sidefootmarkstyle}\marg{code}\\
 \end{syntax}
@@ -21541,10 +21703,12 @@ The first line of a paragraph within a footnote is indented by
   \setlength{\sidefootmarksep}{0em}
   \setlength{\sidefootparindent}{1em}
 \end{lcode}
-
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Caveat: It is natural to specify a length as \lnc{\sidefootparindent}
 as a \LaTeX\ length, but it has a down side. If, as we do here, set
 the value to 1em, then since the size of the em unit changes with the
@@ -21589,8 +21753,7 @@ might consider using
   \newcommand*{\sidefootform}{\RaggedRight}
 \end{lcode}
 Which does something similar.
-
-
+\end{paracol}
 
 
 
@@ -21598,7 +21761,8 @@ Which does something similar.
 \label{sec:side-footn-example}
 
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 In the margin you will find the result of the following code:
 \begin{verbatim}
   Testing\sidefootnote{This is test} bottom aligned
@@ -21612,7 +21776,7 @@ In the margin you will find the result of the following code:
   footnote, spanning several lines.
 
   And several paragraphs}\sidefootnote{And number three}
-
+\end{paracol}
 
 \LMnote{2013/05/02}{Moved here from backmatter.tex}
 
@@ -21621,6 +21785,8 @@ In the margin you will find the result of the following code:
 
 \LMnote{2010/10/28}{several \cs{printpagenotes} was spelled wrong}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 \reimplemented{December 2010}{The former implementation had some
   difficulties handling certain types of input. A few of the macros
   used to format the output are no longer supported/used in the new
@@ -21812,6 +21978,7 @@ with
 In other words, it will print out a heading for the notes that will be read
 from the \file{ent} file. \verb?\print...? then closes the \pixfile{ent} file 
 for writing and after this \verb?\input?s it to get and process the notes.
+\end{paracol}
 
 
 \subsection{Changing the appearance}
@@ -21819,7 +21986,8 @@ for writing and after this \verb?\input?s it to get and process the notes.
 \subsubsection{In the text}
 \label{sec:in-the-text}
 
-
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\notenumintext}\marg{num} \\
 \end{syntax}
@@ -21835,13 +22003,16 @@ superscript, but this can be changed, or even eliminated.
 \begin{lcode}
 \newcommand*{\notenumintext}[1]{\textsuperscript{#1}}
 \end{lcode}
+\end{paracol}
 
 \subsubsection{In the page note list}
 \label{sec:page-note-list}
 
-  
+
 \LMnote{2011/01/23}{Added to make the formating code easier to understand}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 To better understand how a page note entry is formatted in the page
 note list, we start with the following  pseudo code (it is not exactly
 what you will see in the \texttt{.ent} file, but macros will end up
@@ -21875,10 +22046,13 @@ indentation
 \begin{lcode}
 \renewcommand{\prenoteinnotes}{\par\noindent\hangindent 2em}
 \end{lcode}
+\end{paracol}
 
 \fancybreak{}
 
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 The \cmd{\noteidinnotes} calls \cmd{\idtextinnotes} to print the note \meta{id}
 if it was given as the optional argument to \cmd{pagenote}, 
 otherwise it calls \cmd{\notenuminnotes} to print the note number.
@@ -21901,9 +22075,12 @@ These are defined respectively as:
 \newcommand*{\idtextinnotes}[1]{[#1]\space}
 \newcommand*{\notenuminnotes}[1]{\normalfont #1.\space}
 \end{lcode}
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Next we execute \cmd{\pageinnotes}\marg{note label key} which does
 nothing by default. But if \cmd{\notepageref} is issued in the
 preamble two things happen, (1) each page note issues a label such
@@ -21935,9 +22112,13 @@ Default definitions
 \end{lcode}
 That is if \Lpack{hyperref} is loaded the entire text \meta{page 3}
 will be the text of a hyperlink.
+\end{paracol}
 
 \bigskip
 
+
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
   \cmd{\prenotetext}\\
   \cmd{\postnotetext}\\
@@ -21958,7 +22139,7 @@ in italic:
 \renewcommand\prenotetext{\begingroup\itshape}
 \renewcommand\postnotetext{\endgroup}
 \end{lcode}
-
+\end{paracol}
 
 
 %%%%%%%%%%%
@@ -22077,12 +22258,13 @@ in italic:
 
 
 
-
 \bigskip
 
 
 
 \LMnote{2011/01/25}{rewritten a bit}
+\begin{paracol}{2}\TS{0}
+\switchEng
 \begin{syntax}
 \cmd{\addtonotes}\marg{text} \\
 \end{syntax}
@@ -22098,8 +22280,12 @@ file.
   strange error messages, try using \cmd{\protect} and see if they go
   away.
 \end{note}
+\end{paracol}
+
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Internally in \cmd{\pagenote} \cmd{\addtonotes} is used to provide
 chapter devisions into the note list. It will detect both numbered and
 unnumbered chapters. The actual text is provided using
@@ -22159,9 +22345,12 @@ macros. For example:
 \end{lcode}
 and remember to use \cmd{\printpagenotes*} at each place you want the
 current set of notes to be printed.
+\end{paracol}
 
 \fancybreak{}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 Say you have written a document with footnotes, but later on decide on
 using end notes (page notes) instead. In that case you can use
 \cmd{\foottopagenote} to make \cmd{\footnote}, \cmd{\footnotemark} and
@@ -22188,9 +22377,7 @@ where page notes can be issued but foot notes cannot).
 In either conversion the optional argument will be
 ignored as for \cmd{\pagenote} it can be arbitrary text whereas for
 \cmd{\footnote} it must be a number.
-
-
-
+\end{paracol}
 
 
 
@@ -22214,8 +22401,6 @@ ignored as for \cmd{\pagenote} it can be arbitrary text whereas for
 
 
 
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \clearpage
 %%%\pagestyle{companion}
@@ -22227,6 +22412,8 @@ ignored as for \cmd{\pagenote} it can be arbitrary text whereas for
 
 \newcommand{\tepi}[2]{\epigraph{#1}{#2}}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 % \tepi{My soul, seek not the life of immortals; but enjoy to the full
 %       the resources that are within your reach}
 %      {\textit{Pythian Odes \\ Pindar}}
@@ -22234,7 +22421,6 @@ ignored as for \cmd{\pagenote} it can be arbitrary text whereas for
       has spoiled many an ingenious man, and plagued the world with an
       abundance of pedants and coxcombs.}
      {James Puckle (1677?--1724)}
-
 
     By now we have covered most aspects of typesetting. As far as
 the class is concerned this chapter describes the slightly more fun 
@@ -22250,6 +22436,8 @@ the typeblock\index{typeblock}. A few example epigraphs are exhibited here, and
 others can be found in an article by
 Christina Thiele~\cite{TTC199} where she reviewed the \Lpack{epigraph}
 package~\cite{EPIGRAPH} which is included in the class.
+\end{paracol}
+
 
  \section{Epigraphs} 
 \index{epigraph|(}
