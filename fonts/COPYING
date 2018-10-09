@@ -1,0 +1,30 @@
+
+Copying
+*******
+
+   Unfortunately, the licensing situation is somewhat complicated.
+There are essentially four distinct components with four different
+licenses:
+
+  1. The font outlines on the CD are covered by a license from Title
+     Wave Studios.  You must purchase the CD and may not redistribute
+     the fonts.  Please see the file `license.txt' on the CD.
+
+  2. The scripts and control files in the `fs500src' distribution are
+     _free software;_ you may redistribute and/or modify them under the
+     terms of the GNU General Public License (GPL).  This license does
+     _not_ permit incorporating the scripts into proprietary programs.
+     Please see the file `COPYING' in the source distribution.
+
+  3. The TeX font metrics, virtual font files, LaTeX font definitions
+     and style files from the `fs500tex' distribution are contributed
+     to the public domain.  Although these files are the results of
+     executing GPL code, they are not _derivative works_ thereof and
+     are thus _not covered_ by the GPL.  If anything, they are
+     derivative works of the font metrics on the CD.  You may use and
+     distribute them without restriction.  (If you somehow include them
+     in a commercial system, I would appreciate an acknowledgment.)
+
+  4. Finally, the manual is copyrighted, but permission is granted to
+     make and distribute verbatim copies.
+

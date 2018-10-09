@@ -280,3 +280,7 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+
+
+# Specific to this project:
+FontSite?500?CD?v5.zip

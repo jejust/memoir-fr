@@ -1,0 +1,275 @@
+
+Installing
+**********
+
+   There are two stages to setting up TeX support for the FontSite 500
+fonts.  First, install all the files where TeX and friends can find
+them.  Second, tell the essential TeX programs (`dvips' and `xdvi', for
+example) how to use them.  This document will guide you through both
+stages.  For the impatient, I provide this synopsis:
+
+     # copy PFB files from CD, changing names to lowercase
+     etc/cpfb  '/cdrom/Type\ 1'  /your/local/texmf/fonts/type1/fontsite
+     
+     # copy TeX files from this distribution
+     cp -r  tex fonts dvips    /your/local/texmf
+     texhash                   /your/local/texmf
+     
+     # update font maps
+     updmap --enable Map fs500tex.map
+
+   If you do not know where your local and main TEXMF trees reside, or
+if your distribution does not include the `updmap' tool, then please
+read on.
+
+Find a suitable texmf tree
+==========================
+
+   Most distributions organize files according to the TeX Directory
+Structure (http://www.tug.org/twg/tds/).  This standard defines where
+different kinds of files should go relative to some root.  The
+hierarchy is called a TEXMF tree.  Most distributions root their main
+TEXMF tree at `/usr/share/texmf/' or similar.  If you have
+administrative access, you may add files directly into this tree, but
+this is not usually recommended.
+
+   Your TeX distribution should support _local_ (site- or
+user-specific) trees, perhaps in `/usr/local/share/texmf/' or
+`$HOME/texmf'.  For distributions based on `web2c' (such as teTeX), the
+tree configuration is found in the file `web2c/texmf.cnf' in the main
+tree.  Check this file and your documentation to see how to incorporate
+a local TEXMF tree.
+
+   Next, you need to know how your TeX tools search the tree.
+Typically, a database named `ls-R' is kept in the root of the tree.
+You need to refresh this database manually using `texhash DIR' or a
+similar menu option.  (`texhash' might be spelled `mktexlsr'.)  If your
+TeX distribution uses the Kpathsea library, then `kpsewhich NAME' will
+return the full path of the file NAME within any TEXMF tree.
+
+Copy files into the tree
+========================
+
+   The Type 1 font files from the CD go into the `fonts/type1/fontsite'
+sub-directory of your TEXMF tree.  On the CD, the filenames are
+uppercase `CHANI___.PFB'; on most systems, it is essential to make them
+lowercase `chani___.pfb'.(1) The script `etc/cpfb' will simultaneously
+copy files and change them to lowercase.  The latest CDs contain
+subdirectories by family; these should be flattened.  Be sure to
+include the quotes _and_ the backslash when specifying the source
+directory.
+
+     etc/cpfb  '/cdrom/Type\ 1'  /your/local/texmf/fonts/type1/fontsite
+
+   Next, the files in the `tex', `fonts', and `dvips' sub-directories
+of this distribution should be merged into the tree, preserving their
+directory structure.  When you are done copying, refresh the database.
+
+     cp -r tex fonts dvips  /your/local/texmf
+     texhash  /your/local/texmf
+
+   Now, files from the CD and distribution should be found by Kpathsea.
+
+     kpsewhich chani___.pfb
+       => /your/local/texmf/fonts/type1/fontsite/chani___.pfb
+     kpsewhich ot15bo.fd
+       => /your/local/texmf/tex/latex/fontsite/ot15bo.fd
+     kpsewhich 5borx7t.tfm
+       => /your/local/texmf/fonts/tfm/fontsite/bergamo/5borx7t.tfm
+
+Tell drivers how to use the fonts
+=================================
+
+   At this point, TeX and LaTeX (but not pdfTeX!) can produce `.dvi'
+files using the fonts.  All TeX needs is the metrics `.tfm' and virtual
+font files `.vf'.  LaTeX needs the font definition files `.fd' also.
+To view or print the `.dvi' file, however, you need to tell your
+drivers how to _use_ the fonts.  That is the job of the file
+`fs500tex.map' in the `dvips/config' sub-directory of this package.
+For each TeX font name, it gives the Postscript font name, the `.pfb'
+file name, and some other parameters.  The format of the map file is
+compatible with both pdfTeX and dvips.
+
+   Recent versions of teTeX and TeXLive include the `updmap' tool that
+automatically adds new maps to `updmap.cfg'.  Call it like this:
+     updmap --enable Map fs500tex.map
+
+   On older versions of teTeX, `updmap' is a script in the
+`dvips/config' directory of the main TEXMF tree.  In this case, copy
+(or link) the `fs500tex.map' into this directory, edit the script, and
+run it.
+
+     cd /your/main/texmf/dvips/config
+     ln -s /your/local/texmf/dvips/config/fs500tex.map .
+     edit updmap        # add fs500tex.map to extra_modules
+     ./updmap
+
+   If either of these seemed to work, then skip to the next section to
+*Note test your installation: Testing.  Unfortunately, things are not
+so easy for everyone.  Perhaps you do not have permission to add files
+to the main TEXMF tree.  Or perhaps you are worried about some package
+manager trashing the map when you upgrade.
+
+   If you cannot or do not want to use `updmap', the alternative is to
+tell each driver to consult the `fs500tex.map' in your local TEXMF
+tree.  The following table may help.  If you have easy installation
+tips for other platforms and drivers, please submit them!
+
+dvips
+     Dvips reads `config.ps', `$HOME/.dvipsrc', and `config.DEVICE' (if
+     `-PDEVICE' is specified on the command line).  In any of these
+     files, add the line `p +fs500tex.map'.
+
+pdfTeX
+     The main pdfTeX configuration file is called `pdftex.cfg' and is
+     usually found in `TEXMF/pdftex/config/'.  Adding the line `map
+     +fs500tex.map' to this file should work.  If you need to copy the
+     file to your local TEXMF tree to modify it, that should still
+     work.  In extreme cases, the environment variable `TEXPSHEADERS'
+     may be helpful.
+
+xdvi
+     In principle, xdvi uses the configuration files for dvips.  In
+     practice, I have seen many cases where dvips is happy and xdvi is
+     not.  If you have trouble, try using `$HOME/.dvipsrc', and set
+     environment variables checked by xdvi, such as `XDVIVFS'.
+
+Test your installation
+======================
+
+   Once you have copied all the files into TEXMF trees and set up the
+drivers, you can try to typeset using one of the new fonts.  A good way
+to do this is the `nfssfont' utility.  LaTeX comes with a file
+`nfssfont.tex' that asks for a font name and typesets samples and
+character tables.
+
+     $ latex nfssfont
+     Name of the font to test = 5bobjx7t
+     Now type a test command (\help for help):
+     * \sample\bye
+   I have told the program to typeset a sample of the Bergamo font
+`5bo' in bold `b' with old-style numerals `j' and integrated expert
+glyphs `x' in the old TeX text encoding `7t'.  It writes the output to
+`nfssfont.dvi'.
+
+   Now for the moment of truth.  Use `dvips' to convert the document to
+Postscript, embedding the fonts.  The exact command depends on your
+configuration, but something like this should do:
+
+     $ dvips -o nfssfont.ps nfssfont.dvi
+     This is dvips(k) 5.86 Copyright 1999 Radical Eye Software
+     <texc.pro><fs8r.enc><fs8x.enc><texps.pro>. <bergscb_.pfb>
+     <bergeb__.pfb><bergb___.pfb>[1]
+
+   From this output, you can see that `dvips' found and included the
+custom encoding vectors provided in this distribution (`fs8r.enc' and
+`fs8x.enc') as well as three different type 1 fonts: Bergamo bold
+`bergb___', bold small caps `bergscb_', and bold expert `bergeb__'.
+
+   Print or view the Postscript file, and you will see a table
+containing all the glyphs in the old TeX encoding, plus some extras
+like the `fff' and `fft' ligatures!  There are many more glyphs
+available in other encodings.
+
+   You can test pdfTeX by replacing `latex' above with `pdflatex'.  It
+should also load the two `.enc' files and three `.pfb' files.
+
+   Finally, try typesetting a complete LaTeX document using the package
+interface.  Here is an example using Century Old Style and URW Grotesk.
+
+     \documentclass{article}
+     \usepackage[sf]{titlesec}           % use sans for section headers
+     \usepackage[osf]{grotesk,centuros}  % sans+roman; w/old-style figs
+     \begin{document}
+     \title{A Silly Example}             % in Century Old Style
+     \author{Christopher League}
+     \date{14 April 2002}
+     \maketitle
+     \section{Introduction}              % in URW Grotesk
+     The licenses for \emph{most} software are \textbf{designed} to
+     take away your freedom to \textsc{share} and change it\dots
+     \section{Four six eight}
+     \end{document}
+
+Other applications
+==================
+
+   Compared to creating quality virtual fonts for TeX, setting up the
+FontSite 500 CD for other applications is a walk in the park.  Map
+files for Ghostscript and X windows are included in the `etc/'
+sub-directory of this distribution.
+
+Ghostscript
+     The file `etc/Fontmap' contains an entry for each of the `.pfb'
+     files supported by this distribution.  It simply associates the
+     internal Postscript font name with the filename.  If you copy this
+     file into a directory containing the `.pfb' files and set the
+     `GS_LIB' environment variable to that path, then Ghostscript can
+     use the fonts _without_ having them embedded.
+
+X windows
+     The file `etc/fonts.scale' associates each `.pfb' filename with a
+     standard X11 descriptor.  To use the fonts in X11, copy this file
+     to a directory containing the `.pfb' files, issue the `mkfontdir'
+     command, then add the directory to your font path with `xset fp+'.
+
+     The fonts are not hinted well enough to serve as readable screen
+     fonts unless your system supports anti-aliasing.  Nevertheless,
+     registering them with the X11 server means that you can use them
+     in image manipulation programs such as Gimp.
+
+Notes for Windows users
+=======================
+
+   First, you will need a utility to extract files from the `.tgz'
+format.  If you already use Cygwin `http://www.cygwin.com/' (a complete
+Unix environment for Windows) then you can use `tar' directly, and
+probably don't need my help.  Otherwise, the evaluation version of
+WinZip `http://www.winzip.com/' can open `.tgz' files.
+
+   Second, I assume you are using MiKTeX `http://www.miktex.org/'.
+  1. Find your local TEXMF folder; usually `C:\LOCALTEXMF\'.
+
+  2. Create the sub-folders `fonts\type1\fontsite\' if they are not
+     already there.
+
+  3. Copy all the `.PFB' files from the `Type 1' directory on the CD
+     into `fonts\type1\fontsite\'; you should not need to make the
+     names lowercase, since Windows file systems are not case sensitive.
+
+  4. Copy the `tex', `fonts', and `dvips' folders from this
+     distribution into your local texmf folder.  Ignore the `etc'
+     folder.
+
+  5. Edit the file `dvips\config\config.ps' in the main texmf tree
+     (usually `C:\TEXMF\') and add the line `p +fs500tex.map' (without
+     the quotes).  Perhaps the most reliable way to do this is to start
+     up a command prompt and type `edit
+     c:\texmf\dvips\config\config.ps'.
+
+  6. Edit the file `pdftex\config\pdftex.cfg' in the main texmf tree,
+     and add the line `map +fs500tex.map'.
+
+  7. Find the "MiKTeX Options" from the Start Menu, and then refresh the
+     filename database.
+        This should do for LaTeX, dvips, and pdfTeX.  I have not been
+able to verify that Yap, the dvi viewer, works as well.  Please email
+if you can help!
+
+Notes for Mac users
+===================
+
+   With OS X, the Unix installation instructions should work as
+advertised, but you may notice one problem right away. When you insert
+the FontSite CD into your Mac, the PFB files appear to be missing!
+This is because the OS mounts it as an HFS filesystem.  You need to
+force it to mount as ISO9660 instead (don't ask me how!) or mount it on
+a non-Mac, and copy the files across the network.
+
+   ---------- Footnotes ----------
+
+   (1) Technically, only the extension needs to be lowercase.  Both
+Kpathsea and the X11 font server expect Type 1 font files to end with
+`.pfb' or `.pfa'.  If your filesystem is not case-sensitive, maybe this
+will not matter.
+

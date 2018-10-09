@@ -1,0 +1,148 @@
+
+Announcing
+**********
+
+   The FontSite 500 CD is a collection of 512 professional quality
+Type 1 (and TrueType) fonts licensed from the SoftMaker/ATF library and
+available for a very reasonable price from `http://www.fontsite.com/'.
+The CD contains many essential faces and extended families with expert
+sets, true small caps, old-style figures, a range of weights and
+widths, and so on.
+
+   I developed a series of scripts and control files that drive
+`fontinst' to generate all the TeX support files and font maps.  Now, a
+huge variety of essential typefaces are available to TeX/LaTeX users
+who purchase the FontSite CD and download these files.
+
+   * The package supports the LaTeX New Font Selection Scheme (NFSS)
+     using the TeX text (OT1), text companion (TS1), Cork (T1), and/or
+     tex'n'ansi (LY1) encodings.
+
+   * A custom Postscript encoding vector (upward compatible from
+     TeX base 1) exposes glyphs (such as infinity, pi, and Omega) that
+     are available in most FontSite fonts, but not encoded by default.
+
+   * If an expert variant is available, its fraction glyphs and
+     ligatures such as `ffi' and even `ft' are merged into the final
+     encoding and selected transparently.
+
+   * If old-style figures are available (usually with the small caps
+     shape) then they are merged into a family variant that uses them
+     by default, with no additional markup.
+
+   * The file names (vaguely) follow the `fontname' standard.  They do
+     not exceed 8+3 characters, so they should work with any operating
+     system.
+
+   * The package also includes maps for using the fonts with Ghostscript
+     and X windows.
+
+The web site is <http://contrapunctus.net/fs500tex/>; there you will
+find the following files:
+
+`fs500tex.pdf' (about 4.2M)
+     The manual, with samples of all the fonts and extensive indexing.
+     Along with the material at `http://www.fontsite.com/', this
+     document may help you decide whether to purchase the FontSite CD.
+
+`fs500tex-1.1_cd??.tgz' (about 4.8M)
+     The primary distribution.  It contains the TeX and LaTeX support
+     files and instructions for installing them.  A version of the
+     manual _without_ font samples (in GNU info format) is included.
+     You must get the package corresponding to the copyright date on
+     your CD (see the web site for details).
+
+`fs500src-1.1.tgz' (about 120k)
+     The script package, distributed under the terms of the GNU GPL.
+     It assumes you have a Unix system with particular tools available,
+     and its documentation is somewhat sketchy.  Grab this if you want
+     to read or modify the scripts; do not assume that you will just
+     save time compared to downloading the binaries!
+
+   Bug reports, patches, suggestions, questions, and praise are all
+welcome; please send email to <league@contrapunctus.net>.
+
+User-visible changes
+====================
+
+version 1.1
+-----------
+
+   * Released 29 May 2003
+
+   * Added all the decorative fonts that had been omitted until now.
+
+   * Updated documentation with suggestions from many users (thanks!)
+
+   * Included a brief document with font samples, suggested and
+     initially designed by Karl Berry.
+
+   * Changes to continue to accommodate older editions of the CD.
+
+version 1.0
+-----------
+
+   * Released 28 March 2003
+
+   * Initial support for the 2003 CD (5th edition).  There were many
+     font name and encoding changes.
+
+version 0.9
+-----------
+
+   * Released 23 November 2002
+
+   * The LaTeX font definition files now use standard NFSS series codes.
+     Thanks to Walter Schmidt and Ralf Stubner for indicating the way.
+
+   * Reasonable font substitutions are defined automatically.  If you
+     come across a family that does behave as expected under the
+     following series/shape combinations, please report it as a bug:
+     `m/n', `m/it', `bx/n', `bx/it'.  Substitutions between slanted and
+     italic are standard also, but they produce a warning message.
+
+   * Symbol fonts are now available: Arrows, Chap Borders,
+     CombiNumerals, Deanna Borders, Deanna Flowers, Linedraw Fixed,
+     Sean Symbols.  Complete glyph charts for these are available in
+     the manual.
+
+   * CombiNumerals are circled sans-serif numerals, either open (black
+     on white) or solid (white on black).  The package `combinum.sty'
+     can automatically render TeX or LaTeX counters (with values up to
+     99) as CombiNumerals.  It is now trivial to use CombiNumerals as
+     page numbers or in enumerations.
+
+   * OCR-A and OCR-B have been merged into one family with two distinct
+     shapes.
+
+   * I worked around broken spacing in Bank Gothic ligatures.  I fixed a
+     bug in the ATF Clearface expert set, reported by Uwe Steinmann.
+
+
+version 0.8
+-----------
+
+   * Released 1 October 2002
+
+   * Updated to work with the 2001 FontSite CD.  I originally had the
+     2000 version, so people who ordered new CDs had problems.  Thanks
+     to Stephen Peters.
+
+   * Font definition files are now available for expert sets, so they
+     can be used with the `pifont' package.
+
+   * Added more decorative and script faces.
+
+   * Renamed the Syntax package to `syntaxf.sty', to avoid name
+     collision.
+
+version 0.7
+-----------
+
+   * First public release, 29 August 2002.
+
+   * All text and sans serif families are supported, but some decorative
+     and all the symbol fonts are missing.
+
+   * A LaTeX package interface exists, but is quite primitive.
+
