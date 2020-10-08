@@ -1601,8 +1601,8 @@ simple tabulations that may continue from one page to the next, \Mname\
 offers a `continuous tabular' environment. This doesn't have all the 
 flexibility provided by the packages but can often serve instead
 of using them.
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+Les tabulations multi-pages sont souvent établies avec les paquets \Lpack{longtable} ou \Lpack{xtab}, qui peuvent bien sûr être utilisés avec la classe. Pour les tabulations simples qui peuvent se poursuivre d'une page à l'autre, \Mname\ offre un environnement de \og{}tabulation continue\fg{}. Celui-ci n'a pas toute la flexibilité offerte par les packages mais peut souvent servir au lieu de les utiliser. Plus intéressant, mais plus limité, la classe fournit des \og{}tableaux automatiques\fg{}.
 
 \switchEng
     More interestingly, but more limited, the class provides `automatic 
@@ -1611,8 +1611,8 @@ tabulars'. For these you provide a list of simple entries, like a set of names,
 columns and the entries are automatically put into the appropriate column.
 You choose whether the entries should be added row-by-row, like this with
 the \cs{autorows} command:
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+Plus intéressant, mais plus limité, la classe fournit des \og{}tableaux automatiques\fg{}. Pour ceux-ci, vous fournissez une liste d'entrées simples, comme un ensemble de noms, et un certain nombre de colonnes, et les entrées sont automatiquement placées dans la colonne appropriée. Vous pouvez choisir si les entrées doivent être ajoutées ligne par ligne, comme ici avec la commande \cs{autorows}:
 
 \switchEng
 \begin{lcode}
@@ -1697,8 +1697,8 @@ typesetting poetry. This is greatly extended in \Mname. For example in the
 standard classes the verse stanzas are at a fixed indentation from the 
 left margin whereas \Mname\ lets you control the amount of indentation so 
 that you can make a poem appear optically centered within the textwidth.
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+Les classes standard fournissent un environnement \Ie{verse} très simple pour composer de la poésie. Ceci est largement étendu dans \Mname. Par exemple, dans les classes standard, les strophes des vers ont une indentation fixe par rapport à la marge de gauche, alors que \Mname\ vous permet de contrôler la quantité d'indentation de sorte que vous pouvez faire en sorte qu'un poème apparaisse optiquement centré dans la largeur du texte.
 
 \switchEng
     Stanzas may be numbered, as can individual lines within a poem. There is
@@ -1706,8 +1706,8 @@ a special environment for stanzas where lines are alternately indented. Also
 you can define an indentation pattern for stanzas when this is not regular 
 as, for example, in a limerick where the 3rd and 4th of the five lines are 
 indented with respect to the other three as shown below. 
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+Les strophes peuvent être numérotées, tout comme les lignes individuelles d'un poème. Il existe un environnement spécial pour les strophes où les lignes sont alternativement indentées. Vous pouvez également définir un modèle d'indentation pour les strophes lorsque celui-ci n'est pas régulier comme, par exemple, dans un limerick où les 3\textsuperscript{me} et 4\textsuperscript{me} des cinq lignes sont indentées par rapport aux trois autres comme indiqué ci-dessous.
 
 \switchEng
 \begin{lcode}
@@ -1763,8 +1763,8 @@ to be used when a `logical' verse line spills over the available textwidth,
 thus forming two or more typeset `physical' lines. On other occasions
 where there are two half lines the poet might want the second half line
 to start where the first one finished, like this:
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+Il n'est pas toujours possible de faire tenir une ligne dans l'espace disponible et vous pouvez spécifier l'indentation particulière à utiliser lorsqu'une ligne de vers \og{}logique\fg{} déborde de la largeur de texte disponible, formant ainsi deux lignes "physiques" ou plus. Dans d'autres cas, lorsqu'il y a deux demi-lignes, le poète peut souhaiter que la deuxième demi-ligne commence là où la première s'est terminée, comme ceci:
 
 \switchEng
 \begin{lcode}
@@ -1804,8 +1804,8 @@ Come away with me. \\
     Normally appendices come after the main body of a book. The class provides
 various methods for introducing appendices at the end, or you can place one or 
 more appendices at the end of selected chapters if that suits you better.
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+Normalement, les annexes viennent après le corps principal d'un livre. La classe fournit diverses méthodes pour introduire les annexes à la fin, ou vous pouvez placer une ou plusieurs annexes à la fin de chapitres sélectionnés si cela vous convient mieux.
 
 \switchEng
     \Mname\ also lets you have more than one index and an index can be set in 
@@ -1813,8 +1813,9 @@ either the normal double column style or as a single column which would be more
 appropriate, say, for an index of first lines in a book of poetry. The titles
 of any bibliography or indexes are added to the table of contents, but you
 can prevent this if you wish.
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+\Mname\ vous permet également d'avoir plus d'un index et un index peut être défini soit dans le style normal à double colonne, soit dans un style à colonne unique.
+Les titres de toute bibliographie ou de tout index peuvent être placés à la fin d'un chapitre ou à la fin de plusieurs chapitres si cela vous convient mieux. Les titres de toute bibliographie ou index sont ajoutés à la table des matières, mais vous pouvez empêcher cela si vous le souhaitez.
 
 \switchEng
     The class provides a set of tools for making glossaries or lists of 
@@ -1823,7 +1824,9 @@ symbols, the appearance of which can, of course, be easily altered. The
 %An example is
 %shown in the current version of the Addendum. A recent addition
 Also, the class provides configurable end notes which can be used as well as, 
-or instead of, footnotes. 
+or instead of, footnotes.
+\switchFrench\TS{1}
+La classe fournit un ensemble d'outils permettant de créer des glossaires ou des listes de symboles, dont l'apparence peut, bien entendu, être facilement modifiée. Le programme \Lmakeindex\ est utilisé pour trier les entrées. De plus, la classe fournit des notes de fin de texte configurables qui peuvent être utilisées en même temps que les notes de bas de page, ou à la place de celles-ci.
 \end{paracol}
 
 \section{Miscellaneous}
@@ -1844,24 +1847,30 @@ and write information in external files, design your own style of
 \cs{maketitle}, convert numbers to words, reserve space at the bottom of a 
 page, and so on and so forth.
 \switchFrench\TS{0}
-
+Des crochets\emph{hooks} et des macros sont fournis pour la plupart des aspects de la mise en page des documents ; par exemple, les notes de bas de page peuvent être normales, composées en deux ou trois colonnes, ou être intégrées à un seul paragraphe. Il existe une macro \cs{sidepar} qui est un \cs{marginpar} non flottant, ainsi qu'une macro \cs{sidebar} pour la composition des barres latérales dans la marge, en commençant par le haut du bloc de texte. Vous pouvez créer de nouveaux environnements de type verbatim, lire et écrire des informations dans des fichiers externes, concevoir votre propre style de titre, convertir des chiffres en mots, réserver un espace en bas de page, et ainsi de suite.
 
 \end{paracol}
 
 %% \appendix
 \section{Packages}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Most packages work with the \Mname\ class, the main exception being
 the \Lpack{hyperref} package. This package modifies many of the
 internals of the standard classes but does not cater for all of the
 differences between \Mname\ and the standard ones.
+\switchFrench\TS{0}
+La plupart des paquets fonctionnent avec la classe \Mname, la principale exception étant le package \Lpack{hyperref}. Ce paquet modifie de nombreux éléments internes des classes standard mais ne prend pas en compte toutes les différences entre \Mname\  et les classes standard.
 
+\switchEng
 If you use \Lpack{hyperref} with \Mname\ then the \Lpack{memhfixc}
 package\footnote{\Lpack{memhfixc} is supplied as part of the \Mname\
   distribution.} is automatically loaded by \Lpack{hyperref} to
 provide some class specific alterations.
+\switchFrench\TS{2}
+Si vous utilisez \Lpack{hyperref} avec \Mname, le paquetage \Lpack{memhfixc}\footnote{\Lpack{memhfixc} est distribué avec \Mname.} est automatiquement chargé par \Lpack{hyperref} pour fournir certaines modifications spécifiques à la classe.
+
 % For example like:
 % \begin{lcode}
 % \documentclass[...]{memoir}
@@ -1876,6 +1885,7 @@ provide some class specific alterations.
 % will automatically call in \Lpack{memhfixc} so that you don't have to do 
 % anything.
 
+\switchEng
 The \Mname\ class includes code either equivalent to, or extensions of, the 
 following packages; that is, the set of commands and environments is at least
 the same as those in the packages: 
