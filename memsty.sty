@@ -1,4 +1,3 @@
-
 %% memsty.sty    For memman
 \ProvidesPackage{memsty}[2010/02/09 for memman]
 
@@ -93,6 +92,7 @@
   \let\oldprecistoctext\precistoctext
   \renewcommand{\precistoctext}[1]{}
   \let\oldcftchapterfillnum\cftchapterfillnum
+  \let\oldcftchapterformatpnum\cftchapterformatpnum
   \renewcommand*{\changetocdepth}[1]{}
   \setcounter{tocdepth}{0}% chapters
   \renewcommand*{\cftchapterfont}{\hfill\sffamily}
@@ -101,10 +101,16 @@
   \renewcommand*{\cftchapterafterpnum}{\cftparfillskip}
 %%  \setpnumwidth{0em}
 %%  \setpnumwidth{1.5em}
-  \renewcommand*{\cftchapterfillnum}[1]{%
-    {\cftchapterleader}\nobreak
-    \hbox to 1.5em{\cftchapterpagefont ##1\hfil}\cftchapterafterpnum\par}
+%  \renewcommand*{\cftchapterfillnum}[1]{%
+%    {\cftchapterleader}\nobreak
+%    \hbox to 2.5em{\cftchapterpagefont
+%    ##1\hfil}\cftchapterafterpnum\par}
+  % make the box left aligned not right aliged
+  \renewcommand*{\cftchapterformatpnum}[1]{%
+    \cftchapterformatpnumhook{##1}%
+    \hb@xt@\@pnumwidth{\cftchapterpagefont ##1\hfil}}
   \setrmarg{0.3\textwidth}
+%  \setpnumwidth{6em}
   \setlength{\unitlength}{\@tocrmarg}
   \addtolength{\unitlength}{1.5em}
   \let\oldcftpartformatpnum\cftpartformatpnum
@@ -114,31 +120,35 @@
   \renewcommand*{\cftbookformatpnum}[1]{%
     \hbox to\unitlength{{\cftbookpagefont ##1}}}}
 
+
 \newcommand*{\setupparasubsecs}{%
-  \let\oldnumberline\numberline
-  \renewcommand*{\cftsubsectionfont}{\itshape}
-  \renewcommand*{\cftsubsectionpagefont}{\itshape}
-  \renewcommand{\l@subsection}[2]{
-    \ifnum\c@tocdepth > 1\relax
+  \let\oldnumberline\numberline%
+  \renewcommand*{\cftsubsectionfont}{\itshape}%
+  \renewcommand*{\cftsubsectionpagefont}{\itshape}%
+  \renewcommand{\l@subsection}[2]{%
+    \ifnum\c@tocdepth > 1\relax%
       \def\numberline####1{\textit{####1}~}%
-      \leftskip=\cftsubsectionindent
-      \rightskip=\@tocrmarg
+      \leftskip=\cftsubsectionindent%
+      \rightskip=\@tocrmarg%
 %%      \advance\rightskip 0pt plus \hsize % uncomment this for raggedright
 %%      \advance\rightskip 0pt plus 2em    % uncomment this for semi-ragged
-      \parfillskip=\fill
-      \ifhmode ,\ \else\noindent\fi
-      \ignorespaces 
+      \parfillskip=\fill%
+      \ifhmode ,\ \else\noindent\fi%
+      \ignorespaces% 
       {\cftsubsectionfont ##1}~{\cftsubsectionpagefont##2}%
-       \let\numberline\oldnumberline\ignorespaces
+       \let\numberline\oldnumberline\ignorespaces%
     \fi}}
 
+
 \AtEndDocument{\addtocontents{toc}{\par}}%%% OK
+
 
 \newcommand*{\setupmaintoc}{%
   \renewcommand{\contentsname}{Contents}
   \let\changetocdepth\oldchangetocdepth
   \let\precistoctext\oldprecistoctext
   \let\cftchapterfillnum\oldcftchapterfillnum
+  \let\cftchapterformatpnum\oldcftchapterformatpnum
   \addtodef{\cftchapterbreak}{\par}{}
   \renewcommand*{\cftchapterfont}{\normalfont\sffamily}
   \renewcommand*{\cftchapterleader}{\sffamily\cftdotfill{\cftchapterdotsep}}
@@ -156,55 +166,54 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \usepackage{graphicx}
-%%% Moved to "translation-fr.sty"
-% \ifpdf
-%   \usepackage[pdftex,
-%               plainpages=false,
-%               pdfpagelabels,
-% %%%  hyperfootnotes=false,
-%               bookmarksnumbered,
-% %              colorlinks,
-% %              ocgcolorlinks, % this only works for pdflatex
-%              ]{hyperref} 
-%   \DeclareGraphicsRule{*}{mps}{*}{}
-% \else
-%   \usepackage[plainpages=false,
-%   pdfpagelabels,
-% %%%  hyperfootnotes=false,
-%   bookmarksnumbered,
-%   breaklinks,
-%   % colorlinks,
-%   ]{hyperref} 
-%   \usepackage{breakurl}
-%   \DeclareGraphicsRule{*}{eps}{*}{}
-% \fi
-% %%%  \usepackage{memhfixc} %% now called by hyperref
-% 
-% 
-% % this is a lillt special, using this one can change the link colors
-% % in the manual to blacnmk without changing any file, just use
-% %
-% % pdflatex "\def\MEMOIRblacklinks{}\input{memman.tex}"
-% %
-% \@ifundefined{MEMOIRblacklinks}{%
-%   \definecolor{linkcolour}{rgb}{0,0.2,0.6}
-%   \definecolor{citecolour}{rgb}{0,0.6,0.2}
-%   % \definecolor{filecolor}{rgb}{0,0.2,0.6}
-%   \definecolor{urlcolour} {rgb}{0.8,0,0.8}
-% }{%
-%   typeout{Asked for black links, so that is what you are going to get}
-%   \definecolor{linkcolour}{rgb}{0,0,0}
-%   \definecolor{citecolour}{rgb}{0,0,0}
-%   % \definecolor{filecolor}{rgb}{0,0,0}
-%   \definecolor{urlcolour} {rgb}{0,0,0}
-%   \hypersetup{colorlinks}
-% }
-% \hypersetup{
-%     pdftitle={The memoir class},
-%     pdfauthor={Peter Wilson},
-%     linkcolor=linkcolour,citecolor=citecolour,
-%     filecolor=urlcolour,urlcolor=urlcolour,
-%   }
+\ifpdf
+  \usepackage[pdftex,
+              plainpages=false,
+              pdfpagelabels,
+%%%  hyperfootnotes=false,
+              bookmarksnumbered,
+              colorlinks,
+%              ocgcolorlinks, % this only works for pdflatex
+             ]{hyperref} 
+  \DeclareGraphicsRule{*}{mps}{*}{}
+\else
+  \usepackage[plainpages=false,
+  pdfpagelabels,
+%%%  hyperfootnotes=false,
+  bookmarksnumbered,
+  breaklinks,
+  % colorlinks,
+  ]{hyperref} 
+  \usepackage{breakurl}
+  \DeclareGraphicsRule{*}{eps}{*}{}
+\fi
+%%%  \usepackage{memhfixc} %% now called by hyperref
+
+
+% this is a lillt special, using this one can change the link colors
+% in the manual to blacnmk without changing any file, just use
+%
+% pdflatex "\def\MEMOIRblacklinks{}\input{memman.tex}"
+%
+\@ifundefined{MEMOIRblacklinks}{%
+  \definecolor{linkcolour}{rgb}{0,0.2,0.6}
+  \definecolor{citecolour}{rgb}{0,0.6,0.2}
+  % \definecolor{filecolor}{rgb}{0,0.2,0.6}
+  \definecolor{urlcolour} {rgb}{0.8,0,0.8}
+}{%
+  \typeout{Asked for black links, so that is what you are going to get}
+  \definecolor{linkcolour}{rgb}{0,0,0}
+  \definecolor{citecolour}{rgb}{0,0,0}
+  % \definecolor{filecolor}{rgb}{0,0,0}
+  \definecolor{urlcolour} {rgb}{0,0,0}
+  \hypersetup{colorlinks}
+}
+\hypersetup{
+    pdftitle={The memoir class},
+    pdfauthor={Peter Wilson, maintained by Lars Madsen},
+    linkcolor=linkcolour,citecolor=citecolour,
+    filecolor=urlcolour,urlcolor=urlcolour,
+  }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -220,6 +229,8 @@
 \providecommand*{\ixetx}{\index{etex?\etx}}
 \providecommand*{\pixetx}{\etx\ixetx}            % print & index etex
 \providecommand*{\xetx}{Xe\tx}
+\providecommand*{\luatx}{Lua\tx}
+
 \providecommand*{\ixxetx}{\index{XeTeX?\xetx}}
 \providecommand*{\pixxetx}{\xetx\ixxetx}         % print & index XeTeX
 \providecommand*{\TeXUG}{\tx{} Users Group}
@@ -524,6 +535,7 @@ chapterstyle. It is one of several styles that come as part of the
 \LMnote{2011/05/25}{I've moved the demochaps to an appendix, so
   \cs{@chapapp} need a little redoing}
 \newenvironment{demochap}[2][\onelineskip]{%
+%  \typeout{Chapter value going in: \thechapter}
   \savechapcnt=\c@chapter
   \saveseccnt=\c@section
   \savesubseccnt=\c@subsection
@@ -539,7 +551,7 @@ chapterstyle. It is one of several styles that come as part of the
       \begingroup
 %%        \hrule
         \let\@chapapp\chaptername% such that appendix does not disturb
-        \renewcommand{\theHchapter}{\thepage.\thechapter}
+%        \renewcommand{\theHchapter}{\thepage.\thechapter.showcase}
         \renewcommand\thechapter{\arabic{chapter}}
         \vspace*{#1}
         \chapterstyle{#2}
@@ -548,6 +560,7 @@ chapterstyle. It is one of several styles that come as part of the
         \renewcommand*{\addcontentsline}[3]{}
         \renewcommand*{\thispagestyle}[1]{}
         \renewcommand*{\markboth}[2]{}
+        \let\refstepcounter\stepcounter
         \chapter{Demonstration of the #2 chapter style}
         \chaptext{#2}
         \vspace{\onelineskip}
@@ -559,10 +572,10 @@ chapterstyle. It is one of several styles that come as part of the
       \global\demochapcnt=0\relax
     \fi
     \c@chapter=\savechapcnt
-    \advance\c@chapter\m@ne
-    \renewcommand{\theHchapter}{\thepage.\thechapter-\the\demochapcnt}
-    \refstepcounter{chapter}%
-%%    \stepcounter{chapter}
+%    \advance\c@chapter\m@ne
+%    \renewcommand{\theHchapter}{\thepage.\thechapter-\the\demochapcnt.\thesheetsequence.showcase}
+%    \refstepcounter{chapter}%
+%    \stepcounter{chapter}
     \begin{center}
       \caption{The #2 chapterstyle}\label{dc#2}
     \end{center}
@@ -572,6 +585,7 @@ chapterstyle. It is one of several styles that come as part of the
     }{%\gdef\theHchapter{\thechapter}
   \end{figure}
   \counterwithin{figure}{chapter}
+  \global\c@chapter=\savechapcnt
   \global\c@section=\saveseccnt
   \global\c@subsection=\savesubseccnt
   \global\c@footnote=\saveftncnt}
@@ -1019,6 +1033,7 @@ chapterstyle. It is one of several styles that come as part of the
 \settypeblocksize{7.75in}{33pc}{*}
 \setulmargins{4cm}{*}{*}
 \setlrmargins{1.25in}{*}{*}
+%\setlrmargins{*}{*}{1}
 \setmarginnotes{17pt}{51pt}{\onelineskip}
 \setheadfoot{\onelineskip}{2\onelineskip}
 \setheaderspaces{*}{2\onelineskip}{*}
@@ -1046,8 +1061,8 @@ it to use the new width for the  margin par}
 
 %%%%% Pavlic `fix' for index
 
-\let\original@wrindexm@m\@wrindexm@m
-\def\@wrindexm@m{\catcode`\ =10 \original@wrindexm@m}
+%\let\original@wrindexm@m\@wrindexm@m
+%\def\@wrindexm@m{\catcode`\ =10 \original@wrindexm@m}
 
 % for letter group bookmarks for glossary items
 \newcommand\doglobookmark[1]{%
@@ -1067,7 +1082,7 @@ it to use the new width for the  margin par}
 \newcommand*\snipletref[1]{\snipletname~\ref{#1} on~\pref{#1}}
 \newenvironment{sniplet}[1][]{
   \refstepcounter{sniplet}
-  \edef\mem@e{\@ifnotmtarg{#1}{~(#1)}}
+  \edef\mem@e{\@ifnotmtarg{#1}{\space(#1)}}
   \section*{\snipletname~\thesniplet\mem@e}
   \phantomsection
   \addcontentsline{toc}{section}{\snipletname\ \thesniplet\mem@e}
@@ -1117,11 +1132,40 @@ it to use the new width for the  margin par}
   \fancybreak{}
 }
 
-\newenvironment{caveat}{\par\medskip\noindent\textbf{\textit{Caveat.}}\enskip\itshape}{\par\medskip}
+%\newenvironment{caveat}{\par\medskip\noindent\textbf{\textit{Caveat.}}\enskip\itshape}{\par\medskip}
+\newenvironment{caveat}{\begin{leftbar}\noindent\textbf{\textit{Caveat.}}\enskip}{\end{leftbar}}
+%\newenvironment{Changed}{\par\medskip\noindent\textbf{\textit{Changed.}}\enskip}{\par\medskip}
+\newenvironment{Changed}{\begin{leftbar}\noindent\textbf{\textit{Changed.}}\enskip}{\end{leftbar}}
 \newenvironment{note}{\par\medskip\noindent\textbf{\textit{Note.}}\enskip\itshape}{\par\medskip}
+\newenvironment{note*}[1]{\par\medskip\noindent\textbf{\textit{#1.}}\enskip\itshape}{\par\medskip}
 \newenvironment{hint}{\par\medskip\noindent\textbf{\textit{Hint.}}\enskip\itshape}{\par\medskip}
 \renewcommand{\cmdprint}[1]{\textup{\texttt{\string#1}}}
 
+
+
+\newenvironment{recommended}{%
+  \@zeroseps%
+  \parskip\z@ \topsep\z@%
+  \definecolor{shadecolor}{gray}{0.9}%
+  \fboxsep0pt%
+  \shaded%
+  \list{}{%
+    \labelwidth\z@
+    \itemindent\z@
+    \addtolength\itemindent{\labelsep}
+    \parsep\z@
+    \listparindent1.5em
+    \leftmargin\z@
+    \rightmargin\leftmargin}
+    \item[\textbf{Recommended alternative}]\mbox{}\par\smallskip
+      \nobreak%\ignorespaces
+  \noindent\ignorespaces}%
+  { \endlist
+    \endshaded}
+
+
+%\renewcommand\theHfootnote{\thefootnote.\thesheetsequence}
+ 
 
 
 \typeout{End memsty.sty}
