@@ -16,7 +16,7 @@
 %%   LaTeX version 2003/06/01 or later.
 %% 
 %%   This work has the LPPL maintenance status "maintained".
-%%   Maintainer: Lars Madsen (daleif at math dot au dot dk)
+%%   Maintainer: Lars Madsen (daleif at imf dot au dot dk)
 %% 
 %%   
 %
@@ -38,16 +38,12 @@
 
 \svnidlong
 {$HeadURL: https://svn.nfit.au.dk/svn/memoir/trunk/doc/memdesign.tex $}
-{$LastChangedDate: 2018-09-14 10:14:49 +0200 (Fri, 14 Sep 2018) $}
-{$LastChangedRevision: 617 $}
-{$LastChangedBy: daleif@math.au.dk $}
-
-\frenchspacing
+{$LastChangedDate: 2014-05-20 10:19:12 +0200 (Tue, 20 May 2014) $}
+{$LastChangedRevision: 487 $}
+{$LastChangedBy: daleif $}
 
 
-
-
-
+ 
 
 % For (non-printing) notes  \PWnote{date}{text}
 \newcommand{\PWnote}[2]{} 
@@ -59,17 +55,6 @@
 %%%% kill bibliographystyle used in memsty.sty
 \renewcommand*{\bibliographystyle}[1]{}
 \usepackage{memsty}
-
-
-\hypersetup{
-  pdftitle={A Few Notes on Book Design},
-  pdfauthor={Peter Wilson, maintained by Lars Madsen},
-}
-
-
-
-
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{titlepages}  % code of the example titlepages
 \usepackage{fonttable}[2009/04/01]   % font tables
@@ -241,35 +226,6 @@ Nos habebit humus.\par}
 %%% Numbering down to subsections as well
 \setsecnumdepth{subsection}
 
-
-
-\newcommand\U[2]{\textrm{#1}\,\textrm{#2}}
-
-
-\makeatletter
-\renewcommand*{\setupparasubsecs}{%
-  \let\oldnumberline\numberline%
-  \renewcommand*{\cftsubsectionfont}{\itshape}%
-  \renewcommand*{\cftsubsectionpagefont}{\itshape}%
-  \renewcommand{\l@subsection}[2]{%
-    \ifnum\c@tocdepth > 1\relax%
-    \def\numberline####1{\textit{####1}~}%
-    \leftskip=\cftsubsectionindent%
-    \rightskip=\@tocrmarg%
-    %% \advance\rightskip 0pt plus \hsize% uncomment this for raggedright
-    %% \advance\rightskip 0pt plus 2em    % uncomment this for semi-ragged
-     \parfillskip=\fill%
-    \rightskip=3.55em plus 3fil%
-    \ifhmode,\enskip \else\noindent\fi%
-    {\cftsubsectionfont ##1}~{\cftsubsectionpagefont##2}%
-    \let\numberline\oldnumberline%
-    \ignorespaces%
-    \fi}%
-}
-
-\makeatother
-
-
 %% end preamble
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
@@ -363,20 +319,7 @@ First edition:                        & August 2009 \\
 \end{tabular}
 \end{center}
 
-
-
-\bigskip
-
-Maintained by Lars Madsen
-
-
-
 \endgroup
-
-
-
-
-
 
 \clearpage
 \mbox{}
@@ -388,46 +331,12 @@ Maintained by Lars Madsen
 \pagestyle{headings}
 %%%%\pagestyle{Ruled}
 
-
 \setupshorttoc
-
 \tableofcontents
-
-
-
 \cleardoublepage
-
 \setupparasubsecs
-
 \setupmaintoc
-
-
-\begingroup
-
-% important point here: We need \endlineshar=-1 here for the inline
-% list of subsections. Why? Beacause we have subsection subsubsection
-% subsection, and under hyperref running the l@subsubsection for
-% subsubsection, which typesets nothing, ruins our \ignorespaces in
-% our redefinition of \l@subsection (it cannot see and ignore the space after the
-% \contentsline line for subsubsection). Easiest solution: use
-% change \endlinechar
-%
-% Special thanks to David Carlisle in the tex.stackexchange.com chat
-% for suggesting it
-
-
-\endlinechar=-1
-
-
 \tableofcontents
-
-\endgroup
-
-
-
-%\tracingoutput=0
-%\tracingmacros=0
-
 \setlength{\unitlength}{1pt}
 \clearpage 
 \listoffigures
@@ -530,7 +439,7 @@ pages are even-numbered.
    Then there is the question of folios. The typographical term for
 the number of a page is \emph{folio}\index{folio}.
 This is not to be confused with
-the same term as used in `Shakespeare's first folio' where the reference is
+the same term as used in `Shakespeare's First Folio' where the reference is
 to the height and width of the book, nor to its use in the phrase
 `\emph{folio} signature'\index{signature} where the term refers to the 
 number of times a printed sheet is folded. 
@@ -833,18 +742,17 @@ keynote presentation~\autocite{TUGKEYNOTE07}.
 a good overview see~\autocite{CHAPPELL99} and Fred Smeijers~\autocite{SMEIJERS96}
 provides a detailed description of punchcutting.
  
-Making type has been an inherently manual process. Having got a design
-for a font, for each character, a punchcutter makes a punch starting
-with a square steel bar about 2\slashfrac{1}{4}~inches (\U{6}{cm}) long with
-an end face large enough to encompass the character. Using files and
-gravers, and perhaps some specialized tools like a counterpunch, he
-carves out the character in relief on one end of the bar. The
-character is oriented so that it is backwards with respect to its
-appearance when printed.  To check the shape, the end of the punch is
-put into the flame of an alcohol lamp which coats it with lampblack,
-and it is then pressed against a chalky paper to leave a black image
-of the character. Once the shape is correct the punch is hardened and
-annealed.
+    Making type has been an inherently manual process. Having got a design
+for a font, for each character, a punchcutter makes a punch starting 
+with a square steel bar about 2\slashfrac{1}{4}inches (6cm) long with an 
+end face large enough to encompass the character. Using files and gravers,
+and perhaps some specialized tools like a counterpunch, 
+he carves out the character in relief on one end of the bar. The character
+is oriented so that is backwards with respect to its appearance when printed.
+To check the shape, the end of the punch is put into the flame of an alcohol
+lamp which coats it with lampblack, and it is then pressed against a chalky 
+paper to leave a black image of the character. Once the shape is correct 
+the punch is hardened and annealed.
 
    The next stage is to create the matrix for the character. The punch is
 hammered into a softer material, usually copper, or sometimes brass which
@@ -1203,12 +1111,12 @@ It was first used in the famous \emph{Hypnerotomachia Poliphili} by
 Francesco Colonna\index{Colonna, Francesco} which Aldus published in 1499.
 A modern version is available called Poliphilus\facesubseeidx{Poliphilus}.
 
-The Aldine roman soon spread across Europe. One of the first type
-cutters to use it as a model was Claude Garamond\index{Garamond,
-  Claude} in Paris (c. 1540), and his types had a wide distribution,
-for example being used in Antwerp by Christopher
-Plantin\index{Plantin, Christopher}. The main basis for modern
-versions is a version of Garamond's types cut by the French printer
+    The Aldine roman soon spread across Europe. One of the first typecutters
+to use it as a model was Claude Garamond\index{Garamond, Claude} 
+in Paris (c. 1540), and his types 
+had a wide distribution, for example being used in Antwerp by Christopher 
+Plantin\index{Plantin, Christopher}. The main basis for modern versions
+is a version of Garamond's types cut by the French printer 
 Jean Jannon\index{Jannon, Jean} about 1621.
 
     Characteristics of these types are wide concave serifs, particularly
@@ -1724,9 +1632,6 @@ which is then built up as before. When several lines have been assembled they
 are slid from the composing stick onto the composing table, which is
 a large, smooth and flat marble slab.
 
-
-\enlargethispage{1em}
-
     When sufficient type has been assembled for printing one sheet of paper
 it is put into a chase\index{chase} which is a rectangular cast-iron frame, 
 rather like a picture frame. The chase is placed round the type
@@ -1740,9 +1645,6 @@ there is nothing like the joy of picking up and sorting out several hundred
 small pieces of type that have scattered themselves all over the floor, and 
 then putting them all back in the chase in the correct order! The assembled
 and locked up type, furniture, and chase are called a forme\index{forme}.
-
-
-
 
 \PWnote{2009/03/29}{Revised description of composing type and added paras 
         about kinds of hand presses}
@@ -1882,33 +1784,37 @@ typecases\index{typecase} (roman
 and italic), a case of mathematical sorts containing signs, superscripts
 and subscripts, etc., and a case of unaccented Greek characters.
     In order to set maths such as shown as formula~\ref{eq:typeset},
-in an assumed \U{11}{pt} font with \U{24}{pt} spacing, 
+in an assumed 11pt font with 24pt spacing, 
 the widest elements, properly spaced and centered within the measure, 
 are set in the composing\index{composing stick} stick as
+
 \begin{displaymath}
 P_{N_1 + m} = N_{1} + m \raisebox{-0.6\baselineskip}{$\displaystyle\binom{N_{2} - N_{1}}{\phantom{m}}$}
               \alpha^{m}\beta^{(N_{2}-N_{1}) - m}
 \end{displaymath}
 
     The terms to the right of the $=$ sign are then removed and stored where
-hopefully they won't be disturbed. A lead of \U{6.5}{pt} is then inserted above and below 
+hopefully they won't be disturbed. A lead of 6.5pt is then inserted above and below 
 the first terms.
-The $N_{1} +m$ term is taken from the storage, and a piece of \U{2}{pt} rule is cut
+The $N_{1} +m$ term is taken from the storage, and a piece of 2pt rule is cut
 to the exact length of the term and the $C$ centered above it. Then the opening
 parenthesis is added, so the contents of the composing stick look like:
+
 \begin{displaymath}
 P_{N_1 + m} = \frac{C}{N_{1} + m} \bigg(
 \end{displaymath}
 
-   Moving on, the $N_{2}-N_{1}$ term is put in the composing stick and a \U{2}{pt}
+   Moving on, the $N_{2}-N_{1}$ term is put in the composing stick and a 2pt
 lead put below it with the $m$ centered underneath, then the closing parenthesis
 is added, so the formula now appears as:
+
 \begin{displaymath}
 P_{N_1 + m} = \frac{C}{N_{1} + m} \binom{N_{2} - N_{1}}{m}
 \end{displaymath}
  
-    Finally the Greek terms are added, with \U{6.5}{pt} leads above and below, 
+    Finally the Greek terms are added, with 6.5pt leads above and below, 
 resulting in:
+
 \begin{displaymath}
 P_{N_1 + m} = \frac{C}{N_{1} + m} \binom{N_{2} - N_{1}}{m}
               \alpha^{m}\beta^{(N_{2}-N_{1}) - m}
@@ -1918,6 +1824,7 @@ P_{N_1 + m} = \frac{C}{N_{1} + m} \binom{N_{2} - N_{1}}{m}
 used the process was certainly not automatic. With a 
 Monotype\index{Monotype} caster the 
 operator would produce
+
 \providecommand*{\tmri}{\mathrm{i}}
 \providecommand*{\tmrx}{\mathrm{x}}
 \begin{displaymath}
@@ -2393,8 +2300,6 @@ down to the finished page size. Table~\ref{tab:adriansizes} is from
 \abybm{9.25}{6.125}{in} out of \abybm{50}{38}{in} sheets, 
 \abybm{10.25}{8.25}{in} out of \abybm{45}{35}{in} sheets, and so on.
 
-\newpage
-
 
     Publishers like the final typeset book to be of a length that just fits
 within an integral number of signatures\index{signature}, 
@@ -2551,7 +2456,7 @@ use. The common ones, together with their manufactured size in inches,
 are~\autocite{POCKETPAL}:
 \begin{description}
 \item[Bond (\abyb{17}{22})]\index{paper!bond} Commonly used for letters and
-business forms. They have surfaces acceptible for both pen and pencil.
+business forms. They have surfaces acceptible for both pen and pencil.n
 
 \item[Coated (\abyb{25}{38})]\index{paper!coated} For high quality printed
 work because of their surface smoothness and uniform ink receptivity.
@@ -2855,7 +2760,7 @@ each fold reproduces the original page proportion.
 Thus halving an A0 sheet 
 (size \abybm{1189}{841}{mm}) produces an A1 size sheet (\abyb{594}{841}),
 which in turn being halved produces the A2 sheet (\abyb{420}{594}), down
-through the A3, A4 (\abybm{210}{297}{mm}), A5, \ldots{} sheets.
+through the A3, A4 (\abybm{210}{297}{mm}), A5, \ldots sheets.
 
 For many years it was thought that it was impossible to fold a sheet of 
 paper\index{paper}, no matter how large and thin, more than eight times 
@@ -3067,7 +2972,7 @@ Then
     Both the Fibonacci series and the golden section appear in nature.
 The arrangement of seeds in a sunflower, the pattern on the surface of a 
 pinecone, and the spacing of leaves around a stalk all exhibit Fibonacci
-paterns (for example see~\autocite{CONWAY96}). Martin Gardner~\autocite{GARDNER66}
+paterns (for example see~\autocite{CONWAY96}). Martin Gardener~\autocite{GARDNER66}
 reports on a study of 65 women that claimed that the average ratio of a 
 person's height to the height of the navel is $1.618+$ --- suspiciously 
 close to $\varphi$. According to Dan Brown, the author of 
@@ -3263,7 +3168,7 @@ interested in typography.
 
 The layout on the right is The Folio Society's\index{Folio Society}
 1970 edition of \btitle{The Prince} by Niccol\`{o} Machiavelli. The original
-size is \abybm{216}{125}{mm} and the text is set in \abyb{12/13}{22} 
+size is \abybm{216}{125}{mm} and is set in \abyb{12/13}{22} 
 Centaur\facesubseeidx{Centaur}.
 Chapter titles\index{chapter!design} are set as raggedright block 
 paragraphs using Roman numbers
@@ -3506,7 +3411,7 @@ by Brooke Crutchley\index{Crutchley, Brooke}
 and published by Cambridge University 
 Press\index{Cambridge University Press} in 1968. This is typeset in 
 Monotype Barbon\facesubseeidx{Monotype Barbon}\index{Barbon!Monotype}
-with $17.5$pt leading on a $26$pc measure on a \abybm{253}{162}{mm} page.
+with $17.5$ leading on a $26$pc measure on a \abybm{253}{162}{mm} page.
 Crutchley was the Cambridge University 
 Printer\index{Cambridge University Press!Crutchley, Brooke} and each year would produce
 a limited edition of a book about Cambridge or typography, and preferably
@@ -3646,7 +3551,7 @@ de Malueque ou naissent les cloux de Girofle} (Navigation and discovery
 of Upper India and the Isles of Molucca where the cloves grow) is written
 in a beautiful humanistic minuscule\index{minuscule!humanist}. 
 There are 27 lines to a page, which
-is \abybm{286}{190}{mm} and made of vellum. The text measure is $29.5$pc
+is \abybm{286}{190}{mm} and made of vellum. The text measure is $29.5$
 and the `leading' is $21$pt. The wide outer (\foredge) margin\index{margin!outer} is used 
 for sidenotes\index{sidenote}
 indicating highlights of the story. The manuscript was probably prepared 
@@ -4115,7 +4020,7 @@ L_{45} = 1.415\alpha + 23.03 \label{eq:L45}
 \end{equation}
 fitted aspects of the data, where $\alpha$ is the length of the alphabet
 in points, and $L_{i}$ is the suggested width in points, for a line with
-$i$ characters (remember that \U{1}{pc} = \U{12}{pt}).
+$i$ characters (remember that 1pc = 12pt).
 
    The vertical height of the typeblock should be constant from page to
 page. The lines of text on facing pages should be aligned
@@ -4129,7 +4034,7 @@ be constant. This implies that the depth of the typeblock should be an
 integral multiple of the space required for each line; that is, be specified
 as a multiple of the leading. A ten point type, for example, will normally
 have two points between lines, to give a leading of 12 points. This can be
-written as 10/12. Usefully, one pica is 12 points so with a \U{12}{pt} leading
+written as 10/12. Usefully, one pica is 12 points so with a 12pt leading
 vertical distances can be conveniently expressed in picas 
 (one pica per line). Another implication of this is that any space left 
 for illustrations\index{illustration} or tables\index{table}, or
@@ -4279,10 +4184,10 @@ that with enough practice, Sans-serif is just as easy to read.}
 than a
 Sans-serif font, particularly if part of the text is obscured. You can
 try an experiment yourself to verify this. Try writing a phrase, once
-using a Sans-serif font and then with a seriffed font. Cover up
+using a Sans-serif font and then with a serifed font. Cover up
 the top halves of the two phrases and try to make out what they say. Then
 repeat this, except this time cover up the bottom halves of the phrase.
-Which is easier to read? Here are some example characters, firstly in sans-serif:
+Which is easier to read? Here are some example characters, firstly in san-serif:
 \begin{center}
 {\Huge\sffamily a c l m n p q o}
 \end{center}
@@ -4320,7 +4225,7 @@ associated with sans-serif that must be borne in mind; for general
 \emph{continuous} reading, a good seriffed form is more likely to be
 easy on the eye than a good sans form.
 
-\item \emph{Well designed upper- and lowercase roman type is easier to read than
+\item \emph{Well designed upper and lower case roman type is easier to read than
 any of its variants.}
 
     This is a guiding principle with many exceptions. Among the variants
@@ -4392,18 +4297,18 @@ in a variety of uses. Among the many results he reported:
   \item More than five times as many readers are likely to show good
   comprehension when a serif body type is used instead of a sans serif
   body type.
-  \item The top half of [uppercase] letters is more recognizable than
+  \item The top half of [upper case] letters is more recognizable than
   the bottom half.
   \item There is little difference in legibility between headlines
   [section titles] set in serif and sans serif typefaces, or between
   roman and italic.
   \item Headlines set in capital letters are significantly less legible
-  than those set in lowercase.
+  than those set in lower case.
 \end{itemize}
 
 \end{itemize}
 
-    The consensus, such as it is, seems to lean towards seriffed
+    The consensus, such as it is, seems to lean towards serifed
 typefaces for continuous reading, but for titling the choice is
 wide open.
 
@@ -4412,7 +4317,7 @@ wide open.
     Daniel Luecking\index{Luecking, Daniel} had this to say on the subject
 in a posting to \pixctt\ in January 2002.
 \begin{quotation}
-    It is often conjectured that seriffed fonts are easier to read because
+    It is often conjectured that serifed fonts are easier to read because
 the serifs contribute more points of difference between words. This is
 often countered with the conjecture that they are easier to read because 
 that is what we are used to reading. But no one can doubt that words
@@ -4443,7 +4348,7 @@ to look at the real menu and was momentarily disoriented (while my brain
 turned itself around I guess) before I could read the actual menu. That
 was when I first ran some tests to see why that was so easy to read and
 other mirror writing was not. It seemed to be serif vs sans-serif, but
-it might also be the typical letter forms: the typical serif lowercase
+it might also be the typical letter forms: the typical serif lower case
 `a', the one with the 'flag' above the bowl [e.g., a], is particularly 
 difficult to recognize compared to the simple `circle plus stick' 
 [e.g., \textit{a}] form.
@@ -4756,7 +4661,7 @@ should be larger than normal for a similar printed book. This will provide
 a wider viewing range. A larger font will also tend to
 increase the sharpness of the print as more pixels will be available for
 displaying each character.
-    The font size should not be less than \U{12}{pt}. The font may have to be
+    The font size should not be less than 12pt. The font may have to be
 more robust than you would normally use for printing, as fine hairlines 
 or small serifs will not display well unless on a high resolution screen.
 
@@ -4961,7 +4866,7 @@ type area, and will normally be narrower\ldots
 \begin{showtitle}
 \titleZD
 \end{showtitle}
-\caption{Title page based on a design for the Folio Society's edition of
+\caption{Title page based on a design for the Folio Society's editiobn of
   \btitle{Zuleika Dobson} (first published in 1911)} \label{fig:titleZD}
 \end{figure}
 
@@ -5140,7 +5045,7 @@ landscape\index{landscape}\indextwo{orientation}{landscape}
 orientation rather than portrait.
 
     When a double spread consists of a portrait page and a landscape page, as 
-in~figures~\ref{fig:portrait-landscape} and~\ref{fig:landscape-portrait}, there are
+in~\fref{fig:portrait-landscape} and~\ref{fig:landscape-portrait}, there are
 two choices for which way the landscape page is turned with respect to the
 portrait page. In each case it seems more natural to me when the document 
 has to be turned to the right to view the landscape page. 
@@ -5305,7 +5210,7 @@ footnotes\index{footnote!font size}
 is usually two sizes smaller than the main font but with the same 
 leading\index{leading}. For example if the main text is set 10/12 then 
 footnotes would be set 8/10. Notes to tables, though, are often set even 
-smaller; for instance at \U{6}{pt} or \U{7}{pt} in a \U{10}{pt} document. 
+smaller; for instance at 6pt or 7pt in a 10pt document. 
 Each footnote should be introduced by the 
 appropriate reference mark in the same font size as the note itself. If it is 
 not raised then follow it by a period if it is a number, or by a space 
@@ -5315,7 +5220,7 @@ short page, such as perhaps the last page of a chapter, they are placed
 at the bottom of the page, not immediately below the last line of the main 
 text.
 
-   Endnotes may be set in the same font as the main text, but usually in
+   Endnotes may be set in the same font font as the main text, but usually in
 the same size\index{endnote!font size} as for footnotes.\footnote{That is, two
 sizes smaller than the main text, but with the same leading.} 
 
@@ -5434,7 +5339,7 @@ that the eye does not jump across it when reading an entry. The entries are
 normally set flush-and-hang\index{flush-and-hang}.
 
     When there are subentries, or sub-subentries, they are typically
-each indented by \U{1}{em} with respect to the major entry.
+each indented by 1em with respect to the major entry.
 
    A change of collation, such as between entries starting with `P' and those
 with `Q' should be signalled by at least one or two blank lines. If the index
@@ -6041,14 +5946,14 @@ stop, making four dots in all, like so\ldots.
 
    Dashes are also used to indicate missing characters or a word. Missing
 characters in the middle of a word are indicated by a 
-\U{2}{em}-dash\index{dash!2em@\U{2}{em}}\index{2em-dash@\U{2}{em}-dash} (a dash that
+2em-dash\index{dash!2em}\index{2em-dash} (a dash that
 is twice as long as an em-dash), as in:
 \begin{quote}
 \textbf{snafu,} \textit{(U.S. slang)} \textit{n.} chaos. --- \textit{adj.}
   chaotic. [\textit{s}ituation \textit{n}ormal --- \textit{a}ll
   \textit{f}------d \textit{u}p.]
 \end{quote}
-A \U{3}{em}-dash\index{dash!1em@\U{3}{em}}\index{3em-dash@\U{3}{em}-dash} is used to indicate a 
+A 3em-dash\index{dash!3em}\index{3em-dash} is used to indicate a 
 missing word. When I lived in Maryland my
 local small town newspaper was the \textit{Frederick Post.} 
 The following is from an 
@@ -6452,9 +6357,9 @@ indicates a position in a sequence,
 while a cardinal\indextwo{cardinal}{number} number, like 3, 
 expresses `how many'. \ltx\ typesets
 numbers as cardinals, and these can be displayed as a sequence of
-arabic digits or as upper- or lowercase Roman numerals. 
+arabic digits or as upper- or lower-case Roman numerals. 
 
-    In general text the tradition seems to be that cardinal numbers between
+    It general text the tradition seems to be that cardinal numbers between
 one and ten are spelled out rather than being presented as numerals.
 In the United States numbers between one and ninety-nine are spelled (with
 twenty-one, twenty-two, etc., being hyphenated). Similar customs
@@ -6616,8 +6521,7 @@ Continent than in England where it was made.
 
 {\pickfont{5lb} The original Bell type was cut in London in 1788 by Richard
 Austin\index{Austin, Richard} for a publisher named Bell. It is a 
-Transitional\typesubidx{Transitional}
-(Rationalist\typesubidx{Rationalist}) 
+(Transitional\typesubidx{Transitional}, Neoclassical\typesubidx{Neoclassical}) 
 face. The FontSite version shown here is called 
 LanstonBell\facesubseeidx{LanstonBell}. 
 (See~\autocite{BIRDSALL04,BRINGHURST99,LAWSON90})
@@ -6649,7 +6553,7 @@ Bergamo\facesubseeidx{Bergamo}.
 {\pickfont{5bdj} Giambattista Bodoni\index{Bodoni, Giambattista} 
 lived in Parma and designed hundreds of faces between 1765 and his death 
 in 1813. Types in his style, now categorized as (Modern\typesubidx{Modern},
-Romantic\typesubidx{Romantic}, Didone\typesubidx{Didone}), were 
+Romantic \typesubidx{Romantic}, Didone\typesubidx{Didone}), were 
 revived in the first part of the twentieth century. 
 (See~\autocite{BRINGHURST99,LAWSON90})
 
@@ -6661,15 +6565,15 @@ revived in the first part of the twentieth century.
 
 {\Pickfont{5uo} \atoq\ \onetoo} {\Pickit{5uo} \atoq\ \Qligs}\\%[\onelineskip]
 
-{\pickfont{5uo} Frederic Goudy\index{Goudy, Frederic} cut his
-  University of California Old Style\facesubseeidx{University of
-    California Old Style} in 1938. Since then there have been many
-  faces more or less faithfully based on his design. The general
-  category of these is (Venetian\typesubidx{Venetian},
-  Renaissance\typesubidx{Renaissance},
-  Humanist\typesubidx{Humanist}). The FontSite version shown here is
-  called University Old Style\facesubseeidx{University Old Style}.
-  (See~\autocite{BRINGHURST99,LAWSON90})
+{\pickfont{5uo} Frederic Goudy\index{Goudy, Frederic} 
+cut his University of California Old 
+Style\facesubseeidx{University of California Old Style}
+in 1938. Since then there have been many faces more or less faithfully
+based on his design. The general category of these is 
+(Venetian\typesubidx{Venetian}, Humanist\typesubidx{Humanist},
+Renaissance\typesubidx{Renaissance}). The FontSite version shown here
+is called University Old Style\facesubseeidx{University Old Style}.
+(See~\autocite{BRINGHURST99,LAWSON90})
 
 \facetext}
 
@@ -6695,15 +6599,15 @@ Baroque\typesubidx{Baroque}, Garald\typesubidx{Garald}) category.
 
 {\Pickfont{5jr} \atoq\ \onetoo} {\Pickit{5jr} \atoq\ \Qligs}\\%[\onelineskip]
 
-{\pickfont{5jr} Centaur was designed by Bruce Rogers\index{Rogers,
-    Bruce} in 1912--14 based on Nicolas Jenson's\index{Jenson,
-    Nicolas} roman type that he cut in Venice in 1465. It is perhaps
-  the most faithfull rendition of Jenson's typeface, and is thus
-  categorized as (Venetian\typesubidx{Venetian},
-  Renaissance\typesubidx{Renaissance},
-  Humanist\typesubidx{Humanist}). The FontSite version shown here is
-  called Jenson Recut\facesubseeidx{Jenson Recut}.
-  (See~\autocite{BRINGHURST99,LAWSON90,ROGERS49})
+{\pickfont{5jr} Centaur was designed by Bruce Rogers\index{Rogers, Bruce} 
+in 1912--14 based
+on Nicolas Jenson's\index{Jenson, Nicolas} roman type that he cut in 
+Venice in 1465. It is
+perhaps the most faithfull rendition of Jenson's typeface, and is thus
+categorized as (Venetian\typesubidx{Venetian}, Humanist\typesubidx{Humanist},
+Renaissance\typesubidx{Renaissance}). The FontSite version shown here
+is called Jenson Recut\facesubseeidx{Jenson Recut}.
+(See~\autocite{BRINGHURST99,LAWSON90,ROGERS49}) 
 
 \facetext}
 
@@ -6759,7 +6663,7 @@ Renaissance\typesubidx{Renaissance}, Humanist\typesubidx{Humanist}) face.
 
 {\pickfont{5gmj} Claude Garamond\index{Garamond, Claude} 
 (or Garamont) was one of several great
-type cutters working Paris in the early sixteenth century. His style was
+typecutters working Paris in the early sixteenth century. His style was
 revived in the 1920's. Modern Garamonds are categorized as 
 (Aldine/French\typesubidx{Aldine/French},  
 Renaissance\typesubidx{Renaissance} or Baroque\typesubidx{Baroque},
@@ -6872,8 +6776,8 @@ Sans-serif\typesubidx{Sans-serif}) face.
 
 {\pickfont{5fu} Futura was designed by Paul Renner\index{Renner, Paul} 
 in 1924--26. It has been categorized as (Sans-serif\typesubidx{Sans-serif},
-Geometric Modernist\typesubidx{Geometric Modernist}, Geometric
-Lineal\typesubidx{Geometric Lineal}). 
+Geometric Lineal\typesubidx{Geometric Lineal}, 
+Geometric Modernist\typesubidx{Geometric Modernist}).
 The FontSite version shown here is called Function\facesubseeidx{Function}.
 (See~\autocite{BIRDSALL04,BRINGHURST99,LAWSON90})  % (Function)
 
@@ -6889,7 +6793,7 @@ The FontSite version shown here is called Function\facesubseeidx{Function}.
 It can be classified as (Sans-serif\typesubidx{Sans-serif}, 
 Geometric Modernist\typesubidx{Geometric Modernist} with 
 Humanist\typesubidx{Humanist} hints, 
-Lineal Humanist\typesubidx{Lineal Humanist}). 
+Humanist Lineal\typesubidx{Humanist Lineal}). 
 The FontSite version shown here is called Chantilly\facesubseeidx{Chantilly}.
 (See~\autocite{BIRDSALL04,BRINGHURST99,LAWSON90})  
 
@@ -7087,8 +6991,8 @@ the indexed topic.\vskip\onelineskip}
 \begin{center}
 This manual was typeset using the LaTeX typesetting system
 created by Leslie Lamport and the memoir class. 
-The body text is set 10/\U{12}{pt} on a
-\U{33}{pc} measure with Palatino designed by Hermann Zapf, which includes 
+The body text is set 10/12pt on a
+33pc measure with Palatino designed by Hermann Zapf, which includes 
 italics and small caps. Other fonts include
 Sans, Slanted and Typewriter from Donald Knuth's 
 Computer Modern family.

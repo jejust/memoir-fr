@@ -159,7 +159,7 @@
 }
 \makeatother
 
-
+\usepackage{translation-fr}%jejust
 
 \begin{document}
 
@@ -11624,60 +11624,48 @@ reload the page style, for example with the default page style in \theclass\
 \end{lcode}
 
 
-    The macro \cmd{\createmark}\marg{sec}\marg{marks}\marg{show}\marg{prefix}\marg{postfix}
-defines the \verb?\<sec>mark? macro where \meta{sec} is a sectional division
-such as \texttt{part}, \texttt{chapter}, \texttt{section}, etc., 
-and \meta{show} (\texttt{shownumber} 
-or \texttt{nonumber}) controls whether the division number will be
-displayed within \cs{mainmatter}. The \meta{marks} argument is \texttt{left}, 
-\texttt{both} or \texttt{right}, and \meta{prefix} and \meta{postfix}
-are affixed before and after the division number. For example:
-\begin{lcode}
-\createmark{section}{left}{nonumber}{}{}
-\createmark{section}{both}{nonumber}{}{}
-\createmark{section}{right}{nonumber}{}{}
-\end{lcode}
-is equivalent to, respectively
-\begin{lcode}
-\def\sectionmark#1{\markboth{#1}{}}
-\def\sectionmark#1{\markboth{#1}{#1}}
-\def\sectionmark#1{\markight{#1}}
-\end{lcode}
+%     The macro \cmd{\createmark}\marg{sec}\marg{marks}\marg{show}\marg{prefix}\marg{postfix}
+% defines the \verb?\<sec>mark? macro where \meta{sec} is a sectional division
+% such as \texttt{part}, \texttt{chapter}, \texttt{section}, etc., 
+% and \meta{show} (\texttt{shownumber}, \texttt{nonumber} or
+% \texttt{notitle} (implies \texttt{shownumber})) controls whether the division number will be
+% displayed within \cs{mainmatter}. The \meta{marks} argument is \texttt{left}, 
+% \texttt{both} or \texttt{right}, and \meta{prefix} and \meta{postfix}
+% are affixed before and after the division number. For example:
+% \begin{lcode}
+% \createmark{section}{left}{nonumber}{}{}
+% \createmark{section}{both}{nonumber}{}{}
+% \createmark{section}{right}{nonumber}{}{}
+% \end{lcode}
+% is equivalent to, respectively
+% \begin{lcode}
+% \def\sectionmark#1{\markboth{#1}{}}
+% \def\sectionmark#1{\markboth{#1}{#1}}
+% \def\sectionmark#1{\markight{#1}}
+% \end{lcode}
 
-The difference between \cmd{\createmark} and \cmd{\createplainmark} is
-that the former create a macro that takes an argument, whereas
-\cmd{\createplainmark} does not.
-
-
-    Using these macros \Mname's current definition of 
-\verb?\makepsmarks{headings}? is much simpler (it also leads to a 
-slightly different result as the \texttt{toc} etc., marks set both
-the \cmd{\leftmark} and \cmd{\rightmark} instead of just the 
-\cmd{\leftmark}):
-\begin{lcode}
-\makepsmarks{headings}{%
-  \createmark{chapter}{left}{shownumber}{\@chapapp\ }{. \ }
-  \createmark{section}{right}{shownumber}{}{. \ }
-  \createplainmark{toc}{both}{\contentsname}
-  \createplainmark{lof}{both}{\listfigurename}
-  \createplainmark{lot}{both}{\listtablename}
-  \createplainmark{bib}{both}{\bibname}
-  \createplainmark{index}{both}{\indexname}
-  \createplainmark{glossary}{both}{\glossaryname}}
-\end{lcode}
+% The difference between \cmd{\createmark} and \cmd{\createplainmark} is
+% that the former create a macro that takes an argument, whereas
+% \cmd{\createplainmark} does not.
 
 
-\LMnote{2010/02/08}{fixed typo}
-When \Mname{} runs the marks part of page style, it does not zero out
-old marks, i.e.\ if an old \cmd{\sectionmark} exist, it still exist
-even if we do not change it.  This is both a good and a bad thing. To help
-users redefine these marks to doing nothing we provide
-\begin{syntax}
-\cmd{\clearplainmark}\marg{type}\\
-\cmd{\clearmark}\marg{type}\\  
-\end{syntax}
-The used types are the same as for \cmd{\createplainmark} and \cmd{\createmark}.
-\end{paracol}
+%     Using these macros \Mname's current definition of 
+% \verb?\makepsmarks{headings}? is much simpler (it also leads to a 
+% slightly different result as the \texttt{toc} etc., marks set both
+% the \cmd{\leftmark} and \cmd{\rightmark} instead of just the 
+% \cmd{\leftmark}):
+% \begin{lcode}
+% \makepsmarks{headings}{%
+%   \createmark{chapter}{left}{shownumber}{\@chapapp\ }{. \ }
+%   \createmark{section}{right}{shownumber}{}{. \ }
+%   \createplainmark{toc}{both}{\contentsname}
+%   \createplainmark{lof}{both}{\listfigurename}
+%   \createplainmark{lot}{both}{\listtablename}
+%   \createplainmark{bib}{both}{\bibname}
+%   \createplainmark{index}{both}{\indexname}
+%   \createplainmark{glossary}{both}{\glossaryname}}
+% \end{lcode}
+
 
 
 \PWnote{2009/07/30}{Added sections on Document title and Part title in headers}
@@ -21042,20 +21030,24 @@ as opposed to being
 put just after the bottom line of text. The standard positioning is
 used following the \cmd{\feetabovefloat} declaration, which is the default.
 
-\begin{syntax}
-\cmd{\feetatbottom} \\
-\end{syntax}
-\glossary(feetatbottom)%
-  {\cs{feetatbottom}}%
-  {Place footnotes at the very bottom of the text block whenever we
-    are in a non \cs{flushbottom} context.}
-Then\Added{2015/04/22} we use \cs{raggedbottom} or similar, \LaTeX{}
-will by default attach the footnotes just below the text. In many
-cases it may look better if the footnotes are being build from the
-bottom of the texst block up. Issuing \cs{feetatbottom} does
-this. Please note that \cs{feetatbottom} has no effect whenever
-\cs{flushbottom} is active.
-\end{paracol}
+
+
+\LMnote{2018/09/19}{Removed \cs{feetatbottom} from the manual. It does not
+  actually do anything. The footnotes are always at the bottom}
+% \begin{syntax}
+% \cmd{\feetatbottom} \\
+% \end{syntax}
+% \glossary(feetatbottom)%
+%   {\cs{feetatbottom}}%
+%   {Place footnotes at the very bottom of the text block whenever we
+%     are in a non \cs{flushbottom} context.}
+% Then\Added{2015/04/22} we use \cs{raggedbottom} or similar, \LaTeX{}
+% will by default attach the footnotes just below the text. In many
+% cases it may look better if the footnotes are being build from the
+% bottom of the texst block up. Issuing \cs{feetatbottom} does
+% this. Please note that \cs{feetatbottom} has no effect whenever
+% \cs{flushbottom} is active.
+
 
 
 \subsection{A variety of footnotes}

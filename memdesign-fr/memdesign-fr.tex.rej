@@ -1,0 +1,841 @@
+--- memdesign.tex	2016-11-25 19:27:32.000000000 +0100
++++ memdesign.tex	2018-09-14 22:55:20.000000000 +0200
+@@ -454,17 +545,17 @@
+ 
+ {\raggedleft{\scshape Peter Wilson} \\ Seattle, WA \\ July 2009\par}
+ 
+ 
+ \vskip 3cm
+ 
+ \noindent
+ This document is maintained by Lars Madsen,
+-daleif(at)imf.au.dk. Please write him if you find any typos, errors or
++daleif(at)math.au.dk. Please write him if you find any typos, errors or
+ other omissions.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+@@ -543,17 +634,17 @@
+ numbers, punctuation marks, ligatures (such as `fi' and `ffi'), and a
+ few special symbols like \&.
+ 
+    A \emph{font family}\index{font!family} is a set of fonts designed to
+ work harmoniously together, such as a pair of roman and italic fonts.
+ 
+    The size of a font\index{font} is expressed in points\index{point} 
+ (72.27 points equals 1 inch
+-equals 25.4 millimeters). The size is a rough indication of the height
++equals 25.4 millimetre). The size is a rough indication of the height
+ of the tallest character, but different fonts with the same size may have
+ very different actual heights. Traditionally font sizes were referred to
+ by names (see \tref{tab:fontsizes}) but nowadays just the number of points 
+ is used.
+ 
+ 
+ \begin{table}
+ \centering
+@@ -594,66 +685,76 @@
+ 
+ 
+ 
+     The typographers' and printers' term for the vertical space between
+ the lines of normal text is \emph{leading}\index{leading}, which is also
+ usually expressed in points and is usually larger than the font size.
+ A convention for describing the font and leading is to give the font size 
+ and leading separated by a slash; for instance $10/12$ for a
+-10pt font set with a 12pt leading, or $12/14$ for a 12pt font set with a
+-14pt leading.
++\U{10}{pt} font set with a \U{12}{pt} leading, or $12/14$ for a \U{12}{pt} font set with a
++\U{14}{pt} leading.
+ 
+     The normal length of a line of text is often called the 
+ \emph{measure}\index{measure} and is normally specified in terms of
+-picas\index{pica} where 1 pica equals 12 points (1pc = 12pt).
++picas\index{pica} where 1 pica equals 12 points (\U{1}{pc} = \U{12}{pt}).
+ 
+     Documents may be described as being typeset with a particular font
+ with a particular size and a particular leading on a particular measure;
+ this is normally given in a shorthand form. 
+-A 10pt font with 11pt leading on a 20pc measure is described as
+-\abyb{10/11}{20}, and \abyb{14/16}{22} describes a 14pt font
+-with 16pt leading set on a a 22pc measure.
++A \U{10}{pt} font with \U{11}{pt} leading on a \U{20}{pc} measure is described as
++\abyb{10/11}{20}, and \abyb{14/16}{22} describes a \U{14}{pt} font
++with \U{16}{pt} leading set on a a \U{22}{pc} measure.
+ 
+ \section{Units of measurement}
+ 
+     Typographers and printers use a mixed system of units, some of which
+ we met above. The fundamental unit is the point; \tref{tab:units} lists 
+ the most common units employed.
+ 
+ \begin{table}
+ \centering
+ \caption{Printers units} \label{tab:units}
+-\begin{tabular}{ll} \toprule
+-Name (abbreviation) & Value \\ \midrule
+-point (pt)\index{point}\index{pt}          &            \\
+-pica (pc)\index{pica}\index{pc}           & 1pc = 12pt \\
+-inch (in)\index{inch}\index{in}           & 1in = 72.27pt \\
+-centimetre (cm)\index{centimetre}\index{cm}     & 2.54cm = 1in \\
+-millimetre (mm)\index{millimetre}\index{mm}     & 10mm = 1cm \\ 
+-big point (bp)\index{big point}\index{bp}      & 72bp = 72.27pt \\
+-didot point (dd)\index{didot point}\index{dd}    & 1157dd = 1238pt \\
+-cicero (cc)\index{cicero}\index{cc}         & 1cc = 12dd \\
+-\bottomrule
++\begin{tabular}{l r @{\,=\,} l   } \toprule
++  Name (abbreviation) & \multicolumn{2}{c}{Value}
++  \\ 
++  \midrule
++  point (pt)\index{point}\index{pt}          &   \multicolumn{2}{c}{}         
++  \\
++  pica (pc)\index{pica}\index{pc}           & \U{1}{pc} & \U{12}{pt} 
++  \\
++  inch (in)\index{inch}\index{in}           & \U{1}{in} & 72.\U{27}{pt} 
++  \\
++  centimetre (cm)\index{centimetre}\index{cm}     & 2.\U{54}{cm} & \U{1}{in} 
++  \\
++  millimetre (mm)\index{millimetre}\index{mm}     & \U{10}{mm} & \U{1}{cm} 
++  \\ 
++  big point (bp)\index{big point}\index{bp}      & \U{72}{bp} & 72.\U{27}{pt} 
++  \\
++  didot point (dd)\index{didot point}\index{dd}    & \U{1157}{dd} & \U{1238}{pt} 
++  \\
++  cicero (cc)\index{cicero}\index{cc}         & \U{1}{cc} & \U{12}{dd} 
++  \\
++  \bottomrule
+ \end{tabular}
+ \end{table}
+ 
+     Points\index{point} and picas\index{pica} 
+ are the traditional printers units used in English-speaking countries. 
+ The didot point\index{didot point} and cicero\index{cicero} are the 
+ corresponding units used in continental Europe. In Japan `kyus'\index{kyus}
+ (a quarter of a millimetre) may be used as the unit of measurement.
+ Inches\index{inch} and centimetres\index{centimetre} are the units that we
+ are all, or should be, familiar with.
+ 
+     The point system was invented by Pierre Fournier le jeune in 1737 with
+-a length of 0.349mm. Later in the same century Fran\c{c}ois-Ambroise Didot
+-introduced his point system with a length of 0.3759mm. This is the value
++a length of \U{0.349}{mm}. Later in the same century Fran\c{c}ois-Ambroise Didot
++introduced his point system with a length of \U{0.3759}{mm}. This is the value
+ still used in Europe. Much later, in 1886, the American Type Founders
+-Association settled on 0.013837in as the standard size for the point, and
++Association settled on \U{0.013837}{in} as the standard size for the point, and
+ the British followed in 1898. Conveniently for those who are not entirely
+ metric in their thinking this means that 
+ six picas are approximately equal to one inch.
+ 
+     The big point\index{big point} 
+ is somewhat of an anomaly in that it is a recent
+ invention. It tends to be used
+ in page markup languages, like \pscript\footnote{\pscript{} is a 
+@@ -664,17 +765,17 @@
+ whose value depends on the particular font\index{font} being used. 
+ The \textit{em}\index{em}
+ is the nominal height of the current font; it is used as a width measure.
+ An \textit{en}\index{en} is half an em.
+ The \textit{ex}\index{ex} is
+ nominally the height of the letter `x' in the current font. You may also
+ come across the term \textit{quad}\index{quad}, often as in a phrase
+ like `starts with a quad space'. It is a length defined in terms of
+-ems; a quad is 1em.
++ems; a quad is \U{1}{em}.
+ 
+ 
+ \cleardoublepage
+ %\pagenumbering{arabic}
+ 
+ % body
+ \mainmatter
+ 
+@@ -1199,40 +1301,40 @@
+ 
+     During the sixteenth century the French types were popular throughout
+ Europe but then the pendulum swung towards types from the Low Countries.
+ The Dutch were principally traders and their printing style became 
+ increasingly known. They produced types that were more practical for
+ commercial printing. The contrast between thick and thin strokes increased
+ and the serifs straightened.
+ 
+-The English typecutter William Caslon\index{Caslon, William} (1692--1766) 
++The English type cutter William Caslon\index{Caslon, William} (1692--1766) 
+ cut a famous face of this kind that has been used ever since throughout the 
+ world; in America the first printed version of the 
+ \btitle{Declaration of Independence}
+ was set with Caslon type.
+ 
+     Modern Dutch/English types include
+ Caslon\facesubseeidx{Caslon} (of course),
+ and Janson\facesubseeidx{Janson}.
+ 
+ \subsection{Transitional}
+ \typesubidx{Transitional}
+ 
+     Transitional types are those based on the Oldstyle\typesubidx{Oldstyle} 
+-types but with features of the style called Modern\typesubidx{Modern} 
++types but with features of the style called Modern\typesubidx{Modern}. 
+ 
+     By the end of the sixteenth century the quality of printing in Italy 
+ and France had fallen off from when Claude Garamond\index{Garamond, Claude} 
+ was working. In 1692
+ King Louis \textsc{xiv} ordered a new set of types for the Royal Printing
+ House. In a lengthy report the Academy of Sciences recommended a roman type
+ constructed on mathematical principles. 
+ Lucien Grandjean\index{Grandjean, Lucien} who cut the
+-new Romain du Roi\facesubseeidx{Romain du Roi} allowed his typecutter's eye to 
++new Romain du Roi\facesubseeidx{Romain du Roi} allowed his type cutter's eye to 
+ sometimes overrule the 
+ academicians to the betterment of the result.
+ 
+     Grandjean's type was copied by many others and effectively replaced 
+ Oldstyle in Europe. Pierre Simon Fournier\index{Fournier, Pierre Simon} 
+ (1712--1768) started his typecutting 
+ business in 1737, cutting over eighty types in twenty-four years. These were
+ based on Garamond's types but influenced by Grandjean's work. The result was
+@@ -1245,17 +1347,17 @@
+ disliked in England but was siezed on with alacrity on the Continent.
+ 
+     Some modern day Transitional types are 
+ Baskerville\facesubseeidx{Baskerville}, 
+ Bell\facesubseeidx{Bell}, 
+ Fournier\facesubseeidx{Fournier},
+ Georgian\facesubseeidx{Georgian},
+ and URW Antiqua\facesubseeidx{URW Antiqua}\pagenote[and URW Antiqua]{The URW
+-Antiqua\index{URW Antiqua} font in \ltx\ is known as the \pfontfam{uaq} fontfamily.} which is shown in \fref{fig:antiqua}.. 
++Antiqua\index{URW Antiqua} font in \ltx\ is known as the \pfontfam{uaq} fontfamily.} which is shown in \fref{fig:antiqua}.
+ 
+ \begin{figure}
+ \centering
+ {\centering\fontfamily{uaq}\selectfont
+   Transitional --- URW Antiqua \\
+   \UCalphabet \\
+   \LCalphabet \\
+   \fox\par}
+@@ -1840,17 +1943,21 @@
+ formula~\ref{eq:typeset} above was specified as:
+ \begin{lcode}
+ \begin{equation}
+ P_{N_1 + m} = \frac{C}{N_{1} + m} \binom{N_{2} - N_{1}}{m}
+               \alpha^{m}\beta^{(N_{2}-N_{1}) - m}
+ \end{equation}
+ \end{lcode}
+ 
+-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
++%\end{document}
++
++
++
++%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+ 
+ \chapter{The Parts of a Book}
+ 
+     This chapter describes the various parts of a book, the 
+ ordering of the parts, and the typical page numbering scheme used
+ in books. 
+ 
+ \section{\prFrontmatter}
+@@ -2440,34 +2549,31 @@
+ a handy rule of thumb that cover paper has about twice the thickness of text
+ paper of the same weight. If being used for postcards check that your choice 
+ is acceptable to the postal services.
+ 
+ \item[Index (\abyb{22.5}{35} and \abyb{25.5}{30.5})]\index{paper!index} Is 
+ stiff and easy to write on with a pen.
+ 
+ \item[Tag  (\abyb{24}{36})]\index{paper!tag} A strong utility paper for making
+-tags
++tags.
+ 
+ \item[Bristol (\abyb{22.5}{28.5})]\index{paper!bristol} One of the board grades
+ but softer than index or tag and easier to fold.
+ 
+ \item[Newsprint(\abyb{24}{36})]\index{paper!newsprint} The paper newspapers 
+ are printed on.
+ 
+ \item[Lightweight]\index{paper!lightweight} Covers a wide range of
+ specialty papers such as onion skin or Bible paper.
+ 
+ \item[Digital]\index{paper!digital} Specialty paper for use with
+ digital printers. Each technology (e.g., inkjet, laser) and often 
+ the particular printer tends to have its own requirements.
+-
+ \end{description}
+-
+-
+ \index{paper!machine-made|)}
+ 
+ 
+     It is not often that books include information about the paper on which
+ they are printed. If they do they are likely to be fine press books or 
+ limited editions, but even then most I have seen are silent on the matter. 
+ A few trade books do include details. Among the more popular 
+ papers\footnote{Meaning that I know that they have been used in more than
+@@ -2482,25 +2588,25 @@
+ Mohawk Superfine\index{paper!Mohawk superfine};
+ Warren's Old Style\index{paper!Warren's Old Style}, which has been used for 
+ several books published by the University of California; and 
+ Strathmore\index{paper!Strathmore} of several kinds.
+ 
+    At the time of writing I have finished hand letterpress printing a 
+ small book of 35 printed pages on Strathmore 400 Drawing Paper and an 
+ accordian book on Chinese Scholars on Southworth\index{paper!Southworth} 
+-32lb cotton paper. I am in the process of letterpress printing a collection
++\U{32}{lb} cotton paper. I am in the process of letterpress printing a collection
+ of poems as individual broadsides and for these I am using a variety of
+ papers from my local retail paper suppliers, all in letterpaper size ---
+ the regular US paper size for most non-commercial printing (in most of the 
+-world this would be the A4 size). These include: Wausau Royal Silk 24lb
++world this would be the A4 size). These include: Wausau Royal Silk \U{24}{lb}
+ (90\gsm);
+-Construction 70lb text; Exact Opaque Colors 24/60lb text; Wausau Exact 
+-Vellum Bristol 67lb (145\gsm); Curious Lightspecs 70lb text; Eames Furniture
+-Weave 80lb text; Speckletone Kraft 70lb text; and various Southworth papers. 
++Construction \U{70}{lb} text; Exact Opaque Colors 24/\U{60}{lb} text; Wausau Exact 
++Vellum Bristol \U{67}{lb} (145\gsm); Curious Lightspecs \U{70}{lb} text; Eames Furniture
++Weave \U{80}{lb} text; Speckletone Kraft \U{70}{lb} text; and various Southworth papers. 
+ Thus, in different weights (thicknesses), colours and surface finishes.
+ 
+ 
+ \begin{table}
+ \centering
+ \caption{US basis size of various papers}\label{tab:basisweight}
+ \begin{tabular}{lll} \toprule
+ Paper type & Size & Ream \\
+@@ -2524,37 +2630,37 @@
+ 
+ \begin{table}
+ \centering
+ \caption{Approximate paper weight equivalents}\label{tab:weightequivs}
+ \begin{tabular}{lccc} \toprule
+ Paper grade & Grammage & Thickness &  Caliper \\ 
+             & \gsm\    & inches    & mm       \\ \midrule
+ %%%30\,lb text                  &  44 \\
+-16\,lb bond, 40\,lb text     & 59  & 0.0032 & 0.081 \\
+-45\,lb text                  & 67  & 0.0036 & 0.092 \\
+-20\,lb bond                  & 75  & 0.0038 & 0.097 \\
+-24\,lb bond, 60\,lb text     & 89  & 0.0048 & 0.120 \\
+-70\,lb text                  & 104 & 0.0058 & 0.147  \\
+-80\,lb text                  & 118 & 0.0061 & 0.155 \\
+-67\,lb bristol, 100\,lb text & 148 & 0.0073 & 0.185 \\
+-60\,lb cover, 90\,lb index   & 162 & 0.0074 & 0.188 \\
+-65\,lb cover, 80\,lb bristol & 176 & 0.0078 & 0.198 \\
+-110\,lb index                & 199 & 0.0085 & 0.216 \\
+-80\,lb cover                 & 216 & 0.0092 & 0.234 \\
++\U{16}{lb} bond, \U{40}{lb} text     & 59  & 0.0032 & 0.081 \\
++\U{45}{lb} text                  & 67  & 0.0036 & 0.092 \\
++\U{20}{lb} bond                  & 75  & 0.0038 & 0.097 \\
++\U{24}{lb} bond, \U{60}{lb} text     & 89  & 0.0048 & 0.120 \\
++\U{70}{lb} text                  & 104 & 0.0058 & 0.147  \\
++\U{80}{lb} text                  & 118 & 0.0061 & 0.155 \\
++\U{67}{lb} bristol, \U{100}{lb} text & 148 & 0.0073 & 0.185 \\
++\U{60}{lb} cover, \U{90}{lb} index   & 162 & 0.0074 & 0.188 \\
++\U{65}{lb} cover, \U{80}{lb} bristol & 176 & 0.0078 & 0.198 \\
++\U{110}{lb} index                & 199 & 0.0085 & 0.216 \\
++\U{80}{lb} cover                 & 216 & 0.0092 & 0.234 \\
+ \bottomrule
+ \end{tabular}
+ \end{table}
+ 
+     As you can see, paper comes in various weights. In most of the world this
+ is simply specified as grams per square meter (\gsm, sometimes designated as
+ \emph{gsm}). This quantity is properly called \emph{grammage}\index{grammage}
+ but English
+ speaking countries often use \emph{weight} instead. Typical office
+-paper is about 80\gsm, so an A4 sheet (1/16\sqrd{m}) weighs about 5gm.
++paper is about 80\gsm, so an A4 sheet (1/16\sqrd{m}) weighs about 5g.
+ 
+     In the US and a few other places it is much more complicated. The
+ weight is expressed in terms of \emph{basis weight}\index{basis weight} 
+ in pounds (lbs) for a known quantity of the
+ paper. The `known quantity' is a ream of paper of given dimensions. However, 
+ the `given dimensions' and the `ream' varies according to the type of paper.
+ The dimensions are usually not those of the finished product, but of the paper
+ as made before being cut into the final sizes. 
+@@ -2794,17 +2900,17 @@
+ which is slightly higher
+ than a perfect square, is good for square illustrations.\footnote{Both $e$
+ and $\pi$ are well known mathematical numbers. $e$ ($= 2.718 \ldots$)
+ is the base of natural logarithms and $\pi$ ($= 3.141 \ldots$) is the
+ ratio of the circumference of a circle to its diameter.}
+ The \ratio{e}{{$\pi$}}
+ (\ratio{0.864}{1}) proportion is useful for landscape 
+ photographs  taken with a \abyb{4}{5}
+-format camera, while those from a 35mm camera (which produces a negative
++format camera, while those from a \U{35}{mm} camera (which produces a negative
+ with a \ratio{2}{3} proportion) are better accomodated on 
+ an \ratio{0.83}{1} page.
+ \index{proportion!page|)}
+ 
+ \subsection{The golden section and Fibonacci series}
+ 
+ \index{golden section|(}
+     Typographers need a modicum of mathematical ability, but no more
+@@ -3187,41 +3293,40 @@
+ roman and sidenotes in italic at roughly 80\% of the size of the main text.
+ The layout is shown in \fref{fb:3} (left). The gutter (not shown) between 
+ the main text and the sidenote\index{sidenote} column\index{column} 
+ is very small, 
+ but the change in fonts and sizes enables the book to be read with no 
+ confusion. 
+ 
+ 
+-Another Hartley \& Marks
+-typography book --- \btitle{Finer Points in the Spacing \& Arrangement
+-of Type} by Geoffrey Dowding\index{Dowding, Geoffrey} --- 
+-is shown at the right of \fref{fb:3}.
+-This is typeset in Ehrhardt\facesubseeidx{Ehrhardt} at \abyb{10.5/14}{23} on a page 
+-size of \abybm{231}{143}{mm} on Glatfelter\index{paper!Glatfelter} Laid 
+-Offset paper. 
+-The half-title\index{half-title} is uppercased,
+-centered, and in the upper quarter of the page. On the title 
+-page\index{title page} the title is typeset with a large bold italic font 
+-while the author's is set using normal uppercase and the publisher
+-is set in small caps. Dowding uses `part' instead of `chapter'. 
+-Chapter\index{chapter!design} heads are centered with the number written 
+-out, like `PART ONE', and below this is the title set in large italics.
+-Section\index{section!design} heads are in uppercase and subsection heads in 
+-small caps, both centered. Folios\index{folio} are in the center of the 
++Another Hartley \& Marks typography book --- \btitle{Finer Points in
++  the Spacing \& Arrangement of Type} by Geoffrey
++Dowding\index{Dowding, Geoffrey} --- is shown at the right of
++\fref{fb:3}.  This is typeset in Ehrhardt\facesubseeidx{Ehrhardt} at
++\abyb{10.5/14}{23} on a page size of \abybm{231}{143}{mm} on
++Glatfelter\index{paper!Glatfelter} Laid Offset paper.  The
++half-title\index{half-title} is uppercased, centered, and in the upper
++quarter of the page. On the title page\index{title page} the title is
++typeset with a large bold italic font while the author's name is set
++using normal uppercase and the publisher is set in small caps. Dowding
++uses `part' instead of `chapter'.  Chapter\index{chapter!design} heads
++are centered with the number written out, like `PART ONE', and below
++this is the title set in large italics.  Section\index{section!design}
++heads are in uppercase and subsection heads in small caps, both
++centered. Folios\index{folio} are in the center of the
+ footer\index{footer!design}; verso running heads\index{header!design}
+ consist of the book title in small caps and centered, and recto heads
+-contain the chapter title in italics and centered. On the 
++contain the chapter title in italics and centered. On the
+ contents\index{ToC!design} page the part (chapter) numbers and titles
+-are centered, using small caps and large italics respectively (and no page
+-numbers). Section titles are in small caps, left justified with the
+-page numbers right justified. Titles from the \pixfrontmatter\ 
+-and \pixbackmatter, for example the Foreword and 
+-Bibliography, are typeset in italics.
++are centered, using small caps and large italics respectively (and no
++page numbers). Section titles are in small caps, left justified with
++the page numbers right justified. Titles from the \pixfrontmatter\ and
++\pixbackmatter, for example the Foreword and Bibliography, are typeset
++in italics.
+ 
+ 
+ 
+ \begin{figure}
+ \centering
+ \begin{minipage}[b]{\pwlayi}
+ \drawaspread{\pwlayii}{1.6}{1.634}{.1333}{1.4}{1.8}{0} % Rogers
+ \end{minipage}
+@@ -3364,24 +3469,29 @@
+ \begin{minipage}[b]{\pwlayi}
+ \drawaspread{\pwlayii}{1.538}{2.647}{.1}{1}{3.833}{0} % Thames & Hudson
+ \end{minipage}
+ \caption[Two spreads: USA, 1994 and England, 1988]%
+         {Two spreads: (Left) USA, 1994.
+          (Right) England 1988.} \label{fb:7}
+ \end{figure}
+ 
++\enlargethispage{\baselineskip}
++
++
+     A modern technical book layout is given in \fref{fb:7}. The book
+ is \btitle{Information Modeling the EXPRESS Way} by Douglas Schenck and Peter
+ Wilson, published by Oxford University Press (New York) in 1994. This is
+ set in Computer Modern Roman\facesubseeidx{Computer Modern Roman} at \abyb{10/12}{27} 
+ on a page \abybm{233}{150}{mm}. 
+ It has the typical \ltx\ appearance with perhaps the exception of the
+ epigraphs\index{epigraph} after each chapter\index{chapter!design} heading.
+ 
++
++
+ Ruari McLean's\index{McLean, Ruari} \btitle{The Thames and Hudson Manual of
+ Typography} (1988) is at the right in \fref{fb:7}. This is typeset in \abyb{10/11}{20} 
+ Monophoto Garamond\facesubseeidx{Monophoto Garamond}\index{Garamond!Monophoto} 
+ on a \abybm{240}{156}{mm} page. The wide
+ \foredge{} is used for small illustrations\index{illustration}. 
+ Notes are also set in this
+ margin\index{margin} rather than at the foot of the page.
+ The half-title\index{half-title}\index{page!half-title} 
+@@ -3578,39 +3688,39 @@
+ \centering
+ \begin{minipage}[b]{\pwlayi}
+ \drawaspread{\pwlayii}{1.404}{1.641}{.143}{1}{1.6}{0} % Emery Walker
+ \end{minipage}
+ \hfill
+ \begin{minipage}[b]{\pwlayi}
+ \drawaspread{\pwlayii}{1.294}{1.618}{.176}{1.037}{1.685}{0} % Latex
+ \end{minipage}
+-\caption[Two spreads: England, 1973 and LaTeX $10pt$ book style]%
++\caption[Two spreads: England, 1973 and LaTeX $\U{10}{pt}$ book style]%
+         {Two spreads: (Left) England, 1973.
+          (Right) LaTeX $10$pt book style.} \label{fb:13}
+ \end{figure}
+ 
+-    Another of the Cambridge University 
+-Printer's\index{Cambridge University Press!Christmas Book} Christmas books 
+-is at the left
+-of \fref{fb:13}. In this case it is \btitle{Emery Walker --- Some Light
+-on his Theories of Printing and on his Relations with William Morris
+-and Cobden-Sanderson} by Colin Franklin and published in 1973. The
++Another of the Cambridge University Printer's\index{Cambridge
++  University Press!Christmas Book} Christmas books is at the left of
++\fref{fb:13}. In this case it is \btitle{Emery Walker --- Some Light
++  on his Theories of Printing and on his Relations with William Morris
++  and Cobden-Sanderson} by Colin Franklin and published in 1973. The
+ page size is \abybm{295}{210}{mm} with a measure of $31$pc set with
+-$15$pt leading.  Unusually for this series it has chapter 
+-heads\index{chapter!design} which are simply the number centered above 
+-the title in a large font. It also has illustrations\index{illustration}
+-which are listed on an Illustrations page where the caption\index{caption}
+-titles are set flushleft and page numbers flushright. The page is divided
+-into two lists. The first has a heading (centered) in italics of
+-\textit{`In text'} with \textit{`page'} flushright above the page numbers.
+-The second has the centered heading \textit{`In pocket at end'} and there
+-are no page numbers in this list as the corresponding illustrations
+-are not bound into the book, instead thay are loosely inserted in a 
+-pocket at the end of the book.
++$15$pt leading.  Unusually for this series it has chapter
++heads\index{chapter!design} which are simply the number centered above
++the title in a large font. It also has
++illustrations\index{illustration} which are listed on an illustrations
++page where the caption\index{caption} titles are set flushleft and
++page numbers flushright. The page is divided into two lists. The first
++has a heading (centered) in italics of \textit{`In text'} with
++\textit{`page'} flushright above the page numbers.  The second has the
++centered heading \textit{`In pocket at end'} and there are no page
++numbers in this list as the corresponding illustrations are not bound
++into the book, instead thay are loosely inserted in a pocket at the
++end of the book.
+ 
+ 
+ On the right is the default layout provided by the
+ LaTeX $10$pt book class on US letterpaper\index{paper!size!letterpaper}.
+ 
+ \begin{figure}
+ \centering
+ \begin{minipage}[b]{\pwlayi}
+@@ -3850,45 +3960,48 @@
+ method for determining the number
+ of characters in a line for any font\index{font!measuring}: 
+ measure the length of the lowercase alphabet and use a 
+ copyfitting\index{copyfitting} 
+ table that shows for a given alphabet 
+ length and line length, the average number of characters in that line.
+  Table~\ref{tab:copyfitting} is an
+ abridged version of Bringhurt's copyfitting table.
+-For example, it suggests that a font with a length of 130pt should be
+-set on a measure of about 26pc for a single column\index{column!single} 
+-or in an 18pc wide column if there are multiple\index{column!multiple} 
++For example, it suggests that a font with a length of \U{130}{pt} should be
++set on a measure of about \U{26}{pc} for a single column\index{column!single} 
++or in an \U{18}{pc} wide column if there are multiple\index{column!multiple} 
+ columns.
+  
+ 
+ \begin{table}
+ %%%\DeleteShortVerb{\|}
+ \centering
+-\caption{Average characters per line} \label{tab:copyfitting}
++\caption{Average characters per line. The bold numbers mark the
++  combination that gives 60--70 chars pr line, whereas the italic
++  marks the corresponding values around 45 chars. Abridged version of
++  corresponding table in \cite{BRINGHURST99}.} \label{tab:copyfitting}
+ \begin{tabular}{r|rrrrrrrr} \hline
+ Pts. & \multicolumn{8}{c}{Line length in picas} \\
+      & 10 & 14 & 18 & 22 & 26  & 30  & 35 & 40 \\ \hline
+ 80   & \textit{40} & \textbf{56} & \textbf{72} & 88 & 104 &     &    &    \\
+ 85   & \textit{38} & \textit{53} & \textbf{68} & 83 & 98 & 113 &    &    \\
+-90   & \textit{36} & \textit{50} & \textbf{64} & 79 & 86 & 107 &    &    \\
++90   & \textit{36} & \textit{50} & \textbf{64} & 79 & 93 & 107 &    &    \\
+ 95   & 34 & \textit{48} & \textbf{62} & 75 & 89 & 103 &    &    \\
+ 100  & 33 & \textit{46} & \textbf{59} & \textbf{73} & 86 & 99 & 116 &   \\
+ 105  & 32 & \textit{44} & 57 & \textbf{70} & 82 & 95 & 111 &   \\
+ 110  & 30 & \textit{43} & 55 & \textbf{67} & 79 & 92 & 107 &   \\
+ 115  & 29 & \textit{41} & 53 & \textbf{64} & 76 & 88 & 103 &   \\
+ 120  & 28 & \textit{39} & \textit{50} & \textbf{62} & 73 & 84 & 98 & 112 \\
+ 125  & 27 & 38 & \textit{48} & \textbf{59} & \textbf{70} & 81 & 94 & 108 \\
+ 130  & 26 & 36 & \textit{47} & 57 & \textbf{67} & 78 & 91 & 104 \\
+ 135  & 25 & 35 & \textit{45} & 55 & \textbf{65} & 75 & 88 & 100 \\
+ 140  & 24 & 34 & \textit{44} & 53 & \textbf{63} & 73 & 85 & 97 \\
+ 145  & 23 & 33 & \textit{42} & 51 & \textbf{61} & \textbf{70} & 82 & 94 \\
+ 150  & 23 & 32 & \textit{41} & \textit{51} & \textbf{60} & \textbf{69} & 81 & 92 \\
+-155  & 22 & 31 & \textit{39} & \textit{49} & 58 & \textbf{67} & 79 & 90 \\
++155  & 22 & 31 & \textit{40} & \textit{49} & 58 & \textbf{67} & 79 & 90 \\
+ 160  & 22 & 30 & 39 & \textit{48} & 56 & \textbf{65} & 76 & 87 \\
+ 165  & 21 & 30 & 38 & \textit{46} & 55 & \textbf{63} & 74 & 84 \\
+ 170  & 21 & 29 & 37 & \textit{45} & 53 & \textbf{62} & 72 & 82 \\
+ 175  & 20 & 28 & 36 & \textit{44} & 52 & \textbf{60} & \textbf{70} & 80 \\
+ 180  & 20 & 27 & 35 & \textit{43} & 51 & 59 & \textbf{68} & 78 \\
+ 185  & 19 & 27 & 34 & \textit{42} & \textit{49} & 57 & \textbf{67} & 76 \\
+ 190  & 19 & 26 & 33 & 41 & \textit{48} & 56 & \textbf{65} & 74 \\
+ 195  & 18 & 25 & 32 & 40 & \textit{47} & 54 & \textbf{63} & 72 \\
+@@ -4013,45 +4126,45 @@
+     
+ 
+ \subsubsection{Typefaces}
+ \index{typeface}
+ 
+     The first European letter forms that have survived are Greek inscriptions
+ carved into stone. These were freehand carvings with thin strokes. In time,
+ the lettering became thicker and serifs started to appear. The Romans
+-picked up on this later style of letter form. In carving inscriptions, they
++picked up on this later style of letterform. In carving inscriptions, they
+ first wrote the inscription on the stone using a broad, flat brush. This
+ naturally led to serifs and differing thicknesses of the letter strokes,
+ depending on the angle of the stroke with respect to the movement and
+ orientation of the brush. Similarly the written letterforms included
+ serifs.
+ 
+     Between the Roman times and Gutenberg there were many changes and
+ experiments in European letterforms. The scribes used different scripts
+ for titles, subheads, continuous text, illuminated initial letters, and so
+ on. In time, two families of letterforms evolved, 
+ called \emph{majuscules}\index{majuscule} and \emph{minuscules}\index{minuscule}. 
+ The former were larger and more formal, while the latter
+-were smaller and less formal. We now call these two divisions upper case and
+-lower case. The upper case derives from Roman times, while the lower case
++were smaller and less formal. We now call these two divisions uppercase and
++lowercase. The uppercase derives from Roman times, while the lowercase
+ acquired its fundamental form during the reign of the Holy Roman Emperor
+ Charlemagne\index{Charlemagne} a thousand years later. In order to 
+ promote communication
+ throughout his wide flung empire the Anglo Saxon Benedictine monk 
+ Alcuin\index{Alcuin}, at the behest of Charlemagne, established a common
+ script to be used; this is now called Carolingian 
+ minuscule\index{minuscule!Carolingian}.
+ A further division also appeared, between black letter (what is
+ commonly referred to as Gothic or Old English) type and the roman type.
+ 
+     These types were all upright. Italic\index{italic} letterforms were 
+ cut in Italy
+ in the early sixteenth century, as a more cursive style. Initially these were
+-lower case only, used in conjunction with upper case roman. By the end of
++lowercase only, used in conjunction with uppercase roman. By the end of
+ the century, sloped roman capitals were also in use with italic.
+ 
+ \index{serif versus sans-serif type|(}
+ \index{font!seriffed|(}
+ \index{font!sans|(}
+     The late nineteenth century saw the appearance again of 
+ Sans-serif\index{Sans-serif}
+ typefaces.
+@@ -4368,35 +4481,35 @@
+ 
+ \versal{S}\textsc{ome versals,} especially dropped versals, are very difficult
+ to typeset correctly. Many attempts of this kind are abject failures, so
+ be warned. For example, compare the dropped versals at the start of these
+ first two paragraphs. They are both of the same letter and font, yet the first
+ one is horrible compared to the one starting this paragraph.
+ 
+ 
+-\noindent {\huge A}\textsc{raised versal} is often easier to use to 
++\noindent {\huge A} \textsc{raised versal} is often easier to use to 
+ start a paragraph than a dropped versal. 
+ However, a raised versal should only be used
+ where there is naturally some vertical space above it. As you can see, extra
+ spacing has had to be inserted before this paragraph to accomodate the versal.
+ There are still problems with typesetting a raised versal but as these tend
+ to be subtler than with a dropped versal, readers are less likely
+ to notice problems.
+ 
+ Typically, small caps are used for a little while following a versal to 
+ provide a transition between the large versal font and the normal body font.
+ These should not continue throughout the first line as this tends to divorce
+ it from the remainder of the paragraph. \index{versal|)}
+ 
+ \noindent \textsc{Another way of starting} a paragraph is to use small
+ caps for the first few words. The font difference highlights the start
+ of the paragraph but in a much quieter manner than a versal does. Using
+-normal sized upper-case instead of the small caps is too much of a 
+-contrast with the lower-case.
++normal sized uppercase instead of the small caps is too much of a 
++contrast with the lowercase.
+ 
+ \index{paragraph|)}
+ 
+ \subsection{Footnotes}
+ 
+ \index{footnote|(}
+     Footnotes are considered to be part of the typeblock\index{typeblock}. 
+ They are typeset in the space allocated for the typeblock\index{typeblock}, 
+@@ -4971,16 +5084,19 @@
+ for a 12/14 point body size. In any event, extra space, at least two or 
+ three points, should be inserted and below the extract.
+ 
+ \subsection{Footnotes and endnotes}
+ 
+ \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+ \let\oldfootnoterule\footnoterule
+ \renewcommand*{\footnoterule}{}
++% the rule is reactivated in chapter 5
++
++
+     This section is a synthesis of the views of Ruari McLean~\autocite{MCLEAN80},
+ Jan Tschichold~\autocite{TSCHICHOLD91} and 
+ Emerson Wulling~\autocite{WULLING-FOOTNOTES}.
+ 
+     Footnotes\index{footnote} are ancilliary to the main material and 
+ expand in some way
+ upon the current theme. For instance, remarks that are too large or off the
+ main thread, or some side comment by the author, may be sunk to a footnote 
+@@ -5416,33 +5532,33 @@
+ \end{adjustwidth}
+ \end{figure}
+ 
+ 
+     I was recently letterpress printing some poems and the fonts  
+ available in the print shop were Bodoni\facesubseeidx{Bodoni}, 
+ Caslon\facesubseeidx{Caslon}, Della Robbia\facesubseeidx{Della Robbia} and 
+ Garamond\facesubseeidx{Garamond}, 
+-all in 14pt. The poems
++all in \U{14}{pt}. The poems
+ were originally written within the period 701--2008 and my problem was to
+ try and choose what I thought would be the most appropriate font for each
+ poem. Caslon\facesubseeidx{Caslon} was created in 1720 so I decided that 
+ I would only use it for poems after that date. Although 
+ Garamond\facesubseeidx{Garamond} was created around 1550--1600 I
+ decided to use it for the pre-Caslon poems. 
+ To me the Bodoni\facesubseeidx{Bodoni} and 
+ Della Robbia\facesubseeidx{Della Robbia}  
+ had a very different feel to them, one being light and the other on the grim
+ side; I used these for the occasional poem instead of the 
+ Caslon\facesubseeidx{Caslon} or Garamond\facesubseeidx{Garamond}
+ to try and convey some of the emotional aspect of the piece. 
+ Figures~\ref{fig:poems1} through~\ref{fig:poems4} show verses from four
+ of the collection of poems set with the four fonts I had available. 
+ Decide what you would have chosen as being most appropriate. As a 
+-sidenote they are set here using 12pt instead of the 10pt body text size.
++sidenote they are set here using \U{12}{pt} instead of the \U{10}{pt} body text size.
+ Poetry\index{poetry} can, with advantage, be set with larger type and 
+ leading than prose,
+ and in italic instead of roman.
+ 
+ 
+ 
+ 
+ \chapter{Picky points}
+@@ -5590,31 +5706,32 @@
+ 
+     \emph{Letterspacing} is the insertion of spaces between the letters
+ of a word.
+     Frederic\index{Goudy, Frederic} Goudy (1865--1947), a very respected 
+ American typographer and type designer, is said to have been fond of saying, 
+ `A man who would letterspace lower case letters would steal sheep!' Writing
+ in 1999 Robert\index{Bringhurst, Robert} Bringhurst~\autocite[p. 31]{BRINGHURST99}
+ felt that to bring this dictum to modern times it was simply necessary to 
+-add that `A woman who would letterspace lower case would also steal sheep.'
++add that `A woman who would letterspace lowercase would also steal sheep.'
+ 
+-    Letterspacing is usually restricted to titles composed of upper case
+-letters with the intent of making the spaces between the letters visually
+-equal. Figure~\ref{fig:spacecaps} shows the word `HISTORY' with various 
+-amounts of interletter spacings. With no extra spacing it looks cramped 
+-compared with the spaced versions. Versions with uniform spacing of thin
+-(0.167em) and hair (0.1em) spaces are much improved. However, the spacing
+-of the letters `H', `I' and `S' leave something to be desired, and is
+-especially noticeable in the version with thin spaces. Lastly a version
+-with varied interletter spacing is shown which is optically balanced; the 
+-spaces in this case are 0.09em, 0.12em,0.1em, 0.1em, 0.07em and 0.1em. The 
+-difference between this and the uniformly hair-spaced version is subtle. 
+-Different letter combinations and different fonts will require different 
+-amounts of spaces.
++Letterspacing is usually restricted to titles composed of uppercase
++letters with the intent of making the spaces between the letters
++visually equal. Figure~\ref{fig:spacecaps} shows the word `HISTORY'
++with various amounts of interletter spacings. With no extra spacing it
++looks cramped compared with the spaced versions. Versions with uniform
++spacing of thin (\U{0.167}{em}) and hair (\U{0.1}{em}) spaces are much
++improved. However, the spacing of the letters `H', `I' and `S' leave
++something to be desired, and is especially noticeable in the version
++with thin spaces. Lastly a version with varied interletter spacing is
++shown which is optically balanced; the spaces in this case are \U{0.09}{em},
++\U{0.12}{em}, \U{0.1}{em}, \U{0.1}{em}, \U{0.07}{em} and \U{0.1}{em}. The difference between this
++and the uniformly hair-spaced version is subtle.  Different letter
++combinations and different fonts will require different amounts of
++spaces.
+ 
+     Figure~\ref{fig:spacesmallcaps} shows similar results for the same word
+ set in small caps instead of regular caps. In general you might find that 
+ if you do letterspace then uniform spacing is adequate for small caps.
+ 
+ 
+ \begin{figure}
+ \centering
+@@ -5636,17 +5753,17 @@
+ h\kern0.1em i\kern0.1em s\kern0.1em t\kern0.1em o\kern0.1em r\kern0.1em y & hair space between each letter \\
+ h\kern0.09em i\kern0.12em s\kern0.1em t\kern0.1em o\kern0.07em r\kern0.1em y & visually spaced \\
+ \end{tabular}
+ 
+ \caption{Letterspacing: small caps}\label{fig:spacesmallcaps}
+ \end{figure}
+ 
+     There can be occasions, as with emphasis with fraktur fonts, when 
+-letterspacing lower case will not get you hung for sheep stealing. These,
++letterspacing lowercase will not get you hung for sheep stealing. These,
+ typically, are when dealing with some sans fonts such as a bold condensed
+ Univers. But be very careful. Italics should never be letterspaced as they
+ come from the handwriting tradition of `joined up letters', as my 
+ kindergarten teacher used to call them.
+ 
+ \index{letterspacing|)}
+ 
+ \section{Abbreviations and acronyms}
+@@ -5884,17 +6001,19 @@
+ the normal
+ font. In some cases the font used for the punctuation may not be
+ particularly noticeable but sometimes it may be. 
+ 
+     The \pixfrontmatter\ contains definitions of the word \textit{memoir,}
+ which is typeset using a bold font. The definitions thus commence like \\
+ \hspace*{2em} \textbf{memoir,} \textit{n.} \ldots \\
+ instead of \\
+-\hspace*{2em} \textbf{memoir}, \textit{n}. \ldots 
++\hspace*{2em} \textbf{memoir}, \textit{n}. \ldots\footnote{Historical
++  note: these notes started out as a part of the manual for the memoir
++class, see \cite{MEMMAN}.} 
+ 
+ \index{font!change|)}
+ 
+ \section{Narrow measures}
+ 
+ \index{measure!narrow|(}
+ \index{column!narrow|(}
+ 
+@@ -6173,21 +6292,21 @@
+ by others, in particular the `\P'.}
+ %
+ licensed from the SoftMaker/ATF library, supported for \ltx\ through 
+ Christopher\index{League, Christopher} League's estimable 
+ work~\autocite{TEXFONTSITE}. This enables me to show a few of the typefaces
+ displayed in some of the books mentioned in the bibliography, in particular
+ those by Birdsall~\autocite{BIRDSALL04}, Bringhurst~\autocite{BRINGHURST99} and
+ and Lawson~\autocite{LAWSON90}. To make it easier
+-to see and compare them at first there are a few characters displayed at 18pt
+-and then text set at 12pt.
++to see and compare them at first there are a few characters displayed at \U{18}{pt}
++and then text set at \U{12}{pt}.
+  I have tried to indicate the typeface category
+ of each face, principally using those from \tref{tab:typecat}.
+-\pagenote[text set at 12pt]{The Latin texts, when
++\pagenote[text set at \U{12}{pt}]{The Latin texts, when
+ suitably laid out, and their translations are as follows.
+ \vspace{\onelineskip}
+ 
+ \begin{minipage}[t]{0.45\textwidth}
+ Puella Rigensis ridebat \\
+ Quam tigris in tergo vehebat; \\
+ \hspace*{2em}Externa profecta,\\ 
+ \hspace*{2em}Interna revecta,\\ 
