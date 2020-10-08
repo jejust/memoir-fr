@@ -1,6 +1,11 @@
 --- memman.tex	2016-11-25 19:29:30.000000000 +0100
 +++ /usr/local/texlive/2020/texmf-dist/doc/latex/memoir/memman.tex	2020-10-06 23:35:11.000000000 +0200
-@@ -9,9 +9,12 @@
+@@ -4,19 +4,22 @@
+ %             Author: Peter Wilson
+ %             Copyright 2001, 2002, 2003, 2004, 2008, 2009 Peter R. wilson
+ %
+ %   This work has the LPPL maintenance status "maintained".
+ %   Maintainer: Lars Madsen (daleif at math dot au dot dk)
  %
  %\listfiles
  \documentclass[10pt,letterpaper,extrafontsizes]{memoir}
@@ -14,7 +19,17 @@
  
  % For (non-printing) notes  \PWnote{date}{text}
  \newcommand{\PWnote}[2]{} 
-@@ -83,9 +86,9 @@
+ \PWnote{2009/04/29}{Added fonttable to the used packages}
+ \PWnote{2009/08/19}{Made Part I a separate doc (memdesign.tex).}
+ 
+ % same
+ \newcommand{\LMnote}[2]{} 
+@@ -78,19 +81,19 @@
+ % enables us to gather svn information on a single file basis
+ %\usepackage[filehooks]{svn-multi-private}
+ % use the current version
+ \usepackage[filehooks]{svn-multi}
+ 
  
  % \svnidlong
  % {}
@@ -27,7 +42,17 @@
  
  
  
-@@ -116,21 +119,52 @@
+ \makeatletter
+ \newcommand\addRevisionData{%
+   \begin{picture}(0,0)%
+     \put(0,-20){%
+       \tiny%
+@@ -111,31 +114,62 @@
+ 
+ \else
+ % disable svn info collecting
+ \newcommand\svnidlong[4]{}
+ \fi
  
  
  
@@ -83,7 +108,17 @@
  %#% extstart input intro.tex
  
  
-@@ -212,8 +246,15 @@
+ 
+ 
+ 
+ %\tightlists
+ \firmlists
+@@ -207,18 +241,25 @@
+ 
+ \PWnote{2009/06/26}{Updated the copyright page for 9th impression}
+ % copyright page
+ \begingroup
+ \footnotesize
  \setlength{\parindent}{0pt}
  \setlength{\parskip}{\baselineskip}
  %%\ttfamily
@@ -101,7 +136,17 @@
  All rights reserved
  
  The Herries Press, Normandy Park, WA.
-@@ -307,10 +348,32 @@
+ 
+ Printed in the World 
+ 
+ The paper used in this publication may meet the minimum requirements
+ of the American National Standard for Information 
+@@ -302,20 +343,42 @@
+ 
+ % ToC, etc
+ %%%\pagenumbering{roman}
+ \pagestyle{headings}
+ %%%%\pagestyle{Ruled}
  
  \setupshorttoc
  \tableofcontents
@@ -135,7 +180,17 @@
  \setlength{\unitlength}{1pt}
  \clearpage
  \listoffigures
-@@ -1251,9 +1314,9 @@
+ \clearpage
+ \listoftables
+ \clearpage
+ \listofegresults
+ 
+@@ -1246,19 +1309,19 @@
+ \end{comment}
+ 
+ %#% extend
+ 
+ %#% extstart include intro-8.tex
  
  \svnidlong
  {$Ignore: $}
@@ -148,7 +203,17 @@
  
  \chapter{Introduction to the eighth edition}
  
-@@ -1284,7 +1347,7 @@
+ The \Mname\ class and this manual have seen many changes since they
+ first saw the light of day. The major functions, and extensions to
+ them, were listed in the various introductions to the previous
+ editions of this manual and it would now be tedious to read them.
+ 
+@@ -1279,17 +1342,17 @@
+ methods similar to the \Lpack{fancyhdr} package for designing your own
+ headers. The built-in package functions are mainly related to document
+ design and layout; \Mname\ does not touch upon areas like those that are 
+ covered by the \Lpack{babel} or \Lpack{hyperref} packages or any related to 
+ typesetting mathematics. On the other hand it is easy to configure a work
  produced with \Mname\ 
  to meet a university's thesis layout requirements.
  
@@ -157,7 +222,17 @@
  over 50 \ltx ers have provided code or suggestions for improvements.
  The class is included in the \TeXUG\ \tx\ distributions and the latest 
  version of the class and its supporting documentation is always
-@@ -1303,16 +1366,16 @@
+ available from %
+ \ctan\ at \url{latex/contrib/memoir}.
+ 
+     This is not a guide to the general use of \ltx\ but rather concentrates
+ on where the \index{class}\Lclass{memoir} class differs from the standard \ltx\
+@@ -1298,26 +1361,26 @@
+ I assume that you have already used \ltx\ and therefore know how to prepare
+ a \ltx\ manuscript, how to run \ltx\ and print the resulting document,
+ and that you can also use auxiliary programs like \Lmakeindex\ 
+ and \Lbibtex.
+ 
  
  \section{General considerations}
  
@@ -184,7 +259,17 @@
  is available for you to read.
  % There is also the \Lpack{memexsupp} package by Lars Madsen~\cite{MEMEXSUPP} 
  % which provides some extra facilities for the class.
-@@ -1414,10 +1477,20 @@
+ 
+     The previous editions of the Manual consisted of two parts. The first
+ discussing some aspects of book design and typography in
+ general, something that I hadn't come across in the usual \ltx\ books
+ and manuals. That was intended to provide a little background for when
+@@ -1409,20 +1472,30 @@
+ to `non-floating' illustrations or as legends (i.e., unnumbered captions) to
+ the regular floats. The captioning system
+ also supports subfigures and subtables along the lines of the \Lpack{subfig}
+ package, plus letting you define your own new kinds of floats together
+ with the corresponding `\listofx'. 
  
  \section{Tables}
  
@@ -209,7 +294,17 @@
  
      Multipage tabulations are often set with the \Lpack{longtable} or
  \Lpack{xtab} packages, which can of course be used with the class. For
-@@ -1568,65 +1641,73 @@
+ simple tabulations that may continue from one page to the next, \Mname\
+ offers a `continuous tabular' environment. This doesn't have all the 
+ flexibility provided by the packages but can often serve instead
+ of using them.
+ 
+@@ -1563,75 +1636,83 @@
+ and write information in external files, design your own style of 
+ \cs{maketitle}, convert numbers to words, reserve space at the bottom of a 
+ page, and so on and so forth.
+ 
+ 
  %% \appendix
  \section{Packages}
  
@@ -335,7 +430,17 @@
  The class automatically ignores any 
  \verb?\usepackage? or \verb?\RequirePackage? related to these. However, if
  you want to specifically use one of these packages rather than the integrated
-@@ -1651,14 +1732,16 @@
+ version then you can do so. For arguments sake, assuming you really want 
+ to use the \Lpack{titling} package you can do this:
+ \begin{lcode}
+ \documentclass[...]{memoir}
+ \DisemulatePackage{titling}
+@@ -1646,31 +1727,49 @@
+ of capability should be part of the class and not depend on assumptions.
+ In the particular case of the \Lpack{setspace} package, even with the
+ standard classes, there can be some unexpected spacing around displayed
+ material; this has not occured with \Mname's implementation. 
+ 
  The class also provides functions similar to those provided by the following 
  packages, although the commands are different: 
  %\begin{itemize}%\item 
@@ -360,7 +465,7 @@
  %\end{itemize}
  You can use these packages 
  if you wish, or just use the capabilities of the \Mname\ class.
-@@ -1666,6 +1749,22 @@
+ 
      The class has built in support for the \Lpack{bidi} package for 
  bidirectional typesetting~\cite{BIDI}.
  
@@ -383,7 +488,17 @@
  
  \section{Resources} \label{sec:resources}
  
-@@ -1732,11 +1831,19 @@
+ 
+     Scattered throughout
+ %, but mainly in Part~\ref{part:art},
+ are comments about aspects of book design and typography, in some cases
+ accompanied by examples of better and poorer practice. If you want more
+@@ -1727,21 +1826,29 @@
+ Alan Hoenig's book~\cite{HOENIG98} is the best guide to this that I know of.
+ \pixctan\ hosts Philipp Lehman's font installation guide~\cite{FONTINST}; 
+ this is well worth looking at just as an example of fine typesetting.
+ 
+     The source code for the \Lclass{memoir} class is, of course,
  freely available from \pixctan\ if you wish to see exactly what it does
  and how it does it.
  
@@ -408,7 +523,17 @@
  
  \section{Type conventions}
  
-@@ -1887,7 +1994,8 @@
+     The following conventions are used:
+ \begin{itemize}
+ \item \Pclass{The names of \ltx\ classes\index{class} and 
+               packages\index{package} are typeset in this font.}
+ \item \Popt{Class options\index{option} are typeset in this font.}
+@@ -1882,17 +1989,18 @@
+ 
+ If I have inadvertently left anyone off the list I apologise, 
+ and please let me know so that I can correct the 
+ omisssion.% \footnote{Peter is currently occasionably reachable via email
+ % at \texttt{herries dot press (at) earthlink dot net}, otherwise write
  % the maintainer at \texttt{daleif at math dot au dot dk}}
  \footnote{Please write the maintainer at \texttt{daleif at math dot au
      dot dk}} Along those lines, if you have any questions you may
@@ -418,7 +543,17 @@
  \url{http://tex.stackexchange.com} as you are likely to get a
  satisfactory and timely response.
  
-@@ -1929,11 +2037,12 @@
+     Of course, none of this would have been possible without Donald Knuth's
+ \tx\ system and the subsequent development of \ltx\ by Leslie Lamport.
+ 
+ \PWnote{2009/07/26}{Added `Remarks to the user' chapter}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@@ -1924,38 +2032,38 @@
+ to do so, then copy the code you wish to change into the document's preamble
+ or a package of your own or a class of your own (with a different name)
+ and make the changes there. Do not expect any help if you change the
+ \Lclass{memoir} class code directly.
+ 
  \fancybreak{}
  
  As the years go by support for \Lclass{memoir} will devolve from one
@@ -435,7 +570,11 @@
  than correspond directly with the maintainer, who might well be away
  for some considerable time and perhaps not notice your email after
  having returned to base.
-@@ -1945,12 +2054,11 @@
+ 
+ In either case please include the word \texttt{\theclass} in the
+ subject, and if possible, please \emph{tag} the question with the
+ \texttt{\theclass} tag.  That will help the memoir maintainer keep
+ track of memoir related matters.
  
  \fancybreak{}
  
@@ -453,7 +592,17 @@
  
  
  
-@@ -2167,9 +2275,9 @@
+ %#% extend
+ 
+ 
+ %#% extstart include terminology.tex
+ 
+@@ -2162,19 +2270,19 @@
+ %%%%%\part{Practice} \label{part:practice}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ %#% extstart include start-off.tex
+ 
  
  \svnidlong
  {$Ignore: $}
@@ -466,7 +615,17 @@
  
  \chapter{Starting off} \label{chap:starting}
  
-@@ -2195,6 +2303,8 @@
+ 
+     As usual, the \Lclass{memoir} class is called by 
+ \cmd{\documentclass}\oarg{options}\texttt{\{memoir\}}. The \meta{options}\index{class options}
+ include being able to select a paper\indextwo{paper}{size} size from among a range of sizes, 
+ selecting a type size, selecting the kind of manuscript, and some related
+@@ -2190,24 +2298,28 @@
+ included in the tables are commands that will set the stock size or paper size to 
+ the same dimensions.
+ 
+ \begin{table}
+ \centering
  \caption{Class stock metric paper size options, and commands}\label{tab:sizeoptsmetric}
  \begin{tabular}{llll} \toprule
  Option & Size & stock size command & page size command \\ \midrule
@@ -475,7 +634,8 @@
  \Lopt{a6paper}\index{paper!size!A6}\index{stock!size!A6} 
     & \abybm{148}{105}{mm} & \cmd{\stockavi} & \cmd{\pageavi} \\
  \Lopt{a5paper}\index{paper!size!A5}\index{stock!size!A5}
-@@ -2203,6 +2313,8 @@
+    & \abybm{210}{148}{mm} & \cmd{\stockav} & \cmd{\pageav} \\
+ \Lopt{a4paper}\index{paper!size!A4}\index{stock!size!A4} 
      & \abybm{297}{210}{mm} & \cmd{\stockaiv} & \cmd{\pageaiv} \\
  \Lopt{a3paper}\index{paper!size!A3}\index{stock!size!A3}
      & \abybm{420}{297}{mm} & \cmd{\stockaiii} & \cmd{\pageaiii} \\
@@ -484,7 +644,17 @@
  \Lopt{b6paper}\index{paper!size!B6}\index{stock!size!B6} 
     & \abybm{176}{125}{mm} & \cmd{\stockbvi} & \cmd{\pagebvi} \\
  \Lopt{b5paper}\index{paper!size!B5}\index{stock!size!B5} 
-@@ -2433,8 +2545,10 @@
+    &  \abybm{250}{176}{mm} & \cmd{\stockbv} & \cmd{\pagebv} \\
+ \Lopt{b4paper}\index{paper!size!B4}\index{stock!size!B4} 
+    & \abybm{353}{250}{mm} & \cmd{\stockbiv} & \cmd{\pagebiv} \\
+ \Lopt{b3paper}\index{paper!size!B3}\index{stock!size!B3} 
+    & \abybm{500}{353}{mm} & \cmd{\stockbiii} & \cmd{\pagebiii} \\
+@@ -2428,18 +2540,20 @@
+ \item[\Lopt{11pt}] for 11pt as the normal type size
+ \glossary(11ptco)%
+   {\Popt{11pt}}%
+   {Class option for a 11pt body font.}
+ \item[\Lopt{12pt}] for 12pt as the normal type size
  \glossary(12ptco)%
    {\Popt{12pt}}%
    {Class option for a 12pt body font.}
@@ -497,7 +667,17 @@
    {\Popt{14pt}}%
    {Class option for a 14pt body font.}
  \item[\Lopt{17pt}] for 17pt as the normal type size
-@@ -2469,7 +2583,14 @@
+ \glossary(17ptco)%
+   {\Popt{17pt}}%
+   {Class option for a 17pt body font.}
+ \item[\Lopt{20pt}] for 20pt as the normal type size
+ \glossary(20ptco)%
+@@ -2464,17 +2578,24 @@
+ \item[\Lopt{60pt}] for 60pt as the normal type size
+ \glossary(60ptco)%
+   {\Popt{60pt}}%
+   {Class option for a 60pt body font.}
+ \item[\Lopt{*pt}] for an author-defined size as the normal type size
  \glossary(*ptco)%
    {\Popt{*pt}}%
    {Class option for an author-defined size for the body font.}
@@ -513,7 +693,17 @@
  \glossary(extrafontsizes)%
    {\Popt{extrafontsizes}}%
    {Class option for using scalable fonts that can exceed 25pt.}
-@@ -2652,7 +2773,7 @@
+ \end{itemize}
+ 
+     These options, except for \Lopt{extrafontsizes}, are mutually exclusive.
+ The default type size\indextwo{default}{type size} is \Lopt{10pt}.
+ 
+@@ -2647,17 +2768,17 @@
+ \item[\Lopt{showtrims}] this option prints marks at the corners of the 
+                    sheet so that you can see where the stock\index{stock} 
+                    must be trimmed to produce the final page size.
+ \glossary(showtrimsco)%
+   {\Popt{showtrims}}%
    {Class option for printing trimming marks.}
  
  \end{itemize}
@@ -522,7 +712,17 @@
      The defaults among the printing options\index{default!printing options} 
  are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
  
-@@ -2687,7 +2808,8 @@
+ \section{Other options}
+ 
+     The remaining options are:
+ \begin{itemize}
+ 
+@@ -2682,17 +2803,18 @@
+                         by \cmd{\bibindent} (the default is for an entry
+                         to run continuously with no indentations).
+ \glossary(openbibco)%
+   {\Popt{openbib}}%
+   {Class option for indenting continuation lines in a bibliography.}
  
  \item[\Lopt{article}]\index{class options!article} 
    typesetting \emph{simulates} the \Lclass{article} class,
@@ -532,7 +732,17 @@
    Chapters\index{chapter} do not start a new page and chapter
    headings\index{heading!chapter} are typeset 
    like a section heading\index{heading!sections}. The numbering of 
-@@ -2706,9 +2828,17 @@
+   figures\index{figure}, etc., is continuous
+   and not per chapter. However, a \cmd{\part} command still puts
+   its heading\index{heading!part} on a page by itself.
+ \glossary(articleco)%
+   {\Popt{article}}%
+@@ -2701,19 +2823,27 @@
+ \item[\Lopt{oldfontcommands}]\index{class options!fonts} 
+   makes the old, deprecated LaTeX version~2.09
+   font commands available. Warning messages will be produced whenever
+   an old font command is encountered.
+ \glossary(oldfontcommandsco)%
    {\Popt{oldfontcommands}}%
    {Class option for permitting obsolete, deprecated font commands.}
  
@@ -552,7 +762,17 @@
  
  \section{Remarks}
  
-@@ -2777,8 +2907,8 @@
+    Calling the class with no options is equivalent to:
+ \begin{lcode}
+ \documentclass[letterpaper,10pt,twoside,onecolumn,openright,final]{memoir}
+ \end{lcode}
+    The source file for this manual starts
+@@ -2772,18 +2902,18 @@
+ 
+ \clearpage
+ \pagestyle{ruled}
+ 
+ %#% extstart include laying-out-page.tex
  
  \svnidlong
  {$Ignore: $}
@@ -563,7 +783,17 @@
  {$LastChangedBy: daleif@math.au.dk $}
  
  \chapter{Laying out the page} \label{chap:layingpage}
-@@ -3112,7 +3242,7 @@
+ 
+ 
+ Up until this chapter the \pstyle{headings} pagestyle\index{pagestyle}
+ has been used; pagestyles are described in \Sref{sec:pagestyles}.
+ This, and later chapters, are typeset with the \pstyle{ruled} pagestyle.
+@@ -3107,31 +3237,31 @@
+ \begin{lcode}
+ \settrims{2in}{2in}
+ \end{lcode}
+ specifies trimming 2in from the top and \foredge{} of the stock
+ giving the desired page size. Taking a design where, say, the page 
  is 90\% of the stock size it's easy to get \ltx\ to do the calculation:
  \begin{lcode}
  \setlength{\trimtop}{\stockheight}    % \trimtop = \stockheight
@@ -572,7 +802,12 @@
  \setlength{\trimedge}{\stockwidth}    % \trimedge = \stockwidth
  \addtolength{\trimedge}{-\paperwidth} %           - \paperwidth
  \end{lcode}
-@@ -3125,8 +3255,8 @@
+ which will set all the trimming to be at the top and \foredge. 
+ If you wanted, say, equal trims at the top and bottom you could go 
+ on and specify
+ \begin{lcode}
+ \settrims{0.5\trimtop}{\trimedge}
+ \end{lcode}
  
  \fancybreak{}
  
@@ -583,7 +818,17 @@
  commands. For example \cmd{\setpagecc} for placing a trimmed page
  centered on the stock.
  
-@@ -3726,33 +3856,11 @@
+ After trimming the various methods to specify the typeblock, now
+ refers to the \emph{trimmed} page, not the stock material.
+ 
+ 
+ \section{The typeblock} \label{sec:typeblock2}
+@@ -3721,43 +3851,21 @@
+ \bottomrule
+ \end{tabular}
+ \end{table}
+ 
+ \begin{note}
    Readers may find several folio designs in \cite{MEMDESIGN}.
  \end{note}
  
@@ -619,7 +864,17 @@
  
      This completes the methods for specifying the layout of the
  main elements of the page --- the page\index{page!specifying size} 
-@@ -3904,6 +4012,33 @@
+ size, the size of the typeblock\index{typeblock!specifying size} and the 
+ margins\index{margin!specifying size} 
+ surrounding the typeblock\index{typeblock!location}. 
+ 
+ \section{Headers, footers and marginal notes}
+@@ -3899,16 +4007,43 @@
+ \end{note}
+ 
+ \index{marginalia|)} %|
+ 
+ 
  \section{Other}
  \label{sec:other}
  
@@ -653,7 +908,17 @@
  
  \begin{syntax}
  \cmd{\setfootins}\marg{length for normal}\marg{length for minipage} \\
-@@ -4175,6 +4310,23 @@
+ \end{syntax}
+ % \glossary(setfootins)%
+ % {\cs{setfootins}\marg{length for normal}\marg{length for minipage}}%
+ % {Sets \cs{skip}\cs{footins} and its minipage counterpart.}
+ 
+@@ -4170,16 +4305,33 @@
+ and calculates the values for all the standard \ltx\ layout 
+ parameters\index{page layout!LaTeX parameters?\ltx\ parameters} (such
+ that packages can use these expected values).
+ If you have used the class macros to change
+ the layout in any way, you must call \cmd{\checkandfixthelayout} after you have
  made all the necessary changes. As an aid, the final layout parameter values
  are displayed on the terminal and written out to the log file.
  
@@ -677,7 +942,17 @@
  \LMnote{2010/09/17}{added \cs{\settypeoutlayoutunit}}
  \begin{syntax}
  \cmd{\typeoutlayout} \\
-@@ -4235,59 +4387,71 @@
+ \cmd{\typeoutstandardlayout} \\
+ \cmd{\settypeoutlayoutunit}\marg{unit} \\
+ \end{syntax}
+ \glossary(settypeoutlayoutunit)%
+   {\cs{settypeoutlayoutunit}}%
+@@ -4230,69 +4382,81 @@
+ \begin{lcode}
+ \documentclass{memoir}
+ %%% set up the recto page layout
+ \checkandfixthelayout%     or perhaps \checkandfixthelayout[lines]
+ \setlength{\evensidemargin}{\oddsidemargin}% after \checkandfix...
  ...
  \end{lcode}
  
@@ -800,7 +1075,17 @@
  
  %     With a \Lopt{landscape} document and using the processing route
  % \verb?latex -> dvips? the resulting \file{ps} \pscript{} file may appear 
-@@ -4467,7 +4631,8 @@
+ % upside-down when viewed with, say, \Lprog{ghostview} 
+ % (also known as \Lprog{gsview32}). If this happens
+ % try putting the following in your preamble:
+ % \begin{lcode}
+ % \addtodef{\fixdvipslayout}{}{%
+@@ -4462,17 +4626,18 @@
+ changes to match the new layout).
+ 
+ \begin{figure}[p]
+ \begin{leftfullpage}
+ \centering
  \begin{minipage}[b]{\pwlayi}
  \drawaspread{\pwlayii}{1.3}{1.62}{0.18}{1.13}{1.5}{0}
  \end{minipage}
@@ -810,7 +1095,17 @@
  
  \begin{minipage}[b]{\pwlayi}
  \drawaspread{\pwlayii}{1.3}{1.19}{0.11}{1.5}{2}{0}
-@@ -4557,7 +4722,8 @@
+ \end{minipage}
+ \hfill
+ \begin{minipage}[b]{\pwlayi}
+ \drawaspread{\pwlayii}{1.3}{1.25}{0.08}{1.5}{2}{0}
+ \end{minipage}
+@@ -4552,17 +4717,18 @@
+ spine, top, \foredge\ and bottom margins 
+ around the typeblock are in the ratio 2:3:4:6. Typically the spine margin
+ was 1/9 the width of the page, which is what \cmd{\medievalpage} assumes
+ by default. This can be changed with the optional \meta{spine} argument. For
+ example, to get narrower margins with the spine being 1/12 the page width:
  \begin{lcode}
  \medievalpage[12]
  \end{lcode}
@@ -820,7 +1115,17 @@
  
  \begin{syntax}
  \cmd{\isopage}\oarg{spine} \\
-@@ -4595,12 +4761,30 @@
+ \cmd{\semiisopage}\oarg{spine} \\
+ \end{syntax}
+ \glossary(isopage)%
+   {\cs{isopage}\oarg{spine}}%
+   {Generates a page layout especially suited to ISO proportioned paper.}
+@@ -4590,70 +4756,53 @@
+ \end{lcode}
+ The same factor applies to both the spine and top margins in the case
+ of \cmd{\isopage}.
+ 
+     Spreads showing a variety of these layouts are in \fref{fig:pagefirstlay} 
  through \ref{fig:pagelastlay}. These were produced with the aid of the
  \Lpack{layouts} package.
  
@@ -855,7 +1160,12 @@
  \end{syntax}
  \glossary(setpagebl)%
    {\cs{setpagebl}\marg{height}\marg{width}\marg{ratio}}%
-@@ -4613,42 +4797,7 @@
+   {Specifies a page of the given dimensions positioned at the bottom left
+    of the stock; see \cs{settrimmedsize}.}
+ \glossary(setpagebl)%
+   {\cs{setpageml}\marg{height}\marg{width}\marg{ratio}}%
+   {Specifies a page of the given dimensions positioned at the middle left
+    of the stock; see \cs{settrimmedsize}.}
  \glossary(setpagebl)%
    {\cs{setpagetl}\marg{height}\marg{width}\marg{ratio}}%
    {Specifies a page of the given dimensions positioned at the top left
@@ -899,7 +1209,17 @@
  \glossary(setpagetm)%
    {\cs{setpagetm}\marg{height}\marg{width}\marg{ratio}}%
    {Specifies a page of the given dimensions positioned at the top middle
-@@ -4672,17 +4821,125 @@
+    of the stock; see \cs{settrimmedsize}.}
+ \glossary(setpagetr)%
+   {\cs{setpagetr}\marg{height}\marg{width}\marg{ratio}}%
+   {Specifies a page of the given dimensions positioned at the top right
+    of the stock; see \cs{settrimmedsize}.}
+@@ -4667,37 +4816,145 @@
+    of the stock; see \cs{settrimmedsize}.}
+ \glossary(setpagebm)%
+   {\cs{setpagebm}\marg{height}\marg{width}\marg{ratio}}%
+   {Specifies a page of the given dimensions positioned at the bottom middle
+    of the stock; see \cs{settrimmedsize}.}
  \glossary(setpagecc)%
    {\cs{setpagecc}\marg{height}\marg{width}\marg{ratio}}%
    {Specifies a page of the given dimensions positioned at the center
@@ -1033,7 +1353,7 @@
  
  
  %#% extend
-@@ -4690,9 +4947,9 @@
+ %#% extstart include text-and-fonts.tex
  
  \svnidlong
  {$Ignore: $}
@@ -1046,7 +1366,17 @@
  
  
  \chapter{Text and fonts}
-@@ -5165,7 +5422,7 @@
+ 
+     Presumably you will be creating a document that contains at least some
+ text. In this chapter I talk a little about the kinds of fonts that you might
+ use and how text appears on a page.
+ 
+@@ -5160,17 +5417,17 @@
+ \textsl{\texttt{shapes,}} \textsc{especially in one sentence,} 
+ is usually \emph{highly inadvisable!}
+ \end{egresult}
+ 
+     On the other hand there are occasions when several fonts may be used
  for a reasonable effect, as in example~\ref{eg16}.
  \begin{egsource}{eg16}
  \begin{center}
@@ -1055,7 +1385,17 @@
  \end{center}%
  \settowidth{\versewidth}{Or yet in a year where they are}
  \begin{verse}[\versewidth] \begin{itshape}
-@@ -5187,7 +5444,7 @@
+ Prince, n'enquerez de sepmaine \\*
+ Ou elles sont, ne de cest an, \\*
+ Qu'a ce reffrain ne vous remaine: \\*
+ Mais ou sont les neiges d'antan?
+ \end{itshape}
+@@ -5182,17 +5439,17 @@
+ \end{verse}
+ \begin{flushright}
+ {\bfseries Fran\c{c}ois Villon} [1431--1463?]
+ \end{flushright}
+ \end{egsource}
  
  \begin{egresult}[Sometimes mixed fonts work]{eg16}
  \begin{center}
@@ -1064,7 +1404,17 @@
  \end{center}%
  \settowidth{\versewidth}{Or yet in a year where they are}
  \begin{verse}[\versewidth] \begin{itshape}
-@@ -5565,11 +5822,17 @@
+ Prince, n'enquerez de sepmaine \\* \index[lines]{Prince, n'enquerez de sepmaine}
+ Ou elles sont, ne de cest an, \\*
+ Qu'a ce reffrain ne vous remaine: \\*
+ Mais ou sont les neiges d'antan?
+ \end{itshape}
+@@ -5560,35 +5817,55 @@
+   {\cs{setPagenoteSpacing}}%
+   {Explicitly set the spacing used inside page notes such including footnotes.}
+ \cs{setFloatSpacing} should go after say \cs{OnehalfSpacing*} if used.
+ 
+ 
  
  \PWnote{2009/06/24}{Corrected \cs{SetSingleSpace} to \cs{setSingleSpace}}
  \begin{syntax}
@@ -1084,7 +1434,14 @@
  \glossary(setSingleSpace)%
    {\cs{setSingleSpace}\marg{factor}}%
    {Change the baselineskip by \meta{factor}.}
-@@ -5584,6 +5847,20 @@
+ The \cmd{\setSingleSpace} command is meant to be used to
+ adjust \emph{slightly} the normal spacing betwen lines, perhaps because
+ the font being used looks too crampled or loose. The effect is that the 
+ normal \lnc{\baselineskip} spacing will be multiplied by \meta{factor}, which
+ should be close to 1.0. Using \cmd{\setSingleSpace} will also reset
+ the float and page note spacings.
+ 
+ The declaration \cmd{\SingleSpacing} returns everthing to normal, or at
  least the setting from \cmd{\setSingleSpace} if it has been used. It
  will also reset float and page note spacings to the same value.
  
@@ -1105,7 +1462,17 @@
  \begin{syntax}
  \senv{SingleSpace} ...\eenv{SingleSpace} \\
  \senv{Spacing}\marg{factor} ... \eenv{Spacing} \\
-@@ -5660,6 +5937,9 @@
+ \senv{OnehalfSpace} ... \eenv{OnehalfSpace} \\
+ \senv{OnehalfSpace*} ... \eenv{OnehalfSpace*} \\
+ \senv{DoubleSpace} ... \eenv{DoubleSpace} \\
+ \senv{DoubleSpace*} ... \eenv{DoubleSpace*} \\
+ \end{syntax}
+@@ -5655,16 +5932,19 @@
+   \advance\belowdisplayshortskip \memdskipstretch\belowdisplayshortskip}
+ \end{lcode}
+ 
+     If you need to use a \Ie{minipage} as a stand-alone item in a widely 
+ spaced text then you
  may need to use the \Ie{vminipage} environment instead to get the before and
  after spacing correct.
  
@@ -1115,7 +1482,17 @@
  
  \section{Overfull lines}
  
-@@ -5824,15 +6104,39 @@
+ \index{overfull lines|(}
+ \index{space!interword|(}
+ 
+ 
+     \tx\ tries very hard to keep text lines justified while keeping the 
+@@ -5819,25 +6099,49 @@
+ a single line of a paragraph somehow looks worse at the top of a page than
+ at the bottom. If all else fails, the solution is either to live with the 
+ odd line or to reword the text.
+ 
+ \section{Text case}
  \label{sec:text-case}
  
  The standard kernel \cmd{\MakeUppercase}\marg{text} and
@@ -1164,7 +1541,17 @@
  
  \fancybreak{}
  
-@@ -6004,9 +6308,9 @@
+ \begin{syntax}
+   \cmd{\MakeTextUppercase}\marg{text}\\
+   \cmd{\MakeTextLowercase}\marg{text}
+ \end{syntax}
+ \glossary(MakeTextUppercase)
+@@ -5999,19 +6303,19 @@
+ 
+ 
+ 
+ %#% extend
+ %#% extstart include titles.tex
  
  \svnidlong
  {$Ignore: $}
@@ -1177,7 +1564,17 @@
  
  
  \chapter{Titles}
-@@ -6339,15 +6643,21 @@
+ 
+    The standard classes provide little in the way of help in setting
+ the title page(s) for your work, as the \cmd{\maketitle} command
+ is principally aimed at generating a title for an article in a technical
+ journal; it provides little for titles for works like theses, reports or
+@@ -6334,25 +6638,31 @@
+ to print both the published and the normal titling information. Note
+ that nothing extra had to be done in order to use the \cmd{\thanks} command
+ in the argument to the new \cmd{\published} command.
+ 
+ \index{title page|(}
  
  \begin{syntax}
  \senv{titlingpage} text \eenv{titlingpage} \\
@@ -1202,7 +1599,17 @@
  option, \cmd{\maketitle} puts the title elements on an unnumbered page
  and then starts a new page numbered page 1. 
  The standard classes also provide
-@@ -6368,6 +6678,19 @@
+ a \Ie{titlepage} environment which starts a new unnumbered page and at the
+ end starts a new page numbered 1. You are entirely responsible
+ for specifying exactly what and where is to go on this title page.
+ If \cmd{\maketitle} is used  within the \Ie{titlepage} environment it
+ will start yet another page.
+@@ -6363,16 +6673,29 @@
+ option and the \Ie{titlepage} environment. Within the \Ie{titlingpage}
+ environment you can use the \cmd{\maketitle} command, and any others 
+ you wish. The \pstyle{titlingpage} pagestyle is used, and 
+ at the end it starts another ordinary page numbered one
+ (\senv{titlingpage*} does note reset the page number). 
  The \pstyle{titlingpage} pagestyle is initially defined to be the same
  as the \pstyle{empty} pagestyle.
  
@@ -1222,7 +1629,17 @@
     For example, to put both the title and an abstract\index{abstract} 
  on a title page,
  with a \pstyle{plain} pagestyle:
-@@ -6856,9 +7179,9 @@
+ \begin{lcode}
+ \begin{document}
+ \begin{titlingpage}
+ \aliaspagestyle{titlingpage}{plain}
+ \setlength{\droptitle}{30pt} lower the title
+@@ -6851,19 +7174,19 @@
+ 
+ \index{thanks!styling|)}
+ 
+ %#% extend
+ %#% extstart include abstracts.tex
  
  \svnidlong
  {$Ignore: $}
@@ -1235,7 +1652,17 @@
  
  \chapter{Abstracts}
  
-@@ -7003,6 +7326,23 @@
+ 
+     Abstracts\index{abstract} do not normally appear in books but 
+ they are often an essential
+ part of an article in a technical journal. Reports may or may not
+ include an abstract, but if so it will often be called a `Summary'.
+@@ -6998,16 +7321,33 @@
+    This version of \Ie{abstract} uses a \Ie{list} environment for typesetting
+ the text. These four lengths can be changed (via \cmd{\setlength}
+  or \cmd{\addtolength}) to adjust
+ the left and right margins\index{margin}, the paragraph indentation\index{paragraph!indentation}, and the vertical skip
+ between paragraphs in this environment. 
  The default values depend on whether or not the \Lopt{twocolumn}
  class option is used. The general layout parameters for lists are illustrated
  in \fref{fig:listlay}.
@@ -1259,7 +1686,17 @@
  
  \begin{syntax}
  \cmd{\abslabeldelim}\marg{text} \\
-@@ -7050,15 +7390,17 @@
+ \end{syntax}
+ \glossary(abslabeldelim)%
+   {\cs{abslabeldelim}\marg{text}}%
+   {\meta{text} is typeset immediately after \cs{abstractname} in a run-in
+    heading.}
+@@ -7045,25 +7385,27 @@
+ \end{syntax}
+ \glossary(abstitleskip)%
+   {\cs{abstitleskip}}
+   {Space around the title of an \Pe{abstract}.}
+    With the \cmd{\abstractrunin} declaration a horizontal space of length 
  \lnc{\abstitleskip} is typeset
  before the heading. For example, if \lnc{\absparindent} is non-zero, then:
  \begin{lcode}
@@ -1285,7 +1722,17 @@
  
  \index{abstract!styling|)}
  
-@@ -7127,9 +7469,9 @@
+ \section{One column abstracts}
+ 
+ \index{abstract!one column|(}
+ 
+    The usual advice~\cite{FAQ} about creating a 
+@@ -7122,19 +7464,19 @@
+ \index{abstract!one column|)}
+ 
+ 
+ %#% extend
+ %#% extstart include document-divisions.tex
  
  \svnidlong
  {$Ignore: $}
@@ -1298,7 +1745,17 @@
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %   chapter style
-@@ -7630,6 +7972,15 @@
+ %\renewcommand{\printchaptername}{}
+ %\renewcommand{\chapternamenum}{}
+ %\renewcommand{\chapnumfont}{\normalfont\huge\sffamily}
+ %\renewcommand{\chaptitlefont}{\chapnumfont}
+ %\renewcommand{\afterchapternum}{\space}
+@@ -7625,16 +7967,25 @@
+ \begin{lcode}
+ \setsecnumdepth{section}
+ \maxsecnumdepth{section}
+ \end{lcode}
+ The \cmd{\frontmatter} commands sets the numbering level to \texttt{none}.
  The commands \cmd{\mainmatter} and \cmd{\mainmatter*} set the
  numbering level to the value specified by \cmd{\maxsecnumdepth}.
  
@@ -1314,7 +1771,17 @@
      The number setting commands come from the \Lpack{tocvsec2}
  package~\cite{TOCVSEC2}.
  
-@@ -9239,6 +9590,19 @@
+ \section{Book and part headings}
+ 
+ \index{heading!book|(}
+ \index{heading!part|(}
+ 
+@@ -9234,16 +9585,29 @@
+     Note that the very last element in the \meta{font} argument may be a 
+ macro that takes one argument (the number and title of the heading). So,
+ if for some reason you wanted \cmd{\subsubsection} titles to be all uppercase,
+ centered, and in the normal font, you can do
+ \begin{lcode}
  \setsubsubsecheadstyle{\normalfont\centering\MakeUppercase}
  \end{lcode}
  
@@ -1334,7 +1801,17 @@
      As another example, although I don't recommend this, you can draw a
  horizontal line under section titles via:
  \begin{lcode}
-@@ -9324,10 +9688,13 @@
+ \newcommand{\ruledsec}[1]{%
+   \Large\bfseries\raggedright #1 \rule{\textwidth}{0.4pt}}
+ \setsecheadstyle{\ruledsec}
+ \end{lcode}
+ 
+@@ -9319,20 +9683,23 @@
+ \cmd{\setsecnumformat}\marg{code} \\
+ \end{syntax}
+ \glossary(seccntformatat)%
+   {\cs{@seccntformat}\marg{code}}%
+   {Kernel macro that formats the number in a sectional head.}
  \glossary(setsecnumformat)%
    {\cs{setsecnumformat}\marg{code}}%
    {Redefines \cs{@seccntformat} to \meta{code}.}
@@ -1350,7 +1827,17 @@
  \begin{lcode}
  \newcommand{\@seccntformat}[1]{\csname the#1\endcsname\quad}
  \end{lcode}
-@@ -9552,7 +9919,22 @@
+ which formats the sectional numbers as \verb?\thesec...? with a space 
+ afterwards.
+ The command \cmd{\setsecnumformat} redefines \cmd{\@seccntformat} 
+ to be \meta{code}.
+ For example, to put a colon and space after the number
+@@ -9547,17 +9914,32 @@
+ these macros.
+ In this example we will provide separate formatting for \cmd{\section} and \cmd{\subsection}. 
+ \begin{lcode}
+   \setsecnumformat{\csname #1secnumformat\endcsname}
+   \newcommand\sectionsecnumformat{\thesection:\quad} 
    \newcommand\subsectionsecnumformat{\fbox{\enspace\thesubsection\enspace}\enspace}
  \end{lcode}
  Since the macro is only called in the proper context, we can use
@@ -1374,7 +1861,17 @@
  
  
  
-@@ -10000,9 +10382,9 @@
+ \index{heading!sections|)}
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+ 
+@@ -9995,19 +10377,19 @@
+ 
+ 
+ 
+ %#% extend
+ %#% extstart include pagination-and-headers.tex
  
  \svnidlong
  {$Ignore: $}
@@ -1387,7 +1884,17 @@
  
  \chapterstyle{demo3}
  
-@@ -10059,6 +10441,26 @@
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \chapter{Pagination and headers} \label{chap:pagination}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+@@ -10054,16 +10436,36 @@
+     Additionally, the \cmd{\pagenumbering}\index{pagination!changing}
+ command resets the \Icn{page} counter to one; the starred version does not 
+ change the counter.
+     It is usual to reset the page number back to one each time the style
+ is changed, but sometimes it may be desirable to have a continuous sequence
  of numbers irrespective of their displayed form, which is where
  the starred version comes in handy.
  
@@ -1414,7 +1921,17 @@
  \begin{syntax}
  \cmd{\savepagenumber} \\
  \cmd{\restorepagenumber} \\
-@@ -10227,10 +10629,11 @@
+ \end{syntax}
+ \glossary(savepagenumber)%
+   {\cs{savepagenumber}}%
+   {Saves the current page number.}
+ \glossary(restorepagenumber)%
+@@ -10222,20 +10624,21 @@
+ \glossary(nouppercaseheads)%
+   {\cs{nouppercaseheads}}%
+   {Do not uppercase the titles in the headings.}
+     Following the declaration \cmd{\nouppercaseheads} the titles in the
+ \pstyle{headings} pagestyle will not be automatically uppercased. The default
  is \cmd{\uppercaseheads} which specifies that the titles are to be
  automatically uppercased.
  
@@ -1430,7 +1947,17 @@
  
      For the \pstyle{myheadings} pagestyle above, you have to define your own
  titles to go into the header\index{header}. Each sectioning command, 
-@@ -10342,8 +10745,8 @@
+ say \cs{sec}, 
+ calls a macro called \cs{secmark}. A pagestyle usually defines this command
+ so that it picks up the title, and perhaps the number, of the \cs{sec}. The
+ pagestyle can then use the information for its own purposes. 
+ 
+@@ -10337,18 +10740,18 @@
+ \headerfooterdiagram
+ \caption{Header and footer slots} \label{lay:header}
+ \end{figure}
+ 
+     The class itself uses the commands from this section. For example,
  the \pstyle{plain} pagestyle is defined as
  \begin{lcode}
  \makepagestyle{plain}
@@ -1441,7 +1968,17 @@
  \end{lcode}
  which centers the page number at the bottom of the page. 
      
-@@ -10537,11 +10940,12 @@
+ 
+ \begin{syntax}
+ \cmd{\makepagestyle}\marg{style} \\
+ \cmd{\aliaspagestyle}\marg{alias}\marg{original} \\
+ \cmd{\copypagestyle}\marg{copy}\marg{original}\\
+@@ -10532,33 +10935,239 @@
+ \cmd{\makepsmarks}\marg{style}\marg{code} \\
+ \end{syntax}
+ \glossary(makepsmark)
+   {\cs{makepsmarks}\marg{style}\marg{code}}%
+   {Hook into the \meta{style} pagestyle, usually used for the \meta{code}
     setting any marks.}
  The last thing that the \cmd{\pagestyle}\marg{style} does is call the
  \meta{code} argument of the \cmd{\makepsmarks} macro for \meta{style}.
@@ -1459,7 +1996,12 @@
  
  \LMnote{2010/06/25}{Added a mentioning of \cs{makeheadfootstrut}}
  \begin{syntax}
-@@ -10554,6 +10958,211 @@
+   \cmd{\makeheadfootstrut}\marg{style}\marg{head strut}\marg{foot strut}
+ \end{syntax}
+ The headers and footers are each made up of three separate
+ entities. At the front and end of these a special \meta{style} related
+ strut is inserted. By default \cmd{\makepagestyle} will initialize
+ them to \cmd{\strut} (except the \pstyle{empty} style where the struts
  are empty). One can use the macro above to change these struts to
  something different.
  
@@ -1671,7 +2213,17 @@
  
  \subsection{Example pagestyles}
  
-@@ -10578,9 +11187,12 @@
+     Perhaps when preparing drafts you want to note on each page
+ that it is a draft\index{draft document} document. Assuming that 
+ you are using the 
+ \pstyle{headings} page style and that the default \pstyle{plain}
+ page style is used on chapter openings, then you could define
+@@ -10573,19 +11182,22 @@
+   \makeoddfoot{headings}{\textit{Draft: \today}}{}{}
+ \fi
+ \end{lcode}
+ Now when the \Lopt{draft} option is used the word `Draft:' and the current
+ date will be typeset in italics at the bottom of each page by the spine
  margin. If any \pstyle{empty} pages should be marked as well, specify
  similar footers for that style as well.
  
@@ -1685,7 +2237,17 @@
  \begin{lcode}
  \def\ps@headings{%
    \let\@oddfoot\@empty\let\@evenfoot\@empty
-@@ -10618,7 +11230,7 @@
+   \def\@evenhead{\thepage\hfil\slshape\leftmark}%
+   \def\@oddhead{{\slshape\rightmark}\hfil\thepage}%
+   \def\chaptermark##1{%
+     \markboth{\MakeUppercase{%
+       \ifnum\c@secnumdepth > \m@ne
+@@ -10613,156 +11225,168 @@
+ 
+     A transliteration of this code into \Mname's original coding style is:
+ \begin{lcode}
+ \makepagestyle{headings}
+ \makeevenhead{headings}{\thepage}{}{\slshape\leftmark}
  \makeoddhead{headings}{\slshape\rightmark}{}{\thepage}
  \makepsmarks{headings}{%
    \def\chaptermark##1{%
@@ -1694,7 +2256,7 @@
        \ifnum\c@secnumdepth > \m@ne
          \if@mainmatter
            \@chapapp\ \thechapter. \ %
-@@ -10626,74 +11238,96 @@
+         \fi
        \fi
        ##1}}{}}%
    \def\sectionmark##1{%
@@ -1849,7 +2411,11 @@
  
  \LMnote{2010/02/08}{added the following paragraph}
  Note that if you want to use a predefined page style, but would like
-@@ -10705,59 +11339,49 @@
+ to not use automatic uppercasing, then issue \cs{nouppercaseheads} and
+ reload the page style, for example with the default page style in \theclass\
+ \begin{lcode}
+   \nouppercaseheads
+   \pagestyle{headings}
  \end{lcode}
  
  
@@ -1947,7 +2513,17 @@
  
  
  
-@@ -10878,17 +11502,18 @@
+ \PWnote{2009/07/30}{Added sections on Document title and Part title in headers}
+ \subsubsection{Header with the document title}
+ 
+     As mentioned before, some publishers like the title of the book 
+ to be in the header. A simple header is probably all that is needed 
+@@ -10873,27 +11497,28 @@
+   {\normalfont\bfseries\rightmark}{}{%
+    \normalfont\bfseries\thepage}
+ \end{lcode}
+ 
+     Now issuing the command \verb?\pagestyle{companion}? will produce pages 
  typeset with \pstyle{companion} pagestyle headers\index{header}. This pagestyle
  is part of the class.
  
@@ -1977,7 +2553,17 @@
  in the page headers of the \pstyle{companion} pagestyle then this would be a way
  of doing it:
  \begin{lcode}
-@@ -10959,8 +11584,9 @@
+ \addtopsmarks{companion}{}{%
+   \createmark{subsection}{right}{shownumber}{}{. \space}}
+ \end{lcode}
+ 
+ 
+@@ -10954,18 +11579,19 @@
+ \end{lcode}
+ This typesets the entry and also uses the entry as markers so that
+ the first entry on a page is held in \cmd{\rightmark} and the last
+ is in \cmd{\leftmark}.
+ 
      As index\index{index} entries are usually very short, the 
  Index\index{index} is set in two columns\index{column!double}. 
  Unfortunately \ltx's marking mechanism can be very
@@ -1989,7 +2575,17 @@
  
      The index\index{index} itself is called by\index{indexing}
  \begin{lcode}
-@@ -11262,9 +11888,9 @@
+ \clearpage
+ \pagestyle{index}
+ \renewcommand{\preindexhook}{%
+ The first page number is usually, but not always, 
+ the primary reference to
+@@ -11257,19 +11883,19 @@
+ \end{lcode}
+ 
+ 
+ %#% extend
+ %#% extstart include paragraphs-and-lists.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2002,7 +2598,17 @@
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  
-@@ -12215,8 +12841,9 @@
+ 
+ 
+ \chapter{Paragraphs and lists}
+ 
+ %%%%%%%%%%%%%%%%%%%%%
+@@ -12210,41 +12836,55 @@
+ counter typeset as a lowercase Roman numeral followed by a single parenthesis
+ \begin{lcode}
+ \begin{enumerate}[i)] 
+ ...
+ \end{lcode} 
  
  
  \LMnote{2013/05/16}{Added hint about enumitem}
@@ -2014,7 +2620,15 @@
    appearance. We provide some simple tools to adjust vertical spacing,
    see below.
  
-@@ -12232,14 +12859,27 @@
+   Users seeking more control can have a look at the excellent \Lpack{enumitem}
+   package by Javier Bezos. If loaded as
+   \begin{lcode}
+     \usepackage[shortlabels]{enumitem}
+   \end{lcode}
+   then our
+   \begin{lcode}
+     \begin{enumerate}[i)] 
+      \item \label{item:tst}  ...
    \end{lcode}
    syntax will work out of the box.
  
@@ -2046,7 +2660,17 @@
  
  
  \index{list!tight|(} %|
-@@ -12501,9 +13141,9 @@
+ 
+ 
+ \begin{syntax}
+ \cmd{\tightlists} \cmd{\defaultlists} \\
+ \cmd{\firmlists} \cmd{\firmlists*} \\
+@@ -12496,19 +13136,19 @@
+ 
+ \index{list|)} %|
+ 
+ %#% extend
+ %#% extstart include content-lists.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2059,7 +2683,17 @@
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%
  %%\chapterstyle{section}
-@@ -13398,7 +14038,7 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%
+ %\chapter{Tops and tails} \label{chap:topsandtails}
+ \chapter{Contents lists} \label{chap:toc}
+ 
+ This chapter describes how to change the appearance of the Table of Contents
+@@ -13393,17 +14033,17 @@
+          {\cftKleader}{\cftKformatpnum{PAGE}}\cftKafterpnum\par
+ 
+  {\cftKfont TITLE}{\cftKleader}{\cftKformatpnum{PAGE}}\cftKafterpnum\par
+  \end{lcode}
+  where \texttt{SNUM} is the section number, \texttt{TITLE} is the title text 
  and \texttt{PAGE} 
   is the page number. In the numbered entry the pseudo-code
  \begin{lcode}
@@ -2068,7 +2702,17 @@
  \end{lcode}
   is typeset within a box of width \lnc{\cftKnumwidth}, see the
   \cs{...numberlinebox} macros later on.
-@@ -14277,6 +14917,31 @@
+ 
+ \begin{syntax}
+ \cmd{\cftKfont} \\
+ \end{syntax}
+ \glossary(cftKfont)%
+@@ -14272,16 +14912,41 @@
+ }
+ \AtEndDocument{\addtocontents{toc}{\par}
+ \end{lcode}
+ The above code changes the appearance of subsection titles in the \toc, 
+ setting each group as a single paragraph (each is normally set with 
  a paragraph to itself). By uncommenting or commenting the noted lines 
  in the code you can change the layout a little. 
  
@@ -2100,7 +2744,17 @@
      Normally, section titles (and below) are set as individual 
  paragraphs. Effectively the first thing that is done is to end any 
  previous paragraph, and also the last thing is to end the current 
-@@ -14789,9 +15454,9 @@
+ paragraph. Notice that the main code above neither starts nor finishes 
+ a paragraph. If the group of subsections is followed by a section title, 
+ that supplies the paragraph end. The last line above ensures that
+ the last entry in the \file{toc} file is \piif{par} as this might be
+ needed to finish off a group of subsections if these are the last 
+@@ -14784,19 +15449,19 @@
+ before the stuff you want to have moved out of, say, a part.
+ 
+ 
+ %#% extend
+ %#% extstart include flosts-and-captions.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2113,7 +2767,17 @@
  
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-@@ -15462,9 +16127,8 @@
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%\chapterstyle{hangnum}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+  \chapter{Floats and captions} \label{chap:captions}
+ 
+@@ -15457,19 +16122,18 @@
+ \end{itemize}
+ The default for \meta{loc} is \textsf{t}\textsf{b}\textsf{p}, 
+ so the float may be placed at the top, or bottom, or on a 
+ float\index{float!page} page; the default works well 95\% of the time.
+ Floats of the same kind are output in
  definition order, except that a double column\index{float!double column} float 
  may be output before
  a later single column\index{float!single column} float of the same kind, or 
@@ -2125,7 +2789,17 @@
  A float is never put on an earlier page than its definition but may be 
  put on the same or later page of its definition. If a float cannot be 
  placed, all suceeding floats will be held up, and \ltx\ can store no 
-@@ -15552,7 +16216,7 @@
+ more than 16 held up floats. A float cannot be placed if it would cause 
+ an overfull page, or it otherwise cannot be fitted according the  
+ float placement parameters.
+ A \cmd{\clearpage} or \cmd{\cleardoublepage} or \eenv{document} 
+ flushes\index{float!flush}
+@@ -15547,17 +16211,17 @@
+ It may be beneficial to be able to add \cmd{\FloatBlock} to sectional
+ commands. This can be done via
+ \begin{syntax}
+   \cmd{\setFloatBlockFor}\marg{sectional name}
+ \end{syntax}
  \glossary(setFloatBlockFor)%
  {\cs{setFloatBLockFor}\marg{sectional name}}%
  {Adds \cs{FloatBlock} within the \cs{\meta{section name}} macro.}
@@ -2134,7 +2808,17 @@
  \begin{lcode}
    \setFloatBlockFor{section}
  \end{lcode}
-@@ -15792,6 +16456,17 @@
+ 
+ 
+ 
+  
+ \fancybreak{}
+@@ -15787,16 +16451,27 @@
+ Captions can be defined that are suitable for use in non-float
+ environments, such as placing a picture in a minipage and captioning
+ it just as though it had been put into a normal 
+ figure\index{figure} environment.
+ 
      The commands described below are very similar to
  those supplied by the \Lpack{ccaption} package~\cite{CCAPTION}.
  
@@ -2152,7 +2836,17 @@
  \section{Caption styling} 
  
  \index{caption!style|(} %)|
-@@ -16882,9 +17557,9 @@
+ 
+     Just as a reminder, the default appearance of a caption for, say,
+ a table looks like this:
+ \begin{center}
+ Table 11.7: Title for the table
+@@ -16877,29 +17552,29 @@
+     As an example to show the difference between \cmd{\subcaptionref} and
+ \cmd{\ref}, \fref{fig:twosubfig} and the paragraph immediately
+ following this one were produced by the code shown below.
+ 
+     Figure \ref{fig:twosubfig} has two subfigures,
  namely \ref{sf:1} and \subcaptionref{sf:2}.
  \begin{shadefigure}
  %\centering
@@ -2164,7 +2858,7 @@
  \caption{Figure with two subfigures} \label{fig:twosubfig}
  \end{shadefigure}
  \begin{lcode}
-@@ -16892,9 +17567,9 @@
+     Figure \ref{fig:twosubfig} has two subfigures,
  namely \ref{sf:1} and \subcaptionref{sf:2}.
  \begin{figure}
  \centering
@@ -2176,7 +2870,17 @@
  \caption{Figure with two subfigures} \label{fig:twosubfig}
  \end{figure}
  \end{lcode}
-@@ -17642,9 +18317,9 @@
+ 
+ \begin{syntax}
+ \cmd{\tightsubcaptions} \cmd{\loosesubcaptions} \\
+ \end{syntax}
+ \glossary(tightsubcaptions)%
+@@ -17637,19 +18312,19 @@
+ \index{caption|)}%|
+ 
+ 
+ %#% extend
+ %#% extstart include rows-and-columns.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2189,7 +2893,17 @@
  
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-@@ -17672,6 +18347,27 @@
+ %%%%%%%%%%%% Original memman
+ 
+ %%%%%%%%%%%%%%% end original memman
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+@@ -17667,16 +18342,37 @@
+  \Lpack{dcolumn}~\cite{DCOLUMN},
+  \Lpack{delarray}~\cite{DELARRAY}, 
+  \Lpack{tabularx}~\cite{TABULARX}, and 
+  \Lpack{booktabs}~\cite{BOOKTABS} 
+  packages. 
      Much of the material in this chapter strongly reflects the
  documentation of these packages.
  
@@ -2217,7 +2931,17 @@
   Additionally, new kinds of tabular environments are also provided.
  
  
-@@ -17727,42 +18423,64 @@
+ \section{General}
+ 
+ \begin{syntax}
+ \cmd{\[} \senv{array}\oarg{pos}\marg{preamble} rows \eenv{array} \cmd{\]} \\
+ \senv{tabular}\oarg{pos}\marg{preamble} rows \eenv{tabular} \\
+@@ -17722,52 +18418,74 @@
+ are listed in \tref{tab:tabpream}.
+ 
+  \begin{table}
+ \begin{adjustwidth}{-5mm}{-5mm}
+  %\begin{center}
  \centering
   \caption{The array and tabular preamble options.} \label{tab:tabpream}
      \setlength{\extrarowheight}{1pt}
@@ -2318,7 +3042,17 @@
      \end{tabular}
  % \end{center}
  \end{adjustwidth}
-@@ -17861,8 +18579,19 @@
+  \end{table}
+ 
+     Examples of the options include:
+  \begin{itemize}
+     \item A flush left column with bold font can be specified
+@@ -17856,18 +18574,29 @@
+        space between two columns.
+ \item Elsewhere reasons are given why you should not use vertical
+       lines (e.g., the \texttt{|} option) in tables. Any examples
+       that use vertical lines are for illustrative purposes only where
+       it is advantageous to denote column boundaries, for example
        to show different spacing effects.
   \end{itemize}
  
@@ -2338,7 +3072,17 @@
      In financial tables dealing with pounds
  and pence or dollars and cents, column entries
  should be aligned on the separator between the numbers. The \texttt{D}
-@@ -19613,9 +20342,9 @@
+ column specifier is provided for columns which are to be aligned on 
+ a `decimal point'. The specifier takes three arguments.
+ \begin{syntax}
+  \texttt{D}\marg{ssep}\marg{osep}\marg{places} \\
+ \end{syntax}
+@@ -19608,32 +20337,34 @@
+ \index{tabular!automatic|)}
+ \index{tabular!free|)}
+ 
+ %#% extend
+ %#% extstart include page-notes.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2351,7 +3095,13 @@
  
  \chapter{Page notes} \label{chap:mnotes}
  
-@@ -19629,6 +20358,8 @@
+    The standard classes provide the \cmd{\footnote} command for notes
+ at the bottom of the page. The class provides several styles of footnotes
+ and you can also have several series of footnotes for when the material
+ gets complicated. The normal \cmd{\marginpar} command puts notes into
+ the margin, which may float around a little if there are other
+ \cmd{\marginpar}s on the page. The class additionally supplies commands
+ for fixed marginal notes and sidebars.
  
  
  \section{Footnotes}
@@ -2360,7 +3110,17 @@
  
      A footnote can be considered to be a special kind of float\index{float} 
  that is put at the bottom of a page.
-@@ -19649,6 +20380,8 @@
+ 
+ \begin{syntax}
+ \cmd{\footnote}\oarg{num}\marg{text} \\
+ \end{syntax}
+ \glossary(footnote)
+@@ -19644,16 +20375,18 @@
+ mark, at the bottom of the page. If the optional \meta{num} is used
+ then its value is used for the mark, otherwise the \Icn{footnote}
+ counter is stepped and provides the mark's value. The \cmd{\footnote}
+ command should be used in paragraph mode where it puts the note at the
+ bottom of the page, or in a \Ie{minipage} where it puts the note
  at the end of the \Ie{minipage}. Results are likely to be peculiar if
  it is used anywhere else (like in a \Ie{tabular}).
  
@@ -2369,7 +3129,17 @@
  \begin{syntax}
  \cmd{\footnotemark}\oarg{num} \\
  \cmd{\footnotetext}\oarg{num}\marg{text} \\
-@@ -19673,6 +20406,8 @@
+ \end{syntax}
+ \glossary(footnotemark)%
+   {\cs{footnotemark}\oarg{num}}%
+   {Typesets a footnote mark.}
+ \glossary(footnotetext)%
+@@ -19668,49 +20401,55 @@
+    It may be helpful, but completely untrue, to think of \cmd{\footnote} being
+ defined like:
+ \begin{lcode}
+ \newcommand{\footnote}[1]{\footnotemark\footnotetext{#1}}
+ \end{lcode}
  In any event, you can use a combination of \cmd{\footnotemark} and 
  \cmd{\footnotetext} to do footnoting where \ltx\ would normally get upset.
  
@@ -2378,7 +3148,10 @@
  \begin{syntax}
  \cmd{\footref}\marg{label} \\
  \end{syntax}
-@@ -19683,18 +20418,18 @@
+ \glossary(footref)%
+   {\cs{footref}{labstr}}%
+   {Reference a labelled footnote.}
+     On occasions it may be desireable to make more than one reference
  to the text of a footnote\index{footnote!reference}. This can be done by 
  putting a \cmd{\label} in the footnote and then using \cmd{\footref} to refer 
  to the label; this prints the footnote mark. For example:
@@ -2409,7 +3182,7 @@
  \begin{lcode}
  ...\footnote{...values for the kerning.\label{fn:kerning}} ...
  ...
-@@ -19702,10 +20437,14 @@
+ ... The footnote\footref{fn:kerning} on \pref{fn:kerning} ... \\
  \end{lcode}
  In this manual, the last line above prints:
  \begin{syntax}
@@ -2425,7 +3198,17 @@
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %%%% from membook
  
-@@ -19747,19 +20486,23 @@
+ \begin{syntax}
+ \cmd{\multfootsep} \\
+ \end{syntax}
+ \glossary(multfootsep)%
+   {\cs{multfootsep}}%
+@@ -19742,29 +20481,33 @@
+ peculiar. Following the \cmd{\feetbelowfloat} declaration footnotes 
+ will be typeset at the bottom of the page below any bottom 
+ floats;\index{footnote!bottom float} 
+ they will also be typeset at the bottom of \cmd{\raggedbottom} pages 
+ as opposed to being
  put just after the bottom line of text. The standard positioning is
  used following the \cmd{\feetabovefloat} declaration, which is the default.
  
@@ -2462,7 +3245,17 @@
  
  
  
-@@ -20338,8 +21081,10 @@
+ \subsection{A variety of footnotes}
+ 
+  \begin{syntax}
+  \cmd{\verbfootnote}\oarg{num}\marg{text} \\
+  \end{syntax}
+@@ -20333,18 +21076,20 @@
+ \cmd{\twocolumnfootnotes} and friends.
+ 
+ 
+ 
+ \index{footnote!styling|)}
  
  \index{footnote|)}
  
@@ -2474,7 +3267,17 @@
  \LMnote{2010/01/**}{added a reference back to \cs{setmarginnotes}}
       Some marginalia can also be considered to be kinds of floats. 
  The class provides the standard margin notes\index{margin note} 
-@@ -21278,7 +22023,8 @@
+ via \cmd{\marginpar}. Remember that the width of the margin note, the
+ separation from the text, and the separation from one \cmd{\marginpar}
+ to another is controlled by \cmd{\setmarginnotes}, see
+ Section~\ref{sec:head-foot-marg} on
+ page~\pageref{sec:head-foot-marg}. 
+@@ -21273,29 +22018,33 @@
+ nothing by default. But if \cmd{\notepageref} is issued in the
+ preamble two things happen, (1) each page note issues a label such
+ that we can refer back to its page, and (2) \cmd{\pageinnotes} calls
+ \cmd{\printpageinnotes} (or if \Lpack{hyperref} is loaded
+ \cmd{\printpageinnoteshyperref}) 
  \begin{syntax}
  \cmd{\pageinnotes}\marg{auto generated note label key}\\
  \cmd{\printpageinnotes}\marg{auto generated note label key}\\  
@@ -2484,7 +3287,12 @@
  \end{syntax}
  \glossary(pageinnotes)%
  {\cs{pageinnotes}\marg{pagenum}}%
-@@ -21291,6 +22037,9 @@
+ {Controls the printing of an endnote's page reference number.}%
+ \glossary(printpageinnotes)%
+ {\cs{printpageinnotes}\marg{pagenum}}%
+ {Prints an endnote's page reference number.}%
+ \glossary(printpageinnoteshypreref)%
+ {\cs{printpageinnoteshyperref}\marg{pagenum}}%
  {Prints an endnote's page reference number whenever the
    \protect\Lpack{hyperref} package is used, it will include a
    hyperlink back to the page in question.}%
@@ -2494,7 +3302,17 @@
  Default definitions
  \begin{lcode}
  \newcommand*{\printpageinnotes}[1]{%
-@@ -23181,9 +23930,9 @@
+     (\pagerefname\ \pageref{#1})\space}
+ \newcommand\printpageinnoteshyperref[1]{%
+    (\hyperref[#1]{\pagerefname\ \pageref*{#1}})\space}
+ \end{lcode}
+ That is if \Lpack{hyperref} is loaded the entire text \meta{page 3}
+@@ -23176,19 +23925,19 @@
+ 
+ \index{verse|)}
+ 
+ %#% extend
+ %#% extstart include boxes-verbatims-and-files.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2507,7 +3325,17 @@
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %%%%%% membook
-@@ -23317,16 +24066,28 @@
+ 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \chapter{Boxes, verbatims and files} \label{chap:bvf}\label{chap:boxes}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@@ -23312,26 +24061,38 @@
+ \definecolor{shadecolor}{gray}{0.9}
+ \end{lcode}
+ For complete information on this see the documentation for the
+ \Lpack{color} or \Lpack{xcolor} packages, or one of the \ltx\ books like the
+ \textit{Graphics Companion}~\cite{GCOMPANION}.
  In the \Ie{snugshaded} environment the box clings more closely to its
  contents than it does in the \Ie{shaded} environment.
  
@@ -2540,7 +3368,17 @@
  
  \begin{syntax}
  \lnc{\FrameRule} \lnc{\FrameSep} \lnc{\FrameHeightAdjust} \\
-@@ -24143,6 +24904,11 @@
+ \end{syntax}
+ \glossary(FrameRule)%
+   {\cs{FrameRule}}%
+   {Thickness of the rules around an \Pe{framed} environment.}
+ \glossary(FrameSep)%
+@@ -24138,16 +24899,21 @@
+ Line numbers are typeset inside the box after the declaration 
+ \cmd{\bvnumberinside} and are typeset outside the box after the
+ declaration \cmd{\bvnumbersoutside}. The default is to print
+ the numbers inside the box.
+ 
      Verbatim tabbing, but not wrapping, applies to the \Ie{boxedverbatim}
  environment.
  
@@ -2552,7 +3390,17 @@
  \subsection{New verbatims}
  
  \index{verbatim!new|(}
-@@ -25533,9 +26299,9 @@
+     The class implementation of verbatims lets you define your
+ own kind of verbatim environment. Unfortunately this is not quite
+ as simple as saying
+ \begin{lcode}
+ \newverbatim{myverbatim}{...}{...} 
+@@ -25528,19 +26294,19 @@
+ \index{reference!by name|)}
+ 
+ 
+ %#% extend
+ %#% extstart include backmatter.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2565,7 +3413,17 @@
  
  
  \LMnote{2010/06/09}{Several \cs{ixfile}'s changed to \cs{pixfile},
-@@ -26356,6 +27122,8 @@
+   with \cs{ixfile} only, no text appears in the output }
+ 
+ 
+ \chapter{\prBackmatter} \label{chap:backmatter}
+ 
+@@ -26351,16 +27117,18 @@
+   Railway Bridge of the Silv'ry Tay} \\
+ Alas! I am very sorry to say \\
+ That ninety lives have been taken away \\
+ On the last Sabbath day of 1879, \\
+ Which will be remember'd for a very long time.
  \end{verse}}
  was mentioned on page 37.
  
@@ -2574,7 +3432,17 @@
  
  \subsection{MakeIndex}
  
-@@ -26612,7 +27380,7 @@
+     It is possible, but time consuming and error prone, to create your
+ index by hand from the output of the \cmd{\index} commands you have scattered
+ throughout the text. Most use the \Lmakeindex\ program to do this
+ for them; there is also the \Lprog{xindy} program~\cite{XINDY} 
+ but this is much less known. 
+@@ -26607,17 +27375,17 @@
+ \end{lcode}
+ 
+ \subsubsection{The \texttt{"} and \texttt{\bs} characters}
+ 
+     If, for some reason, you want to index something that includes one
  of the \texttt{!}, \texttt{@}, \texttt{|} or \texttt{"} characters there
  is the difficulty of persuading \Lmakeindex\ to ignore the special
  meaning. This is solved by the \texttt{quote} specifier, which is
@@ -2583,7 +3451,17 @@
  The character
  immediately after \texttt{"} is treated as non-special. For example,
  if you needed to index the \texttt{@} and \texttt{!} characters:
-@@ -27376,9 +28144,9 @@
+ \begin{lcode}
+ \index{"@ (commercial at)}
+ \index{"! (exclamation)}
+ \end{lcode}
+ The leading \texttt{"} is stripped off before entries are alphabetized.
+@@ -27371,19 +28139,19 @@
+ 
+ 
+ 
+ %#% extend
+ %#% extstart include miscellaneous.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2596,7 +3474,17 @@
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  %\clearpage
-@@ -27494,6 +28262,20 @@
+ %\pagestyle{Ruled}
+ %%\chapterstyle{demo}
+ %\chapterstyle{veelo}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ 
+@@ -27489,33 +28257,54 @@
+   {\cs{showtrimson}}%
+   {If the \Popt{showtrims} option has been used, switch on any trim marks 
+   (this is the default).}
+ If the \Lopt{showtrims} class option has been used then the \cmd{\showtrimsoff}
+ declaration switches off the trim marks; the \cmd{\showtrimson} declaration,
  which is the default, switches on the trim marks. These declarations do
  nothing if the \Lopt{showtrims} option has not been used.
  
@@ -2617,7 +3505,13 @@
  \LMnote{2013/05/01}{added caveat}
  \begin{caveat}
    Most modern \LaTeX\ editors make use of the \emph{synctex} features
-@@ -27507,10 +28289,17 @@
+   in, say, pdf\LaTeX\ to enable \emph{reverse search} from the PDF
+   previewer back to the source code in the editor. That is, click in a
+   certain manner in the PDF previewer and you will be taken to the
+   corresponding (or there about) line in the source code.
+ 
+   Apparently the \emph{synctex} feature does not like the trimmarks
+   the class provide, or the \pstyle{showlocs} page style. The code
    line one is referred back to may be off by tens of lines.
  
    Currently, there is no known workarounds for this deficiency.
@@ -2635,7 +3529,17 @@
      Trim marks can be placed at each corner of the (trimmed) page, and also
  at the middle of each side of the page.
  
-@@ -27928,6 +28717,17 @@
+ \begin{syntax}
+ \cmd{\trimXmarks} \\
+ \cmd{\trimLmarks} \\
+ \cmd{\trimFrame} \\
+ \cmd{\trimNone} \\
+@@ -27923,16 +28712,27 @@
+ does nothing to the original definition of \verb?\thectr?.
+ 
+     Any number of \verb?\counterwithin{ctr}{...}? and \verb?\counterwithout{ctr}{...}?
+ commands can be issued for a given counter \Pcn{ctr} if you wish to toggle
+ between the two styles. The current value of \Pcn{ctr} is unaffected by these
  commands. If you want to change the value use \cmd{\setcounter}, and to change
  the typesetting style use \cmd{\renewcommand} on \cs{thectr}.
  
@@ -2653,7 +3557,17 @@
  \LMnote{2010/01/30}{Added \cs{letcountercounter}}
  \begin{syntax}
    \cmd{\letcountercounter}\marg{counterA}\marg{counterB}\\
-@@ -28787,8 +29587,9 @@
+   \cmd{\unletcounter}\marg{counterA}\\
+ \end{syntax}
+ At times it is handy to `let' one counter act as if it was a
+ different counter. Say you have two constructions, each with their
+ own counter A and B, now you want them to cooperate, counting in
+@@ -28782,74 +29582,93 @@
+     On modern systems \pixpdfltx\ produces a \file{pdf} file by default.
+ 
+ If you want a \file{dvi} file output use \ltx\ and if you want a
+ \file{pdf} file use \pdfltx.
+ 
  \begin{syntax}
  \piif{ifpdf} ... \verb?\fi? \\
  \end{syntax}
@@ -2665,7 +3579,13 @@
  \begin{lcode}
  \ifpdf
    code for pdfLaTeX only 
-@@ -28802,17 +29603,19 @@
+ \else
+   code for LaTeX only
+ \fi
+ \end{lcode}
+ If there is no \ltx\ specific code then don't write the \verb?\else? part.
+ 
+ \subsection{Checking for etex}
  
      Modern \ltx\ distributions use \pixetx, which is an extended version
  of \tx, as the underlying engine. \pixetx\ provides some more primitives
@@ -2691,7 +3611,11 @@
  \begin{lcode}
  \ifetex
    %%% code only processible by etex
-@@ -28824,8 +29627,8 @@
+ \else
+   \typeout{etex is not available}
+ \fi
+ \end{lcode}
+ 
  
  \subsection{Checking for XeTeX}
  
@@ -2702,7 +3626,8 @@
  
  \begin{syntax}
  \piif{ifxetex} \\
-@@ -28834,17 +29637,33 @@
+ \end{syntax}
+ \glossary(ifxetex)%
    {\cs{ifxetex}}%
    {\ptrue\ if \xetx\ is being used to process the document.}
  
@@ -2742,7 +3667,17 @@
  
  
  \section{Leading}
-@@ -29363,6 +30182,28 @@
+ 
+     LaTeX automatically uses different leading\index{leading} for different
+ font sizes. 
+ \begin{syntax}
+ \lnc{\baselineskip} \lnc{\onelineskip} \\
+@@ -29358,56 +30177,104 @@
+ \usepackage{index}
+ \end{lcode}
+ in your preamble.
+ 
+ 
  
  \subsection{Inserting code before and after a file, package or class}
  
@@ -2771,7 +3706,15 @@
      The kernel provides two commands, \cmd{\AtBeginDocument}
  and \cmd{\AtEndDocument} which can only be used in the preamble, 
  for inserting code at the start and end
-@@ -29378,31 +30219,57 @@
+ of the \Ie{document} environment. 
+ 
+     The kernel also provides the macros 
+ \cmd{\AtEndOfPackage}\marg{code} and \cmd{\AtEndOfClass}\marg{code}
+  for inserting code at the end of the current package or class. More precisely,
+ these macros call the \meta{code} after the package or class file has been
+ input via \cmd{\InputIfFileExists}.
+ 
+ The class provides a more comprensive set of macros for code 
  insertions, which should be used before the relevant file is called for.
  
  \begin{syntax}
@@ -2846,7 +3789,17 @@
  \begin{syntax}
  \cmd{\AtBeginPackage}\marg{pack}\marg{code} \\
  \cmd{\AtEndPackage}\marg{pack}\marg{code} \\
-@@ -29433,6 +30300,14 @@
+ \cmd{\RequireAtEndPackage}\marg{pack}\marg{code} \\
+ \end{syntax}
+ \glossary(AtBeginPackage)%
+   {\cs{AtBeginPackage}\marg{pack}\marg{code}}%
+   {Inserts \meta{code} just before the \meta{pack} package is used.}%
+@@ -29428,16 +30295,24 @@
+ otherwise nothing will happen.
+ 
+     The \cmd{\RequireAtEndPackage} command will, 
+ like \cmd{\AtEndPackage}, insert \meta{code} 
+ at the end of the \meta{pack} package if it has not yet been used.
  If the package has already been used then the \meta{code} is 
  called immediately.
  
@@ -2861,7 +3814,17 @@
  
  \begin{syntax}
  \cmd{\AtBeginClass}\marg{class}\marg{code} \\
-@@ -29464,61 +30339,75 @@
+ \cmd{\AtEndClass}\marg{class}\marg{code} \\
+ \cmd{\RequireAtEndClass}\marg{class}\marg{code} \\
+ \end{syntax}
+ \glossary(AtBeginClass)%
+   {\cs{AtBeginClass}\marg{pack}\marg{code}}%
+@@ -29459,71 +30334,85 @@
+ otherwise nothing will happen.
+ 
+     The \cmd{\RequireAtEndClass} command will, 
+ like \cmd{\AtEndClass}, insert \meta{code} 
+ at the end of the \meta{class} class if it has not yet been used.
  If the class has already been used then the \meta{code} is 
  called immediately.
  
@@ -2986,7 +3949,17 @@
  
  \renewcommand{\memsecinfo}[5]{\edef\Margi{#1}\edef\Margii{#2}%
                                \edef\Margiii{#3}\edef\Margiv{#4}%
-@@ -29936,9 +30825,9 @@
+                               \edef\Margv{#5}}
+ \section{Heading hooks}
+ 
+     On 2nd September 2005 I posted two messages to the 
+ \texttt{comp.text.tex} newsgroup
+@@ -29931,19 +30820,19 @@
+ 
+ 
+ 
+ %#% extend
+ %#% extstart include an-example-book-design.tex
  
  \svnidlong
  {$Ignore: $}
@@ -2999,7 +3972,17 @@
  
  
  %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-@@ -30207,6 +31096,7 @@
+ 
+ \LMnote{2010/07/01}{This belongs here}
+ \clearpage
+ 
+ \makeatletter
+@@ -30202,16 +31091,17 @@
+ \setmarginnotes{17pt}{51pt}{\onelineskip}
+ \checkandfixthelayout
+ \currentstock
+ \oddpagelayouttrue
+ \twocolumnlayoutfalse
  \drawmarginparstrue
  \drawparametersfalse
  \drawstock
@@ -3007,7 +3990,17 @@
  \legend{An illustration of Bringhurst's page layout style when printed
  on US letter paper stock. Also shown are the values used for the
  page layout parameters for this design.} \label{fig:bplayout}
-@@ -31543,9 +32433,9 @@
+ \end{figure}
+ 
+ \section{Specifying the sectional titling styles}
+ 
+ \subsection{The chapter style}
+@@ -31538,19 +32428,19 @@
+ %%\chapterstyle{normal}
+ %%\chapterstyle{section}
+ %%\chapterstyle{demo3}
+ 
+ %#% extstart include packages-and-maros.tex
  
  \svnidlong
  {$Ignore: $}
@@ -3020,7 +4013,17 @@
  
  \chapter{Packages and macros}
  
-@@ -31576,6 +32466,11 @@
+     The \Mname\ class does not provide for everything that you
+ have seen in the manual. I have used some packages that you are very likely
+ to have in your \ltx\ distribution, and have supplemented these with some
+ additional macros, some of which I will show you.
+ 
+@@ -31571,16 +32461,21 @@
+       \verb|\RequirePackage{etex}| \emph{before} \cs{documentclass}! 
+ \item \Lpack{url}~\cite{URL} is for typesetting URL's without worrying
+   about special characters or line breaking.
+ \item \Lpack{fixltx2e}~\cite{FIXLTX2E} eliminates some infelicities
+       of the original LaTeX kernel. In particular it maintains the order
        of floats\index{float} on a twocolumn\index{column!double} page 
        and ensures the correct marking
        on a twocolumn\index{column!double} page.
@@ -3032,7 +4035,17 @@
  \item \Lpack{alltt}~\cite{ALLTT} is a basic package which provides a 
        verbatim-like environment but \verb?\?, \verb?{?, and \verb?}? have their
        usual meanings (i.e., \ltx\ commands are not disabled).
-@@ -31797,6 +32692,11 @@
+ \item \Lpack{graphicx}~\cite{GRAPHICX} is a required package for
+       performing various kinds of graphical functions. 
+ \item \Lpack{color}~\cite{COLOR} is a required package for using color,
+        or \Lpack{xcolor}~\cite{XCOLOR} is an enhanced version of \Lpack{color}.
+ \item \Lpack{latexsym} gives access to some extra symbols.
+@@ -31792,16 +32687,21 @@
+ 
+ \chapter{Showcases}
+ \label{cha:showcases}
+ 
+ The \theclass\ memoir class has several features that involve a
  \emph{style} and it provide several of these styles. This chapter is
  used to showcase these styles.
  
@@ -3044,7 +4057,17 @@
  \section{Chapter styles}
  \label{sec:chapter-styles}
  
-@@ -32105,6 +33005,8 @@
+ \index{chapterstyle|(}
+ 
+ For more about defining chapter styles, see
+ section~\ref{sec:chapter-headings}, page~\pageref{sec:chapter-headings}.
+ 
+@@ -32100,16 +33000,18 @@
+ 
+     If you use this style you will also need to use the \Lpack{graphicx} 
+ package~\cite{GRAPHICX} because of the \cmd{\resizebox} macro. 
+ The \cstyle{veelo} style works best for chapters that start 
+ on recto pages.
  
  \index{chapterstyle|)}
  
@@ -3053,7 +4076,17 @@
  
  %#% extend
  %#% extstart include sniplets.tex
-@@ -37770,9 +38672,9 @@
+ 
+ 
+ \svnidlong
+ {$Ignore: $}
+ {$LastChangedDate: 2015-03-05 18:49:59 +0100 (Thu, 05 Mar 2015) $}
+@@ -37765,62 +38667,63 @@
+ %%\index{memoir class!warning|)}
+ \Iclasssub{memoir}{warning|)}
+ 
+ %#% extend
+ %#% extstart include comments.tex
  
  \svnidlong
  {$Ignore: $}
@@ -3066,7 +4099,11 @@
  
  \chapter{Comments}
  \label{cha:comments}
-@@ -37784,7 +38686,8 @@
+ 
+ \section{Algorithms}
+ \label{sec:algorithms}
+ 
+ Over time we may use this section to explain, or list some of the
  algorithms for some of the macros in the class. The information may be
  useful to some.
  
@@ -3076,7 +4113,10 @@
  \label{sec:auto-csmarg}
  
  This algorithm is used within \cmd{\fixthelayout} unless the user have
-@@ -37795,19 +38698,19 @@
+ used \cmd{\setmarginnotes}.
+ 
+ \noindent
+ \begin{framed}
    \vskip-2\baselineskip
    \begin{small}
  \begin{verbatim}
@@ -3102,7 +4142,7 @@
        marginparwidth = inner margin
      else
        marginparwidth = outer margin
-@@ -37815,7 +38718,7 @@
+     end if
    end if
  end if
  marginparwidth = marginparwidth - 2marginparsep
@@ -3111,7 +4151,17 @@
    marginparwidth = 1pt
  end if
  \end{verbatim}
-@@ -37994,10 +38897,10 @@
+   \end{small}
+ \end{framed}
+ 
+ 
+ %#% extend
+@@ -37989,20 +38892,20 @@
+ \bibitem[Bur59]{BURT59}
+   C.~L.~Burt.
+   \newblock \emph{A Psychological Study of Typography}.
+   \newblock Cambridge University Press,
+   \newblock 1959.
  \end{comment}
  
  %%% keep
@@ -3124,7 +4174,17 @@
    \newblock (Available from CTAN via
               \CTANurl{/macros/latex/required/tools/})
  
-@@ -38035,10 +38938,11 @@
+ %%% keep
+ \bibitem[Car95]{AFTERPAGE}
+   David Carlisle.
+   \newblock \emph{The afterpage package}.
+   \newblock October, 1995.
+@@ -38030,43 +38933,46 @@
+   David Carlisle.
+   \newblock \emph{The remreset package}.
+   \newblock August, 1998.
+   \newblock (Available from CTAN in
+              \url{/macros/latex/contrib/carlisle})
  \end{comment}
  
  %%% keep
@@ -3138,7 +4198,12 @@
    \newblock (Available from CTAN via
               \CTANurl{/macros/latex/required/tools/})
  
-@@ -38051,17 +38955,19 @@
+ %%% keep
+ \bibitem[CR99]{GRAPHICX}
+   David Carlisle and Sebastian Rahtz.
+   \newblock \emph{The graphicx package}.
+   \newblock February, 1999.
+   \newblock (Available from CTAN via
               \CTANurl{/macros/latex/required/graphics/})
  
  %%% keep
@@ -3161,7 +4226,17 @@
  \newblock (Available from CTAN in 
        \texttt{/macros/latex/contrib/textcase})
  
-@@ -38248,10 +39154,11 @@
+ 
+ 
+ %%% keep
+ \bibitem[Car05]{COLOR}
+   David Carlisle.
+@@ -38243,20 +39149,21 @@
+ \bibitem[FP80]{FAUX80}
+ I.~D. Faux and M.~J. Pratt.
+ \newblock {\em Computational Geometry for Design and Manufacture}.
+ \newblock Ellis Horwood, 1980.
+ 
  
  
  %%% keep
@@ -3175,7 +4250,17 @@
    \newblock (Available from CTAN via
              \CTANurl{/macros/latex/contrib/booktabs})
  
-@@ -38545,17 +39452,34 @@
+ \begin{comment}
+ \bibitem[Fli98]{LETTRINE}
+   Daniel Flipo.
+   \newblock \emph{Typesetting `lettrines' in LaTeX2e documents}.
+   \newblock March, 1998.
+@@ -38540,35 +39447,54 @@
+   Frank Mittelbach.
+   \newblock \emph{The doc and shortvrb packages}.
+   \newblock May, 1995.
+   \newblock (Available from CTAN in 
+             \url{/macros/latex/base})
  \end{comment}
  
  %%% keep
@@ -3215,7 +4300,7 @@
    \newblock (Available from CTAN (the \texttt{array} package) via
              \CTANurl{/macros/latex/required/tools/})
  
-@@ -38563,7 +39487,9 @@
+ %%% keep
  \bibitem[MC00]{FIXLTX2E}
    Frank Mittelbach and David Carlisle.
    \newblock \emph{The fixltx2e package}.
@@ -3226,7 +4311,17 @@
    \newblock (Available from CTAN via 
              \CTANurl{/macros/latex/base/})
  
-@@ -39014,13 +39940,6 @@
+ %%% keep
+ \bibitem[MG\textsuperscript{+}04]{COMPANION}
+   Frank Mittelbach, Michael Goossens, et al.
+   \newblock \emph{The LaTeX Companion: Second Edition}.
+   \newblock Addison-Wesley, 2004.
+@@ -39009,23 +39935,16 @@
+ \bibitem[Wil01l]{BOOKLET}
+   Peter Wilson.
+   \newblock \emph{Printing booklets with LaTeX}
+   \newblock August, 2001.
+   \newblock (Available from CTAN in 
              \url{/macros/latex/contrib/booklet})
  \end{comment}
  
@@ -3240,7 +4335,17 @@
  
  %%% keep
  \bibitem[Wil03b]{LEDMAC}
-@@ -39055,6 +39974,13 @@
+   Peter Wilson.
+   \newblock \emph{ledmac: A presumptuous attempt to port EDMAC and
+     TABMAC to LaTeX}
+   \newblock November, 2003.
+   \newblock (Available from CTAN via 
+@@ -39050,16 +39969,23 @@
+ \bibitem[Wil04b]{PAGENOTE}
+   Peter Wilson.
+   \newblock \emph{The pagenote package}
+   \newblock September, 2004.
+   \newblock (Available from CTAN via 
              \CTANurl{/macros/latex/contrib/pagenote/})
  
  
@@ -3254,7 +4359,17 @@
  
  
  %%% keep
-@@ -39120,26 +40046,26 @@
+ \bibitem[Wil07a]{TITLEPAGES}
+   Peter Wilson.
+   \newblock \emph{Some Examples of Title Pages}.
+   \newblock Herries Press, 2007.
+   \newblock (Available from CTAN via
+@@ -39115,46 +40041,56 @@
+ %%% keep
+ \bibitem[Wil09a]{FONTTABLE}
+   Peter Wilson.
+   \newblock \emph{The fonttable package}
+   \newblock April, 2009.
    \newblock (Available from CTAN via 
              \CTANurl{/macros/latex/contrib/fonttable/})
  
@@ -3287,7 +4402,10 @@
    \newblock (Available from CTAN via
              \CTANurl{/info/memdesign/})
  
-@@ -39150,6 +40076,16 @@
+ 
+ %%% keep
+ \bibitem[Wil??]{RUMOUR}
+ Peter Wilson.
  \newblock \emph{A Rumour of Humour: A scientist's commonplace book}.
  \newblock To be published.
  
@@ -3304,7 +4422,17 @@
  \begin{comment}
  \bibitem[Wis03]{WISHART03}
  David Wishart.
-@@ -39206,7 +40142,26 @@
+ \newblock \emph{The Printing of Mathematics}
+ \newblock in \emph{Type \& Typography: Highlights from \emph{Matrix}, the
+        review for printers \& bibliophiles}.
+ \newblock Mark Batty Publisher, 2003.
+ \newblock ISBN 0--9715687--6--6.
+@@ -39201,17 +40137,36 @@
+ \indexintoc
+ 
+ %%%\raggedright  does nasty things to index entries
+ \printindex
+ 
  \onecolindex
  \renewcommand*{\preindexhook}{}
  \renewcommand*{\indexname}{Index of first lines}
@@ -3332,7 +4460,17 @@
  \printindex[lines]
  
  \cleardoublepage
-@@ -39228,8 +40183,13 @@
+ \pagestyle{empty}
+ \null\vfil
+ 
+ \begin{adjustwidth}{1in}{1in}
+ \begin{center}
+@@ -39223,18 +40178,23 @@
+ The body text is set 10/12pt on a
+ 33pc measure with Palatino designed by Hermann Zapf, which includes 
+ italics and small caps. Other fonts include
+ Sans, Slanted and Typewriter from Donald Knuth's 
+ Computer Modern family.
  
  \end{center}
  
@@ -3346,3 +4484,8 @@
  \vfil
  
  %#% extend
+ 
+ 
+ \end{document}
+ 
+ \endinput
