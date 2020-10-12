@@ -437,42 +437,47 @@ Maintained by Lars Madsen
 
 \chapter{Preface}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Some fifteen or so years ago I started developing code for typesetting
 documents that would make it easy for designers to get the appearance
 they had in mind.
-\switchFrench
-    Il y a quinze ans
+\switchFrench\TS{1}
+Il y a une quinzaine d'années, j'ai commencé à développer un code pour la composition de documents qui permettrait aux concepteurs d'obtenir facilement l'apparence qu'ils avaient en tête.
 
 \switchEng
 % In 2001 this resulted in the \Pclass{memoir} class for 
 %use with the \ltx\ typesetting system developed by Leslie Lamport based 
 %on Donald Knuth's \tx\ system.
-\switchFrench
 
-\switchEng
    While doing this I read a lot about book design and have tried my hand
 at printing a variety of books and ephemera using hand set lead type 
 and a hand operated Chandler \& Price 1904 Old Style 8 by 12 platen
 press, pretty much as Gutenberg did some five and a half centuries ago.
+\switchFrench\TS{1}
+Parallèlement, j'ai beaucoup lu sur la conception de livres et je me suis essayé à l'impression d'une variété de livres et d'objets éphémères à l'aide de caractères en plomb réglés à la main et d'une presse à platine Chandler \& Price 1904 Old Style 8 par 12 actionnée à la main, à peu près comme Gutenberg l'a fait il y a cinq siècles et demi.
 
 \switchEng
    These notes are partly based on my own amateur
 experience and feelings but the majority have been culled from the
 professionals.
+\switchFrench\TS{1}
+Ces notes sont en partie basées sur mon expérience et mes sentiments d'amateur, mais la majorité a été recueillie auprès des professionnels.
 
-\switchEng
+\end{paracol}
+
 {\raggedleft{\scshape Peter Wilson} \\ Seattle, WA \\ July 2009\par}
-
 
 \vskip 3cm
 
+\begin{paracol}{2}
 \switchEng
 \noindent
 This document is maintained by Lars Madsen,
 daleif(at)math.au.dk. Please write him if you find any typos, errors or
 other omissions.
+\switchFrench\TS{2}
+Ce document est maintenu par Lars Madsen, \url{daleif(at)math.au.dk}. Veuillez lui écrire si vous trouvez des coquilles, des erreurs ou autres omissions.
 
 \end{paracol}
 
@@ -484,12 +489,14 @@ other omissions.
 
 \chapter{Introduction}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     These notes briefly cover some aspects of book design and typography, 
 independently of the means of typesetting. Among
 the several books on the subject listed in the \bibname{} I prefer
 Bringhurst's \btitle{The Elements of Typographic Style}~\autocite{BRINGHURST99}.
+\switchFrench\TS{1}
+Ces notes abordent brièvement certains aspects de la conception et de la typographie des livres, indépendamment des des moyens de composition. Parmi les nombreux ouvrages sur le sujet cités dans la bibliographie je préfère \btitle{The Elements of Typographic Style} de Bringhurst~\autocite{BRINGHURST99}.
 
 \switchEng
     The notes originally formed the first part of a user manual for
@@ -502,6 +509,8 @@ and as the notes have grown in size and \Pclass{memoir}'s capabilities
 have been extended the manual also grew to approaching 700 pages~\autocite{MEMMAN}. 
 At that point seemed advantageous to separate the design notes from the 
 technicalities, hence this document.
+\switchFrench\TS{1}
+Ces notes constituaient à l'origine la première partie d'un manuel d'utilisation de la classe \Pclass{memoir} à utiliser avec le système de composition \ltx\ développé par Leslie Lamport~\autocite{LAMPORT94} sur la base du système \tx\ de Donald Knuth~\autocite{TEXBOOK}. Le manuel a été publié pour la première fois en~2001 et, comme les notes ont augmenté en taille et les capacités de mémoire ont été étendues, le manuel a également augmenté jusqu'à près de 700~pages~\autocite{MEMMAN}. À ce stade, il a semblé plus pratique de séparer les notes de conception des aspects techniques, d'où ce document.
 
 \end{paracol}
 
@@ -510,11 +519,14 @@ technicalities, hence this document.
 \chapter{Terminology}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Like all professions and trades, typographers and printers have their
 specialised vocabulary.
+\switchFrench\TS{1}
+Comme toutes les professions et tous les métiers, les typographes et les imprimeurs ont leur vocabulaire spécialisé.
 
+\switchEng
 First there is the question of pages, leaves and sheets.  The trimmed
 sheets of paper\index{paper} that make up a book are called
 \emph{leaves}\index{leaf}, and I will call the untrimmed sheets the
@@ -526,7 +538,10 @@ leaf, and the side of the lefthand leaf that you see is called the
 \emph{verso}\index{verso} page of that leaf.  So, a leaf has a recto
 and a verso page. Recto pages are the odd-numbered pages and verso
 pages are even-numbered.
+\switchFrench\TS{1}
+Tout d'abord, il y a la question des pages, des feuilles et des feuilles. Les feuilles de papier rognées qui composent un livre sont appelées feuilles, et j'appellerai les feuilles non rognées le matériau de base. Une feuille a deux côtés, et une page est l'un des côtés d'une feuille. Si vous imaginez qu'un livre est ouvert à plat, vous pouvez voir deux feuilles. Le recto de la feuille de droite s'appelle la page recto de cette feuille, et le côté de la feuille de gauche que vous voyez s'appelle la page verso de cette feuille. Une feuille a donc une page recto et une page verso. Les pages recto sont les pages impaires et les pages verso sont les pages paires.
 
+\switchEng
    Then there is the question of folios. The typographical term for
 the number of a page is \emph{folio}\index{folio}.
 This is not to be confused with
@@ -539,7 +554,12 @@ folio, and there may be pages that do not have a folio at all. Pages with
 folios, whether printed or not, form the \emph{pagination}\index{pagination} 
 of the book. Pages
 that are not counted in the pagination have no folios.
+\switchFrench\TS{1}
+Ensuite, il y a la question des folios. Le terme typographique pour désigner le numéro d'une page est folio. Il ne faut pas confondre ce terme avec celui utilisé dans l'expression \og{}premier folio de Shakespeare\fg{}, qui fait référence à la hauteur et à la largeur du livre, ni avec celui utilisé dans l'expression \og{}signature folio\fg{}, qui fait référence au nombre de fois qu'une feuille imprimée est pliée. Toutes les pages d'un livre n'ont pas un folio imprimé, et il peut y avoir des pages qui n'ont pas de folio du tout. Les pages avec folio, qu'elles soient imprimées ou non, constituent la pagination du livre. Les pages qui ne sont pas comptées dans la pagination n'ont pas de folio.
+\end{paracol}
 
+\begin{paracol}{2}
+\switchEng
  I have not been able to find what I think is a good
 definition for `type' as it seems to be used in different contexts with
 different meanings. It appears to be a kind of generic word; for instance
@@ -548,10 +568,16 @@ For my purposes I propose that \emph{type}\index{type|seealso{typeface}} is
 one or more printable characters (or variations or extensions to this idea).  
 Printers use the term \emph{sort}\index{sort} to refer to one piece of lead
 type.
+\switchFrench\TS{1}
+Je n'ai pas été en mesure de trouver ce que je pense être une bonne définition du terme \og{}type\fg{}, car il semble être utilisé dans différents contextes avec des significations différentes. Il semble que ce soit une sorte de mot générique ; par exemple, il y a des créateurs de caractères, des coupeurs de caractères, des régleurs de caractères, des fonderies de caractères... Pour mon propos, je propose que le terme "type" désigne un ou plusieurs caractères imprimables (ou des variations ou extensions de cette idée). Les imprimeurs utilisent le terme de tri pour désigner une pièce de caractères en plomb.
 
+\switchEng
    A \emph{typeface}\index{typeface} is a set of one or more fonts, in one
 or more sizes, designed as a stylistic whole. 
+\switchFrench\TS{1}
+Un caractère est un ensemble d'une ou plusieurs polices, dans une ou plusieurs tailles, conçu comme un tout stylistique.
 
+\switchEng
    A \emph{font}\index{font} is a set of characters. In the days of 
 metal type and hot lead a font meant a complete alphabet and auxiliary
 characters in a given size. More recently it is taken to mean a complete
@@ -559,10 +585,17 @@ set of characters regardless of size. A font of roman type normally
 consists of CAPITAL LETTERS, \textsc{small capitals}, lowercase letters,
 numbers, punctuation marks, ligatures (such as `fi' and `ffi'), and a
 few special symbols like \&.
+\switchFrench\TS{1}
+Une police est un ensemble de caractères. À l'époque des caractères métalliques et du plomb chaud, une police de caractères désignait un alphabet complet et des caractères auxiliaires dans une taille donnée. Plus récemment, on considère qu'il s'agit d'un ensemble complet de caractères, quelle que soit leur taille. Une police de caractères romains comprend normalement des MAJUSCULES, des \textsc{petites majuscules}, des lettres minuscules, des chiffres, des signes de ponctuation, des ligatures (telles que \og{}fi\fg{} et \og{}ffi\fg{}) et quelques symboles spéciaux comme \og{}\&\fg{}.
 
+\switchEng
    A \emph{font family}\index{font!family} is a set of fonts designed to
 work harmoniously together, such as a pair of roman and italic fonts.
+\switchFrench\TS{1}
+Une famille de polices est un ensemble de polices conçues pour fonctionner harmonieusement ensemble, comme une paire de polices romaines et italiques.
 
+
+\switchEng
    The size of a font\index{font} is expressed in points\index{point} 
 (72.27 points equals 1 inch
 equals 25.4 millimetre). The size is a rough indication of the height
@@ -570,6 +603,9 @@ of the tallest character, but different fonts with the same size may have
 very different actual heights. Traditionally font sizes were referred to
 by names (see \tref{tab:fontsizes}) but nowadays just the number of points 
 is used.
+\switchFrench\TS{1}
+La taille d'une police est exprimée en points (72,27~points, soit 1~pouce, équivaut à 25,4~millimètres). La taille est une indication approximative de la hauteur du caractère le plus haut, mais des polices différentes ayant la même taille peuvent avoir des hauteurs réelles très différentes. Traditionnellement, les tailles de police étaient désignées par des noms (voir \tref{tab:fontsizes}), mais de nos jours, seul le nombre de points est utilisé.
+
 \end{paracol}
 
 \begin{table}
@@ -610,7 +646,7 @@ Points & Name & Points & Name \\ \midrule
 \end{table}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The typographers' and printers' term for the vertical space between
 the lines of normal text is \emph{leading}\index{leading}, which is also
@@ -619,27 +655,39 @@ A convention for describing the font and leading is to give the font size
 and leading separated by a slash; for instance $10/12$ for a
 \U{10}{pt} font set with a \U{12}{pt} leading, or $12/14$ for a \U{12}{pt} font set with a
 \U{14}{pt} leading.
+\switchFrench\TS{1}
+Le terme utilisé par les typographes et les imprimeurs pour désigner l'espace vertical entre les lignes d'un texte normal est l'interlignage, qui est également exprimé en points et est généralement plus grand que la taille de la police. Une convention pour décrire la police et l'interligne consiste à indiquer la taille de la police et l'interligne en les séparant par une barre oblique; par exemple 10/12 pour une police de 10\,pt avec une interligne de 12\,pt, ou 12/14 pour une police de 12\,pt avec une interligne de 14\,pt.
 
+\switchEng
     The normal length of a line of text is often called the 
 \emph{measure}\index{measure} and is normally specified in terms of
 picas\index{pica} where 1 pica equals 12 points (\U{1}{pc} = \U{12}{pt}).
+\switchFrench\TS{1}
+La longueur normale d'une ligne de texte est souvent appelée la mesure et est normalement spécifiée en termes de picas, où 1 pica équivaut à 12 points (1 pc = 12 pt).
 
+\switchEng
     Documents may be described as being typeset with a particular font
 with a particular size and a particular leading on a particular measure;
 this is normally given in a shorthand form. 
 A \U{10}{pt} font with \U{11}{pt} leading on a \U{20}{pc} measure is described as
 \abyb{10/11}{20}, and \abyb{14/16}{22} describes a \U{14}{pt} font
 with \U{16}{pt} leading set on a a \U{22}{pc} measure.
+\switchFrench\TS{1}
+Les documents peuvent être décrits comme étant composés avec une police de caractères particulière d'une taille particulière et d'une avance particulière sur une mesure particulière; ceci est normalement donné sous une forme abrégée. Une police de 10 pt avec un corps de 11\,pt sur une mesure de 20\,pc est décrite comme 10/11$\times$20, et 14/16$\times$22 décrit une police de 14\,pt avec un corps de 16\,pt sur une mesure de 22\,pc.
+
 \end{paracol}
 
 
 \section{Units of measurement}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Typographers and printers use a mixed system of units, some of which
 we met above. The fundamental unit is the point; \tref{tab:units} lists 
 the most common units employed.
+\switchFrench\TS{1}
+Les typographes et les imprimeurs utilisent un système mixte d'unités, dont certaines ont été rencontrées ci-dessus. L'unité fondamentale est le point; le \tref{tab:units} énumère les unités les plus couramment employées.
+
 \end{paracol}
 
 \begin{table}
@@ -669,7 +717,7 @@ the most common units employed.
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Points\index{point} and picas\index{pica} 
 are the traditional printers units used in English-speaking countries. 
@@ -678,7 +726,10 @@ corresponding units used in continental Europe. In Japan `kyus'\index{kyus}
 (a quarter of a millimetre) may be used as the unit of measurement.
 Inches\index{inch} and centimetres\index{centimetre} are the units that we
 are all, or should be, familiar with.
+\switchFrench\TS{1}
+Points\index{point} et picas\index{pica} sont les unités traditionnelles des imprimeurs utilisées dans les pays anglophones. Le point didot\index{didot point} et le cicero\index{cicero} sont les unités correspondantes utilisées en Europe continentale. Au Japon, les \og{}kyus\index{kyus}\fg{} (un quart de millimètre) peuvent être utilisés comme unité de mesure. Les pouces\index{inch} et les centimètres\index{centimetre} sont les unités avec lesquelles nous sommes tous, ou devrions être, familiers.
 
+\switchEng
     The point system was invented by Pierre Fournier le jeune in 1737 with
 a length of \U{0.349}{mm}. Later in the same century Fran\c{c}ois-Ambroise Didot
 introduced his point system with a length of \U{0.3759}{mm}. This is the value
@@ -687,14 +738,20 @@ Association settled on \U{0.013837}{in} as the standard size for the point, and
 the British followed in 1898. Conveniently for those who are not entirely
 metric in their thinking this means that 
 six picas are approximately equal to one inch.
+\switchFrench\TS{0}
+Le système du point a été inventé par Pierre Fournier le jeune en~1737 avec une longueur de 0,349\,mm. Plus tard dans le même siècle, François-Ambroise Didot a introduit son système de points avec une longueur de 0,3759\,mm. C'est la valeur encore utilisée en Europe. Beaucoup plus tard, en~1886, l'American Type Founders Association a fixé la taille standard du point à 0,013837\,mm, suivie par la Grande-Bretagne en~1898. Pour ceux qui ne sont pas tout à fait dans le système métrique, cela signifie que six picas sont approximativement égaux à un pouce.
 
+\switchEng
     The big point\index{big point} 
 is somewhat of an anomaly in that it is a recent
 invention. It tends to be used
 in page markup languages, like \pscript\footnote{\pscript{} is a 
 registered trademark of Adobe Systems Incorporated.\label{fn:ps}},
 in order to make calculations quicker and easier.
+\switchFrench\TS{1}
+Le gros point est un peu une anomalie dans la mesure où il s'agit d'une invention récente. Il est généralement utilisé dans les langages de balisage de pages, comme\pscript\footnote{\pscript{} est une marque déposée appartenant à Adobe Systems Incorporated.\label{fn:ps}}, afin de rendre les calculs plus rapides et plus faciles.
 
+\switchEng
     The above units are all constant in value. There are also some units
 whose value depends on the particular font\index{font} being used. 
 The \textit{em}\index{em}
@@ -705,6 +762,9 @@ nominally the height of the letter `x' in the current font. You may also
 come across the term \textit{quad}\index{quad}, often as in a phrase
 like `starts with a quad space'. It is a length defined in terms of
 ems; a quad is \U{1}{em}.
+\switchFrench\TS{1}
+Les unités ci-dessus ont toutes une valeur constante. Il existe également certaines unités dont la valeur dépend de la police de caractères utilisée. Le \textit{em} est la hauteur nominale de la police actuelle ; il est utilisé comme mesure de la largeur. Un \textit{en} correspond à la moitié d'un \textit{em}. L'\textit{ex} est la hauteur nominale de la lettre \og{}x\fg{} dans la police actuelle. Vous pouvez également rencontrer le terme \textit{quadratin} (en anglais: \textit{quad}), souvent dans une phrase comme \og{}commence par un espace cadratin\fg{}. Il s'agit d'une longueur définie en termes d'ems ; un quad correspond à 1\,em.
+
 \end{paracol}
 
 \cleardoublepage
@@ -722,7 +782,7 @@ ems; a quad is \U{1}{em}.
 
 \section{Galloping through the millenia}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The earliest known writing dates back to the Sumerians around 3300\textsc{bc}
 who used pointed sticks or reeds to impress marks into wet clay tablets
@@ -730,13 +790,19 @@ that were subsequently dried. The result is what we call
 Cuneiform\index{cuneiform}.\footnote{From the Latin \emph{cuneus} meaning wedge.}
 For the next several thousand years all texts were produced, one way or 
 another, individually by hand.
+\switchFrench\TS{1}
+La plus ancienne écriture connue remonte aux Sumériens, aux alentours de 3300~avant J.-C., qui utilisaient des bâtons pointus ou des roseaux pour imprimer des marques sur des tablettes d'argile humides qui étaient ensuite séchées. Le résultat est ce que nous appelons le \og{}cunéiforme\fg{}\footnote{Du Latin \emph{cuneus}, qui signifie \og{}coin\fg{}.}. Pendant les milliers d'années qui ont suivi, tous les textes ont été produits, d'une manière ou d'une autre, individuellement à la main.
 
+\switchEng
     The earliest printed book known is a 9th century Chinese woodblock
 printing of the \emph{Diamond Sutra}. In this technique the complete text
 for a page is carved on a wooden block which is then used to impress
 the ink onto the paper. Once the woodblocks were available many copies 
 of the text could be produced very quickly.
+\switchFrench\TS{1}
+Le plus ancien livre imprimé connu est une gravure sur bois du Sutra du Diamant, réalisée en Chine au IX\textsuperscript{e} siècle. Selon cette technique, le texte complet d'une page est gravé sur un bloc de bois qui est ensuite utilisé pour imprimer l'encre sur le papier. Une fois les blocs de bois disponibles, de nombreuses copies du texte pouvaient être produites très rapidement.
 
+\switchEng
     The Chinese were perhaps the first to print using moveable 
 type\index{type} where 
 the individual characters were engraved on wood blocks so they could be 
@@ -751,7 +817,12 @@ wooden type. These never became particularly popular methods because
 of the thousands of different characters that a printing house might need.
 By 1230 the Chinese used moveable metal type for printing. None of this was 
 known outside Asia.
+\switchFrench\TS{1}
+Les Chinois ont peut-être été les premiers à imprimer en utilisant des caractères mobiles, c'est-à-dire des caractères individuels gravés sur des blocs de bois afin de pouvoir les réutiliser pour différents textes. Dans ses \emph{Écrits à côté du ruisseau Meng}, l'essayiste de la dynastie Song Shen Kuo (1031--1095) décrit comment Bi Sheng, sous le règne de Chingli (1041--1048), imprimait à partir de caractères mobiles qu'il fabriquait en argile cuite, ce qui était plutôt fragile. Un peu plus tard, Wang Zhen (vers 1290--1333) a amélioré le processus en utilisant des caractères en bois. Ces méthodes ne sont jamais devenues particulièrement populaires en raison des milliers de caractères différents dont une imprimerie pouvait avoir besoin. En 1230, les Chinois utilisaient des caractères métalliques mobiles pour l'impression. Rien de tout cela n'était connu en dehors de l'Asie.
+\end{paracol}
 
+\begin{paracol}{2}
+\switchEng
     In the West books and manuscripts were hand written by scribes, 
 although some
 small items, like playing cards or depictions of saints, were printed
@@ -766,7 +837,10 @@ for the type itself.
 He came up with lead to which he added antimony for strength and hardness and
 tin for toughness.\footnote{This is still the basis for metal type today;
 Monotype casting machines use lead with 15--24\% antimony and 6--12\% tin.}
+\switchFrench\TS{1}
+En Occident, les livres et les manuscrits étaient écrits à la main par des scribes, même si certains petits objets, comme les cartes à jouer ou les représentations de saints, étaient imprimés à partir de blocs de bois. C'est vers 1440--1450 que Johannes Gutenberg (vers 1398--1468), originaire de Mayence, a inventé l'impression à l'aide de caractères mobiles.\footnote{D'autres ont été proposés comme inventeurs, notamment un Hollandais nommé Coster, mais la prépondérance de l'opinion penche pour Gutenberg.} Il a dû faire des expériences pour déterminer la formule d'une encre appropriée et aussi pour développer un bon alliage métallique pour les caractères eux-mêmes. Il a trouvé du plomb auquel il a ajouté de l'antimoine pour la résistance et la dureté et de l'étain pour la solidité.\footnote{C'est encore la base des caractères métalliques aujourd'hui ; les machines à couler Monotype utilisent du plomb avec 15--24\,\% d'antimoine et 6--12\,\% d'étain.}
 
+\switchEng
     In order be successful in the market Gutenberg had to produce books
 that equaled those produced by the scribes, except that they did not
 have to be decorated so lavishly. The scribes used many ligatures,
@@ -776,12 +850,18 @@ Bible, published around 1455, consisted of some 290 characters though all
 the text was in Latin which requires a basic character set of only forty 
 letters --- twenty lowercase letters and twenty caps --- plus
 some punctuation marks.
+\switchFrench\TS{1}
+Pour réussir sur le marché, Gutenberg devait produire des livres équivalents à ceux produits par les scribes, à ceci près qu'ils ne devaient pas être aussi richement décorés. Les scribes utilisaient de nombreuses ligatures, contractions et autres techniques afin d'obtenir un texte justifié sans bords irréguliers. Pour leur faire concurrence, sa police de caractères pour la célèbre Bible à 42 lignes, publiée vers 1455, comportait quelque 290~caractères, bien que tout le texte soit en latin, ce qui nécessite un jeu de caractères de base de seulement quarante lettres --- vingt minuscules et vingt majuscules --- plus quelques signes de ponctuation.
 
+\switchEng
     The 42-line Bible is set in two columns of 42 lines each. It is believed
 that about 135 copies were printed on paper and 40 on vellum. The page size was
 12 by 16\slashfrac{1}{2} inches and it is estimated that more than five 
 thousand calfskins were required for the vellum copies.
+\switchFrench\TS{1}
+La Bible à 42~lignes est disposée en deux colonnes de 42~lignes chacune. On pense qu'environ 135~exemplaires ont été imprimés sur papier et 40~sur vélin. La taille des pages était de 12~pouces sur 16 et demi, et on estime que plus de cinq mille peaux de veau ont été nécessaires pour les copies sur vélin.
 
+\switchEng
     The new technology spread rapidly. In 1465 
 Konrad\index{Sweynham, Konrad} Sweynheym and Arnold\index{Pannartz, Arnold}
 Pannartz set up a printing shop in the monastery at Subiaco, east of Rome.
@@ -795,7 +875,10 @@ in 1476 setting up a press at The Sign of the Red Pale in Westminster,
 near the Abbey; Theoderic\index{Rood, Theoderic} Rood was printing in 
 Oxford between 1478 and 1485 and John\index{Sieberch, John} Sieberch at 
 Cambridge in 1520.
+\switchFrench\TS{1}
+La nouvelle technologie se répand rapidement. En 1465, Konrad Sweynheym et Arnold Pannartz installent une imprimerie dans le monastère de Subiaco, à l'est de Rome. L'imprimerie était présente à Cologne en 1466 et, en 1468, à Augsberg et à Rome même. Le premier imprimeur vénitien, Johann van Speyer, a commencé à travailler en 1469. Un an plus tard, l'imprimerie était établie à la Sorbonne et Nicolas Jenson avait sa presse à Venise. L'impression a été introduite en Espagne à Valence en 1474. William Caxton a commencé à imprimer en Angleterre en 1476 en installant une presse à The Sign of the Red Pale à Westminster, près de l'abbaye ; Theoderic Rood imprimait à Oxford entre 1478 et 1485 et John Sieberch à Cambridge en 1520.
 
+\switchEng
     The German printers kept with the initial gothic
 style of Gutenberg's type and Caxton used a cursive bastarda gothic. The
 Italians and other Europeans, though, moved to a roman type, based on the
@@ -803,14 +886,22 @@ humanist bookhands, for their
 work. In 1471 Jenson produced the first full set of Greek type, which still
 remains one of the best. Aldus\index{Manutius, Aldus} Manutius, printing in 
 Venice, introduced the italic type in 1500.
+\switchFrench\TS{1}
+Les imprimeurs allemands conservent le style gothique initial des caractères de Gutenberg et Caxton utilise un gothique bastarda cursif. Les Italiens et les autres Européens, en revanche, adoptèrent pour leurs travaux une police de caractères romaine, basée sur les manuscrits humanistes. En 1471, Jenson a produit le premier jeu complet de caractères grecs, qui reste encore l'un des meilleurs. Aldus Manutius, imprimeur à Venise, introduit le caractère italique en 1500.
 
+\switchEng
    The early printers were jack of all trades. They had to make their presses,
 design, make and cast their type\index{type}, 
 and print and sell the results. As time went
 on typemaking and printing became separate crafts. It became possible to 
 purchase the materials and equipment for printing but the printer was still
 the book designer.
+\switchFrench\TS{1}
+Les premiers imprimeurs étaient des hommes à tout faire. Ils devaient fabriquer leurs presses, concevoir, fabriquer et couler leurs caractères, puis imprimer et vendre les résultats. Au fil du temps, la fabrication des caractères et l'impression sont devenues des métiers distincts. Il est devenu possible d'acheter les matériaux et les équipements nécessaires à l'impression, mais l'imprimeur restait le concepteur du livre.
+\end{paracol}
 
+\begin{paracol}{2}
+\switchEng
    For four centuries setting the type for printing was done by hand until 
 the introduction of Ottmar Mergenthaler's\index{Mergenthaler, Ottmar} 
 Linotype\index{Linotype} machine in 1886. The operator
@@ -826,23 +917,32 @@ lines of type composed of individual pieces. Correcting typos was easier
 because individual characters could be added or replaced. On the other hand,
 Linotype output was easier to handle if complete sections had to be moved
 around, for example for `quick' printing such as a daily newspaper. 
+\switchFrench\TS{1}
+Pendant quatre siècles, la composition des caractères d'imprimerie a été effectuée à la main jusqu'à l'introduction de la machine Linotype d'Ottmar Mergenthaler en~1886. L'opérateur s'asseyait devant un clavier, tapait le texte ligne par ligne et la machine produisait une ligne de caractères pleine correspondante. L'inconvénient est que lorsqu'une erreur doit être corrigée, il faut au moins une nouvelle ligne entière de caractères, voire deux ou plus si la correction déborde sur la fin de la ligne, ou encore plus si elle se poursuit sur la page suivante. La machine Monotype concurrente, inventée par Tolbert Lanston, a été mise sur le marché en~1896. Elle fonctionnait à l'aide d'un clavier qui produisait une bande de papier perforé, laquelle était acheminée vers la roulette qui produisait des lignes de caractères composées de pièces individuelles. La correction des fautes de frappe était plus facile car les caractères individuels pouvaient être ajoutés ou remplacés. D'un autre côté, la sortie de la Linotype était plus facile à gérer si des sections complètes devaient être déplacées, par exemple pour une impression \og{}rapide\fg{} comme celle d'un journal quotidien.
 
+\switchEng
     Alan Bartram~\autocite{BARTRAM01} shows examples of book designs from between
 1470 and 1948, not all of which he considers to be good. Examples of printed
 pages from the 15th to the 20th century are in the TUG 2007 San Diego Meeting
 keynote presentation~\autocite{TUGKEYNOTE07}.
+\switchFrench\TS{1}
+Alan Bartram~\autocite{BARTRAM01} présente des exemples de conceptions de livres datant de~1470 à~1948, qu'il ne considère pas tous comme bons. Des exemples de pages imprimées du XV\textsuperscript{e} au XX\textsuperscript{e} siècle figurent dans la présentation principale de la conférence TUG~2007 de San Diego~\autocite{TUGKEYNOTE07}.
+
 \end{paracol}
 
 \section{Making type}
 
-\begin{paracol}{2}\TS{0}
-\switchEng
 
 \typesubidx{manufacture|(}
+\begin{paracol}{2}
+\switchEng
     This is a very brief description of how lead type is made. For
 a good overview see~\autocite{CHAPPELL99} and Fred Smeijers~\autocite{SMEIJERS96}
 provides a detailed description of punchcutting.
- 
+\switchFrench\TS{1}
+Voici une très brève description de la fabrication des caractères en plomb. Pour une bonne vue d'ensemble, voir (Chappell et Bringhurst 1999) ; Fred Smeijers (Smeijers 1996) fournit une description détaillée de la taille des poinçons.
+
+\switchEng
 Making type has been an inherently manual process. Having got a design
 for a font, for each character, a punchcutter makes a punch starting
 with a square steel bar about 2\slashfrac{1}{4}~inches (\U{6}{cm}) long with
@@ -855,12 +955,18 @@ put into the flame of an alcohol lamp which coats it with lampblack,
 and it is then pressed against a chalky paper to leave a black image
 of the character. Once the shape is correct the punch is hardened and
 annealed.
+\switchFrench\TS{1}
+La fabrication des caractères est un processus intrinsèquement manuel. Après avoir dessiné une police de caractères, pour chaque signe, le poinçonneur fabrique un poinçon à partir d'une barre d'acier carrée d'environ 6\,cm de long, dont l'extrémité est suffisamment large pour englober le signe. À l'aide de limes et de ciseaux, et éventuellement d'outils spécialisés comme un contre-poinçon, il sculpte le caractère en relief sur une extrémité de la barre. Le caractère est orienté de manière à ce qu'il soit à l'envers par rapport à son apparence à l'impression. Pour vérifier la forme, l'extrémité du poinçon est placée dans la flamme d'une lampe à alcool qui l'enduit de noir de fumée, puis elle est pressée contre un papier crayeux pour laisser une image noire du caractère. Une fois que la forme est correcte, le poinçon est durci et recuit.
 
+\switchEng
    The next stage is to create the matrix for the character. The punch is
 hammered into a softer material, usually copper, or sometimes brass which
 is harder but lasts longer. At this point the character is in the same
 orientation as printed but is a negative impression in the matrix.
+\switchFrench\TS{1}
+L'étape suivante consiste à créer la matrice du caractère. Le poinçon est martelé dans un matériau plus tendre, généralement du cuivre, ou parfois du laiton, qui est plus dur mais dure plus longtemps. À ce stade, le caractère est dans la même orientation que celle imprimée, mais il s'agit d'une impression négative dans la matrice.
 
+\switchEng
    The matrix is then put into a casting box and molten typemetal poured in.
 Once it has hardened and removed from the mould the new piece of type is 
 dressed to the same length as all the other pieces for the font. Many, many 
@@ -870,11 +976,17 @@ company, and a typecasting company would purchase matrices from the type
 design company. Of course, in the early days these were all the same 
 organisation and only as the centuries passed did they tend to become
 separated.
+\switchFrench\TS{1}
+La matrice est ensuite placée dans une boîte de coulée et du métal typographique fondu y est versé. Une fois durcie et démoulée, la nouvelle pièce est taillée à la même longueur que toutes les autres pièces de la police. De très nombreuses pièces de caractères peuvent être coulées à partir d'une matrice, et si le poinçon est conservé, de nouvelles matrices peuvent être fabriquées. En général, on achète les caractères principaux à une société de fonte de caractères, et la société de fonte de caractères achète les matrices à la société de création de caractères. Bien entendu, au début, ces entreprises étaient toutes regroupées au sein de la même organisation et ce n'est qu'au fil des siècles qu'elles ont eu tendance à se séparer.
 
+\switchEng
    The Linotype\index{Linotype} and Monotype\index{Monotype} machines 
 require the matrices but cast the type only when needed. After use the type 
 from these machines is melted down and reused time and time again.
 \typesubidx{manufacture|)}
+\switchFrench\TS{0}
+Les machines Linotype et Monotype ont besoin de matrices mais ne fondent les caractères qu'en cas de besoin. Après utilisation, les caractères de ces machines sont fondus et réutilisés à l'infini.
+
 \end{paracol}
 
 \section{Book types}
@@ -882,7 +994,7 @@ from these machines is melted down and reused time and time again.
 \PWnote{2009/04/25}{Added longish section on book types}
 \PWnote{2009/04/25}{Used endnotes in book types section}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Roughly speaking, there are two kinds of printing type\index{type};
 one, called 
@@ -895,6 +1007,9 @@ advertisements, ephemera and sometimes even book titles, all of which are
 short pieces of text, often intended to catch your eye. There are a multitude
 of display types, some of them almost illegible. Here I want to say a little
 bit about book types.
+\switchFrench\TS{1}
+En gros, il existe deux types de caractères d'imprimerie : l'un, appelé en général \emph{caractères de labeur}, est utilisé pour mettre en page des textes plus longs, comme un poème ou un livre, ou tout autre document destiné à être lu en continu. L'autre, appelé \emph{caractères d'affichage} (\textbf{traduction:} caractères de titraille?), est utilisé pour presque tout le reste, comme les noms de sociétés, les affiches, les publicités, les documents éphémères et parfois même les titres de livres, qui sont tous des textes courts, souvent destinés à attirer l'attention. Il existe une multitude de caractères d'affichage, dont certains sont presque illisibles. Je voudrais ici parler un peu des caractères de labeur.
+
 \end{paracol}
 
 \begin{table}
@@ -953,10 +1068,14 @@ Typeface & & Lawson & Bringhurst & Vox \\ \midrule
 \end{table}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     There are several ways of categorizing typefaces, three of which are
 shown in \tref{tab:typecat}. The listed schemes are
+\switchFrench\TS{1}
+Il existe plusieurs façons de classer les types de caractères, dont trois sont présentées dans le tableau 1.1. Les schémas répertoriés sont les suivants :
+
+\switchEng
 \begin{description}
 \item[Lawson] from 
 Lawson \& Agner~\autocite{LAWSONAGNER90} who proposed  
@@ -969,6 +1088,14 @@ the more traditional descriptions such as gothic, antique, grotesque, and
 modern which have different, and somtimes opposite, meanings in different
 languages~\autocite{MCLEAN80}.
 \end{description}
+\switchFrench\TS{1}
+\begin{description}
+\item[Lawson] de Lawson \& Agner~\autocite{LAWSONAGNER90} qui a proposé un système rationnel basé sur la séquence historique.
+\item[Bringhurst] qui catégorise en fonction de la période artistique et architecturale qu'un caractère peut être considéré comme représentant~\autocite{BRINGHURST99}.
+\item[Vox] a conçu un système qui a été adopté comme norme britannique (BS 2961: 1967). Ce système s'est efforcé d'être neutre du point de vue linguistique et de s'éloigner des descriptions plus traditionnelles telles que gothique, antique, grotesque et moderne qui ont des significations différentes, et parfois opposées, dans différentes langues~\autocite{MCLEAN80}.
+\end{description}
+
+\switchEng
 Later I will expand on the Lawson \& Agner system and show some types 
 corresponding to some of their categories. I have limited the examples to 
 those types which are included in a modern \ltx\ 
@@ -982,16 +1109,20 @@ more specialized ones, such as for setting chess or for archaic languages
 (e.g., cuneiform, egpytian hieroglyphs, etc.), or scripts for Asian languages.}, 
 which unfortunately does not include types corresponding to all the 
 categories.
+\switchFrench\TS{1}
+Plus tard, je développerai le système de Lawson \& Agner et montrerai quelques types correspondant à certaines de leurs catégories. J'ai limité les exemples aux types qui sont inclus dans une distribution moderne de \ltx \pagenote[distribution moderne de \ltx]{Un exemple de distribution moderne est \TeX{}live~2008. Il y a beaucoup d'autres polices qui pourraient être utilisées, mais je voulais que les utilisateurs de \ltx\ puissent compiler eux-mêmes les sources du manuel sans avoir à installer de polices supplémentaires. Le \emph{The \ltx\ Font Catalogue} (\url{http://www.tug.dk/FontCatalogue}) contient des exemples de 181~polices différentes et celles-ci n'incluent pas la plupart des polices plus spécialisées, comme celles pour le jeu d'échecs ou pour les langues archaïques (par exemple, cunéiforme, hiéroglyphes égyptiens, etc.), ou les scripts pour les langues asiatiques.}, qui ne comprend malheureusement pas de types correspondant à toutes les catégories.
+
 \end{paracol}
 
 
 \subsection{Type-related terminology}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     First, though, some typographical terms related to types, and illustrated 
 in \fref{fig:typeterms}\pagenote[illustrated in \fref{fig:typeterms}]{The \ltx\
 fontfamily names for the typefaces used in the illustration are:
+
 \begin{center}
 \begin{tabular}{llcll}
 Antiqua Turin\facesubseeidx{Antiqua Turin} & \pfontfam{antt} & &
@@ -1005,7 +1136,24 @@ Utopia\facesubseeidx{Utopia} & \pfontfam{put} \\
 \end{tabular}
 \end{center}}. 
 
+\switchFrench\TS{1}
+Mais d'abord, quelques termes typographiques liés aux types, et illustrés sur la \fref{fig:typeterms}\pagenote[illustrés sur la \fref{fig:typeterms}]{Les noms de famille de polices \ltx\ pour les caractères utilisés dans l'illustration sont:
+
+\begin{center}
+\begin{tabular}{llcll}
+Antiqua Turin\facesubseeidx{Antiqua Turin} & \pfontfam{antt} & &
+Avant Garde\facesubseeidx{Avant Garde} & \pfontfam{pag} \\
+Bera Serif\facesubseeidx{Bera Serif} & \pfontfam{fve} & &
+Bookman\facesubseeidx{Bookman} & \pfontfam{pbk} \\
+GFS Bodoni\facesubseeidx{GFS Bodoni} & \pfontfam{bodoni} & &
+GFS Didot\facesubseeidx{GFS Didot} & \pfontfam{udidot} \\
+Times Roman\facesubseeidx{Times Roman} & \pfontfam{ptm} & &
+Utopia\facesubseeidx{Utopia} & \pfontfam{put} \\
+\end{tabular}
+\end{center}}.
+
 \end{paracol}
+
 
 \begin{figure}
 \centering
@@ -1050,7 +1198,7 @@ separate & ligatured & separate & ligatured \\
 \caption{Examples of some typographical type-related terms} \label{fig:typeterms}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{labelled}{itlabel}
 \item[Serif:] The\index{serif} cross stroke that finishes the stems or arms of letters.
@@ -1076,13 +1224,29 @@ separate & ligatured & separate & ligatured \\
                  usually with a change of shape.
 \end{labelled}
 
+\switchFrench\TS{1}
+\begin{labelled}{itlabel}
+\item[Empattement:] Le trait transversal qui termine les tiges ou les bras des lettres.
+\item[Empattement entre crochets:] Empattement qui s'intègre progressivement à la tige à laquelle il est attaché.
+\item[Empattement sans crochet:] Empattement avec une rupture nette entre lui et la tige.
+\item[Empattement carr\'e:] Un empattement rectangulaire avec des extrémités carrées.
+\item[Sans empattement:] Sans empattement.
+\item[Axe:] La direction de la ligne hypothétique joignant les parties les plus fines d'une lettre comme \og{}O\fg{}. Il est lié à l'angle sous lequel un stylo à pointe large serait tenu afin de reproduire les contours intérieurs et extérieurs.\footnote{L'axe et l'angle sont perpendiculaires l'un à l'autre.}
+\item[Contraste (\'egalement appelé ombrage):] La différence entre les traits épais et les traits fins.
+\item[Compteur:] L'espace blanc délimité par une lettre, qu'elle soit ouverte ou fermée. Parfois utilisé pour désigner la partie fermée des lettres telles que le \og{}a\fg{} ou le \og{}e\fg{}, qui peut également être appelée \emph{\oe il}.
+\item[Ligature:] La jonction de deux (ou plusieurs) lettres, généralement avec un changement de forme.
+\end{labelled}
 
+\switchEng
 For more detailed descriptions and further terms
 you may wish to consult other sources, such as 
 \autocite{BRINGHURST99,LAWSONAGNER90,MEGGS00}. If you are interested in the
 subtle, and the not so subtle, differences between typefaces then Karen 
 Cheng's \btitle{Designing Type}~\autocite{CHENG05} has a great deal to offer.
+\switchFrench\TS{1}
+Pour des descriptions plus détaillées et d'autres termes, vous pouvez consulter d'autres sources, telles que \autocite{BRINGHURST99,LAWSONAGNER90,MEGGS00}. Si vous vous intéressez aux différences subtiles, et moins subtiles, entre les caractères, l'ouvrage de Karen Cheng, \btitle{Designing Type}~\autocite{CHENG05}, a beaucoup à vous offrir.
 
+\switchEng
     The names of typefaces can be confusing; different suppliers have a
 tendency to give different names to the same underlying typeface. For
 example Goudy's\index{Goudy, Frederic} University of California Old 
@@ -1104,11 +1268,15 @@ the geometric shape must be changed to simulate the ink spread of the
 letterpress process, but then the question arises as to which of the many
 letterpress impressions is the one to be simulated? Different designers and
 different manufacturers have different ideas about this.}
+\switchFrench\TS{1}
+Les noms des polices de caractères peuvent prêter à confusion ; les différents fournisseurs ont tendance à donner des noms différents à la même police de caractères sous-jacente. Par exemple, le Goudy's University of California Old Style peut également être trouvé sous le nom de Californian, University Old Style, Berkely Old Style, et peut-être sous d'autres noms également, tous plus ou moins conformes au dessin original.\pagenote[plus ou moins conformes au dessin original]{Le caractère imprimé final dépend non seulement de la forme géométrique mais aussi de la technologie d'impression utilisée, de l'encre et du papier. Dans le cas de l'impression typographique, où les caractères métalliques encrés sont imprimés sur le papier, l'encre a tendance à s'étaler un peu ; toutes choses égales par ailleurs, l'étalement dépend du type et de la quantité d'encre, de la dureté du papier, de la finition de la surface du papier, de la pression appliquée, dans certains cas de l'humidité du papier, etc. Pour obtenir un résultat similaire en utilisant la lithographie offset où l'encre reste là où elle est mise, la forme géométrique doit être modifiée pour simuler l'étalement de l'encre du processus de typographie, mais la question se pose alors de savoir laquelle des nombreuses impressions typographiques est celle à simuler? Différents concepteurs et différents fabricants ont des idées différentes à ce sujet.}
+
 \end{paracol}
+
 
 \subsection{Blackletter}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The first type was \emph{Gothic}\typesubidx{Gothic}, or 
 \emph{Blackletter}\typesubidx{Blackletter}, used by 
@@ -1118,7 +1286,10 @@ It remained in
 fashion in Germany until towards the end of the last century, and is still
 often used for the names of newspapers. Elsewhere, starting in Italy, 
 it was replaced by the \emph{Roman}\typesubidx{Roman} type. 
+\switchFrench\TS{1}
+Le premier type d'écriture était le \emph{gothique}, ou Blackletter, utilisé par Gutenberg et basé sur le type d'écriture que les scribes utilisaient à l'époque (vers 1455). Elle est restée à la mode en Allemagne jusqu'à la fin du siècle dernier, et est encore souvent utilisée pour les noms de journaux. Ailleurs, à partir de l'Italie, elle a été remplacée par le caractère romain.
 
+\switchEng
     There are several kinds of blackletter type. The first is 
 \emph{Textura}\typesubidx{Textura} where the characters are squarely 
 drawn without any curves
@@ -1128,11 +1299,17 @@ created a uniform texture along each line and down each page. To modern eyes it
 is difficult to tell one letter from another. Two modern versions are
 Goudy Text\facesubseeidx{Goudy Text} and 
 Cloister Black\facesubseeidx{Cloister Black}.
+\switchFrench\TS{1}
+Il existe plusieurs types de caractères noirs. La première est la \emph{Textura}, où les caractères sont tracés à l'équerre, sans courbes, et c'est celle qu'utilisait Gutenberg. Dans la tradition scribale dont ils sont issus, l'idée était que les mots créent une texture uniforme le long de chaque ligne et sur chaque page. Pour des yeux modernes, il est difficile de distinguer une lettre d'une autre. Deux versions modernes sont le Goudy Text et le Cloister Black.
 
+\switchEng
     Another grouping is \emph{Rotunda}\typesubidx{Rotunda} where the letters are 
 more rounded than Textura and are easier to read. A modern example is 
 Goudy Thirty\facesubseeidx{Goudy Thirty}.
+\switchFrench\TS{1}
+Un autre groupe est la \emph{Rotunda}, où les lettres sont plus arrondies que Textura et sont plus faciles à lire. Un exemple moderne est le Goudy Thirty.
 
+\switchEng
     The last subdivision is \emph{Bastarda}\typesubidx{Bastarda} which has been
 the common type used in Germany for many a year. The most common form
 is \emph{Fraktur}\typesubidx{Fraktur}, first cut in the sixteenth century, which
@@ -1143,6 +1320,9 @@ example of a \emph{Fraktur}\typesubidx{Fraktur}
 by Yannis Haralambous\index{Haralambous, Yannis} and is accessed in \ltx\ 
 as the \pfontfam{yfrak} fontfamily.}
 is shown in \fref{fig:fraktur}.%
+\switchFrench\TS{1}
+La dernière subdivision est la \emph{Bastarda}, qui est le type de caractères le plus couramment utilisé en Allemagne depuis de nombreuses années. La forme la plus courante est le \emph{Fraktur}, créé au XVI\textsuperscript{e} siècle, qui est une version plus légère et plus ouverte du Textura et donc plus facile à lire. De nombreux journaux utilisent une police Fraktur pour leurs titres. La \fref{fig:fraktur} présente un exemple de Fraktur\pagenote[Un exemple de \emph{Fraktur}]{Ce caractère a été créé à l'origine par Yannis Haralambous et est accessible avec \ltx\ sous le nom \pfontfam{yfrak}}.
+
 \end{paracol}
 
 \begin{figure}
@@ -1159,7 +1339,7 @@ is shown in \fref{fig:fraktur}.%
 
 \subsubsection{Venetian}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Early roman types, based on the humanist scribal hand, were cut by 
 Sweynheym \& Pannartz in the Rome area (c. 1467). In Venice Nicolas
@@ -1171,20 +1351,29 @@ include Cloister\facesubseeidx{Cloister}, Eusebius\facesubseeidx{Eusebius} (orig
 called Nicolas Jenson) and  Venezia\facesubseeidx{Venezia}; 
 Bruce Rogers'\index{Rogers, Bruce} Centaur\facesubseeidx{Centaur} is an elegant 
 modernized Venetian.
+\switchFrench\TS{1}
+Les premiers caractères romains, basés sur la main du scribe humaniste, ont été taillés par Sweynheym \& Pannartz dans la région de Rome (vers~1467). À Venise, Nicolas \mbox{Jenson} a taillé ce qui est considéré comme le premier, et l'un des meilleurs, caractères romains (vers~1471). Ses poinçons ont été largement reproduits et copiés et le style est connu sous le nom de \emph{vénitien}. Parmi les vénitiens modernes, citons Cloister, Eusebius (appelé à l'origine Nicolas \mbox{Jenson}) et Venezia; le Centaur de Bruce Rogers est un élégant vénitien modernisé.
 
+\switchEng
     The characteristics of the Venetian types include uneven or slightly
 concave serifs, there is minimal contrast between the thick and thin 
 strokes, and an inclined axis. The crossbar of the lowercase `e' is slanted 
 upwards. On some
 capitals, principally `N' and `M', there are slab serifs that extend
 across the tops of the vertical strokes.
-  
+\switchFrench\TS{1}
+Les caractéristiques des caractères vénitiens comprennent des empattements inégaux ou légèrement concaves, un contraste minimal entre les traits épais et fins, et un axe incliné. La barre transversale du \og{}e\fg{} minuscule est inclinée vers le haut. Sur certaines capitales, principalement le \og{}N\fg{} et le "\og{}M\fg{}, il y a des empattements qui s'étendent sur les sommets des traits verticaux.
+
+\switchEng
     William Morris\index{Morris, William} chose Jenson's\index{Jenson, Nicolas} 
 type as the model
 for his Golden Type\facesubseeidx{Golden Type}, cut by Edward 
 Prince\index{Prince, Edward} around 1890. This started the revival of the
 Venetian types. 
+\switchFrench\TS{1}
+William Morris a choisi le caractère de \mbox{Jenson} comme modèle pour son Golden Type, coupé par Edward Prince vers~1890. C'est le début de la renaissance des caractères vénitiens.
 
+\switchEng
     The first type generally available was Morris Benton's\index{Benton, Morris}
 Cloister Oldstyle\facesubseeidx{Cloister Oldstyle}. Other modern Venetians include 
 Goudy's\index{Goudy, Frederic} Kennerly\facesubseeidx{Kennerly}, 
@@ -1192,13 +1381,16 @@ Deepdene\facesubseeidx{Deepdene} and Californian\facesubseeidx{Californian}, whi
 called Berkely Old Style\facesubseeidx{Berkely Old Style}. One, perhaps the best,
 is Bruce Rogers'\index{Rogers, Bruce} Centaur\facesubseeidx{Centaur} which he created
 in 1914.
+\switchFrench\TS{1}
+Le premier caractère généralement disponible était le Cloister Oldstyle de Morris Benton. Parmi les autres vénitiens modernes, citons le Kennerly, le Deepdene et le Californien de Goudy, qui s'appelle désormais Berkely Old Style. L'un d'entre eux, peut-être le meilleur, est le Centaur de Bruce Rogers, qu'il a créé en~1914.
+
 \end{paracol}
 
 
 \subsubsection{Aldine/French}
 \typesubidx{Aldine/French}\typesubidx{Aldine}\typesubidx{French}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Another of the many printers in Venice, 
 Aldus Manutius\index{Manutius, Aldus}, wanted a type
@@ -1212,7 +1404,10 @@ in popularity.
 It was first used in the famous \emph{Hypnerotomachia Poliphili} by
 Francesco Colonna\index{Colonna, Francesco} which Aldus published in 1499.
 A modern version is available called Poliphilus\facesubseeidx{Poliphilus}.
+\switchFrench\TS{1}
+Un autre des nombreux imprimeurs de Venise, Aldus Manutius, souhaitait une typographie qui soit moins proche des caractères tracés à la plume par les scribes. Aldus employa Francesco Griffo da Bologna pour tailler deux caractères pour lui. Le premier, taillé en 1497, était destiné à une édition du \emph{De Aetna} par l'érudit humaniste Pietro Bembo --- la version moderne de ce texte est appelée Bembo. Griffo a également gravé une autre variante du roman de Jenson, qui l'a rapidement supplanté en termes de popularité. Elle a été utilisée pour la première fois dans la célèbre \emph{Hypnerotomachia Poliphili} de Francesco Colonna, publiée par Aldus en 1499. Une version moderne est disponible sous le nom de Poliphilus.
 
+\switchEng
 The Aldine roman soon spread across Europe. One of the first type
 cutters to use it as a model was Claude Garamond\index{Garamond,
   Claude} in Paris (c. 1540), and his types had a wide distribution,
@@ -1220,13 +1415,19 @@ for example being used in Antwerp by Christopher
 Plantin\index{Plantin, Christopher}. The main basis for modern
 versions is a version of Garamond's types cut by the French printer
 Jean Jannon\index{Jannon, Jean} about 1621.
+\switchFrench\TS{1}
+Le romain aldin s'est rapidement répandu dans toute l'Europe. L'un des premiers tailleurs de caractères à l'utiliser comme modèle fut Claude Garamond à Paris (vers 1540), et ses caractères ont eu une large diffusion, étant par exemple utilisés à Anvers par Christopher Plantin. La principale base des versions modernes est une version des caractères de Garamond taillés par l'imprimeur français Jean Jannon vers~1621.
 
+\switchEng
     Characteristics of these types are wide concave serifs, particularly
 on the capitals, which are narrower than the Venetians and may be not as high
 as the lowercase ascenders. The crossbar of the lowercase `e' is horizontal, 
 as opposed to the slanted crossbar of the Venetians. There is an inclined axis
 and a medium contrast between the thick and thin strokes.
+\switchFrench\TS{1}
+Ils sont pour caractéristiques de larges empattements concaves, en particulier sur les capitales, qui sont plus étroites que les Vénitiennes et peuvent ne pas être aussi hautes que les ascendants des minuscules. La barre transversale du \og{}e\fg{} minuscule est horizontale, contrairement à la barre transversale inclinée des Vénitiens. Il y a un axe incliné et un contraste moyen entre les traits épais et fins.
 
+\switchEng
     Some modern Aldine/French Oldstyle types are 
 Bembo\facesubseeidx{Bembo}, 
 Estienne\facesubseeidx{Estienne}, 
@@ -1241,6 +1442,10 @@ An example of Palatino\facesubseeidx{Palatino}%
 font is accessed as the \pfontfam{ppl} fontfamily.}, 
 which was created by Hermann Zapf\index{Zapf, Hermann}
 in 1950, is shown in \fref{fig:palatino}.
+\switchFrench\TS{1}
+
+Parmi les caractères modernes de style aldin/français ancien, citons Bembo, Estienne, Garamond, Geraldus, Granjon, Palatino, Poliphilus et Sabon. Un exemple de Palatino\pagenote[Un exemple de Palatino]{En \ltx, le Palatino\index{Palatino} est nommé \pfontfam{ppl}.}, créé par Hermann Zapf en 1950, est présenté à \fref{fig:palatino}.
+
 \end{paracol}
 
 \begin{figure}
@@ -1259,7 +1464,7 @@ in 1950, is shown in \fref{fig:palatino}.
 \typesubidx{Dutch/English}\typesubidx{Dutch}\typesubidx{English}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     During the sixteenth century the French types were popular throughout
 Europe but then the pendulum swung towards types from the Low Countries.
@@ -1267,26 +1472,38 @@ The Dutch were principally traders and their printing style became
 increasingly known. They produced types that were more practical for
 commercial printing. The contrast between thick and thin strokes increased
 and the serifs straightened.
+\switchFrench\TS{1}
+Au XVI\textsuperscript{e} siècle, les caractères français étaient populaires dans toute l'Europe, mais l'équilibre s'est ensuite déplacé vers les caractères des Pays-Bas. Les Hollandais étaient principalement des commerçants grâce à ça leur style d'impression était de plus en plus connu. Ils produisaient des caractères plus pratiques pour l'impression commerciale. Le contraste entre les traits épais et fins était accentué et les empattements étaient plus droits.
 
+\switchEng
 The English type cutter William Caslon\index{Caslon, William} (1692--1766) 
 cut a famous face of this kind that has been used ever since throughout the 
 world; in America the first printed version of the 
 \btitle{Declaration of Independence}
 was set with Caslon type.
+\switchFrench\TS{1}
+Le graveur de caractères anglais William Caslon (1692--1766) a taillé un célèbre caractère de ce type qui a été utilisé depuis lors dans le monde entier ; en Amérique, la première version imprimée de la \btitle{Déclaration d'indépendance} a été composée avec des caractères Caslon.
 
+\switchEng
     Modern Dutch/English types include
 Caslon\facesubseeidx{Caslon} (of course),
 and Janson\facesubseeidx{Janson}.
+\switchFrench\TS{1}
+Les caractères néerlandais/anglais modernes comprennent les caractères Caslon (bien sûr) et Janson.
+
 \end{paracol}
 
 \subsection{Transitional}
 \typesubidx{Transitional}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Transitional types are those based on the Oldstyle\typesubidx{Oldstyle} 
 types but with features of the style called Modern\typesubidx{Modern}.
+\switchFrench\TS{1}
+Les caractères de transition sont ceux basés sur les caractères de style ancien, mais avec des caractéristiques du style dit moderne.
 
+\switchEng
     By the end of the sixteenth century the quality of printing in Italy 
 and France had fallen off from when Claude Garamond\index{Garamond, Claude} 
 was working. In 1692
@@ -1297,20 +1514,29 @@ Lucien Grandjean\index{Grandjean, Lucien} who cut the
 new Romain du Roi\facesubseeidx{Romain du Roi} allowed his type cutter's eye to 
 sometimes overrule the 
 academicians to the betterment of the result.
+\switchFrench\TS{1}
+À la fin du XVI\textsuperscript{e} siècle, la qualité de l'impression en Italie et en France avait baissé par rapport à l'époque où Claude Garamond travaillait. En~1692, le roi Louis \textsc{xiv} a commandé un nouveau jeu de caractères pour l'Imprimerie royale. Dans un long rapport, l'Académie des sciences recommande un caractère romain construit sur des principes mathématiques. Lucien Grandjean, qui a taillé le nouveau Romain du Roi, a laissé son \oe il de tailleur de caractères l'emporter parfois sur les académiciens, pour un meilleur résultat.
 
+\switchEng
     Grandjean's type was copied by many others and effectively replaced 
 Oldstyle in Europe. Pierre Simon Fournier\index{Fournier, Pierre Simon} 
 (1712--1768) started his typecutting 
 business in 1737, cutting over eighty types in twenty-four years. These were
 based on Garamond's types but influenced by Grandjean's work. The result was
 the first intimations of the Transitional types.
+\switchFrench\TS{1}
+Les caractères de Grandjean ont été copiés par beaucoup d'autres et ont effectivement remplacé les caractères anciens en Europe. Pierre Simon Fournier (1712--1768) a commencé son activité de typographe en~1737 et a créé plus de quatre-vingts caractères en vingt-quatre ans. Ces caractères étaient basés sur ceux de Garamond mais influencés par le travail de Grandjean. Le résultat est la première ébauche des caractères de transition.
 
+\switchEng
     The changes on the continent had had little impact in England, but John
 Baskerville\index{Baskerville, John}, about 1750, set up a printing shop 
 in Birmingham and created the type that bears his name. Some consider this
 to be the real beginning of the Transitionals. Baskerville's work was
 disliked in England but was siezed on with alacrity on the Continent.
+\switchFrench\TS{1}
+Les changements sur le continent ont eu peu d'impact en Angleterre, mais John Baskerville, vers~1750, ouvre une imprimerie à Birmingham et crée le caractère qui porte son nom. Certains considèrent que c'est le véritable début des caractères transitionnels. Le travail de Baskerville n'était pas apprécié en Angleterre, mais il a été adopté avec empressement sur le continent.
 
+\switchEng
     Some modern day Transitional types are 
 Baskerville\facesubseeidx{Baskerville}, 
 Bell\facesubseeidx{Bell}, 
@@ -1318,6 +1544,9 @@ Fournier\facesubseeidx{Fournier},
 Georgian\facesubseeidx{Georgian},
 and URW Antiqua\facesubseeidx{URW Antiqua}\pagenote[and URW Antiqua]{The URW
 Antiqua\index{URW Antiqua} font in \ltx\ is known as the \pfontfam{uaq} fontfamily.} which is shown in \fref{fig:antiqua}.
+\switchFrench\TS{1}
+Parmi les caractères de transition modernes, on trouve les Baskerville, Bell, Fournier, Georgian, et URW Antiqua\pagenote[et URW Antiqua]{La fonte URW Antiqua\index{URW Antiqua} est connue sous le nom \pfontfam{uaq} sous \ltx.}, illustré à la \fref{fig:antiqua}.
+
 \end{paracol}
 
 \begin{figure}
@@ -1342,7 +1571,7 @@ Antiqua\index{URW Antiqua} font in \ltx\ is known as the \pfontfam{uaq} fontfami
    \label{fig:newcent}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Much later, around the end of the nineteenth century, another kind of 
 Transitional type was introduced, designed for legibility for newspapers 
@@ -1360,7 +1589,10 @@ classification. The general characteristics include vertical, or nearly
 vertical axis, more pronounced contrast compared with the Oldstyle faces, but
 nowhere nearly as pronounced as the later Didot types. Some have finely, or
 unbracketed, serifs.
+\switchFrench\TS{1}
+Beaucoup plus tard, vers la fin du XIX\textsuperscript{e} siècle, un autre type de caractères de transition a été introduit, conçu pour la lisibilité des journaux imprimés sur des presses à grande vitesse. Les contre-espaces étaient ouverts, les empattements étaient réguliers et fortement crochetés, avec une hauteur d'x importante. Parmi les exemples, citons le Century conçu par Linn Boyd Benton en~1895 pour le magazine \emph{Century}, et le Cheltenham de Betram Goodhue en~1896, qui est devenu l'un des caractères standard des imprimeurs. Le Times Roman de Stanley Morison, qu'il a conçu pour le \emph{Times} de Londres, entre dans la catégorie des caractères transitoires. Les caractéristiques générales comprennent un axe vertical, ou presque vertical, un contraste plus prononcé par rapport aux caractères Oldstyle, mais pas aussi prononcé que les caractères Didot ultérieurs. Certains ont des empattements fins, ou non accolés.
 
+\switchEng
     A version of one of the Century 
 series\pagenote[version of one of the Century series]{In \ltx\ the New 
 Century Schoolbook\facesubseeidx{New Century Schoolbook} font
@@ -1368,23 +1600,31 @@ is known as the \pfontfam{pnc} fontfamily.} of typefaces,
 New Century\facesubseeidx{New Century Schoolbook} Schoolbook, designed
 by Morris Benton\index{Benton, Morris},
 is shown in \fref{fig:newcent}.
+\switchFrench\TS{1}
+Une version d'un des caractères de la série Century\pagenote[verison d'un des caractères de la série Century]{Sous \ltx, la fonte New Century Schoolbook\facesubseeidx{New Century Schoolbook} est connue sous le nom \pfontfam{pnc}.}, le New Century Schoolbook, conçu par Morris Benton, est présentée à la \fref{fig:newcent}.
 \end{paracol}
+
 
 \subsection{Modern}
 \typesubidx{Modern}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Modern in this case means with respect to Transitional\typesubidx{Transitional} 
 and applies to a style of type introduced in the eighteenth century.
+\switchFrench\TS{0}
 
+\switchEng
     Grandjean's Romain du Roi\facesubseeidx{Romain du Roi} had started a trend 
 in which the contrast 
 between thick and thin strokes gradually increased. Following Baskerville's
 type, Giambattista Bodoni\index{Bodoni, Giambattista} in Italy and the 
 Didot\index{Didot} foundry in France increased the contrast 
 to extreme limits with the thin strokes degenerating into hairlines.
+\switchFrench\TS{1}
+
+
 \end{paracol}
 
 \begin{figure}
@@ -1399,21 +1639,26 @@ to extreme limits with the thin strokes degenerating into hairlines.
 \end{figure}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 A modern type, GFS Didot\facesubseeidx{GFS Didot}\pagenote[GFS Didot]{The
 \ltx\ fontfamily for GFS Didot\index{GFS Didot} is \pfontfam{udidot}.},
 after the style of 
 Didot\index{Didot} is illustrated in \fref{fig:didot}.
+\switchFrench\TS{0}
 
+\switchEng
     The general characteristics are vertical axis, exaggerated contrast, 
 and flat, unbracketed, serifs.
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \subsection{Square Serif}
 \typesubidx{Square Serif}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The Victorian printers found that they needed new type forms that
 would work better than the traditional romans when used with the new 
@@ -1432,7 +1677,7 @@ commercial printing and advertising.
    \label{fig:beraserif}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The types went out of fashion during the first half of the twentieth
 century but have since become more popular with the 
@@ -1445,7 +1690,7 @@ is shown in \fref{fig:beraserif}.
 \subsection{Sans-serif}
 \typesubidx{Sans-serif}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Sans-serif types were first created around 1830. In England they were
 called Grotesques\index{Grotesques} and in America Gothics\index{Gothics}. 
@@ -1467,7 +1712,7 @@ be geometric in form as opposed to the curvaceous romans.
    \label{fig:berasans}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Examples of modern Sans-serifs are 
 Helvetica\facesubseeidx{Helvetica}, 
@@ -1481,7 +1726,7 @@ Bera Sans\facesubseeidx{Bera Sans}, is shown in \fref{fig:berasans}.
 \subsection{Script/Cursive}
 \typesubidx{Script/Cursive}\typesubidx{Script}\typesubidx{Cursive}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     This is a very broad category but 
 essentially the forms are closer
@@ -1515,7 +1760,7 @@ as wedding invitations.
    \label{fig:chancery}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Figure~\ref{fig:brush} shows a brush-based script 
 unimaginatively\pagenote[unimaginatively]{The Brush Script\index{Brush Script}
@@ -1531,7 +1776,7 @@ is in \fref{fig:chancery}.
 \subsection{Display/Decorative}
 \typesubidx{Display/Decorative}\typesubidx{Display}\typesubidx{Decorative}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     This is another very broad category 
 but all the members are designed
@@ -1562,7 +1807,7 @@ be useful for book or chapter titles.
 
 \PWnote{2009/04/03}{Added bits and pieces about letterpress.}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    Until the last hundred years or so, type has been hand set. Today there
 are still a few printers who still set type by hand, called 
@@ -1720,7 +1965,7 @@ and 17th centuries, respectively --- printing has strong traditions.
 \caption{The California job case layout} \label{fig:cacase}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A line of type is set, or composed, in a hand-held 
 composing\index{composing stick} stick, which
@@ -1807,21 +2052,27 @@ that more than two colours are used.
 
 \section{Today}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Today the great majority of printed works are produced with 
 offset\index{offset printing} printer presses, the first of which was
 invented by Ira Washington\index{Rubel, Ira Washington} Rubel in 
 1903.\footnote{Rubel was an American; with a name like that he certainly
 couldn't be English.}
+\switchFrench\TS{2}
+Aujourd'hui, la grande majorité des \oe uvres imprimées sont produites sur des presses offset, dont la première a été inventée par Ira Washington Rubel en 1903.\footnote{Rubel était américain ; avec un prénom pareil, il ne pouvait certainement pas être anglais.}
 
+\switchEng
     In the offset lithography process the original work image is put 
 onto metal foils which 
 are wrapped around a cylinder on the press; ink is picked up by the foil 
 and is transferred to a `blanket' or `offset' cylinder that is in contact
 with the first one. In turn, the ink from the offset cylinder is 
 transferred to the paper which is pressed against it.
+\switchFrench\TS{1}
+Dans le processus de lithographie offset, l'image originale du travail est placée sur des feuilles de métal qui sont enroulées autour d'un cylindre sur la presse ; l'encre est captée par la feuille et transférée sur un cylindre \og{}blanchet\fg{} ou \og{}offset\fg{} qui est en contact avec le premier cylindre. À son tour, l'encre du cylindre offset est transférée sur le papier qui est pressé contre lui.
 
+\switchEng
     Nowadays the original image is created on a computer and the foils
 produced automatically. The system is excellent for coloured work --- one foil
 is produced for each colour, following the CMYK\index{CMYK}
@@ -1841,12 +2092,18 @@ through the pres(ses) at least twice, once for each side. Newspapers are
 also printed using offset lithography. In their case, though, web offset
 printers are used where the paper is fed in continuously from a large roll and
 is printed on both sides on its journey through the press.
+\switchFrench\TS{1}
+Aujourd'hui, l'image originale est créée sur un ordinateur et les films sont produits automatiquement. Le système est excellent pour les travaux en couleur --- un film est produit pour chaque couleur, selon le système de couleur soustractif CMYK (cyan, magenta, jaune, noir\footnote{En anglais: \textit{cyan, magenta, yellow, key}, où \textit{key} veut dire \og{}valeur\fg{}.}) (les téléviseurs et les moniteurs d'ordinateur utilisent le système de couleur additif RGB (Rouge, Vert, Bleu)). Dans la situation où le coût d'investissement est le plus bas, seule une presse à une station est utilisée, qui peut imprimer une seule couleur. Pour obtenir la pallet complète de couleurs, le papier doit être passé quatre fois dans la presse, une fois pour chaque couleur (et le noir) et, si les deux faces doivent être imprimées, quatre autres fois pour la deuxième face. En montant dans l'échelle, on trouve des presses à deux postes qui peuvent faire deux couleurs en un seul passage, et des presses à quatre postes qui peuvent faire les quatre couleurs en un seul passage.\footnote{L'imprimerie où je vais de temps en temps pour faire de l'impression traditionnelle à la main possède toutes ces presses.} Dans la plupart des petites imprimeries, on utilise des feuilles de papier simples qui doivent passer au moins deux fois dans la presse, une fois pour chaque face. Les journaux sont également imprimés par lithographie offset. Mais dans ce cas, on utilise des imprimantes offset à bobines, où le papier est alimenté en continu à partir d'un grand rouleau et est imprimé sur les deux faces lors de son passage dans la presse.
 
+\switchEng
     Up and coming are digital presses operating directly from the 
 computer.\footnote{Think sophisticated inkjet or colour laser printers.}
 These are approaching the cost and quality tradeoffs of offset printers
 and are increasingly being used for on-demand small quantity printing. 
+\switchFrench\TS{1}
+Les presses numériques fonctionnant directement à partir de l'ordinateur\footnote{Pensez aux imprimantes laser couleur ou à jet d'encre sophistiquées.} sont en plein essor. Ces presses se rapprochent des imprimantes offset en termes de coût et de qualité et sont de plus en plus utilisées pour l'impression de petites quantités à la demande.
 
+\switchEng
    Apart from the time and effort involved the principal difference between
 traditional letterpress\index{letterpress} printing and the modern methods 
 is the way the ink is put onto the paper. In the traditional method the type
@@ -1860,12 +2117,15 @@ from the type then it should be pressed as lightly as possible into the paper,
 but to indicate clearly that it has been letterpress printed, then it is 
 advisable to impress hard enough to leave permanent indentations, no matter
 how slight. As is common, tradeoffs seem inevitable.
+\switchFrench\TS{1}
+Outre le temps et les efforts nécessaires, la principale différence entre l'impression typographique traditionnelle et les méthodes modernes réside dans la manière dont l'encre est appliquée sur le papier. Dans la méthode traditionnelle, les caractères sont encrés puis pressés \emph{dans} le papier (pensez aux machines à écrire), tandis que dans les méthodes modernes, l'encre est effectivement déposée \emph{sur} le papier (pensez aux imprimantes à jet d'encre). Vous pouvez parfois savoir si un document a été imprimé selon la méthode typographique en passant légèrement le doigt sur la page ; si les lignes sont \og{}bosselées\fg{}, le document a été imprimé selon la méthode typographique. Les imprimeurs qui utilisent la typographie sont en fait confrontés à une dichotomie. Pour obtenir les détails les plus fins des caractères, il faut les presser le plus légèrement possible sur le papier, mais pour indiquer clairement qu'il s'agit d'une impression typographique, il est conseillé d'imprimer suffisamment fort pour laisser des empreintes permanentes, aussi légères soient-elles. Comme souvent, des compromis semblent inévitables.
+
 \end{paracol}
 
 
 \section{Setting maths}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     I had always wondered how maths was typeset before TeX was available and
 I eventually found an answer in an article by David Wishart~\autocite{WISHART03}.
@@ -1955,21 +2215,22 @@ P_{N_1 + m} = \frac{C}{N_{1} + m} \binom{N_{2} - N_{1}}{m}
 %\end{document}
 
 
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 
 \chapter{The Parts of a Book}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     This chapter describes the various parts of a book, the 
 ordering of the parts, and the typical page numbering scheme used
-in books. 
+in books.
+\switchFrench\TS{2}
+Ce chapitre décrit les différentes parties d'un livre, l'ordre de ces parties et le système de numérotation des pages habituellement utilisé dans les livres.
 \end{paracol}
 
 \section{\prFrontmatter}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     There are three major divisions in a book: 
 the \pixfrontmatter\ or preliminaries\index{preliminaries}, 
@@ -1981,7 +2242,10 @@ expressed as roman numerals and sectional divisions are not numbered. The
 folios\index{folio} are expressed as arabic numerals in the \pixmainmatter\ 
 and \pixbackmatter. Sectional
 divisions are numbered in the \pixmainmatter\ but not in the \pixbackmatter.
+\switchFrench\TS{1}
+Il y a trois grandes divisions dans un livre : le corps du texte ou les préliminaires, le corps du texte ou le texte principal, et le fond ou les références. En ce qui concerne l'apparence, les principales différences sont les suivantes : dans le corps du texte, les folios sont exprimés en chiffres romains et les divisions en sections ne sont pas numérotées. Les folios sont exprimés en chiffres arabes dans le corps du texte et dans les documents de fond. Les divisions en sections sont numérotées dans le corps du texte mais pas dans le dos du livre.
 
+\switchEng
     The \pixfrontmatter\ consists of such elements as the title
 of the book, a table of contents\ixtoc, and similar items. All pages are
 paginated\index{pagination} --- that is they are counted --- but the first 
@@ -1990,7 +2254,10 @@ folios\index{folio}.
 The remainder of the pages in the \pixfrontmatter\ do have folios\index{folio} 
 which are usually expressed as roman numerals. Not all
 books have all the elements described below.
+\switchFrench\TS{1}
+Le corps du livre comprend des éléments tels que le titre du livre, une table des matières et d'autres éléments similaires. Toutes les pages sont numérotées, c'est-à-dire qu'elles sont comptées, mais les premières pages du frontispice, les pages de titre et autres, ne comportent généralement pas de folios. Les autres pages du frontispice ont des folios qui sont généralement exprimés en chiffres romains. Tous les livres ne comportent pas tous les éléments décrits ci-dessous.
 
+\switchEng
     The first page is a recto 
 \emph{half-title}\index{half-title page}\index{title page!half-title},
 or \emph{bastard title}\index{bastard title page}\index{title page!bastard},
@@ -1998,36 +2265,60 @@ page with no folio\index{folio}.
 The page is very simple and displays just the main title of the book --- 
 no subtitle, author, or other information. One purported purpose of this
 page is to protect the main title page.
+\switchFrench\TS{1}
+La première page est appelée \emph{faux-titre}. Cette page est très simple et n'affiche que le titre principal du livre --- sans sous-titre, auteur, folio ou autre information. L'un des objectifs de cette page est de protéger la page de titre principale.
 
+\switchEng
     The first verso page, the back of the half-title page, may contain the 
 series title, if the book is one in a series, a list of contributors, 
 a frontispiece, or may be blank. The series title may instead be put on the 
 half-title page or on the copyright page.
+\switchFrench\TS{1}
+Le premier verso, le verso de la page de faux-titre, peut contenir le titre de la série, si le livre fait partie d'une série, une liste des collaborateurs, un frontispice, ou peut être vide. Le titre de la série peut être placé sur la page de faux-titre ou sur la page de copyright.
 
+\switchEng
    The \emph{title page}\index{title page} is recto and contains the full 
 title of the work, the names of the author(s) or editor(s), and often at the
 bottom of the page the name of the publisher, together with the publisher's 
 logo if it has one.
+\switchFrench\TS{1}
+La \emph{page de titre} est un recto et contient le titre complet de l'ouvrage, le nom de l'auteur ou des auteurs, le nom de l'éditeur et souvent, en bas de page, le nom de l'éditeur, ainsi que son logo s'il en a un.
 
+\switchEng
     The title page(s) may be laid out in a simple manner or can have various
 fol-de-rols, depending on the impression the designer wants to give. In
 any event the style of this page should give an indication of the style
 used in the main body of the work.
+\switchFrench\TS{1}
+La ou les pages de titre peuvent être mises en page de manière simple ou comporter des fioritures, selon l'impression que le concepteur veut donner. Dans tous les cas, il est de bon ton que le style de cette page donne une indication du style utilisé dans le corps de l'ouvrage.
 
+\switchEng
     The verso of the title page is the copyright page\index{copyright page}.
 This contains the copyright notice, the publishing/printing history, 
 the country where printed, ISBN and/or CIP information. The page is usually 
 typeset in a smaller font\index{font!change} than the normal text.
+\switchFrench\TS{1}
+Le verso de la page de titre est la page de copyright. Elle contient l'avis de droit d'auteur, l'historique de l'édition/impression, le pays où l'ouvrage a été imprimé, l'ISBN et/ou les informations de catalogage. Cette page est généralement composée en une police de caractères plus petite que le texte normal.
 
+\switchEng
     Following the copyright page may come a dedication or an epigraph\index{epigraph}, 
 on a recto page, with the following verso page blank.
+\switchFrench\TS{1}
+La page de copyright peut être suivie d'une dédicace ou d'une épigraphe, sur une page recto, la page verso suivante étant vierge.
 
+\switchEng
     This essentially completes the unfolioed pages.
+\switchFrench\TS{2}
+Cela constitue l'essentiel des pages non foliotées.
 
+\switchEng
     The headings\index{heading} and textual forms for the paginated 
 pages should be the same as those for the \pixmainmatter, except that 
 headings\index{heading} are usually unnumbered.
+\switchFrench\TS{1}
+Les titres et les textes des pages paginées doivent être les mêmes que ceux de la matière principale, sauf que les titres ne sont généralement pas numérotés.
 
+\switchEng
     The first folioed page,
 usually with roman numerals (e.g., this is folio iii),
 is recto with the Table of Contents (\toc). If the book contains 
@@ -2038,28 +2329,46 @@ should contain an entry for each following major element. If there is a \lot,
 say, this should be listed in the \toc. The main chapters\index{chapter} must 
 be listed, of course, and so should elements like a preface\index{preface}, 
 bibliography\index{bibliography} or an index\index{index}.
+\switchFrench\TS{1}
+La première page foliotée, généralement en chiffres romains (par exemple, page \og{}iii\fg{}), est une page de recto et porte la Table des matières (TdM). Si le livre contient des figures (illustrations) et/ou des tableaux, la liste des figures (LdF) et/ou la liste des tableaux (LdT) viennent après la table des matières, sans page blanche. La table des matières doit contenir une entrée pour chaque élément majeur suivant. Par exemple, s'il existe une LdT, elle doit être mentionnée dans la TdM. Les principaux chapitres doivent bien sûr être énumérés, tout comme les éléments tels que la préface, la bibliographie ou l'index.
 
+\switchEng
     There may be a foreword\index{foreword} after the listings, with no blank
 separator. A foreword is usually written by someone other than the author, 
 preferably an eminent person whose name will help increase the sales potential,
 and is signed by the writer. The writer's
 signature is often typeset in small caps after the end of the piece.
+\switchFrench\TS{1}
+Il peut y avoir un avant-propos après les listes, sans séparateur vide. Un avant-propos est généralement écrit par une personne autre que l'auteur, de préférence une personnalité éminente dont le nom contribuera à augmenter le potentiel de vente, et il est signé par l'auteur. La signature de l'écrivain est souvent tapée en petites capitales après la fin du texte.
 
+\switchEng
    A preface\index{preface} is normally written by the author, in which he
 includes reasons why he wrote the work in the first place, and perhaps to 
 provide some more personal comments than would be justified in the body. 
 A preface starts on the page immediately following a foreword, or the lists.
+\switchFrench\TS{1}
+Une préface est normalement rédigée par l'auteur, dans laquelle il indique les raisons pour lesquelles il a écrit l'ouvrage en premier lieu, et peut-être quelques commentaires plus personnels que ceux qui seraient justifiés dans le corps du texte. Une préface commence sur la page qui suit immédiatement l'avant-propos, ou les listes.
 
+\switchEng
    If any acknowledgements are required that have not already appeared in the
 preface, these may come next in sequence.
+\switchFrench\TS{1}
+Si des remerciements sont nécessaires et qu'ils ne figurent pas déjà dans la préface, ils peuvent suivre dans l'ordre.
 
+\switchEng
    Following may be an introduction if this is not part of the main text. 
 The last elements in the front material may be a list of abbreviations, list
 of symbols, a chronology of events, a family tree, or other information of
 a like sort depending on the particular work.
+\switchFrench\TS{1}
+Une introduction peut suivre si elle ne fait pas partie du texte principal. Les derniers éléments de la préface peuvent être une liste d'abréviations, une liste de symboles, une chronologie des événements, un arbre généalogique ou d'autres informations du même type, selon l'ouvrage concerné.
 
+\switchEng
     Table~\ref{tab:front} summarises the potential elements in the 
 \pixfrontmatter.
+\switchFrench\TS{1}
+Le tableau~\ref{tab:front} résume les éléments candidats de la première partie d'un livre.
+
 \end{paracol}
 
 \begin{table}
@@ -2085,17 +2394,20 @@ Abbreviations, etc  & recto or verso & yes       & etc. \\
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Note that the titles Foreword, Preface and Introduction are somewhat
 interchangeable. In some books the title Introduction may be used for what
 is described here as the preface, and similar changes may be made among the 
 other terms and titles in other books. 
+\switchFrench\TS{1}
+Notez que les titres \og{}Avant-propos\fg{}, \og{}Préface\fg{} et \og{}Introduction\fg{} sont relativement interchangeables. Dans certains ouvrages, \og{}Introduction\fg{} est utilisé pour ce qui est décrit ici comme la préface, et des modifications similaires peuvent être apportées aux autres termes et titres dans d'autres ouvrages.
+
 \end{paracol}
 
 \subsection{Copyright page}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Most people are familiar with titles, \toc, prefaces, etc., but like
 me are probably
@@ -2103,7 +2415,10 @@ less familiar with the contents of the copyright page\index{copyright page|(}.
 In any event this is
 usually laid out by the publishing house, but some authors may like to be,
 or are forced into being, their own publisher.
+\switchFrench\TS{1}
+La plupart des gens connaissent titres, tables des matières, préfaces, etc., mais si vous êtes comme moi, vous connaissez sans doute moins bien le contenu de la page de copyright. Quoi qu'il en soit, cette page est généralement établie par la maison d'édition, mais certains auteurs sont leur propre éditeur, par choix ou par contrainte.
 
+\switchEng
     The main point of the copyright page is to display the 
 copyright\index{copyright} notice.
 The Berne Convention does not require that published works carry a copyright
@@ -2120,10 +2435,17 @@ The phrase `All rights reserved' is often added to ensure protection under the
 Buenos Aires Convention, to which most of the Americas belong. A typical
 copyright notice may look like: \\
 {\footnotesize \textcopyright{} 2035 by Frederick Jones. All rights reserved.}
+\switchFrench\TS{1}
+L'objectif principal de la page de copyright est d'afficher la mention du copyright. La Convention de Berne n'exige pas que les \oe uvres publiées portent cette mention afin de garantir la protection du droit d'auteur, mais la plupart des auteurs jouent la carte de la sécurité et incluent le copyright. Celle-ci se compose généralement de trois parties : le mot \textit{Copyright} ou, plus souvent, le symbole \textcopyright, l'année de publication et le nom du titulaire du droit d'auteur. Le symbole du droit d'auteur répond aux exigences de la Convention universelle sur le droit d'auteur, à laquelle adhèrent les États-Unis, la majorité des pays européens et de nombreux pays asiatiques. La phrase \of{}Tous droits réservés\fg{} est souvent ajoutée pour garantir la protection de la Convention de Buenos Aires, à laquelle adhèrent la plupart des pays d'Amérique. Un avis de droit d'auteur typique peut ressembler à ceci: \\
+{\footnotesize \textcopyright{} 2035 par Frederick Jones. Tous droits réservés.}
 
+\switchEng
     Somewhere on the page, but often near the copyright notice, is the name 
 and location(s) of the publisher.
+\switchFrench\TS{1}
+Quelque part sur la page, mais souvent à proximité du copyright, figurent le nom et la ou les adresses de l'éditeur.
 
+\switchEng
     Also on the copyright page is the publishing history, denoting the edition
 or editions\footnote{A second edition should be more valuable than a first
 edition as there are many fewer of them.} and their dates, 
@@ -2136,12 +2458,20 @@ The set on the right, and again reading from right to left, represents the
 potential number of new impressions (print runs). The lowest number in each 
 group indicates the edition date and the current impression. So, the example
 indicates the fifth impression of a book first published in 1997.
+\switchFrench\TS{1}
+La page de copyright contient également l'historique de la publication, indiquant l'édition ou les éditions\footnote{Une deuxième édition devrait avoir plus de valeur qu'une première édition car il y en a beaucoup moins.} et leurs dates, et souvent le lieu où le livre a été imprimé. Une chose qui m'a laissé perplexe dans le passé est la mystérieuse rangée de chiffres que l'on voit souvent et qui ressemble à ceci: \\
+\centerline{\footnotesize\texttt{02 01 00 99 98 97\hspace{2em}10 9 8 7 6 5}}
+La série de gauche, lue de droite à gauche, correspond aux deux derniers chiffres des années, en commençant par l'année de publication originale. Le groupe de droite, également lu de droite à gauche, représente le nombre potentiel de nouvelles impressions (tirages). Le chiffre le plus bas de chaque groupe indique la date d'édition et l'impression en cours. Ainsi, l'exemple indique la cinquième impression d'un livre publié pour la première fois en~1997.
 
+\switchEng
     In the USA, the page often includes the Library of Congress 
 Cataloging-in-Publication (CIP)\index{CIP} data, 
 which has to be obtained from the
 Library of Congress. This provides some keywords about the book.
+\switchFrench\TS{1}
+Aux États-Unis, la page comprend souvent les données de \of{}catalogage avant publication \fg{} (CIP, \textit{cataloging in publication}) de la Bibliothèque du Congrès, qui doivent être obtenues auprès de cette dernière. Ces données fournissent quelques mots-clefs relatifs au livre.
 
+\switchEng
     The copyright page is also the place for the ISBN\index{ISBN} 
 (International
 Standard Book Number) number. This uniquely identifies the book. For example:
@@ -2149,24 +2479,36 @@ ISBN 0-NNN-NNNNN-2. The initial 0 means that the book was published in an
 English-speaking country, the next group of digits identify the publisher,
 the third group identifies the particular book by the publisher, and the final
 digit, 2 in the example, is a check digit.
+\switchFrench\TS{1}
+La page des droits d'auteur est également l'endroit où figure le numéro ISBN (\textit{International Standard Book Number}). Ce numéro identifie le livre de manière unique. Par exemple : ISBN 0-NNN-NNNNN-2. Le 0 initial signifie que le livre a été publié dans un pays anglophone, le groupe de chiffres suivant identifie l'éditeur, le troisième groupe identifie le livre particulier de l'éditeur, et le dernier chiffre, 2 dans l'exemple, est un chiffre de contrôle.
 
+\switchEng
     It is left as an exercise for the reader to garner more information about
 obtaining CIP and ISBN data.\index{copyright page|)}
+\switchFrench\TS{1}
+Nous laissons au lecteur le soin d'obtenir plus d'informations sur l'obtention des données CIP et de l'ISBN.
+
 \end{paracol}
 
 \section{\prMainmatter}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \pixmainmatter\ forms the heart of the book.
+\switchFrench\TS{1}
+Le corps du texte constitue le c\oe ur du livre.
 
+\switchEng
     Just as in all the other parts of a book the pages within the 
 \pixmainmatter\
 are included in the pagination, even though some folios\index{folio} may
 not be expressed. The folios\index{folio} are normally presented as arabic 
 numerals, with 
 the numbering starting at 1 on the first recto page of the \pixmainmatter.
+\switchFrench\TS{1}
+Comme dans toutes les autres parties d'un livre, les pages du corps du texte sont incluses dans la pagination, même si certains folios ne sont pas exprimés. Les folios sont normalement présentés en chiffres arabes, la numérotation commençant à 1 sur la première page recto du corps du texte.
 
+\switchEng
     The \pixmainmatter\ is at least divided into \emph{chapters}\index{chapter}, 
 unless it is something like a 
 young child's book which consists of a single short story.
@@ -2185,14 +2527,20 @@ Typically all of books\index{book!number}, parts\index{part!number}
 and chapters\index{chapter!number} are numbered.
 Obviously, part numbering should be continuous throughout the book, but even
 with parts the chapter numbering is also continuous throughout the book.
+\switchFrench\TS{1}
+Le corps du texte est au moins divisé en \emph{chapitres}, à moins qu'il ne s'agisse d'un livre pour enfants qui consiste en une seule histoire courte. Lorsque le matériel peut être logiquement divisé en sections plus grandes que des chapitres, les chapitres peuvent être regroupés en \emph{parties} qui constituent alors le plus haut niveau de division du livre. Frédéric Connes m'a dit que dans la typographie française, il y a souvent une division au-dessus du niveau de la partie. C'est aussi parfois le cas dans la typographie anglaise où l'on parle généralement de \emph{livre} --- le \btitle{Chicago Manual of Style}~\autocite[p. 21]{CMS} en donne un exemple. Un livre physique unique peut donc être divisé en plusieurs niveaux, du \emph{livre} à la \emph{partie} et au \emph{chapitre}, en passant par d'autres raffinements. En général, tous les livres, parties et chapitres sont numérotés. Il est évident que la numérotation des parties doit être continue tout au long du livre, mais même avec les parties, la numérotation des chapitres est également continue tout au long du livre.
 
+\switchEng
     The title of a part\index{heading!part} is usually on a recto page which 
 just contains the part title, and number if there is one. 
 Book titles\index{heading!book} are usually treated the same way.
 Chapters\index{chapter} also start on recto pages but in this case the text 
 of the chapter\index{chapter} starts on the same page as the chapter
 title.
+\switchFrench\TS{1}
+Le titre d'une partie se trouve généralement sur une page recto qui ne contient que le titre de la partie et son numéro, s'il y en a un. Les titres des livres sont généralement traités de la même manière. Les chapitres commencent également sur des pages recto, mais dans ce cas, le texte du chapitre commence sur la même page que le titre du chapitre.
 
+\switchEng
     Where chapters\index{chapter} are long, or when the material is
 complicated, they may be divided into sections\index{section}, each introduced
 by a subhead\index{subhead}, either numbered or unnumbered, with
@@ -2201,62 +2549,92 @@ may be partitioned into subsections by inserting sub-subheads, but except
 for more technical works this is usually as fine as the subdivisions need 
 go to. Normally there are no required page breaks before the start of any 
 subhead\index{subhead} within a chapter\index{chapter}.
+\switchFrench\TS{1}
+Lorsque les chapitres sont longs, ou lorsque la contenu est complexe, ils peuvent être divisés en sections, chacune étant introduite par un sous-titre, numéroté ou non, le schéma de numérotation recommençant à l'intérieur de chaque chapitre. De même, les sections peuvent être divisées en sous-sections en insérant des sous-sous-titres, mais, sauf pour les ouvrages plus techniques, cette subdivision est généralement aussi fine que nécessaire. Normalement, il n'y a pas de saut de page obligatoire avant le début d'un sous-titre à l'intérieur d'un chapitre.
 
+\switchEng
     The title page of a part\index{part}
  or chapter\index{chapter} need not have the folio\index{folio} expressed, nor
 a possibly textless verso page before the start of a chapter\index{chapter}, but all other 
 pages should display their folios\index{folio}.
+\switchFrench\TS{1}
+La page de titre d'une partie ou d'un chapitre n'a pas besoin d'avoir de folio exprimé, ni une page verso éventuellement sans texte avant le début d'un chapitre, mais toutes les autres pages doivent afficher leurs folios.
 
+\switchEng
     There may be a final chapter\index{chapter} in the \pixmainmatter\ called Conclusions, 
 or similar, which may be a lengthy summary of the work presented, untouched
 areas, ideas for future work, and so on.
+\switchFrench\TS{1}
+Il peut y avoir un chapitre final dans le corps du livre, intitulé \og{}Conclusion\fg{}, ou équivalent, qui peut être un long résumé du travail présenté, des domaines non abordés, des idées pour un travail futur, et ainsi de suite.
 
+\switchEng
     If there are any numbered appendices\index{appendix} 
 they logically come at the end of
 the \pixmainmatter. Appendices are often `numbered' alphabetically rather
 than numerically, so the first might be Appendix A, the second Appendix B,
 and so on.
+\switchFrench\TS{1}
+S'il y a des annexes numérotées, elles viennent logiquement à la fin de la partie principale. Les annexes sont souvent "numérotées" par ordre alphabétique plutôt que numérique, de sorte que la première annexe peut être intitulée \og{}Annexe A\fg{}, la deuxième \og{}Annexe B\fg{}, et ainsi de suite.
 
+\switchEng
     An epilogue\index{epilogue} or an afterword\index{afterword} is a 
 relatively short piece that the author may
 include. These are not normally treated as prominently as the preceding
 chapters\index{chapter}, and may well be put into the \pixbackmatter\ if they are 
 unnumbered.
+\switchFrench\TS{1}
+Un épilogue ou une postface est une pièce relativement courte que l'auteur peut inclure. Ils ne sont généralement pas traités de manière aussi importante que les chapitres précédents et peuvent être placés en fin d'ouvrage s'ils ne sont pas numérotés.
+
 \end{paracol}
 
 \section{\prBackmatter}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \pixbackmatter\
 is optional but if present conveys information ancilliary
 to that in the \pixmainmatter. The elements are not normally numbered, so an
 unnumbered appendix\index{appendix} would normally come in the \pixbackmatter.
+\switchFrench\TS{1}
+La dernière partie est facultative mais, si elle est présente, elle fournit des informations complémentaires à celles de la partie principale. Les éléments ne sont normalement pas numérotés, de sorte qu'un appendice non numéroté se trouve normalement dans la dernière partie.
 
+\switchEng
     Other elements include Notes, a Glossary\index{glossary}
  and/or lists of symbols\index{symbol} or 
 abbreviations\index{abbreviation}, which could be in the 
 \pixfrontmatter\ instead. These elements 
 are normally unnumbered, as is any list of contributors\index{contributor}, 
 Bibliography\index{bibliography} or Index\index{index}.
+\switchFrench\TS{1}
+D'autres éléments, tels que des notes, un glossaire et/ou des listes de symboles ou d'abréviations, peuvent également figurer au début du livre. Ces éléments ne sont normalement pas numérotés, tout comme la liste des collaborateurs, la bibliographie ou l'index.
 
+\switchEng
     In some instances appendices\index{appendix} 
 and notes may be given at the end of each
 chapter\index{chapter} instead of being lumped at the back.
+\switchFrench\TS{1}
+Dans certains cas, les annexes et les notes peuvent figurer à la fin de chaque chapitre au lieu d'être regroupées à la fin.
 
+\switchEng
     The first element in the \pixbackmatter\ starts on a recto page but the 
 remainder may start on either recto or verso pages.
+\switchFrench\TS{1}
+Le premier élément du dos du livre commence sur une page recto, mais les autres peuvent commencer sur des pages recto ou verso.
 
+\switchEng
     In older books it was often the custom to have a colophon\index{colophon}
 as the final element in a book. This is an inscription which includes 
 information about the production and design of the book and nearly 
 always indicates which fonts\index{font} were used.
+\switchFrench\TS{1}
+Dans les livres anciens, il était souvent d'usage d'avoir un colophon comme dernier élément du livre. Il s'agit d'une inscription qui comprend des informations sur la production et la conception du livre et qui indique souvent les polices de caractères utilisées.
+
 \end{paracol}
 
 \section{Signatures and casting off}
 \index{signature|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Professionally printed books have many pages printed per sheet of (large)
 paper\index{paper}, which is then folded and cut where necessary to produce a 
@@ -2291,7 +2669,7 @@ Octavo, \emph{8vo} & 3 & $b/4 \times a/2$ & & 4 & & & 8 & & & 16 & \\
 \index{8vo}\index{16mo}\index{32mo}\index{64mo}%
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In \tref{tab:signatures} the Size column is the untrimmed size of a 
 leaf\index{leaf} in 
@@ -2325,7 +2703,7 @@ Broadsheet      & \abyb{22}{17}  & As used in newsprint \\ \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Traditionally the sizes are denoted by name but manufacturers did not 
 necessarily make paper of the size that matched the name they gave it.
@@ -2354,7 +2732,7 @@ imperial    & \abyb{15}{11}      & \abyb{11}{7.5} \\ \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The metric sizes, given in \tref{tab:metricpapersizes}, are those now 
 recommended for book production where the metric system holds sway,
@@ -2374,7 +2752,7 @@ A5                        &                 & \abyb{210}{148} \\ \bottomrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In making up the book, the pages in each signature are first fastened
 together, usually by sewing through the folds. The signatures are then bound
@@ -2398,7 +2776,7 @@ Sheet size & Book trim size & Common use & Pages per sheet (max) \\ \midrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Commercial printers use paper larger than shown in the previous tables;
 they print several (final) pages on a single sheet, then fold it and trim it
@@ -2406,17 +2784,20 @@ down to the finished page size. Table~\ref{tab:adriansizes} is from
 \autocite[p. 59]{ADRIANWILSON93}. He also says that other common trimmed sizes are
 \abybm{9.25}{6.125}{in} out of \abybm{50}{38}{in} sheets, 
 \abybm{10.25}{8.25}{in} out of \abybm{45}{35}{in} sheets, and so on.
+\end{paracol}
 
-\newpage
-
-
+\begin{paracol}{2}
+\switchEng
     Publishers like the final typeset book to be of a length that just fits
 within an integral number of signatures\index{signature}, 
 with few if any blank pages required
 to make up the final signature. Casting off\index{casting off} is the
 process of determining how many lines a given text will make in a given
 size of type, and hence how many pages will be required.
+\switchFrench\TS{0}
+Les éditeurs aiment que le livre final soit d'une longueur qui corresponde à un nombre entier de cahiers, avec peu ou pas de pages blanches à ajouter pour remplir le dernier cahier. Le \textit{casting off} (\textbf{Traduction:} ??? Le dictionnaire dit \og{}To estimate the space a manuscript will occupy when set into type\fg{}) est le processus qui consiste à déterminer le nombre de lignes d'un texte donné dans une taille de caractères donnée, et donc le nombre de pages nécessaires.
 
+\switchEng
     To cast off you need to know how many characters there will be in
 a line, and how many characters there are, or will be, in the text. 
 For the purposes of casting off, `characters' includes punctuation as well
@@ -2427,7 +2808,10 @@ The second is more problematic, especially when the manuscript has yet
 to be written. A useful rule of thumb is that words in an English text
 average five letters plus one space (i.e., six characters); 
 word length in technical texts might be greater than this.
+\switchFrench\TS{1}
+Pour effectuer ce calcul, il faut savoir combien de caractères il y aura dans une ligne et combien de caractères il y a ou il y aura dans le texte. Dans le cadre du décalage, les \og{}caractères\fg{} comprennent la ponctuation, les lettres et les chiffres. Le premier nombre peut être facilement obtenu, soit à partir des tables d'ajustement des copies, soit par mesure; ceci est décrit plus en détail au\S\ref{sec:tblock}. Le second est plus problématique, surtout lorsque le manuscrit n'a pas encore été écrit. Une règle empirique utile est que les mots d'un texte anglais ont en moyenne cinq lettres plus un espace (c'est-à-dire six caractères); la longueur moyenne des mots dans les textes techniques peut être supérieure à cette valeur.
 
+\switchEng
     To determine the number of words it is probably easiest to type a
 representative portion of the manuscript, hand count the words and then
 divide that result by the proportion of the complete text that you have
@@ -2435,14 +2819,20 @@ typed. For example, if you have typed 1/20\,th of the whole, then divide
 by 1/20, which is equivalent to multiplying by 20. To fully estimate
 the number of pages required it is also necessary to make allowance for
 chapter\index{chapter} titles, illustrations\index{illustration}, and so forth.
+\switchFrench\TS{1}
+Pour déterminer le nombre de mots, le plus simple est probablement de taper une partie représentative du manuscrit, de compter les mots à la main, puis de diviser le résultat par la proportion du texte complet que vous avez tapé. Par exemple, si vous avez tapé un vingtième de l'ensemble, divisez par~1/20, ce qui équivaut à multiplier par~20. Pour bien estimer le nombre de pages nécessaires, il faut également tenir compte des titres de chapitre, des illustrations, etc.
 
+\switchEng
     If it turns out, say, that your work will require 3 signatures plus 2
 pages then it will be more convenient to make it fit into 3 signatures,
 or 4 signatures minus a page or two. This can be done by expanding or cutting
 the text and/or by changing the font\index{font!change} 
 and/or by changing the number or width
 of lines on a page.
+\switchFrench\TS{1}
+S'il s'avère, par exemple, que votre travail nécessitera 3~cahiers plus 2~pages, il sera plus pratique de le faire tenir dans 3~cahiers, ou 4~cahiers moins une page ou deux. Cela peut se faire en élargissant ou en coupant le texte et/ou en changeant la police de caractères et/ou en modifiant le nombre ou la largeur des lignes sur une page.
 
+\switchEng
     When I was editing a technical journal the authors were given a word 
 limit. The primary reason was not that we were interested in the actual
 word count but rather so that we could estimate, and possibly limit, 
@@ -2452,7 +2842,10 @@ signatures\index{signature} and no blank pages.
 I suspect that it is
 the same with most publishers --- it is the page count not the word count
 that is important to them.
+\switchFrench\TS{1}
+Lorsque j'étais rédacteur d'une revue technique, les auteurs étaient soumis à une limite de mots. La raison principale n'était pas que nous étions intéressés par le nombre réel de mots mais plutôt que nous pouvions estimer, et éventuellement limiter, le nombre de pages allouées à chaque article ; nous utilisions des cahiers \emph{in octavo} et aucune page blanche. Je soupçonne qu'il en va de même pour la plupart des éditeurs - c'est le nombre de pages et non le nombre de mots qui est important pour eux.
 
+\switchEng
     In some special cases, extra pages may be `tipped in'\index{tip in} to
 the body of the book. This is most likely to occur for 
 illustrations\index{illustration} which
@@ -2462,6 +2855,9 @@ a large map, say, or a triple spread illustration\index{illustration}. The tippe
 are glued into place in the book and may or may not be paginated. For
 tipped in illustrations\index{illustration}, a List of Illustrations may well start with
 a phrase like: `Between pages 52 and 53'.
+\switchFrench\TS{1}
+Dans certains cas particuliers, des pages supplémentaires peuvent être insérées dans le corps du livre. Cela se produit le plus souvent pour des illustrations qui nécessitent un papier spécial pour l'impression et il serait trop coûteux d'utiliser ce papier pour l'ensemble de l'ouvrage. Un autre exemple est celui d'un dépliant, une grande carte, par exemple, ou une illustration à triple page. Les pages encartées sont collées dans le livre et peuvent être paginées ou non. Dans le cas d'illustrations encartées, la liste des figures peut commencer par une phrase comme \og{}Entre les pages~52 et~53\fg{}.
+
 \end{paracol}
 
 \index{signature|)}
@@ -2470,7 +2866,7 @@ a phrase like: `Between pages 52 and 53'.
 
 \index{paper|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Paper, on which I assume your work will be printed, can be thought of
 in seven categories, six of which are used in the making of books. The 
@@ -2521,7 +2917,7 @@ wonderful Japanese bookcloths for binding covers.
 
 \index{paper!machine-made|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Machine-made paper, which is the commonest, comes in a number of 
 sometimes overlapping categories, of which the main ones are:
@@ -2612,7 +3008,7 @@ the particular printer tends to have its own requirements.
 
 \index{paper!machine-made|)}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     It is not often that books include information about the paper on which
 they are printed. If they do they are likely to be fine press books or 
@@ -2692,7 +3088,7 @@ Paper grade & Grammage & Thickness &  Caliper \\
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As you can see, paper comes in various weights. In most of the world this
 is simply specified as grams per square meter (\gsm, sometimes designated as
@@ -2743,7 +3139,7 @@ within the same basic weight which vary between manufactures.
 %%%\raggedbottom
 \chapter{The page}  \label{chap:lpage}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Authors usually want their works to be read by others than themselves,
 and this implies that their manuscript will be reproduced in some manner.
@@ -2757,20 +3153,29 @@ even started to read seriously after an initial scan. The other aspect is
 the manner in which the content is displayed. Or, in other words, 
 the \emph{typography}
 of the book, which is the subject of this chapter.
+\switchFrench\TS{2}
+Les auteurs souhaitent généralement que leurs \oe uvres soient lues par d'autres qu'eux-mêmes, ce qui implique que leur manuscrit sera reproduit d'une manière ou d'une autre. Il est à espérer que la version publiée de leur \oe uvre attirera des lecteurs et il y a deux aspects à cela. Le principal est le contenu de l'\oe uvre --- les pensées de l'auteur formulées de manière intéressante --- si quelque chose est ennuyeux, alors le lecteur aura bien d'autres choses à faire que de continuer la lecture de ce livre, en supposant qu'il ait commencé à lire sérieusement après un premier coup d'\oe il. L'autre aspect est la manière dont le contenu est présenté. Ou, en d'autres termes, la \emph{typographie} du livre, qui fait l'objet de ce chapitre.
 
+\switchEng
     The essence of good typography is that it is not noticeable at first,
 or even second or later, glances to any without a trained eye. If your
 initial reaction when glancing through a book is to exclaim about its layout
 then it is most probably badly designed, if it was designed at all. Good
 typography is subtle, not strident. 
+\switchFrench\TS{2}
+L'essence d'une bonne typographie est qu'elle ne se remarque pas au premier, voire au deuxième ou au troisième regard, pour qui n'a pas l'\oe il exercé. Si votre première réaction en feuilletant un livre est de vous exclamer sur sa mise en page, c'est qu'il est très probablement mal conçu, si tant est qu'il l'ait été. Une bonne typographie est subtile, pas ostentatoire.
 
+\switchEng
     With the advent of desktop publishing
 many authors are tempted to design their own books. It is seemingly all
 too easy to do. Just pick a few of the thousands of fonts\index{font} that are available,
 use this one for headings\index{heading}, 
 that one for the main text, another one for
 captions, decide how big the typeblock\index{typeblock} is to be, and there you are.
+\switchFrench\TS{1}
+Avec l'avènement de la publication assistée par ordinateur, de nombreux auteurs sont tentés de concevoir leurs propres livres. C'est en apparence très simple à faire. Il suffit de choisir quelques polices parmi les milliers disponibles, d'utiliser celle-ci pour les titres, celle-là pour le texte principal, une autre pour les légendes, de décider de la taille du bloc de caractères et le tour est joué.
 
+\switchEng
     However, just as writing is a skill that has to be learned, typography
 is also an art that has to be learned and practised. There are hundreds
 of years of experience embodied in the good design of a book. These are
@@ -2778,18 +3183,24 @@ not to be cast aside lightly and many authors who design their own books
 do not know what some of the hard-earned lessons are, let alone that what
 they are doing may be the very antithesis of these. An expert can break
 the rules, but then he is aware that he has good reasons for breaking them.
+\switchFrench\TS{1}
+Cependant, tout comme l'écriture est une compétence qui doit être apprise, la typographie est également un art qui doit être appris et pratiqué. La bonne conception d'un livre est le fruit de centaines d'années d'expérience. Elles ne doivent pas être mises de côté à la légère et de nombreux auteurs qui conçoivent leurs propres livres ne connaissent pas ces leçons durement apprises, et ce qu'ils font peut en être l'antithèse. Un expert peut enfreindre les règles, mais il sait alors qu'il a de bonnes raisons de le faire.
 
+\switchEng
     The author supplies the message and the typographer supplies the medium.
 Contrary to Marshall McLuhan, the medium is \emph{not} the message, 
 and the typographer's job is not to
 intrude between the message and the audience, but to subtly increase the
 reader's enjoyment and involvement. If a book shouts `look at me!' then it
 is an advertisement, and a bad one at that, for the designer.
+\switchFrench\TS{1}
+L'auteur fournit le message et le typographe fournit le support. Contrairement à Marshall McLuhan, le support n'est \emph{pas} le message, et le travail du typographe n'est pas de s'immiscer entre le message et le public, mais d'augmenter subtilement le plaisir et l'implication du lecteur. Si un livre crie \og{}regardez-moi!\fg{}, il s'agit d'une publicité, et d'une mauvaise publicité, pour le concepteur.
+
 \end{paracol}
 
 \section{The shape of a book}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Books come in many shapes and sizes, but over the centuries certain
 shapes have been found to be more pleasurable and convenient than others.
@@ -2801,7 +3212,10 @@ have a book edited by Fritz Spiegl and published by Pan Books entitled
 closed, is greater than the width. Apart from any aesthetic reasons, 
 a book of this shape is physically more comfortable to hold than one which 
 is wider than it is high.
+\switchFrench\TS{1}
+Les livres existent en toutes sortes de formes et de tailles, mais au fil des siècles, certaines formes se sont avérées plus agréables et plus pratiques que d'autres. Ainsi, les livres, à l'exception d'un très petit nombre, sont de forme rectangulaire. Les exceptions sont généralement des livres pour jeunes enfants, bien que je possède un livre édité par Fritz Spiegl et publié par Pan Books, intitulé \textit{A Small Book of Grave Humour}, qui a la forme d'une pierre tombale --- il s'agit d'une anthologie d'épitaphes. Normalement, la hauteur d'un livre, lorsqu'il est fermé, est supérieure à sa largeur. En dehors de toute raison esthétique, un livre de cette forme est physiquement plus confortable à tenir qu'un livre plus large que haut.
 
+\switchEng
     It might appear that the designer has great freedom in choosing the
 size of the work, but for economic reasons this is not normally the case.
 Much typographical design is based upon the availabilty of certain 
@@ -2816,7 +3230,10 @@ Brochures for mailing
 should be designed so that they can be inserted into the envelope with 
 minimal folding. Thus a brochure size of \abybm{5}{10}{inches} will be 
 highly inconvenient, no matter how good it looks visually.
+\switchFrench\TS{1}
+On pourrait penser que le concepteur a une grande liberté dans le choix du format de l'\oe uvre, mais pour des raisons économiques, ce n'est généralement pas le cas. Une grande partie de la conception typographique est basée sur la disponibilité de certains formats industriels standard de feuilles de papier. Une page de \abybm{12}{8}{pouces} sera beaucoup plus chère que celle qui tient sur une feuille de papier standard de \abybm{11}{8\:\Mfrac{1}{2}}{pouces}. De même, l'un des formats standard d'une enveloppe commerciale est de \abybm{4\:\Mfrac{1}{8}}{9\:\Mfrac{1}{2}}{pouces}. Les brochures destinées à être envoyées par la poste doivent être conçues de manière à pouvoir être insérées dans l'enveloppe avec un minimum de pliage. Ainsi, une brochure de \abybm{5}{10}{pouces} sera très peu pratique, quelles que soient ses qualités esthétiques.
 
+\switchEng
     Over the years books have been produced in an almost infinite variety
 of proportions,
 where by \emph{proportion}\index{proportion}
@@ -2827,11 +3244,14 @@ civilizations. This is because some proportions are inherently
 more pleasing to the eye than others are. These pleasing proportions are
 also commonly found in nature --- in  physical, biological, and chemical
 systems and constructs. 
+\switchFrench\TS{1}
+Au fil des ans, les livres ont été produits dans une variété presque infinie de proportions. Par proportion, j'entends le rapport entre la hauteur et la largeur d'un rectangle. Cependant, certaines proportions reviennent régulièrement au fil des siècles et dans de nombreux pays et civilisations différents. Cela s'explique par le fait que certaines proportions sont intrinsèquement plus agréables à l'\oe il que d'autres. Ces proportions agréables se retrouvent également dans la nature, dans les systèmes et constructions physiques, biologiques et chimiques.
+
 \end{paracol}
 
 \index{proportion!page|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Some examples of pleasing proportions can be
 seen in Japanese wood block prints, such as the \textit{Hoso-ye} size
@@ -2842,7 +3262,9 @@ were often published as stand-alone art work. Similarly Indian paintings,
 at least in the 16th to the 18th century,
 often come in the range \ratio{1.701}{1} to \ratio{13}{9}, thus being around
 \ratio{3}{2} in proportion.
+\switchFrench\TS{0}
 
+\switchEng
     In medieval Europe page proportions were generally in the range
 \ratio{1.25}{1} to \ratio{1.5}{1}. Sheets of paper\index{paper} were typically 
 produced in the
@@ -2860,7 +3282,9 @@ then the first fold will make a double sheet of size \abyb{30}{40}
 proportions would go up to \ratio{1.87}{1}
 or so. The style nowadays has tended to go back towards the medieval
 proportions.
+\switchFrench\TS{0}
 
+\switchEng
     The standard ISO page proportions are 
 \ratio{{\sqrt{2}}}{1} (\ratio{1.414}{1}). These
 have a similar folding property to the other proportions, except in this case
@@ -2869,14 +3293,17 @@ Thus halving an A0 sheet
 (size \abybm{1189}{841}{mm}) produces an A1 size sheet (\abyb{594}{841}),
 which in turn being halved produces the A2 sheet (\abyb{420}{594}), down
 through the A3, A4 (\abybm{210}{297}{mm}), A5, \ldots{} sheets.
+\switchFrench\TS{0}
 
+\switchEng
 For many years it was thought that it was impossible to fold a sheet of 
 paper\index{paper}, no matter how large and thin, more than eight times 
 altogether. This is not so as in 2002 a high school student, Britney Gallivan,
 managed to fold a sheet of paper in half twelve times (see, for example,
 \url{http://mathworld.wolfram.com/Folding.html}).
+\switchFrench\TS{0}
 
-
+\switchEng
    There is no one perfect proportion for a page, 
 although some are clearly better
 than others. For ordinary books both publishers and readers tend to prefer
@@ -2940,7 +3367,7 @@ or where multi-column\index{column!multiple} printing is preferred.
 \end{figure}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In books where the illustrations\index{illustration} are the primary 
 concern, the shape of the illustrations\index{illustration} is generally 
@@ -2967,7 +3394,7 @@ an \ratio{0.83}{1} page.
 \subsection{The golden section and Fibonacci series}
 
 \index{golden section|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Typographers need a modicum of mathematical ability, but no more
 than an average teenager can do --- basically simple arithmetic. You can
@@ -3103,7 +3530,7 @@ pinecone, or Picasso in the same light'.
 \index{proportion!page|(}
 \index{proportion!typeblock|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The typeblock\index{typeblock} is that part of the page which is normally 
 covered with type. The same proportions that are useful for the shape of a 
@@ -3191,7 +3618,7 @@ $5/7$      & $2/3$   & $w/9$    & $s/2$  & $2s/3$  & $s$     & $s/3$ & \ref{fb:1
 %%\MakeShortVerb{\|}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
   Table~\ref{tlpage:allp} gives some examples of 
 page designs. These are arranged in increasing order of
@@ -3260,7 +3687,7 @@ or folios\index{folio}.
          (Right) England, 1970.} \label{fb:1}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Shown in \fref{fb:1} are two modern books. On the left is the layout
 for Robert Bringhurst's\index{Bringhurst, Robert} 
@@ -3303,7 +3730,7 @@ in small caps.
          (Right) England, 1964.} \label{fb:2}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Figure~\ref{fb:2} (left) illustrates a small book by Wilfred T.~Grenfell
 entitled \btitle{Adrift on an Ice-Pan} published in 1909 by the Riverside
@@ -3353,7 +3780,7 @@ summary of the chapter contents, are typeset in italic.
          (Right) Canada, 1995.} \label{fb:3}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    Jean de Tourmes\index{de Tourmes, Jean}, a Parisian publisher, 
 printed \btitle{Histoire et Chronique}
@@ -3407,7 +3834,7 @@ in italics.
          (Right) USA, 1990.} \label{fb:4}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Bruce Rogers\index{Rogers, Bruce} (1870--1957) 
 described how he came to design his Centaur\facesubseeidx{Centaur} typeface in
@@ -3457,7 +3884,7 @@ following period and the page numbers are flushright.
          (Right) USA, 1993.} \label{fb:5}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     \btitle{Microcosmographica Academia} by F. M. Cornford is shown in
 \fref{fb:5}. Despite its title, it is written in English and was published
@@ -3506,7 +3933,7 @@ typeset in small caps except for the current letter which is enlarged.
          (Right) England, 1968.} \label{fb:6}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     W.~A.~Dwiggins was, among many other things, an American book designer.
 Figure~\ref{fb:6} (left) shows his layout of H.~G.~Wells' \btitle{The Time
@@ -3550,7 +3977,7 @@ or other appurtenances, apart from a Preface.
 \enlargethispage{\baselineskip}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A modern technical book layout is given in \fref{fb:7}. The book
 is \btitle{Information Modeling the EXPRESS Way} by Douglas Schenck and Peter
@@ -3606,7 +4033,7 @@ Typography} (1988)} \label{fig:titleTH}
          (Right) Italy 1499.} \label{fb:8}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  Many page layouts in earlier days were constructed by
 drawing with compass and ruler, usually based on regular geometric figures; 
@@ -3644,7 +4071,7 @@ Barolini~\autocite{BAROLINI92}.
          (Right) Gutenberg, C15th.} \label{fb:9}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In 1519 the Portugese explorer Ferdinand Magellan set sail from 
 Sanl\'{u}car de Barramada, near C\'{a}diz in Spain, 
@@ -3692,7 +4119,7 @@ shown later in \fref{flpage:lgut}.
          (Right) USA, 1975.} \label{fb:10}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
      Two versions of the same publication are shown in \fref{fb:10}.
 On the left is a Persian manuscript \btitle{Khamsch of Nizami} written
@@ -3720,7 +4147,7 @@ and the type is set with a $15$pt leading.
          (Right) England, 1087.} \label{fb:11}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Frederic Goudy\index{Goudy, Frederic} was a prolific American 
 type designer. Shown at the left of
@@ -3760,7 +4187,7 @@ to be in haste to finish.
          (Right) ISO (2).} \label{fb:12}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Figure~\ref{fb:12} shows two different layouts for a page corresponding
 to the ISO international standard proportion of $\sqrt{2}$. In each case
@@ -3784,7 +4211,7 @@ room for marginal\index{marginalia} notes in the \foredge.
          (Right) LaTeX $10$pt book style.} \label{fb:13}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Another of the Cambridge University Printer's\index{Cambridge
   University Press!Christmas Book} Christmas books is at the left of
@@ -3823,7 +4250,7 @@ LaTeX $10$pt book class on US letterpaper\index{paper!size!letterpaper}.
          (Right) England, 1982.} \label{fb:14}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Adrian Wilson\index{Wilson, Adrian}, who died in 1988, was an 
 acclaimed American book designer.
@@ -3858,7 +4285,7 @@ the chapter title flushright and the folio to the right in the margin.
 \caption{Title page design based on Adrian Wilson's \btitle{The Design of Books}} \label{fig:titleDB}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The other layout in this
 figure is B.~W.~Robinson's \btitle{Kuniyoshi: The Warrior Prints} published
@@ -3885,7 +4312,7 @@ reproduced prints which take up full pages.
          (Right) Switzerland, 1980.} \label{fb:15}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     \btitle{The Waterways of the Fens} by Peter Eden with drawings by
 Warwick Hutton is another of the Cambridge 
@@ -3933,7 +4360,7 @@ a small font.
          (Right) USA, 1989.} \label{fb:16}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Two more layouts for illustrated books are given in \fref{fb:16}.
 In this case the illustrations\index{illustration} are drawings in landscape 
@@ -3974,7 +4401,7 @@ raggedright in four columns\index{column!multiple}.
 
 \subsection{A geometric construction} \label{sec:gutenbergpage}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Nowadays it is easy to pick and calculate any kind of page proportion
 that takes your fancy, but how did the early printers do it? They certainly
@@ -4026,7 +4453,7 @@ no matter what the page proportions and will give the same relative result.
 \section{The typeblock} \label{sec:tblock}
 
 \index{typeblock|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The typeblock is not just a rectangular block of text. If the typeblock
 does consist of text, then this will normally be broken up into 
@@ -4037,7 +4464,9 @@ relief from straight text. Some pages may have chapter or section
 headings\index{heading} on them which
 will also break the run of the text. In general the typeblock will
 be a mixture of text, white space, and possibly non-text items.
+\switchFrench\TS{0}
 
+\switchEng
     Consider a typeblock that includes no illustrations\index{illustration} 
 or tables\index{table}.
 The lines of text must be laid out so that they are easy to read.
@@ -4046,7 +4475,9 @@ long lines of text are difficult to read. Thus, there is a physiological
 upper limit to the width of the typeblock. From a practical viewpoint,
 a line should not be too short because then there is difficulty in justifying
 the text.
+\switchFrench\TS{0}
 
+\switchEng
     Experiments have shown that the number of characters in a line of
 single column\index{column} text on a page should be
 in the range 60 to 70 for ease of reading. The range may be as much
@@ -4120,7 +4551,7 @@ Pts. & \multicolumn{8}{c}{Line length in picas} \\
 %%%\MakeShortVerb{\|}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Morten H{\o}gholm\index{H{\o}gholm, Morten} has done some curve fitting
 to the data. He determined that the expressions
@@ -4176,7 +4607,7 @@ sub-scripts\index{subscript}, or many uppercase letters.
 
 \subsection{Page color}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     One of the aims of the typographer is to produce pages that are uniform
 in `color'\index{page color}. By this they mean that the 
@@ -4211,7 +4642,7 @@ Morison~\autocite{MORISON99} all show pages set in many different fonts.
 
 \subsection{Legibility}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     One of the principle requirements on the typography of a document is 
 that the document is \emph{legible}. Legibility\index{legibility} 
@@ -4237,7 +4668,7 @@ like Hermann Zapf\index{Zapf, Hermann}~\autocite{ZAPF00}, you can break the rule
 \subsubsection{Typefaces}
 \index{typeface}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The first European letter forms that have survived are Greek inscriptions
 carved into stone. These were freehand carvings with thin strokes. In time,
@@ -4374,7 +4805,7 @@ looks best when set ragged right.
 
 \subsubsection{Seriffed versus Sans-seriffed fonts}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As noted earlier there seems to be a permanent debate over the use
 of seriffed and sans fonts. You will have to make up your own mind as
@@ -4483,12 +4914,15 @@ words are nearly as easy to read as normal ones.
 
 \subsection{Widows and orphans}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Inconvenient page breaks can also cause a hiatus in the reader's perusal
 of a work. These happen when a page break occurs near the start or end of
 a paragraph\index{paragraph}\index{lonely line}. 
+\switchFrench\TS{1}
+Les sauts de page inopportuns peuvent également causer un hiatus dans le parcours d'un ouvrage par le lecteur. Cela se produit lorsqu'un saut de page se produit près du début ou de la fin d'un paragraphe.
 
+\switchEng
     A \emph{widow}\index{widow} is where the last line of a 
 paragraph\index{paragraph} is the first line on the page. The term is 
 sometimes also used to refer to when the last word in a 
@@ -4507,20 +4941,26 @@ Jan Tschichold~\autocite{TSCHICHOLD91} claims that Hurenkinder can always
 be avoided by even if a recto (verso) page must be made a line shorter or
 longer than the corresponding verso (recto) page, which he considers to be 
 less of an affront than widows.
+\switchFrench\TS{1}
+On parle de \textit{veuve} lorsque la dernière ligne d'un paragraphe est la première ligne de la page. Le terme est parfois aussi utilisé pour désigner le cas où le dernier mot d'un paragraphe se trouve sur une ligne à part. Une veuve a l'air désespérée. En allemand, on les appelle \textit{Hurenkinder} --- enfants de putains --- ce qui me semble plutôt cruel. Comme le disait Robert Bringhurst, \og{}Une veuve a un passé mais pas d'avenir\fg{}. D'un point de vue typographique, les veuves doivent être évitées car elles constituent un début de page faible et peuvent détruire optiquement la page et le rectangle de caractères. Toutefois, une seule veuve n'est pas trop gênante si l'en-tête comprend une règle sur toute la largeur du bloc de caractères. Il faut surtout éviter les veuves qui sont la seule ligne d'une page, par exemple à la fin d'un chapitre. Cinq lignes sur la dernière page d'un chapitre est un minimum raisonnable. Jan Tschichold~\autocite{TSCHICHOLD91} affirme que les Hurenkinder peuvent toujours être évités, même si une page recto (verso) doit être raccourcie ou rallongée d'une ligne par rapport à la page verso (recto) correspondante, ce qu'il considère comme un moindre affront que les veuves.
 
+\switchEng
     An orphan\index{orphan} is not nearly so troubling to typographers as a 
 widow. An \emph{orphan} is where the first one or two lines of a 
 paragraph\index{paragraph} are at the bottom of a page. In German they are 
 called \textit{Schusterjungen}\index{Schusterjungen} --- cobbler's apprentices.
 Bringhurt's memory trick for orphans is, `An orphan has a future but no 
 past'.\index{lonely line} 
+\switchFrench\TS{1}
+Une \textit{orpheline} est loin d'être aussi gênante pour les typographes qu'une veuve. On parle d'orpheline lorsque la première ou les deux premières lignes d'un paragraphe se trouvent au bas d'une page. En allemand, on les appelle \textit{Schusterjungen} --- les apprentis cordonniers. L'astuce mnémotechnique de Bringhurt pour les orphelines est la suivants: \og{}Une orpheline a un avenir mais pas de passé\fg{}.
+
 \end{paracol}
 
 \subsection{Paragraphs and versals} \label{sec:versal}
 
 \index{paragraph|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Early books did not have paragraphs as we know them nowadays; the text
 was written continuously, except for a break at a major division like the
@@ -4589,7 +5029,7 @@ asterisks).
 %%%%%%%%\clearpage
 %\subsection{Versals}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \drop{S}{}\textsc{ome typographers}\index{versal|(} 
 like to start the first paragraph in a chapter
@@ -4632,7 +5072,7 @@ contrast with the lowercase.
 \subsection{Footnotes}
 
 \index{footnote|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Footnotes are considered to be part of the typeblock\index{typeblock}. 
 They are typeset in the space allocated for the typeblock\index{typeblock}, 
@@ -4658,7 +5098,7 @@ main text, and sometimes a short horizontal line is also used as demarcation.
 \section{Folios}
 
 \index{folio|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The word \emph{folio} is a homonym. It can mean a leaf 
 (two back-to-back pages) in a book, the size of a book or a book of
@@ -4694,7 +5134,7 @@ but must at least be complementary and non-intrusive.
 \section{Headers and footers}
 
 \index{header|(}\index{footer|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Headers and footers are repetitive material that is placed at either 
 the head or the foot of the page. Typically, folios\index{folio} are headers 
@@ -4742,14 +5182,17 @@ typeblock.\index{typeblock}
 \section{Electronic books}
 \index{electronic books|(}\index{Ebook|see{electronic books}}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     For want of a better term I am calling electronic books, or Ebooks, 
 those documents intended to be read on a computer screen. The vast bulk
 of Ebooks are in the form of email but I'm more interested here in 
 publications that are akin to hardcopy reports and books that require
 more time than a few minutes to read.
+\switchFrench\TS{1}
+Faute d'un meilleur terme, j'appelle livres électroniques, ou \textit{e}-books, les documents destinés à être lus sur un écran d'ordinateur. La grande majorité des \textit{e}-books se présentent sous la forme de courriers électroniques mais je m'intéresse ici davantage aux publications qui s'apparentent à des rapports sur papier et aux livres dont la lecture demande plus que quelques minutes.
 
+\switchEng
     Unlike real books which have been available for hundreds of years there
 is virtually no experience to act as a guide in suggesting how Ebooks should
 appear. However, I offer some suggestions for the layout of Ebooks, based on
@@ -4758,12 +5201,18 @@ Not considered are internal navigation aids
 (e.g., hyperlinks) within and between Ebooks, nor HTML documents where
 the visual appearance is meant to set by the viewing software and not 
 by the publisher.
+\switchFrench\TS{1}
+Contrairement aux vrais livres qui sont disponibles depuis des centaines d'années, il n'y a pratiquement aucune expérience qui puisse servir de guide pour suggérer comment les \textit{e}-books devraient apparaître. Cependant, je propose quelques suggestions pour la mise en page des \textit{e}-books, basées sur mon expérience de tels ouvrages. Ne sont pas pris en compte les aides à la navigation interne (par exemple, les hyperliens) à l'intérieur des livres électroniques et entre eux, ni les documents HTML dont l'aspect visuel est censé être défini par le logiciel de visualisation et non par l'éditeur.
 
+\switchEng
     The publication medium is obviously very different --- a TV-style 
 screen with limited resolution and pretty much fixed in position versus
 foldable and markable paper\index{paper} held where the reader finds it best.
 These differences lead to the following suggestions.
+\switchFrench\TS{1}
+Le support de publication est évidemment très différent: un écran de télévision a une résolution limitée et est pratiquement fixe, là ou un papier peut se plier et se mettre là où le lecteur le souhaite. Ces différences conduisent aux suggestions suivantes.
 
+\switchEng
     A book can be held at whatever distance is comfortable for reading, even
 when standing up.
 The computer user is normally either sitting in a chair with the monitor
@@ -4777,13 +5226,19 @@ displaying each character.
     The font size should not be less than \U{12}{pt}. The font may have to be
 more robust than you would normally use for printing, as fine hairlines 
 or small serifs will not display well unless on a high resolution screen.
+\switchFrench\TS{1}
+Un livre peut être tenu à la distance la plus confortable pour la lecture, même debout. L'utilisateur d'un ordinateur est normalement assis sur une chaise, l'écran posé sur un bureau ou une table, ou bien il essaie de lire sur un ordinateur portable, qui est peut-être plus léger, mais que personne n'a envie de tenir pendant un certain temps. Pour essayer d'alléger les contraintes physiques du lecteur d'\textit{e}-book, la taille de la police doit être plus grande que la normale pour un livre imprimé similaire. Cela permettra d'élargir le champ de vision. Une police plus grande aura également tendance à augmenter la netteté de l'impression car plus de pixels seront disponibles pour afficher chaque caractère. La taille de la police ne doit pas être inférieure à 12 pt. Il se peut que la police doive être plus robuste que celle que vous utiliseriez normalement pour l'impression, car les traits fins ou les petits empattements ne s'afficheront pas bien, sauf sur un écran à haute résolution.
 
+\switchEng
     I find it extremely annoying if I have to keep scrolling up and down
 to read a page. Each page should fit within the screen, which means that
 Ebook pages will be shorter than traditional pages. 
 A suggested size for an Ebook page, in round numbers, is 
 about 9 by 6 inches~\autocite{ADOBEBOOK} or 23 by 15 centimetres overall.
+\switchFrench\TS{1}
+Je trouve extrêmement gênant de devoir faire défiler la page de haut en bas pour la lire. Chaque page doit tenir sur l'écran, ce qui signifie que les pages des livres électroniques seront plus courtes que les pages traditionnelles. La taille suggérée pour une page d'\textit{e}-book, en chiffres ronds, est d'environ~9 par 6~pouces~\autocite{ADOBEBOOK} ou~23 par 15~centimètres en tout.
 
+\switchEng
     The page design for printed books is based on a double spread. For
 Ebooks the design should be based on a single page. The 
 typeblock\index{typeblock} must be centered on the page otherwise it gets 
@@ -4792,14 +5247,20 @@ flip from side to side when moving from one page to the next. Likewise
 any header\index{header} and the top of the typeblock\index{typeblock} 
 must be at a constant height on the screen. A constant position for the 
 bottom of the text is not nearly so critical.
+\switchFrench\TS{1}
+La mise en page des livres imprimés est établie sur la base d'une double page. Pour les livres électroniques, la conception se fait sur la base d'une seule page. Le bloc de caractères doit être centré sur la page, sinon il devient fatigant, sans parler de l'aggravation, si vos yeux doivent passer d'un côté à l'autre lorsque vous passez d'une page à l'autre. De même, le haut du bloc de caractères ainsi que tout en-tête doivent être à une hauteur constante sur l'écran. Une position constante pour le bas du texte n'est pas aussi importante.
 
+\switchEng
     It is more difficult with an Ebook than with a paper book 
 to flip through it to find a particular place. 
 Navigation aids --- headers\index{header} and footers\index{footer} ---
 are therefore more critical. Each page should have both a chapter 
 (perhaps also a section) header\index{header} title and a page number. 
 Note that I'm not considering HTML publications.
+\switchFrench\TS{1}
+Il est plus difficile avec un Ebook qu'avec un livre papier de le feuilleter pour trouver un endroit particulier. Les aides à la navigation --- en-têtes et pieds de page --- sont donc plus importantes. Chaque page doit comporter à la fois un titre de chapitre (et peut-être aussi de section) et un numéro de page. Notez que je ne tiens pas compte des publications HTML.
 
+\switchEng
     Many viewers for Ebooks let you jump to a particular page. The page
 numbers that they use, though, are often based on the sequence number from
 the first page, not the displayed folio\index{folio}. In such cases it 
@@ -4809,10 +5270,16 @@ For example, if the \pixfrontmatter\ uses roman numerals and the
 \pixmainmatter\ arabic numerals and the last page of the
 \pixfrontmatter\ is page xi, then make the first page of the \pixmainmatter\ 
 page 12.
+\switchFrench\TS{1}
+De nombreuses visionneuses de livres électroniques vous permettent de sauter à une page donnée. Cependant, les numéros de page qu'ils utilisent sont souvent basés sur le numéro de séquence de la première page, et non sur le folio affiché. Dans ce cas, il peut être utile de prévoir une séquence continue de numéros de page, même si les folios sont imprimés dans des styles différents. Par exemple, si la page de garde utilise des chiffres romains et la page principale des chiffres arabes et que la dernière page de la page de garde est la page xi, alors la première page de la page principale sera la page 12.
 
+\switchEng
     I see no point in Ebooks having any blank pages --- effectively the
 concept of recto and verso pages is irrelevant.
+\switchFrench\TS{0}
+Je ne vois pas l'intérêt pour les livres électroniques d'avoir des pages blanches --- en fait, le concept de recto ou de verso n'est pas pertinent.
 
+\switchEng
     Some printed books have illustrations\index{illustration} that are 
 tipped in, and the tipped in pages are sometimes excluded from the 
 pagination. In an Ebook the illustrations\index{illustration} have to 
@@ -4820,7 +5287,10 @@ be `electronically tipped in' in some fashion, either
 by including the electronic source of the illustrations\index{illustration} 
 or by providing some navigation link to them. Especially in the former case, 
 the tipped in elements should be included in the pagination.
+\switchFrench\TS{1}
+Dans certains livres imprimés, les illustrations sont insérées dans le livre, et les pages insérées sont parfois exclues de la pagination. Dans un livre électronique, les illustrations doivent être intégrées électroniquement d'une manière ou d'une autre, soit en incluant la source électronique des illustrations, soit en fournissant un lien de navigation vers celles-ci. Dans le premier cas surtout, les éléments intégrés doivent être inclus dans la pagination.
 
+\switchEng
     Don't forget that a significant percentage of the population is 
 color-blind.\index{color|(}\index{color!blind} 
 The most common form is a reduced ability to distinguish
@@ -4828,7 +5298,10 @@ between red and green; for example some shades of pink may be perceived
 as being a shade of blue, or lemons, oranges and limes may all appear to
 be the same color. Along with color-blindness there may be a reduced
 capacity to remember colors.
+\switchFrench\TS{1}
+N'oubliez pas qu'un pourcentage significatif de la population est daltonien. La forme la plus courante est une capacité réduite à faire la distinction entre le rouge et le vert; par exemple, certaines nuances de rose peuvent être perçues comme une nuance de bleu, ou les citrons, les oranges et les citrons verts peuvent sembler être tous de la même couleur. Le daltonisme peut s'accompagner d'une capacité réduite à se souvenir des couleurs.
 
+\switchEng
     I have seen Ebooks where color has been liberally used to indicate, say, 
 different revisions of the text or different sources for the data in a graph. 
 Unless the colors used are really distinctive 10\% or more of the potential 
@@ -4839,6 +5312,9 @@ they are both readily distinguishable and legible. Yellow on white is almost
 as difficult to read as off-white on white or navy blue on black, all of
 which I have seen on web sites but rarely have I seen the text after I 
 have tried to print the page.
+\switchFrench\TS{1}
+J'ai vu des livres électroniques où la couleur a été utilisée généreusement pour indiquer, par exemple, différentes révisions du texte ou différentes sources de données dans un graphique. À moins que les couleurs utilisées ne soient vraiment distinctives, 10\,\% ou plus du lectorat potentiel sera perdu ou confus. De plus, les livres électroniques peuvent être imprimés pour être lus hors ligne et si une imprimante monochrome est utilisée, toutes les couleurs apparaîtront comme des nuances de gris; celles-ci doivent être telles qu'elles soient à la fois faciles à distinguer et lisibles. Le jaune sur le blanc est presque aussi difficile à lire que le blanc cassé sur le blanc ou le bleu marine sur le noir, que j'ai tous vus sur des sites web mais dont j'ai rarement vu le texte après avoir essayé d'imprimer la page.
+
 \end{paracol}
 
 \index{color|)}
@@ -4847,21 +5323,27 @@ have tried to print the page.
 
 \chapter{Styling the elements}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A book should present a consistent typographic style throughout, although
 some elements, principally those in the \pixfrontmatter\ and \pixbackmatter\ 
 may be treated slightly differently than the main body. 
+\switchFrench\TS{2}
+Un livre doit présenter un style typographique cohérent d'un bout à l'autre, même si certains éléments, principalement ceux de la première et de la dernière parties, peuvent être traités légèrement différemment du corps principal.
 
+\switchEng
     Much of this chapter is based on my interpretation of my namesake's 
 work~\autocite{ADRIANWILSON93} and the \btitle{Chicago Manual of Style}~\autocite{CMS}.
+\switchFrench\TS{2}
+Une grande partie de ce chapitre est fondée sur mon interprétation des travaux de mon homonyme~\autocite{ADRIANWILSON93} et du \btitle{Chicago Manual of Style}~\autocite{CMS}.
+
 \end{paracol}
 
 \section{\prFrontmatter}
 
 \subsection{Title pages}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The main and half-title pages are the gatekeepers to the book. As such,
 they need to be welcoming and give an indication of the `look and feel'
@@ -5016,7 +5498,7 @@ Printer's Christmas book \btitle{Words in Their Hands}} \label{fig:titleWH}
 
 \subsubsection{Advertising}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If the book is one of a series, or the author has been prolific, then
 details of associated works may be provided. Titles by the same author
@@ -5029,7 +5511,7 @@ the half-title\index{half-title page}\index{page!half-title} page.
 
 \subsubsection{Frontispiece}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The traditional place for a frontispiece\index{frontispiece}, 
 which may be the only
@@ -5039,7 +5521,7 @@ made to make the resulting double spread harmonious.
 
 \subsection{Copyright page}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The copyright\indextwo{copyright}{page} and related publishing 
 information is set in small type
@@ -5049,7 +5531,7 @@ be listed among the small print.
 
 \subsection{Dedication}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A dedication\index{dedication} is nearly always on a recto page and 
 simply typeset. If 
@@ -5059,7 +5541,7 @@ page\indextwo{copyright}{page} instead.
 
 \subsection{Foreword and preface}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The same type size should be used for the headings 'foreword', `preface',
 `acknowledgements', etc., and the similar ones in the \pixbackmatter. This
@@ -5076,7 +5558,7 @@ is treated like a chapter opening, and commences on a recto page.
 
 \subsection{Acknowledgements}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If there are any acknowledgements\index{acknowledgements} and they 
 require only a few sentences then they are often put at the end of the 
@@ -5087,7 +5569,7 @@ on a recto page.
 
 \subsection{Contents and illustration lists}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The table of contents\indextwo{contents}{list} is often laid out so 
 that the page numbers
@@ -5107,7 +5589,7 @@ be used.
 
 \subsection{Introduction}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The heading for an Introduction\index{introduction} is an unnumbered
 chapter opening on a recto page. The body text is set in the same font 
@@ -5116,7 +5598,7 @@ as the main body text.
 
 \subsection{Part title page}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If the book is divided into Parts\index{part} then the Part One 
 page\indextwo{page}{part title} could either precede or follow the 
@@ -5129,7 +5611,7 @@ to provide a cohesiveness throughout the work.
 
 \subsection{Chapter openings}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Normally, chapters are the major divisions of a (volume of a) book, 
 but if it is long
@@ -5148,7 +5630,7 @@ should start on a recto page.
 
 \subsection{Mixed portrait and landscape pages}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     It is usual for all the pages in a document to be in 
 portrait\index{orientation}\index{portrait}\indextwo{orientation}{portrait}
@@ -5241,7 +5723,7 @@ landscape\indextwo{orientation}{landscape} pages. The key is consistency.
 
 \subsection{Extracts}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Typographers use `extract'\index{extract} as a generic 
 term for what I would think of as a quotation\index{quotation}. 
@@ -5265,7 +5747,7 @@ three points, should be inserted and below the extract.
 % the rule is reactivated in chapter 5
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     This section is a synthesis of the views of Ruari McLean~\autocite{MCLEAN80},
 Jan Tschichold~\autocite{TSCHICHOLD91} and 
@@ -5362,7 +5844,7 @@ period\index{period}.
 
 \section{\prBackmatter}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Divisions in the \pixbackmatter\ are not numbered.
 
@@ -5376,7 +5858,7 @@ reasonably set in smaller type.
 
 \subsection{Appendices}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Appendices\index{appendix} come immediately after the main text. Depending
 on their importance and interest they can be set in the same manner as the 
@@ -5390,7 +5872,7 @@ the other divisions.
 
 \subsection{Endnotes}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    In an endnote\index{endnotes} listing, note numbers are usually 
 either indented or the note
@@ -5410,7 +5892,7 @@ text.
 
 \subsection{Bibliography}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    The list of books, etc., that the author has used as source material is
 usually placed at the back of the book under the title `Bibliography'. In
@@ -5424,7 +5906,7 @@ can improve the readability.
 
 \subsection{Glossary}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    The list of definitions of terms or symbols used in the text normally
 comes towards the end of a book, although it could as well come towards
@@ -5440,7 +5922,7 @@ or the size used for the bibliography for longer lists.
 
 \subsection{Index}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The entries in an index\index{index} are usually short and most indexes
 are set in two, or more columns. As examples, author's names are usually 
@@ -5478,7 +5960,7 @@ Footnotes   & 8/9 & 8/8 \\
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As indicated above, the type size is normally related to the `importance' 
 of what is being set. Chapter headings are set in large type and footnotes 
@@ -5490,7 +5972,7 @@ starting points for a design rather than fixed rules.
 
 \section{Poems and plays}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In literature such as poems\index{poem} or plays\index{play} 
 the length of the line is determined
@@ -5501,7 +5983,7 @@ far as possible within a maximum text width.
 
 \subsection{Poetry}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If possible the type and measure should be chosen so that the longest
 poetical line will fit on one printed line, so that the shape of the poem
@@ -5518,7 +6000,7 @@ The numbers are usually small and right justified.
 
 \subsection{Plays}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     When presenting a play a list of characters\indextwo{characters}{list} 
 (\textit{Dramatis Personae}\index{Dramatis Personae?\textit{Dramatis Personae}})
@@ -5559,7 +6041,7 @@ often on a line by themselves.
 \section{Selecting a typeface}
 \index{typeface!selecting}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Choosing the `best' typeface to use is first a matter of practicalites
 and secondly a question of aeshetics, feel, judgement, and other 
@@ -5739,7 +6221,7 @@ and Caslon}\label{fig:poems2}
 \end{figure}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     I was recently letterpress printing some poems and the fonts  
 available in the print shop were Bodoni\facesubseeidx{Bodoni}, 
@@ -5772,7 +6254,7 @@ and in italic instead of roman.
 \chapter{Picky points}
 \let\footnoterule\oldfootnoterule
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The main elements of good typography are legibility\index{legibility} 
 and page color\index{color}.
@@ -5782,7 +6264,7 @@ these topics.
 
 \section{Word and line spacing}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Research has shown that the competent reader recognises words by
 their overall shape rather than by stringing together the individual letters
@@ -5851,7 +6333,7 @@ Extra spacing after punctuation is not necessary.
 \caption{Interword spacings}\label{fig:interword}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In keeping with avoiding white spots, many typographers do not
 recommend extra spacing after punctuation, although this does depend
@@ -5921,7 +6403,7 @@ next line instead of the next word. \par
 \section{Letterspacing}
 \index{letterspacing|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     \emph{Letterspacing} is the insertion of spaces between the letters
 of a word.
@@ -5976,7 +6458,7 @@ h\kern0.09em i\kern0.12em s\kern0.1em t\kern0.1em o\kern0.07em r\kern0.1em y & v
 \caption{Letterspacing: small caps}\label{fig:spacesmallcaps}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     There can be occasions, as with emphasis with fraktur fonts, when 
 letterspacing lowercase will not get you hung for sheep stealing. These,
@@ -5991,7 +6473,7 @@ kindergarten teacher used to call them.
 \section{Abbreviations and acronyms}
 
 \index{abbreviation}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The English style with abbreviations is to put a full stop (period) after
 the abbreviation, unless the abbreviation ends with the same letter as the
@@ -6027,7 +6509,7 @@ regular {\footnotesize UNICEF} text & \verb?regular {\footnotesize UNICEF} text?
 \section{Dashes and ellipses}
 
 \index{dash|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Most fonts provide at least three lengths of dashes. The shortest is
 the hyphen (-), then there is the en-dash (--) which is approximately the
@@ -6089,7 +6571,7 @@ Mr --------- was not a Fredericktonian.
 
 \index{quotation marks|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Quotation marks surrounding speech and associated punctuation 
 are a fruitful source of confusion.
@@ -6152,7 +6634,7 @@ tone, ``it means just what I choose it to mean --- neither more nor less.''
 \caption{Quotation marks: top English, bottom American}\label{fig:qmarks}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Where to put punctuation marks with quotes is vexatious. Again the
 English and American practice tends to differ. The American tendency is
@@ -6176,7 +6658,7 @@ you think best conveys the sense, provided there is consistency.
 \subsection{Footnote marks}
 
 \index{footnote!mark|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Where to put a footnote marker may be another vexed question in spite
 of the general principal being easy to state: The mark goes immediately
@@ -6200,7 +6682,7 @@ punctuation, but there are always those who like to prove a rule.
 \index{footnote!mark|)}
 
 \index{symbol|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    There are other marks that may be associated with a word, like 
 (registered) trademarks. These may produce ugly gaps. Sometimes these
@@ -6231,7 +6713,7 @@ footnote mark\index{footnote!mark} before the comma rather than after it.
 \subsection{Font changes}
 
 \index{font!change|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Sometimes a word or two may be set in a different font from the 
 surrounding text, such as when emphasizing\index{emphasis} 
@@ -6256,7 +6738,7 @@ class, see \cite{MEMMAN}.}
 
 \index{measure!narrow|(}
 \index{column!narrow|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Typesetting in a narrow column is difficult, especially if you are
 trying to make the text flush left and right. As the lines get shorter
@@ -6328,7 +6810,7 @@ centered, or raggedleft-flushright.}
 \caption{Raggedright text in narrow columns} \label{fig:raggedright}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Figure~\ref{fig:raggedright} shows a text set in a column
 \the\rag{} wide with 
@@ -6352,7 +6834,7 @@ convenience.
 \index{column!narrow|)}
 \index{measure!narrow|)}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Talking of hyphenation\index{hyphenation},
  each language has its own rules for allowable
@@ -6370,7 +6852,7 @@ that indicates the potential break points.
 \section{Emphasis}
 
 \index{emphasis|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Underlining\index{underline} should \underline{emphatically} \underline{not} be
 used to emphasise something in a typeset document. This is a hangover
@@ -6406,7 +6888,7 @@ to be a reasonable compromise between the need and the desire.
 
 \index{caption|(}
 \index{legend|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     I am not entirely sure what is the difference between a
 caption and a legend as both terms refer to the title of an 
@@ -6430,7 +6912,7 @@ table while captions for illustrations\index{illustration} are placed below.
 \section{Tables}
 
 \index{table|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A table is text or numbers arranged in columns\index{column!multiple}, 
 and nearly always
@@ -6463,7 +6945,7 @@ may appreciate your effort.
 \section{Number formatting}
 
 \index{number!formatting|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Number formatting is country- and language-dependent. Continental 
 Europe differs
@@ -6525,7 +7007,7 @@ be set with lining figures even if they are in the body of the text. For example
 \chapter{Some typefaces}
 \index{typeface}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    Most books or articles about typography at least mention some typefaces
 by name, and may provide examples, and in some cases many examples.
