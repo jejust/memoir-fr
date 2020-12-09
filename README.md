@@ -56,9 +56,9 @@ have been modified to be typeset in two columns, with the right-hand column
 reserved for the French version.
 
 Each paragraph shows a small traffic light indicating the current state of its translation:
-- *red*: quick translation and basic formatting;
-- *orange*: correction by the translator, some time later, and correct typesetting;
-- *green*: reviewing by a second person.
+- **red**: quick translation and basic formatting;
+- **orange**: correction by the translator, some time later, and correct typesetting;
+- **green**: reviewing by a second person.
 
 
 *Les documents d'origine, en anglais (à la fois le manuel et son introduction)
@@ -66,9 +66,9 @@ ont été modifiés pour être composés en deux colonnes, la colonne de droite
 étant réservée à la version française.*
 
 *Chaque paragraphe comporte un petit feu tricolore indiquant l'état actuel de sa traduction :*
-- rouge* : traduction rapide et mise en forme de base ;*
-- orange* : correction par le traducteur, quelques temps plus tard, et mise en forme complète ;*
-- vert* : révision par une deuxième personne.*
+- * **rouge** : traduction rapide et mise en forme de base ;*
+- * **orange** : correction par le traducteur, quelques temps plus tard, et mise en forme complète ;*
+- * **vert** : révision par une deuxième personne.*
 
 
 ## Sources
