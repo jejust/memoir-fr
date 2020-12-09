@@ -32,7 +32,7 @@ les nouveaux venus à la typographie (et à LaTeX).*
 
 ## Current state / État actuel
 
-**Please, do not consider this translation as authoritative in any way.***
+**Please, do not consider this translation as authoritative in any way.**
 
 ***Cette traduction ne doit pas être considérée comme une référence.***
 
@@ -65,10 +65,10 @@ Each paragraph shows a small traffic light indicating the current state of its t
 ont été modifiés pour être composés en deux colonnes, la colonne de droite
 étant réservée à la version française.*
 
-*Chaque paragraphe comporte un petit feu tricolore indiquant l'état actuel de sa traduction :
-- *rouge* : traduction rapide et mise en forme de base ;
-- *orange* : correction par le traducteur, quelques temps plus tard, et mise en forme complète ;
-- *vert* : révision par une deuxième personne.*
+*Chaque paragraphe comporte un petit feu tricolore indiquant l'état actuel de sa traduction :*
+- rouge* : traduction rapide et mise en forme de base ;*
+- orange* : correction par le traducteur, quelques temps plus tard, et mise en forme complète ;*
+- vert* : révision par une deuxième personne.*
 
 
 ## Sources
