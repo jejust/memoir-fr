@@ -12,8 +12,7 @@ which is a fine tutorial, written by someone who is aware of the issues as they 
 pour la mise en forme de documents de type livres, développée par [Peter Wilson](http://tug.org/interviews/wilson.html)
 et actuellement maintenue par [Lars Madsen](https://pure.au.dk/portal/en/persons/lars-madsen(b173577b-94fe-404f-90f7-bfcf8964ff22).html)
 Son manuel comporte [une longue introduction](https://www.ctan.org/pkg/memdesign) sur les considérations typographiques
-et constitue une solide base, rédigé par un auteur conscient des problèmes qui se posent aux utilisateurs de (La)TeX.
-*
+et constitue une solide base, rédigé par un auteur conscient des problèmes qui se posent aux utilisateurs de (La)TeX.*
 
 The project of translating this introduction into French was first formulated at the
 [Teddy's Bar](https://www.tripadvisor.fr/Attraction_Review-g187147-d10112746-Reviews-Teddy_s_Bar-Paris_Ile_de_France.html),
@@ -43,8 +42,7 @@ as a base document to translate further the manual.
 
 *Cette traduction est actuellement à l'état de brouillon incomplet.
 Elle contient des [erreurs](https://www.erudit.org/fr/revues/meta/2005-v50-n1-meta864/010661ar/)
-et ne devrait être utilisée pour rien d'autre que la poursuite du travail de traduction.
-*
+et ne devrait être utilisée pour rien d'autre que la poursuite du travail de traduction.*
 
 If you're interested in helping, please contact me.
 
@@ -56,20 +54,21 @@ If you're interested in helping, please contact me.
 The English-speaking documents (both the manual and its separate introduction)
 have been modified to be typeset in two columns, with the right-hand column
 reserved for the French version.
+
 Each paragraph shows a small traffic light indicating the current state of its translation:
 - *red*: quick translation and basic formatting;
 - *orange*: correction by the translator, some time later, and correct typesetting;
 - *green*: reviewing by a second person.
 
+
 *Les documents d'origine, en anglais (à la fois le manuel et son introduction)
 ont été modifiés pour être composés en deux colonnes, la colonne de droite
-étant réservée à la version française.
+étant réservée à la version française.*
 
-Chaque paragraphe comporte un petit feu tricolore indiquant l'état actuel de sa traduction :
+*Chaque paragraphe comporte un petit feu tricolore indiquant l'état actuel de sa traduction :
 - *rouge* : traduction rapide et mise en forme de base ;
 - *orange* : correction par le traducteur, quelques temps plus tard, et mise en forme complète ;
-- *vert* : révision par une deuxième personne.
-*
+- *vert* : révision par une deuxième personne.*
 
 
 ## Sources
