@@ -2060,7 +2060,7 @@ For a more interactive resource you can ask questions on
 \end{center}
 -- if the question is \Mname\ related, please tag it so.
 
-
+\end{paracol}
 
 %     For a more interactive resource you can ask questions on the
 % \url{comp.text.tex} newsgroup. If you are a newcomer to \pixctt\
@@ -4725,6 +4725,8 @@ is like this (\Lopt{twoside} is the default class option):
 \section{Emitting the page size}
 \label{sec:emitting-page-size}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
 At the start of the document the class will automatically emit the
 chosen stocksize to the output format (DVI or PDF).\footnote{In
   earlier versions we had macros \cs{fixpdflayout} and
@@ -11633,6 +11635,7 @@ reload the page style, for example with the default page style in \theclass\
   \pagestyle{headings}
 \end{lcode}
 
+\end{paracol}
 
 %     The macro \cmd{\createmark}\marg{sec}\marg{marks}\marg{show}\marg{prefix}\marg{postfix}
 % defines the \verb?\<sec>mark? macro where \meta{sec} is a sectional division
@@ -12815,8 +12818,6 @@ lines to show the effect of this.
 
 \subsection{Left spring right}
 
-\begin{paracol}{2}\TS{0}
-\switchEng
     Typically the lines of a paragraph are both flushleft and flushright and
 filled with text, but sometimes filling is not desired.
 
@@ -12849,12 +12850,10 @@ must be less than one.
   {But the text at the right is set raggedleft and flushright.
    It's as though there was a spring pushing the lines apart.}
 \end{egsource}
-\end{paracol}
+
 
 \section{Changing the textwidth}\label{sec:adjustwidth}
 
-\begin{paracol}{2}\TS{0}
-\switchEng
     The \Ie{quote} and \Ie{quotation} environments both locally change the 
 textwidth, or more precisely, they temporarily increase the left and right 
 margins\index{margin!left}\index{margin!right} by equal amounts. 
@@ -13002,14 +13001,12 @@ of \cmd{\calccentering}. Any existing length will do, such as
 the calculation and changing the margins\index{margin} (and that you can, 
 if necessary reset it to its original value --- the default value for 
 \lnc{\unitlength} is 1pt). 
-\end{paracol}
+
 
 \section{Lists}
 
 \index{list|(} %|
 
-\begin{paracol}{2}\TS{0}
-\switchEng
     Standard \ltx\ provides four kinds of lists. There is a general \Ie{list}
 environment which you can use to define your own particular kind of list,
 and the \Ie{description}, \Ie{itemize} and \Ie{enumerate} lists (which are 
@@ -13300,7 +13297,7 @@ after the start of a list environment to reduce the vertical space within
 that list. The \cmd{\tightlist} removes all the spaces while the
 \cmd{\firmlist} produces a list that still has some space but not as much
 as in an ordinary list.
-\end{paracol}
+
 
 \index{list!tight|)} %|
 
@@ -16095,10 +16092,8 @@ be done using the \Lpack{ragged2e} package and
 \begin{lcode}
   \setmpjustification{\RaggedLeft}{\RaggedRight}
 \end{lcode}
+
 \end{paracol}
-
-
-
 
 
 
@@ -16126,7 +16121,7 @@ FRAMED FIGURE
 \end{framed}
 \caption{Example framed figure}\label{fig:framef}
 \end{figure}
-\end{paracol}
+
 
 \begin{figure}
 \begin{framed}\centering
@@ -16135,6 +16130,8 @@ FRAMED FIGURE AND CAPTION
 \end{framed}
 \end{figure}
 \end{lcode}
+
+\end{paracol}
 
 \begin{figure}
 %\begin{shadefigure}
@@ -20066,6 +20063,8 @@ columns are converted to \texttt{p} columns.
 
  \subsection{Examples}
 
+\begin{paracol}{2}\TS{0}
+\switchEng
     The following code is used for a regular \Ie{tabular}.
 \begin{lcode}
 \begin{figure}
@@ -21058,6 +21057,7 @@ used following the \cmd{\feetabovefloat} declaration, which is the default.
 % this. Please note that \cs{feetatbottom} has no effect whenever
 % \cs{flushbottom} is active.
 
+\end{paracol}
 
 
 \subsection{A variety of footnotes}
