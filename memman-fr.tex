@@ -1846,8 +1846,8 @@ You can create new verbatim-like environments, read
 and write information in external files, design your own style of 
 \cs{maketitle}, convert numbers to words, reserve space at the bottom of a 
 page, and so on and so forth.
-\switchFrench\TS{0}
-Des crochets\emph{hooks} et des macros sont fournis pour la plupart des aspects de la mise en page des documents ; par exemple, les notes de bas de page peuvent être normales, composées en deux ou trois colonnes, ou être intégrées à un seul paragraphe. Il existe une macro \cs{sidepar} qui est un \cs{marginpar} non flottant, ainsi qu'une macro \cs{sidebar} pour la composition des barres latérales dans la marge, en commençant par le haut du bloc de texte. Vous pouvez créer de nouveaux environnements de type verbatim, lire et écrire des informations dans des fichiers externes, concevoir votre propre style de titre, convertir des chiffres en mots, réserver un espace en bas de page, et ainsi de suite.
+\switchFrench\TS{1}
+Des crochets (\emph{hooks}) et des macros sont fournis pour la plupart des aspects de la mise en page des documents ; par exemple, les notes de bas de page peuvent être normales, composées en deux ou trois colonnes, ou être intégrées à un seul paragraphe. Il existe une macro \cs{sidepar} qui est un \cs{marginpar} non flottant, ainsi qu'une macro \cs{sidebar} pour la composition des barres latérales dans la marge, en commençant par le haut du bloc de texte. Vous pouvez créer de nouveaux environnements de type verbatim, lire et écrire des informations dans des fichiers externes, concevoir votre propre style de titre, convertir des chiffres en mots, réserver un espace en bas de page, et ainsi de suite.
 
 \end{paracol}
 
@@ -1860,8 +1860,8 @@ Most packages work with the \Mname\ class, the main exception being
 the \Lpack{hyperref} package. This package modifies many of the
 internals of the standard classes but does not cater for all of the
 differences between \Mname\ and the standard ones.
-\switchFrench\TS{0}
-La plupart des paquets fonctionnent avec la classe \Mname, la principale exception étant le package \Lpack{hyperref}. Ce paquet modifie de nombreux éléments internes des classes standard mais ne prend pas en compte toutes les différences entre \Mname\  et les classes standard.
+\switchFrench\TS{1}
+La plupart des extensions fonctionnent avec la classe \Mname, la principale exception étant le package \Lpack{hyperref}. Ce paquet modifie de nombreux éléments internes des classes standard mais ne prend pas en compte toutes les différences entre \Mname\  et les classes standard.
 
 \switchEng
 If you use \Lpack{hyperref} with \Mname\ then the \Lpack{memhfixc}
@@ -1888,7 +1888,7 @@ Si vous utilisez \Lpack{hyperref} avec \Mname, le paquetage \Lpack{memhfixc}\foo
 \switchEng
 The \Mname\ class includes code either equivalent to, or extensions of, the 
 following packages; that is, the set of commands and environments is at least
-the same as those in the packages: 
+the same as those in the packages:
 %\begin{itemize}%\item 
 \begin{adjustwidth}{2em}{2em}
   \begin{center}
@@ -1929,7 +1929,9 @@ the same as those in the packages:
   \end{center}
 \end{adjustwidth}
 % \end{itemize}
+\switchFrench\TS{0}
 
+\switchEng
 The class automatically ignores any 
 \verb?\usepackage? or \verb?\RequirePackage? related to these. However, if
 you want to specifically use one of these packages rather than the integrated
@@ -1940,7 +1942,9 @@ to use the \Lpack{titling} package you can do this:
 \DisemulatePackage{titling}
 \usepackage{titling}
 \end{lcode}
+\switchFrench\TS{0}
 
+\switchEng
     The \Mname\ class incorporates a version of the \Lpack{setspace} package, 
 albeit using different names for the macros. The package enables documents
 to be set double spaced but leaves some document elements, 
@@ -1950,7 +1954,9 @@ of capability should be part of the class and not depend on assumptions.
 In the particular case of the \Lpack{setspace} package, even with the
 standard classes, there can be some unexpected spacing around displayed
 material; this has not occured with \Mname's implementation. 
+\switchFrench\TS{0}
 
+\switchEng
 The class also provides functions similar to those provided by the following 
 packages, although the commands are different: 
 %\begin{itemize}%\item 
@@ -1967,14 +1973,18 @@ packages, although the commands are different:
 %\end{itemize}
 You can use these packages 
 if you wish, or just use the capabilities of the \Mname\ class.
+\switchFrench\TS{0}
 
+\switchEng
     The class has built in support for the \Lpack{bidi} package for 
 bidirectional typesetting~\cite{BIDI}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Resources} \label{sec:resources}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Scattered throughout
 %, but mainly in Part~\ref{part:art},
@@ -1988,7 +1998,9 @@ Bringhurst's \textit{The Elements of Typographic Style}~\cite{BRINGHURST99},
 while Derek Birdsall's \textit{notes on book design}~\cite{BIRDSALL04}
 is much more oriented to illustrated works, like museum
 catalogues and art books.
+\switchFrench\TS{0}
 
+\switchEng
 The following packages are automatically loaded by the class:
 \begin{center}
   \begin{lineitems}
@@ -2005,7 +2017,9 @@ The following packages are automatically loaded by the class:
   \item \Lpack{textcase}~(with~\texttt{overload}~option)
   \end{lineitems}
 \end{center}
+\switchFrench\TS{0}
 
+\switchEng
     \ltx\ is based on the \tx\ program which was designed principally 
 for typesetting documents containing a 
 lot of mathematics. In such works the mathematics breaks up the flow
@@ -2014,7 +2028,9 @@ mathematics is highly dependent on the mathematical particularities.
 Most non-technical books are typeset on a fixed
 grid as they do not have arbitrary insertions into the text; it is these
 kinds of publications that typographers are most comfortable talking about.
+\switchFrench\TS{0}
 
+\switchEng
     There are other sources that deal with \ltx\ in 
 general, some of which are listed in the \bibname. Lamport~\cite{LAMPORT94}
 is of course the original user manual for \ltx, while the Companion
@@ -2023,7 +2039,9 @@ details and auxiliary
 programs. George Gr\"{a}tzer's \textit{Math into \ltx} is valuable if you
 typeset a lot of mathematics with excellent coverage of the American
 Mathematical Society's packages.
+\switchFrench\TS{0}
 
+\switchEng
    The \cTeXan{} (\pixctan) is an invaluable source
 of free information and of the \ltx\ system itself. For general questions see
 the FAQ (Frequently Asked Questions, and answers) maintained by
@@ -2042,23 +2060,31 @@ to \pixctan. This is just one of the services offered by the \TeXUG{} (\pixtug)
 and information on how to access it is available 
 at \url{http://www.tug.org}
 which is the homepage for the \TeXUG.
+\switchFrench\TS{0}
 
+\switchEng
     The most recent crops of messages on the \url{comp.text.tex}
 newsgroup (\pixctt) show an increasing interest in using a wider range
 of fonts with \ltx. This is a question that I have left alone.
 Alan Hoenig's book~\cite{HOENIG98} is the best guide to this that I know of.
 \pixctan\ hosts Philipp Lehman's font installation guide~\cite{FONTINST}; 
 this is well worth looking at just as an example of fine typesetting.
+\switchFrench\TS{0}
 
+\switchEng
     The source code for the \Lclass{memoir} class is, of course,
 freely available from \pixctan\ if you wish to see exactly what it does
 and how it does it.
+\switchFrench\TS{0}
 
+\switchEng
 For a more interactive resource you can ask questions on
 \begin{center}
   \url{http://tex.stackexchange.com}.
 \end{center}
 -- if the question is \Mname\ related, please tag it so.
+\switchFrench\TS{0}
+
 
 \end{paracol}
 
@@ -2070,7 +2096,7 @@ For a more interactive resource you can ask questions on
 
 \section{Type conventions}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The following conventions are used:
 \begin{itemize}
@@ -2090,7 +2116,7 @@ For referential purposes, arguments are denoted by \meta{arg} \\
 
 \section{Acknowledgements}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
      Many people have contributed to the \Lclass{memoir} class and this manual
 in the forms of code, solutions to problems, suggestions for new functions, 
@@ -2215,7 +2241,7 @@ David Wilson.
 
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 If I have inadvertently left anyone off the list I apologise, 
 and please let me know so that I can correct the 
@@ -2238,7 +2264,7 @@ satisfactory and timely response.
 \chapter{Remarks to the user}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \Lclass{memoir} class gives you many ways to change the appearance of your
 document, and also provides some ready-made styles that might be
@@ -2270,7 +2296,7 @@ and make the changes there. Do not expect any help if you change the
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 As the years go by support for \Lclass{memoir} will devolve from one
 person to another.\footnote{Lars Madsen took over from Peter Wilson in
@@ -2291,7 +2317,7 @@ track of memoir related matters.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \textit{From the maintainer:} Most \Mname\ related questions
 should go to \url{http://tex.stackexchange.com}, please remember to
@@ -2316,7 +2342,7 @@ directly via \texttt{daleif (at) math dot au dot dk}.
 \chapter{Terminology}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Like all professions and trades, typographers and printers have their
 specialised vocabulary.
@@ -2419,7 +2445,7 @@ Points & Name & Points & Name \\ \midrule
 \end{table}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The typographers' and printers' term for the vertical space between
 the lines of normal text is \emph{leading}\index{leading}, which is also
@@ -2443,7 +2469,7 @@ with 16pt leading set on a a 22pc measure.
 
 \section{Units of measurement}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Typographers and printers use a mixed system of units, some of which
 we met above. The fundamental unit is the point; \tref{tab:units} lists 
@@ -2467,7 +2493,7 @@ cicero (cc)\index{cicero}\index{cc}         & 1cc = 12dd \\
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Points\index{point} and picas\index{pica} 
 are the traditional printers units used in English-speaking countries. 
@@ -2529,7 +2555,7 @@ an em, often a quad is 1em.
 
 \chapter{Starting off} \label{chap:starting}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As usual, the \Lclass{memoir} class is called by 
 \cmd{\documentclass}\oarg{options}\texttt{\{memoir\}}. The \meta{options}\index{class options}
@@ -2540,7 +2566,7 @@ specifically to the typesetting of mathematics.
 
 \section{Stock paper size options}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The stock\indextwo{stock}{size} size is the size of a single sheet of the 
 paper\index{paper} you expect to put through the printer. There is a range of 
@@ -2753,7 +2779,7 @@ vo} \\
   {Class option for imperial octavo stock paper size.}%
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 There are two options that don't really fit into the tables.
 
@@ -2781,7 +2807,7 @@ which will be described later.
 
 \section{Type size options}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The type size option sets the default font size throughout the document. The class 
 offers a wider range of type sizes\index{type size} than usual. These are:\index{class options!type size}
@@ -2867,7 +2893,7 @@ Computer Modern in the \texttt{OT1} encoding is the default).
 
 \subsection{Extended font sizes}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     By default, if you use the \Lopt{extrafontsizes} option the default
 font for the document is Latin Modern\facesubseeidx{Latin Modern} 
@@ -2960,7 +2986,7 @@ as an example of what must be specified in your \file{clo} file.
 
 \section{Printing options}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     This group of options\index{class options!printing} includes:
 
@@ -3043,7 +3069,7 @@ are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
 
 \section{Other options}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The remaining options are:
 \begin{itemize}
@@ -3110,7 +3136,7 @@ None of these options are defaulted.
 
 \section{Remarks}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    Calling the class with no options is equivalent to:
 \begin{lcode}
@@ -3184,7 +3210,7 @@ want to put \cmd{\raggedbottom} in the preamble\index{preamble}.
 
 \chapter{Laying out the page} \label{chap:layingpage}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Up until this chapter the \pstyle{headings} pagestyle\index{pagestyle}
 has been used; pagestyles are described in \Sref{sec:pagestyles}.
@@ -3193,7 +3219,7 @@ This, and later chapters, are typeset with the \pstyle{ruled} pagestyle.
 
 \section{Introduction}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class provides a default page 
 layout\index{page layout}\indextwo{page layout}{default}, 
@@ -3209,7 +3235,7 @@ chapter.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The pages of a book carry the text which is intended to educate, entertain
 and/or amuse the reader. The page must be designed to serve the purposes of
@@ -3235,7 +3261,7 @@ package~\cite{GEOMETRY}.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{adjustwidth}{3em}{3em}
   \itshape
@@ -3280,7 +3306,7 @@ another, please read on.
 \section{Stock material}
 \label{sec:stock-material}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Printing is the act of laying symbols onto a piece of
 stock\index{stock} material.  Some print on T-shirts by a process
@@ -3309,7 +3335,7 @@ the norm.
 \section{The page}
 \label{sec:page}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class assumes that there will be only a single page on a side of
 each piece of stock\index{stock}; two sides means that there can be two
@@ -3322,7 +3348,7 @@ pages, one on the front and the other on the back.
 \caption{\ltx\ page layout parameters for a recto page} \label{fig:anoddpage}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The parameters\index{page layout!LaTeX parameters?\ltx\ parameters} 
 used by \ltx\ itself to define the page layout are 
@@ -3370,7 +3396,7 @@ same parameters on a verso page.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The first step in designing the page layout\index{page layout!design} 
 is to decide on the page size\indextwo{page}{size} and then pick an 
@@ -3471,7 +3497,7 @@ corresponding results are listed in \tref{tab:rectsize}.
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If you have used \cmd{\setstocksize} to redefine the stock\index{stock}, 
 then to get the same page size, do:
@@ -3547,7 +3573,7 @@ on and specify
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 See also section~\ref{sec:place-trimmed-page} --
 \emph{\titleref{sec:place-trimmed-page}}, where we present some extra
@@ -3560,7 +3586,7 @@ refers to the \emph{trimmed} page, not the stock material.
 
 \section{The typeblock} \label{sec:typeblock2}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Like the page, the typeblock\index{proportion!typeblock} is normally 
 rectangular with the height greater than the width.
@@ -3576,7 +3602,7 @@ the text.
 
 \subsection{A note on the width of the typeblock}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Experiments have shown that the number of characters in a line of
 single column\index{column} text on a page should be
@@ -3651,7 +3677,7 @@ Pts. & \multicolumn{8}{c}{Line length in picas} \\
 %%%\MakeShortVerb{\|}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Morten H{\o}gholm\index{H{\o}gholm, Morten} has done some curve fitting
 to the data. He determined that the expressions
@@ -3831,7 +3857,7 @@ commands\index{packages before class} before
 \label{sec:spec-typebl-size}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The height of the typeblock\index{typeblock!height} should be 
 equivalent to an integral number of lines. The class provides two
@@ -3959,7 +3985,7 @@ S + E = K_{w}  = \textrm{constant} \mbox{\space} (= P_{w} - B_{w}).
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The cases marked ambiguous in the \tablerefname{} are where the particular combination
 of argument values may make it impossible to guarantee the relationship.
@@ -4018,7 +4044,7 @@ from $B_{w} = P_{w} - S - E$.
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Assuming that we want a 3in wide typeblock\index{typeblock!width} on a 
 5in wide page\index{page!width} and we want the spine 
@@ -4119,7 +4145,7 @@ U + L = K_{h}  = \textrm{constant} \mbox{\space} (= P_{h} - B_{h}).
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\setulmarginsandblock}\marg{upper}\marg{lower}\marg{ratio} \\
@@ -4161,7 +4187,7 @@ is calculated from $B_{h} = P_{h} - U - L$.
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{note}
   Readers may find several folio designs in \cite{MEMDESIGN}.
@@ -4183,7 +4209,7 @@ surrounding the typeblock\index{typeblock!location}.
 \section{Headers, footers and marginal notes}
 \label{sec:head-foot-marg}
 \index{header|(}\index{footer|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A page may have two additional items, and usually has at least one of 
 these. They are the running header and running footer. If the page has a 
@@ -4207,7 +4233,7 @@ is reading, and the space would be better used providing more useful signposts.
 
 \index{header!specifying size|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\setheadfoot}\marg{headheight}\marg{footskip} \\
@@ -4270,7 +4296,7 @@ D + H_{s} = C_{h}  = \textrm{constant} \mbox{\space} (= U - H_{h}).
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The macro \cmd{\setheaderspaces} is for specifying the spacing above and below
 the page header.
@@ -4359,7 +4385,7 @@ is set to \meta{push}.
 \section{Other}
 \label{sec:other}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\setfootins}\marg{length for normal}\marg{length for minipage} \\
@@ -4381,7 +4407,7 @@ interface to set it.\footnote{This interface also sets the equivalent
 
 \section{Putting it together}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The page layout parameters\index{page layout!class parameters} 
 just discussed are not always the same
@@ -4498,7 +4524,7 @@ Class & \ltx\ \\ \midrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Unless you are satisfied with the default page layout, after specifying 
 the layout that you want you have to call the \cmd{\checkandfixthelayout}
@@ -4605,7 +4631,7 @@ Requested height & \multicolumn{4}{c}{adjusted height in pts, (lines) } \\
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Table~\ref{tab:textht} shows the results from the various \lnc{\textheight}
 adjustment calculations\footnote{For comparison the optimum heights from 
@@ -4694,7 +4720,7 @@ information about the units.
 
 \section{Side margins}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In \Lopt{twoside} printing the spine margin is normally the same on
 both recto and verso pages and, unless the spine and \foredge{} margins are the
@@ -4725,7 +4751,7 @@ is like this (\Lopt{twoside} is the default class option):
 \section{Emitting the page size}
 \label{sec:emitting-page-size}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 At the start of the document the class will automatically emit the
 chosen stocksize to the output format (DVI or PDF).\footnote{In
@@ -4811,7 +4837,7 @@ chosen stocksize to the output format (DVI or PDF).\footnote{In
 
 \section{Example} \label{sec:pexamp}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Suppose you want a page that will fit on both A4\index{paper!size!A4} 
 and US letterpaper\index{paper!size!letterpaper} stock\index{stock},
@@ -4897,7 +4923,7 @@ To finish off we have to make sure that the layout is changed
 \end{figure}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The page layout for this manual is defined in the preamble\index{preamble} as:
 \begin{lcode}
@@ -4951,7 +4977,7 @@ being printed on one or the other.
 \section{Predefined layouts}
 \label{sec:predefined-layouts}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class, like the standard classes, will automatically produce 
 working layouts for \Lopt{letterpaper}
@@ -5044,7 +5070,7 @@ changes to match the new layout).
 
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\medievalpage}\oarg{spine} \\
@@ -5181,7 +5207,7 @@ Note: Always remember to combine this with \cmd{\checkandfixthelayout}!
 
 \goodbreak
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  \noindent
 For instance, if you are using letterpaper stock but want the final trimmed
@@ -5299,7 +5325,7 @@ code below, and then the result was scaled down.
 
 \chapter{Text and fonts}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Presumably you will be creating a document that contains at least some
 text. In this chapter I talk a little about the kinds of fonts that you might
@@ -5311,7 +5337,7 @@ use and how text appears on a page.
 
 \section{Fonts} \label{sec:fonts}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     \alltx{} comes with a standard set of fonts, designed by Donald Knuth,
 and known as the Computer Modern\index{font!Computer Modern} font family. 
@@ -5493,7 +5519,7 @@ show the glyphs in the two symbol fonts.
 \fonttable{pzdr}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 These supplied \pscript\ fonts, their respective \ltx\ fontfamily\index{fontfamily} names,
 and running text examples of each, are:
@@ -5689,7 +5715,7 @@ commands\index{font commands} to access the different font categories.
   {Typeset \meta{text} with a Typewriter (monospaced) font.}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The normal body font\index{body font} --- the font used for the bulk 
 of the text ---
@@ -5758,7 +5784,7 @@ in a different font.
   {Declaration for using a Typewriter (monospaced) font.}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Do not go wild seeing how many different kinds of fonts you can cram into
 your work as in example~\ref{egbadmf}.
@@ -5867,7 +5893,7 @@ which you can change if you wish.
 
 \section{Font sizes}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The Computer Modern \metafont{} fonts come in a fixed number of 
 sizes\index{font size}, with
@@ -5903,7 +5929,7 @@ on the type size option given for the document.
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  Standard
 \ltx\ provides ten
@@ -5934,7 +5960,7 @@ Class option        & 10pt & 11pt & 12pt \\ \midrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \cmd{\normalsize} is the size that is set as the class 
 option\index{class option} and is the size used for the body\index{body font} 
@@ -6001,7 +6027,7 @@ Class option & \Lopt{9pt} & \Lopt{10pt} & \Lopt{11pt} & \Lopt{12pt} & \Lopt{14pt
 \end{adjustwidth}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Whereas the standard font sizes range from 5pt to 25pt, \Mname\  
 provides for fonts ranging from 4pt to 132pt. That is: \par
@@ -6024,7 +6050,7 @@ size of a \cmd{\miniscule} font is 5pt.
 
 \subsection{Paragraphs}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In traditional typography the first line of a paragraph, unless it comes
 immediately after a chapter or section heading, is indented. Also, there
@@ -6111,7 +6137,7 @@ To make the first line of a paragraph flushleft set this to zero:
 \subsection{Double spacing}
 
 \index{double spacing|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Some of those that have control over the visual appearance of academic
 theses like them to be `double spaced'. This, of course, will make the thesis
@@ -6318,7 +6344,7 @@ after spacing correct.
 \index{overfull lines|(}
 \index{space!interword|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     \tx\ tries very hard to keep text lines justified while keeping the 
 interword spacing as constant as possible, but sometimes fails and complains
@@ -6371,7 +6397,7 @@ reduced them compared with \cmd{\fussy} and \cmd{\sloppy} respectively.
 
 \section{Sloppybottom}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \indextwo{widow}{line}\indextwo{orphan}{line}
     \tx\ does its best to avoid widow and orphan lines --- a widow is where 
@@ -6479,7 +6505,7 @@ odd line or to reword the text.
 \section{Text case}
 \label{sec:text-case}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The standard kernel \cmd{\MakeUppercase}\marg{text} and
 \cmd{\MakeLowercase}\marg{text} basically upper or lower case
@@ -6517,7 +6543,7 @@ match the typography we use.\footnote{Note: This documentation will
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
   \cmd{\MakeTextUppercase}\marg{text}\\
@@ -6603,7 +6629,7 @@ which produces
 
 \subsection{Nested text}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The commands defined here only skip math sections and \cmd{\ref} arguments
 if they are not `hidden' inside a \verb|{ }| brace group. All text inside
@@ -6652,7 +6678,7 @@ which produces
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 See also \cite{textcase} for some information about upper casing
 citations using a non-nummeric style.
@@ -6699,7 +6725,7 @@ citations using a non-nummeric style.
 
 \chapter{Titles}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    The standard classes provide little in the way of help in setting
 the title page(s) for your work, as the \cmd{\maketitle} command
@@ -6749,7 +6775,7 @@ show title pages created using normal \ltx, without bothering
 with \cmd{\maketitle}.
 \end{comment}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    The typeset format of the \cmd{\maketitle} command is virtually fixed
 within the \ltx\ standard classes. This class
@@ -6802,7 +6828,7 @@ for both the marker symbol and the layout of the thanks\index{thanks} notes.
 \caption{Layout of a title page for a book about books}\label{figure:titleGM}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Generally speaking, if you want anything other than minor variations
 on the \cmd{\maketitle} layout then it is better to ignore \cmd{\maketitle}
@@ -6814,7 +6840,7 @@ just where you want it on the page.
 
 
 \index{title!styling|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    The facilities provided for typesetting titles are limited, essentially
 catering for the kind of titles of articles published in technical journals.
@@ -7240,7 +7266,7 @@ put \cmd{\emptythanks} before each \cmd{\maketitle} after the first.
 
 \index{thanks}
 \index{thanks!styling|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class provides a configurable \cmd{\thanks} command.
 
@@ -7496,7 +7522,7 @@ as necessary.
 \end{comment}
 %%%%%%%%%%%%%%%%%%%%
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\makethanksmark} \\
@@ -7583,7 +7609,7 @@ and thanks notes are meant to be different.
 
 \chapter{Abstracts}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Abstracts\index{abstract} do not normally appear in books but 
 they are often an essential
@@ -7609,7 +7635,7 @@ of accomplishing this.
 \section{Styling}
 
 \index{abstract!styling|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Much of this part of the class is a reimplementation of the 
 \Lpack{abstract} package~\cite{ABSTRACT}.
@@ -7892,7 +7918,7 @@ optional argument of the \cmd{\twocolumn} command. In fact,
 
 \chapter{Document divisions}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 For this chapter the \cstyle{pedersen} chapterstyle has been used in
 order to demonstrate how it appears.
@@ -7911,7 +7937,7 @@ different, though.
 
 \section{Logical divisions}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As described earlier there are three main logical divisions to a book;
 the \pixfrontmatter, \pixmainmatter\ and \pixbackmatter. There are three \ltx\
@@ -7985,7 +8011,7 @@ captions\index{caption}, etc., will be numbered continuously.
 
 \LMnote{2009/06/29}{Added the following section}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 If you have other types of floats that might be used in the front-
 main- or backmatter, then you can change some internals to add these
@@ -8023,7 +8049,7 @@ in the preamble.
 
 \section{Sectional divisions}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \theclass{} class lets you divide a document up into eight levels
 of named divisions. They range from book\index{book}, part\index{part} 
@@ -8202,7 +8228,7 @@ cancels any previous \cmd{\raggedbottomsection} declaration.
 
 \subsection{Appendices} \label{sec:appendices}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Appendices\index{appendix} normally come after the main text and are 
 often considered to be part
@@ -8323,7 +8349,7 @@ the \Ie{subappendices} environment and is only available when
 
 \section{Numbering} \label{sec:secnumbers}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Each type of sectional division\index{division!sectional} has an 
 associated \emph{level}\index{sectional division!level number} as shown 
@@ -8352,7 +8378,7 @@ Division       & Level \\ \midrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\setsecnumdepth}\marg{secname} \\
@@ -8409,7 +8435,7 @@ package~\cite{TOCVSEC2}.
 \index{heading!book|(}
 \index{heading!part|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Book and part headings \emph{always} start on a new page with the 
 \pstyle{book} and \pstyle{part} pagestyles, respectively. The typical
@@ -8722,7 +8748,7 @@ titling. Something like this may do the trick
 
 \subsection{Leadpage}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\newleadpage}\oarg{page-style}\marg{cmdname}\marg{title} \\
@@ -8784,7 +8810,7 @@ wish to capture the \meta{title} to use in running headers.
 \label{sec:chapter-headings}
 \index{heading!chapter|(} %| emacs
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The chapter headings are configurable in much the same way as book or part 
 headings, but in addition there are some built in chapter styles that you may
@@ -8847,7 +8873,7 @@ The general layout is shown in \fref{lay:chap}.
 \label{lay:chap}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\clearforchapter} \\
@@ -8966,7 +8992,7 @@ as mentioned in \fref{lay:chap} they need some explanation:
 
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\printchaptername} \cmd{\chapnamefont} \\
@@ -9084,7 +9110,7 @@ simple modifications to the layout.
 
 \index{chapterstyle|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class provides many ways in which you can implement your designs
 for chapter headings.
@@ -9323,7 +9349,7 @@ that the typeblock is locally wider than it actually is.
 
 \subsection{Further chapterstyles}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class provides more chapterstyles, which are listed here. 
 Some are mine and others are from postings to \ctt\ by \Pclass{memoir}
@@ -9349,7 +9375,7 @@ style's changes are not passed on to a following one.
 \smallskip
 }
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{itemize}
 
@@ -9727,7 +9753,7 @@ macros without putting them into a style.
 
 \index{chapter!precis|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    Some old style novels, and even some modern text 
  books,\footnote{For example, Robert Sedgewick, \textit{Algorithms},
@@ -9851,7 +9877,7 @@ a chapter title using the \cmd{\precistocfont} (default
 
 \index{heading!sections|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The lower level heads --- sections down to subparagraphs --- are also
 configurable, but there is nothing corresponding to chapter styles.
@@ -9916,7 +9942,7 @@ font            & \cs{bfseries} & \cs{bfseries} \\
 \end{table}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In the following I will use \texttt{S} to stand for one of \texttt{sec},
 \texttt{subsec}, \texttt{subsubsec}, \texttt{para} or \texttt{subpara}, 
@@ -9935,7 +9961,7 @@ S & sec & subsec & subsubsec & para & subpara \\
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\setbeforeSskip}\marg{skip} \\
@@ -10093,7 +10119,7 @@ heading, it is \verb?-1em?.
 \fancybreak{$*$}
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\@hangfrom}\marg{code} \\
@@ -10166,7 +10192,7 @@ Note that \cmd{\setsecnumformat} applies to all \cmd{\section},
 \fancybreak{$*$}
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\hangsecnum} \\
@@ -10243,7 +10269,7 @@ Here are some example lower level heads and the code used to produce them.
   \centering
   \parbox{3in}{\centering #1}\par}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{egsource}{egsubheads}
 \setsubsubsecheadstyle{\bfseries\raggedright}
@@ -10279,7 +10305,7 @@ Here are some example lower level heads and the code used to produce them.
 
 \FloatBlock
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{egresult}[A variety of subhead styles]{egsubheads}
 \setsubsubsecheadstyle{\bfseries\raggedright}
@@ -10338,7 +10364,7 @@ Here are some example lower level heads and the code used to produce them.
 \setparahook{\setsecnumformat{\csname the##1\endcsname\ }}
 %%%\setsecnumdepth{paragraph}
 %
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \paragraph{Hang the whole heading in the margin}%%%\setsecnumdepth{subsection}
 A less traditional style is to put the whole heading into the margin.
@@ -10367,7 +10393,7 @@ typeset the heading. The format for the number is reset via
 \fancybreak{$*$}
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 A different approach is to create new macros, each named by the type
 of sectional macro it formats, and then make the number format call
@@ -10405,7 +10431,7 @@ use it, otherwise use a default:
 
 \section{Fancy anonymous breaks}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Often, in novels, there is a need to break up the text to indicate that
 there is a major break in the story, but not enough to warrant starting a new
@@ -10491,7 +10517,7 @@ fancy break must always take at least as much space as the plain break.
 
 \fancybreak{\pfbreakdisplay}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \cmd{\plainfancybreak} macro inserts a plain break in the middle of
 a page or if the break would come at the bottom or top of a page it
@@ -10535,7 +10561,7 @@ typesets three asterisks, as shown a few lines before this.
  \ensuremath{\clubsuit\quad\diamondsuit\quad\clubsuit}}
 \fancybreak{\pfbreakdisplay}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     You can change the definition of \cmd{\pfbreakdisplay} for a different
 style if you wish. The
@@ -10556,7 +10582,7 @@ it indented use the \cmd{\pfbreak*} starred version.
 \renewcommand{\pfbreakdisplay}{\ding{167}\quad\ding{167}\quad\ding{167}}
 \fancybreak{\pfbreakdisplay}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  The fancy break using 
 fleurons\index{fleuron} just before this paragraph was produced by:
@@ -10576,7 +10602,7 @@ where the \cmd{\ding} command is from the \Lpack{pifont} package.
 
 \fancybreak{\chain{\diamondpattern}{0.25\textwidth}}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The fancy break made with fleurons was simple to specify. There are 
 many other symbols that you can
@@ -10652,7 +10678,7 @@ some space between them.
 
 \index{footnote!in heading|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     With the sectioning commands the text of the required argument
 \meta{title} is used as the text for the section title in the body
@@ -10692,7 +10718,7 @@ this:
 
 \section{Predefined heading styles}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    All \ltx\ classes for typesetting books and reports provide a particular
 style for sectional headings. The \Mname\ class is unusual in that it provides
@@ -10725,7 +10751,7 @@ sizes depending on the division level.
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\makeheadstyles}\marg{name}\marg{code} \\
@@ -10820,7 +10846,7 @@ Headstyles & & chapter & section & subsec & subsubsec & para & subpara \\ \midru
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Several other sets of headstyles are provided as well and the full list
 is below. The different fonts used are given in \tref{tab:headfonts} and
@@ -10876,7 +10902,7 @@ normal size by the time subsubsection heads are reached, or before.
 
 %\section{Introduction}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The focus of this chapter is on marking the pages 
 with signposts so that the reader can more readily navigate through
@@ -10885,7 +10911,7 @@ the document.
 
 \section{Pagination and folios}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Every page in a \ltx\ document is included in the 
 pagination\index{pagination}. That is,
@@ -10989,7 +11015,7 @@ decisions on page breaking, this may or may not be necessary.
 \section{Page styles} \label{sec:pagestyles}
 
 \index{pagestyle!specifying|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class provides a selection of pagestyles that you can use and if 
 they don't suit, then there are means to define your own.
@@ -11103,7 +11129,7 @@ Called from & Style \\ \midrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\uppercaseheads} \cmd{\nouppercaseheads}  \\
@@ -11202,7 +11228,7 @@ Main macro & default mark definition \\ \midrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The \cs{...mark} commands are listed in \tref{tab:markmacros}. When they are 
 called by the relevant main macro, those that take an argument are called with
@@ -11221,7 +11247,7 @@ have defined \cmd{\sectionmark}.
 
 \section{Making headers and footers}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As mentioned, the class provides for left, center, and right slots in
 even and odd headers\index{header} and footers\index{footer}. 
@@ -11237,7 +11263,7 @@ are diagrammed in \fref{lay:header}.
 \caption{Header and footer slots} \label{lay:header}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class itself uses the commands from this section. For example,
 the \pstyle{plain} pagestyle is defined as
@@ -11459,7 +11485,7 @@ something different.
 
 \subsection{Example pagestyles}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Perhaps when preparing drafts you want to note on each page
 that it is a draft\index{draft document} document. Assuming that 
@@ -11485,7 +11511,7 @@ similar footers for that style as well.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Here is part of the standard definition of the \pstyle{headings}
 pagestyle for the \Lclass{book} class which uses many internal \ltx\ commands;
@@ -11684,7 +11710,7 @@ reload the page style, for example with the default page style in \theclass\
 \PWnote{2009/07/30}{Added sections on Document title and Part title in headers}
 \subsubsection{Header with the document title}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As mentioned before, some publishers like the title of the book 
 to be in the header. A simple header is probably all that is needed 
@@ -11698,7 +11724,7 @@ use for \pstyle{myheadings}.
 
 \subsubsection{Part and chapter in the header}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Some documents have both part and chapter divisions and in such
 cases it may be useful for the reader to have the current part and chapter
@@ -11719,7 +11745,7 @@ to accomplish this by simply resetting the marks for part and chapter:
 
 \subsubsection{The Companion pagestyle}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     This example demonstrates most of the page styling commands.
 In the \textit{\ltx\ Companion} series of 
@@ -11827,7 +11853,7 @@ of doing it:
 
 \subsubsection{The ruled pagestyle}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     For practical reasons I prefer a page style with headings
 where the chapter title is at least in the center 
@@ -11871,7 +11897,7 @@ code sets these up, as well as the marks for the other document elements.
 \subsection{Index headers}
 
 \index{pagestyle!index pages|(}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If you look at the Index\index{index} you will see that the header\index{header} 
 shows the first and last entries on the page.
@@ -11935,7 +11961,7 @@ outer margin\index{margin!outer}.
 \index{pagestyle!float pages|(}
 \index{float!page|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \piif{ifonlyfloats}\marg{yes}\marg{no} \\
@@ -12096,7 +12122,7 @@ of the page.
 
 \section{The showlocs pagestyle}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \pstyle{showlocs} pagestyle is somewhat special as it is meant to be
 used as an aid when designing a page layout. Lines are drawn showing the 
@@ -12156,7 +12182,7 @@ code as a starting point, see \path{memoir.cls} for details.
 \section{Other things to do with page styles}
 \label{sec:other-things-do}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Back on \pref{ex:draft.pagestyle} we presented a way of adding some
 draft information. Here is a more advanced example of this.
@@ -12215,7 +12241,7 @@ like:
 %\tightlists
 %%%%%%%%%%%%%%%%%%%%%
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Within a sectional division the text is typically broken up into
 paragraphs. Sometimes there may be text that is set off from the normal
@@ -12226,7 +12252,7 @@ paragraphing, like quotations\index{quotation} or lists.
 
 \index{paragraph|(} %|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     There are basically two parameters that control the appearance of normal
 paragraphs.
@@ -12257,7 +12283,7 @@ margin\index{margin!left}.
 
 \subsection{Block paragraph}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A block paragraph\index{paragraph!block} is obtained by setting 
 \lnc{\parindent} to 0em; 
@@ -12287,7 +12313,7 @@ page, even if the textwidths on the two pages are different.
 \subsection{Hanging paragraphs}
 
 \index{paragraph!hanging|(} %|
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A hanging paragraph is one where the length of the first few lines differs
 from the length of the remaining lines. (A normal indented paragraph 
@@ -12378,7 +12404,7 @@ Nyman\index{Nyman, Patrick} which he posted on \ctt{} in January 2004.
 
 \section{Flush and ragged}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Flushleft\index{flushleft} text has the lefthand end of the lines 
 aligned vertically at the lefthand margin\index{margin!left} and
@@ -12489,7 +12515,7 @@ at the end of the paragraph.
 
 \section{Quotations}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     LaTeX provides two environments that are typically used for typesetting
 quotations\index{quotation}.
@@ -12557,7 +12583,7 @@ set flushright on the following line.\sourceatright{N. O. Space}
 
 \section{Some less common paragraph shapes}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The paragraph shapes described in this section are based on a series
 that I presented in my \emph{Glisterings} column~\cite{GLISTER07,GLISTER08}.
@@ -12619,7 +12645,7 @@ justified left and right with the last line flushleft and raggedright.
     
 \subsection{Last line not short}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     On occasion a paragraph may end with a single short word as the last
 line.
@@ -12657,7 +12683,7 @@ length. a b c d e f g h i j k % l m n
 
 \subsection{Russian typography}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Apparently in the Russian typographic tradition the last line of a
 multiline paragraph must either be at least as long as the \lnc{\parindent}
@@ -12691,7 +12717,7 @@ or as:
 
 \subsection{Fill with rules}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     In some legal documents there must be no space at the end of the lines
 in order to prevent anyone inserting something at a later date. Typically 
@@ -12738,7 +12764,7 @@ and regular paragraphing.
 
 \subsection{Some ragged paragraphs}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    A few paragraph shapes with unusual ragged lines are available.
 
@@ -13311,7 +13337,7 @@ as in an ordinary list.
 
 \index{list!new|(} %|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \senv{list}\marg{default-label}\marg{code} items \eenv{list} \\
@@ -13497,7 +13523,7 @@ other environments.
 %\chapter{Tops and tails} \label{chap:topsandtails}
 \chapter{Contents lists} \label{chap:toc}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 This chapter describes how to change the appearance of the Table of Contents
 (\toc) and similar lists like the List of Figures (\lof). In the standard
@@ -13533,7 +13559,7 @@ skip the remainder of the chapter.
 
 \section{General \prtoc\ methods}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  In \S\ref{sec:class-prtoc-methods} we will provide the class
  configuration interface for the various parts of the ToC. 
@@ -13638,7 +13664,7 @@ Part of a \file{lot} file:
 \label{fig:tocloflotfiles}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
      For each \meta{kind} that might appear in a \file{toc} 
 (\file{lof}, \file{lot}) file, \ltx\ provides a command: \\
@@ -13652,7 +13678,7 @@ which performs the actual typesetting of the \cmd{\contentsline} entry.
 \caption{Layout of a \prtoc{} (\prlof, \prlot) entry} \label{fig:ltoc}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\@pnumwidth}\marg{length} \\
@@ -13734,7 +13760,7 @@ block of width \\
  \end{tabular}
  \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  Table~\ref{tab:indents} lists the standard values for the \textit{indent}
 and \textit{numwidth}. There is no explicit \textit{numwidth} for a
@@ -14021,7 +14047,7 @@ this class and the \Lpack{hyperref} package) immediately
 
 \subsection{Changing the titles} \label{sec:titles}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Commands are provided for controlling the appearance of the
 \toc, \lof\ and \lot\ titles. 
@@ -14067,7 +14093,7 @@ For example, \verb?\Xmark? stands for \cmd{\tocmark} or \cmd{\lofmark} or
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The code for typesetting the \toc\ title looks like:
 \begin{lcode}
@@ -14203,7 +14229,7 @@ by changing some of the macros. As examples:
 
 \subsection{Typesetting the entries} \label{sec:entries}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  Commands are also provided to enable finer control over the typesetting
  of the different kinds of entries. The parameters defining the default
@@ -14334,7 +14360,7 @@ any of the following:
 \end{table}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\cftbookbreak} \\
@@ -14942,7 +14968,7 @@ captions\index{caption} are not too exotic, use the \cmd{\legend} command
 \label{sec:inserting-stuff-into}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The next functions were suggested by Lars\index{Madsen, Lars} Madsen who
 found them useful if, for example, you had two versions of the
@@ -15038,7 +15064,7 @@ they do nothing.\footnote{More hooks may be added in later releases.}
 \subsubsection{Extra chapter material in the ToC}
 \label{sec:extra-chapt-mater}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\precistoctext}\marg{text} \cmd{\precistocfont} \cmd{\precistocformat}\\
@@ -15052,7 +15078,7 @@ this macro can be found in section~\ref{sec:chapter-precis}.
 \subsubsection{About upper or lower casing TOC entries}
 \label{sec:about-upper-or}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Some designs call for upper (or lower casing) TOC entries. This
 \emph{is} possible but the solution depends on whether the
@@ -15105,7 +15131,7 @@ course, you will not have upper cased titles in the bookmark list.
 
 \subsection{Example: No section number}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     There are at least two ways of listing section titles in the \toc\
 without displaying their numbers and both involve the \cmd{\numberline}
@@ -15150,7 +15176,7 @@ be interested.
 
 \subsection{Example: Multicolumn entries}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If the subsection entries, say, in the \toc\ are going to be very 
 short it might be worth setting them in multiple columns. Here is one way
@@ -15189,7 +15215,7 @@ fragile\index{fragile}.
 \subsection{Example: Multiple contents}
 
 \PWnote{2009/03/17}{Added bit about simple short \& long ToC.}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     It is easy to have two \toc s, one short and one long, when they are
 of the same style, like this:
@@ -15392,7 +15418,7 @@ code for \cmd{\setupparasubsecs}).
 
 \index{list!new list of|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  \begin{syntax}
 \cmd{\newlistof}\marg{listofcom}\marg{ext}\marg{listofname} \\
@@ -15652,7 +15678,7 @@ document.
 
 \subsection{Example: plates}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As has been mentioned earlier, some illustrations\index{illustration}
 may be tipped in\index{tip in} to a book. Often, these are called 
@@ -15737,7 +15763,7 @@ printed folios\index{folio} or \cmd{\caption}s.
 chapters? No this links to the version i document-divisions.tex }
 \section{Chapter precis}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 See section~\ref{sec:chapter-precis} on page~\pageref{sec:chapter-precis}.
 \end{paracol}
@@ -15817,7 +15843,7 @@ See section~\ref{sec:chapter-precis} on page~\pageref{sec:chapter-precis}.
 
 \LMnote{2009/06/29}{Added section about contents lists and bookmarks}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 With the \Lpack{hyperref} package, the table of contents is often
 added as a list of bookmarks thus providing a nice navigation for the
@@ -15857,7 +15883,7 @@ before the stuff you want to have moved out of, say, a part.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  \chapter{Floats and captions} \label{chap:captions}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A float\index{float} environment is a particular kind of 
 box\index{box}  --- one that \ltx\ decides where it should go although
@@ -15882,7 +15908,7 @@ of captions.
 
 \section{New float environments} \label{sec:newfloat}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     It is often forgotten that the \ltx\ float environments come
 in both starred and unstarred forms. The unstarred form typesets the 
@@ -16010,7 +16036,7 @@ it comes to inner adjustment}
 \subsection{Margin floats}
 \label{sec:margin-floats}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 We also provide two environments to insert an image or table into the
 margin (using \cmd{\marginpar}). The construction is inspired by the
@@ -16040,7 +16066,7 @@ margin figure.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The \Ie{marginfigure} and \Ie{margintable} environments can of course
 be adjusted using \cmd{\setfloatadjustment}, default
@@ -16103,7 +16129,7 @@ be done using the \Lpack{ragged2e} package and
 
 \index{float!set off|(} %|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Sometimes it is desireable to set off a float, more probably
 an illustration than a tabular, from its surroundings. The \Ie{framed}
@@ -16150,7 +16176,7 @@ FRAMED FIGURE AND CAPTION
 \end{framed}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If framing seems overkill then you can use 
 rules\indextwo{ruled}{float} instead, as in the example code below
@@ -16212,7 +16238,7 @@ RULED FIGURE AND CAPTION
 
 \index{float!multiple|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 You can effectively put what you like inside a float box. Normally there 
 is just a single picture or tabular in a float but you can include 
@@ -16230,7 +16256,7 @@ as many of these as will fit inside the box.
  \end{shadefigure}
 % \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Three typical cases of multiple figures\index{figure}/tables\index{table} 
 in a single float come to mind:
@@ -16307,7 +16333,7 @@ of the two \Ie{minipage}s.
  \end{shadefigure}
 % \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     It is slightly more complex if you want to put, say, both a 
 tabulation captioned as a table and a graph, captioned as a figure, 
@@ -16384,7 +16410,7 @@ twice as thick as \cmd{\hrule} does.
 %\end{figure}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The following code produces \figurerefname s~\ref{fig:left2} 
 and~\ref{fig:right2}.
@@ -16439,7 +16465,7 @@ and~\ref{fig:right2}.
 \end{shadefigure}
 %\end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The next code produces \figurerefname s~\ref{fig:left3} 
 and~\ref{fig:right3}.
@@ -16494,7 +16520,7 @@ and~\ref{fig:right3}.
 \end{shadefigure}
 %\end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
  \cmd{\newsubfloat}\marg{float} \\
@@ -16519,7 +16545,7 @@ and \cs{subcaption}.}
 
 \index{float!placement|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  The general format for a float environment is: \\
  \senv{float}\oarg{loc} ... \eenv{float} 
@@ -16654,7 +16680,7 @@ where \meta{sectional name} is \emph{without} the \cs{}, i.e.\
  
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \Lpack{flafter} package, which should have come with your \ltx\
 distribution, provides a means of preventing floats from moving
@@ -16743,7 +16769,7 @@ typeset before the section heading\index{heading}.
 \end{adjustwidth}
  \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  Figures~\ref{fig:fpp} and~\ref{fig:flp} illustrate the many float 
 parameters\index{float!parameters}
@@ -16870,7 +16896,7 @@ to take account of the maximum text page separation value.
 
 \index{caption|(} %)|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  Some publishers require, and some authors prefer, captioning styles
 other than the one style provided by standard \ltx. 
@@ -16890,7 +16916,6 @@ figure\index{figure} environment.
 
     The commands described below are very similar to
 those supplied by the \Lpack{ccaption} package~\cite{CCAPTION}.
-\end{paracol}
 
 As an alternative (it has more features that what the class offers) we
 recommend the \Lpack{caption} package by Axel Sommerfeldt. In fact if
@@ -16899,7 +16924,7 @@ reset it self such that \Lpack{caption} can take over. This also means
 that all the macros described in the next section will have no effect
 if \Lpack{caption} is loaded (either intentionally or
 unintentionally).
-
+\end{paracol}
 
 
 
@@ -16907,7 +16932,7 @@ unintentionally).
 
 \index{caption!style|(} %)|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Just as a reminder, the default appearance of a caption for, say,
 a table looks like this:
@@ -17256,7 +17281,7 @@ thus giving a balanced appearence.
 
 \index{caption!continued|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\contcaption}\marg{text} \\
@@ -17329,7 +17354,7 @@ thus giving a balanced appearence.
 \index{legend}
 \index{caption!anonymous|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\legend}\marg{text} \\
@@ -17352,7 +17377,7 @@ environment, but may be used anywhere.
    \legend{The legend}
    \end{shadetable}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     For example, the following code was used to produce the two-line
 \tref{tab:legend}. The \cmd{\legend} command can be used within a 
@@ -17418,7 +17443,7 @@ aligned under the normal title lines.
    \end{tabular}
    \end{shadetable}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  As an example, the \textsf{Legendary table} is produced by the following code:
 \begin{lcode}
@@ -17477,7 +17502,7 @@ following code is the source of the \textit{Named legendary table}.
  \end{tabular}
  \end{shadetable}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\flegfloat}\marg{name} \\
@@ -17636,7 +17661,7 @@ page number in the typeset document, \emph{not} your source input order).
 \index{caption!bilingual|(}%|
 \index{bilingual captions|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Some documents require bilingual (or more) captions. The class 
  provides a set of commands for bilingual captions. Extensions to the
@@ -17704,7 +17729,7 @@ EXAMPLE FIGURE WITH BITWONUMCAPTION
  \bitwonumcaption[fig:bi1]{}{Long \cs{bitwonumcaption}}{Bild}{  }{Lang \cs{bitwonumcaption}} 
  \end{shadefigure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
   Both \cmd{\bionenumcaption} and \cmd{\bitwonumcaption} take the same 
 arguments.
@@ -17730,7 +17755,7 @@ EXAMPLE FIGURE WITH BIONENUMCAPTION
     {Bild}{  }{Lang Deutsch \cs{bionenumcaption}} 
  \end{shadefigure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\bicaption}\oarg{label}\marg{short1}\marg{long1}\% \\
@@ -17784,7 +17809,7 @@ argument either empty or as one or more spaces.
     {Bild}{Langlauf}
  \end{shadefigure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\bicontcaption}\marg{long1}\% \\
@@ -17848,7 +17873,7 @@ a post-caption line for the second caption. The class initially specifies
 \index{table!subtable|(}%|
 \index{float!subfloat|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
      The \Lpack{subfigure} package enables the captioning of 
 sub-figures within a larger figure\index{figure}, 
@@ -18133,7 +18158,7 @@ centered.
 
 \index{caption!side|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Typically captions are put either above or below the element they
 are describing. Sometimes it is desireable to put a caption at the
@@ -18277,7 +18302,7 @@ Legends may be set at the side with the \Ie{sidelegend} environment.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \textbf{Caveat}: Note that the \texttt{side...} envs expect the body
 of the float to be \emph{taller} than the typeset caption/legend. In
@@ -18288,7 +18313,7 @@ to visit this answer:
 
 \subsection{Tweaks}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\sidecapstyle} \\
@@ -18401,7 +18426,7 @@ to the float's \Ie{minipage}, not with respect to the text block.
 \end{sidecaption}
 \end{shadetable}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Table~\ref{scap:one} was created by the following code.
 \end{paracol}
@@ -18430,7 +18455,7 @@ Table~\ref{scap:one} was created by the following code.
 \end{shadecode}
 %\end{lcode} 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The calculations on the \cs{mylength} length are so that the sidecaption
 and float will just fit inside the typeblock.
@@ -18460,7 +18485,7 @@ overlaid by the main text.
 
 \index{caption!\ltx\ methods|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  This section provides an overview of how \ltx\ creates captions and
  gives some examples of how to change the captioning style directly.
@@ -18629,7 +18654,7 @@ it has to be done as:
  \caption{A picture is worth a thousand words}\label{fig:sc}
  \end{shadefigure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  As an example, \fref{fig:sc} was created by the following code:
 \begin{lcode}
@@ -18661,7 +18686,7 @@ a sans-serif font, as is illustrated by the caption for
  \caption{A different kind of figure caption}\label{fig:sf}
  \end{shadefigure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{lcode}
  \makeatletter
@@ -18708,7 +18733,7 @@ tools that you need to make most, if not all, of any likely caption styles.
 \index{caption!footnote|(}%|
 \index{footnote!in caption|(}%|
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     If you want to have a caption with a footnote, think long and hard
  as to whether this is really essential. It is not normally considered
@@ -18781,7 +18806,7 @@ footnote\index{footnote!text} text.
 \section{The class versus the caption package (and its friends)}
 \label{sec:class-versus-caption}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 For some, the configurations for captions provided by the class, are
 either a bit too complicated or not complicated enough.
@@ -18830,7 +18855,7 @@ package can be used with the class, but there are a few caveats:
 
  \chapter{Rows and columns}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The class provides extensions to the standard \Ie{array} and \Ie{tabular}
 environments. These are based partly on a merging of the
@@ -18869,7 +18894,7 @@ documentation of these packages.
 
 \section{General}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\[} \senv{array}\oarg{pos}\marg{preamble} rows \eenv{array} \cmd{\]} \\
@@ -18912,7 +18937,7 @@ provide more control over the width through their \meta{width} argument.
 
 \section{The preamble}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     You use the \meta{preamble} argument to the array and tabular 
 environments to specify the number of columns and how you want column
@@ -18989,7 +19014,7 @@ are listed in \tref{tab:tabpream}.
 \end{adjustwidth}
  \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Examples of the options include:
 \begin{itemize}
@@ -19089,15 +19114,20 @@ for example
  
  \subsection{D column specifiers} \label{sec:dcolumns}
 
+\begin{paracol}{2}
+\switchEng
  \begin{recommended}
    As an alternative to the \texttt{D} column (through using the
    \Lpack{dcolumn} package), you can use the \Lpack{siunitx} package
    which have the added bonus of many more configuration and
    formatting features. See \cite{SIUNITX} for details.
  \end{recommended}
+\switchFrench\TS{0}
+ \begin{recommended}
 
+ \end{recommended}
 
- 
+\switchEng
     In financial tables dealing with pounds
 and pence or dollars and cents, column entries
 should be aligned on the separator between the numbers. The \texttt{D}
@@ -19275,8 +19305,12 @@ D{+}{\,\pm\,}{3,3}
  will give a symmetric layout of up to three
  digits on either side of a $\pm$ sign.
 
+\end{paracol}
+
  \subsection{Defining new column specifiers}
 
+\begin{paracol}{2}
+\switchEng
      You can easily type
  \begin{quote}
    \verb?>{?\meta{some declarations}\verb?}{c}<{?\meta{some more
@@ -19332,8 +19366,12 @@ columns in the same alignment. Defining:
 \cmd{\newcolumntype} definitions is sent to the terminal and log file if
  the \cmd{\showcols} command is given.
 
+\end{paracol}
+
 \subsection{Surprises}
 
+\begin{paracol}{2}
+\switchEng
  \begin{itemize}
  \item A preamble of the form \verb?{wx*{0}{abc}yz}? is treated as \verb?{wxyz}?
 
@@ -19390,9 +19428,13 @@ instead.
    two are specified --- another reason to avoid using \verb?|?.
 
  \end{itemize}
+\end{paracol}
+
 
 \section{The array environment}
 
+\begin{paracol}{2}
+\switchEng
     Mathematical arrays are usually produced using the \Ie{array} environment.
 
 \begin{syntax}
@@ -19527,10 +19569,13 @@ earlier.
  \left(\begin{array}[b]{c} 1\\2\\3 \end{array}\right)
  \]
 
+\end{paracol}
 
 
 \section{Tables}
 
+\begin{paracol}{2}
+\switchEng
     A table is one way of presenting a large amount of information
 in a limited space. Even a simple table can presents facts that could
 require several wordy paragraphs --- it is not only a picture that is worth
@@ -19565,6 +19610,8 @@ one that cuts across the columns of the table and applies to all the
 matter below it. To try and clarify, the parts of a table
 are shown diagrammatically in \tref{tab:tabparts}.
 
+\end{paracol}
+
 \begin{table}
 \centering
 \caption{Demonstrating the parts of a table} \label{tab:tabparts}
@@ -19580,6 +19627,8 @@ D    &   m     &   n     &   o   &   p  \\ \bottomrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}
+\switchEng
    No mention has been made of vertical\index{table!rule!vertical} 
 rules in a table, and this is
 deliberate. There should be no vertical rules in a table. Rules, 
@@ -19594,6 +19643,8 @@ clutter should be eliminated.
 \tref{tab:after} is how Simon Fear~\cite{BOOKTABS} suggests it
 should be cleaned up. Notice how both the revised code and the table 
 are generally simpler than the originals.
+
+\end{paracol}
 
 \begin{table}
 \centering
@@ -19646,8 +19697,10 @@ are generally simpler than the originals.
 }
 \end{table}
 \end{lcode}
- 
 
+ 
+\begin{paracol}{2}
+\switchEng
     Columns of numbers often end with a line giving the total or result.
 A horizontal rule\index{table!rule} may be drawn to separate the result 
 from the rest but
@@ -19680,6 +19733,8 @@ But putting Josh Billings' (Henry Wheeler Shaw) corollary:
 into tabular form would not work.}
  as in \tref{tab:micawber}.
 
+\end{paracol}
+
 \begin{table}
 \centering
 \caption{Micawber's law} \label{tab:micawber}
@@ -19690,9 +19745,13 @@ Result      & happiness & misery \\ \bottomrule
 \end{tabular}
 \end{table}
 
+\begin{paracol}{2}
+\switchEng
     Long narrow tables do not look well on the page. In such cases
 the table\index{table!half and half} could be set half and half 
 instead, as in \tref{tab:halfhalf}.
+
+\end{paracol}
 
 \settowidth{\versewidth}{Relative contents of odd isotopes for heavy elements}
 \addtolength{\versewidth}{2mm}
@@ -19714,6 +19773,8 @@ Dy & 66 & 0.930 & & Pt & 78 & 1.160 \\
 
 \section{Fear's rules}
 
+\begin{paracol}{2}
+\switchEng
     Simon Fear disapproves of the default \ltx\ table\index{table!rule} 
 rules and
 wrote the \Lpack{booktabs} package~\cite{BOOKTABS} to provide
@@ -19909,6 +19970,8 @@ Armadillo & frozen & 8.99 \\ \bottomrule
 \end{tabular}
 \end{lcode}
 
+\end{paracol}
+
 \index{table!rule|)}
 
 \subsection{Fills}
@@ -19916,6 +19979,9 @@ Armadillo & frozen & 8.99 \\ \bottomrule
 \index{table!row fill|(}
 \index{array!row fill|(}
 
+
+\begin{paracol}{2}
+\switchEng
     The rules described previously go between rows. Sometimes it may be 
 desirable to to put a rule or something similar within a 
 row.
@@ -19955,6 +20021,9 @@ k & j   & t   & co   & ytrewq \\
 \end{table}
 \end{lcode}
 
+\end{paracol}
+
+
 \begin{table}
 \centering
 \caption{Example table with fills} \label{tab:fills}
@@ -19969,6 +20038,9 @@ k & j   & t   & co   & ytrewq \\
 \end{tabular}
 \end{table}
 
+
+\begin{paracol}{2}
+\switchEng
     Here are the same fills, but this time in an \Ie{array} environment.
 are shown afterwards. Notice the \texttt{\$}s in the array surrounding
 the fills. Normally \verb?$...$? is used to typeset a small
@@ -20032,6 +20104,8 @@ A & B & C & D
 \end{array}
 \end{displaymath}
 
+\end{paracol}
+
 \index{array!row fill|)}
 \index{table!row fill|)}
 
@@ -20045,6 +20119,8 @@ A & B & C & D
 \senv{tabularx}\marg{width}\oarg{pos}\marg{format} rows \eenv{tabularx} \\
 \end{syntax}
 
+\begin{paracol}{2}
+\switchEng
     A table created using the \Ie{tabular} environment comes out as
 wide as it has to be to accomodate the entries. On the other hand,
 both the \Ie{tabular*} and \Ie{tabularx} environments let you specify
@@ -20061,9 +20137,11 @@ specifier in the \meta{format}.
 Once the correct column widths have been calculated the \texttt{X}
 columns are converted to \texttt{p} columns.
 
+\end{paracol}
+
  \subsection{Examples}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The following code is used for a regular \Ie{tabular}.
 \begin{lcode}
@@ -20097,7 +20175,7 @@ three &
 \end{tabular}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The following examples use virtually the same contents, the major
 differences are the specifications of the environment.
@@ -20142,7 +20220,7 @@ differences are the specifications of the environment.
  \end{tabular*}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Note that the horizontal rules\index{tabular!rule} extend beyond the 
 last column.
@@ -20197,7 +20275,7 @@ Compare the previous narrow \Ie{tabular*} with the next one which is set with
 \end{figure}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
      The main differences between the \Ie{tabularx} and \Ie{tabular*}
 environments are:
@@ -20374,7 +20452,7 @@ following restictions:
 
 \subsection{Spacing}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Sometimes tabular rows appear vertically challenged.
 
@@ -20446,7 +20524,7 @@ or by successive \cmd{\hline} commands.
 
 \subsection{Special variations on horizontal lines}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  The family of \texttt{tabular} environments allows
 vertical positioning\index{tabular!vertical position} 
@@ -20463,7 +20541,7 @@ aligned at the horizontal rule.
 
 \pagebreak[3]
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  Here is an example:
  \begin{center}
@@ -20494,7 +20572,7 @@ aligned at the horizontal rule.
 \end{center}
 \end{paracol}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\firsthline} \cmd{\lasthline} \\
@@ -20551,7 +20629,7 @@ aligned at the horizontal rule.
 
  \subsection{Handling of rules}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  There are two possible approaches to the handling of horizontal and
  vertical rules in tables:
@@ -20578,7 +20656,7 @@ aligned at the horizontal rule.
 
 \index{tabular!free|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     All the tabular environments described so far put the table
 into a box\index{box}, which \ltx\ treats like a large complex
@@ -20597,7 +20675,7 @@ so forth.
 
 \index{tabular!continuous}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \senv{ctabular}\oarg{pos}\marg{format} rows \eenv{ctabular} \\
@@ -20672,7 +20750,7 @@ l & c & r \\  \bottomrule
 \end{comment}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 An example use is for setting two texts\index{parallel texts} in parallel, 
 for instance a
@@ -20691,7 +20769,7 @@ S\c{c}aura mon col que mon cul poise. & & my neck will know my arse's weight. \\
 \multicolumn{3}{r}{Fran\c{c}ois Villon, 1431--1463?}
 \end{ctabular}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \Ie{ctabular} environment will probably not be used within
 a \Ie{table} environment (which defeats the possibility of the table
@@ -20708,7 +20786,7 @@ within a \Ie{table} float.
 
 \subsection{Automatic tabulars}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A tabular format may be used just to list things, for example the
 names of the members of a particular organisation, or the names of
@@ -20753,7 +20831,7 @@ Table~\ref{tab:autorows} was set by \cmd{\autorows} using:
                    eleven, twelve, thirteen, fourteen }
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The \meta{pos} argument controls the horizontal 
 position\index{tabular!automatic!position} of the
@@ -20818,7 +20896,7 @@ for the \figurerefname{} are:
 \caption{Changing the width of a row ordered table} \label{fig:arw}
 \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\autocols}\oarg{width}\marg{pos}\marg{num}\marg{style}\marg{entries} \\
@@ -20847,7 +20925,7 @@ For instance:
 \end{paracol}
 \newcommand*{\comma}{,}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The examples in \fref{fig:acw}, from the following code elements, 
 illustrate these points.
@@ -20897,7 +20975,7 @@ illustrate these points.
 
 \chapter{Page notes} \label{chap:mnotes}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
    The standard classes provide the \cmd{\footnote} command for notes
 at the bottom of the page. The class provides several styles of footnotes
@@ -20912,7 +20990,7 @@ for fixed marginal notes and sidebars.
 \index{footnote|(}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     A footnote can be considered to be a special kind of float\index{float} 
 that is put at the bottom of a page.
@@ -21062,7 +21140,7 @@ used following the \cmd{\feetabovefloat} declaration, which is the default.
 
 \subsection{A variety of footnotes}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
  \begin{syntax}
  \cmd{\verbfootnote}\oarg{num}\marg{text} \\
@@ -21284,7 +21362,7 @@ on a page.
 
 \index{footnote!styling|(}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
      The parameters controlling the vertical spacing of footnotes are 
  illustrated in \fref{fig:fn}.
@@ -21298,7 +21376,7 @@ on a page.
  \caption{Footnote layout parameters}\label{fig:fn}
  \end{figure}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
      There is a discussion in \Sref{sec:thanks} starting on
 \pref{sec:thanks} about how to style the \cmd{\thanks} command; footnotes
@@ -21458,7 +21536,7 @@ flush against the text
 \end{adjustwidth}
 \end{table}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     As an example of a rather different scheme, in at least one discipline
 the footnoted text in the main body has a 
@@ -21559,7 +21637,7 @@ This, as shown by \verb?\@fnsymbol{1},...\@fnsymbol{9}? produces the series:
   \mathsection\or \|\or \mathparagraph\or **\or \dagger\dagger
   \or \ddagger\ddagger \else\@ctrerr\fi}}
 \makeatother
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Robert Bringhurst quotes the following as the traditional 
 ordering\index{footnote!symbol!order} (at least up
@@ -21627,7 +21705,7 @@ and if you later want rules you can write:
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 In \fref{fig:fn} we see that the footnotes are separated from the text
 by \cs{skip}\cs{footins}. We provide a special interface to set this skip:\Added{2015/04/22}
@@ -21655,7 +21733,7 @@ Internally \cmd{\setfootins} also sets the skips being used by
 
  
 \LMnote{2010/01/**}{added a reference back to \cs{setmarginnotes}}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
      Some marginalia can also be considered to be kinds of floats. 
 The class provides the standard margin notes\index{margin note} 
@@ -21740,7 +21818,7 @@ The default corresponds to \verb?\marginparmargin{outer}?.
 \LMnote{2010/02/07}{Removed the explanation of the old interface for
   specifying the margin the \cs{marginpar} should go to. The original
   text is still available via subversion.}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The original convoluted methods of specifying the margin for
 \cmd{\marginpar} is deprecated, although still supported; if you need
@@ -21758,7 +21836,7 @@ command is used will prevent this, at the cost of at least one additional
 
 \section{Side notes}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     The vertical position of margin notes\index{margin note!moved} 
 specified via \cmd{\marginpar}
@@ -21851,7 +21929,7 @@ respect to the column.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \LMnote{2010/02/07}{Removed the explanation of the old interface for
   specifying the margin the \cs{sidepar} should go to. The original
@@ -21897,7 +21975,7 @@ or put it into a package (i.e., \file{.sty} file) without the
 
 \section{Sidebars}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
     Sidebars\index{sidebar} are typeset in the margin and usually 
 contain material that is ancilliary to the main text. They may be long 
@@ -22105,7 +22183,7 @@ this `feature'.
 \section{Side footnotes}
 \label{sec:side-footnotes}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Besides three already mentioned macros for writing in the margin
 (\cmd{\marginpar}, \cmd{\sidepar}, and \cmd{\sidebar}) \theclass\ also
@@ -22127,7 +22205,7 @@ use \cmd{\marginpar} to write the footnote to the page.
 \subsection{Bottom aligned side footnotes}
 \label{sec:bottom-aligned-side}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Bottom aligned footnotes works just like regular footnotes, just with
 a separate macro \cmd{\sidefootenote}\marg{text}, and here the side
@@ -22156,7 +22234,7 @@ following in the preamble:
 \label{sec:sett-layo-texorpdfst}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 There are several possibilities to change the appearance of the
 \cmd{\sidefootnote}:
@@ -22214,7 +22292,7 @@ preamble to specify document layout.
 \subsection{Styling 
   \texorpdfstring{\cs{sidefootnote}}{sidefootnote}} 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
   \cmd{\sidefootmarkstyle}\marg{code}\\
@@ -22242,7 +22320,7 @@ The first line of a paragraph within a footnote is indented by
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Caveat: It is natural to specify a length as \lnc{\sidefootparindent}
 as a \LaTeX\ length, but it has a down side. If, as we do here, set
@@ -22296,7 +22374,7 @@ Which does something similar.
 \label{sec:side-footn-example}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 In the margin you will find the result of the following code:
 \begin{verbatim}
@@ -22320,7 +22398,7 @@ In the margin you will find the result of the following code:
 
 \LMnote{2010/10/28}{several \cs{printpagenotes} was spelled wrong}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \reimplemented{December 2010}{The former implementation had some
   difficulties handling certain types of input. A few of the macros
@@ -22521,7 +22599,7 @@ for writing and after this \verb?\input?s it to get and process the notes.
 \subsubsection{In the text}
 \label{sec:in-the-text}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\notenumintext}\marg{num} \\
@@ -22546,7 +22624,7 @@ superscript, but this can be changed, or even eliminated.
 
 \LMnote{2011/01/23}{Added to make the formating code easier to understand}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 To better understand how a page note entry is formatted in the page
 note list, we start with the following  pseudo code (it is not exactly
@@ -22586,7 +22664,7 @@ indentation
 \fancybreak{}
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 The \cmd{\noteidinnotes} calls \cmd{\idtextinnotes} to print the note \meta{id}
 if it was given as the optional argument to \cmd{pagenote}, 
@@ -22614,7 +22692,7 @@ These are defined respectively as:
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Next we execute \cmd{\pageinnotes}\marg{note label key} which does
 nothing by default. But if \cmd{\notepageref} is issued in the
@@ -22656,7 +22734,7 @@ will be the text of a hyperlink.
 \bigskip
 
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
   \cmd{\prenotetext}\\
@@ -22802,7 +22880,7 @@ in italic:
 
 
 \LMnote{2011/01/25}{rewritten a bit}
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 \begin{syntax}
 \cmd{\addtonotes}\marg{text} \\
@@ -22823,7 +22901,7 @@ file.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Internally in \cmd{\pagenote} \cmd{\addtonotes} is used to provide
 chapter devisions into the note list. It will detect both numbered and
@@ -22888,7 +22966,7 @@ current set of notes to be printed.
 
 \fancybreak{}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 Say you have written a document with footnotes, but later on decide on
 using end notes (page notes) instead. In that case you can use
@@ -22951,7 +23029,7 @@ ignored as for \cmd{\pagenote} it can be arbitrary text whereas for
 
 \newcommand{\tepi}[2]{\epigraph{#1}{#2}}
 
-\begin{paracol}{2}\TS{0}
+\begin{paracol}{2}
 \switchEng
 % \tepi{My soul, seek not the life of immortals; but enjoy to the full
 %       the resources that are within your reach}
@@ -22986,6 +23064,8 @@ package~\cite{EPIGRAPH} which is included in the class.
 
  %\subsection{The \texttt{epigraph} command}
 
+\begin{paracol}{2}
+\switchEng
   The original inspiration for \cmd{\epigraph} was Doug Schenck's
  for the epigraphs in our book~\cite{EBOOK}. That was hard wired for
  the purpose at hand. The version here provides much more flexibility.
@@ -23026,9 +23106,13 @@ package~\cite{EPIGRAPH} which is included in the class.
  By default, the \meta{source} is typeset at the bottom right of the
  \meta{text}. 
 
+
+\end{paracol}
  
  \section{General}
 
+\begin{paracol}{2}
+\switchEng
  \tepi{Example is the school of mankind, and they will learn at no other.}
       {\textit{Letters on a Regicide Peace}\\ \textsc{Edmund Burke}}
 
@@ -23162,8 +23246,13 @@ it to, say \cmd{\footnotesize} by:
   {\textit{Letters on a Regicide Peace}\\ \textsc{Edmund Burke}}
  \end{lcode}
 
+\end{paracol}
+
+
  \section{Epigraphs before chapter headings}
 
+\begin{paracol}{2}
+\switchEng
 \begingroup
  \epigraphsourceposition{flushleft}
  \tepi{If all else fails, immortality can always be assured by spectacular
@@ -23331,12 +23420,16 @@ be an \cs{epigraph}, it can be arbitrary text.
  \chapter{Next chapter}     % increments chapter & resets figure numbers
  \addtocounter{figure}{1}   % to account for pre-chapter figure
 \end{lcode}
- 
+
+
+\end{paracol} 
 
  \subsection{Epigraphs on book or part pages}
 
 \index{epigraph|(}
 
+\begin{paracol}{2}
+\switchEng
     If you wish to put an epigraphs on \cmd{\book} or \cmd{\part}
 pages you have to do a little more work than in other cases. This
 is because these division commands do some page flipping before and
@@ -23375,6 +23468,7 @@ for epigraphs after the title (or the equivalents for \cmd{\book} pages).
 ...
 \end{lcode}
 
+\end{paracol}
 
 \index{epigraph|)}
 
@@ -23395,7 +23489,8 @@ for epigraphs after the title (or the equivalents for \cmd{\book} pages).
 
 \chapter{Poetry} \label{chap:verse}
 
-
+\begin{paracol}{2}
+\switchEng
     The typesetting of a poem should ideally be dependent on the
 particular poem. Individual problems do not usually admit of a
 general solution, so this manual and code should be used more
@@ -23564,9 +23659,13 @@ the \Lpack{index}~\cite{INDEX} and \Lpack{multind}~\cite{MULTIND}
 packages provide support for multiple indexes\index{index!multiple} 
 in one document.
 
+\end{paracol}
+
 %\clearpage
 \section{Classy verse} 
 
+\begin{paracol}{2}
+\switchEng
     The code provided by the \Lclass{memoir} class is meant to help
 with some aspects of typesetting poetry but does not, and cannot,
 provide a comprehensive solution to all the requirements that
@@ -23838,9 +23937,13 @@ And everyone who calls \ldots ''\,'
 \end{egresult}
 
 
+\end{paracol}
+
 
 \subsection{Indented lines}
 
+\begin{paracol}{2}
+\switchEng
 Within the \Ie{verse} environment stanzas are normally separated by a 
 blank line in the input. 
 
@@ -23889,8 +23992,13 @@ shorter than the number of lines in the stanza, the trailing lines will
 not be indented. However, in the \Ie{patverse*} environment the pattern
 keeps repeating until the end of the stanza.
 
+
+\end{paracol}
+
 \subsection{Numbering}
 
+\begin{paracol}{2}
+\switchEng
 \begin{syntax}
 \cmd{\flagverse}\marg{flag} \\
 \lnc{\vleftskip} \\
@@ -23976,8 +24084,13 @@ The numbers are set at a distance
 \lnc{\vrightskip} (default 1em) into the margin. 
 
 
+\end{paracol}
+
 \section{Titles}
 
+
+\begin{paracol}{2}
+\switchEng
     The \cmd{\PoemTitle} command is provided for typesetting titles
 of poems.
 
@@ -24064,6 +24177,9 @@ not added to the ToC. Apart from that it operates in the same manner
 as the unstarred version. The \cmd{\poemtitlestarmark} and 
 \cmd{\poemtitlestarpstyle} can be redefined to set marks and pagestyles.
 
+
+\end{paracol}
+
 \subsection{Main Poem Title layout parameters}
 
 \begin{syntax}
@@ -24074,6 +24190,9 @@ as the unstarred version. The \cmd{\poemtitlestarmark} and
 \cmd{\printPoemTitletitle}\marg{title} \\
 \cmd{\afterPoemTitle} \\
 \end{syntax}
+%
+\begin{paracol}{2}
+\switchEng
 \glossary(PoemTitleheadstart)%
   {\cs{PoemTitleheadstart}}%
   {Called at the start of typesetting a \cs{PoemTitle}.}
@@ -24113,6 +24232,8 @@ centered, and all in a \cmd{\large} font.
 
     The elements are detailed in the next section.
 
+\end{paracol}
+
 \subsection{Detailed Poem Title layout parameters}
 
 \begin{syntax}
@@ -24122,6 +24243,9 @@ centered, and all in a \cmd{\large} font.
 \cmd{\PoemTitlefont} \\
 \lnc{\afterPoemTitleskip} \\
 \end{syntax}
+%
+\begin{paracol}{2}
+\switchEng
 \glossary(beforePoemTitleskip)%
   {\cs{beforePoemTitleskip}}%
   {Vertical space before a poem title.}
@@ -24187,10 +24311,14 @@ typesetting. The default definition is:
 \end{lcode}
 
 
+\end{paracol}
+
 
 %\clearpage
 \section{Examples}
 
+\begin{paracol}{2}
+\switchEng
    Here are some sample verses using the class facilities.
 
 First a Limerick, but titled\index{poem title} and centered:
@@ -24535,6 +24663,7 @@ and the result is shown on the next page.
 \end{verse}
 \attrib{Lewis Carrol, \textit{Alice's Adventures in Wonderland}, 1865}
 
+\end{paracol}
 
 \index{verse|)}
 
