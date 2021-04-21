@@ -427,7 +427,7 @@ someone providing a piece of code that solved a particular problem, and
 again and again. More recently these questions are answered along the
 lines of `Use the ---------{} package', and again and again.
 \switchFrench\TS{1}
-    D'après mon expérience personnelle et celle des membres du groupe de discussion \url{comp.text.tex}, les principaux problèmes liés à l'utilisation de \ltx\ sont liés à la conception des documents. Il y a quelques années, la plupart des questions posées sur \ctt\ recevaient une réponse sous la forme d'un morceau de code qui résolvait un problème particulier, et encore et encore. Plus récemment, la réponse à ces questions est du type \og{}Utilisez l'extension  the ---------{}\fg{}, et encore et encore.
+    D'après mon expérience personnelle et celle des membres du groupe de discussion \url{comp.text.tex}, les principaux problèmes liés à l'utilisation de \ltx\ sont liés à la conception des documents. Il y a quelques années, la plupart des questions posées sur \ctt\ recevaient une réponse sous la forme d'un bout de code qui résolvait un problème particulier, et ainsi de suite. Plus récemment, la réponse aux questions dessemble davantage à \og{}Utilisez l'extension ---------{}\fg{}, et ainsi de suite.
 
 \switchEng
     I have used many of the more common of these packages but my filing system
@@ -1203,7 +1203,7 @@ anything.
 
 The \Mname\ class includes code either equivalent to, or extensions of, the 
 following packages; that is, the set of commands and environments is at least
-the same as those in the packages: 
+the same as those in the packages:
 %\begin{itemize}%\item 
 \begin{lineitems}
       \Lpack{abstract}
@@ -1259,7 +1259,7 @@ assumptions about how the document class works. I felt that this kind
 of capability should be part of the class and not depend on assumptions.
 In the particular case of the \Lpack{setspace} package, even with the
 standard classes, there can be some unexpected spacing around displayed
-material; this has not occured with \Mname's implementation. 
+material; this has not occurred with \Mname's implementation. 
 
 The class also provides functions similar to those provided by the following 
 packages, although the commands are different: 
@@ -1861,7 +1861,7 @@ the \Lpack{hyperref} package. This package modifies many of the
 internals of the standard classes but does not cater for all of the
 differences between \Mname\ and the standard ones.
 \switchFrench\TS{1}
-La plupart des extensions fonctionnent avec la classe \Mname, la principale exception étant le package \Lpack{hyperref}. Ce paquet modifie de nombreux éléments internes des classes standard mais ne prend pas en compte toutes les différences entre \Mname\  et les classes standard.
+La plupart des extensions fonctionnent avec la classe \Mname, la principale exception étant le package \Lpack{hyperref}. Celui-ci modifie de nombreux éléments internes des classes standard mais ne prend pas en compte toutes les différences entre \Mname\  et les classes standard.
 
 \switchEng
 If you use \Lpack{hyperref} with \Mname\ then the \Lpack{memhfixc}
@@ -1869,7 +1869,7 @@ package\footnote{\Lpack{memhfixc} is supplied as part of the \Mname\
   distribution.} is automatically loaded by \Lpack{hyperref} to
 provide some class specific alterations.
 \switchFrench\TS{2}
-Si vous utilisez \Lpack{hyperref} avec \Mname, le paquetage \Lpack{memhfixc}\footnote{\Lpack{memhfixc} est distribué avec \Mname.} est automatiquement chargé par \Lpack{hyperref} pour fournir certaines modifications spécifiques à la classe.
+Si vous utilisez \Lpack{hyperref} avec \Mname, le package \Lpack{memhfixc}\footnote{\Lpack{memhfixc} est distribué avec \Mname.} est automatiquement chargé par \Lpack{hyperref} pour fournir certaines modifications spécifiques à la classe.
 
 % For example like:
 % \begin{lcode}
@@ -1889,6 +1889,10 @@ Si vous utilisez \Lpack{hyperref} avec \Mname, le paquetage \Lpack{memhfixc}\foo
 The \Mname\ class includes code either equivalent to, or extensions of, the 
 following packages; that is, the set of commands and environments is at least
 the same as those in the packages:
+\switchFrench\TS{1}
+La classe \Mname\ contient du code équivalent aux packages suivants, voire étend leurs fonctionnalités; c'est-à-dire que l'ensemble des commandes et des environnements est au moins le même que celui qu'ils fournissent quand on les charge:
+\end{paracol}
+%
 %\begin{itemize}%\item 
 \begin{adjustwidth}{2em}{2em}
   \begin{center}
@@ -1929,21 +1933,24 @@ the same as those in the packages:
   \end{center}
 \end{adjustwidth}
 % \end{itemize}
-\switchFrench\TS{0}
-
+%
+\begin{paracol}{2}
 \switchEng
 The class automatically ignores any 
 \verb?\usepackage? or \verb?\RequirePackage? related to these. However, if
 you want to specifically use one of these packages rather than the integrated
 version then you can do so. For arguments sake, assuming you really want 
 to use the \Lpack{titling} package you can do this:
+\switchFrench\TS{1}
+La classe ignore automatiquement tout \verb?\usepackage? ou \verb?\RequirePackage? invoquant ceux-ci. Toutefois, si vous souhaitez utiliser spécifiquement l'un de ces paquets plutôt que la version intégrée, vous pouvez le faire. À titre d'exemple, si vous souhaitez vraiment utiliser le package \Lpack{titling}, vous pouvez procéder comme ceci:
+
+\end{paracol}
 \begin{lcode}
 \documentclass[...]{memoir}
 \DisemulatePackage{titling}
 \usepackage{titling}
 \end{lcode}
-\switchFrench\TS{0}
-
+\begin{paracol}{2}
 \switchEng
     The \Mname\ class incorporates a version of the \Lpack{setspace} package, 
 albeit using different names for the macros. The package enables documents
@@ -1953,12 +1960,16 @@ assumptions about how the document class works. I felt that this kind
 of capability should be part of the class and not depend on assumptions.
 In the particular case of the \Lpack{setspace} package, even with the
 standard classes, there can be some unexpected spacing around displayed
-material; this has not occured with \Mname's implementation. 
-\switchFrench\TS{0}
+material; this has not occurred with \Mname's implementation.
+\switchFrench\TS{1}
+La classe \Mname\ intègre une version du paquetage \Lpack{setspace}, bien qu'elle utilise des noms différents pour les macros. Ce package permet de produire des documents en interligne double mais laisse certains éléments du document, comme les légendes par exemple, à simple interligne. Pour ce faire, il doit faire des suppositions sur le fonctionnement de la classe de document en cours. J'ai pensé que ce type de fonctionnalité devait faire partie de la classe et ne pas dépendre de suppositions. Dans le cas particulier du package \Lpack{setspace}, même avec les classes standard, il peut parfois y avoir des espacements bizarres autour de certains éléments; cela ne s'est pas produit avec l'implémentation de \Mname.
 
 \switchEng
 The class also provides functions similar to those provided by the following 
-packages, although the commands are different: 
+packages, although the commands are different:
+\switchFrench\TS{1}
+La classe fournit également des fonctionnalités similaires à celles fournies par les packages suivants, bien que les commandes soient différentes:
+\end{paracol}
 %\begin{itemize}%\item 
 \begin{center}
   \begin{lineitems}%\item
@@ -1971,15 +1982,18 @@ packages, although the commands are different:
   \end{lineitems}
 \end{center}
 %\end{itemize}
+\begin{paracol}{2}
+\switchEng
 You can use these packages 
 if you wish, or just use the capabilities of the \Mname\ class.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Vous pouvez utiliser ces packages si vous le souhaitez, ou simplement utiliser les possibilités de la classe \Mname.
 
 \switchEng
     The class has built in support for the \Lpack{bidi} package for 
 bidirectional typesetting~\cite{BIDI}.
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+La classe a un support intégré pour le package \Lpack{bidi} pour la composition bidirectionnelle~\cite{BIDI}.
 \end{paracol}
 
 \section{Resources} \label{sec:resources}
@@ -2002,6 +2016,9 @@ catalogues and art books.
 
 \switchEng
 The following packages are automatically loaded by the class:
+\switchFrench\TS{1}
+Les packages suivants sont automatiquement chargés par la classe:
+\end{paracol}
 \begin{center}
   \begin{lineitems}
     \Lpack{array}
@@ -2017,8 +2034,7 @@ The following packages are automatically loaded by the class:
   \item \Lpack{textcase}~(with~\texttt{overload}~option)
   \end{lineitems}
 \end{center}
-\switchFrench\TS{0}
-
+\begin{paracol}{2}
 \switchEng
     \ltx\ is based on the \tx\ program which was designed principally 
 for typesetting documents containing a 
@@ -2060,7 +2076,8 @@ to \pixctan. This is just one of the services offered by the \TeXUG{} (\pixtug)
 and information on how to access it is available 
 at \url{http://www.tug.org}
 which is the homepage for the \TeXUG.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Le \cTeXan{} (\pixctan) est une source inestimable d'informations gratuites à propos de \ltx; c'est aussi l'endroit où obtenir \ltx\ lui-même.  Pour des questions d'ordre général, voir les FAQ (\textit{Frequently Asked Questions}, ou \og{}Foire Aux Questions\fg{}, en français): l'une est en anglais, maintenue par Robin Fairbairns~\cite{FAQ}, une autre est en français, hébergée par l'association GUTenberg~\cite{FAQ-fr} sous forme d'un wiki. Les deux contiennent de nombreux pointeurs vers d'autres sources d'information. Parmi celles-ci, citons \textit{The Not So Short Introduction to \ltxe} de Tobias Oetiker~\cite{LSHORT} (disponible en français sous le titre \textit{Courte (?) introduction à \ltxe}), le \textit{Using imported graphics in \ltxe} de Keith Reckdahl~\cite{EPSLATEX} (également disponible en français sous le titre \textit{Utilisation de graphiques importés dans \ltxe}), et \textit{Page layout in \ltx} de Piet van Oostrum~\cite{FANCYHDR}. L'ouvrage de Peter Flynn \textit{Formatting information}~\cite{FLYNN02} est unique en ce sens qu'il décrit comment installer un système \ltx\ et des éditeurs pour rédiger vos documents ainsi que comment utiliser LaTeX. Il existe une myriade de packages et de logiciels disponibles gratuitement pour améliorer tout système \ltx; la grande majorité d'entre eux sont répertoriés dans le magnifique catalogue consultable en ligne de Graham Williams~\cite{CATALOGUE}, qui renvoie aussi directement au \pixctan. Ce catalogue n'est qu'un des services offerts par le \TeXUG{} (\pixtug) et des informations sur la manière d'y accéder sont disponibles à l'adresse \url{http://www.tug.org}, qui est la page d'accueil du \TeXUG.
 
 \switchEng
     The most recent crops of messages on the \url{comp.text.tex}
@@ -2075,7 +2092,8 @@ this is well worth looking at just as an example of fine typesetting.
     The source code for the \Lclass{memoir} class is, of course,
 freely available from \pixctan\ if you wish to see exactly what it does
 and how it does it.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Le code source de la classe \Lclass{memoir} est, bien sûr, librement disponible sur le CTAN si vous souhaitez voir exactement ce qu'elle fait et comment elle le fait.
 
 \switchEng
 For a more interactive resource you can ask questions on
@@ -2085,7 +2103,6 @@ For a more interactive resource you can ask questions on
 -- if the question is \Mname\ related, please tag it so.
 \switchFrench\TS{0}
 
-
 \end{paracol}
 
 %     For a more interactive resource you can ask questions on the
@@ -2093,6 +2110,12 @@ For a more interactive resource you can ask questions on
 % please read the FAQ~\cite{FAQ} before asking a question, and also read
 % a few day's worth of messages to check that your question hasn't just
 % been answered.
+
+%   Pour une source d'informations plus interactive, vous pouvez poser
+% des questions sur le groupe de discussion \url{fr.comp.text.tex}. Si vous
+% êtes nouveau venu sur \pixfctt, n'oubliez pas de lire la FAQ~\cite{FAQ-fr}
+% avant de poser une question, et lisez également les messages de quelques
+% jours pour vérifier que votre question n'a pas déjà reçu une réponse.
 
 \section{Type conventions}
 
@@ -2112,6 +2135,8 @@ For a more interactive resource you can ask questions on
 Macro command syntax is enclosed in a rectangular box.\\
 For referential purposes, arguments are denoted by \meta{arg} \\
 \end{syntax}
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Acknowledgements}
@@ -2124,6 +2149,8 @@ bringing my attention to errors and infelicities in the code
 and manual, and last but not least in simply being encouraging. 
 I am very grateful to the following for all they have done, whether they
 knew it or not:
+\switchFrench\TS{0}
+
 \end{paracol}
 %
 Paul Abrahams,      % code
@@ -2240,7 +2267,6 @@ and
 David Wilson.
 
 
-
 \begin{paracol}{2}
 \switchEng
 If I have inadvertently left anyone off the list I apologise, 
@@ -2254,9 +2280,13 @@ omisssion.% \footnote{Peter is currently occasionably reachable via email
 post them on
 \url{http://tex.stackexchange.com} as you are likely to get a
 satisfactory and timely response.
+\switchFrench\TS{0}
 
+\switchEng
     Of course, none of this would have been possible without Donald Knuth's
 \tx\ system and the subsequent development of \ltx\ by Leslie Lamport.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \PWnote{2009/07/26}{Added `Remarks to the user' chapter}
@@ -2269,7 +2299,9 @@ satisfactory and timely response.
     The \Lclass{memoir} class gives you many ways to change the appearance of your
 document, and also provides some ready-made styles that might be
 appropriate for your purposes.
+\switchFrench\TS{0}
 
+\switchEng
     As you can see, this manual is not slim and attempts to describe in
 some detail how the various aspects of \Lclass{memoir} work and gives
 examples of how you can change these to better match your needs. However,
@@ -2277,12 +2309,16 @@ there are a myriad of different things that users might wish to do and
 it is not possible either for the class to provide ready made simple, 
 or even complex, methods to directly support these, or for this manual
 to give examples of how everything might be accomplished.
+\switchFrench\TS{0}
 
+\switchEng
     If many want a particular facility that is not available, then it 
 may be possible to add that. If it is only one who wishes it then, unless
 the one is the author, it is unlikely to be provided. But don't let this stop
 you from asking, especially if you can provide the necessary code.
+\switchFrench\TS{0}
 
+\switchEng
     The complete documented code for the class is available in the file
 \file{memoir.dtx}. If you want to know how something is done then you
 can read the code for \emph{all} the details. If you want to do something
@@ -2292,6 +2328,8 @@ to do so, then copy the code you wish to change into the document's preamble
 or a package of your own or a class of your own (with a different name)
 and make the changes there. Do not expect any help if you change the
 \Lclass{memoir} class code directly.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \fancybreak{}
@@ -2308,11 +2346,15 @@ a Q\&A site like \url{http://tex.stackexchange.com}%  or on the the
 than correspond directly with the maintainer, who might well be away
 for some considerable time and perhaps not notice your email after
 having returned to base.
+\switchFrench\TS{0}
 
+\switchEng
 In either case please include the word \texttt{\theclass} in the
 subject, and if possible, please \emph{tag} the question with the
 \texttt{\theclass} tag.  That will help the memoir maintainer keep
 track of memoir related matters.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \fancybreak{}
@@ -2324,6 +2366,8 @@ should go to \url{http://tex.stackexchange.com}, please remember to
 tag them properly, that really helps locating the \Mname\ related
 questions. If no-one comes up with an answer, you can also write me
 directly via \texttt{daleif (at) math dot au dot dk}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 
@@ -2346,7 +2390,9 @@ directly via \texttt{daleif (at) math dot au dot dk}.
 \switchEng
     Like all professions and trades, typographers and printers have their
 specialised vocabulary.
+\switchFrench\TS{0}
 
+\switchEng
     First there is the question of pages, leaves and sheets. 
 The trimmed sheets of paper\index{paper} that make up a book are called 
 \emph{leaves}\index{leaf},
@@ -2361,7 +2407,9 @@ lefthand leaf that you see is called the \emph{verso}\index{verso} page
 of that leaf. 
 So, a leaf has a recto and a verso page. Recto pages are the odd-numbered 
 pages and verso pages are even-numbered.
+\switchFrench\TS{0}
 
+\switchEng
    Then there is the question of folios. The typographical term for
 the number of a page is \emph{folio}\index{folio}.
 This is not to be confused with
@@ -2374,7 +2422,9 @@ folio, and there may be pages that do not have a folio at all. Pages with
 folios, whether printed or not, form the \emph{pagination}\index{pagination} 
 of the book. Pages
 that are not counted in the pagination have no folios.
+\switchFrench\TS{0}
 
+\switchEng
  I have not been able to find what I think is a good
 definition for `type' as it seems to be used in different contexts with
 different meanings. It appears to be a kind of generic word; for instance
@@ -2383,10 +2433,14 @@ For my purposes I propose that \emph{type}\index{type|seealso{typeface}} is
 one or more printable characters (or variations or extensions to this idea).  
 Printers use the term \emph{sort}\index{sort} to refer to one piece of lead
 type.
+\switchFrench\TS{0}
 
+\switchEng
    A \emph{typeface}\index{typeface} is a set of one or more fonts, in one
 or more sizes, designed as a stylistic whole. 
+\switchFrench\TS{0}
 
+\switchEng
    A \emph{font}\index{font} is a set of characters. In the days of 
 metal type and hot lead a font meant a complete alphabet and auxiliary
 characters in a given size. More recently it is taken to mean a complete
@@ -2394,10 +2448,14 @@ set of characters regardless of size. A font of roman type normally
 consists of CAPITAL LETTERS, \textsc{small capitals}, lowercase letters,
 numbers, punctuation marks, ligatures (such as `fi' and `ffi'), and a
 few special symbols like \&.
+\switchFrench\TS{0}
 
+\switchEng
    A \emph{font family}\index{font!family} is a set of fonts designed to
 work harmoniously together, such as a pair of roman and italic fonts.
+\switchFrench\TS{0}
 
+\switchEng
    The size of a font\index{font} is expressed in points\index{point} 
 (72.27 points equals 1 inch
 equals 25.4 millimeters). The size is a rough indication of the height
@@ -2405,6 +2463,8 @@ of the tallest character, but different fonts with the same size may have
 very different actual heights. Traditionally font sizes were referred to
 by names (see \tref{tab:fontsizes}) but nowadays just the number of points 
 is used.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -2454,17 +2514,23 @@ A convention for describing the font and leading is to give the font size
 and leading separated by a slash; for instance $10/12$ for a
 10pt font set with a 12pt leading, or $12/14$ for a 12pt font set with a
 14pt leading.
+\switchFrench\TS{0}
 
+\switchEng
     The normal length of a line of text is often called the 
 \emph{measure}\index{measure} and is normally specified in terms of
 picas\index{pica} where 1 pica equals 12 points (1pc = 12pt).
+\switchFrench\TS{0}
 
+\switchEng
     Documents may be described as being typeset with a particular font
 with a particular size and a particular leading on a particular measure;
 this is normally given in a shorthand form. 
 A 10pt font with 11pt leading on a 20pc measure is described as
 \abyb{10/11}{20}, and \abyb{14/16}{22} describes a 14pt font
 with 16pt leading set on a a 22pc measure.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Units of measurement}
@@ -34932,7 +34998,7 @@ will have positive values for $i$ and $j$, while a line sloping up to the
 left will have a negative value for $i$ and a positive value for $j$.
 
     The \meta{distance} argument specifies the length of the line in the
-$x$ (horizontal) direction. One problem with this may have occured to you:
+$x$ (horizontal) direction. One problem with this may have occurred to you:
 what if the line is vertical (i.e., $i=0$)? In this case only, \meta{distance}
 specifies the vertical length of the line. The \meta{distance} argument must
 be a non-negative value. For horizontal and vertical lines only, the actual
@@ -38410,7 +38476,7 @@ in the argument of an \Ie{array} or
 command, or in the optional argument to \cmd{\newcounter}
 or \cmd{\newtheorem} is not the name of a counter. Perhaps you 
 misspelled the name.
-However, if the error occured while an \file{aux} file was being read
+However, if the error occurred while an \file{aux} file was being read
 then you might well have used a \cmd{\newcounter} in an \cmd{\include}d file.
 
 
@@ -38879,7 +38945,7 @@ on the preceding run by a \cmd{\label} command.
 
 %LTFINAL
 \item[]\index{Size substitutions ....}
-     \textmess{Size substitutions with differences up to ... have occured.
+     \textmess{Size substitutions with differences up to ... have occurred.
          Please check the transcript file carefully and redo the
          format generation if necessary!}
 
@@ -39944,6 +40010,12 @@ access CTAN is available at \url{http://www.tug.org}.
   \newblock (Available from CTAN via
             \url{http://faq.tug.org/})
 
+\JJnote{2021/04/21}{added}
+\bibitem[FAQ-fr]{FAQ-fr}
+  GUTenberg (French TeX user group).
+  \newblock \emph{The French-speaking TeX FAQ}.
+  \newblock (\url{https://faq.gutenberg.eu.org/})
+
 \LMnote{2010/02/08}{Added from the main bib file}
 \bibitem[Far90]{FARIN90}
 Gerald Farin.
@@ -40334,7 +40406,7 @@ Michael~E. Mortenson.
   Tobias Oetiker.
   \newblock \emph{The Not So Short Introduction to LaTeX2e}.
   \newblock (Available from CTAN via 
-            \CTANurl{/info/lshort/})
+            \CTANurl{/info/lshort/}, also available in French vian \CTANurl{info/lshort/french})
 
 %%% keep
 \bibitem[Oos96]{FANCYHDR}
@@ -40406,7 +40478,7 @@ Michael~E. Mortenson.
   \newblock \emph{Using Imported Graphics in LaTeX2e}.
   \newblock December, 1997. Updated in 2006.
   \newblock (Available from CTAN via
-              \CTANurl{/info/epslatex.pdf})
+              \CTANurl{/info/epslatex.pdf}, also available in French via \CTANurl{info/epslatex/french})
 
 \begin{comment}
 \bibitem[Reh72]{REHE72}
