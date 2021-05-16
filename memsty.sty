@@ -1133,6 +1133,14 @@ it to use the new width for the  margin par}
   }
 }
 
+\providecommand\CTANpkg{}
+\AtBeginDocument{
+  \@ifpackageloaded{hyperref}{
+    \renewcommand*\CTANpkg[1]{\href{http://ctan.org/pkg/#1}{\nolinkurl{/pkg/#1}}}
+  }{
+    \renewcommand*\CTANpkg[1]{\url{/pkg/#1}}
+  }
+}
 
 \newcommand\reimplemented[2]{%
   \textit{Reimplemented, #1\footnote{#2}}
