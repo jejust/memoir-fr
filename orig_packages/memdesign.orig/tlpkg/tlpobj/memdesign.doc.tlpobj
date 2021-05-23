@@ -1,0 +1,10 @@
+name memdesign.doc
+category Package
+revision 48664
+shortdesc doc files of memdesign
+relocated 1
+docfiles size=507
+ RELOC/doc/fonts/memdesign/README
+ RELOC/doc/fonts/memdesign/memdesign.pdf
+ RELOC/doc/fonts/memdesign/memdesign.tex
+ RELOC/doc/fonts/memdesign/memetc.bib

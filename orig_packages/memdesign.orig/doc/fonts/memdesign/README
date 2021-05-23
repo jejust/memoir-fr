@@ -1,0 +1,70 @@
+    memdesign.(pdf|tex) provides some notes and thoughts on typography 
+and book design. It is an expanded version of the design notes originally
+included in the manual for the memoir class (memman.(pdf|tex)).
+
+------------------------------------------------------------------- 
+  Author: Peter Wilson (Herries Press) herries dot press at earthlink dot net
+  Copyright 2001--2009 Peter R. Wilson
+  Copyright 2010--     Lars Madsen 
+ 
+  This work may be distributed and/or modified under the
+  conditions of the LaTeX Project Public License, either
+  version 1.3 of this license or (at your option) any 
+  later version.
+  The latest version of the license is in
+     http://www.latex-project.org/lppl.txt
+  and version 1.3 or later is part of all distributions of
+  LaTeX version 2003/06/01 or later.
+ 
+  This work has the LPPL maintenance status "maintained".
+  Maintainer: Lars Madsen (daleif at math dot au dot dk)
+ 
+  This work consists of the files:
+README (this file) 
+memdesign.tex
+  and the derived file
+memdesign.pdf 
+------------------------------------------------------------------- 
+
+    The distribution consists of the following files:
+README                (this file)
+memdesign.(tex|pdf)   Source and PDF document
+memetc.bib            Bibliography database
+
+------------------------------------------------------------------- 
+
+    The memoir class and files memsty.sty, titlepages.sty, memman.ist,
+and anvil2.mps are required to process memdesign.tex; these are part
+of the memoir distribution (the documentation).
+
+    memdesign.pdf includes many examples of different typefaces. Some
+of these are from the FontSite500 CD. If you do not have these and want 
+to process memdesign.tex yourself, then use the class draft option:
+\documentclass[draft,...]{memoir}
+Processing also requires the free Web-O-Mints font. 
+
+    To process memdesign.tex (if you really want to do this and not just use 
+memdesign.pdf as supplied)
+o Run (pdf)latex twice on memdesign.tex
+o Run bibtex memdesign 
+o For an index run: makeindex -s memman.ist memdesign
+o Run (pdf)latex once more on memdesign.tex
+o Print the manual
+
+2009/12/14
+Peter Wilson
+herries dot press at earthlink dot net
+
+----
+
+Updates
+
+Changed (2018/09/13)
+
+- Fixed a lot of typos reported by Udo Wermuth
+- Switched to using \frenchspacing
+- Slight changes to the layout
+- Use workaround for "sporadic" spaces in the inline toc lists caused
+  by the un-typeset subsubsection entries when using hyperref.
+
+
