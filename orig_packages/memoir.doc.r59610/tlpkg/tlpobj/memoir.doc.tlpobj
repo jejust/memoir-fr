@@ -1,0 +1,20 @@
+name memoir.doc
+category Package
+revision 59610
+shortdesc doc files of memoir
+relocated 1
+docfiles size=1154
+ RELOC/doc/latex/memoir/Makeidxglo
+ RELOC/doc/latex/memoir/README
+ RELOC/doc/latex/memoir/anvil2.mps
+ RELOC/doc/latex/memoir/memfonts.sty
+ RELOC/doc/latex/memoir/memlays.sty
+ RELOC/doc/latex/memoir/memman.gst
+ RELOC/doc/latex/memoir/memman.ist
+ RELOC/doc/latex/memoir/memman.pdf
+ RELOC/doc/latex/memoir/memman.tex
+ RELOC/doc/latex/memoir/memnoidxnum.tex
+ RELOC/doc/latex/memoir/memsty.sty
+ RELOC/doc/latex/memoir/setpage-example.pdf
+ RELOC/doc/latex/memoir/titlepages.sty
+ RELOC/doc/latex/memoir/trims-example.tex
