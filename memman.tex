@@ -11888,8 +11888,8 @@ like:
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2018-03-09 13:41:30 +0100 (Fri, 09 Mar 2018) $}
-{$LastChangedRevision: 587 $}
+{$LastChangedDate: 2021-03-22 14:24:31 +0100 (Mon, 22 Mar 2021) $}
+{$LastChangedRevision: 706 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -12663,6 +12663,49 @@ if necessary reset it to its original value --- the default value for
 
 \section{Lists}
 
+\LMnote{2013/05/16}{Added hint about enumitem}
+\LMnote{2018/03/09}{Changed hint to be a recommended section}
+\begin{recommended}
+  The \theclass\ class does not provide high level interfaces to
+  configure the appearance of lists. We provide some simple tools to
+  adjust vertical spacing, see below.
+
+  Users seeking more control can have a look at the excellent
+  \Lpack{enumitem} package by Javier Bezos. If loaded as
+  \begin{lcode}
+    \usepackage[shortlabels]{enumitem}
+  \end{lcode}
+  then our
+  \begin{lcode}
+    \begin{enumerate}[i)] 
+     \item \label{item:tst}  ...
+  \end{lcode}
+  syntax will work out of the box.
+
+  One key difference: In \theclass\ \verb?\ref{item:tst}? will give
+  you `i', whereas, if \Lpack{enumitem} is loaded the full formatting
+  is returned from the cross reference, i.e., `i)'. This is fully
+  configurable in \Lpack{enumitem}.
+
+  Note that, \cmd{\tightlists}, \cmd{\defaultlists}, \cmd{\firmlists},
+  \cmd{\firmlists*} presented below, are not supported by
+  \Lpack{enumitem}, it provides a highlevel key based interface
+  instead.
+
+  Tip: If you use the the new kernel environment hooks (see
+  \cite{LTHOOKS}, or use \cmd{\AtBeginEnvironment} from
+  \Lpack{etoolbox}), then you can fx add default formatting of
+  \Pe{enumerate} to all of your theorem constructions and then no need
+  to use 
+  \begin{lcode}
+    \begin{enumerate}[(a)]
+  \end{lcode}
+  every single time, because you wanted lists use use letters inside
+  theorems, and something else outside.
+\end{recommended}
+
+
+
 \index{list|(} %|
 
     Standard \ltx\ provides four kinds of lists. There is a general \Ie{list}
@@ -12838,49 +12881,6 @@ counter typeset as a lowercase Roman numeral followed by a single parenthesis
 \begin{enumerate}[i)] 
 ...
 \end{lcode} 
-
-
-\LMnote{2013/05/16}{Added hint about enumitem}
-\LMnote{2018/03/09}{Changed hint to be a recommended section}
-\begin{recommended}
-    \theclass\ does not provide high level interfaces to configure the
-  appearance. We provide some simple tools to adjust vertical spacing,
-  see below.
-
-  Users seeking more control can have a look at the excellent \Lpack{enumitem}
-  package by Javier Bezos. If loaded as
-  \begin{lcode}
-    \usepackage[shortlabels]{enumitem}
-  \end{lcode}
-  then our
-  \begin{lcode}
-    \begin{enumerate}[i)] 
-     \item \label{item:tst}  ...
-  \end{lcode}
-  syntax will work out of the box.
-
-  One key difference: In \theclass\ \verb?\ref{item:tst}? will give you
-  `i', whereas, if \Lpack{enumitem} is loaded the full formatting is
-  returned from the cross reference, i.e., `i)'. This is fully
-  configurable in \Lpack{enumitem}.
-
-  Note that, \cmd{\tightlists}, \cmd{\defaultlists}, \cmd{\firmlists},
-  \cmd{\firmlists*} presented below, are not supported by
-  \Lpack{enumitem}, it provides a highlevel key based interface
-  instead.
-
-  Another feature from \Lpack{enumitem} that I (LM) uses a lot is to
-  combine the \cmd{\setlist} with \cmd{\AtBeginEnvironment} from the
-  \Lpack{etoolbox} package to specifically adjust enumerate used
-  inside certain theorem constructions. That wway we can control the
-  apparence of the lists from the preamble and does not need to use
-  say
-  \begin{lcode}
-    \begin{enumerate}[(a)]
-  \end{lcode}
-  every single time.
-\end{recommended}
-
 
 \index{list!tight|(} %|
 
@@ -15454,8 +15454,8 @@ before the stuff you want to have moved out of, say, a part.
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2020-03-15 19:48:39 +0100 (Sun, 15 Mar 2020) $}
-{$LastChangedRevision: 682 $}
+{$LastChangedDate: 2021-03-22 11:32:59 +0100 (Mon, 22 Mar 2021) $}
+{$LastChangedRevision: 705 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 
@@ -15622,22 +15622,26 @@ Tufte \LaTeX\ collection.
   \senv{margintable}\oarg{len} float material \eenv{margintable} \\
 \end{syntax}
 \glossary(marginfigure)%
-  {\senv{marginfigure}\oarg{length}}%
-  {Environment which inserts its contents into the margin, and enables
-  figure captions. The optional argument should be a length and is used
-to perform manual up/down adjustments to the placement.}
+{\senv{marginfigure}\oarg{length}}%
+{Environment which inserts its contents into the margin, and enables
+  figure captions. The optional argument should be a length and is
+  used to perform manual up/down adjustments to the placement.}
 \glossary(margintable)%
-  {\senv{margintable}\oarg{length}}%
-  {Environment which inserts its contents into the margin, and enables
+{\senv{margintable}\oarg{length}}%
+{Environment which inserts its contents into the margin, and enables
   figure captions.The optional argument should be a length and is used
-to perform manual up/down adjustments to the placement.}
-Because this is inserted differently than the ordinary \Ie{figure} or
+  to perform manual up/down adjustments to the placement.}  Because
+this is inserted differently than the ordinary \Ie{figure} or
 \Ie{table} floats, one might get into the situation where a figure
 float inserted before a margin float, might float \emph{past} the
 margin float and thus have different caption numbering. For this
 reason the margin float contain a float blocking device such that any
 unplaced floats are forced to be placed before we start typesetting a
 margin figure.
+
+Additionally, note that the term ``float'' is used very lightly
+here. As things are placed using \cmd{\marginpar}, margin floats only
+``float'' on the page it self, they never float on to the next page.
 
 \fancybreak{}
 
@@ -16093,6 +16097,13 @@ and \cs{subcaption}.}
 
 \index{float!placement|(}%|
 
+Note that this section is not just relevant to the class, but for
+\ltx\ in general. The main difference for placement between the class
+and, say, the \Lclass{book} class are the default values of some
+settings.
+
+
+
  The general format for a float environment is: \\
  \senv{float}\oarg{loc} ... \eenv{float} 
 or for double column\index{float!double column} floats: \\
@@ -16456,15 +16467,19 @@ figure\index{figure} environment.
     The commands described below are very similar to
 those supplied by the \Lpack{ccaption} package~\cite{CCAPTION}.
 
-As an alternative (it has more features that what the class offers) we
-recommend the \Lpack{caption} package by Axel Sommerfeldt. In fact if
-the \Lpack{caption} package is loaded, the class will detect it and
-reset it self such that \Lpack{caption} can take over. This also means
-that all the macros described in the next section will have no effect
-if \Lpack{caption} is loaded (either intentionally or
-unintentionally).
+\begin{recommended}
+  As an alternative to the styling features in the class we recommend
+  the \Lpack{caption} package by Axel Sommerfeldt (many more features
+  compared to the class).
 
-
+  As of late 2020, Axel was kind enough to add a feature to
+  \Lpack{caption} such that if loaded with \theclass\ then
+  \Lpack{caption} will map most of the styling commands presented in
+  the next section onto the equivalent settings used by the
+  \Lpack{caption} package. Just make sure your settings are set
+  \emph{after} loading \Lpack{caption}.\footnotemark
+\end{recommended}
+\footnotetext{Be aware that other packages may auto load \Lpack{caption}.}
 
 
 \section{Caption styling} 
@@ -20342,8 +20357,8 @@ illustrate these points.
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2020-03-25 19:00:55 +0100 (Wed, 25 Mar 2020) $}
-{$LastChangedRevision: 686 $}
+{$LastChangedDate: 2021-03-22 14:24:31 +0100 (Mon, 22 Mar 2021) $}
+{$LastChangedRevision: 706 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 \chapter{Page notes} \label{chap:mnotes}
@@ -21143,7 +21158,7 @@ The default corresponds to \verb?\marginparmargin{outer}?.
      \small
     \item[Two column document] If the note is placed in the first
       column, to the left, otherwise  to the right, irrespective the
-      document being one- or two-side and of the users choices
+      document being one- or two-side and of the users choices. 
 \item[One sided document] If user specified \emph{left}, notes are
   placed to the left, otherwise to the right. 
 \item[Two sided document] depends on whether a recto or verso page:
@@ -21173,14 +21188,17 @@ The original convoluted methods of specifying the margin for
 \cmd{\marginpar} is deprecated, although still supported; if you need
 to know what they are then you can read all about them in \texttt{memoir.dtx}.
 
-     Sometimes \ltx\ gets confused near a page break and a note just after
-a break may get put into the wrong\index{margin note!wrong margin} margin 
-(the wrong margin for the current 
-page but the right one if the note fell on the previous page). If this occurs
-then inserting the \cmd{\strictpagecheck} declaration before 
-any \cmd{\marginpar}
-command is used will prevent this, at the cost of at least one additional
-\ltx\ run.
+Sometimes \ltx\ gets confused near a page break and a note just after
+a break may get put into the wrong\index{margin note!wrong margin}
+margin (the wrong margin for the current page but the right one if the
+note fell on the previous page). If this occurs then inserting the
+\cmd{\strictpagecheck} declaration before any \cmd{\marginpar} command
+is used will prevent this, at the cost of at least one additional
+\ltx\ run. Note: In twocolumn mode the \Lpack{mparhack} package is
+automatically loaded as it fixes a bug, there the test for whether one
+is in the first column may fail.\footnote{If you want to use
+  \Lpack{mparhack} with the \Lopt{debug} option, use
+  \cs{RequirePackage[debug]\{mparhack\}} before \cs{documentclass}.}
 
 
 \section{Side notes}
@@ -23930,8 +23948,8 @@ and the result is shown on the next page.
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2018-03-06 15:58:01 +0100 (Tue, 06 Mar 2018) $}
-{$LastChangedRevision: 584 $}
+{$LastChangedDate: 2021-03-22 14:24:31 +0100 (Mon, 22 Mar 2021) $}
+{$LastChangedRevision: 706 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -24067,13 +24085,8 @@ In the \Ie{snugshaded} environment the box clings more closely to its
 contents than it does in the \Ie{shaded} environment.
 
 \begin{recommended}
-  Since the class was originally written, much have happened in the
-  gfx generating capabilities in LaTeX, especially the popularity of
-  TikZ has provided many more extensive box and graphics generating
-  packages.
-
-  As of 2018 one of the most impressive packages for all sorts of
-  boxes is the \Lpack{tcolorbox} package by Thomas~F.~Sturm.
+  See the \Lpack{tcolorbox} package by Thomas~F.~Sturm. An impressive
+  system of boxes and decorations and much much more. All based on TikZ.
 \end{recommended}
 
 
@@ -28144,8 +28157,8 @@ pdflatex memman
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2020-10-04 21:52:58 +0200 (Sun, 04 Oct 2020) $}
-{$LastChangedRevision: 696 $}
+{$LastChangedDate: 2021-03-22 18:32:04 +0100 (Mon, 22 Mar 2021) $}
+{$LastChangedRevision: 707 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -28813,6 +28826,20 @@ produce a warning message for information purposes.
 but they do not produce any warning messages.
 
 \section{Changing macros} \label{sec:addtodef}
+
+\begin{recommended}
+  See also the \Lpack{xpatch} (which extends the patching capabilities
+  of \Lpack{etoolbox}) and \Lpack{letltxmacro} packages.
+
+  Additionally the LaTeX-format of October 2020 include some new
+  hooking features fx to hook into environments, see \cite{LTHOOKS}
+  (see section 2.8.1 for some utility macros). The new format also
+  adds \cs{NewCommandCopy} and \cs{RenewCommandCopy} which are
+  extended versions of what \Lpack{letltxmacro} provides.
+\end{recommended}
+
+
+
 
      Commands are provided for extending simple macro 
 definitions.\index{extend a macro}\index{add to a macro}
@@ -29984,42 +30011,46 @@ and where they used.
 
 \begin{table}
 \centering
-\caption{Defined words and phrases}\label{tab:defwordsphrases}
+\caption{Some defined words and phrases. \textsuperscript{*} marks
+  macros under language control
+  (\Lpack{babel}), see the \cs{addto}\cs{captions}\meta{language}
+  feature in \Lpack{babel}. }\label{tab:defwordsphrases}
+\newcommand\B{\textsuperscript{*}}
 \begin{tabular}{lll}\toprule
-Macro & Default & Usage \\ \midrule
-\cmd{\abstractname}     & \abstractname\     & title for \Ie{abstract} environment \\
-\cmd{\alsoname}         & \alsoname\         & used by \cmd{\seealso} \\
-\cmd{\amname}           & \amname\           & used in printing time of day \\
-\cmd{\appendixname}     & \appendixname\     & name for an appendix heading \\
-\cmd{\appendixpagename} & \appendixpagename\ & name for an \cmd{\appendixpage} \\
-\cmd{\appendixtocname}  & \appendixtocname\  & ToC entry announcing appendices \\
-\cmd{\bibname}          & \bibname\          & title for \cmd{\thebibliography} \\
-\cmd{\bookname}         & \bookname\         & name for \cmd{\book} heading \\
-\cmd{\bookrefname}      & \bookrefname\      & used by \cmd{\Bref} \\
-\cmd{\chaptername}      & \chaptername\      & name for \cmd{\chapter} heading \\
-\cmd{\chapterrefname}   & \chapterrefname\   & used by \cmd{\Cref} \\
-\cmd{\contentsname}     & \contentsname\     & title for \cmd{\tableofcontents} \\
-\cmd{\figurename}       & \figurename\       & name for figure \cmd{\caption} \\
-\cmd{\figurerefname}    & \figurerefname\    & used by \cmd{\fref} \\
-\cmd{\glossaryname}     & Glossary           & title for \cmd{\theglossary} \\
-\cmd{\indexname}        & \indexname\        & title for \cmd{\theindex} \\
-\cmd{\lcminusname}      & \lcminusname\      & used in named number formatting \\
-\cmd{\listfigurename}   & \listfigurename\   & title for \cmd{\listoffigugres} \\
-\cmd{\listtablename}    & \listtablename\    & title for \cmd{\listoftables} \\
-\cmd{\minusname}        & \minusname\        & used in named number formatting \\
-\cmd{\namenumberand}    & \namenumberand\    & used in named number formatting \\
-\cmd{\namenumbercomma}  & \namenumbercomma\  & used in named number formatting \\
-\cmd{\notesname}        & \notesname\        & title of \cmd{\notedivision} \\
-\cmd{\pagename}         & \pagename\         & for your use \\
-\cmd{\pagerefname}      & \pagerefname\      & used by \cmd{\pref} \\
-\cmd{\partname}         & \partname\         & name for \cmd{\part} heading \\
-\cmd{\partrefname}      & \partrefname\      & used by \cmd{\Pref} \\
-\cmd{\pmnane}           & \pmname\           & used in printing time of day \\
-\cmd{\sectionrefname}   & \sectionrefname\   & used by \cmd{\Sref} \\
-\cmd{\seename}          & \seename\          & used by \cmd{\see} \\
-\cmd{\tablename}        & \tablename\        & name for table \cmd{\caption} \\
-\cmd{\tablerefname}     & \tablerefname\     & used by \cmd{\tref} \\
-\cmd{\ucminusname}      & \ucminusname\      & used in named number formatting \\
+Macro                   & Default            & Usage                               \\ \midrule
+\cmd{\abstractname}     & \abstractname\B    & title for \Ie{abstract} environment \\
+\cmd{\alsoname}         & \alsoname\B        & used by \cmd{\seealso}              \\
+\cmd{\amname}           & \amname\           & used in printing time of day        \\
+\cmd{\appendixname}     & \appendixname\B    & name for an appendix heading        \\
+\cmd{\appendixpagename} & \appendixpagename\ & name for an \cmd{\appendixpage}     \\
+\cmd{\appendixtocname}  & \appendixtocname\  & ToC entry announcing appendices     \\
+\cmd{\bibname}          & \bibname\B         & title for \cmd{\thebibliography}    \\
+\cmd{\bookname}         & \bookname\         & name for \cmd{\book} heading        \\
+\cmd{\bookrefname}      & \bookrefname\      & used by \cmd{\Bref}                 \\
+\cmd{\chaptername}      & \chaptername\B     & name for \cmd{\chapter} heading     \\
+\cmd{\chapterrefname}   & \chapterrefname\   & used by \cmd{\Cref}                 \\
+\cmd{\contentsname}     & \contentsname\B    & title for \cmd{\tableofcontents}    \\
+\cmd{\figurename}       & \figurename\B      & name for figure \cmd{\caption}      \\
+\cmd{\figurerefname}    & \figurerefname\    & used by \cmd{\fref}                 \\
+\cmd{\glossaryname}     & Glossary           & title for \cmd{\theglossary}        \\
+\cmd{\indexname}        & \indexname\B       & title for \cmd{\theindex}           \\
+\cmd{\lcminusname}      & \lcminusname\      & used in named number formatting     \\
+\cmd{\listfigurename}   & \listfigurename\B  & title for \cmd{\listoffigugres}     \\
+\cmd{\listtablename}    & \listtablename\B   & title for \cmd{\listoftables}       \\
+\cmd{\minusname}        & \minusname\        & used in named number formatting     \\
+\cmd{\namenumberand}    & \namenumberand\    & used in named number formatting     \\
+\cmd{\namenumbercomma}  & \namenumbercomma\  & used in named number formatting     \\
+\cmd{\notesname}        & \notesname\        & title of \cmd{\notedivision}        \\
+\cmd{\pagename}         & \pagename\         & for your use                        \\
+\cmd{\pagerefname}      & \pagerefname\      & used by \cmd{\pref}                 \\
+\cmd{\partname}         & \partname\B        & name for \cmd{\part} heading        \\
+\cmd{\partrefname}      & \partrefname\      & used by \cmd{\Pref}                 \\
+\cmd{\pmnane}           & \pmname\           & used in printing time of day        \\
+\cmd{\sectionrefname}   & \sectionrefname\   & used by \cmd{\Sref}                 \\
+\cmd{\seename}          & \seename\B         & used by \cmd{\see}                  \\
+\cmd{\tablename}        & \tablename\B       & name for table \cmd{\caption}       \\
+\cmd{\tablerefname}     & \tablerefname\     & used by \cmd{\tref}                 \\
+\cmd{\ucminusname}      & \ucminusname\      & used in named number formatting     \\
 \bottomrule
 \end{tabular}
 \end{table}
@@ -30144,13 +30175,36 @@ a similar internal command to ensure that the packages are not
 loaded following some later \cmd{\usepackage} command. The names of the
 emulated packages are written to the \pixfile{log} file. At the time
 of writing the emulated packages are:
-\Lpack{abstract}, \Lpack{appendix}, \Lpack{array}, \Lpack{booktabs}, 
-\Lpack{ccaption}, \Lpack{chngcntr}, \Lpack{crop}, \Lpack{dcolumn}, 
-\Lpack{delarray}, \Lpack{enumerate}, \Lpack{epigraph}, %%%%%% \Lpack{framed}, 
-\Lpack{ifmtarg}, \Lpack{ifpdf}, \Lpack{index}, \Lpack{makeidx}, 
-\Lpack{moreverb}, \Lpack{needspace}, \Lpack{newfile}, \Lpack{nextpage}, 
-\Lpack{pagenote}, \Lpack{patchcmd}, \Lpack{parskip}, \Lpack{setspace}, \Lpack{shortvrb}, \Lpack{showidx}, 
-\Lpack{tabularx}, \Lpack{titleref}, \Lpack{tocbibind}, \Lpack{tocloft}, 
+\Lpack{abstract},
+\Lpack{appendix},
+%\Lpack{array},
+ \Lpack{booktabs}, 
+\Lpack{ccaption},
+ \Lpack{chngcntr},
+ \Lpack{crop},
+% \Lpack{dcolumn}, 
+%\Lpack{delarray},
+ \Lpack{enumerate},
+ \Lpack{epigraph},
+ %%%%%% \Lpack{framed}, 
+\Lpack{ifmtarg},
+ \Lpack{ifpdf},
+ \Lpack{index},
+ \Lpack{makeidx}, 
+\Lpack{moreverb},
+ \Lpack{needspace},
+ \Lpack{newfile},
+ \Lpack{nextpage}, 
+\Lpack{pagenote},
+ \Lpack{patchcmd},
+ \Lpack{parskip},
+ \Lpack{setspace},
+ \Lpack{shortvrb},
+ \Lpack{showidx}, 
+%\Lpack{tabularx},
+ \Lpack{titleref},
+ \Lpack{tocbibind},
+ \Lpack{tocloft}, 
 \Lpack{verbatim}, 
 and
 \Lpack{verse}.
@@ -38881,6 +38935,15 @@ access CTAN is available at \url{http://www.tug.org}.
   \newblock (Available as \texttt{alltt.dtx} and 
   \texttt{alltt.ins} from CTAN via  \CTANurl{/macros/latex/base/})
 
+\bibitem[Bra20]{SOURCE2E}
+  Johannes Braams \textit{et al}.
+  \newblock \emph{The \LaTeXe\ Sourses}.
+  \newblock October, 2020.
+  \newblock (Available from CTAN via \CTANurl{/pkg/source2e})
+
+
+
+  
 %%% keep
 \bibitem[Bri99]{BRINGHURST99}
   Robert Bringhurst.
