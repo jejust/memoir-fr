@@ -183,15 +183,15 @@ nullify any sections of this license as they pertain to the results of
 applying that process.
      
 10. 
-   a. A Derived Work may be distributed under a different license
-      provided that license itself honors the conditions listed in
-      Clause 6 above, in regard to the Work, though it does not have
-      to honor the rest of the conditions in this license.
+    a. A Derived Work may be distributed under a different license
+       provided that license itself honors the conditions listed in
+       Clause 6 above, in regard to the Work, though it does not have
+       to honor the rest of the conditions in this license.
       
-   b. If a Derived Work is distributed under a different license, that
-      Derived Work must provide sufficient documentation as part of
-      itself to allow each recipient of that Derived Work to honor the 
-      restrictions in Clause 6 above, concerning changes from the Work.
+    b. If a Derived Work is distributed under a different license, that
+       Derived Work must provide sufficient documentation as part of
+       itself to allow each recipient of that Derived Work to honor the 
+       restrictions in Clause 6 above, concerning changes from the Work.
 
 11. This license places no restrictions on works that are unrelated to
 the Work, nor does this license place any restrictions on aggregating
