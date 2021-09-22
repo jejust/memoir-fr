@@ -154,7 +154,7 @@ to a component of the Work.
 
    d. You distribute at least one of the following with the Derived Work:
 
-      i. A complete, unmodified copy of the Work; 
+      1. A complete, unmodified copy of the Work; 
          if your distribution of a modified component is made by
          offering access to copy the modified component from a
          designated place, then offering equivalent access to copy
@@ -162,8 +162,8 @@ to a component of the Work.
          condition, even though third parties are not compelled to
          copy the Work along with the modified component;
 
-      ii. Information that is sufficient to obtain a complete,
-          unmodified copy of the Work.
+      2. Information that is sufficient to obtain a complete,
+         unmodified copy of the Work.
 
 7. If you are not the Current Maintainer of the Work, you may
 distribute a Compiled Work generated from a Derived Work, as long as
