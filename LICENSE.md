@@ -1,5 +1,4 @@
-The LaTeX Project Public License
-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+# The LaTeX Project Public License
 
 LPPL Version 1.3c  2008-05-04
 
@@ -7,9 +6,9 @@ Copyright 1999 2002-2008 LaTeX3 Project
     Everyone is allowed to distribute verbatim copies of this
     license document, but modification of it is not allowed.
 
+[Original version available on LaTeX project website](https://www.latex-project.org/lppl/).
 
-PREAMBLE
-========
+## PREAMBLE
 
 The LaTeX Project Public License (LPPL) is the primary license under
 which the LaTeX kernel and the base LaTeX packages are distributed.
@@ -20,7 +19,7 @@ suitable if your work is TeX-related (such as a LaTeX package), but
 it is written in such a way that you can use it even if your work is 
 unrelated to TeX.
 
-The section `WHETHER AND HOW TO DISTRIBUTE WORKS UNDER THIS LICENSE',
+The section "WHETHER AND HOW TO DISTRIBUTE WORKS UNDER THIS LICENSE",
 below, gives instructions, examples, and recommendations for authors
 who are considering distributing their works under this license.
 
@@ -37,64 +36,63 @@ meeting these conditions, then read the document `cfgguide.tex'
 and `modguide.tex' in the base LaTeX distribution for suggestions.
 
 
-DEFINITIONS
-===========
+## DEFINITIONS
+
 
 In this license document the following terms are used:
 
-   `Work'
-    Any work being distributed under this License.
+**Work**
+Any work being distributed under this License.
     
-   `Derived Work'
-    Any work that under any applicable law is derived from the Work.
+**Derived Work**
+Any work that under any applicable law is derived from the Work.
 
-   `Modification' 
-    Any procedure that produces a Derived Work under any applicable
-    law -- for example, the production of a file containing an
-    original file associated with the Work or a significant portion of
-    such a file, either verbatim or with modifications and/or
-    translated into another language.
+**Modification**
+Any procedure that produces a Derived Work under any applicable
+law -- for example, the production of a file containing an
+original file associated with the Work or a significant portion of
+such a file, either verbatim or with modifications and/or
+translated into another language.
 
-   `Modify'
-    To apply any procedure that produces a Derived Work under any
-    applicable law.
+**Modify**
+To apply any procedure that produces a Derived Work under any
+applicable law.
     
-   `Distribution'
-    Making copies of the Work available from one person to another, in
-    whole or in part.  Distribution includes (but is not limited to)
-    making any electronic components of the Work accessible by
-    file transfer protocols such as FTP or HTTP or by shared file
-    systems such as Sun's Network File System (NFS).
+**Distribution**
+Making copies of the Work available from one person to another, in
+whole or in part.  Distribution includes (but is not limited to)
+making any electronic components of the Work accessible by
+file transfer protocols such as FTP or HTTP or by shared file
+systems such as Sun's Network File System (NFS).
 
-   `Compiled Work'
-    A version of the Work that has been processed into a form where it
-    is directly usable on a computer system.  This processing may
-    include using installation facilities provided by the Work,
-    transformations of the Work, copying of components of the Work, or
-    other activities.  Note that modification of any installation
-    facilities provided by the Work constitutes modification of the Work.
+**Compiled Work**
+A version of the Work that has been processed into a form where it
+is directly usable on a computer system.  This processing may
+include using installation facilities provided by the Work,
+transformations of the Work, copying of components of the Work, or
+other activities.  Note that modification of any installation
+facilities provided by the Work constitutes modification of the Work.
 
-   `Current Maintainer'
-    A person or persons nominated as such within the Work.  If there is
-    no such explicit nomination then it is the `Copyright Holder' under
-    any applicable law.
+**Current Maintainer**
+A person or persons nominated as such within the Work.  If there is
+no such explicit nomination then it is the "Copyright Holder" under
+any applicable law.
 
-   `Base Interpreter' 
-    A program or process that is normally needed for running or
-    interpreting a part or the whole of the Work.    
+**Base Interpreter**
+A program or process that is normally needed for running or
+interpreting a part or the whole of the Work.    
 
-    A Base Interpreter may depend on external components but these
-    are not considered part of the Base Interpreter provided that each
-    external component clearly identifies itself whenever it is used
-    interactively.  Unless explicitly specified when applying the
-    license to the Work, the only applicable Base Interpreter is a
-    `LaTeX-Format' or in the case of files belonging to the 
-    `LaTeX-format' a program implementing the `TeX language'.
+A Base Interpreter may depend on external components but these
+are not considered part of the Base Interpreter provided that each
+external component clearly identifies itself whenever it is used
+interactively.  Unless explicitly specified when applying the
+license to the Work, the only applicable Base Interpreter is a
+"LaTeX-Format" or in the case of files belonging to the 
+"LaTeX-format" a program implementing the "TeX language".
 
 
 
-CONDITIONS ON DISTRIBUTION AND MODIFICATION
-===========================================
+## CONDITIONS ON DISTRIBUTION AND MODIFICATION
 
 1.  Activities other than distribution and/or modification of the Work
 are not covered by this license; they are outside its scope.  In
@@ -202,11 +200,10 @@ such works with the Work by any means.
 complete compliance by all parties with all applicable laws.
 
 
-NO WARRANTY
-===========
+## NO WARRANTY
 
 There is no warranty for the Work.  Except when otherwise stated in
-writing, the Copyright Holder provides the Work `as is', without
+writing, the Copyright Holder provides the Work *as is*, without
 warranty of any kind, either expressed or implied, including, but not
 limited to, the implied warranties of merchantability and fitness for a
 particular purpose.  The entire risk as to the quality and performance
@@ -225,21 +222,20 @@ programs), even if the Copyright Holder or said author or said other
 party has been advised of the possibility of such damages.
 
 
-MAINTENANCE OF THE WORK
-=======================
+## MAINTENANCE OF THE WORK
 
-The Work has the status `author-maintained' if the Copyright Holder
+The Work has the status "author-maintained" if the Copyright Holder
 explicitly and prominently states near the primary copyright notice in
 the Work that the Work can only be maintained by the Copyright Holder
-or simply that it is `author-maintained'.
+or simply that it is "author-maintained".
 
-The Work has the status `maintained' if there is a Current Maintainer
+The Work has the status "maintained" if there is a Current Maintainer
 who has indicated in the Work that they are willing to receive error
 reports for the Work (for example, by supplying a valid e-mail
 address). It is not required for the Current Maintainer to acknowledge
 or act upon these error reports.
 
-The Work changes from status `maintained' to `unmaintained' if there
+The Work changes from status "maintained" to "unmaintained" if there
 is no Current Maintainer, or the person stated to be Current
 Maintainer of the work cannot be reached through the indicated means
 of communication for a period of six months, and there are no other
@@ -275,7 +271,7 @@ the Work through the following steps:
      Holder agrees that maintenance of the Work be passed to you,
      then this takes effect immediately upon announcement.  
     
- 4.  If you make an `intention announcement' as described in 2b. above
+ 4.  If you make an "intention announcement" as described in 2b. above
      and after three months your intention is challenged neither by
      the Current Maintainer nor by the Copyright Holder nor by other
      people, then you may arrange for the Work to be changed so as
@@ -297,16 +293,14 @@ announce your new status to the same pertinent community as
 in 2b) above.
 
 
-WHETHER AND HOW TO DISTRIBUTE WORKS UNDER THIS LICENSE
-======================================================
+## WHETHER AND HOW TO DISTRIBUTE WORKS UNDER THIS LICENSE
 
 This section contains important instructions, examples, and
 recommendations for authors who are considering distributing their
-works under this license.  These authors are addressed as `you' in
+works under this license.  These authors are addressed as "you" in
 this section.
 
-Choosing This License or Another License
-----------------------------------------
+### Choosing This License or Another License
 
 If for any part of your work you want or need to use *distribution*
 conditions that differ significantly from those in this license, then
@@ -316,16 +310,15 @@ of this license as a model for your own license, but your license
 should not refer to the LPPL or otherwise give the impression that
 your work is distributed under the LPPL.
 
-The document `modguide.tex' in the base LaTeX distribution explains
+The document `modguide.tex` in the base LaTeX distribution explains
 the motivation behind the conditions of this license.  It explains,
 for example, why distributing LaTeX under the GNU General Public
 License (GPL) was considered inappropriate.  Even if your work is
-unrelated to LaTeX, the discussion in `modguide.tex' may still be
+unrelated to LaTeX, the discussion in `modguide.tex` may still be
 relevant, and authors intending to distribute their works under any
 license are encouraged to read it.
 
-A Recommendation on Modification Without Distribution
------------------------------------------------------
+### A Recommendation on Modification Without Distribution
 
 It is wise never to modify a component of the Work, even for your own
 personal use, without also meeting the above conditions for
@@ -340,8 +333,7 @@ best interest to keep your copy of the Work identical with the public
 one.  Many works provide ways to control the behavior of that work
 without altering any of its licensed components.
 
-How to Use This License
------------------------
+### How to Use This License
 
 To use this license, place in each of the components of your work both
 an explicit copyright notice including your name and the year the work
@@ -362,7 +354,7 @@ Here is an example of such a notice and statement:
   % and version 1.3 or later is part of all distributions of LaTeX
   % version 2005/12/01 or later.
   %
-  % This work has the LPPL maintenance status `maintained'.
+  % This work has the LPPL maintenance status "maintained".
   % 
   % The Current Maintainer of this work is M. Y. Name.
   %
@@ -370,11 +362,11 @@ Here is an example of such a notice and statement:
   % and the derived file pig.sty.
 
 Given such a notice and statement in a file, the conditions
-given in this license document would apply, with the `Work' referring
-to the three files `pig.dtx', `pig.ins', and `pig.sty' (the last being
-generated from `pig.dtx' using `pig.ins'), the `Base Interpreter'
-referring to any `LaTeX-Format', and both `Copyright Holder' and
-`Current Maintainer' referring to the person `M. Y. Name'.
+given in this license document would apply, with the _Work_ referring
+to the three files `pig.dtx`, `pig.ins`, and `pig.sty` (the last being
+generated from `pig.dtx` using `pig.ins`), the _Base Interpreter_
+referring to any `LaTeX-Format`, and both _Copyright Holder_ and
+_Current Maintainer_ referring to the person "M. Y. Name".
 
 If you do not want the Maintenance section of LPPL to apply to your
 Work, change `maintained' above into `author-maintained'.  
@@ -383,8 +375,7 @@ section was added in order to ensure that your Work remains useful to
 the community even when you can no longer maintain and support it
 yourself.
 
-Derived Works That Are Not Replacements
----------------------------------------
+### Derived Works That Are Not Replacements
 
 Several clauses of the LPPL specify means to provide reliability and
 stability for the user community. They therefore concern themselves
@@ -394,10 +385,9 @@ this is not the case (e.g., if a few lines of code are reused for a
 completely different task), then clauses 6b and 6d shall not apply.
 
 
-Important Recommendations
--------------------------
+### Important Recommendations
 
- Defining What Constitutes the Work
+Defining What Constitutes the Work
 
    The LPPL requires that distributions of the Work contain all the
    files of the Work.  It is therefore important that you provide a
