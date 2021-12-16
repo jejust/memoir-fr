@@ -426,8 +426,8 @@ design. Some years ago most questions on \ctt\ were answered by
 someone providing a piece of code that solved a particular problem, and
 again and again. More recently these questions are answered along the
 lines of `Use the ---------{} package', and again and again.
-\switchFrench\TS{1}
-    D'après mon expérience personnelle et celle des membres du groupe de discussion \url{comp.text.tex}, les principaux problèmes liés à l'utilisation de \ltx\ sont liés à la conception des documents. Il y a quelques années, la plupart des questions posées sur \ctt\ recevaient une réponse sous la forme d'un bout de code qui résolvait un problème particulier, et ainsi de suite. Plus récemment, la réponse aux questions dessemble davantage à \og{}Utilisez l'extension ---------{}\fg{}, et ainsi de suite.
+\switchFrench\TS{2}
+    D'après mon expérience personnelle et celle des membres du groupe de discussion \url{comp.text.tex}, les principaux problèmes liés à l'utilisation de \ltx\ sont liés à la conception des documents. Il y a quelques années, la plupart des questions posées sur \ctt\ recevaient une réponse sous la forme d'un bout de code qui résolvait un problème particulier, et ainsi de suite. Plus récemment, la réponse aux questions ressemble davantage à \og{}Utilisez l'extension ---------{}\fg{}, et ainsi de suite.
 
 \switchEng
     I have used many of the more common of these packages but my filing system
@@ -441,8 +441,8 @@ easy to fake an \Ie{abstract} if it is needed. With a little bit of tweaking,
 \Pclass{book} class documents can be made to look just like \Pclass{article}
 class documents, and the \Pclass{memoir} class is designed with tweaking very
 much in mind.
-\switchFrench\TS{1}
-    J'ai utilisé beaucoup des paquets les plus courants, mais mon système de classement n'est pas toujours bien ordonné et j'ai tendance à égarer les divers manuels d'utilisation, même pour les paquets que j'ai écrits. La classe de mémoires est une tentative d'intégration de certains des paquets les plus liés à la conception avec la classe de livres LaTeX. J'ai choisi la classe book car la classe report est virtuellement identique à book, à l'exception du fait que book n'a pas d'environnement d'abstraction alors que report en a un ; cependant, il est facile de simuler une abstraction si nécessaire. Avec un peu d'ajustement, les documents de la classe book peuvent ressembler aux documents de la classe article, et la classe memoir a été conçue en tenant compte de cet ajustement.
+\switchFrench\TS{2}
+    J'ai utilisé beaucoup des packages les plus courants, mais mon système de classement n'est pas toujours bien ordonné et j'ai tendance à égarer les divers manuels d'utilisation, même pour les packages que j'ai écrits. La classe \Pclass{memoir} est une tentative d'intégration de certains des packages les plus liés à la conception avec la classe \Pclass{book} de \ltx. J'ai choisi la classe \Pclass{book} car la classe \Pclass{report} est virtuellement identique à \Pclass{book}, à l'exception du fait que \Pclass{book} n'a pas d'environnement \Ie{abstract} alors que \Pclass{report} en fournit un; cependant, il est facile d'ajouter un \Ie{abstract} si nécessaire. Avec un peu de bricolages, les documents con!us avec la classe \Pclass{book} peuvent ressembler à ceux conçus avec la classe \Pclass{article}, et la classe \Pclass{memoir} a été développée en ayant ces possibilités en tête.
 
 \switchEng
     The \Pclass{memoir} class effectively incorporates the facilties that
@@ -451,8 +451,8 @@ code is new code reimplementing package functionalities. The exceptions
 tend to be where I have cut and pasted code from some of my packages.
 I could not have written the \Pclass{memoir} class without the excellent 
 work presented by the implementors of \ltx\ and its many packages.
-\switchFrench\TS{1}
-    La classe mémoire incorpore effectivement les facilités auxquelles on accède habituellement en utilisant des paquets externes. Dans la plupart des cas, le code de la classe est un nouveau code réimplémentant les fonctionnalités du paquetage. Les exceptions sont les cas où j'ai coupé et collé du code de certains de mes paquets. Je n'aurais pas pu écrire la classe memoir sans l'excellent travail présenté par les implémenteurs de LaTeX et de ses nombreux paquets.
+\switchFrench\TS{2}
+    La classe \Pclass{memoir} intègre effectivement les fonctionnalités auxquelles on accède habituellement en utilisant des packages externes. Dans la plupart des cas, le code de la classe est un nouveau code réimplémentant les fonctionnalités de tel ou tel package. Les exceptions sont les cas où j'ai copié-collé du code de certains de mes propres packages. Je n'aurais pas pu écrire la classe \Pclass{memoir} sans l'excellent travail offert par les développeurs de \ltx\ et de ses nombreux packages.
 
 \switchEng
     Apart from packages that I happen to have written I have gained many
@@ -463,7 +463,7 @@ The participants in the
 by questioning how to do something in \ltx, and partly by providing
 answers. It is a friendly and educational forum.
 \switchFrench\TS{1}
-    En dehors des paquets que j'ai écrits, j'ai tiré de nombreuses idées des autres paquets listés dans la bibliographie. D'une manière ou d'une autre, leurs auteurs y ont tous contribué, même si c'est sans le savoir. Les participants du groupe de discussion \url{comp.text.tex} ont également apporté une contribution précieuse, en partie en posant des questions sur la façon de faire quelque chose dans \ltx, et en partie en fournissant des réponses. Il s'agit d'un forum amical et éducatif.
+    En dehors des packages que j'ai écrits, j'ai tiré de nombreuses idées des autres packages listés dans la bibliographie. D'une manière ou d'une autre, leurs auteurs y ont tous contribué, même si c'est sans le savoir. Les participants du groupe de discussion \url{comp.text.tex} ont également apporté une contribution précieuse, en partie en posant des questions sur la façon de faire quelque chose avec \ltx, et en partie en fournissant des réponses. Il s'agit d'un forum amical et éducatif.
 \end{paracol}
 
 {\raggedleft{\scshape Peter Wilson} \\ Seattle, WA \\ June 2001\par}
@@ -1378,7 +1378,7 @@ following I use the term `standard class'\index{standard class} to
 denote the \Lclass{book} and \Lclass{report} classes and, when
 appropriate, the \Lclass{article} class as well.
 \switchFrench\TS{1}
-La classe\Mname\ a été publiée pour la première fois en 2001 et s'est avérée depuis assez populaire. La classe peut être utilisée en remplacement des classes livre et rapport, générant par défaut des documents pratiquement indiscernables de ceux produits par ces classes. La classe comprend quelques options pour produire des documents avec d'autres apparences ; par exemple une apparence de classe article ou un document qui semble avoir été produit sur une machine à écrire avec une seule police, un double espacement, sans césure, etc. Dans ce qui suit, j'utilise le terme "classe standard" pour désigner les classes livre et rapport et, le cas échéant, la classe article également.
+La classe \Mname\ a été publiée pour la première fois en~2001 et s'est avérée depuis assez populaire. La classe peut être utilisée en remplacement des classes \Lclass{book} et \Lclass{report}, générant par défaut des documents pratiquement indiscernables de ceux produits par ces deux classes. La classe comprend quelques options pour produire des documents ayant une apparence différente; par exemple des documents ressemblant à ceux utilisant classe \Lclass{article} ou semblant avoir été produits sur une machine à écrire avec une seule police, un interligne double, sans césure, etc. Dans ce qui suit, j'utilise le terme \og{}classes standards\fg{} pour désigner les classes \Lclass{book} et \Lclass{report} et, le cas échéant, la classe \Lclass{article} également.
 
 \switchEng
     The \Mname\ class includes the functionality of many packages, for
@@ -1391,7 +1391,7 @@ typesetting mathematics. On the other hand it is easy to configure a work
 produced with \Mname\ 
 to meet a university's thesis layout requirements.
 \switchFrench\TS{1}
-La classe \Mname\ inclut les fonctionnalités de nombreux paquets, par exemple le paquet tocloft pour contrôler la table des matières ou des méthodes similaires au paquet fancyhdr pour concevoir vos propres en-têtes. Les fonctions des paquets intégrés sont principalement liées à conception et à la mise en page de documents ; memoir n'aborde pas des domaines comme ceux qui sont couverts par les paquets babel ou hyperref ou tout autre domaine lié aux mathématiques de la composition. En revanche, il est facile de configurer un travail produit avec memoir pour qu'il réponde aux exigences de mise en page de la thèse d'une université. d'une université.
+La classe \Mname\ inclut les fonctionnalités de nombreux packages, par exemple le package \Lpack{tocloft} pour contrôler la table des matières ou des méthodes similaires au package \Lpack{fancyhdr} pour formater vos propres en-têtes. Les fonctions des packages intégrés sont principalement liées à conception et à la mise en page de documents; \Mname\ n'aborde pas des domaines comme ceux qui sont couverts par les packages \Lpack{babel} ou \Lpack{hyperref} ou tout autre domaine lié aux mathématiques de la composition. En revanche, il est facile de configurer un travail produit avec \Mname\ pour qu'il réponde aux exigences de mise en page d'une université pour ses manuscrits de thèse.
 
 
 \switchEng
@@ -1402,7 +1402,7 @@ version of the class and its supporting documentation is always
 available from %
 \ctan\ at \url{latex/contrib/memoir}.
 \switchFrench\TS{1}
-La classe \Mname\ a été considérablement améliorée depuis sa première publication --- plus de 50~LaTeXers ont fourni du code ou des suggestions d'amélioration. La classe est incluse dans les distributions TeX du TeX Users Group et la dernière version de la classe et de sa documentation est toujours disponible auprès du CTAN à latex/contrib/memoir .
+La classe \Mname\ a été considérablement améliorée depuis sa première publication --- plus de 50~LaTeXers ont fourni du code ou des suggestions d'amélioration. La classe est incluse dans les distributions \tx\ du \TeXUG\ et la dernière version de la classe et de sa documentation est toujours disponible sur le CTAN, à l'adresse \url{latex/contrib/memoir}.
 
 \switchEng
     This is not a guide to the general use of \ltx\ but rather concentrates
@@ -1414,7 +1414,7 @@ a \ltx\ manuscript, how to run \ltx\ and print the resulting document,
 and that you can also use auxiliary programs like \Lmakeindex\ 
 and \Lbibtex.
 \switchFrench\TS{1}
-Il ne s'agit pas d'un guide sur l'utilisation générale de \ltx, mais plutôt d'une présentation des différences entre la classe de mémoires et les classes de livres et de rapports standard de \ltx. Il existe d'autres sources qui traitent de \ltx\ en général, dont certaines sont mentionnées plus loin. Je suppose que vous avez déjà utilisé \ltx\ et que vous savez donc comment préparer un manuscrit \ltx, comment exécuter LaTeX et imprimer le document résultant, et que vous pouvez également utiliser des programmes auxiliaires comme \Lmakeindex\ et \Lbibtex.
+Il ne s'agit pas d'un guide sur l'utilisation générale de \ltx, mais plutôt d'une présentation des différences entre la classe\index{class}\Lclass{memoir} d'une part, et les classes \Lclass{book} et \Lclass{report} standards de \ltx. Il existe d'autres sources qui traitent de \ltx\ en général, dont certaines sont mentionnées plus loin. Je suppose que vous avez déjà utilisé \ltx\ et que vous savez donc comment préparer un manuscrit \ltx, comment exécuter \ltx\ et imprimer le document résultant, et que vous savez également utiliser des programmes auxiliaires comme \Lmakeindex\ et \Lbibtex.
 \end{paracol}
 
 \section{General considerations}
@@ -1435,7 +1435,7 @@ is available for you to read.
 % There is also the \Lpack{memexsupp} package by Lars Madsen~\cite{MEMEXSUPP} 
 % which provides some extra facilities for the class.
 \switchFrench\TS{1}
-Il s'agit d'une classe importante qui comprend environ 10\,000~lignes de code \ltx\ documentées dans un rapport de 400~pages ; la plupart des utilisateurs n'ont pas besoin de le consulter~\cite{MEMCODE}. Cependant, si vous voulez voir exactement comment une partie, ou la totalité, de memoir est définie, vous pouvez le consulter. Le document que vous êtes en train de lire est le Manuel de l'utilisateur complet~\cite{MEMMAN} et séparé qui compte environ 500 pages, et de temps en temps, un Addendum est publié pour indiquer les extensions de la classe\footnote{Pas pour le moment.}. Encore une fois, si vous voulez voir comment quelque chose a été fait dans ce manuel, qui bien sûr a été préparé en utilisant \Mname\ lui-même, la source est disponible pour que vous la lisiez.
+Il s'agit d'une classe importante qui comprend environ 10\,000~lignes de code \ltx\ documentées dans un rapport de 400~pages; la plupart des utilisateurs n'ont pas besoin de le consulter~\cite{MEMCODE}. Cependant, si vous voulez voir exactement comment une partie, ou la totalité, de \Mname\ est définie, vous pouvez le consulter. Le document que vous êtes en train de lire est le Manuel de l'utilisateur complet~\cite{MEMMAN} et séparé qui compte environ 500~pages, et de temps en temps, un Addendum est publié pour indiquer les extensions de la classe\footnote{Pas pour le moment.}. Encore une fois, si vous voulez voir comment quelque chose a été fait dans ce manuel, qui bien sûr a été préparé en utilisant \Mname\ lui-même, la source est disponible pour que vous la lisiez.
 
 \switchEng
     The previous editions of the Manual consisted of two parts. The first
@@ -1445,7 +1445,7 @@ and manuals. That was intended to provide a little background for when
 you design your own printed documents. The second, and by far the longest
 part, described the capabilities of \Mname\ and how to use them. 
 \switchFrench\TS{1}
-Les éditions précédentes du manuel étaient composées de deux parties. La première abordait certains aspects de la conception de livres et de la typographie en général, ce que je n'avais pas rencontré dans les livres et manuels \ltx\ habituels. Cette partie avait pour but de fournir un peu de contexte pour la conception de vos propres documents imprimés. La seconde partie, de loin la plus longue, décrivait les capacités de memoir et comment les utiliser.
+Les éditions précédentes de ce Manuel étaient composées de deux parties. La première abordait certains aspects de la conception de livres et de la typographie en général, ce que je n'avais pas rencontré dans les livres et manuels \ltx\ habituels. Cette partie avait pour but de fournir un peu de contexte pour la conception de vos propres documents imprimés. La seconde partie, de loin la plus longue, décrivait les fonctionnalités de \Mname\ et comment les utiliser.
 
 
 \switchEng
@@ -1455,7 +1455,7 @@ separate document~\cite{MEMDESIGN}, which is independent of \Mname, and in this
 edition concentrate on how to use \Mname. This has reduced the size of
 this document, but it is still large.
 \switchFrench\TS{1}
-Le manuel n'a cessé de croître jusqu'à approcher les 700~pages et j'ai décidé qu'il était préférable de placer la discussion originale sur la typographie dans un document séparé~\cite{MEMDESIGN}, indépendant des mémoires, et de me concentrer dans cette édition sur la façon d'utiliser les mémoires. Cela a permis de réduire la taille de ce document, mais il est toujours aussi volumineux.
+Ce manuel n'a cessé de croître jusqu'à approcher les 700~pages et j'ai décidé qu'il était préférable de placer la discussion originale sur la typographie dans un document séparé~\cite{MEMDESIGN}, indépendant de \Mname, et de me concentrer dans ce volume sur la façon d'utiliser \Mname. Cela aurait dû permettre de réduire la taille de ce document, mais il est toujours aussi volumineux.
 
 \switchEng
 This manual is not a \ltx\ tutorial; I assume
@@ -1468,7 +1468,7 @@ and the \txbook, and perhaps one of the free \tx\ manuals such as
 \btitle{TeX for the Impatient}~\cite{IMPATIENT} or 
 \btitle{TeX by Topic}~\cite{TEXBYTOPIC}.
 \switchFrench\TS{1}
-Ce manuel n'est pas une introduction à \ltx; je supposerai que vous en connaissez déjà les bases. Si ce n'est pas le cas, il existe plusieurs tutoriaux gratuits. Dans certains cas, je vous montre le code interne de la classe, ce qui peut impliquer des commandes \ltx\ que vous ne rencontrerez pas dans les didacticiels, et aussi parfois des primitives \tx. Les informations sur ces commandes, si vous les voulez, sont accessibles en lisant le source \ltx\ lui-même et le \txbook, et peut-être un des manuels \tx\ gratuits tels que \btitle{TeX pour l'impatient}~\cite{IMPATIENT} (en français) ou \btitle{TeX by Topic}~\cite{TEXBYTOPIC}.
+Ce manuel n'est pas une introduction à \ltx; je supposerai que vous en connaissez déjà les bases. Si ce n'est pas le cas, il existe plusieurs tutoriaux gratuits. Dans certains cas, je vous montre le code interne de la classe, ce qui peut impliquer des commandes \ltx\ que vous ne rencontrerez pas dans les didacticiels, et aussi parfois des primitives \tx. Les informations sur ces commandes, si vous les voulez, sont accessibles en lisant le source \ltx\ lui-même et le \txbook, et peut-être un des manuels \tx\ gratuits tels que \btitle{TeX pour l'impatient}~\cite{IMPATIENT} (en français) ou \btitle{TeX by Topic}~\cite{TEXBYTOPIC} (en anglais).
 \end{paracol}
 
 \section{Class options}
@@ -1486,7 +1486,7 @@ those at
 the top and bottom of the page; the methods are similar to those of the
 \Lpack{geometry} package.
 \switchFrench\TS{1}
-Les classes standard offrent des options de 10, 11 ou 12~points pour la police du corps principal. memoir étend ces options en offrant également une option de 9 points et des options allant de 14 à 60~points. La largeur du bloc de texte est automatiquement ajustée en fonction de la taille de point sélectionnée pour essayer de respecter les limites typographiques généralement acceptées pour les longueurs de ligne ; vous pouvez remplacer cela si vous le souhaitez. La classe fournit également des méthodes simples pour spécifier les paramètres de mise en page tels que les marges --- à la fois les marges latérales et celles du haut et du bas de la page ; les méthodes sont similaires à celles du paquet géométrique.
+Les classes standard offrent des options de 10, 11 ou 12~points pour la police du corps principal. \Mname\ étend ces options en offrant également une option de 9~points et des options allant de 14 à 60~points. La largeur du bloc de texte est automatiquement ajustée en fonction de la taille de point sélectionnée pour essayer de respecter les limites typographiques généralement acceptées pour les longueurs de ligne; vous pouvez remplacer cela si vous le souhaitez. La classe fournit également des méthodes simples pour spécifier les paramètres de mise en page tels que les marges --- à la fois les marges latérales et celles du haut et du bas de la page; les méthodes sont similaires à celles du package \Lpack{geometry}.
 
 \switchEng
     The page layout facilities also include methods, like those provided
@@ -1504,7 +1504,7 @@ of paper that is used in the printer. This is provided by the \Lopt{showtrims}
 option. A variety of trim marks are provided and you can define your own 
 if you need some other kind.
 \switchFrench\TS{1}
-Il est parfois utile, voire nécessaire, de placer sur chaque page des marques de rognage indiquant la taille souhaitée de la page finale par rapport à la feuille de papier utilisée dans l'imprimante. C'est ce que permet l'option showtrims. Diverses marques de rognage sont fournies et vous pouvez définir les vôtres si vous avez besoin d'un autre type de marque.
+Il est parfois utile, voire nécessaire, de placer sur chaque page des marques de rognage indiquant la taille souhaitée de la page finale par rapport à la feuille de papier utilisée dans l'imprimante. C'est ce que permet l'option \Lopt{showtrims}. Diverses marques de rognage sont fournies et vous pouvez définir les vôtres si vous avez besoin d'un autre type de marque.
 \end{paracol}
 
 \section{Sectioning styles}
@@ -1572,7 +1572,7 @@ also supports subfigures and subtables along the lines of the \Lpack{subfig}
 package, plus letting you define your own new kinds of floats together
 with the corresponding `\listofx'.
 \switchFrench\TS{1}
-\Mname\ incorpore le code de mon package \Lpack{ccaption} qui vous permet de modifier facilement l'apparence des légendes des figures et des tableaux ; des légendes bilingues sont disponibles si nécessaire, tout comme les légendes placées sur le côté d'une figure ou d'un tableau ou les légendes de continuation, par exemple d'une illustration à l'autre. Le sous-titrage peut également être appliqué à des illustrations \og{}non flottantes\fg{} ou sous forme de légendes (c'est-à-dire des sous-titres non numérotés) aux illustrations flottantes régulières. Le système de sous-titrage prend également en charge les sous-figures et les sous-tables, conformément au package \Lpack{subfig}, et vous permet de définir vos propres nouveaux types de flottants, ainsi que la \og{}liste de\dots\fg{} correspondante.
+\Mname\ incorpore le code de mon package \Lpack{ccaption} qui vous permet de modifier facilement l'apparence des légendes des figures et des tableaux; des légendes bilingues sont disponibles si nécessaire, tout comme les légendes placées sur le côté d'une figure ou d'un tableau ou les légendes de continuation, par exemple d'une illustration à l'autre. Le sous-titrage peut également être appliqué à des illustrations \og{}non flottantes\fg{} ou sous forme de légendes (c'est-à-dire des sous-titres non numérotés) aux illustrations flottantes régulières. Le système de sous-titrage prend également en charge les sous-figures et les sous-tables, conformément au package \Lpack{subfig}, et vous permet de définir vos propres nouveaux types de flottants, ainsi que la \og{}liste de\dots\fg{} correspondante.
 
 \end{paracol}
 
@@ -1592,7 +1592,7 @@ packages. To improve the appearance of rules in tabular material the
 \Lpack{booktabs} package is also included (as a code copy, this may
 change in the future).
 \switchFrench\TS{1}
-Les packages \Lpack{array}, \Lpack{dcolumn}, \Lpack{delarray} et \Lpack{tabularx} sont automatiquement chargés par la classe. Auparavant, leur code était incorporé dans la classe, aujourd'hui nous chargeons simplement les paquets respectifs. Pour améliorer l'apparence des règles dans le matériel tabulaire, le package \Lpack{booktabs} est également inclus (en tant que copie de code, cela peut changer dans le futur).
+Les packages \Lpack{array}, \Lpack{dcolumn}, \Lpack{delarray} et \Lpack{tabularx} sont automatiquement chargés par la classe. Auparavant, leur code était incorporé dans la classe, aujourd'hui nous chargeons simplement les packages installés sur le système. Pour améliorer l'apparence des filets dans les tableaux, le package \Lpack{booktabs} est également inclus (en copiant son code, pour l'instant, mais cela peut changer dans le futur).
 
 \switchEng
     Multipage tabulations are often set with the \Lpack{longtable} or
@@ -1602,7 +1602,7 @@ offers a `continuous tabular' environment. This doesn't have all the
 flexibility provided by the packages but can often serve instead
 of using them.
 \switchFrench\TS{1}
-Les tabulations multi-pages sont souvent établies avec les paquets \Lpack{longtable} ou \Lpack{xtab}, qui peuvent bien sûr être utilisés avec la classe. Pour les tabulations simples qui peuvent se poursuivre d'une page à l'autre, \Mname\ offre un environnement de \og{}tabulation continue\fg{}. Celui-ci n'a pas toute la flexibilité offerte par les packages mais peut souvent servir au lieu de les utiliser. Plus intéressant, mais plus limité, la classe fournit des \og{}tableaux automatiques\fg{}.
+Les tableaux multi-pages sont souvent mis en forme avec les packages \Lpack{longtable} ou \Lpack{xtab}, qui peuvent bien sûr être utilisés avec la classe. Pour les tabulations simples qui peuvent se poursuivre d'une page à l'autre, \Mname\ offre un environnement de \og{}tableau continu\fg{}. Celui-ci n'a pas toute la flexibilité offerte par les packages mais peut souvent servir au lieu de les utiliser.
 
 \switchEng
     More interestingly, but more limited, the class provides `automatic 
@@ -1847,7 +1847,7 @@ and write information in external files, design your own style of
 \cs{maketitle}, convert numbers to words, reserve space at the bottom of a 
 page, and so on and so forth.
 \switchFrench\TS{1}
-Des crochets (\emph{hooks}) et des macros sont fournis pour la plupart des aspects de la mise en page des documents ; par exemple, les notes de bas de page peuvent être normales, composées en deux ou trois colonnes, ou être intégrées à un seul paragraphe. Il existe une macro \cs{sidepar} qui est un \cs{marginpar} non flottant, ainsi qu'une macro \cs{sidebar} pour la composition des barres latérales dans la marge, en commençant par le haut du bloc de texte. Vous pouvez créer de nouveaux environnements de type verbatim, lire et écrire des informations dans des fichiers externes, concevoir votre propre style de titre, convertir des chiffres en mots, réserver un espace en bas de page, et ainsi de suite.
+Des crochets (\emph{hooks}) et des macros sont fournis pour la plupart des aspects de la mise en page des documents; par exemple, les notes de bas de page peuvent être normales, composées en deux ou trois colonnes, ou être intégrées à un seul paragraphe. Il existe une macro \cs{sidepar} qui est un \cs{marginpar} non flottant, ainsi qu'une macro \cs{sidebar} pour la composition des barres latérales dans la marge, en commençant par le haut du bloc de texte. Vous pouvez créer de nouveaux environnements de type verbatim, lire et écrire des informations dans des fichiers externes, concevoir votre propre style de titre, convertir des chiffres en mots, réserver un espace en bas de page, et ainsi de suite.
 
 \end{paracol}
 
@@ -1942,7 +1942,7 @@ you want to specifically use one of these packages rather than the integrated
 version then you can do so. For arguments sake, assuming you really want 
 to use the \Lpack{titling} package you can do this:
 \switchFrench\TS{1}
-La classe ignore automatiquement tout \verb?\usepackage? ou \verb?\RequirePackage? invoquant ceux-ci. Toutefois, si vous souhaitez utiliser spécifiquement l'un de ces paquets plutôt que la version intégrée, vous pouvez le faire. À titre d'exemple, si vous souhaitez vraiment utiliser le package \Lpack{titling}, vous pouvez procéder comme ceci:
+La classe ignore automatiquement tout \verb?\usepackage? ou \verb?\RequirePackage? invoquant ceux-ci. Toutefois, si vous souhaitez utiliser spécifiquement l'un de ces packages plutôt que la version intégrée, vous pouvez le faire. À titre d'exemple, si vous souhaitez vraiment utiliser le package \Lpack{titling}, vous pouvez procéder comme ceci:
 
 \end{paracol}
 \begin{lcode}
@@ -1962,7 +1962,7 @@ In the particular case of the \Lpack{setspace} package, even with the
 standard classes, there can be some unexpected spacing around displayed
 material; this has not occurred with \Mname's implementation.
 \switchFrench\TS{1}
-La classe \Mname\ intègre une version du paquetage \Lpack{setspace}, bien qu'elle utilise des noms différents pour les macros. Ce package permet de produire des documents en interligne double mais laisse certains éléments du document, comme les légendes par exemple, à simple interligne. Pour ce faire, il doit faire des suppositions sur le fonctionnement de la classe de document en cours. J'ai pensé que ce type de fonctionnalité devait faire partie de la classe et ne pas dépendre de suppositions. Dans le cas particulier du package \Lpack{setspace}, même avec les classes standard, il peut parfois y avoir des espacements bizarres autour de certains éléments; cela ne s'est pas produit avec l'implémentation de \Mname.
+La classe \Mname\ intègre une version du package \Lpack{setspace}, bien qu'elle utilise des noms différents pour les macros. Ce package permet de produire des documents en interligne double mais laisse certains éléments du document, comme les légendes par exemple, à simple interligne. Pour ce faire, il doit faire des suppositions sur le fonctionnement de la classe de document en cours. J'ai pensé que ce type de fonctionnalité devait faire partie de la classe et ne pas dépendre de suppositions. Dans le cas particulier du package \Lpack{setspace}, même avec les classes standard, il peut parfois y avoir des espacements bizarres autour de certains éléments; cela ne s'est pas produit avec l'implémentation de \Mname.
 
 \switchEng
 The class also provides functions similar to those provided by the following 
@@ -2013,7 +2013,7 @@ while Derek Birdsall's \textit{notes on book design}~\cite{BIRDSALL04}
 is much more oriented to illustrated works, like museum
 catalogues and art books.
 \switchFrench\TS{1}
-Tout au long de ce manuel, vous trouverez des commentaires sur certains aspects de la conception de livres et de la typographie, accompagnés dans certains cas d'exemples de pratiques meilleures ou de moins bonnes. Si vous voulez plus de commentaires et d'exemples, il existe des notes sur le sujet~\cite{MEMDESIGN}, et pour des concepts faisant autorité, plusieurs livres sur le sujet sont listés dans la bibliographie ; je préfère \textit{The Elements of Typographic Style} de Bringhurst~\cite{BRINGHURST99}, tandis que les \textit{notes on book design} de Derek Birdsall~\cite{BIRDSALL04} sont beaucoup plus orientées vers les ouvrages illustrés, comme les catalogues d'expositions et les livres d'art.
+Tout au long de ce manuel, vous trouverez des commentaires sur certains aspects de la conception de livres et de la typographie, accompagnés dans certains cas d'exemples de pratiques meilleures ou de moins bonnes. Si vous voulez plus de commentaires et d'exemples, il existe des notes sur le sujet~\cite{MEMDESIGN}, et pour des concepts faisant autorité, plusieurs livres sur le sujet sont listés dans la bibliographie; je préfère \textit{The Elements of Typographic Style} de Bringhurst~\cite{BRINGHURST99}, tandis que les \textit{notes on book design} de Derek Birdsall~\cite{BIRDSALL04} sont beaucoup plus orientées vers les ouvrages illustrés, comme les catalogues d'expositions et les livres d'art.
 
 \switchEng
 The following packages are automatically loaded by the class:
@@ -2061,7 +2061,7 @@ Most non-technical books are typeset on a fixed
 grid as they do not have arbitrary insertions into the text; it is these
 kinds of publications that typographers are most comfortable talking about.
 \switchFrench\TS{1}
-\ltx\ est basé sur le programme \tx\ qui a été conçu principalement pour la composition de documents contenant beaucoup de mathématiques. Dans de tels ouvrages, les formules mathématiques interrompent le flux du texte sur la page, et l'espace vertical nécessaire pour afficher les formules dépend fortement de leurs caractéristiques. La plupart des livres non techniques sont composés sur une grille fixe car ils ne comportent pas d'insertions arbitraires de ce genre dans le texte ; c'est de ce type de publications que les typographes parlent le plus volontiers.
+\ltx\ est basé sur le programme \tx\ qui a été conçu principalement pour la composition de documents contenant beaucoup de mathématiques. Dans de tels ouvrages, les formules mathématiques interrompent le flux du texte sur la page, et l'espace vertical nécessaire pour afficher les formules dépend fortement de leurs caractéristiques. La plupart des livres non techniques sont composés sur une grille fixe car ils ne comportent pas d'insertions arbitraires de ce genre dans le texte; c'est de ce type de publications que les typographes parlent le plus volontiers.
 
 \switchEng
     There are other sources that deal with \ltx\ in 
@@ -2105,7 +2105,7 @@ Alan Hoenig's book~\cite{HOENIG98} is the best guide to this that I know of.
 \pixctan\ hosts Philipp Lehman's font installation guide~\cite{FONTINST}; 
 this is well worth looking at just as an example of fine typesetting.
 \switchFrench\TS{1}
-Les flots les plus récents de messages sur le newsgroup \url{comp.text.tex} (\pixctt) montrent un intérêt croissant pour l'utilisation d'une plus vaste gamme de polices avec LaTeX. C'est une question que j'ai laissée de côté. Le livre d'Alan Hoenig~\cite{HOENIG98} est le meilleur guide à ce sujet que je connaisse. Le \pixctan\ héberge le guide d'installation des polices de Philipp Lehman~\cite{FONTINST} ; cela vaut la peine d'y jeter un coup d'\oe il, ne serait-ce qu'en tant qu'exemple d'une bonne composition.
+Les flots les plus récents de messages sur le newsgroup \url{comp.text.tex} (\pixctt) montrent un intérêt croissant pour l'utilisation d'une plus vaste gamme de polices avec LaTeX. C'est une question que j'ai laissée de côté. Le livre d'Alan Hoenig~\cite{HOENIG98} est le meilleur guide à ce sujet que je connaisse. Le \pixctan\ héberge le guide d'installation des polices de Philipp Lehman~\cite{FONTINST}; cela vaut la peine d'y jeter un coup d'\oe il, ne serait-ce qu'en tant qu'exemple d'une bonne composition.
 
 \switchEng
     The source code for the \Lclass{memoir} class is, of course,
@@ -2966,7 +2966,7 @@ Si vous souhaitez utiliser un format de papier qui ne figure pas dans la liste, 
 \switchEng
     The type size option sets the default font size throughout the document. The class 
 offers a wider range of type sizes\index{type size} than usual. These are:\index{class options!type size}
-\switchFrench\TS{0}
+\switchFrench\TS{1}
 L'option de taille de caractères définit la taille de la police par défaut dans tout le document. La classe offre un éventail de tailles de caractères plus large que d'habitude. Ce sont les suivantes:
 
 \switchEng
@@ -3043,7 +3043,7 @@ L'option de taille de caractères définit la taille de la police par défaut dans 
 \switchEng
     These options, except for \Lopt{extrafontsizes}, are mutually exclusive.
 The default type size\indextwo{default}{type size} is \Lopt{10pt}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
 Ces options, à l'exception de \Lopt{extrafontsizes}, s'excluent mutuellement. La taille de caractère par défaut est \Lopt{10pt}.
 
 \switchEng
@@ -3079,7 +3079,7 @@ Par défaut, si vous utilisez l'option \Lopt{extrafontsizes}, la police par défau
 in the documents's preamble (but with the \Lopt{extrafontsizes} option
 you need not do this). 
 \switchFrench\TS{1}
-dans le préambule du document (mais avec l'option \Lopt{extrafontsizes} vous n'avez pas besoin de le faire).
+\noindent dans le préambule du document (mais avec l'option \Lopt{extrafontsizes} vous n'avez pas besoin de le faire).
 
 \end{paracol}
 \begin{syntax}
@@ -3087,8 +3087,6 @@ dans le préambule du document (mais avec l'option \Lopt{extrafontsizes} vous n'a
 \verb?\newcommand*{\memfontenc}?\marg{fontencoding} \\
 \verb?\newcommand*{\memfontpack}?\marg{package} \\
 \end{syntax}
-\begin{paracol}{2}
-\switchEng
 \glossary(memfontfamily)%
   {\cs{memfontfamily}}%
   {Font family for the \Popt{extrafontsizes} class option (default \texttt{lmr})}
@@ -3098,8 +3096,8 @@ dans le préambule du document (mais avec l'option \Lopt{extrafontsizes} vous n'a
 \glossary(memfontpack)%
   {\cs{memfontpack}}%
   {Font package for the \Popt{extrafontsizes} class option (default \texttt{lmodern})}
-\switchFrench\TS{0}
 
+\begin{paracol}{2}
 \switchEng
 Internally the class uses \cmd{\memfontfamily} and \cmd{\memfontenc} as 
 specifying
@@ -3123,7 +3121,7 @@ package. If you want a different default, say
 New Century Schoolbook\facesubseeidx{New Century Schoolbook}
 (which comes in the \texttt{T1} encoding), then
 \switchFrench\TS{1}
-qui ont pour résultat que la police \texttt{lmr} (Latin Modern) dans l'encodage \texttt{T1} est prise comme police par défaut (implémentée par le paquet \Lpack{lmodern}). Si vous souhaitez une autre police par défaut, par exemple New Century Schoolbook (qui est fournie dans l'encodage \texttt{T1}), alors
+\noindent qui ont pour résultat que la police \texttt{lmr} (Latin Modern) dans l'encodage \texttt{T1} est prise comme police par défaut (implémentée par le package \Lpack{lmodern}). Si vous souhaitez une autre police par défaut, par exemple New Century Schoolbook (qui est fournie dans l'encodage \texttt{T1}), alors
 
 \end{paracol}
 \begin{lcode}
@@ -3137,7 +3135,7 @@ will do the trick, where the \cs{newcommand*}s are put \emph{before} the
 \cs{documentclass} declaration (they will then override the \cs{provide...}
 definitions within the class code).
 \switchFrench\TS{0}
-fera l'affaire, les \cs{newcommand*} étant placés \emph{avant} la déclaration \cs{documentclass} (ils remplaceront alors les définitions  \cs{provide...} dans le code de la classe).
+\noindent fera l'affaire, les \cs{newcommand*} étant placés \emph{avant} la déclaration \cs{documentclass} (ils remplaceront alors les définitions  \cs{provide...} dans le code de la classe).
 
 \switchEng
     If you use the \Lopt{*pt} option then you have to supply a \file{clo}
@@ -3173,7 +3171,7 @@ integer.\footnote{If it is not an integer then \tx\ could get confused
 as to the name of the file --- it normally expects there to be only one
 period (.) in the name of a file.} Internally, the class specifies
 \switchFrench\TS{1}
-Lorsqu'il s'agira d'obtenir les informations sur la taille de la police et l'espacement, \Mname\ essaiera de lire un fichier appelé \verb?\anyptfilebase\anyptsize.clo? que vous devriez avoir mis à sa disposition ; le \cmd{\anyptsize} \meta{num} doit être un nombre entier\footnote{Si ce n'est pas un nombre entier, \tx\ pourrait se tromper sur le nom du fichier --- il s'attend normalement à ce qu'il n'y ait qu'un seul point (\texttt{.}) dans un nom de fichier.}. En interne, la classe spécifie
+Lorsqu'il s'agira d'obtenir les informations sur la taille de la police et l'espacement, \Mname\ essaiera de lire un fichier appelé \verb?\anyptfilebase\anyptsize.clo? que vous devriez avoir mis à sa disposition; le \cmd{\anyptsize} \meta{num} doit être un nombre entier\footnote{Si ce n'est pas un nombre entier, \tx\ pourrait se tromper sur le nom du fichier --- il s'attend normalement à ce qu'il n'y ait qu'un seul point (\texttt{.}) dans un nom de fichier.}. En interne, la classe spécifie
 
 \end{paracol}
 \begin{lcode}
@@ -3185,7 +3183,7 @@ Lorsqu'il s'agira d'obtenir les informations sur la taille de la police et l'esp
 which names the default as \file{mem10.clo}, which is for a 10pt font. 
 If, for example, you have an 18pt font you want to use, then
 \switchFrench\TS{1}
-qui nomme le fichier par défaut \file{mem10.clo}, ce qui correspond à une police 10\,pt. Si, par exemple, vous voulez utiliser une police 18\,pt, alors
+\noindent qui nomme le fichier par défaut \file{mem10.clo}, ce qui correspond à une police 10\,pt. Si, par exemple, vous voulez utiliser une police 18\,pt, alors
 
 \end{paracol}
 \begin{lcode}
@@ -3200,7 +3198,7 @@ you should have provided. Use one
 of the supplied \file{clo} files, such as \file{mem10.clo} or \file{mem60.clo}
 as an example of what must be specified in your \file{clo} file.
 \switchFrench\TS{1}
-fera en sorte que \ltx\ essaie de lire le fichier \texttt{myfont18.clo} que vous auriez dû fournir. Utilisez un des fichiers \file{clo} fournis, comme \file{mem10.clo} ou \file{mem60.clo} comme exemple de ce qui doit être spécifié dans votre fichier \file{clo}.
+\noindent fera en sorte que \ltx\ essaie de lire le fichier \texttt{myfont18.clo} que vous auriez dû fournir. Utilisez un des fichiers \file{clo} fournis, comme \file{mem10.clo} ou \file{mem60.clo} comme exemple de ce qui doit être spécifié dans votre fichier \file{clo}.
 
 \end{paracol}
 
@@ -3435,6 +3433,8 @@ want to put \cmd{\raggedbottom} in the preamble\index{preamble}.
 Up until this chapter the \pstyle{headings} pagestyle\index{pagestyle}
 has been used; pagestyles are described in \Sref{sec:pagestyles}.
 This, and later chapters, are typeset with the \pstyle{ruled} pagestyle.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Introduction}
@@ -3448,9 +3448,13 @@ same as the stock\index{stock} size and the typeblock\index{typeblock} is
 roughly in the middle of the page.
     This chapter describes the commands provided by the class to help you
 produce your own page layout if the default is inappropriate.
+\switchFrench\TS{0}
 
+\switchEng
     If you are happy with the default layout you may skip the rest of this
 chapter.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \fancybreak{}
@@ -3464,7 +3468,9 @@ A good page design is one which the general reader does not notice. If the
 reader is constantly noticing the page layout, even unconsciously, it distracts
 from the purpose of the book. It is not the job of the designer to 
 shout, or even to murmur, `look at my work'.
+\switchFrench\TS{0}
 
+\switchEng
     There are three main parts to a page: the page itself, the 
 typeblock\index{typeblock}, and 
 the margins\index{margin} separating the typeblock\index{typeblock} from 
@@ -3473,10 +3479,14 @@ headers\index{header} and footers\index{footer},
 and possibly marginal\index{marginalia} notes.
 The art of page design is obtaining a harmonious balance or rhythm between
 all these.
+\switchFrench\TS{0}
 
+\switchEng
     Although the form is different, the facilities described in this chapter 
 are similar to those provided by the \Lpack{geometry} 
 package~\cite{GEOMETRY}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \fancybreak{}
@@ -3490,11 +3500,16 @@ package~\cite{GEOMETRY}.
   \emph{\titleref{sec:typeblock2}}, as you have already chosen your
   stock size and does not need trimming.
 \end{adjustwidth}
+\switchFrench\TS{0}
 
+
+\switchEng
 On the other hand, if, say, you are designing a document, that is to
 be printed on one type of paper (the stock), and then trimmed to
 another, please read on.
+\switchFrench\TS{0}
 
+\switchEng
 % Before we start let use summarize what laying out the page
 % involves\fxnote{where did the spacings around enumerate go? Had to add
 % a blank line}
@@ -3536,7 +3551,9 @@ material --- in this case the fabric of the T shirt. Whether or not
 this is of general interest it is not the sort of printing or stock
 material that is normally used in book production. Books, except for
 the very particular, are printed on paper\index{paper}.
+\switchFrench\TS{0}
 
+\switchEng
     In the desktop publishing world the stock\indextwo{stock}{paper}
 paper\indextwo{stock}{size} is usually one from a range of standard sizes. 
 In the USA it is typically
@@ -3550,6 +3567,8 @@ pages being printed on each stock\index{stock} piece;
 the stock\index{stock} is then folded, cut and trimmed to form
 the final pages for binding. The class assumes that desktop publishing is 
 the norm.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{The page}
