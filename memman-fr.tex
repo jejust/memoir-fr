@@ -2358,7 +2358,7 @@ to do so, then copy the code you wish to change into the document's preamble
 or a package of your own or a class of your own (with a different name)
 and make the changes there. Do not expect any help if you change the
 \Lclass{memoir} class code directly.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
 Le code complet et documenté de la classe est disponible dans le fichier \file{memoir.dtx}. Si vous voulez savoir comment quelque chose fonctionne, vous pouvez lire le code pour en connaître \emph{tous} les détails. Si vous voulez faire différemment, le code est là pour que vous puissiez regarder et expérimenter. Vous ne devez cependant pas modifier le code de la classe. Si vous souhaitez changer quelque chose, recopiez le code que vous souhaitez modifier dans le préambule du document, dans un package ou une classe de votre choix (avec un nom différent) et apportez les changements à cet endroit. N'espérez aucune aide si vous modifiez directement le code de la classe \Lclass{memoir}.
 
 \end{paracol}
@@ -2377,8 +2377,8 @@ a Q\&A site like \url{http://tex.stackexchange.com}%  or on the the
 than correspond directly with the maintainer, who might well be away
 for some considerable time and perhaps not notice your email after
 having returned to base.
-\switchFrench\TS{0}
-Au fil des années, le support de \Lclass{memoir} passera d'une personne à l'autre.\footnote{Lars Madsen a succédé à Peter Wilson en 2009.} Par conséquent, il est probablement plus sûr de poser des questions, de se plaindre, de faire des suggestions, etc., sur un site de questions-réponses comme \url{http://tex.stackexchange.com}%  ou sur le groupe Usenet \url{comp.text.tex}
+\switchFrench\TS{1}
+Au fil des années, le support de \Lclass{memoir} passera de main en main.\footnote{Lars Madsen a ainsi succédé à Peter Wilson en 2009.} Par conséquent, il est probablement plus sûr de poser des questions, de se plaindre, de faire des suggestions, etc., sur un site de questions-réponses comme \url{http://tex.stackexchange.com}% ou sur le groupe Usenet \url{comp.text.tex}
 , qui est archivé et lu par beaucoup, que de correspondre directement avec le mainteneur, qui peut très bien être absent pendant longtemps et ne pas remarquer votre courriel à son retour chez lui.
 
 \switchEng
@@ -2386,7 +2386,7 @@ In either case please include the word \texttt{\theclass} in the
 subject, and if possible, please \emph{tag} the question with the
 \texttt{\theclass} tag.  That will help the memoir maintainer keep
 track of memoir related matters.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
 Dans les deux cas, veuillez inclure le mot \texttt{\theclass} dans le sujet et, si possible, \emph{marquez} la question avec le tag \texttt{\theclass}. Cela aidera le mainteneur à suivre les questions relatives à la classe \Lclass{memoir}.
 
 \end{paracol}
@@ -2400,7 +2400,7 @@ should go to \url{http://tex.stackexchange.com}, please remember to
 tag them properly, that really helps locating the \Mname\ related
 questions. If no-one comes up with an answer, you can also write me
 directly via \texttt{daleif (at) math dot au dot dk}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
 \textit{De la part du mainteneur:} la plupart des questions relatives à \Mname\ devraient être posées sur \url{http://tex.stackexchange.com}, n'oubliez pas de les marquer correctement, cela aide vraiment à les repérer. Si personne ne trouve de réponse, vous pouvez aussi m'écrire directement via \texttt{daleif (at) math dot au dot dk}.
 
 \end{paracol}
@@ -3134,7 +3134,7 @@ New Century Schoolbook\facesubseeidx{New Century Schoolbook}
 will do the trick, where the \cs{newcommand*}s are put \emph{before} the 
 \cs{documentclass} declaration (they will then override the \cs{provide...}
 definitions within the class code).
-\switchFrench\TS{0}
+\switchFrench\TS{1}
 \noindent fera l'affaire, les \cs{newcommand*} étant placés \emph{avant} la déclaration \cs{documentclass} (ils remplaceront alors les définitions  \cs{provide...} dans le code de la classe).
 
 \switchEng
@@ -3207,7 +3207,10 @@ as an example of what must be specified in your \file{clo} file.
 \begin{paracol}{2}
 \switchEng
     This group of options\index{class options!printing} includes:
+\switchFrench\TS{1}
+Ce groupe d'options\index{class options!printing} comprend:
 
+\switchEng
 \begin{itemize}
 \item[\Lopt{twoside}] for when the document will be published with printing
                         on both sides of the paper.
@@ -3280,9 +3283,14 @@ as an example of what must be specified in your \file{clo} file.
   {Class option for printing trimming marks.}
 
 \end{itemize}
+\switchFrench\TS{0}
+
+\switchEng
 %
     The defaults among the printing options\index{default!printing options} 
 are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Other options}
@@ -3290,6 +3298,9 @@ are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
 \begin{paracol}{2}
 \switchEng
     The remaining options are:
+\switchFrench\TS{1}
+Les autres options sont:
+\switchEng
 \begin{itemize}
 
 \item[\Lopt{leqno}]\index{class options!math} 
@@ -3347,9 +3358,14 @@ are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
   {\Popt{fullptlayout}}%
   {Class option to disable point truncation of certain layout lengths.}
 \end{itemize}
+\switchFrench\TS{0}
+
+\switchEng
+
 %
 None of these options are defaulted.
-
+\switchFrench\TS{1}
+Aucun de ces options n'a de valeur par défaut.
 \end{paracol}
 
 \section{Remarks}
@@ -3357,21 +3373,37 @@ None of these options are defaulted.
 \begin{paracol}{2}
 \switchEng
    Calling the class with no options is equivalent to:
+\switchFrench\TS{0}
+
+
+\end{paracol}
 \begin{lcode}
 \documentclass[letterpaper,10pt,twoside,onecolumn,openright,final]{memoir}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
    The source file for this manual starts
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \documentclass[letterpaper,10pt,extrafontsizes]{memoir}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 which is overkill as both \Lopt{letterpaper} and \Lopt{10pt} are among
 the default options.
+\switchFrench\TS{0}
 
+\switchEng
     Actual typesetting only occurs within the \Ie{document} environment. The
 region of the file between the \cmd{\documentclass} command and the start
 of the \Ie{document} environment is called the 
 \emph{preamble}\index{preamble}. This is where you ask for external packages
 and define your own macros if you feel so inclined.
+\switchFrench\TS{0}
+
+\end{paracol}
 
 \begin{syntax}
 \cmd{\flushbottom} \cmd{\raggedbottom} \\
@@ -3382,13 +3414,19 @@ and define your own macros if you feel so inclined.
 \glossary(raggedbottom)%
   {\cs{raggedbottom}}%
   {Declaration allowing the last line on a page to be at a variable height.}
+\begin{paracol}{2}
+\switchEng
 When the \Lopt{twoside} or \Lopt{twocolumn} option is selected then
 typesetting is done with \cmd{\flushbottom}, otherwise it is done
 with \cmd{\raggedbottom}.
+\switchFrench\TS{0}
 
+\switchEng
     When \cmd{\raggedbottom} is in effect LaTeX makes little attempt to
 keep a constant height for the typeblock\index{typeblock}; pages may run short.
+\switchFrench\TS{0}
 
+\switchEng
     When \cmd{\flushbottom} is in effect LaTeX ensures that the typeblock\index{typeblock}
 on each page is a constant height, except when a page break is deliberately
 introduced when the page might run short. In order to maintain a constant
@@ -3405,12 +3443,18 @@ of some pages.
 
 %    I could have made the page run short by inserting \cmd{\raggedbottom}
 % at an appropriate place, followed later by a \cmd{\flushbottom}.
+\switchFrench\TS{0}
 
+\switchEng
     If you get too many strung out pages with \cmd{\flushbottom} you may
 want to put \cmd{\raggedbottom} in the preamble\index{preamble}.
+\switchFrench\TS{0}
 
+\switchEng
     If you use the \Lopt{ebook} option you may well also want to use the
 \Lopt{12pt} and \Lopt{oneside} options.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 %#% extend
@@ -3578,7 +3622,9 @@ the norm.
 \switchEng
     The class assumes that there will be only a single page on a side of
 each piece of stock\index{stock}; two sides means that there can be two
-pages, one on the front and the other on the back. 
+pages, one on the front and the other on the back.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{figure}
@@ -3597,14 +3643,18 @@ corner, the sheet of paper\index{sheet} to be printed is infinitely wide
 and infinitely long. If you happen to have a typeblock\index{typeblock} 
 that is too wide or too long for the sheet, \ltx\ will merrily position 
 text outside the physical boundaries.
+\switchFrench\TS{0}
 
+\switchEng
     The \ltx\ parameters are often not particularly convenient if, say, 
 the top of the text must be a certain distance below the top of the page 
 and the \foredge{} margin\index{margin!foredge?\foredge} must be twice 
 the spine margin\index{margin!spine}. It is obviously possible
 to calculate the necessary values for the parameters, but it is
 not a pleasurable task.
+\switchFrench\TS{0}
 
+\switchEng
     The class provides various means of specifying the page layout, which are
 hopefully more convenient to use than the standard ones. Various
 adjustable parameters\index{page layout!class parameters} are used that 
@@ -3616,6 +3666,8 @@ recto page.
 These may be changed individually by \cmd{\setlength} or by using the 
 commands described below. Figure~\ref{fig:evenstock} illustrates the
 same parameters on a verso page.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{figure}
@@ -3642,7 +3694,9 @@ is to decide on the page size\indextwo{page}{size} and then pick an
 appropriate stock\indextwo{stock}{size} size. Selecting a standard 
 stock\indextwo{stock}{size} size will
 be cheaper than having to order specially sized stock\index{stock} material. 
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\setstocksize}\marg{height}\marg{width} \\
 \end{syntax}
@@ -3655,6 +3709,8 @@ be cheaper than having to order specially sized stock\index{stock} material.
 \glossary(stockwidth)%
   {\ls{stockwidth}}%
   {Width of the stock paper.}
+\begin{paracol}{2}
+\switchEng
     The class options\index{stock paper size option} 
 provide for some common stock\indextwo{stock}{size} sizes. 
 So if you have specified the class option \texttt{a4paper} and intend
@@ -3662,24 +3718,31 @@ to print on A4, then you have no need for \cmd{\setstocksize}, proceed
 directly to section~\ref{sec:typeblock2}. Alternatively, the class
 provide settings for many other standard stock sizes, see
 \tref{tab:sizeoptsmetric} through \tref{tab:sizeoptsbrit}. 
+\switchFrench\TS{0}
 
-
+\switchEng
 If you have some other size that you want to use, the 
 command \cmd{\setstocksize} can be used to
 specify that the stock\index{stock!specifying size} size is 
 \meta{height} \index{stock!height} by \meta{width}\index{stock!width}. 
 For example the following specifies a stock\index{stock!size} of 9 by 4 inches:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setstocksize{9in}{4in}
 \end{lcode}
-
+\begin{paracol}{2}
+\switchEng
 The size of the page\indextwo{page}{size} must be no larger than the 
 stock\indextwo{stock}{size} but 
 may be smaller which means that after printing
 the stock\index{stock!trimmed} must be trimmed down to the size of the page.
 The page may 
 be positioned anywhere within the bounds of the stock\index{stock}.
+\switchFrench\TS{0}
 
+\switchEng
     Page layout should be conceived in terms of a double spread\index{spread};
 when you open a book in the middle what you see is a double spread --- 
 a verso page on the left and a recto page on the right with the spine 
@@ -3687,7 +3750,10 @@ between them. Most books when closed are taller\index{proportion!book}
 than they are wide; this makes them easier to hold when open
 for reading. A squarish page when opened out into a wide spread 
 makes for discomfort unless the book is supported on a table.
+\switchFrench\TS{0}
 
+
+\end{paracol}
 \begin{syntax}
 \cmd{\settrimmedsize}\marg{height}\marg{width}\marg{ratio} \\
 \end{syntax}
@@ -3700,6 +3766,8 @@ makes for discomfort unless the book is supported on a table.
 \glossary(paperwidth)%
   {\ls{paperwidth}}%
   {The width of the trimmed stock paper.}
+\begin{paracol}{2}
+\switchEng
 Initially the page size\indextwo{page}{size} is made the same as the 
 stock\indextwo{stock}{size} size, as set by the 
 paper\index{stock paper size option} size option.
@@ -3716,6 +3784,8 @@ the \lnc{\paperheight}
 and \lnc{\paperwidth} to be specified directly or as one being in a given
 ratio to the other. The potential combinations of arguments and the 
 corresponding results are listed in \tref{tab:rectsize}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -3740,21 +3810,36 @@ corresponding results are listed in \tref{tab:rectsize}.
 \switchEng
     If you have used \cmd{\setstocksize} to redefine the stock\index{stock}, 
 then to get the same page size, do:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settrimmedsize{\stockheight}{\stockwidth}{*}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 or for the page dimensions to be 90\% of the stock\index{stock} dimensions:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settrimmedsize{0.9\stockheight}{0.9\stockwidth}{*}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 
     The following are three different ways of defining an 8 by 5 inch page.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settrimmedsize{8in}{5in}{*}
 \settrimmedsize{8in}{*}{0.625}  % 5 = 0.625 times 8
 \settrimmedsize{*}{5in}{1.6}    % 8 = 1.6 times 5
 \end{lcode}
 
+\begin{paracol}{2}
+\switchEng
 If you look at a well bound hardback book you
 can see that the sheets are folded so that they are continuous at the spine, 
 where they are sewn together into the binding. The top of the pages should be
@@ -3764,7 +3849,9 @@ the stock\index{stock!trimmed} is trimmed it will be trimmed at the top.
 It will also have been
 cut at the \foredge s of the pages and at the bottom, otherwise the book
 would be unopenable and unreadable.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\settrims}\marg{top}\marg{foredge} \\
 \end{syntax}
@@ -3777,6 +3864,8 @@ would be unopenable and unreadable.
 \glossary(trimedge)%
   {\ls{trimedge}}%
   {Amount to be trimmed from the \foredge{} of the stock paper.}
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\settrims} can be used to specify 
 the amount intended to be removed from the top 
 (\meta{top}) and \foredge{} (\meta{foredge}) of the 
@@ -3787,28 +3876,42 @@ locate the page\index{page} with respect to the stock\index{stock}.
 By default the top and edge trims are zero, which means that if any trimming
 is required it will be at the spine and bottom edges of the stock
 unless \cmd{\settrims} is used to alter this.
+\switchFrench\TS{0}
 
+\switchEng
     You can either do any trim calculation for youself or let \ltx\ do it for
 you. For example, with an 8in by 5in page on 10in by 7in stock
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settrims{2in}{2in}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 specifies trimming 2in from the top and \foredge{} of the stock
 giving the desired page size. Taking a design where, say, the page 
 is 90\% of the stock size it's easy to get \ltx\ to do the calculation:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setlength{\trimtop}{\stockheight}    % \trimtop = \stockheight
 \addtolength{\trimtop}{-\paperheight}  %          - \paperheight
 \setlength{\trimedge}{\stockwidth}    % \trimedge = \stockwidth
 \addtolength{\trimedge}{-\paperwidth} %           - \paperwidth
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 which will set all the trimming to be at the top and \foredge. 
 If you wanted, say, equal trims at the top and bottom you could go 
 on and specify
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settrims{0.5\trimtop}{\trimedge}
 \end{lcode}
-\end{paracol}
 
 \fancybreak{}
 
@@ -3818,9 +3921,13 @@ See also section~\ref{sec:place-trimmed-page} --
 \emph{\titleref{sec:place-trimmed-page}}, where we present some extra
 commands. For example \cmd{\setpagecc} for placing a trimmed page
 centered on the stock.
+\switchFrench\TS{0}
 
+\switchEng
 After trimming the various methods to specify the typeblock, now
 refers to the \emph{trimmed} page, not the stock material.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{The typeblock} \label{sec:typeblock2}
@@ -3837,6 +3944,9 @@ long lines of text are difficult to read. Thus, there is a physiological
 upper limit to the width of the typeblock. From a practical viewpoint,
 a line should not be too short because then there is difficulty in justifying
 the text.
+\switchFrench\TS{1}
+Comme la page, le bloc de texte est normalement rectangulaire, et plus haut que large. Les lignes de texte doivent être disposées de manière à être faciles à lire. La pratique courante, et plus récemment les tests psychologiques, ont montré que les longues lignes de texte sont difficiles à lire. Il existe donc une limite physiologique supérieure à la largeur du bloc de texte. D'un point de vue pratique, une ligne ne doit pas être trop courte car il devient alors difficile de justifier le texte.
+
 \end{paracol}
 
 \subsection{A note on the width of the typeblock}
@@ -3853,7 +3963,10 @@ start of the next line if the eye has to jump back too far --- the same line
 may be read twice or the following line may be inadvertently jumped over.
 For double column\index{column!double} text the ideal number of characters 
 is around 45, give or take 5 or so.
+\switchFrench\TS{1}
+Des expériences ont montré que le nombre de caractères d'une ligne de texte en une seule colonne sur une page devrait se situer entre 60 et 70 pour faciliter la lecture. La fourchette peut aller jusqu'à 45 à 75~caractères, mais on considère souvent que 66 caractères est le nombre idéal. Si le texte est plus court, l'\oe il fait des allers-retours entre chaque ligne. S'il est plus long, il est difficile de repérer le début de la ligne suivante si l'\oe il doit trop reculer --- la même ligne peut être lue deux fois ou la ligne suivante peut être sautée par inadvertance. Pour un texte en double colonne, le nombre idéal de caractères est d'environ 45, à plus ou moins 5~près.
 
+\switchEng
     Bringhurst\index{Bringhurst, Robert}~\cite{BRINGHURST99} gives a 
 method for determining the number
 of characters in a line for any font\index{font!measuring}: 
@@ -3867,6 +3980,10 @@ For example, it suggests that a font with a length of 130pt should be
 set on a measure of about 26pc for a single column\index{column!single} 
 or in an 18pc wide column if there are multiple\index{column!multiple} 
 columns.
+\switchFrench\TS{1}
+Bringhurst\index{Bringhurst, Robert}~\cite{BRINGHURST99} donne une méthode pour déterminer le nombre de caractères d'une ligne pour n'importe quelle police : mesurer la longueur de l'alphabet des minuscules et utiliser une table de calibrage qui indique, pour une longueur d'alphabet et une longueur de ligne données, le nombre moyen de caractères de cette ligne. Le tableau~\ref{tab:copyfitting} est une version abrégée de la table de calibrage de Bringhurt. Par exemple, il suggère qu'une police de 130\,pt doit être utilisée avec une justification d'environ 26\,pc pour une seule colonne ou dans une colonne de 18\,pc de large s'il y a plusieurs colonnes.
+\JJnote{2021/04/14}{J'utilise le mot « calibrage » pour « copyfitting » à cause de: \url{https://helpx.adobe.com/fr/incopy/using/copyfitting-text.html}}
+
 \end{paracol}
 
 \begin{table}
@@ -3920,19 +4037,31 @@ Pts. & \multicolumn{8}{c}{Line length in picas} \\
 \switchEng
     Morten H{\o}gholm\index{H{\o}gholm, Morten} has done some curve fitting
 to the data. He determined that the expressions
+\switchFrench\TS{1}
+    Morten H{\o}gholm\index{H{\o}gholm, Morten} a ajusté des régressions linéaires et a déterminé que les équations
+
+\end{paracol}
 \begin{equation}
 L_{65} = 2.042\alpha + 33.41 \label{eq:L65}
 \end{equation}
+\begin{paracol}{2}
+\switchEng
 and
+\switchFrench\TS{2}
+et
+\end{paracol}
 \begin{equation}
 L_{45} = 1.415\alpha + 23.03 \label{eq:L45}
 \end{equation}
+\begin{paracol}{2}
+\switchEng
 fitted aspects of the data, where $\alpha$ is the length of the alphabet
 in points, and $L_{i}$ is the suggested width in points, for a line with
 $i$ characters (remember that 1pc = 12pt).
+\switchFrench\TS{1}
+\noindent correspondaient le mieux aux données, où $\alpha$ est la longueur de l'alphabet en points, et $L_{i}$ est la largeur suggérée en points, pour une ligne de $i$~caractères (souvenez-vous que 1\,pc = 12\,pt).
 
-
-
+\switchEng
 Table~\ref{tab:cmrlengths} gives the lowercase 
 alphabet\index{alphabet length} lengths for 
 some typefaces over a range of font sizes; this may be used in conjunction
@@ -3963,8 +4092,9 @@ Times Roman\facesubseeidx{Times Roman},
 for example --- which are four of the most widely available 
 typefaces --- are four faces with nothing to offer one another except
 public disagreement'.
+\switchFrench\TS{0}
 
-
+\switchEng
     The monospaced\index{font!monospaced}\index{monospaced font} fonts, 
 Courier\facesubseeidx{Courier} and Typewriter\facesubseeidx{Typewriter}
 have no place in high quality typesetting except when typesetting computer
@@ -3975,8 +4105,10 @@ Times\facesubseeidx{Times Roman} is narrow as befits its original
 design intent for typesetting narrow columns in newspapers. 
 Computer Modern\facesubseeidx{Computer Modern}
 tends towards the narrow end of the range.
+\switchFrench\TS{0}
 
 
+\end{paracol}
 \begin{syntax}
 \lnc{\xlvchars} \lnc{\lxvchars} \\
 \end{syntax}
@@ -3986,6 +4118,8 @@ tends towards the narrow end of the range.
 \glossary(lxvchars)%
   {\ls{lxvchars}}%
   {Approximate length of 65 characters.}
+\begin{paracol}{2}
+\switchEng
 Based on \tref{tab:cmrlengths}, the two lengths 
 \lnc{\xlvchars} and 
 \lnc{\lxvchars} are initially set to approximately the lengths of a 
@@ -3993,9 +4127,14 @@ line of text with
 45\index{measure!45 characters} or 
 65\index{measure!65 characters} characters, respectively, for  
 Computer Modern Roman in the type size selected for the document.
+\switchFrench\TS{0}
 
+\switchEng
     If you are using a different font or size you can use something like the 
 following to calculate and print out the length for you.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newlength{\mylen}                % a length
 \newcommand{\alphabet}{abc...xyz} % the lowercase alphabet
@@ -4007,9 +4146,13 @@ The length of this alphabet is \the\mylen. % print in document
          is \the\mylen}                    % put in log file
 \endgroup                         % end the grouping
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\typeout} macro prints its argument to the terminal and the
 log file. There is, however, an easier method.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\setxlvchars}\oarg{fontspec} \\
 \cmd{\setlxvchars}\oarg{fontspec} \\
@@ -4022,21 +4165,33 @@ log file. There is, however, an easier method.
   {\cs{setlxvchars}\oarg{fontspec}}%
   {Sets cs{lxvchars} to the length of 65 characters in the \meta{fontspec} 
    font (default \cs{normalfont}).}
+\begin{paracol}{2}
+\switchEng
 The macros \cmd{\setxlvchars} and \cmd{\setlxvchars}, which were suggested
 by Morten H{\o}gholm\index{H{\o}gholm, Morten}, 
 set the lengths \lnc{\xlvchars} and \lnc{\lxvchars}
 respecively for the font \meta{fontspec}. The default for \meta{fontspec}
 is \cmd{\normalfont}. For example, the values of \lnc{\lxvchars} and
 \lnc{\xlvchars} after calling:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setlxvchars \setxlvchars[\small\sffamily]
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 \begingroup
 are: \setlxvchars\setxlvchars[\small\sffamily]
 \lnc{\lxvchars} = \the\lxvchars, and \lnc{\xlvchars} = \the\xlvchars.
 \endgroup
+\switchFrench\TS{0}
 
+\switchEng
     Morten H{\o}gholm\footnote{Private communication} also commented:
+\switchFrench\TS{0}
+
+\switchEng
 \begin{quotation}
     \ldots I was defining some environments that had to have \lnc{\parindent}
 as their indentation. For some reason I just wrote \verb?1.5em? instead
@@ -4052,9 +4207,14 @@ was only 17.607pt.
 \end{center}
 \emph{before} \cmd{\documentclass}.
 \end{quotation}
+\switchFrench\TS{0}
+
+\switchEng
 Note that, in general, it is inadviseable to put any 
 commands\index{packages before class} before
 \cmd{\documentclass}.
+\switchFrench\TS{1}
+Notez qu'il est en général formellement déconseillé de mettre des commandes\index{packages before class} avant le \cmd{\documentclass}. 
 \end{paracol}
 
 
@@ -4106,7 +4266,9 @@ be used to place it on the paper. Alternatively the typeblock size can
 be determined by setting the margins around it. We present this later
 on in this section (see \cmd{\setlrmarginsandblock} and
 \cmd{\setulmarginsandblock}). 
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\settypeblocksize}\marg{height}\marg{width}\marg{ratio} \\
 \end{syntax}
@@ -4119,6 +4281,8 @@ on in this section (see \cmd{\setlrmarginsandblock} and
 \glossary(textwidth)%
   {\ls{textwidth}}%
   {The width of the typeblock.}
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\settypeblocksize}\index{typeblock!specifying size} 
 is similar to
 \cmd{\settrimmedsize} except that it sets the \lnc{\textheight} and 
@@ -4127,12 +4291,16 @@ The potential combinations of arguments and the
 corresponding results are listed in \tref{tab:rectsize} on \pref{tab:rectsize}.
 For instance, here are three ways of specifying
 a 6in by 3in typeblock\index{typeblock}:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settypeblocksize{6in}{3in}{*}
 \settypeblocksize{6in}{*}{0.5}
 \settypeblocksize{*}{3in}{2}
 \end{lcode}
-
+\begin{paracol}{2}
+\switchEng
     The typeblock\index{typeblock} has to be located on the page. There is 
 a relationship between the page, typeblock\index{typeblock} and 
 margins\index{margin}. The sum of the spine, or inner, 
@@ -4150,12 +4318,16 @@ typeblock\index{typeblock} with respect to the page can be viewed
 either as positioning the typeblock\index{typeblock} with respect to the edges 
 of the page or as setting the margins\index{margin} between the page and the 
 typeblock\index{typeblock}.
+\switchFrench\TS{0}
 
+\switchEng
     Remembering that the page layout should be defined in terms of the
 appearance as a spread\index{spread}, the spine margin\index{margin!spine} 
 is normally half the \foredge{} margin\index{margin!foredge?\foredge}, 
 so that the white space is equally distributed around the sides of the text. 
+\switchFrench\TS{0}
 
+\switchEng
 \begin{note}
   One will often find that using \cmd{\settypeblocksize} without
   subsequent use of \cmd{\setlrmargins} and \cmd{\setulmargins} will
@@ -4164,47 +4336,60 @@ so that the white space is equally distributed around the sides of the text.
 
   We may add auto adjustments to a future version of \theclass.
 \end{note}
+\switchFrench\TS{0}
 
-
+\switchEng
     There is more latitude in choosing the 
 proportions\index{proportion!margin} 
 of the upper and lower margins, though usually the upper 
 margin\index{margin!upper} is less than the lower margin\index{margin!lower}
 so the typeblock\index{typeblock!location} is not vertically centered.
+\switchFrench\TS{0}
 
+\switchEng
     Two methods are provided for setting the horizontal dimensions on a page.
 One is where the width of the typeblock\index{typeblock!width} 
 is fixed and the margins\index{margin} are adjustable. 
 The other method is where the size of the margins\index{margin} determines 
 the width of the typeblock\index{typeblock!width}.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\setlrmargins}\marg{spine}\marg{edge}\marg{ratio} \\
 \end{syntax}
 \glossary(setlrmargins)%
   {\cs{setlrmargins}\marg{spine}\marg{edge}\marg{ratio}}%
   {Sets the spine and \foredge{} margins for the current typeblock width.}
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\setlrmargins}\index{margin!specify width} can be used to specify
 the side margins\footnote{Only the spine margin is noted in
 \fref{fig:oddstock} and~\ref{fig:evenstock}; 
 the \foredge\ margin\index{margin!foredge?\foredge} is at the 
 opposite side of the typeblock.} 
 with the width of the page and the typeblock being fixed.
- 
+\switchFrench\TS{0}
+
+\switchEng
 Not more than one one argument value is required, with any
 unvalued arguments being denoted by an asterisk. There are several cases to 
 consider and these are tabulated in \tref{tab:lrmargins}.
+\switchFrench\TS{0}
 
+\switchEng
     In the \tablerefname, $S$ is the calculated spine 
 margin\index{margin!spine}, 
 $E$ is the calculated \foredge{} margin\index{margin!foredge?\foredge}, 
 and $P_{w}$ and $B_{w}$ are respectively the page\index{page!width} and 
 typeblock\index{typeblock!width} 
 widths. The \cmd{\setlrmargins}\index{margin!specifying size} command maintains the relationship
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{displaymath}
 S + E = K_{w}  = \textrm{constant} \mbox{\space} (= P_{w} - B_{w}).
 \end{displaymath}
-\end{paracol}
 
 \begin{table}
 \centering
@@ -4228,13 +4413,18 @@ S + E = K_{w}  = \textrm{constant} \mbox{\space} (= P_{w} - B_{w}).
 \switchEng
 The cases marked ambiguous in the \tablerefname{} are where the particular combination
 of argument values may make it impossible to guarantee the relationship.
+\switchFrench\TS{0}
 
+\switchEng
     Assuming that we have a 3in wide typeblock\index{typeblock!width} on a 5in 
 wide page and we want the spine margin\index{margin!spine} to be 0.8in and 
 the \foredge{} margin\index{margin!foredge?\foredge} to be 1.2in 
 (i.e., the \foredge{} margin is half as big again as the spine margin) 
 this can be accomplished in three ways (with the \cmd{\paperwidth} and 
 \lnc{\textwidth} being previously specified and fixed):
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 % specify spine margin
     \setlrmargins{0.8in}{*}{*}   
@@ -4250,6 +4440,8 @@ this can be accomplished in three ways (with the \cmd{\paperwidth} and
 \glossary(setlrmarginsandblock)%
   {\cs{setlrmarginsandblock}\marg{spine}\marg{edge}\marg{ratio}}%
   {Sets the spine and \foredge{} margins, modifying the typeblock width to match.}
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\setlrmarginsandblock}\index{margin!specifying size}
 can be used to specify the spine\index{margin!spine} and 
 \foredge\ margins\index{margin!foredge?\foredge}, 
@@ -4257,12 +4449,19 @@ where the page width\index{page!width} is fixed and the width of the
 typeblock\index{typeblock!width} 
 depends on the margins\index{margin}. Results
 for this command are given in \tref{tab:lrblock}. The same notation is used,
-but in this case \cmd{\setlrmarginsandblock} maintains the relationship 
+but in this case \cmd{\setlrmarginsandblock} maintains the relationship
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{displaymath}
 S + B_{w} + E = \textrm{constant} \mbox{\space} (= P_{w}).
 \end{displaymath}
+\begin{paracol}{2}
+\switchEng
 The width of the typeblock\index{typeblock} is calculated 
 from $B_{w} = P_{w} - S - E$.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -4293,6 +4492,9 @@ margin\index{margin!foredge?\foredge} to be 1.2in
 this can be accomplished in the following ways (with the \lnc{\textwidth} 
 being calculated from the previously specified \cmd{\paperwidth} and the 
 specified margins):
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 % specify both margins
     \setlrmarginsandblock{0.8in}{1.2in}{*}   
@@ -4301,9 +4503,14 @@ specified margins):
 % specify fore-edge & spine/fore-edge ratio
     \setlrmarginsandblock{*}{1.2in}{0.667}   
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 If we wanted the margins\index{margin!specifying size} to be both 1in 
 instead then any of the following 
 will do it:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 % specify both margins
     \setlrmarginsandblock{1in}{1in}{*} 
@@ -4323,6 +4530,8 @@ will do it:
 \glossary(setbinding)%
   {\cs{setbinding}\marg{length}}%
   {Adds a binding allowance to the spine margin.}
+\begin{paracol}{2}
+\switchEng
 In some cases, for example when doing a Japanese stab binding, it may be 
 desireable to add a small allowance\index{binding allowance} 
 to the spine margin for the binding.
@@ -4331,17 +4540,23 @@ effective page width by \meta{length} and later this length will be added
 on to the spine margin, thus restoring the page width to its original value.
 If you use \cmd{\setbinding} than it must be \emph{after} setting the page 
 width and \emph{before} setting the spine and fore-edge margins.
+\switchFrench\TS{0}
 
+\switchEng
     That completes the methods for specifying the horizontal spacings. There 
 are similar commands for setting the vertical spacings which are 
 described below.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\setulmargins}\marg{upper}\marg{lower}\marg{ratio} \\
 \end{syntax}
 \glossary(setulmargins)%
   {\cs{setulmargins}\marg{upper}\marg{lower}\marg{ratio}}%
   {Sets the upper and lower margins with the current typeblock height.}
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\setulmargins} can be used to 
 specify\index{margin!specifying size}
 the upper and lower margins\footnote{Only the upper margin is noted in
@@ -4358,12 +4573,19 @@ and $P_{h}$ and $B_{h}$ being the
 typeblock\index{typeblock!height}, respectively, 
 the results are shown in \tref{tab:ulmargins}.
 The \cmd{\setulmargins} command maintains the relationship
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{displaymath}
 U + L = K_{h}  = \textrm{constant} \mbox{\space} (= P_{h} - B_{h}).
 \end{displaymath}
 
+\begin{paracol}{2}
+\switchEng
     Note that in terms of the traditional \ltx\ parameters memoir's 
 \lnc{\uppermargin} is (\lnc{\topmargin} + \lnc{\headheight} + \lnc{\headsep}).
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -4384,14 +4606,14 @@ U + L = K_{h}  = \textrm{constant} \mbox{\space} (= P_{h} - B_{h}).
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
 \cmd{\setulmarginsandblock}\marg{upper}\marg{lower}\marg{ratio} \\
 \end{syntax}
 \glossary(setulmarginsandblock)%
   {\cs{setulmarginsandblock}\marg{upper}\marg{lower}\marg{ratio}}%
   {Sets the upper and lower margins, modifying the typeblock height to match.}
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\setulmarginsandblock}
 can be used to specify\index{margin!specifying size} 
 the upper\index{margin!upper} and lower margins\index{margin!lower}, 
@@ -4400,12 +4622,19 @@ is fixed and the height of the typeblock\index{typeblock!height}
 depends on the margins. Results
 for this command are given in \tref{tab:ulblock}. The same notation is used,
 but in this case \cmd{\setulmarginsandblock} maintains the
-relationship 
+relationship
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{displaymath}
 U + B_{h} + L = \textrm{constant} \mbox{\space} (P_{h}).
 \end{displaymath}
+\begin{paracol}{2}
+\switchEng
 The height of the typeblock\index{typeblock!specifying size} 
 is calculated from $B_{h} = P_{h} - U - L$.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -4431,18 +4660,22 @@ is calculated from $B_{h} = P_{h} - U - L$.
 \begin{note}
   Readers may find several folio designs in \cite{MEMDESIGN}.
 \end{note}
+\switchFrench\TS{0}
 
+\switchEng
 See also Section~\ref{sec:predefined-layouts}
 (\emph{\titleref{sec:predefined-layouts}}) for some predefined layouts.
+\switchFrench\TS{0}
 
 
-
-
+\switchEng
     This completes the methods for specifying the layout of the
 main elements of the page --- the page\index{page!specifying size} 
 size, the size of the typeblock\index{typeblock!specifying size} and the 
 margins\index{margin!specifying size} 
-surrounding the typeblock\index{typeblock!location}. 
+surrounding the typeblock\index{typeblock!location}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Headers, footers and marginal notes}
@@ -4461,19 +4694,21 @@ page, either in the header or the footer. This makes it easy to spot when
 thumbing through the book. It may be placed at the center of the footer, 
 but unless you want to really annoy the reader do not place it near
 the spine.
+\switchFrench\TS{0}
 
+\switchEng
     Often a page header contains the current chapter title, with perhaps a 
 section title on the opposite header, as aids to the reader in navigating 
 around the book. Some books put the book title into one of the headers, 
 usually the verso one, but I see 
 little point in that as presumably the reader knows which particular book he
 is reading, and the space would be better used providing more useful signposts.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \index{header!specifying size|(}
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
 \cmd{\setheadfoot}\marg{headheight}\marg{footskip} \\
 \end{syntax}
@@ -4486,12 +4721,16 @@ is reading, and the space would be better used providing more useful signposts.
 \glossary(footskip)%
   {\ls{footskip}}%
   {Distance between the bottom of the typeblock and the bottom of a footer.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\setheadfoot} macro sets the
 \lnc{\headheight} parameter to the value \meta{headheight} and the
 \lnc{\footskip} parameter to \meta{footskip}. It is usual to set the
 \lnc{\headheight} to at least the value of the \lnc{\baselineskip} of
 the normal body font.
+\switchFrench\TS{0}
 
+\end{paracol}
 
 \begin{syntax}
 \cmd{\setheaderspaces}\marg{headdrop}\marg{headsep}\marg{ratio} \\
@@ -4505,6 +4744,8 @@ the normal body font.
 \glossary(headdrop)%
   {\ls{headdrop}}%
   {Distance between the top of the trimmed page and the top of a header.}
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\setheaderspaces} is similar to \cmd{\setulmargins}.
 Using the notation $U$ for the upper margin\index{margin!upper} (as before), $H_{h}$ for the
 \lnc{\headheight}, $H_{s}$ for the \lnc{\headsep} and $D$ for the
@@ -4512,10 +4753,12 @@ Using the notation $U$ for the upper margin\index{margin!upper} (as before), $H_
 of the trimmed page and the top of the header\footnote{The head drop is not
 shown in \fref{fig:oddstock} or~\ref{fig:evenstock}.}, 
 then the macro \cmd{\setheaderspaces} maintains the relationship
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{displaymath}
 D + H_{s} = C_{h}  = \textrm{constant} \mbox{\space} (= U - H_{h}).
 \end{displaymath}
-\end{paracol}
 
 \begin{table}
 \centering
@@ -4545,13 +4788,19 @@ the \lnc{\headsep} is of more interest than the \lnc{\headdrop}.
 \index{header!specifying size|)}
 \index{footer|)}\index{header|)}
 
+\switchFrench\TS{0}
+
+
+\switchEng
 \index{marginalia|(}
    Finally, some works have marginal notes. These really come last in the 
 design scheme, providing the margins have been made big enough to accomodate 
 them. Figure~\ref{fig:evenstock} shows the marginal note parameters on a verso
 page, and also illustrates that some parameters control different 
 positions on the stock\index{stock}.
+\switchFrench\TS{0}
 
+\end{paracol}
 
 \begin{syntax}
 \cmd{\setcolsepandrule}\marg{colsep}\marg{thickness} \\
@@ -4565,6 +4814,8 @@ positions on the stock\index{stock}.
 \glossary(columnseprule)%
   {\ls{columnseprule}}%
  {Thickness of the rule in the gutter.}
+\begin{paracol}{2}
+\switchEng
     For twocolumn\index{column!double} text the width of 
 the gutter\index{gutter}
 between the columns must be specified. \ltx\ also lets you draw a 
@@ -4576,9 +4827,12 @@ to \meta{thickness}. A \meta{thickness} of 0pt means that the rule will be
 invisible. Visible rules usually have a thickness\index{rule!thickness} 
 of about 0.4pt. The total width of the twocolumns\index{column!double} 
 of text and the gutter equals the width of the typeblock\index{typeblock}.
+\switchFrench\TS{1}
+Pour un texte en deux colonnes\index{column!double}, la largeur de la gouttière\index{gutter} entre les colonnes doit être spécifiée. \ltx\ vous permet également de tracer un filet vertical au milieu de la gouttière. La macro \cmd{\setcolsepandrule} configure la largeur de la gouttière, \lnc{\columnsep}, à la valeur \meta{colsep} et l'épaisseur de la règle, \lnc{\columnseprule}, à la valeur \meta{thickness}. Une épaisseur\index{rule!thickness} de 0\,pt signifie que le filet sera invisible. Les filets apparents ont généralement une épaisseur d'environ 0,4\,point. La largeur totale des deux colonnes\index{column!double} de texte et de la gouttière est égale à la largeur du bloc de texte\index{typeblock}.
 
+\end{paracol}
 
-\fancybreak{}
+%\fancybreak{}
 
 
 \begin{syntax}
@@ -4596,7 +4850,8 @@ of text and the gutter equals the width of the typeblock\index{typeblock}.
 \glossary(marginparpush)%
   {\ls{marginparpush}}%
   {Minimum vertical distance between marginal notes.}
-
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\setmarginnotes}
 sets the parameters for marginal notes. The distance \lnc{\marginparsep} 
 between the typeblock\index{typeblock} and any note is set 
@@ -4604,7 +4859,9 @@ to \meta{separation}, the
 maximum width for a note, \lnc{\marginparwidth}, is set to \meta{width}
 and the minimum vertical distance between notes, \lnc{\marginparpush},
 is set to \meta{push}.
+\switchFrench\TS{0}
 
+\switchEng
 \begin{note}
   As of \theclass\ v3.6k, we have added an auto adjustment feature for
   \lnc{\marginparwidth}, such that unless \cmd{\setmarginnotes} have
@@ -4616,6 +4873,9 @@ is set to \meta{push}.
 
   We may add other auto adjusting features to future \theclass\ releases.
 \end{note}
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \index{marginalia|)} %|
@@ -4658,9 +4918,14 @@ directly using either \cmd{\setlength} or \cmd{\addtolength} applied to the
 parameter(s) to be modified. If you choose the latter route, those class 
 parameters which differ from the standard \ltx\ parameters will \emph{not} be
 modified. 
+\switchFrench\TS{0}
 
+\switchEng
     The general process of setting up your own page layout\index{page layout} 
 is along these lines:
+\switchFrench\TS{0}
+
+\switchEng
 \begin{itemize}
 \item Decide on the required finished page\indextwo{page}{size} size,
   and pick a stock\indextwo{stock}{size} size that is at least as
@@ -4714,20 +4979,25 @@ is along these lines:
   \lnc{\marginparsep}, \lnc{\marginparwidth} and \lnc{\marginparpush}.
 
 \end{itemize}
+\switchFrench\TS{0}
 
+\switchEng
     You can plan and specify your layout in any order that is 
 convenient to you. Each of the page layout commands is independent of the 
 others; also if
 a value is set at one point, say the \lnc{\textwidth}, and is then
 later changed in some way, only the last of the settings is used as the actual
 value.
+\switchFrench\TS{0}
 
-
+\switchEng
     Comparing \figurerefname s~\ref{fig:oddstock} and~\ref{fig:anoddpage} 
 you can see the different layout\index{page layout!parameters} parameters 
 provided by the class and used by standard
 \ltx. For convenience, and because the figures do not show all
 the parameters, the two sets of parameters are listed in \tref{tab:stockpage}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -4768,6 +5038,9 @@ Class & \ltx\ \\ \midrule
     Unless you are satisfied with the default page layout, after specifying 
 the layout that you want you have to call the \cmd{\checkandfixthelayout}
 command to finally implement your specification.
+\switchFrench\TS{0}
+
+\end{paracol}
 
 \begin{syntax}
 \cmd{\checkandfixthelayout}\oarg{algorithm} \\
@@ -4795,18 +5068,23 @@ command to finally implement your specification.
   {\ls{baselineskip}}%
   {The normal vertical distance between the baselines of adjacent lines 
    of text (depends on the size of the font).}
-
+\begin{paracol}{2}
+\switchEng
     The \cmd{\checkandfixthelayout} macro uses 
 \cmd{\checkthelayout} to
 check the page layout specification you have given, and then calls
 \cmd{\fixthelayout} to finally implement it.
+\switchFrench\TS{0}
 
+\switchEng
 The \cmd{\checkthelayout} macro checks the class layout 
 parameters\index{page layout!check parameters} to see whether  
 they have `sensible' values (e.g., the \lnc{\textwidth} is not negative)
 and, depending on the \meta{algorithm} argument, it may modify the 
 \lnc{\textheight}. It does not actually implement the layout.
+\switchFrench\TS{0}
 
+\switchEng
    When using \cmd{\flushbottom} \ltx\ expects that the \lnc{\textheight} 
 is such that an integral number of text lines in the body font will fit
 exactly into the height. If not, then it issues `underfull vbox' messages.
@@ -4815,9 +5093,14 @@ More precisely, if  $b$ is the \lnc{\baselineskip} and $t$ is the
 and $T$ is the
 \lnc{\textheight} then to avoid underfull vboxes the following relationship
 must hold
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{equation}
 T = (N-1)b + t \label{eq:heightlines}
 \end{equation}
+\begin{paracol}{2}
+\switchEng
 By default \cmd{\checkthelayout} ensures that the final \lnc{\textheight} 
 meets this criterion. The optional \meta{algorithm} argument lets you control
 just how it does this. In the following $H$ is your requested value for
@@ -4827,6 +5110,9 @@ the adjusted value, and using integer arithmetic.\footnote{In this context
 For example $99/10$ in `real arithmetic' results in $9.9$, whereas with
 integer arithmetic the result is 9, not 10.}
 The permissible values for \meta{algorithm} are:
+\switchFrench\TS{0}
+
+\switchEng
 \begin{itemize}
 \item[\texttt{fixed}] The \lnc{\textheight} is not altered. 
 \begin{equation} T = H \end{equation}
@@ -4850,6 +5136,9 @@ In contrast to \texttt{classic}, \texttt{nearest}
 will get as close to $H$ as possible even if this means that $T$ ends
 up being slightly larger than $H$.
 \end{itemize}
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \begin{table}
@@ -4881,19 +5170,31 @@ Modern 10pt font.
 In all cases the \texttt{fixed} algorithm resulted in 
 underfull vboxes. If you know the number of lines that you want, say 42,
 then requesting
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 %% setting equivalent to \setlength{\textheight}{42\baselineskip}
 \checkandfixthelayout[lines]
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 will result in the most appropriate \lnc{\textheight}.
+\switchFrench\TS{0}
 
+\switchEng
     If you use the \Lpack{calc} package you can use constructs like 
 the following in a page layout specification:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setlength{\textheight}{41\baselineskip + \topskip}
 \settypeblocksize{41\baselineskip + \topskip}{33pc}{*}
 \end{lcode}
 
+\begin{paracol}{2}
+\switchEng
     The \cmd{\fixthelayout} macro finally implements the layout,
 making due adjustement for any binding\index{binding allowance} allowance,
 and calculates the values for all the standard \ltx\ layout 
@@ -4903,23 +5204,31 @@ If you have used the class macros to change
 the layout in any way, you must call \cmd{\checkandfixthelayout} after you have
 made all the necessary changes. As an aid, the final layout parameter values
 are displayed on the terminal and written out to the log file.
+\switchFrench\TS{0}
 
+\switchEng
 At the beginning of the document we will automatically add the
 page/stock sizes etc to the output such that viewers etc reacts
 accordingly. In incase you need to manually have the class rewrite
 these sizes to the document, you can use 
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\refixpagelayout}\\
 \end{syntax}
 \glossary(refixpagelayout)%
   {\cs{refixpagelayout}}%
   {Command to reemit the document size to the output.}%
+\begin{paracol}{2}
+\switchEng
 Please note that this macro (and its name), may change in the
 future.\footnote{In a comming version, in later in 2020, we will
   hopefully be able to support changing the stock and layout mid
   document, like what is provided by the \Lpack{geometry}.}
+\switchFrench\TS{0}
 
+\end{paracol}
 
 \LMnote{2010/09/17}{added \cs{\settypeoutlayoutunit}}
 \begin{syntax}
@@ -4940,6 +5249,8 @@ future.\footnote{In a comming version, in later in 2020, we will
   {\cs{typeoutstandardlayout}}%
   {Outputs the current values of the standard \ltx\ layout parameters 
    to the terminal and log file.}
+\begin{paracol}{2}
+\switchEng
  \cmd{\typeoutlayout} writes the current class layout
 parameter\index{page layout!class parameters} values to the terminal 
 and the log file. It is called by \cmd{\checkandfixthelayout} but you can 
@@ -4948,13 +5259,17 @@ The macro \cmd{\typeoutstandardlayout} writes the
 standard layout parameter\index{page layout!LaTeX parameters?\ltx\ parameters}
  values to the terminal and log file so that you can
 compare the two sets of parameter values.
+\switchFrench\TS{0}
 
+\switchEng
 By using the macro \cmd{\settypeoutlayoutunit}, the user can change
 the unit in which the layout list is shown. Very handy when designing
 in, say, centimeters. Supported units are \texttt{pt}, \texttt{pc},
 \texttt{mm}, \texttt{cm}, \texttt{in}, \texttt{bp}, \texttt{dd} and
 \texttt{cc}, default being \texttt{pt}, see \tref{tab:units} for more
 information about the units.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Side margins}
@@ -4968,7 +5283,9 @@ verso pages. Additionally you can have different headers and footers for the
 recto and verso pages. However, in \Lopt{oneside} printing the typeblock 
 is not moved and the headers and footers are the same for both odd and 
 even pages.
+\switchFrench\TS{0}
 
+\switchEng
     Some documents are designed to have, say, a very wide righthand margin
 in which to put illustrations; this leads to needing the spine margin on
 verso pages to be much larger than the spine margin on recto pages. This
@@ -4976,6 +5293,9 @@ can be done with the \Lopt{oneside} option. However, different headers
 and footers are required for the recto and verso pages, which can only be
 done with the \Lopt{twoside} option. The way to get the desired effects
 is like this (\Lopt{twoside} is the default class option):
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \documentclass{memoir}
 %%% set up the recto page layout
@@ -4983,7 +5303,6 @@ is like this (\Lopt{twoside} is the default class option):
 \setlength{\evensidemargin}{\oddsidemargin}% after \checkandfix...
 ...
 \end{lcode}
-\end{paracol}
 
 %\section{Printing and viewing}
 
@@ -4998,7 +5317,9 @@ chosen stocksize to the output format (DVI or PDF).\footnote{In
   \cs{fixdvipslayout} that held some of the code needed to emit this
   data. With the newer engines like LuaLaTeX, this became unfeasible
   thus they we discontinued (their use now emit a warning).}
+\switchFrench\TS{0}
 
+\end{paracol}
 
 %     When \pdfltx\ is used to generate a \pixpdf\ version of a \Pclass{memoir}
 % document some special setup must be done.
@@ -5072,7 +5393,7 @@ chosen stocksize to the output format (DVI or PDF).\footnote{In
 % \special{!TeXDict begin <</Tumble true>> setpagedevice end} 
 % \end{lcode}
 % %<< because of emacs ...
-\end{paracol}
+
 
 \section{Example} \label{sec:pexamp}
 
