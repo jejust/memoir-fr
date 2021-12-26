@@ -2,6 +2,7 @@
 
 - "occured" --> "occurred".
 - "authorative" --> "authoritative".
+- "comming" --> "coming".
 
 - Add the bib entry:
 ```

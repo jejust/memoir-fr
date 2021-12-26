@@ -1,15 +1,14 @@
 #!/bin/bash
 
 
-pdflatex memman-fr
-pdflatex memman-fr
+pdflatex memman
+pdflatex memman
 
-bibtex memman-fr
+bibtex memman
 
-pdflatex memman-fr
+pdflatex memman
 
-bibtex memman-fr
+bibtex memman
 
-pdflatex memman-fr
-pdflatex memman-fr
-
+pdflatex memman
+pdflatex memman
