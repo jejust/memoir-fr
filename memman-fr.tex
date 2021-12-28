@@ -5403,6 +5403,9 @@ chosen stocksize to the output format (DVI or PDF).\footnote{In
 and US letterpaper\index{paper!size!letterpaper} stock\index{stock},
 wanting to do the least amount of trimming. The layout requirements
 are as follows.
+\switchFrench\TS{0}
+
+\switchEng
 \begin{itemize}\tightlist
 \item The width of the typeblock\index{typeblock} should be such that
   there are the optimum number of characters per line.
@@ -5418,56 +5421,95 @@ are as follows.
   marginal\index{marginalia} notes, so we can ignore any settings for
   these.
 \end{itemize}
+\switchFrench\TS{0}
+
+\switchEng
     We can either do the maths ourselves or get \ltx\ to do it for us. Let's
 use \ltx. First we will work out the size of the largest sheet that can be
 cut from A4\index{paper!size!A4} and 
 letterpaper\index{paper!size!letterpaper}, 
 whose sizes are \abybm{297}{210}{mm} and 
-\abybm{11}{8.5}{in}; A4 is taller and narrower than letterpaper. 
+\abybm{11}{8.5}{in}; A4 is taller and narrower than letterpaper.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settrimmedsize{11in}{210mm}{*}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The stocksize is defined by the class option, which could be either
 \Lopt{letterpaper} or \Lopt{a4paper}, but we have to work out the
 trims to reduce the stock\index{stock} to the page. To make life easier, 
 we will only trim
 the \foredge{} and the bottom of the stock\index{stock}, so the 
 \lnc{\trimtop} is zero.
-The \lnc{\trimtop} and \lnc{\trimedge} are easily specified by 
+The \lnc{\trimtop} and \lnc{\trimedge} are easily specified by
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setlength{\trimtop}{0pt} 
 \setlength{\trimedge}{\stockwidth}
 \addtolength{\trimedge}{-\paperwidth}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 Or if you are using the \Lpack{calc} package, perhaps:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settrims{0pt}{\stockwidth - \paperwidth}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 Specification of the size of the typeblock\index{typeblock} is also easy 
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settypeblocksize{*}{\lxvchars}{1.618}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 and now the upper and lower margins\index{margin!upper}\index{margin!lower} 
 are specified by
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setulmargins{50pt}{*}{*}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The spine and \foredge\ margins\index{margin!spine}\index{margin!foredge?\foredge} 
-are specified just by the value of the golden section\index{golden section}, 
-via 
+are specified just by the value of the golden section\index{golden section}, via 
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setlrmargins{*}{*}{1.618}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The only remaining calculation to be done is the \lnc{\headmargin} and 
 \lnc{\headsep}. Again this just involves using a ratio
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setheaderspaces{*}{*}{1.618}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 To finish off we have to make sure that the layout is changed 
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \checkandfixthelayout
 \end{lcode}
-\end{paracol}
 
 \subsection{The page layout of this manual}
 
@@ -5486,6 +5528,9 @@ To finish off we have to make sure that the layout is changed
 \begin{paracol}{2}
 \switchEng
     The page layout for this manual is defined in the preamble\index{preamble} as:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \settrimmedsize{11in}{210mm}{*}
 \setlength{\trimtop}{0pt}
@@ -5499,20 +5544,28 @@ To finish off we have to make sure that the layout is changed
 \setheaderspaces{*}{2\onelineskip}{*}
 \checkandfixthelayout
 \end{lcode}
-
+\begin{paracol}{2}
+\switchEng
 An illustration of the layout is shown in \fref{fig:thispagelay} which also
 lists the parameter values resulting from the code above, to the nearest point.
+\switchFrench\TS{0}
 
+\switchEng
 I initially used the layout defined in \S\ref{sec:pexamp}, which I thought
 looked reasonable, but then I decided to use the one above in order
 to save paper\index{paper} when anyone printed out the manual. The wider
 typeblock\index{typeblock} also makes it easier for TeX when dealing with 
 lines that include unhyphenatable text, like the LaTeX code.
+\switchFrench\TS{0}
 
+\switchEng
     Andreas Mathias, via Rolf Niepraschk,\footnote{Email 
 from \url{niepraschk@ptb.de} on 2002/02/05.}
 has suggested that the following might be better for typesetting the manual
 on A4 paper.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \documentclass[a4paper]{memoir}
 ...
@@ -5528,10 +5581,13 @@ on A4 paper.
 \setheaderspaces{*}{2\onelineskip}{*}
 \checkandfixthelayout
 \end{lcode}
-
+\begin{paracol}{2}
+\switchEng
     However, the layout that I have provided will print on both letterpaper
 and A4 sized stock even if it might look better if it was designed for always
 being printed on one or the other.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Predefined layouts}
@@ -5545,12 +5601,16 @@ and \Lopt{a4paper} size options. They might be a bit problematic, though,
 when the page is much smaller, particularly with respect to the space 
 alloted for marginal notes. You perhaps will find the \Lpack{layouts}
 package~\cite{LAYOUTS} useful for checking the page layout.
+\switchFrench\TS{0}
 
+\switchEng
    Some non-default layouts are provided via the commands \cmd{\medievalpage},
 \cmd{\isopage} and \cmd{\semiisopage}; these set the size and position of the
 typeblock with respect to the page. After using any of these commands you
 \emph{must} call \cmd{\checkandfixthelayout} (and after having made any other
 changes to match the new layout).
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{figure}[p]
@@ -5630,14 +5690,14 @@ changes to match the new layout).
 
 
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
 \cmd{\medievalpage}\oarg{spine} \\
 \end{syntax}
 \glossary(medievalpage)%
   {\cs{medievalpage}\oarg{spine}}%
   {Generates a page layout according to the principles of early printers.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\medievalpage} command generates the position and size of the 
 typeblock according to the principles of medieval scribes and the early 
 printers, as discovered and described by Jan Tschichold~\cite{TSCHICHOLD91}.
@@ -5648,12 +5708,19 @@ around the typeblock are in the ratio 2:3:4:6. Typically the spine margin
 was 1/9 the width of the page, which is what \cmd{\medievalpage} assumes
 by default. This can be changed with the optional \meta{spine} argument. For
 example, to get narrower margins with the spine being 1/12 the page width:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \medievalpage[12]
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 Note that \meta{spine} must be an integer. See
 Figures~\ref{fig:pagefirstlay}--\ref{fig:pagelastlay}.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\isopage}\oarg{spine} \\
 \cmd{\semiisopage}\oarg{spine} \\
@@ -5665,40 +5732,60 @@ Figures~\ref{fig:pagefirstlay}--\ref{fig:pagelastlay}.
   {\cs{semiisopage}\oarg{spine}}%
   {Generates a page layout especially suited to ISO proportioned paper but with
    smaller margins than \cs{isopage}.}
+\begin{paracol}{2}
+\switchEng
 Robert Bringhurst~\cite{BRINGHURST99} presented a page layout that was
 especially suitable for ISO proportioned paper, although it can be applied to
 any page proportion. The \cmd{\isopage} command implements this design. The
 spine margin is normally 1/9 the page width and the top margin is 1/9 the
 page height, and the \foredge\ and bottom margins are respectively twice the
 spine and top margins. 
+\switchFrench\TS{0}
 
+\switchEng
    The \cmd{\semiisopage} layout is similar where the spine margin by default 
 is 1/9 the page width, but the top margin is the same as the spine margin.
 Again the \foredge\ and bottom margins are respectively twice the
 spine and top margins. 
+\switchFrench\TS{0}
 
+\switchEng
 The size of the spine (and top) margins can be changed by using the optional
 \meta{spine} argument, which must be an integer. To set the spine margin to
 be, for example, 1/8 of the page width:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \semiisopage[8]% or \isopage[8]
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The same factor applies to both the spine and top margins in the case
 of \cmd{\isopage}.
+\switchFrench\TS{0}
 
+\switchEng
     Spreads showing a variety of these layouts are in \fref{fig:pagefirstlay} 
 through \ref{fig:pagelastlay}. These were produced with the aid of the
 \Lpack{layouts} package.
+\switchFrench\TS{0}
+
+\end{paracol}
 
 
 \section{Place trimmed page on the stock}
 \label{sec:place-trimmed-page}
 
+\begin{paracol}{2}
+\switchEng
 As mentined earlier, when the resulting paper size is smaller than the
 stock that it is printed on, you'll need to specify the trimmed size
 (the resulting paper size) using \cmd{\settrimmedsize} and you'll want
 to position that in relation to the stock using \cmd{\settrims}. 
+\switchFrench\TS{0}
 
+\switchEng
 There are nine common layouts, so we made nine easy tro use
 macros. The take the same arguments as \cmd{\settrimmedsize} and then
 automatically add an appropriate \cmd{\settrims}.
@@ -5780,6 +5867,9 @@ Note: Always remember to combine this with \cmd{\checkandfixthelayout}!
 For instance, if you are using letterpaper stock but want the final trimmed
 page size to be A5, then this will put page area at the bottom left of the
 stock.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 % letterpaper stock added via class option  
 \pagebv % sets \paperheight and \paperwidth for A5 paper
@@ -5787,11 +5877,14 @@ stock.
 ...
 \checkandfixthelayout
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The above macros position the page at the left of the stock because usually 
 trimming of the stock is limited to the top, right, and bottom, the left 
 being the spine when the pages are finally assembled.
+\switchFrench\TS{0}
 
-
+\switchEng
 % To reposition the page to
 % the center of the stock the following will halve the top and edge
 % trims.
@@ -5819,7 +5912,9 @@ being the spine when the pages are finally assembled.
 In Figure~\ref{fig:setpage} we show the effect of the nine
 \cmd{\setpageXX}. The code used for the examples is similar to the
 code below, and then the result was scaled down.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{lcode}
 \documentclass[showtrims]{memoir}
 \trimLmarks
@@ -5838,7 +5933,6 @@ code below, and then the result was scaled down.
 \end{vplace}
 \end{document}
 \end{lcode}
-\end{paracol}
 
 
 
@@ -5897,6 +5991,8 @@ code below, and then the result was scaled down.
     Presumably you will be creating a document that contains at least some
 text. In this chapter I talk a little about the kinds of fonts that you might
 use and how text appears on a page.
+\switchFrench\TS{1}
+Vous allez très certainement créer un document qui contiendra au moins un peu de texte. Dans ce chapitre, je présente rapidement les types de polices que vous pouvez utiliser et la façon dont le texte apparaît sur une page.
 \end{paracol}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -5921,12 +6017,16 @@ TrueType\indexsupsubmain{font}{TrueType} fonts are represented in terms
 of the curves outlining the character, and it is the job of the printing
 machine to fill in the outlines (with a bunch of tiny dots). Fonts of
 this type are called \emph{outline fonts}\indextwo{outline}{font}.
+\switchFrench\TS{0}
 
+\switchEng
 \metafont\ fonts
 are designed for a particular display resolution and cannot reasonably 
 be scaled to match an arbitrary display device, whereas outline fonts can be 
 scaled before they are physically displayed.
+\switchFrench\TS{0}
 
+\switchEng
 \PWnote{2009/04/27}{Extended the font use/installation references}
     There is an excessive number of \pscript\indexsupsubmain{font}{PostScript}
 and TrueType\indexsupsubmain{font}{TrueType}
@@ -5958,6 +6058,9 @@ into \ixpscript\ printers, you may
 well find that the work has been done for you and it's just a question
 of using the appropriate 
 package.%
+\switchFrench\TS{0}
+
+\switchEng
 \pagenote[using the appropriate package]{I have found Christopher
 League's\index{League, Christopher} \textit{\tx\ support for the FontSite
 500 CD}, obtainable from \url{http:contrapunctus.net/fs500tex}, 
@@ -6054,7 +6157,9 @@ There are a dozen miscellaneous symbol fonts which include, among others,
 arrows, borders, fleurons\index{fleuron} and various icons.
 \end{description}
 }  % end pagenote
+\switchFrench\TS{0}
 
+\switchEng
     A standard \ltx\ distribution includes some 
 \pscript\indexsupsubmain{font}{PostScript} fonts and the packages to support
 them are in the \Ppack{psnfss}\index{psnfss?\Ppack{psnfss}}
@@ -6063,6 +6168,8 @@ symbols rather than characters. Table~\ref{tab:palatinoglyphs}, although it
 is specifically for Palatino\facesubseeidx{Palatino}, shows the glyphs 
 typically available. Tables~\ref{tab:symbolglyphs} and~\ref{tab:dingglyphs}
 show the glyphs in the two symbol fonts.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -6090,6 +6197,9 @@ show the glyphs in the two symbol fonts.
 \switchEng
 These supplied \pscript\ fonts, their respective \ltx\ fontfamily\index{fontfamily} names,
 and running text examples of each, are:
+\switchFrench\TS{0}
+
+\switchEng
 \begin{description}
 \item[ITC Avant Garde Gothic\facesubseeidx{Avant Garde Gothic}] {\LXfont{pag} 
   is a geometric sans type designed 
@@ -6225,7 +6335,9 @@ The fontfamily name is \pfontfam{pzd}.
 
 
 \end{description}
+\switchFrench\TS{0}
 
+\switchEng
     In \ltx\ there are three characteristics that apply to a font. These are:
 (a)~the shape\index{font characteristic!shape}, 
 (b)~the series\index{font characteristic!series} 
@@ -6233,6 +6345,8 @@ The fontfamily name is \pfontfam{pzd}.
 and (c)~the family\index{font characteristic!family}. 
 Table \ref{tab:fontcat} illustrates these and lists the relevant 
 commands\index{font commands} to access the different font categories.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -6288,6 +6402,9 @@ commands\index{font commands} to access the different font categories.
 of the text ---
 is an upright, medium, roman font of a size specified by the font size
 option for the \cmd{\documentclass}.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{syntax}
 \cmd{\normalfont} \\
 \end{syntax}
@@ -6295,13 +6412,19 @@ option for the \cmd{\documentclass}.
   {\cs{normalfont}}%
   {Declaration setting the font to the normal body font (upright, Roman,
 and medium weight).} 
+\begin{paracol}{2}
+\switchEng
 The declaration \cmd{\normalfont} sets the font to be the normal body font.
+\switchFrench\TS{0}
 
+\switchEng
     There is a set of font declarations\index{font declarations}, as shown in \tref{tab:fontdecl},
 that correspond to the commands listed in \tref{tab:fontcat}. The commands
 are most useful when changing the font for a word or two, while the 
 declarations are more convenient when you want to typeset longer passages
 in a different font.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -6355,7 +6478,9 @@ in a different font.
 \switchEng
     Do not go wild seeing how many different kinds of fonts you can cram into
 your work as in example~\ref{egbadmf}.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{egsource}{egbadmf}
 Mixing \textbf{different series, \textsf{families}} and
 \textsl{\texttt{shapes,}} \textsc{especially in one sentence,} 
@@ -6367,9 +6492,13 @@ Mixing \textbf{different series, \textsf{families}} and
 \textsl{\texttt{shapes,}} \textsc{especially in one sentence,} 
 is usually \emph{highly inadvisable!}
 \end{egresult}
-
+\begin{paracol}{2}
+\switchEng
     On the other hand there are occasions when several fonts may be used
 for a reasonable effect, as in example~\ref{eg16}.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{egsource}{eg16}
 \begin{center}
 \textsc{Des Dames du Temps Jadis}
@@ -6420,13 +6549,17 @@ But where are the snows of yesteryear?
 \glossary(emph)%
   {\cs{emph}\marg{text}}%
   {Use a change in font to emphasise \meta{text}.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\emph}\index{emphasis} command is a font changing command that 
 does not fit
 into the above scheme of things. What it does is to typeset its \meta{text}
 argument using a different font than the surrounding text. By default,
 \cmd{\emph} switches between an upright shape and an italic shape. The
 commands can be nested to produce effects like those in the next example.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{egsource}{eg:emph}
 The \verb?\emph? command is used to produce some text that 
 should be \emph{emphasised for some reason and can be
@@ -6448,13 +6581,22 @@ just like in this sentence.
 \glossary(eminnershape)%
   {\cs{eminnershape}\marg{shape}}%
   {Font shape for emphasized text within emphasized text.}%
+\begin{paracol}{2}
+\switchEng
 If the \cmd{\emph} command is used within italic text then the
 newly emphasized text will be typeset using the 
 \cmd{\eminnershape} font shape. The default definition is:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand*{\eminnershape}{\upshape}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 which you can change if you wish.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 
