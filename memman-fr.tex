@@ -2158,7 +2158,22 @@ Si la question est liée à \Mname, n'oubliez pas de la marquer comme telle.
 Macro command syntax is enclosed in a rectangular box.\\
 For referential purposes, arguments are denoted by \meta{arg} \\
 \end{syntax}
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+Les conventions suivantes sont utilisées:
+
+\begin{itemize}
+\item \Pclass{Les noms des classes\index{class} et packages\index{package}
+              \ltx\ sont composés dans cette police.}
+\item \Popt{Les options\index{option} de classes sont composées dans cette police.}
+\item \Ppstyle{Les noms des styles de chapitres\index{chapterstyle} et des styles
+               de pages\index{pagestyle} sont composés dans cette police.}
+\item \texttt{Le code \ltx\ est composé dans cette police.}
+\item \Pprog{Les noms des programmes sont dans cette police.}
+\end{itemize}
+\begin{syntax}
+La syntaxe des macros est présentée dans un cadre rectangulaire.\\
+Les arguments sont référencés sous la forme \meta{arg}.\\
+\end{syntax}
 
 \end{paracol}
 
@@ -3207,7 +3222,7 @@ as an example of what must be specified in your \file{clo} file.
 \begin{paracol}{2}
 \switchEng
     This group of options\index{class options!printing} includes:
-\switchFrench\TS{1}
+\switchFrench\TS{2}
 Ce groupe d'options\index{class options!printing} comprend:
 
 \switchEng
@@ -3283,13 +3298,76 @@ Ce groupe d'options\index{class options!printing} comprend:
   {Class option for printing trimming marks.}
 
 \end{itemize}
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+
+\begin{itemize}
+\item[\Lopt{twoside}] lorsque le document sera imprimé en recto-verso (les deux faces de chaque feuille seront imprimées).
+\glossary(twosideco)%
+  {\Popt{twoside}}%
+  {Class option for text on both sides of the paper.}
+\item[\Lopt{oneside}] lorsque le document sera imprimé sur une seule face de chaque feuille.
+\glossary(onesideco)%
+  {\Popt{oneside}}%
+  {Class option for text on only one side of the paper.}
+
+                        Les options \Lopt{twoside} et \Lopt{oneside} sont mutuellement exclusives.
+
+\item[\Lopt{onecolumn}] chaque page comporte une seule colonne\index{column!single} de texte.
+\glossary(onecolumnco)%
+  {\Popt{onecolumn}}%
+  {Class option for a single column.}
+\item[\Lopt{twocolumn}] deux colonnes\index{column!double} de texte de même largeur sur chaque page.
+\glossary(twocolumnco)%
+  {\Popt{twocolumn}}%
+  {Class option for two columns.}
+
+                        Les options \Lopt{onecolumn} et \Lopt{twocolumn} sont mutuellement exclusives.
+
+\item[\Lopt{openright}] chaque chapitre\index{chapter} commence sur une page recto (une pagee de droite, donc).
+\glossary(openrightco)%
+  {\Popt{openright}}%
+  {Class option for chapters to start on recto pages.}
+\item[\Lopt{openleft}] chaque chapitre\index{chapter} commence sur une page verso (une page de gauche).
+\glossary(openleftco)%
+  {\Popt{openleft}}%
+  {Class option for chapters to start on verso pages.}
+\item[\Lopt{openany}] un chapitre\index{chapter} peut commencer soit sur une page recto soit sur une page verso.
+\glossary(openanyco)%
+  {\Popt{openany}}%
+  {Class option for chapters to start on a recto or a verso page.}
+
+                        Les options \Lopt{openright}, \Lopt{openleft} et 
+                        \Lopt{openany} sont mutuellement exclusives.
+
+\item[\Lopt{final}] pour fournir un prêt-à-clicher, c'est-à-dire une version de votre travail prête à être directement reproduite par l'imprimeur.
+\glossary(finalco)%
+  {\Popt{final}}%
+  {Class option for final document.}
+\item[\Lopt{draft}] cette option signale les lignes trop pleines par des barres noires et permet de mettre en évidence certaines modifications. Il peut y avoir d'autres effets, en particulier avec certains packages.
+\glossary(draftco)%
+  {\Popt{draft}}%
+  {Class option for draft document.}
+\item[\Lopt{ms}] cette option donne l'impression que le document a été préparé sur une machine à écrire. Certains éditeurs préfèrent recevoir des soumissions de mauvaise qualité.
+\glossary(msco)%
+  {\Popt{ms}}%
+  {Class option for `typewritten manuscript'.}
+
+                   Les options \Lopt{final}, \Lopt{draft} et \Lopt{ms}
+                   sont mutuellement exclusives.
+
+\item[\Lopt{showtrims}] cette option permet de faire apparaître des marques aux coins de la feuille, pour montrer où le papier\index{stock} doit être coupé pour obtenir la taille finale de la page.
+\glossary(showtrimsco)%
+  {\Popt{showtrims}}%
+  {Class option for printing trimming marks.}
+
+\end{itemize}
 
 \switchEng
 %
     The defaults among the printing options\index{default!printing options} 
 are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Les valeurs par défaut des options d'impression sont les suivantes: \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright} et \Lopt{final}.
 
 \end{paracol}
 
