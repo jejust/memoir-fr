@@ -3304,37 +3304,37 @@ Ce groupe d'options\index{class options!printing} comprend:
 \item[\Lopt{twoside}] lorsque le document sera imprimé en recto-verso (les deux faces de chaque feuille seront imprimées).
 \glossary(twosideco)%
   {\Popt{twoside}}%
-  {Class option for text on both sides of the paper.}
+  {Option de classe pour un document recto-verso.}
 \item[\Lopt{oneside}] lorsque le document sera imprimé sur une seule face de chaque feuille.
 \glossary(onesideco)%
   {\Popt{oneside}}%
-  {Class option for text on only one side of the paper.}
+  {Option de classe pour un document en recto seul.}
 
                         Les options \Lopt{twoside} et \Lopt{oneside} sont mutuellement exclusives.
 
 \item[\Lopt{onecolumn}] chaque page comporte une seule colonne\index{column!single} de texte.
 \glossary(onecolumnco)%
   {\Popt{onecolumn}}%
-  {Class option for a single column.}
+  {Option de classe pour un texte en une seule colonne.}
 \item[\Lopt{twocolumn}] deux colonnes\index{column!double} de texte de même largeur sur chaque page.
 \glossary(twocolumnco)%
   {\Popt{twocolumn}}%
-  {Class option for two columns.}
+  {Option de classe pour un texte en deux colonnes.}
 
                         Les options \Lopt{onecolumn} et \Lopt{twocolumn} sont mutuellement exclusives.
 
 \item[\Lopt{openright}] chaque chapitre\index{chapter} commence sur une page recto (une pagee de droite, donc).
 \glossary(openrightco)%
   {\Popt{openright}}%
-  {Class option for chapters to start on recto pages.}
+  {Option de classe pour que les chapitres commencent toujours sur une page recto.}
 \item[\Lopt{openleft}] chaque chapitre\index{chapter} commence sur une page verso (une page de gauche).
 \glossary(openleftco)%
   {\Popt{openleft}}%
-  {Class option for chapters to start on verso pages.}
+  {Option de classe pour que les chapitres commencent toujours sur une page verso.}
 \item[\Lopt{openany}] un chapitre\index{chapter} peut commencer soit sur une page recto soit sur une page verso.
 \glossary(openanyco)%
   {\Popt{openany}}%
-  {Class option for chapters to start on a recto or a verso page.}
+  {Option de classe pour que les chapitres commencent indifféremment sur une page recto ou verso.}
 
                         Les options \Lopt{openright}, \Lopt{openleft} et 
                         \Lopt{openany} sont mutuellement exclusives.
@@ -3342,15 +3342,15 @@ Ce groupe d'options\index{class options!printing} comprend:
 \item[\Lopt{final}] pour fournir un prêt-à-clicher, c'est-à-dire une version de votre travail prête à être directement reproduite par l'imprimeur.
 \glossary(finalco)%
   {\Popt{final}}%
-  {Class option for final document.}
+  {Option de classe pour obtenir la version finale du document.}
 \item[\Lopt{draft}] cette option signale les lignes trop pleines par des barres noires et permet de mettre en évidence certaines modifications. Il peut y avoir d'autres effets, en particulier avec certains packages.
 \glossary(draftco)%
   {\Popt{draft}}%
-  {Class option for draft document.}
+  {Option de classe pour obtenir une version boruillon du document.}
 \item[\Lopt{ms}] cette option donne l'impression que le document a été préparé sur une machine à écrire. Certains éditeurs préfèrent recevoir des soumissions de mauvaise qualité.
 \glossary(msco)%
   {\Popt{ms}}%
-  {Class option for `typewritten manuscript'.}
+  {Option de classe pour obtenir une mise en forme \og{}type machine à écrire\fg{}.}
 
                    Les options \Lopt{final}, \Lopt{draft} et \Lopt{ms}
                    sont mutuellement exclusives.
@@ -3358,7 +3358,7 @@ Ce groupe d'options\index{class options!printing} comprend:
 \item[\Lopt{showtrims}] cette option permet de faire apparaître des marques aux coins de la feuille, pour montrer où le papier\index{stock} doit être coupé pour obtenir la taille finale de la page.
 \glossary(showtrimsco)%
   {\Popt{showtrims}}%
-  {Class option for printing trimming marks.}
+  {Option de classe pour faire apparaître les traits de coupe.}
 
 \end{itemize}
 
@@ -3366,7 +3366,7 @@ Ce groupe d'options\index{class options!printing} comprend:
 %
     The defaults among the printing options\index{default!printing options} 
 are \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright}, and \Lopt{final}.
-\switchFrench\TS{1}
+\switchFrench\TS{2}
 Les valeurs par défaut des options d'impression sont les suivantes: \Lopt{twoside}, \Lopt{onecolumn}, \Lopt{openright} et \Lopt{final}.
 
 \end{paracol}
@@ -3376,7 +3376,7 @@ Les valeurs par défaut des options d'impression sont les suivantes: \Lopt{twosid
 \begin{paracol}{2}
 \switchEng
     The remaining options are:
-\switchFrench\TS{1}
+\switchFrench\TS{2}
 Les autres options sont:
 \switchEng
 \begin{itemize}
@@ -3436,14 +3436,82 @@ Les autres options sont:
   {\Popt{fullptlayout}}%
   {Class option to disable point truncation of certain layout lengths.}
 \end{itemize}
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+
+eqno : les équations seront numérotées à gauche (par défaut, elles sont numérotées à droite).
+
+fleqn : les environnements mathématiques affichés seront mis en retrait sur une distance de "\mathindent" par rapport à la marge de gauche (par défaut, les environnements sont centrés).
+
+openbib : chaque partie d'une entrée bibliographique commence sur une nouvelle ligne, la deuxième ligne et les suivantes étant indentées de "\bibindent" (par défaut, les entrées sont continues et sans indentation).
+
+\item[\Lopt{leqno}]\index{class options!math} 
+     equations will be numbered at the left (the default is
+     to number them at the right).
+\glossary(leqnoco)%
+  {\Popt{leqno}}%
+  {Class option for numbering equations at the left.}
+
+\item[\Lopt{fleqn}]\index{class options!math} 
+     displayed math environments will be indented an amount
+     \cmd{\mathindent} from the left margin\index{margin} (the default is to
+     center the environments).
+\glossary(fleqnco)%
+  {\Popt{fleqn}}%
+  {Class option for fixed indentation of displayed math.}
+
+\item[\Lopt{openbib}]\index{class options!bibliography} 
+     each part of a bibliography\index{bibliography} entry will start on a
+                        new line, with second and succeding lines indented
+                        by \cmd{\bibindent} (the default is for an entry
+                        to run continuously with no indentations).
+\glossary(openbibco)%
+  {\Popt{openbib}}%
+  {Class option for indenting continuation lines in a bibliography.}
+
+\item[\Lopt{article}]\index{class options!article} 
+  typesetting \emph{simulates} the \Lclass{article} class,
+  but the \cmd{\chapter} command is not disabled, basically
+  \cmd{\chapter} will behave as if it was \cmd{\section}.
+  Chapters\index{chapter} do not start a new page and chapter
+  headings\index{heading!chapter} are typeset 
+  like a section heading\index{heading!sections}. The numbering of 
+  figures\index{figure}, etc., is continuous
+  and not per chapter. However, a \cmd{\part} command still puts
+  its heading\index{heading!part} on a page by itself.
+\glossary(articleco)%
+  {\Popt{article}}%
+  {Class option for simulating the \Pclass{article} class.}
+
+article : la mise en page simule la classe article, mais la commande "\chapitre" n'est pas désactivée, en fait "\chapitre" se comportera comme s'il s'agissait d'une "\section". Les chapitres ne commencent pas sur une nouvelle page et les titres de chapitre sont composés comme des titres de section. La numérotation des figures, etc., est continue et non par chapitre. Cependant, une commande "\part" positionne toujours son titre sur une page à part.
+
+\item[\Lopt{oldfontcommands}]\index{class options!fonts} 
+  makes the old, deprecated LaTeX version~2.09
+  font commands available. Warning messages will be produced whenever
+  an old font command is encountered.
+\glossary(oldfontcommandsco)%
+  {\Popt{oldfontcommands}}%
+  {Class option for permitting obsolete, deprecated font commands.}
+
+
+\item[\Lopt{fullptlayout}]\index{class options!layout truncation} 
+  disable point trunction of certain layout lengths, for example
+  \cmd{\textwidth}. The default is to round these of to a whole number
+  of points, this option disables this feature.
+  \glossary(fullptlayout)%
+  {\Popt{fullptlayout}}%
+  {Class option to disable point truncation of certain layout lengths.}
+\end{itemize}
+
+oldfontcommands : rend disponibles les anciennes commandes de polices de caractères de LaTeX version 2.09 (qui sont désormais obsolètes). Des messages d'avertissement seront cependant produits chaque fois qu'une ancienne commande de police sera rencontrée.
+
+fullptlayout : désactive l'arrondi de certaines longueurs utilisées pour la mise en page, par exemple "\textwidth". Par défaut, ces longueurs sont arrondies à un nombre entier de points, cette option désactive cette fonctionnalité.
 
 \switchEng
-
 %
 None of these options are defaulted.
-\switchFrench\TS{1}
-Aucun de ces options n'a de valeur par défaut.
+\switchFrench\TS{2}
+Aucune de ces options n'a de valeur par défaut.
+
 \end{paracol}
 
 \section{Remarks}
@@ -3451,8 +3519,8 @@ Aucun de ces options n'a de valeur par défaut.
 \begin{paracol}{2}
 \switchEng
    Calling the class with no options is equivalent to:
-\switchFrench\TS{0}
-
+\switchFrench\TS{2}
+   Appeler la classe sans aucune option est équivalent à:
 
 \end{paracol}
 \begin{lcode}
@@ -3460,9 +3528,9 @@ Aucun de ces options n'a de valeur par défaut.
 \end{lcode}
 \begin{paracol}{2}
 \switchEng
-   The source file for this manual starts
-\switchFrench\TS{0}
-
+   The source file for this manual starts with:
+\switchFrench\TS{2}
+   Le fichier source de ce manuel commence par:
 \end{paracol}
 \begin{lcode}
 \documentclass[letterpaper,10pt,extrafontsizes]{memoir}
@@ -3471,7 +3539,8 @@ Aucun de ces options n'a de valeur par défaut.
 \switchEng
 which is overkill as both \Lopt{letterpaper} and \Lopt{10pt} are among
 the default options.
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+ce qui est superflu puisque \Lopt{letterpaper} et \Lopt{10pt} font partie des options par défaut.
 
 \switchEng
     Actual typesetting only occurs within the \Ie{document} environment. The
@@ -3479,7 +3548,9 @@ region of the file between the \cmd{\documentclass} command and the start
 of the \Ie{document} environment is called the 
 \emph{preamble}\index{preamble}. This is where you ask for external packages
 and define your own macros if you feel so inclined.
-\switchFrench\TS{0}
+
+\switchFrench\TS{1}
+La véritable mise en page ne se fait que dans l'environnement \Ie{document}. La portion du fichier comprise entre la commande \cmd{\documentclass} et le début de l'environnement \Ie{document} est appelée le \emph{préambule}\index{preamble}. C'est ici que vous pouvez appeler des paquets externes et définir vos propres macros si vous en avez envie.
 
 \end{paracol}
 
@@ -3497,12 +3568,14 @@ and define your own macros if you feel so inclined.
 When the \Lopt{twoside} or \Lopt{twocolumn} option is selected then
 typesetting is done with \cmd{\flushbottom}, otherwise it is done
 with \cmd{\raggedbottom}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Lorsque l'option "twoside" ou "twocolumn" est choisie, la mise en page est effectuée, la mise en page se fait avec "\flushbottom", sinon elle est effectuée avec "\raggedbottom".
 
 \switchEng
     When \cmd{\raggedbottom} is in effect LaTeX makes little attempt to
 keep a constant height for the typeblock\index{typeblock}; pages may run short.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Lorsque l'option "\raggedbottom" est utilisée, LaTeX n'essaie pas de conserver une hauteur constante pour le bloc de texte ; certaines pages peuvent être plus courtes que les autres.
 
 \switchEng
     When \cmd{\flushbottom} is in effect LaTeX ensures that the typeblock\index{typeblock}
@@ -3521,17 +3594,20 @@ of some pages.
 
 %    I could have made the page run short by inserting \cmd{\raggedbottom}
 % at an appropriate place, followed later by a \cmd{\flushbottom}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Lorsque l'option "\flushbottom" est activée, LaTeX s'assure que le bloc de texte a une hauteur constante d'une page à l'autre, sauf lorsqu'un saut de page est délibérément introduit et que la page devient trop courte. Afin de maintenir une hauteur uniforme, il peut étirer ou rétrécir certains espaces verticaux (par exemple: entre les paragraphes, autour des titres, des flottants et autres éléments insérés, tels les mathématiques hors-texte). Cela peut avoir un effet délétère sur le gris typographique de certaines pages.
 
 \switchEng
     If you get too many strung out pages with \cmd{\flushbottom} you may
 want to put \cmd{\raggedbottom} in the preamble\index{preamble}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Si vous obtenez trop de pages étirées avec "\flushbottom", vous pouvez essayer de mettre "\raggedbottom" dans le préambule.
 
 \switchEng
     If you use the \Lopt{ebook} option you may well also want to use the
 \Lopt{12pt} and \Lopt{oneside} options.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Si vous utilisez l'option "ebook", vous pouvez également souhaiter utiliser les options "12pt" et "oneside".
 
 \end{paracol}
 
