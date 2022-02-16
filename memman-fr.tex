@@ -3437,74 +3437,62 @@ Les autres options sont:
   {Class option to disable point truncation of certain layout lengths.}
 \end{itemize}
 \switchFrench\TS{2}
-
-eqno : les équations seront numérotées à gauche (par défaut, elles sont numérotées à droite).
-
-fleqn : les environnements mathématiques affichés seront mis en retrait sur une distance de "\mathindent" par rapport à la marge de gauche (par défaut, les environnements sont centrés).
-
-openbib : chaque partie d'une entrée bibliographique commence sur une nouvelle ligne, la deuxième ligne et les suivantes étant indentées de "\bibindent" (par défaut, les entrées sont continues et sans indentation).
+\begin{itemize}
 
 \item[\Lopt{leqno}]\index{class options!math} 
-     equations will be numbered at the left (the default is
-     to number them at the right).
+     les équations seront numérotées à gauche (par défaut, elles sont numérotées à droite).
 \glossary(leqnoco)%
   {\Popt{leqno}}%
-  {Class option for numbering equations at the left.}
+  {Option de classe pour numéroter les équations à gauche.}
 
 \item[\Lopt{fleqn}]\index{class options!math} 
-     displayed math environments will be indented an amount
-     \cmd{\mathindent} from the left margin\index{margin} (the default is to
-     center the environments).
+     les environnements mathématiques \og{}en exergue\fg{} seront mis en retrait
+     d'une distance de \cmd{\mathindent} par rapport à la marge de gauche\index{margin}
+     (par défaut, ces environnements sont centrés).
 \glossary(fleqnco)%
   {\Popt{fleqn}}%
-  {Class option for fixed indentation of displayed math.}
+  {Option de classe donnant une indentation fixe des mathématiques en exergue.}
 
 \item[\Lopt{openbib}]\index{class options!bibliography} 
-     each part of a bibliography\index{bibliography} entry will start on a
-                        new line, with second and succeding lines indented
-                        by \cmd{\bibindent} (the default is for an entry
-                        to run continuously with no indentations).
+     chaque partie d'une entrée bibliographique\index{bibliography} commence
+     sur une nouvelle ligne, la deuxième ligne et les suivantes étant indentées
+     de \cmd{\bibindent} (par défaut, les entrées sont continues et sans indentation).
 \glossary(openbibco)%
   {\Popt{openbib}}%
-  {Class option for indenting continuation lines in a bibliography.}
+  {Option de classe pour indenter les lignes (sauf la première) dans les bibliographies.}
 
 \item[\Lopt{article}]\index{class options!article} 
-  typesetting \emph{simulates} the \Lclass{article} class,
-  but the \cmd{\chapter} command is not disabled, basically
-  \cmd{\chapter} will behave as if it was \cmd{\section}.
-  Chapters\index{chapter} do not start a new page and chapter
-  headings\index{heading!chapter} are typeset 
-  like a section heading\index{heading!sections}. The numbering of 
-  figures\index{figure}, etc., is continuous
-  and not per chapter. However, a \cmd{\part} command still puts
-  its heading\index{heading!part} on a page by itself.
+  la mise en page \emph{simule} la classe \Lclass{article},
+  mais la commande \cmd{\chapter} n'est pas désactivée, en fait \cmd{\chapter}
+  se comportera comme s'il s'agissait d'une \cmd{\section}. Les chapitres\index{chapter}
+  ne commencent pas sur une nouvelle page et les titres de chapitre\index{heading!chapter}
+  sont composés comme des titres de section\index{heading!sections}.
+  La numérotation des figures\index{figure}, etc., est continue et non par chapitre.
+  Cependant, une commande \cmd{\part} positionne toujours son titre\index{heading!part}
+  sur une page à part.
 \glossary(articleco)%
   {\Popt{article}}%
-  {Class option for simulating the \Pclass{article} class.}
+  {Option de classe simulant la classe \Pclass{article}.}
 
-article : la mise en page simule la classe article, mais la commande "\chapitre" n'est pas désactivée, en fait "\chapitre" se comportera comme s'il s'agissait d'une "\section". Les chapitres ne commencent pas sur une nouvelle page et les titres de chapitre sont composés comme des titres de section. La numérotation des figures, etc., est continue et non par chapitre. Cependant, une commande "\part" positionne toujours son titre sur une page à part.
 
 \item[\Lopt{oldfontcommands}]\index{class options!fonts} 
-  makes the old, deprecated LaTeX version~2.09
-  font commands available. Warning messages will be produced whenever
-  an old font command is encountered.
+  rend disponibles les anciennes commandes de polices de caractères de LaTeX version~2.09
+  (qui sont désormais obsolètes). Des messages d'avertissement seront cependant affichés
+  chaque fois qu'une commande de police dépréciée sera rencontrée.
 \glossary(oldfontcommandsco)%
   {\Popt{oldfontcommands}}%
-  {Class option for permitting obsolete, deprecated font commands.}
+  {Option de classe autorisant l'usage de commandes obsolètes.}
 
 
 \item[\Lopt{fullptlayout}]\index{class options!layout truncation} 
-  disable point trunction of certain layout lengths, for example
-  \cmd{\textwidth}. The default is to round these of to a whole number
-  of points, this option disables this feature.
+  désactive l'arrondi de certaines longueurs utilisées pour la mise en page,
+  par exemple \cmd{\textwidth}. Par défaut, ces longueurs sont arrondies
+  à un nombre entier de points, cette option désactive cette fonctionnalité.
+
   \glossary(fullptlayout)%
   {\Popt{fullptlayout}}%
-  {Class option to disable point truncation of certain layout lengths.}
+  {Options de classe désactivant l'arrondi de certaines longueurs utilisées pour la mise en page.}
 \end{itemize}
-
-oldfontcommands : rend disponibles les anciennes commandes de polices de caractères de LaTeX version 2.09 (qui sont désormais obsolètes). Des messages d'avertissement seront cependant produits chaque fois qu'une ancienne commande de police sera rencontrée.
-
-fullptlayout : désactive l'arrondi de certaines longueurs utilisées pour la mise en page, par exemple "\textwidth". Par défaut, ces longueurs sont arrondies à un nombre entier de points, cette option désactive cette fonctionnalité.
 
 \switchEng
 %
@@ -3549,8 +3537,8 @@ of the \Ie{document} environment is called the
 \emph{preamble}\index{preamble}. This is where you ask for external packages
 and define your own macros if you feel so inclined.
 
-\switchFrench\TS{1}
-La véritable mise en page ne se fait que dans l'environnement \Ie{document}. La portion du fichier comprise entre la commande \cmd{\documentclass} et le début de l'environnement \Ie{document} est appelée le \emph{préambule}\index{preamble}. C'est ici que vous pouvez appeler des paquets externes et définir vos propres macros si vous en avez envie.
+\switchFrench\TS{2}
+La véritable mise en page ne se fait que dans l'environnement \Ie{document}. La portion du fichier comprise entre la commande \cmd{\documentclass} et le début de l'environnement \Ie{document} est appelée le \emph{préambule}\index{preamble}. C'est ici que vous pouvez appeler des packages externes et définir vos propres macros, si vous en avez envie.
 
 \end{paracol}
 
@@ -3559,23 +3547,23 @@ La véritable mise en page ne se fait que dans l'environnement \Ie{document}. La 
 \end{syntax}
 \glossary(flushbottom)%
   {\cs{flushbottom}}%
-  {Declaration for last line on a page to be at a constant height.}
+  {La dernière ligne de chaque page sera à une hauteur uniforme d'une page à l'autre.}
 \glossary(raggedbottom)%
   {\cs{raggedbottom}}%
-  {Declaration allowing the last line on a page to be at a variable height.}
+  {La dernière ligne de chaque page pourra être à des hauteurs variables d'une page à l'autre.}
 \begin{paracol}{2}
 \switchEng
 When the \Lopt{twoside} or \Lopt{twocolumn} option is selected then
 typesetting is done with \cmd{\flushbottom}, otherwise it is done
 with \cmd{\raggedbottom}.
-\switchFrench\TS{1}
-Lorsque l'option "twoside" ou "twocolumn" est choisie, la mise en page est effectuée, la mise en page se fait avec "\flushbottom", sinon elle est effectuée avec "\raggedbottom".
+\switchFrench\TS{2}
+Lorsque l'option \Lopt{twoside} ou \Lopt{twocolumn} est choisie, la mise en page est effectuée en mode \cmd{\flushbottom}, sinon elle l'est en mode \cmd{\raggedbottom}.
 
 \switchEng
     When \cmd{\raggedbottom} is in effect LaTeX makes little attempt to
 keep a constant height for the typeblock\index{typeblock}; pages may run short.
-\switchFrench\TS{1}
-Lorsque l'option "\raggedbottom" est utilisée, LaTeX n'essaie pas de conserver une hauteur constante pour le bloc de texte ; certaines pages peuvent être plus courtes que les autres.
+\switchFrench\TS{2}
+Lorsque \cmd{\raggedbottom} est actif, LaTeX n'essaie pas de conserver une hauteur constante pour le bloc de texte; certaines pages peuvent être plus courtes que les autres.
 
 \switchEng
     When \cmd{\flushbottom} is in effect LaTeX ensures that the typeblock\index{typeblock}
@@ -3594,20 +3582,20 @@ of some pages.
 
 %    I could have made the page run short by inserting \cmd{\raggedbottom}
 % at an appropriate place, followed later by a \cmd{\flushbottom}.
-\switchFrench\TS{1}
-Lorsque l'option "\flushbottom" est activée, LaTeX s'assure que le bloc de texte a une hauteur constante d'une page à l'autre, sauf lorsqu'un saut de page est délibérément introduit et que la page devient trop courte. Afin de maintenir une hauteur uniforme, il peut étirer ou rétrécir certains espaces verticaux (par exemple: entre les paragraphes, autour des titres, des flottants et autres éléments insérés, tels les mathématiques hors-texte). Cela peut avoir un effet délétère sur le gris typographique de certaines pages.
+\switchFrench\TS{2}
+Lorsque \cmd{\flushbottom} est actif, LaTeX s'assure que le bloc de texte\index{typeblock} a une hauteur constante d'une page à l'autre, sauf lorsqu'un saut de page est délibérément introduit et que la page devient trop courte. Afin de maintenir une hauteur uniforme, il peut étirer ou rétrécir certains espaces verticaux (par exemple: entre les paragraphes\index{paragraph}, autour des titres\index{heading}, des flottants\index{float} et autres éléments insérés, tels les mathématiques hors-texte). Cela peut avoir un effet délétère sur le gris typographique\index{page color} de certaines pages.
 
 \switchEng
     If you get too many strung out pages with \cmd{\flushbottom} you may
 want to put \cmd{\raggedbottom} in the preamble\index{preamble}.
-\switchFrench\TS{1}
-Si vous obtenez trop de pages étirées avec "\flushbottom", vous pouvez essayer de mettre "\raggedbottom" dans le préambule.
+\switchFrench\TS{2}
+Si vous obtenez trop de pages étirées avec \cmd{\flushbottom}, vous pouvez essayer de mettre \cmd{\raggedbottom} dans le préambule.
 
 \switchEng
     If you use the \Lopt{ebook} option you may well also want to use the
 \Lopt{12pt} and \Lopt{oneside} options.
-\switchFrench\TS{1}
-Si vous utilisez l'option "ebook", vous pouvez également souhaiter utiliser les options "12pt" et "oneside".
+\switchFrench\TS{2}
+Si vous utilisez l'option \Lopt{ebook}, vous pouvez également souhaiter utiliser les options \Lopt{12pt} et \Lopt{oneside}.
 
 \end{paracol}
 
@@ -3631,7 +3619,8 @@ Si vous utilisez l'option "ebook", vous pouvez également souhaiter utiliser les 
 Up until this chapter the \pstyle{headings} pagestyle\index{pagestyle}
 has been used; pagestyles are described in \Sref{sec:pagestyles}.
 This, and later chapters, are typeset with the \pstyle{ruled} pagestyle.
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+Jusqu'à ce chapitre, c'est le style de page\index{pagestyle} \pstyle{headings} qui a été utilisé ; les styles de page sont décrits à la section \Sref{sec:pagestyles}. Ce chapitre, ainsi que les chapitres suivants, sont composés avec le style de page \pstyle{ruled}.
 
 \end{paracol}
 
@@ -3646,12 +3635,14 @@ same as the stock\index{stock} size and the typeblock\index{typeblock} is
 roughly in the middle of the page.
     This chapter describes the commands provided by the class to help you
 produce your own page layout if the default is inappropriate.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La classe fournit une mise en page par défaut, dans laquelle la taille de la page est la même que la taille du papier et le bloc de caractères est à peu près au milieu de la page. Ce chapitre décrit les commandes fournies par la classe pour vous aider à produire votre propre mise en page si celle par défaut ne vous convient pas.
 
 \switchEng
     If you are happy with the default layout you may skip the rest of this
 chapter.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Si vous êtes pleinement satisfait de la mise en page par défaut, vous pouvez ignorer le reste de ce chapitre.
 
 \end{paracol}
 
@@ -3666,7 +3657,8 @@ A good page design is one which the general reader does not notice. If the
 reader is constantly noticing the page layout, even unconsciously, it distracts
 from the purpose of the book. It is not the job of the designer to 
 shout, or even to murmur, `look at my work'.
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+Les pages d'un livre contiennent le texte qui est destiné à éduquer, divertir et/ou amuser le lecteur. La page doit être conçue pour servir les objectifs de l'auteur et pour faciliter la tâche du lecteur dans l'assimilation des idées de l'auteur. Une bonne conception de page est celle que le lecteur général ne remarque pas. Si l'attention du lecteur est constamment attirée par la mise en page, même inconsciemment, celui-ci s'éloignera de l'objectif du livre. Le travail du maquettiste n'est pas de crier, ni même de murmurer, \og{}regardez mon travail\fg{}.
 
 \switchEng
     There are three main parts to a page: the page itself, the 
@@ -3677,13 +3669,15 @@ headers\index{header} and footers\index{footer},
 and possibly marginal\index{marginalia} notes.
 The art of page design is obtaining a harmonious balance or rhythm between
 all these.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Une page se compose de trois parties principales : la page elle-même, le bloc de texte et les marges qui séparent le bloc de texte des bords de la page. Les en-têtes et pieds de page, et éventuellement les notes marginales, sont d'une importance légèrement moindre. L'art de la mise en page consiste à obtenir un équilibre, ou un rythme, harmonieux entre tous ces éléments.
 
 \switchEng
     Although the form is different, the facilities described in this chapter 
 are similar to those provided by the \Lpack{geometry} 
 package~\cite{GEOMETRY}.
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+Bien que l'implémentation soit différente, les possibilités décrites dans ce chapitre sont similaires à celles fournies par le package \Lpack{geometry}~\cite{GEOMETRY}.
 
 \end{paracol}
 
@@ -3698,14 +3692,18 @@ package~\cite{GEOMETRY}.
   \emph{\titleref{sec:typeblock2}}, as you have already chosen your
   stock size and does not need trimming.
 \end{adjustwidth}
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+\begin{adjustwidth}{3em}{3em}
+  \itshape
+Notez que si votre choix de papier correspond à l'une des options de papier de la classe, vous pouvez passer directement à la section~\ref{sec:typeblock2} -- \emph{\titleref{sec:typeblock2}}, puisque vous avez déjà choisi la taille de votre papier et qu'il n'est pas nécessaire de le découper.
+\end{adjustwidth}
 
 \switchEng
 On the other hand, if, say, you are designing a document, that is to
 be printed on one type of paper (the stock), and then trimmed to
 another, please read on.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+En revanche, si vous concevez un document qui doit être imprimé sur un format de papier brut, puis découpé à un autre format, lisez ce qui suit.
 
 \switchEng
 % Before we start let use summarize what laying out the page
@@ -3745,11 +3743,12 @@ Printing is the act of laying symbols onto a piece of
 stock\index{stock} material.  Some print on T-shirts by a process
 called silk screening, where the shapes of the symbols are made in a
 screen and then fluid is squeezed through the screen onto the stock
-material --- in this case the fabric of the T shirt. Whether or not
+material --- in this case the fabric of the T-shirt. Whether or not
 this is of general interest it is not the sort of printing or stock
 material that is normally used in book production. Books, except for
 the very particular, are printed on paper\index{paper}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+L'impression est l'acte de marquer des symboles sur une feuille de papier brut. Certains impriment sur des T-shirts par un procédé appelé sérigraphie, où les formes des symboles sont réalisées sur un écran, puis une encre liquide est pressée à travers cet écran sur le support - dans ce cas, le tissu du T-shirt. Que cette technique vous intéresse ou non, ce n'est pas ce type d'impression ou de support qui est normalement utilisé dans la production de livres. Les livres, à l'exception de ceux qui sont très particuliers, sont imprimés sur du papier\index{paper}.
 
 \switchEng
     In the desktop publishing world the stock\indextwo{stock}{paper}
@@ -3765,7 +3764,8 @@ pages being printed on each stock\index{stock} piece;
 the stock\index{stock} is then folded, cut and trimmed to form
 the final pages for binding. The class assumes that desktop publishing is 
 the norm.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Dans le monde de la publication assistée par ordinateur (par opposition à l'impression industrielle), le papier brut fait généralement partie d'une gamme de formats standard. Aux États-Unis, il s'agit généralement de papier au format \emph{letter} (11 $\times$ 8,5 pouces) et dans le reste du monde de papier A4 (297 $\times$ 210 mm), avec une page par pièce de papier. Dans l'impression industrielle, le matériau brut est beaucoup plus grand et plusieurs pages sont imprimées sur chaque morceau de papier ; ce papier de base est ensuite plié, coupé et rogné pour former les pages finales à relier. Le présent manuel part du principe que la publication assistée par ordinateur est la norme.
 
 \end{paracol}
 
@@ -3777,7 +3777,8 @@ the norm.
     The class assumes that there will be only a single page on a side of
 each piece of stock\index{stock}; two sides means that there can be two
 pages, one on the front and the other on the back.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La classe suppose qu'il n'y aura qu'une seule page sur chaque face de chaque feuille de papier ; comme une feuille a deux faces, il peut donc y avoir deux pages par feuilles, l'une au recto et l'autre au verso.
 
 \end{paracol}
 
@@ -3797,7 +3798,8 @@ corner, the sheet of paper\index{sheet} to be printed is infinitely wide
 and infinitely long. If you happen to have a typeblock\index{typeblock} 
 that is too wide or too long for the sheet, \ltx\ will merrily position 
 text outside the physical boundaries.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Les paramètres utilisés par \ltx\ lui-même pour définir la mise en page sont illustrés à la \fref{fig:anoddpage}. \ltx\ ne se soucie pas vraiment de la taille physique d'une page --- il suppose que, par rapport au coin supérieur gauche, la feuille de papier à imprimer est infiniment large et infiniment longue. Si vous avez un bloc de caractères trop large ou trop long pour la feuille, \ltx\ positionnera joyeusement le texte en dehors des limites physiques.
 
 \switchEng
     The \ltx\ parameters are often not particularly convenient if, say, 
@@ -3806,7 +3808,8 @@ and the \foredge{} margin\index{margin!foredge?\foredge} must be twice
 the spine margin\index{margin!spine}. It is obviously possible
 to calculate the necessary values for the parameters, but it is
 not a pleasurable task.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Les paramètres de \ltx\ sont souvent peu pratiques si, par exemple, le haut du texte doit se trouver à une certaine distance sous le haut de la page et si la marge extérieure\index{margin!foredge?\foredge} doit être le double de la marge intérieure\index{margin!spine}. Il est évidemment possible de calculer les valeurs nécessaires pour les paramètres, mais ce n'est pas une tâche des plus réjouissante.
 
 \switchEng
     The class provides various means of specifying the page layout, which are
@@ -3820,7 +3823,8 @@ recto page.
 These may be changed individually by \cmd{\setlength} or by using the 
 commands described below. Figure~\ref{fig:evenstock} illustrates the
 same parameters on a verso page.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La classe fournit divers mécanismes pour spécifier la mise en page, qui sont, nous l'espérons, plus commodes à utiliser que les mécanismes standard. Divers paramètres réglables\index{page layout!class parameters} sont utilisés pour définir la taille du papier brut, la taille de la page, etc. Ils diffèrent à certains égards des paramètres des classes standards, bien que les paramètres des notes marginales soient les mêmes dans les deux cas. La figure~\ref{fig:oddstock} montre les principaux paramètres de mise en page de la classe pour une page recto. Ils peuvent être modifiés individuellement par \cmd{\setlength} ou en utilisant les commandes décrites ci-dessous. La figure~\ref{fig:evenstock} illustre les mêmes paramètres pour une page verso.
 
 \end{paracol}
 
@@ -3848,7 +3852,8 @@ is to decide on the page size\indextwo{page}{size} and then pick an
 appropriate stock\indextwo{stock}{size} size. Selecting a standard 
 stock\indextwo{stock}{size} size will
 be cheaper than having to order specially sized stock\index{stock} material. 
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+La première étape de la conception de la mise en page\index{page layout!design} consiste à déterminer le format de la page\indextwo{page}{size}, puis à choisir un format de papier\indextwo{stock}{size} approprié. Choisir un format de papier\indextwo{stock}{size} standard sera généralement moins onéreux que de devoir commander un papier de taille spéciale.
 
 \end{paracol}
 \begin{syntax}
@@ -3872,15 +3877,17 @@ to print on A4, then you have no need for \cmd{\setstocksize}, proceed
 directly to section~\ref{sec:typeblock2}. Alternatively, the class
 provide settings for many other standard stock sizes, see
 \tref{tab:sizeoptsmetric} through \tref{tab:sizeoptsbrit}. 
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Les options de classe\index{stock paper size option} prévoient certaines tailles courantes de papier\indextwo{stock}{size}. Ainsi, si vous avez spécifié l'option de classe \texttt{a4paper} et que vous avez l'intention d'imprimer sur du papier A4, vous n'avez pas besoin de \cmd{\setstocksize}, passez directement à la section~\ref{sec:typeblock2}. Par ailleurs, la classe fournit des paramètres pour de nombreux autres formats de papier standards, voir \tref{tab:sizeoptsmetric} à \tref{tab:sizeoptsbrit}.
 
 \switchEng
 If you have some other size that you want to use, the 
 command \cmd{\setstocksize} can be used to
 specify that the stock\index{stock!specifying size} size is 
-\meta{height} \index{stock!height} by \meta{width}\index{stock!width}. 
+\meta{height}\index{stock!height} by \meta{width}\index{stock!width}. 
 For example the following specifies a stock\index{stock!size} of 9 by 4 inches:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Si vous souhaitez utiliser une autre taille, la commande \cmd{\setstocksize} peut être utilisée pour spécifier que la taille du papier est \meta{hauteur}\index{stock!height} par \meta{largeur}\index{stock!width}. Par exemple, l'exemple suivant spécifie un papier\index{stock!size} de 9 pouces sur 4:
 
 \end{paracol}
 \begin{lcode}
@@ -3894,7 +3901,8 @@ may be smaller which means that after printing
 the stock\index{stock!trimmed} must be trimmed down to the size of the page.
 The page may 
 be positioned anywhere within the bounds of the stock\index{stock}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La taille de la page\indextwo{page}{size} ne doit pas être plus grande que le papier\indextwo{stock}{size} mais peut être plus petite, ce qui signifie qu'après l'impression, le papier devra être rogné\index{stock!trimmed} à la taille de la page. La page peut être placée n'importe où à l'intérieur des limites de la feuille de papier\index{stock}.
 
 \switchEng
     Page layout should be conceived in terms of a double spread\index{spread};
@@ -3904,8 +3912,8 @@ between them. Most books when closed are taller\index{proportion!book}
 than they are wide; this makes them easier to hold when open
 for reading. A squarish page when opened out into a wide spread 
 makes for discomfort unless the book is supported on a table.
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+La mise en page doit être conçue en termes de double page\index{spread}; lorsque vous ouvrez un livre au milieu, ce que vous voyez est une double page --- une page verso à gauche et une page recto à droite avec la reliure entre les deux. La plupart des livres fermés sont plus hauts que larges\index{proportion!book}, ce qui les rend plus faciles à tenir à la main lorsqu'ils sont ouverts pour la lecture. Une page carrée, lorsqu'elle est ouverte en grand, est source d'inconfort, à moins que le livre ne soit posé sur une table.
 
 \end{paracol}
 \begin{syntax}
@@ -3938,7 +3946,8 @@ the \lnc{\paperheight}
 and \lnc{\paperwidth} to be specified directly or as one being in a given
 ratio to the other. The potential combinations of arguments and the 
 corresponding results are listed in \tref{tab:rectsize}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Initialement, la taille de la page\indextwo{page}{size} est égale à la taille du papier\indextwo{stock}{size}, telle que définie par l'option de taille du papier. La commande \cmd{\settrimmedsize}\index{page!specifying size} peut être utilisée pour spécifier la hauteur\index{page!height} et la largeur\index{page!width} de la page (après rognage éventuel). L'argument \meta{ratio} est le facteur par lequel la \meta{hauteur} ou la \meta{largeur} doit être multipliée pour obtenir la largeur ou la hauteur. Seuls deux des trois arguments possibles doivent avoir une valeur, l'autre argument (sans valeur) étant noté \verb?*? (un astérisque). Les longueurs \lnc{\paperheight} et \lnc{\paperwidth} sont calculées en fonction des arguments donnés. En d'autres termes, la commande permet de spécifier la hauteur du papier et la largeur du papier directement ou dans un rapport donné entre les deux. Les combinaisons possibles d'arguments et les résultats correspondants sont répertoriés dans le \tref{tab:rectsize}.
 
 \end{paracol}
 
@@ -3964,7 +3973,8 @@ corresponding results are listed in \tref{tab:rectsize}.
 \switchEng
     If you have used \cmd{\setstocksize} to redefine the stock\index{stock}, 
 then to get the same page size, do:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Si vous avez utilisé \cmd{\setstocksize} pour redéfinir la taille du papier\index{stock}, pour obtenir le même format de page, faites:
 
 \end{paracol}
 \begin{lcode}
@@ -3973,7 +3983,8 @@ then to get the same page size, do:
 \begin{paracol}{2}
 \switchEng
 or for the page dimensions to be 90\% of the stock\index{stock} dimensions:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+ou pour que les dimensions de la page correspondent à 90\,\% des dimensions du papier:
 
 \end{paracol}
 \begin{lcode}
@@ -3981,9 +3992,9 @@ or for the page dimensions to be 90\% of the stock\index{stock} dimensions:
 \end{lcode}
 \begin{paracol}{2}
 \switchEng
-
     The following are three different ways of defining an 8 by 5 inch page.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Voici trois façons différentes de définir une page de 8~pouces sur 5.
 
 \end{paracol}
 \begin{lcode}
@@ -4003,7 +4014,8 @@ the stock\index{stock!trimmed} is trimmed it will be trimmed at the top.
 It will also have been
 cut at the \foredge s of the pages and at the bottom, otherwise the book
 would be unopenable and unreadable.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Si vous regardez un livre cartonné bien relié, vous pouvez voir que les feuilles sont pliées de manière à être continues au niveau du dos, où elles sont cousues ensemble dans la reliure. Le haut des pages doit être lisse afin que, lorsque le livre est posé à la verticale sur une étagère, la poussière ait plus de mal à s'infiltrer entre les pages que si le haut était irrégulier. Ainsi, si le papier est rogné\index{stock!trimmed}, il le sera en haut. Il aura également été rogné au niveau du bord vertical des pages et du bas, sinon le livre serait difficile à ouvrir et à lire.
 
 \end{paracol}
 \begin{syntax}
@@ -4030,12 +4042,14 @@ locate the page\index{page} with respect to the stock\index{stock}.
 By default the top and edge trims are zero, which means that if any trimming
 is required it will be at the spine and bottom edges of the stock
 unless \cmd{\settrims} is used to alter this.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La commande \cmd{\settrims} peut être utilisée pour spécifier la quantité destinée à être rognée à partir du bord supérieur (\meta{top}) et du bord vertical (\meta{foredge}) du papier brut\index{stock!specifying trimming}  pour produire le bord supérieur et le bord vertical d'une page recto. Notez que la combinaison de \cmd{\settrims} et \cmd{\settrimmedsize} situe la page\index{page} par rapport au support\index{stock}. Par défaut, les rognures du haut et du bord sont égales à zéro, ce qui signifie que si une rognure est nécessaire, elle sera effectuée au niveau du dos et du bord inférieur du papier, à moins que vous n'utilisiez \cmd{\settrims} pour modifier cette valeur.
 
 \switchEng
     You can either do any trim calculation for youself or let \ltx\ do it for
 you. For example, with an 8in by 5in page on 10in by 7in stock
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Vous pouvez soit effectuer vous-même le calcul des rognures, soit laisser \ltx\ le faire pour vous. Par exemple, pour une page de 8 pouces sur 5 sur du papier de 10 pouces sur 7:
 
 \end{paracol}
 \begin{lcode}
@@ -4046,7 +4060,8 @@ you. For example, with an 8in by 5in page on 10in by 7in stock
 specifies trimming 2in from the top and \foredge{} of the stock
 giving the desired page size. Taking a design where, say, the page 
 is 90\% of the stock size it's easy to get \ltx\ to do the calculation:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+spécifie qu'il faut rogner 2 pouces en haut et à droite du papier, ce qui donne la taille de page souhaitée. Dans le cas d'une maquette où, par exemple, la page fait 90\,\% de la taille du papier, il est facile de faire faire le calcul par \ltx{}:
 
 \end{paracol}
 \begin{lcode}
@@ -4060,7 +4075,8 @@ is 90\% of the stock size it's easy to get \ltx\ to do the calculation:
 which will set all the trimming to be at the top and \foredge. 
 If you wanted, say, equal trims at the top and bottom you could go 
 on and specify
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+ce qui aura pour effet de placer toutes les rognures en haut et sur le bord droit. Si vous vouliez, par exemple, des rognures égales en haut et en bas, vous pourriez continuer et spécifier:
 
 \end{paracol}
 \begin{lcode}
@@ -4075,12 +4091,14 @@ See also section~\ref{sec:place-trimmed-page} --
 \emph{\titleref{sec:place-trimmed-page}}, where we present some extra
 commands. For example \cmd{\setpagecc} for placing a trimmed page
 centered on the stock.
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+Voir aussi la section ~\ref{sec:place-trimmed-page} -- \emph{\titleref{sec:place-trimmed-page}}, où nous présentons quelques commandes supplémentaires. Par exemple \cmd{\setpagecc} pour centrer la page finale par rapport au papier brut.
 
 \switchEng
 After trimming the various methods to specify the typeblock, now
 refers to the \emph{trimmed} page, not the stock material.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Après le rognage, les différentes méthodes pour spécifier le bloc de texte font maintenant référence à la page \emph{rognée}, et non au support de base.
 
 \end{paracol}
 
@@ -4246,11 +4264,12 @@ Times Roman\facesubseeidx{Times Roman},
 for example --- which are four of the most widely available 
 typefaces --- are four faces with nothing to offer one another except
 public disagreement'.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Le tableau~\ref{tab:cmrlengths} donne la longueur de l'alphabet, écrit en lettres minuscules, pour quelques polices de caractères et pour une série de tailles de police ; il peut être utilisé en conjonction avec le \tref{tab:copyfitting} de la \pref{tab:copyfitting} pour décider de la meilleure largeur de texte\index{textwidth} à utiliser. J'ai regroupé les polices listées en romain, sans-serif et chasse fixe, et elles sont toutes disponibles dans une installation standard de \ltx{}. Les polices\index{typeface} Computer Modern Roman\facesubseeidx{Computer Modern}, Concrete Roman\facesubseeidx{Concrete Roman}, Computer Sans\facesubseeidx{Computer Sans} et Typewriter\facesubseeidx{Computer Typewriter} ont toutes été conçues par Donald Knuth à l'aide de \index{font!Metafont}\metafont, spécifiquement pour être utilisées avec \tx. Les autres familles de polices sont des polices \pscript{} et peuvent être utilisées avec de nombreux logiciels de production de documents. Ces polices particulières sont disponibles pour une utilisation dans LaTeX via les fichiers du package \Ppack{psnfss}\index{psnfss?\Ppack{psnfss}}. Notez que les polices de Knuth\index{font!Knuthian} ont été conçues pour former une famille de polices -- c'est-à-dire qu'elles ont été pensées pour fonctionner ensemble et se compléter -- alors que les polices \pscript{}\index{font!PostScript} listées ici ont été conçues par des personnes différentes, à des moments différents et dans des buts différents. Bringhurst~\cite[p. 96]{BRINGHURST99} a déclaré de manière mémorable que \og{}Baskerville\facesubseeidx{Baskerville}, Helvetica\facesubseeidx{Helvetica}, Palatino\facesubseeidx{Palatino} et Times Roman\facesubseeidx{Times Roman}, par exemple -- qui sont quatre des polices de caractères les plus répandues -- sont quatre visages qui n'ont rien à offrir les uns aux autres, si ce n'est un désaccord public\fg{}.
 
 \switchEng
     The monospaced\index{font!monospaced}\index{monospaced font} fonts, 
-Courier\facesubseeidx{Courier} and Typewriter\facesubseeidx{Typewriter}
+Courier\facesubseeidx{Courier} and Typewriter\facesubseeidx{Typewriter},
 have no place in high quality typesetting except when typesetting computer
 code or the like, or when trying to fake text written on a real typewriter.
 Ignoring these, a quick glance at the \tablerefname{} shows that 
@@ -4259,8 +4278,8 @@ Times\facesubseeidx{Times Roman} is narrow as befits its original
 design intent for typesetting narrow columns in newspapers. 
 Computer Modern\facesubseeidx{Computer Modern}
 tends towards the narrow end of the range.
-\switchFrench\TS{0}
-
+\switchFrench\TS{1}
+Les polices à chasse fixe\index{font!monospaced}\index{monospaced font}, Courier\facesubseeidx{Courier} et Typewriter\facesubseeidx{Typewriter}, n'ont pas leur place dans une maquette de haute qualité, sauf pour la composition de codes informatiques ou autres, ou pour tenter de simuler un texte écrit sur une vraie machine à écrire. Sans tenir compte de ces éléments, un rapide coup d'\oe il au \tablerefname{} montre que Bookman\facesubseeidx{Bookman} est une police large, tandis que Times\facesubseeidx{Times Roman} est étroite, comme le veut sa conception originale pour la composition de colonnes étroites dans les journaux. La police Computer Modern\facesubseeidx{Computer Modern} est plutôt du côté des polices étroites de la gamme.
 
 \end{paracol}
 \begin{syntax}
@@ -4281,12 +4300,14 @@ line of text with
 45\index{measure!45 characters} or 
 65\index{measure!65 characters} characters, respectively, for  
 Computer Modern Roman in the type size selected for the document.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+D'après le \tref{tab:cmrlengths}, les deux longueurs \lnc{\xlvchars} et \lnc{\lxvchars} sont initialement définies comme correspondant approximativement à la longueur d'une ligne de texte de 45\index{measure!45 characters} ou 65\index{measure!65 characters}~caractères, respectivement, pour Computer Modern Roman dans la taille de caractères sélectionnée pour le document.
 
 \switchEng
     If you are using a different font or size you can use something like the 
 following to calculate and print out the length for you.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Si vous employez une police ou une taille de caractères différente, vous pouvez utiliser ce qui suit pour calculer et imprimer la longueur à votre place:
 
 \end{paracol}
 \begin{lcode}
@@ -4304,7 +4325,8 @@ The length of this alphabet is \the\mylen. % print in document
 \switchEng
 The \cmd{\typeout} macro prints its argument to the terminal and the
 log file. There is, however, an easier method.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La macro \cmd{\typeout} imprime son argument sur le terminal et dans le fichier journal. Il existe toutefois une méthode plus simple.
 
 \end{paracol}
 \begin{syntax}
@@ -4327,7 +4349,8 @@ set the lengths \lnc{\xlvchars} and \lnc{\lxvchars}
 respecively for the font \meta{fontspec}. The default for \meta{fontspec}
 is \cmd{\normalfont}. For example, the values of \lnc{\lxvchars} and
 \lnc{\xlvchars} after calling:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Les macros \cmd{\setxlvchars} et \cmd{\setlxvchars}, qui ont été suggérées par Morten H{\o}gholm\index{H{\o}gholm, Morten}, définissent les longueurs \lnc{\xlvchars} et \lnc{\lxvchars} respectivement pour la police \meta{fontspec}. La valeur par défaut de \meta{fontspec} est \cmd{\normalfont}. Par exemple, les valeurs de \lnc{\lxvchars} et \lnc{\xlvchars} après appel:
 
 \end{paracol}
 \begin{lcode}
@@ -4339,11 +4362,16 @@ is \cmd{\normalfont}. For example, the values of \lnc{\lxvchars} and
 are: \setlxvchars\setxlvchars[\small\sffamily]
 \lnc{\lxvchars} = \the\lxvchars, and \lnc{\xlvchars} = \the\xlvchars.
 \endgroup
-\switchFrench\TS{0}
+\switchFrench\TS{3}
+\begingroup
+sont: \setlxvchars\setxlvchars[\small\sffamily]
+\lnc{\lxvchars} = \the\lxvchars, et \lnc{\xlvchars} = \the\xlvchars.
+\endgroup
 
 \switchEng
     Morten H{\o}gholm\footnote{Private communication} also commented:
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+Morten H{\o}gholm\footnote{Communication personnelle.} a également commenté:
 
 \switchEng
 \begin{quotation}
@@ -4361,7 +4389,17 @@ was only 17.607pt.
 \end{center}
 \emph{before} \cmd{\documentclass}.
 \end{quotation}
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+\begin{quotation}
+    \ldots Je définissais certains environnements qui devaient avoir \lnc{\parindent} comme indentation. Pour une raison quelconque, j'ai simplement écrit \verb?1.5em? au lieu de \lnc{\parindent} parce que je \og{}savais\fg{} que c'était la valeur. Ce que j'avais négligé, c'est que j'avais chargé le package \Lpack{mathpazo}~\cite{MATHPAZO}, modifiant ainsi, entre autres, \lnc{\parindent}.
+Conclusion : l'environnement utilisait 1,5\,em $=$ 18,0\,pt, alors que \lnc{\parindent} ne valait que 17,607\,pt. 
+
+    Cette situation, ainsi que d'autres situations similaires, peut être évitée si l'on place
+\begin{center}
+\cmd{\RequirePackage}\marg{font-package}\cmd{\normalfont}
+\end{center}
+\emph{avant} \cmd{\documentclass}.
+\end{quotation}
 
 \switchEng
 Note that, in general, it is inadviseable to put any 
