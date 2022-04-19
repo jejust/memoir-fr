@@ -4458,8 +4458,8 @@ be used to place it on the paper. Alternatively the typeblock size can
 be determined by setting the margins around it. We present this later
 on in this section (see \cmd{\setlrmarginsandblock} and
 \cmd{\setulmarginsandblock}). 
-\switchFrench\TS{1}
-La hauteur du bloc de texte doit valoir un nombre entier de lignes. La classe fournit deux méthodes différentes pour spécifier la taille du bloc de texte. "\settypeblocksize" (ci-dessous) définit simplement les dimensions du bloc de texte, d'autres commandes seront ensuite utilisées pour le placer sur le papier. Il est également possible de déterminer la taille du bloc de texte en définissant les marges qui l'entourent. Nous présentons cette méthode plus loin dans cette section (voir "\setlrmarginsandblock" et "\setulmarginsandblock").
+\switchFrench\TS{2}
+La hauteur du bloc de texte\index{typeblock!height} doit valoir un nombre entier de lignes. La classe fournit deux méthodes différentes pour spécifier la taille du bloc de texte. \cmd{\settypeblocksize} (décrite ci-dessous) définit simplement les dimensions du bloc de texte, d'autres commandes seront ensuite utilisées pour le placer sur le papier. Il est également possible de déterminer la taille du bloc de texte en définissant les marges qui l'entourent. Nous présentons cette méthode plus loin dans cette section (voir \cmd{\setlrmarginsandblock} et \cmd{\setulmarginsandblock}).
 
 \end{paracol}
 \begin{syntax}
@@ -4484,8 +4484,8 @@ The potential combinations of arguments and the
 corresponding results are listed in \tref{tab:rectsize} on \pref{tab:rectsize}.
 For instance, here are three ways of specifying
 a 6in by 3in typeblock\index{typeblock}:
-\switchFrench\TS{1}
-La commande "\settypeblocksize" est similaire à "\settrimmedsize", sauf qu'elle définit la "\textheight" et la "\textwidth" pour le bloc de texte. Les combinaisons possibles d'arguments et les résultats correspondants sont répertoriés dans le tableau 2.1 de la page 17. Par exemple, voici trois façons de spécifier un bloc de texte de 6 pouces sur 3:
+\switchFrench\TS{2}
+La commande \cmd{\settypeblocksize}\index{typeblock!specifying size} est similaire à \cmd{\settrimmedsize}, sauf qu'elle définit la \lnc{\textheight} et la \lnc{\textwidth} pour le bloc de texte\index{typeblock!height}\index{typeblock!width}. Les combinaisons possibles d'arguments et les résultats correspondants sont répertoriés dans le \tref{tab:rectsize} de la \pref{tab:rectsize}. Par exemple, voici trois façons de spécifier un bloc de texte\index{typeblock} de 6 pouces sur 3:
 
 \end{paracol}
 \begin{lcode}
@@ -4512,16 +4512,16 @@ typeblock\index{typeblock} with respect to the page can be viewed
 either as positioning the typeblock\index{typeblock} with respect to the edges 
 of the page or as setting the margins\index{margin} between the page and the 
 typeblock\index{typeblock}.
-\switchFrench\TS{1}
-Le bloc de texte doit être situé sur la page. Il existe une relation entre les dimensions de la page, du bloc de caractères et des marges. La somme de la marge intérieure (au niveau de la reliure), de la marge extérieure et de la largeur du bloc de texte doit être égale à la largeur de la page. De même, la somme de la marge supérieure, de la marge inférieure et de la hauteur du bloc de texte doit être égale à la hauteur de la page. Le processus de positionnement du bloc d'impression par rapport à la page peut être considéré comme un positionnement du bloc de texte par rapport aux bords de la page ou comme un réglage des marges entre la page et le bloc de texte.
+\switchFrench\TS{2}
+Le bloc de texte\index{typeblock} doit évidemment être situé sur la page. Il existe une relation entre les dimensions de la page, du bloc de texte\index{typeblock} et des marges\index{margin}. La somme de la marge intérieure\index{margin!inner} (au niveau de la reliure\index{margin!spine}), de la marge extérieure\index{margin!foredge?\foredge}\index{margin!outer} et de la largeur du bloc de texte\index{typeblock!width} doit être égale à la largeur de la page\index{page!width}. De même, la somme de la marge supérieure\index{margin!upper}, de la marge inférieure\index{margin!lower} et de la hauteur du bloc de texte\index{page!height} doit être égale à la hauteur de la page. Le processus de positionnement du bloc de texte\index{typeblock} par rapport à la page peut être considéré soit comme un positionnement du bloc de texte par rapport aux bords de la page soit comme un réglage des marges\index{margin} entre la page et le bloc de texte\index{typeblock}.
 
 \switchEng
     Remembering that the page layout should be defined in terms of the
 appearance as a spread\index{spread}, the spine margin\index{margin!spine} 
 is normally half the \foredge{} margin\index{margin!foredge?\foredge}, 
 so that the white space is equally distributed around the sides of the text. 
-\switchFrench\TS{1}
-Si l'on se souvient que la mise en page doit être définie en fonction de l'aspect de la page, la marge intérieure est normalement égale à la moitié de la marge du bord antérieur, de sorte que l'espace blanc soit également réparti sur les côtés du texte.
+\switchFrench\TS{2}
+Si l'on se souvient que la mise en page doit être choisie en fonction de l'aspect de la double-page\index{spread}, la marge intérieure\index{margin!spine} est normalement égale à la moitié de la marge extérieure\index{margin!foredge?\foredge}, de sorte que l'espace blanc soit également réparti sur les côtés du texte.
 
 \switchEng
 \begin{note}
@@ -4532,9 +4532,9 @@ Si l'on se souvient que la mise en page doit être définie en fonction de l'aspec
 
   We may add auto adjustments to a future version of \theclass.
 \end{note}
-\switchFrench\TS{1}
+\switchFrench\TS{2}
 \begin{note}
-Remarque : on constate souvent que l'utilisation de "\settypeblocksize" sans l'utilisation ultérieure de "\setlrmargins" et "\setulmargins" entraîne des erreurs car les relations mentionnées ci-dessus ne sont pas respectées ("\textwidth" a été modifiée, mais pas les marges).
+ On constate que l'utilisation de \cmd{\settypeblocksize} sans l'utilisation ultérieure de \cmd{\setlrmargins} et \cmd{\setulmargins} entraîne souvent des erreurs car les relations mentionnées ci-dessus ne sont pas respectées (\lnc{\textwidth} a été modifiée, mais pas les marges).
 
 Il se peut que nous ajoutions des ajustements automatiques à une future version de \theclass.
 \end{note}
@@ -4545,8 +4545,8 @@ proportions\index{proportion!margin}
 of the upper and lower margins, though usually the upper 
 margin\index{margin!upper} is less than the lower margin\index{margin!lower}
 so the typeblock\index{typeblock!location} is not vertically centered.
-\switchFrench\TS{1}
-Il y a plus de latitude pour choisir les proportions des marges supérieure et inférieure, bien que généralement la marge supérieure soit inférieure à la marge inférieure, de sorte que le bloc de texte n'est pas centré verticalement.
+\switchFrench\TS{2}
+Il y a plus de latitude pour choisir les proportions\index{proportion!margin} des marges supérieure et inférieure, bien que généralement la marge supérieure\index{margin!upper} soit plus petite que la marge inférieure\index{margin!lower}, de sorte que le bloc de texte\index{typeblock!location} n'est pas centré verticalement.
 
 \switchEng
     Two methods are provided for setting the horizontal dimensions on a page.
@@ -4554,8 +4554,8 @@ One is where the width of the typeblock\index{typeblock!width}
 is fixed and the margins\index{margin} are adjustable. 
 The other method is where the size of the margins\index{margin} determines 
 the width of the typeblock\index{typeblock!width}.
-\switchFrench\TS{1}
-Deux méthodes sont prévues pour définir les dimensions horizontales d'une page. La première consiste à fixer la largeur du bloc de texte et à régler les marges. L'autre méthode consiste à déterminer la largeur du bloc de texte en fonction de la taille des marges.
+\switchFrench\TS{2}
+Deux méthodes sont proposées pour définir les dimensions horizontales d'une page. La première consiste à fixer la largeur du bloc de texte\index{typeblock!width} et à régler les marges\index{margin}. L'autre méthode consiste à fixer d'abord la taille des marges\index{margin} puis déterminer la largeur du bloc de texte\index{typeblock!width}.
 
 \end{paracol}
 \begin{syntax}
@@ -4572,15 +4572,15 @@ the side margins\footnote{Only the spine margin is noted in
 the \foredge\ margin\index{margin!foredge?\foredge} is at the 
 opposite side of the typeblock.} 
 with the width of the page and the typeblock being fixed.
-\switchFrench\TS{1}
-La commande "\setlrmargins" peut être utilisée pour spécifier les marges latérales\footnote{Seule la marge intérieure apparaît sur les figures~\ref{fig:oddstock} et \ref{fig:evenstock}; la marge extérieure\index{margin!foredge?\foredge} se trouve sur le côté opposé du bloc.} lorsque la largeur de la page et du bloc de caractères sont fixes.
+\switchFrench\TS{2}
+La commande \cmd{\setlrmargins}\index{margin!specify width} peut être utilisée pour spécifier les marges latérales\footnote{Seule la marge intérieure apparaît sur les figures~\ref{fig:oddstock} et \ref{fig:evenstock}; la marge extérieure\index{margin!foredge?\foredge} se trouve sur le côté opposé du bloc.} lorsque la largeur de la page et du bloc de caractères sont fixes.
 
 \switchEng
 Not more than one one argument value is required, with any
 unvalued arguments being denoted by an asterisk. There are several cases to 
 consider and these are tabulated in \tref{tab:lrmargins}.
-\switchFrench\TS{1}
-Une seule valeur d'argument est requise, les arguments non évalués étant signalés par un astérisque. Il y a plusieurs cas à considérer et ils sont présentés dans le tableau 2.4.
+\switchFrench\TS{2}
+Une seule valeur d'argument est requise, les arguments non évalués étant signalés par un astérisque. Il y a plusieurs cas à considérer et ils sont présentés dans le \tref{tab:lrmargins}.
 
 \switchEng
     In the \tablerefname, $S$ is the calculated spine 
@@ -4589,8 +4589,8 @@ $E$ is the calculated \foredge{} margin\index{margin!foredge?\foredge},
 and $P_{w}$ and $B_{w}$ are respectively the page\index{page!width} and 
 typeblock\index{typeblock!width} 
 widths. The \cmd{\setlrmargins}\index{margin!specifying size} command maintains the relationship
-\switchFrench\TS{1}
-Dans le tableau, S est la marge intérieure calculée, E est la marge extérieure calculée, et P et B sont respectivement la largeur de la page et du bloc de texte. La commande "\setlrmargins" maintient cette relation.
+\switchFrench\TS{2}
+Dans le \tablerefname, $S$ est la marge intérieure calculée\index{margin!spine}, $E$ est la marge extérieure calculée\index{margin!foredge?\foredge}, et $P_{w}$ et $B_{w}$ sont respectivement la largeur de la page\index{page!width} et du bloc de texte\index{typeblock!width}. La commande \cmd{\setlrmargins}\index{margin!specifying size} maintient cette relation:
 
 \end{paracol}
 \begin{displaymath}
@@ -4619,8 +4619,8 @@ S + E = K_{w}  = \textrm{constant} \mbox{\space} (= P_{w} - B_{w}).
 \switchEng
 The cases marked ambiguous in the \tablerefname{} are where the particular combination
 of argument values may make it impossible to guarantee the relationship.
-\switchFrench\TS{1}
-Les cas marqués comme ambigus dans le tableau sont ceux où la combinaison des valeurs des arguments peut rendre impossible la vérification de la relation.
+\switchFrench\TS{2}
+Les cas marqués comme ambigus dans le \tablerefname{} sont ceux où la combinaison des valeurs des arguments peut rendre impossible la vérification de la relation.
 
 \switchEng
     Assuming that we have a 3in wide typeblock\index{typeblock!width} on a 5in 
@@ -4630,7 +4630,7 @@ the \foredge{} margin\index{margin!foredge?\foredge} to be 1.2in
 this can be accomplished in three ways (with the \cmd{\paperwidth} and 
 \lnc{\textwidth} being previously specified and fixed):
 \switchFrench\TS{1}
-Supposons que nous ayons un bloc de texte de 3 pouces de large sur une page de 5 pouces de large et que nous souhaitions que la marge intérieure soit de 0,8 pouce et la marge extérieure de 1,2 pouce (c'est-à-dire que la marge extérieure avant soit à nouveau environ deux fois plus grande que la marge intérieure), ceci peut être réalisé de trois manières (les paramètres \cmd{\paperwidth} et \lnc{\textwidth} étant préalablement spécifiés et fixés):
+Supposons que nous ayons un bloc de texte\index{typeblock!width} de 3~pouces de large sur une page de 5~pouces de large et que nous souhaitions que la marge intérieure\index{margin!spine} soit de 0,8~pouce et la marge extérieure\index{margin!foredge?\foredge} de 1,2~pouce (c'est-à-dire que la marge extérieure soit à nouveau environ deux fois plus grande que la marge intérieure), ceci peut être réalisé de trois manières (les paramètres \cmd{\paperwidth} et \lnc{\textwidth} étant préalablement spécifiés et fixés):
 
 \end{paracol}
 \begin{lcode}
@@ -4658,8 +4658,8 @@ typeblock\index{typeblock!width}
 depends on the margins\index{margin}. Results
 for this command are given in \tref{tab:lrblock}. The same notation is used,
 but in this case \cmd{\setlrmarginsandblock} maintains the relationship
-\switchFrench\TS{1}
-La commande "\setlrmarginsandblock" peut être utilisée pour spécifier les marges intérieures et extérieures, la largeur de la page étant fixe et la largeur du bloc de texte dépendant des marges. Les résultats de cette commande sont donnés dans le tableau 2.5. La même notation est utilisée, mais dans ce cas, "\setlrmarginsandblock" maintient la relation suivante:
+\switchFrench\TS{2}
+La commande \cmd{\setlrmarginsandblock}\index{margin!specifying size} peut être utilisée pour spécifier les marges intérieure\index{margin!spine} et extérieure\index{margin!foredge?\foredge}, la largeur de la page\index{page!width} étant fixe et la largeur du bloc de texte\index{typeblock!width} dépendant des marges\index{margin}. Les résultats de cette commande sont donnés dans le \tref{tab:lrblock}. La même notation est utilisée, mais dans ce cas, \cmd{\setlrmarginsandblock} maintient la relation suivante:
 
 \end{paracol}
 \begin{displaymath}
@@ -4702,8 +4702,8 @@ margin\index{margin!foredge?\foredge} to be 1.2in
 this can be accomplished in the following ways (with the \lnc{\textwidth} 
 being calculated from the previously specified \cmd{\paperwidth} and the 
 specified margins):
-\switchFrench\TS{1}
-Si l'on suppose que l'on veut un bloc de texte de 3 pouces de large sur une page de 5 pouces de large et que l'on souhaite que la marge intérieure soit de 0,8 pouce et la marge extérieure de 1,2 pouce (c'est-à-dire que la marge extérieure est à nouveau deux fois plus grande que la marge du dos), cela peut être réalisé de la manière suivante ("\textwidth" étant calculée à partir de la valeur de "\paperwidth" précédemment spécifiée et des marges, également spécifiées):
+\switchFrench\TS{2}
+Si l'on suppose que l'on veut un bloc de texte\index{typeblock!width} de 3~pouces de large sur une page\index{page!width} de 5~pouces de large et que l'on souhaite que la marge intérieure\index{margin!spine} soit de 0,8~pouce et la marge extérieure\index{margin!foredge?\foredge} de 1,2~pouce (c'est-à-dire que la marge extérieure est à nouveau deux fois plus grande que la marge du dos), cela peut être réalisé de la manière suivante (\lnc{\textwidth} étant calculée à partir de la valeur de \cmd{\paperwidth} précédemment spécifiée et des marges, également spécifiées):
 
 \end{paracol}
 \begin{lcode}
@@ -4752,14 +4752,14 @@ effective page width by \meta{length} and later this length will be added
 on to the spine margin, thus restoring the page width to its original value.
 If you use \cmd{\setbinding} than it must be \emph{after} setting the page 
 width and \emph{before} setting the spine and fore-edge margins.
-\switchFrench\TS{1}
-Dans certains cas, par exemple lors de la réalisation d'une reliure japonaise, il peut être souhaitable d'ajouter une petite marge supplémentaire à la marge intérieure, pour la reliure. Vous pouvez utiliser la commande "\setbinding" à cette fin. Elle diminue la largeur effective de la page de <longueur> et plus tard cette longueur sera ajoutée à la marge du dos, rétablissant ainsi la largeur de la page à sa valeur originale. Si vous utilisez "\setbinding", vous devez le faire après avoir défini la largeur de la page et avant de définir les marges intérieure et extérieure.
+\switchFrench\TS{2}
+Dans certains cas, par exemple lors de la réalisation d'une reliure japonaise, il peut être souhaitable d'ajouter une petite marge supplémentaire\index{binding allowance} à la marge intérieure, pour la reliure. Vous pouvez utiliser la commande \cmd{\setbinding} à cette fin. Elle diminue la largeur effective de la page de <longueur> et plus tard cette longueur sera ajoutée à la marge du dos, rétablissant ainsi la largeur de la page à sa valeur originale. Si vous utilisez \cmd{\setbinding}, vous devez le faire \emph{après} avoir défini la largeur de la page et \emph{avant} de définir les marges intérieure et extérieure.
 
 \switchEng
     That completes the methods for specifying the horizontal spacings. There 
 are similar commands for setting the vertical spacings which are 
 described below.
-\switchFrench\TS{1}
+\switchFrench\TS{2}
 Voilà qui complète les méthodes permettant de spécifier les espacements horizontaux. Il existe des commandes similaires pour définir les espacements verticaux, qui sont décrites ci-dessous.
 
 \end{paracol}
@@ -4787,8 +4787,8 @@ and $P_{h}$ and $B_{h}$ being the
 typeblock\index{typeblock!height}, respectively, 
 the results are shown in \tref{tab:ulmargins}.
 The \cmd{\setulmargins} command maintains the relationship
-\switchFrench\TS{1}
-La commande "\setulmargins" peut être utilisée pour spécifier les marges supérieure et inférieure\footnote{Seule la marge supérieure est notée dans les figures~\ref{fig:oddstock} and \ref{fig:evenstock}; la marge inférieure\index{margin!lower} est la distance entre le bas du bloc la marge inférieure est la distance entre le bas du bloc de texte\index{typeblock} et le bas de la page} quand les hauteurs de la page et du bloc de texte sont fixées. Cette commande est similaire à "\setlrmargins". En utilisant cette fois une notation légèrement différente, avec U pour la marge supérieure, L pour la marge inférieure, et P et B pour la hauteur de la page et du bloc de texte, respectivement, les résultats sont présentés dans le tableau 2.6. La commande \cmd{\setulmargins} maintient la relation
+\switchFrench\TS{2}
+La commande \cmd{\setulmargins} peut être utilisée pour spécifier\index{margin!specifying size} les marges supérieure et inférieure\footnote{Seule la marge supérieure est notée dans les figures~\ref{fig:oddstock} and \ref{fig:evenstock}; la marge inférieure\index{margin!lower} est la distance entre le bas du bloc la marge inférieure est la distance entre le bas du bloc de texte\index{typeblock} et le bas de la page} quand les hauteurs de la page\index{page!height} et du bloc de texte\index{typeblock!height} sont fixées. Cette commande est similaire à \cmd{\setlrmargins}. En utilisant cette fois une notation légèrement différente, avec $U$ pour la marge supérieure\index{margin!upper}, $L$ pour la marge inférieure, et $P_{h}$ et $B_{h}$ pour la \emph{hauteur} de la page\index{page!height} et du bloc de texte\index{typeblock!height}, respectivement, les résultats sont présentés dans le \tref{tab:ulmargins}. La commande \cmd{\setulmargins} maintient la relation
 
 \end{paracol}
 \begin{displaymath}
@@ -4799,7 +4799,7 @@ U + L = K_{h}  = \textrm{constant} \mbox{\space} (= P_{h} - B_{h}).
 \switchEng
     Note that in terms of the traditional \ltx\ parameters memoir's 
 \lnc{\uppermargin} is (\lnc{\topmargin} + \lnc{\headheight} + \lnc{\headsep}).
-\switchFrench\TS{1}
+\switchFrench\TS{2}
 Notez qu'en termes de paramètres \ltx\ traditionnels, le \lnc{\uppermargin} de memoir vaut (\lnc{\topmargin} + \lnc{\headheight} + \lnc{\headsep}).
 
 \end{paracol}
@@ -4839,8 +4839,8 @@ depends on the margins. Results
 for this command are given in \tref{tab:ulblock}. The same notation is used,
 but in this case \cmd{\setulmarginsandblock} maintains the
 relationship
-\switchFrench\TS{1}
-La commande "\setulmarginsandblock" peut être utilisée pour spécifier les marges supérieure et inférieure, où la hauteur de la page est fixe et la hauteur du bloc de texte dépend des marges. Les résultats de cette commande sont présentés dans le tableau 2.7. La même notation est utilisée, mais dans ce cas, "\setulmarginsandblock" maintient la relation suivante:
+\switchFrench\TS{2}
+La commande \cmd{\setulmarginsandblock} peut être utilisée pour spécifier\index{margin!specifying size} les marges supérieure\index{margin!upper} et inférieure\index{margin!lower}, où la hauteur de la page\index{page!height} est fixe et la hauteur du bloc de texte\index{typeblock!height} dépend des marges. Les résultats de cette commande sont présentés dans le \tref{tab:ulblock}. La même notation est utilisée, mais dans ce cas, \cmd{\setulmarginsandblock} maintient la relation suivante:
 
 \end{paracol}
 \begin{displaymath}
@@ -4895,8 +4895,8 @@ main elements of the page --- the page\index{page!specifying size}
 size, the size of the typeblock\index{typeblock!specifying size} and the 
 margins\index{margin!specifying size} 
 surrounding the typeblock\index{typeblock!location}.
-\switchFrench\TS{1}
-Ceci complète les méthodes permettant de spécifier la disposition des principaux éléments de la page - la taille de la page, la taille du bloc de texte et les marges entourant le bloc de texte.
+\switchFrench\TS{2}
+Ceci complète les méthodes permettant de spécifier la disposition des principaux éléments de la page -- la taille de la page\index{page!specifying size}, la taille du bloc de texte\index{typeblock!specifying size} et les marges\index{margin!specifying size} entourant le bloc de texte\index{typeblock!location}.
 
 \end{paracol}
 
@@ -4916,7 +4916,8 @@ page, either in the header or the footer. This makes it easy to spot when
 thumbing through the book. It may be placed at the center of the footer, 
 but unless you want to really annoy the reader do not place it near
 the spine.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Une page peut comporter deux éléments supplémentaires, et en possède généralement au moins un. Il s'agit de l'en-tête courant et du pied de page courant. Si la page comporte un folio (ou numéro de page), celui-ci est situé soit dans l'en-tête, soit dans le pied de page. Le terme \og{}dans\fg{} est utilisé de façon assez approximative ici, car le folio peut ne pas se trouver réellement dans l'en-tête ou le pied de page, mais il est toujours situé à une position relative constante. Une position courante pour le folio est vers le bord avant de la page, soit dans l'en-tête, soit dans le pied de page. Cela permet de le repérer facilement lorsque l'on feuillette le livre. Il peut être placé au centre du pied de page, mais à moins que vous ne vouliez vraiment ennuyer le lecteur, ne le placez pas à proximité de la reliure.
 
 \switchEng
     Often a page header contains the current chapter title, with perhaps a 
@@ -4925,7 +4926,8 @@ around the book. Some books put the book title into one of the headers,
 usually the verso one, but I see 
 little point in that as presumably the reader knows which particular book he
 is reading, and the space would be better used providing more useful signposts.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Souvent, un en-tête de page contient le titre du chapitre en cours, avec éventuellement un titre de section sur l'en-tête opposé, pour aider le lecteur à naviguer dans le livre. Certains livres placent le titre du livre dans l'un des en-têtes, généralement celui du verso, mais je n'en vois pas l'intérêt, car le lecteur sait vraisemblablement quel livre il est en train de lire, et l'espace serait mieux employé à fournir des indications plus utiles.
 
 \end{paracol}
 
@@ -5020,7 +5022,8 @@ design scheme, providing the margins have been made big enough to accomodate
 them. Figure~\ref{fig:evenstock} shows the marginal note parameters on a verso
 page, and also illustrates that some parameters control different 
 positions on the stock\index{stock}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Enfin, certains ouvrages comportent des notes marginales. Celles-ci viennent vraiment en dernier dans le projet de maquette, à condition que les marges aient été faites suffisamment grandes pour les accueillir. La figure~\ref{fig:evenstock} montre les paramètres de la note marginale sur une page verso, et montre également que certains paramètres contrôlent différentes positions sur le papier\index{stock}.
 
 \end{paracol}
 
@@ -5106,15 +5109,14 @@ is set to \meta{push}.
 \section{Other}
 \label{sec:other}
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
 \cmd{\setfootins}\marg{length for normal}\marg{length for minipage} \\
 \end{syntax}
 % \glossary(setfootins)%
 % {\cs{setfootins}\marg{length for normal}\marg{length for minipage}}%
 % {Sets \cs{skip}\cs{footins} and its minipage counterpart.}
-
+\begin{paracol}{2}
+\switchEng
 \noindent
 When footnotes are added to the text block they are added
 \cs{skip}\cs{footins} below the text. Since this is a skip it usually
@@ -5122,6 +5124,8 @@ needs special syntax to change it. Instead we have provided an
 interface to set it.\footnote{This interface also sets the equivalent
   lengths used when \cs{twocolumnfootnotes} and friends are being
   used.} The default sizes are \cs{bigskipamount}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 
