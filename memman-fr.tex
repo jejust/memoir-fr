@@ -5124,7 +5124,8 @@ needs special syntax to change it. Instead we have provided an
 interface to set it.\footnote{This interface also sets the equivalent
   lengths used when \cs{twocolumnfootnotes} and friends are being
   used.} The default sizes are \cs{bigskipamount}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Lorsque des notes de bas de page sont ajoutées au bloc de texte elles sont ajoutées \cs{skip}\cs{footins} sous le texte. Comme il s'agit d'un saut, il faut généralement une syntaxe spéciale pour le modifier. Au lieu de cela, nous fournissons une interface pour le définir.\footnote{Cette interface définit également les longueurs équivalentes utilisées lorsque \cs{twocolumnfootnotes} et ses copains sont utilisés.} Les longueurs par défaut utilisées valent \cs{bigskipamount}.
 
 \end{paracol}
 
@@ -5144,12 +5145,14 @@ directly using either \cmd{\setlength} or \cmd{\addtolength} applied to the
 parameter(s) to be modified. If you choose the latter route, those class 
 parameters which differ from the standard \ltx\ parameters will \emph{not} be
 modified. 
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Les paramètres de mise en page\index{page layout!class parameters} dont nous venons de parler ne sont pas toujours les mêmes que ceux qui sont attendus par \ltx, ou par les packages \ltx. Les paramètres attendus par \ltx\ sont présentés dans la \fref{fig:anoddpage}. Vous pouvez soit utiliser les commandes de la classe pour modifier la mise en page, soit modifier directement les paramètres \ltx\ en utilisant les commandes \cmd{\setlength} ou \cmd{\addtolength} appliquées au(x) paramètre(s) à modifier. Si vous choisissez cette dernière solution, les paramètres de classe qui diffèrent des paramètres \ltx\ standards ne seront \emph{pas} modifiés.
 
 \switchEng
     The general process of setting up your own page layout\index{page layout} 
 is along these lines:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Voici la démarche générale à suivre pour définir votre propre maquette:
 
 \switchEng
 \begin{itemize}
@@ -6840,7 +6843,9 @@ width.
 Outline fonts\indextwo{outline}{font} can be scaled to any size, 
 but as the scaling is typically 
 linear, different sizes do not visually match quite as well.
+\switchFrench\TS{0}
 
+\switchEng
     Computer Modern fonts come in twelve sizes which, rounded to a point,
 are: 5, 6, 7, 8, 9, 10, 11, 12, 14, 17, 20 and 25pt.
    In \ltx\ the size for a particular font is specifed by a macro name like
@@ -6849,6 +6854,8 @@ are: 5, 6, 7, 8, 9, 10, 11, 12, 14, 17, 20 and 25pt.
 of this manual.} 
 The actual size of, say, \cs{scriptsize} characters, is not fixed but depends
 on the type size option given for the document. 
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -6903,16 +6910,23 @@ text. The \cmd{\footnotesize} is the size normally
 used for typesetting footnotes\index{footnote}. The standard classes 
 use the other sizes, usually the larger ones, for typesetting certain 
 aspects of a document, for example sectional headings. 
+\switchFrench\TS{0}
 
+\switchEng
 With respect to the standard classes, the \Mname\ class 
 provides a wider range of the document class type size options and
 adds two extra font size declarations, namely \cmd{\miniscule}
 and \cmd{\HUGE}, one at each end of the range.
+\switchFrench\TS{0}
 
+\switchEng
     The \Mname\ class font size declarations names are given in 
 \tref{tab:fsizenames} together with the name set in the specified size 
 relative to the manual's \cs{normalsize} font.
 font. The corresponding actual sizes are given in \tref{tab:fsizepoints}.
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \begin{table}
@@ -6971,14 +6985,18 @@ provides for fonts ranging from 4pt to 132pt. That is: \par
 {\fontsize{60}{72}\selectfont through the 60pt normal size\raggedright\par}% \par
 {\fontsize{132}{160}\selectfont \raggedright to the 132pt size (the 60pt
 \cs{HUGE} size).\raggedright\par}
+\switchFrench\TS{0}
 
-
+\switchEng
 This extended range, though,
 is only accessible if you are using outline\indextwo{outline}{font} fonts
 and the \Lopt{extrafontsizes} class option.
 If you are using bitmap fonts\indextwo{bitmap}{font} then, for example,
 the \cmd{\HUGE} font will be automatically limited to 25pt, and the minimum
 size of a \cmd{\miniscule} font is 5pt.
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \section{Spaces}
@@ -6993,14 +7011,20 @@ is no extra space between paragraphs. Font designers go to great pains
 to ensure that they look good when set with the normal leading. Sometimes,
 such as when trying to meet a University's requirements for the layout
 of your thesis, you may be forced to ignore the experience of centuries.
+\switchFrench\TS{1}
+En typographie traditionnelle, la première ligne d'un paragraphe, sauf si elle suit immédiatement un titre de chapitre ou de section, est en retrait. De même, il n'y a pas d'espace supplémentaire entre les paragraphes. Les créateurs de polices de caractères se donnent beaucoup de mal pour s'assurer que les polices sont belles lorsqu'elles sont utilisées avec le retrait normal. Parfois, par exemple lorsque vous essayez de répondre aux exigences de votre université en matière de présentation de votre thèse, vous vous contraint d'ignorer des siècles d'expérience.
 
+\switchEng
 \index{space!inter-paragraph|(}
    If you like the idea of eliminating paragraph indentation and using extra
 inter-paragraph space to indicate where paragraphs start and end, consider how
 confused your reader will be if the last paragraph on the page ends with a full
 line; how will the reader know that a new paragraph starts at the top of
 the following page?
+\switchFrench\TS{1}
+S'il vous vient à l'idée d'éliminer l'indentation des paragraphes et d'utiliser un espace interparagraphe additionnel pour indiquer le début et la fin des paragraphes, songez à la confusion qu'éprouvera votre lecteur si le dernier paragraphe de la page se termine par une ligne entière ; comment saura-t-il qu'un nouveau paragraphe commence en haut de la page suivante?
 
+\end{paracol}
 \begin{syntax}
 \cs{par} \\
 \lnc{\parskip} \\
@@ -7023,17 +7047,26 @@ the following page?
 \glossary(traditionalparskip)%
   {\cs{traditionalparskip}}%
   {Sets the interparagraph spacing to its traditional value.}
+\begin{paracol}{2}
+\switchEng
 In the input text the end of a paragraph is indicated either by leaving
 a blank line, or by the \cs{par} command. 
 The length \lnc{\parskip} is the inter-paragraph spacing, and is normally 0pt.
 You can change this by saying, for example:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setlength{\parskip}{2\baselineskip}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 but you are likely to find that many things have changed that you
 did not expect, because \ltx\ uses the \cs{par} command in many
 places that are not obvious.
+\switchFrench\TS{0}
 
+\switchEng
 If, in any event, you wish to do a disservice to your readers you can use 
 \cmd{\abnormalparskip} to set the inter-paragraph spacing to
 a value of your own choosing. Using the \cmd{\nonzeroparskip} will set
@@ -7041,10 +7074,14 @@ the spacing to  what might be a reasonable non-zero value.\footnote{Except
 that all values except zero are unreasonable.} 
 Both these macros try and eliminate the worst of the side effects that occur
 if you just simply change \lnc{\parskip} directly.
+\switchFrench\TS{0}
 
+\switchEng
 Following the \cmd{\traditionalparskip} declaration all will be returned 
 to their traditional values. 
+\switchFrench\TS{0}
 
+\switchEng
     I based the code for these functions upon the NTG classes~\cite{NTG}
 which indicated some of the pitfalls in increasing the spacing. The difficulty
 is that \cs{par}, and hence \lnc{\parskip}, occurs in many places, some
@@ -7054,6 +7091,7 @@ unexpected and others deeply buried in the overall code.
 
 \index{space!at start of paragraph|see{paragraph indentation}}
 
+\end{paracol}
 \begin{syntax}
 \lnc{\parindent} \\
 \end{syntax}
@@ -7061,13 +7099,18 @@ unexpected and others deeply buried in the overall code.
   {\cs{parindent}}
   {Indentation at the start of the first line of a paragraph.}
 \index{paragraph indentation}
+\begin{paracol}{2}
+\switchEng
 The length \lnc{\parindent} is the indentation at the start of a paragraph's
 first line. This is usually of the order of 1 to 1\slashfrac{1}{2} em.
 To make the first line of a paragraph flushleft set this to zero:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setlength{\parindent}{0pt}
 \end{lcode}
-\end{paracol}
+
 
 \subsection{Double spacing}
 
@@ -7082,10 +7125,14 @@ regulations, which were invariably single spaced, seemed immune to any
 suggestions.} but perhaps that is the purpose, or maybe they have stock
 (shares) in papermills and lumber companies, as the theses were usually 
 required to be printed single sided as well.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \lnc{\baselineskip} \lnc{\onelineskip} \\
 \end{syntax}
+\begin{paracol}{2}
+\switchEng
 The length \lnc{\baselineskip} is the space, or 
 leading\index{leading}, between the baselines of adjacent text lines, 
 and is constant
@@ -7101,7 +7148,9 @@ is concerned this is a constant value; that is, unlike \lnc{\baselineskip},
 it never alters \lnc{\onelineskip}. You can use (fractions) of 
 \lnc{\onelineskip} to specify vertical spaces in terms of normal text 
 lines.
+\switchFrench\TS{0}
 
+\switchEng
     The following is heavily based on the \Lpack{setspace} 
 package~\cite{SETSPACE}, but
 the names have been changed to avoid any clashes. Like the nonzero 
@@ -7109,7 +7158,9 @@ the names have been changed to avoid any clashes. Like the nonzero
 it is hard for a package to get at the internals of the overlying class
 and kernel code. This is not to say that all is well with trying to deal
 with it at the class level.
+\switchFrench\TS{0}
 
+\end{paracol}
 \LMnote{2010/09/19}{Added description about the starred macros}
 \begin{syntax}
 \cmd{\OnehalfSpacing} \cmd{\OnehalfSpacing*} \\
@@ -7127,7 +7178,8 @@ with it at the class level.
 \glossary(DoubleSpacing*)%
   {\cs{DoubleSpacing*}}%
   {Same as \cs{DoubleSpacing} but also effects page notes and floats.}
-
+\begin{paracol}{2}
+\switchEng
   The declaration \cmd{\OnehalfSpacing} increases the spacing between
   lines so that they appear to be double spaced (especially to the
   thesis layout arbiters), while the declaration \cmd{\DoubleSpacing}
@@ -7139,6 +7191,9 @@ with it at the class level.
   captions) in `double' spacing. The starred version of the two macros
   above takes care of this. Alternatively the spacing in page notes
   (i.e. footnotes and friends) or floats an be set explicitly using
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{syntax}
   \cmd{\setPagenoteSpacing}\marg{factor}\\
   \cmd{\setFloatSpacing}\marg{factor}
@@ -7149,9 +7204,13 @@ with it at the class level.
 \glossary(setPagenoteSpacing)%
   {\cs{setPagenoteSpacing}}%
   {Explicitly set the spacing used inside page notes such including footnotes.}
+\begin{paracol}{2}
+\switchEng
 \cs{setFloatSpacing} should go after say \cs{OnehalfSpacing*} if used.
+\switchFrench\TS{0}
 
 
+\end{paracol}
 
 \PWnote{2009/06/24}{Corrected \cs{SetSingleSpace} to \cs{setSingleSpace}}
 \begin{syntax}
@@ -7169,17 +7228,23 @@ with it at the class level.
 \glossary(setSingleSpace)%
   {\cs{setSingleSpace}\marg{factor}}%
   {Change the baselineskip by \meta{factor}.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\setSingleSpace} command is meant to be used to
 adjust \emph{slightly} the normal spacing betwen lines, perhaps because
 the font being used looks too crampled or loose. The effect is that the 
 normal \lnc{\baselineskip} spacing will be multiplied by \meta{factor}, which
 should be close to 1.0. Using \cmd{\setSingleSpace} will also reset
 the float and page note spacings.
+\switchFrench\TS{0}
 
+\switchEng
 The declaration \cmd{\SingleSpacing} returns everthing to normal, or at
 least the setting from \cmd{\setSingleSpace} if it has been used. It
 will also reset float and page note spacings to the same value.
+\switchFrench\TS{0}
 
+\switchEng
 \begin{note}
   \sloppy
   \cmd{\SingleSpacing} will also issue a
@@ -7192,8 +7257,9 @@ will also reset float and page note spacings to the same value.
   added a \cmd{\SingleSpacing*} that is equal to \cmd{\SingleSpacing}
   but \emph{does not} add this skip.
 \end{note}
+\switchFrench\TS{0}
 
-
+\end{paracol}
 \begin{syntax}
 \senv{SingleSpace} ...\eenv{SingleSpace} \\
 \senv{Spacing}\marg{factor} ... \eenv{Spacing} \\
@@ -7220,10 +7286,13 @@ will also reset float and page note spacings to the same value.
 \glossary(DoubleSpace*)%
   {\senv{DoubleSpace*}}%
   {Environment form of \cs{DoubleSpacing*}}
-
+\begin{paracol}{2}
+\switchEng
 These are the environments corresponding to the declarations presented
 earlier, for when you want to change the spacing locally.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\setDisplayskipStretch}\marg{fraction} \\
 \cmd{\memdskipstretch} \\
@@ -7246,7 +7315,8 @@ earlier, for when you want to change the spacing locally.
 \index{double spacing|)}
 
 
-
+\begin{paracol}{2}
+\switchEng
 If you have increased the interlinear space in the text you may wish, or be
 required, to increase it around displays (of maths). 
 The declaration \cmd{\setDisplayskipStretch} will increase the before 
@@ -7254,12 +7324,20 @@ and after displayskips by \meta{fraction}, which must be at least 0.0.
 More precisely, it defines \cmd{\memdskipstretch} to be \meta{fraction}.
 The \cmd{\noDisplayskipStretch} declaration
 sets the skips back to their normal values. It is equivalent to
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setDisplayskipStretch{0.0}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The skips are changed within the macro \cmd{\memdskips} which, in turn, is
 called by \cmd{\everydisplay}. If you find odd spacing around displays then
 redefine \cmd{\memdskips} to do nothing. Its orginal specification is:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand*{\memdskips}{%
   \advance\abovedisplayskip \memdskipstretch\abovedisplayskip
@@ -7267,11 +7345,15 @@ redefine \cmd{\memdskips} to do nothing. Its orginal specification is:
   \advance\abovedisplayshortskip \memdskipstretch\abovedisplayshortskip
   \advance\belowdisplayshortskip \memdskipstretch\belowdisplayshortskip}
 \end{lcode}
-
+\begin{paracol}{2}
+\switchEng
     If you need to use a \Ie{minipage} as a stand-alone item in a widely 
 spaced text then you
 may need to use the \Ie{vminipage} environment instead to get the before and
 after spacing correct.
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \section{Overfull lines}
@@ -7284,7 +7366,9 @@ after spacing correct.
     \tx\ tries very hard to keep text lines justified while keeping the 
 interword spacing as constant as possible, but sometimes fails and complains
 about an overfull hbox.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\fussy} \cmd{\sloppy} \\
 \senv{sloppypar} ... \eenv{sloppypar} \\
@@ -7308,16 +7392,21 @@ about an overfull hbox.
 \glossary(midsloppypar)%
   {\senv{midsloppypar}}%
   {Typeset contents of the enclosed paragraph(s) using \cs{midsloppy}.}%
-
+\begin{paracol}{2}
+\switchEng
     The default mode for \ltx\ typesetting is \cmd{\fussy} where 
 the (variation of) interword spacing in justified text is kept to a 
 minimum. Following the \cmd{\sloppy}
 declaration there may be a much looser setting of justified text. 
 The \Ie{sloppypar} environment is equivalent to:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 {\par \sloppy ... \par}
 \end{lcode}
-
+\begin{paracol}{2}
+\switchEng
     Additionally the class provides the \cmd{\midsloppy} declaration (and the
 \Ie{midsloppypar} environment) which allows a setting somewhere between 
 \cmd{\fussy} and \cmd{\sloppy}. Using \cmd{\midsloppy} you will get fewer 
@@ -7326,6 +7415,8 @@ interword spaces than with \cmd{\sloppy}.
 I have used \cmd{\midsloppy} for this manual; it hasn't prevented 
 overfull lines or noticeably different interword spaces, but has markedly 
 reduced them compared with \cmd{\fussy} and \cmd{\sloppy} respectively.
+\switchFrench\TS{0}
+
 \end{paracol}
 \index{overfull lines|)}
 \index{space!interword|)}
@@ -7340,10 +7431,15 @@ the last line of a paragraph ends up at the top of a page, and an
 orphan\footnote{Knuth uses the term `club' instead of the normal typographers'
 terminology.} 
 is when the first line of a paragraph is at the bottom of a page.
+\switchFrench\TS{0}
 
+\switchEng
     The following is the generally suggested method of eliminating widows 
 and orphans, but it may well result in some odd looking pages, especially
 if \cmd{\raggedbottom} is not used.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \clubpenalty=10000
 \widowpenalty=10000
@@ -7356,10 +7452,14 @@ if \cmd{\raggedbottom} is not used.
 \glossary(enlargethispage)%
   {\cs{enlargethispage}\marg{length}}%
   {Increase (or decrease) the text height of the current page by \meta{length}.}
+\begin{paracol}{2}
+\switchEng
     You can use \cmd{\enlargethispage} to add or subtract to the text height
 on a particular page to move a line forwards or backwards between two pages.
+\switchFrench\TS{0}
 
 
+\switchEng
  Here is one person's view on the matter:
 \begin{quote}
 \ldots in experimenting with raggedbottom, widowpenalty, and clubpenalty,
@@ -7371,10 +7471,14 @@ stretching the textheight to allow this one extra at the bottom of the
 same page. \\
 \hfill /iaw (from \ctt, \textit{widow handling?}, May 2006)
 \end{quote}
+\switchFrench\TS{0}
 
+\switchEng
 As so often happens, Donald Arseneau\index{Arseneau, Donald} 
 came up with a solution.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\sloppybottom} \\
 \end{syntax}
@@ -7382,13 +7486,20 @@ came up with a solution.
   {\cs{sloppybottom}}%
   {Declaration for \tx\ to allow an extra line at the bottom of a page.
    The \cs{topskip} must have been increased beforehand.}%
+\begin{paracol}{2}
+\switchEng
 The declaration \cmd{\sloppybottom} lets \tx\ put an extra line at
 the bottom of a page to avoid a widow on the following page. 
+\switchFrench\TS{0}
 
+\switchEng
     The \lnc{\topskip} must have been increased beforehand for this to
 work (a 60\% increase is reasonable) and this will push the text
 lower on the page. Run \cmd{\checkandfixthelayout} after the change (which
 may reduce the number of lines per page). For example, in the preamble:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setlength{\topskip}{1.6\topskip}
 \checkandfixthelayout
@@ -7396,6 +7507,8 @@ may reduce the number of lines per page). For example, in the preamble:
 \end{lcode}
 
 \indextwo{widow}{line}\indextwo{orphan}{line}
+\begin{paracol}{2}
+\switchEng
     The late Michael Downes\index{Downes, Michael} provided the following 
 (from \ctt\ \textit{widow/orphan control package (for 2e)?}, 1998/08/31):
 \begin{quote}
@@ -7406,6 +7519,9 @@ of some code that I had lying around. I guess I could wrap it into
 package form and post it to CTAN. \\
 \hfill Michael Downes
 \end{quote}
+\switchFrench\TS{0}
+
+\end{paracol}
 
 \begin{lcode}
 % set \clubpenalty, etc. to distinctive values for use
@@ -7430,11 +7546,16 @@ package form and post it to CTAN. \\
 \end{lcode}
 
 \indextwo{widow}{line}\indextwo{orphan}{line}
-    As you can see, perfect automatic widow/orphan control is problematic 
+\begin{paracol}{2}
+\switchEng
+    As you can see, perfect automatic widow/orphan control is problematic, 
 though typographers are typically more concerned about widows than orphans ---
 a single line of a paragraph somehow looks worse at the top of a page than
 at the bottom. If all else fails, the solution is either to live with the 
 odd line or to reword the text.
+\switchFrench\TS{1}
+Comme vous constatez, le contrôle automatique parfait des veuves et des orphelines est problématique, bien que les typographes soient généralement plus préoccupés par les veuves que par les orphelins -- une ligne isolée d'un paragraphe a d'une certaine manière l'air pire en haut d'une page qu'en bas. Si tout le reste échoue, la solution consiste soit à s'accommoder de la ligne isolée, soit à reformuler le texte.
+
 \end{paracol}
 
 \section{Text case}
@@ -7446,15 +7567,19 @@ The standard kernel \cmd{\MakeUppercase}\marg{text} and
 \cmd{\MakeLowercase}\marg{text} basically upper or lower case
 everything it can get its hands on. This is not particularly nice if
 the \meta{text} contain, say, math.
+\switchFrench\TS{0}
 
+\switchEng
 In order to help with this we load the \Lpack{textcase} package
 (\cite{textcase}) by David Carlisle (with the \texttt{overload}
 option) which provide the \cmd{\MakeTextUppercase} and
 \cmd{\MakeTextLowercase} macros.\footnote{Overload causes the original
   \cmd{\MakeUppercase} and \cmd{\MakeLowercase} to be copies of
   \cmd{\MakeTextUppercase} and \cmd{\MakeTextLowercase}.}
+\switchFrench\TS{0}
 
 
+\switchEng
 \begin{caveat}
   This change was made in October 2019, earlier we embedded a copy of
   \texttt{textcase} into the class it self. Now we check to see of you
@@ -7468,18 +7593,20 @@ option) which provide the \cmd{\MakeTextUppercase} and
 \end{syntax}
 to your preamble.
 \end{caveat}
+\switchFrench\TS{0}
 
 
+\switchEng
 The following is DCs own documentation of the provided code changed to
 match the typography we use.\footnote{Note: This documentation will
   probably be removed in a future version and replaced by a summary
   and a reference to \cite{textcase}.}
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \fancybreak{}
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
   \cmd{\MakeTextUppercase}\marg{text}\\
   \cmd{\MakeTextLowercase}\marg{text}
@@ -7492,27 +7619,41 @@ match the typography we use.\footnote{Note: This documentation will
   {\cs{MakeTextLowercase}\marg{text}}
   {Lower case \meta{text} by leave math, references, citations and
     \cs{NoCaseChange}\marg{text} alone.}
+\begin{paracol}{2}
+\switchEng
 \cmd{\MakeTextUppercase} and \cmd{\MakeTextLowercase} are versions of
 the standard \cmd{\MakeUppercase} and \cmd{\MakeLowercase} that do not
 change the case of any math sections in their arguments.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{verbatim}
 \MakeTextUppercase{abc\ae\ \( a = b \)  and $\alpha \neq a$ 
   or even \ensuremath{x=y} and $\ensuremath{x=y}$}
 \end{verbatim}
-Should produce:
+\begin{paracol}{2}
+\switchEng
+should produce:
 \begin{quotation}
  ABC\AE\ \( a = b \)  AND $\alpha \neq a$ 
   OR EVEN \ensuremath{x=y} AND $\ensuremath{x=y}$
 \end{quotation}
+\switchFrench\TS{0}
 
+\switchEng
 We incorporates some changes suggested by Donald Arseneau so that as
 well as math mode, the arguments of \cmd{\cite}, \cmd{\label} and
 \cmd{\ref} are also prevented from being uppercased.  So you can now
 go
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{verbatim}
 \MakeTextUppercase{%
    Text in section~\ref{sec:text-case}, about \cite[pp 2--4]{textcase}}
 \end{verbatim}
+\begin{paracol}{2}
+\switchEng
 which produces
 \begin{quotation}
 \MakeTextUppercase{%
@@ -7521,7 +7662,9 @@ which produces
 If, instead, the standard \cmd{\MakeUppercase} were used here, the keys
 `sec:text-case' and `textcase' would be uppercased and generate errors about
 undefined references to SEC:TEXT-CASE  and TEXTCASE.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
   \cmd{\NoCaseChange}\marg{text}
 \end{syntax}
@@ -7529,22 +7672,34 @@ undefined references to SEC:TEXT-CASE  and TEXTCASE.
  {\cs{NoCaseChange}\marg{text}}
  {The argument of this macro is not touched by \cs{MakeTextUppercase}
    or \cs{MakeTextLowercase}.}
+\begin{paracol}{2}
+\switchEng
 Sometimes there may be a special section of text that should not be
 uppercased. This can be marked with \cmd{\NoCaseChange}, as follows.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{verbatim}
 \MakeTextUppercase{% 
    Text \NoCaseChange{More Text} yet more text}
 \end{verbatim}
+\begin{paracol}{2}
+\switchEng
 which produces
 \begin{quotation}
 \MakeTextUppercase{%
    Text \NoCaseChange{More Text} yet more text}
 \end{quotation}
+\switchFrench\TS{0}
 
+\switchEng
 \cmd{\NoCaseChange} has other uses. If for some reason you need a
 tabular environment within an uppercased section, then you need
 to ensure that the name `tabular' and the preamble (eg `ll')
 does not get uppercased:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{verbatim}
 \MakeTextUppercase{%
    Text \NoCaseChange{\begin{tabular}{ll}}%
@@ -7552,6 +7707,8 @@ does not get uppercased:
         \NoCaseChange{\end{tabular}}
    More text}
 \end{verbatim}
+\begin{paracol}{2}
+\switchEng
 which produces
 \begin{quotation}
 \MakeTextUppercase{%
@@ -7560,6 +7717,9 @@ which produces
         \NoCaseChange{\end{tabular}}
    More text}
 \end{quotation}
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \subsection{Nested text}
@@ -7570,9 +7730,14 @@ The commands defined here only skip math sections and \cmd{\ref} arguments
 if they are not `hidden' inside a \verb|{ }| brace group. All text inside
 such a group will be made uppercase just as with the standard
 \cmd{\MakeUppercase}.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{verbatim}
 \MakeTextUppercase{a b {c $d$} $e$}
 \end{verbatim}
+\begin{paracol}{2}
+\switchEng
 produces
 \begin{quotation}
  \MakeTextUppercase{a b {c $d$} $e$}
@@ -7580,7 +7745,10 @@ produces
 Of course, this restriction does not apply to the arguments of the
 supported commands \verb|\ensuremath|, \verb|\label|, \verb|\ref|, and
 \verb|\cite|.
+\switchFrench\TS{0}
 
+
+\switchEng
 If you cannot arrange for your mathematics to be at the outer level of
 brace grouping, you should use the following basic technique (which
 works even with the standard \cmd{\MakeUppercase} command). Define a
@@ -7590,6 +7758,9 @@ if the text being uppercased is in a section title or other moving
 argument you may need to make the definition in the document preamble,
 rather than just before the section command, so that the command is
 defined when the table of contents file is read.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{verbatim}
 \MakeTextUppercase{%
        Text \fbox{$a=b$ and $x=y$}}%
@@ -7599,6 +7770,8 @@ defined when the table of contents file is read.
 \MakeTextUppercase{%
        Text \fbox{\protect\mathexprone\ and \protect\mathexprtwo}}%
 \end{verbatim}
+\begin{paracol}{2}
+\switchEng
 which produces
 \begin{quotation}
 \MakeTextUppercase{%
@@ -7609,6 +7782,9 @@ which produces
 \MakeTextUppercase{%
        Text \fbox{\protect\mathexprone\ and \protect\mathexprtwo}}%
 \end{quotation}
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \fancybreak{}
