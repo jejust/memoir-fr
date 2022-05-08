@@ -8507,7 +8507,8 @@ put \cmd{\emptythanks} before each \cmd{\maketitle} after the first.
 \begin{paracol}{2}
 \switchEng
     The class provides a configurable \cmd{\thanks} command.
-\switchFrench\TS{0}
+\switchFrench\TS{2}
+La classe fournit une commande \cmd{\thanks} configurable.
 
 \end{paracol}
 \begin{syntax}
@@ -8530,7 +8531,8 @@ is the name of one of the formats for printing a counter. The name
 is the same as that of a counter format but without the backslash.
 To have the \cmd{\thanks} marks as lowercase letters instead of symbols 
 do:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Chaque appel de \cmd{\thanks} est indiqué dans le titre par un symbole référant à une note de bas de page\index{footnote}. La commande \cmd{\thanksmarkseries} peut être utilisée pour modifier le style d'appel de note. L'argument \meta{format} est le nom de l'un des formats d'affichage de compteur. Le nom est le même que celui d'un format de compteur mais sans antislash. Par exemple, pour que les symboles de remerciement soient des lettres minuscules et non des symboles, utilisez:
 
 \end{paracol}
 \begin{lcode}
@@ -8543,7 +8545,8 @@ to be footnote\index{footnote} symbols.
 Using this class the potential names for \meta{format} are:
 \texttt{arabic}, \texttt{roman}, \texttt{Roman}, \texttt{alph}, 
 \texttt{Alph}, and \texttt{fnsymbol}. 
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Pour plus de commodité, la commande \cmd{\symbolthanksmark} définit les séries comme symboles de note de bas de page\index{footnote}. En utilisant cette classe, les noms potentiels pour \meta{format} sont: \texttt{arabic}, \texttt{roman}, \texttt{Roman}, \texttt{alph}, \texttt{Alph} et \texttt{fnsymbol}.
 
 \end{paracol}
 \begin{syntax}
@@ -8560,7 +8563,9 @@ is zeroed after the titling so that the footnote marks\index{footnote!mark} star
 If the counter should not be zeroed, then just specify 
 \cmd{\continuousmarks}.
 This might be required if numerals are used as the thanks markers.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La commande \cmd{\thanks} utilise le compteur \Icn{footnote} (celui des notes de bas de page), mais normalement le compteur est remis à zéro après les titres de sorte que les marques de bas de page\index{footnote!mark} commencent bien à partir de 1. Si le compteur ne doit pas être remis à zéro, il suffit de spécifier \cmd{\continuousmarks}.
+Cela peut être nécessaire si des chiffres sont utilisés comme appels de remerciements.
 
 \end{paracol}
 \begin{syntax}
@@ -8576,7 +8581,8 @@ The \cmd{\thanksheadextra} command will insert
 \meta{pre} and \meta{post} before and after the thanks markers in the
 titling block. By default \meta{pre} and \meta{post} are empty.
 For example, to put parentheses round the titling markers do:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La commande \cmd{\thanksheadextra} insère \meta{pre} et \meta{post} avant et après les marqueurs de remerciement dans le bloc de titrage. Par défaut, \meta{pre} et \meta{post} sont vides. Par exemple, pour mettre des parenthèses autour des symboles dans les titres, on peut faire:
 
 \end{paracol}
 \begin{lcode}
@@ -8596,10 +8602,11 @@ It is sometimes desireable to have the same thanks text be applied to,
 say, four out of six authors, these being the first~3 and the last one.
 The command \cmd{\thanksmark}\marg{n} is similar to 
 \cmd{\footnotemark}\oarg{n} in that it prints a thanks mark identical
-to that of the \meta{n}'th  \cmd{\thanks} command. No changes are made
+to that of the \meta{n}'th \cmd{\thanks} command. No changes are made
 to any thanks in the footnotes\index{footnote}. For instance, in the following
 the authors Alpha and Omega will have the same mark:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Il est parfois souhaitable que le même texte de remerciement soit appliqué, par exemple, à quatre auteurs sur six, ceux-ci étant les 3~premiers et le dernier. La commande \cmd{\thanksmark}\marg{n} est similaire à \cmd{\footnotemark}\oarg{n} dans la mesure où elle affiche un appel de remerciement identique à celle de la \meta{n}\textsuperscript{e} commande \cmd{\thanks}. Aucune modification n'est apportée aux remerciements dans les notes de bas de page\index{footnote}. Par exemple, dans ce qui suit, les auteurs Alpha et Omega auront la même marque:
 
 \end{paracol}
 \begin{lcode}
@@ -8637,7 +8644,9 @@ the authors Alpha and Omega will have the same mark:
 \switchEng
 By default the thanks mark at the foot is typeset as a superscript. In
 the class this is specifed via
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Par défaut, le symbole de remerciement en pied de page est composé en exposant.
+Dans la classe, ceci est spécifié par:
 
 \end{paracol}
 \begin{lcode}
@@ -8649,7 +8658,9 @@ where \verb?#1? will be replaced by the thanks mark symbol. You can change
 the mark styling
 if you wish. For example, to put parentheses round the
 mark and typeset it at normal size on the baseline:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+où \verb?#1? sera remplacé par le symbole de l'appel de remerciement.
+Vous pouvez modifier le style du symbole si vous le souhaitez. Par exemple, vous pouvez mettre des parenthèses autour de lui et le composer en taille normale sur la ligne de base:
 
 \end{paracol}
 \begin{lcode}
@@ -8668,7 +8679,8 @@ mark and typeset it at normal size on the baseline:
  The thanks mark in the footnote\index{footnote} is typeset right justified in a box
 of width \lnc{\thanksmarkwidth}. The first line of the thanks text starts
 after this box. The initialisation is
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Le symbole de remerciement dans la note de bas de page\index{footnote} est justifié à droite dans un cadre de largeur \lnc{\thanksmarkwidth}. La première ligne du texte de remerciement commence après ce cadre. La valeur peut être configurée par:
 
 \end{paracol}
 \begin{lcode}
@@ -8677,7 +8689,8 @@ after this box. The initialisation is
 \begin{paracol}{2}
 \switchEng
 giving the default position.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+qui est la valeur par défaut.
 
 \end{paracol}
 \begin{syntax}
@@ -8692,7 +8705,8 @@ The value of the length
  \lnc{\thanksmarksep} controls the indentation the
 second and subsequent lines of the thanks text, with respect to
 the end of the mark box. As examples:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La longueur \lnc{\thanksmarksep} détermine l'indentation de la deuxième ligne et des lignes suivantes du texte de remerciement, par rapport au symbole de la note. À titre d'exemple:
 
 \end{paracol}
 \begin{lcode}
@@ -8701,7 +8715,8 @@ the end of the mark box. As examples:
 \begin{paracol}{2}
 \switchEng
  will align the left hand ends of of a multiline thanks text, while:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+alignera toutes les lignes du texte de remerciement sur la gauche, tandis que:
 
 \end{paracol}
 \begin{lcode}
@@ -8712,7 +8727,9 @@ the end of the mark box. As examples:
 will left justify any second and subsequent lines of the thanks text. 
 This last
 setting is the initialised value, giving the default appearance.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+justifiera à gauche la deuxièmes ligne et les suivantes du texte de remerciement.
+Ce dernier paramètre est la valeur initiale, donnant l'apparence par défaut.
 
 \end{paracol}
 \begin{syntax}
@@ -8725,12 +8742,14 @@ setting is the initialised value, giving the default appearance.
 \begin{paracol}{2}
 \switchEng
     A thanks mark in the footnote\index{footnote} region is typeset by \cmd{\thanksfootmark}.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Un symbole de remerciement en bas de page\index{footnote} est composé avec \cmd{\thanksfootmark}.
 
 \switchEng
 The code for this is roughly:
 \LMnote{2012/07/02}{Text changed to reflect the actual code}
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Le code pour cela est approximativement:
 
 \end{paracol}
 \begin{lcode}
@@ -8744,7 +8763,8 @@ You should not need to change the definition
 of \cmd{\thanksfootmark} 
 but you may want to change the default definitions of one or more
 of the macros it uses.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Vous ne devriez pas avoir à modifier la définition de \cmd{\thanksfootmark}, mais vous voudrez peut-être modifier les définitions par défaut d'une ou plusieurs des macros qu'elle utilise.
 
 \end{paracol}
 \begin{syntax}
@@ -8756,7 +8776,8 @@ of the macros it uses.
 \begin{paracol}{2}
 \switchEng
 This is initially defined as:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Celle-ci est initialement définie comme:
 
 \end{paracol}
 \begin{lcode}
@@ -8766,7 +8787,8 @@ This is initially defined as:
 \switchEng
 so that \cmd{\thanksscript} typesets its argument as a superscript, which
 is the default for thanks notes.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+afin que \cmd{\thanksscript} compose son argument en exposant, ce qui est la valeur par défaut pour les notes de remerciement.
 
 \end{paracol}
 
@@ -8858,7 +8880,8 @@ to change its default definition. Just in case, though,
 \cmd{\makethanksmark}
 calls the macro \cmd{\makethanksmarkhook} before it does any typesetting.
 The default definition of this is:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+La macro \cmd{\makethanksmark} compose à la fois le symbole de remerciement (via \cmd{\thanksfootmark}) et le texte du remerciement. Vous n'aurez probablement pas besoin de modifier sa définition par défaut. Toutefois, au cas où, \cmd{\makethanksmark} appelle la macro \cmd{\makethanksmarkhook} avant de procéder à la mise en forme. La définition par défaut de cette macro est:
 
 \end{paracol}
 \begin{lcode}
@@ -8867,12 +8890,14 @@ The default definition of this is:
 \begin{paracol}{2}
 \switchEng
 which does nothing.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+qui ne fait rien.
 
 \switchEng
    You can redefine \cmd{\makethanksmarkhook} to do something useful. For
 example, if you wanted a slightly bigger baseline skip you could do:
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Vous pouvez redéfinir \cmd{\makethanksmarkhook} pour lui faire faire quelque chose d'utile. Par exemple, si vous voulez un saut de ligne de base légèrement plus grand, vous pourrez essayer:
 
 \end{paracol}
 \begin{lcode}
@@ -8887,7 +8912,9 @@ a 10pt document, and 11pt is the baselineskip for \cmd{\footnotesize}
 text in an 11pt document (the normal baseline skip for \cmd{\footnotesize}
 in a 10pt document is 9.5pt);
 adjust these numbers to suit.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+où les chiffres \texttt{8} et \texttt{11} spécifient respectivement la taille de la police et le saut de ligne de base. Dans cet exemple, 8\,pt correspond au corps normal d'un texte \cmd{\footnotesize} dans un document composé en 10\,pt, et 11\,pt correspond à la hauteur ligne de base pour ce même texte en \cmd{\footnotesize} dans un document en 11\,pt (la hauteur de ligne de base normale pour \cmd{\footnotesize} dans un document composé en 10\,pt est de 9,5\,pt);
+ajustez ces valeurs en fonction de vos besoins.
 
 \end{paracol}
 \begin{syntax}
@@ -8922,7 +8949,8 @@ rule may also be used for footnotes\index{footnote}. Issuing the command
 to be used from thereon; another \cmd{\usethanksrule}
 command can be issued later
 if you want to swap back again.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Par défaut, il n'y a pas de ligne tracée au-dessus du texte des remerciements dans un environnement \Ie{titlingpage}. Si vous en voulez une, utilisez \cmd{\usethanksrule} avant la commande \cmd{\maketitle}, qui tracera alors une ligne selon la définition en cours de \cmd{\thanksrule}. \cmd{\thanksrule} est initialisée comme étant une copie de \cmd{\footnoterule} telle qu'elle est définie à la fin du préambule\index{preamble}. La définition de \cmd{\thanksrule} peut être modifiée après \verb?\begin{document}?. Si la définition de \cmd{\thanksrule} est modifiée et qu'une commande \cmd{\usethanksrule} a été exécutée, la ligne redéfinie peut également être utilisée pour les notes de bas de page\index{footnote}. L'exécution de la commande \cmd{\cancelthanksrule} entraîne l'utilisation de la définition normale de \cmd{\footnoterule} à partir de ce moment-là ; une autre commande \cmd{\usethanksrule} peut être exécutée ultérieurement si vous souhaitez revenir en arrière.
 
 \switchEng
 The parameters for the vertical positioning of footnotes\index{footnote} 
@@ -8931,7 +8959,8 @@ and thanks notes, and the default \cmd{\footnoterule} are the same
 You will have to change one or more of these if the vertical spacings of 
 footnotes\index{footnote}
 and thanks notes are meant to be different.
-\switchFrench\TS{0}
+\switchFrench\TS{1}
+Les paramètres de positionnement vertical des notes de bas de page\index{footnote} et des notes de remerciement, ainsi que la \cmd{\footnoterule} par défaut, sont les mêmes (voir \fref{fig:fn} à la \pref{fig:fn}). Vous devrez modifier un ou plusieurs de ces paramètres si les espacements verticaux des notes de bas de page\index{footnote} et des notes de remerciement doivent être différents.
 
 \end{paracol}
 \index{thanks!styling|)}
