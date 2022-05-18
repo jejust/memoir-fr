@@ -9367,8 +9367,10 @@ optional argument of the \cmd{\twocolumn} command. In fact,
 \switchEng
 For this chapter the \cstyle{pedersen} chapterstyle has been used in
 order to demonstrate how it appears.
+\switchFrench\TS{0}
 
 
+\switchEng
 In this chapter I first discuss the various kinds of divisions within
 a book and the commands for typesetting these.
 
@@ -9378,6 +9380,8 @@ The facilities described here provide roughly the same as you would
 get if you used the \Lpack{titlesec}~\cite{TITLESEC} and
 \Lpack{sectsty}~\cite{SECTSTY} packages together; the commands are
 different, though.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Logical divisions}
@@ -9388,6 +9392,9 @@ different, though.
 the \pixfrontmatter, \pixmainmatter\ and \pixbackmatter. There are three \ltx\
 commands that correspond to these, namely \cmd{\frontmatter},
 \cmd{\mainmatter} and \cmd{\backmatter}.
+\switchFrench\TS{0}
+
+\end{paracol}
 
 \begin{syntax}
 \cmd{\frontmatter} \cmd{\frontmatter*} \\
@@ -9399,6 +9406,8 @@ commands that correspond to these, namely \cmd{\frontmatter},
 \glossary(frontmatter*)%
   {\cs{frontmatter*}}%
   {Same as \cs{frontmatter} except that folios are unaltered.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\frontmatter} declaration sets the folios\index{folio} to be 
 printed in lowercase roman numerals, starts the page numbering from~i, 
 and prohibits any numbering
@@ -9408,10 +9417,15 @@ numbered continuously.  The starred version of the command,
 makes no changes to the page numbering or the print style for the 
 folios\index{folio}. Even though \cmd{\chapter} and other divisions will not
 be numbered their titles will be added to the ToC.
+\switchFrench\TS{0}
 
+\switchEng
     If it is to be used at all, the \cmd{\frontmatter} declaration should
 come before any text is set, otherwise the pagination scheme will be
 in disarray (in books pagination starts on the first page).
+\switchFrench\TS{0}
+
+\end{paracol}
 
 \begin{syntax}
 \cmd{\mainmatter} \cmd{\mainmatter*} \\
@@ -9423,6 +9437,8 @@ in disarray (in books pagination starts on the first page).
 \glossary(mainmatter*)%
   {\cs{mainmatter*}}%
   {Same as \cs{mainmatter} except that folios are unaltered.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\mainmatter} declaration, which is the default at the start of a 
 document, sets the folios\index{folio} to be printed in arabic numerals, starts 
 the page numbering from~1, and sections and above will be numbered. 
@@ -9431,15 +9447,19 @@ per chapter\index{chapter}. The starred version of the command,
 \cmd{\mainmatter*}, is similar to the unstarred version except that it
 makes no changes to the page numbering or the print style for the 
 folios\index{folio}.
+\switchFrench\TS{0}
 
+
+\switchEng
 \LMnote{2010/01/23}{Added the following paragraph, just stating what
   \cs{mainmatter} does, was not clear before.}
 Please note that \cmd{\mainmatter} will not only change the folio
 numbers to arabic and restart it at 1, it will also make sure it
 starts at the next coming recto page. (Even when running under the
 \texttt{openany} option).
+\switchFrench\TS{0}
 
-
+\end{paracol}
 
 \begin{syntax}
 \cmd{\backmatter} \\
@@ -9447,9 +9467,14 @@ starts at the next coming recto page. (Even when running under the
 \glossary(backmatter)%
   {\cs{backmatter}}%
   {Prohibits sectional numbering and floats, etc., will be numbered continuously.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\backmatter} declaration makes no change to the pagination or 
 folios\index{folio} but does prohibit sectional division numbering, and 
 captions\index{caption}, etc., will be numbered continuously.
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 \fancybreak{}
@@ -9461,7 +9486,10 @@ captions\index{caption}, etc., will be numbered continuously.
 If you have other types of floats that might be used in the front-
 main- or backmatter, then you can change some internals to add these
 to be numbered in the same manner as we do with figures and
-tables. They are defined as 
+tables. They are defined as
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand\@memfront@floats{%
   \counterwithout{figure}{chapter}
@@ -9476,8 +9504,13 @@ tables. They are defined as
     \setcounter{table}{0}}
 \end{lcode}
 %
+\begin{paracol}{2}
+\switchEng
 The macros can also be changed in case you want to have consecutive
 figure numbering throughout, i.e.,
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \makeatletter
 \counterwithout{figure}{chapter}
@@ -9487,7 +9520,11 @@ figure numbering throughout, i.e.,
 \newcommand\@memback@floats{}
 \makeatother
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 in the preamble.
+\switchFrench\TS{1}
+dans le préambule.
 \end{paracol}
 
 
@@ -9509,7 +9546,9 @@ The sectional commands, except for \cmd{\book} and \cmd{\part},
 have the same form, so rather than describing 
 each one in turn I will use \cmd{\section} as model for all but the
 two exceptions.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\section}\oarg{toc-title}\oarg{head-title}\marg{title}\\
 \cmd{\section*}\marg{title}\\
@@ -9524,7 +9563,8 @@ two exceptions.
   {\cs{section*}\marg{title}}%
   {Typesets an unnumbered section subhead \meta{title}. There are no ToC or
    running header entries.}
-
+\begin{paracol}{2}
+\switchEng
 There are two forms of the command; 
 the starred version is simpler, so I'll describe its 
 effects first --- it just typesets \meta{title} in the document in the format
@@ -9532,6 +9572,9 @@ for that particular sectional division. Like the starred version, the plain
 version also typesets \meta{title} in the document, but it may be numbered.
 Diferent forms of the division title are available for the 
 Table of Contents (\toc) and a running header\index{header}, as follows:
+\switchFrench\TS{0}
+
+\switchEng
 \begin{itemize}
 \item No optional argument: \meta{title} is used for the division title,
       the ToC title and a page header title.
@@ -9541,15 +9584,22 @@ Table of Contents (\toc) and a running header\index{header}, as follows:
       \meta{toc-title} is used for the ToC title; \meta{head-title}
       is used for a page header\index{header} title.
 \end{itemize}
+\switchFrench\TS{0}
 
+\switchEng
 A \cmd{\section} command restarts the numbering of any \cmd{\subsection}s
 from one.
 For most of the divisions the \meta{title} is put on the page where the command
 was issued. The \cmd{\book}, \cmd{\part} and \cmd{\chapter} commands behave 
 a little differently.
+\switchFrench\TS{0}
 
+\switchEng
     The \cmd{\book} and \cmd{\part} commands are simpler and both behave 
 in the same way.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{syntax}
 \cmd{\book}\marg{title} \\
 \cmd{\part}\marg{title} \\
@@ -9562,6 +9612,8 @@ in the same way.
   {\cs{part}\marg{title}}%
   {Typesets a numbered part \meta{title} on a page by itself, adding
    \meta{title} to the ToC.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\book}\marg{title} command puts the book name (default 
 \texttt{\bookname}), number and \meta{title} on a page by itself. The
 numbering of books\index{book!number} has no effect on the numbering of 
@@ -9570,9 +9622,13 @@ Similarly the \cmd{\part}\marg{title} command puts the part name
 (default \texttt{Part}), number and \meta{title} on a page by itself. 
 The numbering of parts\index{part!number} has no effect on the numbering of 
 \cmd{\chapter}s\index{chapter!number}.
+\switchFrench\TS{0}
 
+\switchEng
     Later I'll give a list of LaTeX's default names, like \texttt{Part}.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\chapter}\oarg{toc-title}\oarg{head-title}\marg{title} \\
 \cmd{\chapter*}\oarg{head-title}\marg{title} \\
@@ -9591,7 +9647,8 @@ The numbering of parts\index{part!number} has no effect on the numbering of
   {Starts a new page and puts an unnumbered chapter \meta{title} 
    at the top of the page. If given \meta{head-title} is used for a 
    running header.}
-
+\begin{paracol}{2}
+\switchEng
 The \cmd{\chapter} command starts a new page and puts
 the chapter name (default \texttt{Chapter}), number and \meta{title}
 at the top of the page. It restarts the numbering of any \cmd{\section}s 
@@ -9600,7 +9657,9 @@ is used as the \toc{} entry and for any page headings. If one optional
 argument is specified this is \meta{toc-title} and is used for the
 \toc{} entry and for page headings. If both optional arguments
 are specified the \meta{head-title} is used for page headings.
+\switchFrench\TS{0}
 
+\switchEng
 The \cmd{\chapter*} command starts a new page and puts
 \meta{title} at the top of the page. It makes no \toc{} entry, 
 changes no numbers and by default changes no page headings.
@@ -9608,7 +9667,9 @@ If the optional \meta{head-title} argument is given, this is used
 for page headings. Use of the optional argument has the side-effect
 that the \Icn{secnumdepth} counter is set to \Icn{maxsecnumdepth} (see below
 for an explanation of these).
+\switchFrench\TS{0}
 
+\switchEng
     When the \Lopt{article} option is in effect, however, things are slightly
 different. New chapters do not necessarily start on a new page.
 The \cmd{\mainmatter} command
@@ -9622,20 +9683,29 @@ call \verb?thispagestyle{chapter}?. If you are using the
 \Lopt{article} option you
 will probably want to ensure that the \pstyle{chapter} pagestyle is the
 same as you normally use for the document.
+\switchFrench\TS{0}
 
+\switchEng
     Unlike the standard classes the \meta{title} is typeset ragged right.
 This means that if you need to force a linebreak in the \meta{title} you 
 have to use \cmd{\newline} instead of the more usual \cmd{\\}. For instance
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \section{A broken\newline title}
 \end{lcode}
-
+\begin{paracol}{2}
+\switchEng
     In the standard classes a \cmd{\section} or other 
 subhead\index{subhead!near bottom of page}\index{subhead!moved}
 that is too close to the bottom of a page is moved to the top of the
 following page. If this happens and \cmd{\flushbottom} is in effect, the
 contents of the short page are stretched to make the last line flush with
 the bottom of the typeblock.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{syntax}
 \cmd{\raggedbottomsection} \\
 \cmd{\normalbottomsection} \\
@@ -9655,6 +9725,8 @@ the bottom of the typeblock.
 \glossary(bottomsectionpenalty)%
   {\cs{bottomsectionpenalty}}%
   {Penalty on a \cs{raggedbottomsection} short page.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\raggedbottomsection} declaration will typeset any pages that 
 are short because of a moved subhead as though \cmd{\raggedbottom}
 was in effect for the short page; other pages are not affected. The
@@ -9666,9 +9738,13 @@ make a page break at this point. The detault is zero as the stretch is
 usually enough, by setting it to
 a negative integer one can be a bit more incouraging regarding a
 possible page break.
+\switchFrench\TS{0}
 
+\switchEng
 The declaration \cmd{\normalbottomsection}, which is the default,
 cancels any previous \cmd{\raggedbottomsection} declaration.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \subsection{Appendices} \label{sec:appendices}
@@ -9680,6 +9756,9 @@ often considered to be part
 of the \cmd{\mainmatter} as they are normally numbered (the \cmd{\backmatter}
 declaration turns off all sectional numbering).
 
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{syntax}
 \cmd{\appendix} \\
 \cmd{\appendixname} \\
@@ -9691,6 +9770,8 @@ declaration turns off all sectional numbering).
 \glossary(appendixname)%
   {\cs{appendixname}}%
   {Name given to chapters in appendices (default Appendix).}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\appendix} declaration changes the numbering of
 chapters\index{chapter!number} to an alphabetic form and also changes 
 the names of chapters from \cmd{\chaptername} (default \texttt{Chapter})
@@ -9700,7 +9781,9 @@ the \cmd{\appendix} command
 will be `Appendix A \ldots', `Appendix B \ldots', and so on. 
 That is as far as the standard classes go but this class provides more ways
 of dealing with appendices\index{appendix}.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\appendixpage}\\
 \cmd{\appendixpage*}\\
@@ -9715,13 +9798,17 @@ of dealing with appendices\index{appendix}.
 \glossary(appendixpagename)
   {\cs{appendixpagename}}%
   {Title used for an \cs{appendixpage} (default \texttt{Appendices}.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\appendixpage} command generates a part-like page (but no name 
 or number) with the title given by the value of \cmd{\appendixpagename} 
 (default \texttt{Appendices})\index{appendix}. It also makes an entry in 
 the \toc{} using 
 \cmd{\addappheadtotoc} (see below). The starred version generates the 
 appendix\index{appendix} page but makes no \toc{} entry.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\addappheadtotoc}\\
 \cmd{\appendixtocname}\\
@@ -9732,9 +9819,13 @@ appendix\index{appendix} page but makes no \toc{} entry.
 \glossary(appendixtocname)%
   {\cs{appendixtocname}}%
   {Title of ToC entry added by \cs{addappheadtotoc} (default \texttt{Appendices}.}
+\begin{paracol}{2}
+\switchEng
 The command \cmd{\addappheadtotoc} adds an entry to the \toc. The title is
 given by the value of \cmd{\appendixtocname} (default \texttt{Appendices})\index{appendix}.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \senv{appendices} text \eenv{appendices}\\
 \end{syntax}
@@ -9742,12 +9833,16 @@ given by the value of \cmd{\appendixtocname} (default \texttt{Appendices})\index
   {\senv{appendices}}%
   {An environment form of \cs{appendix}; chapters are restored to their condition
    (including numbering) after the environment ends.}
+\begin{paracol}{2}
+\switchEng
 The \Ie{appendices} environment acts like the \cmd{\appendix}\index{appendix} 
 command in that it resets the numbering and naming of chapters\index{chapter}. 
 However, at the end of the environment, chapters are restored to their original 
 condition and any chapter numbers continue in sequence as though the 
 \Ie{appendices} environment had never been there.
+\switchFrench\TS{0}
 
+\end{paracol}
 \LMnote{2010/11/18}{Wrong names for \cs{namedsubappendices} and
   \cs{unnamedsubappendices} fixed}
 \begin{syntax}
@@ -9764,6 +9859,8 @@ condition and any chapter numbers continue in sequence as though the
 \glossary(unnamedsubappendices)%
   {\cs{unnamedsubappendices}}%
   {Do not precede the sub-appendix number with any name (the default).}
+\begin{paracol}{2}
+\switchEng
 The \Ie{subappendices}\index{appendix!subappendix} environment can be used to put appendices\index{appendix} at the end
 of a chapter\index{chapter}. Within the environment \cmd{\section} starts a 
 new sub-appendix\index{appendix}. You may put \cmd{\addappheadtotoc} at the start
@@ -9773,7 +9870,9 @@ If you put the declaration \cmd{\namedsubappendices}
 in the body of the document will be preceded by the value of 
 \cmd{\appendixname}. The \cmd{\unnamedsubappendices} declaration, which is the 
 default, may be used to switch off this behaviour.
+\switchFrench\TS{0}
 
+\switchEng
 \LMnote{2010/11/19}{Added this caveat, following a question on ctt}
 \textbf{Caveat:} The implementation of the named subappendices make
 use of \cmd{\setsecnumformat}, thus if you have used this command to
@@ -9781,14 +9880,21 @@ change the formating of the section number you will need to re-do this
 in a special manner inside the \Ie{subappendices}
 environemt. Something like this (where a user wanted to use old style
 numerials for sectioning numbers)
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{verbatim}
 \begin{subappendices}
 \setsecnumformat{\sectionname\ 
   \oldstylenums{\csname the#1\endcsname\quad}}
 \end{verbatim}
+\begin{paracol}{2}
+\switchEng
 The macro \cmd{sectionname} is a special macro that only lives inside
 the \Ie{subappendices} environment and is only available when
 \cmd{\namedsubappendices} is applied.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 
@@ -9801,10 +9907,17 @@ associated \emph{level}\index{sectional division!level number} as shown
 in \tref{tab:seclevels}.
 Divisions are numbered if the value of the \Icn{secnumdepth} counter
 is equal to or greater than their level. For example, with
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setcounter{secnumdepth}{2}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 then subsections up to book\index{book!number} will be numbered.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{table}
@@ -9823,8 +9936,6 @@ Division       & Level \\ \midrule
 \end{tabular}
 \end{table}
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
 \cmd{\setsecnumdepth}\marg{secname} \\
 \cmd{\maxsecnumdepth}\marg{secname} \\
@@ -9835,44 +9946,65 @@ Division       & Level \\ \midrule
 \glossary(maxscnumdepth)%
   {\cs{maxsecnumdepth}\marg{secname}}%
   {Sets division numbering level in the \cs{mainmatter} to \meta{secname}.}
+\begin{paracol}{2}
+\switchEng
 Instead of having to remember the levels if you want to change what
 gets numbered you can use the \cmd{\setsecnumdepth} command. It
 sets \Icn{secnumdepth} so that divisions \meta{secname} and above
 will be numbered. The argument \meta{secname} is the name of a sectional
 division without the backslash. For example, to have subsections
 and above numbered:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setsecnumdepth{subsection}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 You can also use \texttt{all} or \texttt{none} for \meta{secname} which
 will either turn on numbering for all levels, or turn off numbering
 altogether.
+\switchFrench\TS{0}
 
+\switchEng
 When used in the preamble\index{preamble} \cmd{\setsecnumdepth} also
 calls \cmd{\maxsecnumdepth}, which is the numbering level used once
 \cmd{\mainmatter} is called. You can use \cmd{\setsecnumdepth} anywhere
 in the \cmd{\mainmatter} to (temporarily) change the numbering level.
+\switchFrench\TS{0}
 
+\switchEng
     By default, the class sets:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \setsecnumdepth{section}
 \maxsecnumdepth{section}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\frontmatter} commands sets the numbering level to \texttt{none}.
 The commands \cmd{\mainmatter} and \cmd{\mainmatter*} set the
 numbering level to the value specified by \cmd{\maxsecnumdepth}.
+\switchFrench\TS{0}
 
+\switchEng
 \begin{hint}
   One will often set \cmd{\setsecnumdepth} in the preamble and then
   wonder why it didn't do anything. That is probably because of
   \cmd{\frontmatter} and \cmd{mainmatter}, so make it a habit of
   setting them both like above.
 \end{hint}
+\switchFrench\TS{0}
 
 
-
+\switchEng
     The number setting commands come from the \Lpack{tocvsec2}
 package~\cite{TOCVSEC2}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \section{Book and part headings}
@@ -9888,11 +10020,16 @@ book and part heading consists of the name (e.g., `Book' or `Part')
 followed by a number represented as an uppercase Roman numeral. There is 
 a vertical space after which the title is printed. Finally a new page is
 started.
+\switchFrench\TS{0}
 
+\switchEng
 \PWnote{2009/07/30}{Updated description, etc., for Part and Book pages}
     Several aspects of the typesetting of the \cmd{\book} and \cmd{\part} 
 title are configurable. Ignoring details, such as the optional argument,
 the code for printing \cmd{\part} headings looks like this:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand{\part}[1]{%    % THIS IS A VERY SIMPLIFIED VERSION
   \cleardoublepage         % start a new recto page                    
@@ -9907,14 +10044,20 @@ the code for printing \cmd{\part} headings looks like this:
   % ifblankpage then blank next page and restore twocolumn if necessary
   }
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The code for \cmd{\book} headings is similar.
+\switchFrench\TS{0}
 
+\switchEng
     The general layout for \cmd{\book}, \cmd{\part} and \cmd{\chapter} headings
 is similar and you may wish to refer to \fref{lay:chap} which, although
 it shows the vertical layout for a \cmd{chapter} head, is also applicable
 to \cmd{\book} and \cmd{\part} heads with appropriate changes in the
 names of the commands.
+\switchFrench\TS{0}
 
+\end{paracol}
 
 \begin{syntax}
 \cmd{\beforebookskip} \cmd{\afterbookskip} \\
@@ -9932,17 +10075,27 @@ names of the commands.
 \glossary(afterpartskip)%
   {\cs{afterbookskip}}%
   {Spacing below a \cs{part} title.}
+\begin{paracol}{2}
+\switchEng
 These commands effectively control the spacing before and after the book
 and  part titles. Their default definitions are:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand*{\beforebookskip}{\null\vfil}
 \newcommand*{\afterbookskip}{\vfil\newpage}
 \newcommand*{\beforepartskip}{\null\vfil}
 \newcommand*{\afterpartskip}{\vfil\newpage}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 Together, these vertically center any typesetting on the page, and then start
 a new page. To move the \cs{part} title upwards on the page, for example, 
 you could do:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \renewcommand*{\beforepartskip}{\null\vskip 0pt plus 0.3fil}
 \renewcommand*{\afterpartskip}{\vskip 0pt plus 0.7fil \newpage}
@@ -9958,13 +10111,23 @@ you could do:
 \glossary(midpartskip)%
   {\cs{midpartskip}}%
   {Spacing between a \cs{part}'s number line and the title.}
+\begin{paracol}{2}
+\switchEng
 The macros \cmd{\midbookskip} and \cmd{\midpartskip} are the spacings
 between the number lines and the titles. The default definitions are:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand{\midbookskip}{\par\vspace 2\onelineskip}
 \newcommand{\midpartskip}{\par\vspace 2\onelineskip}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 and they can be changed.
+\switchFrench\TS{0}
+
+\end{paracol}
 
 \begin{syntax}
 \cmd{\printbookname} \cmd{\booknamefont} \\
@@ -10005,6 +10168,8 @@ and they can be changed.
 \glossary(partnumfont)%
   {\cs{partnumfont}}%
   {Font used by \cs{printpartnum} for the part number.}
+\begin{paracol}{2}
+\switchEng
 The macro \cmd{\printbookname} typesets the book name (the value of 
 \cmd{\bookname}) using the font specified by \cmd{\booknamefont}. 
 The default is the \cmd{\bfseries} font in the \cmd{\huge} size. 
@@ -10013,7 +10178,9 @@ using the font specified by \cmd{\booknumfont}, which has the same default as
 \cmd{\booknamefont}. The macro \cmd{\booknamenum}, which is defined to be 
 a space, is called between printing the book name and the number. All 
 these can be changed to obtain different effects. 
+\switchFrench\TS{0}
 
+\switchEng
     Similarly, the macro \cmd{\printpartname} typesets the part name 
 (the value of \cmd{\partname}) using the font specified by 
 \cmd{\partnamefont}. The default is the \cmd{\bfseries} font in
@@ -10022,14 +10189,24 @@ the \cmd{\huge} size. Likewise the part number is typeset by
 which has the same default as \cmd{\partnamefont}. The macro 
 \cmd{\partnamenum}, which is defined to be a space, is called between printing
 the part name and the number. 
+\switchFrench\TS{0}
 
+\switchEng
     For example, to set a \cmd{\part} in a large sans font with the part 
 name flush left:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \renewcommand{\partnamefont}{\normalfont\huge\sffamily\raggedright}
 \renewcommand{\partnumfont}{\normalfont\huge\sffamily}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 or to only print the part number in the default font:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \renewcommand{\printpartname}{}
 \renewcommand{\partnamenum}{}
@@ -10058,22 +10235,32 @@ or to only print the part number in the default font:
 \glossary(parttitlefont)%
   {\cs{parttitlefont}}%
   {Font used by \cs{printparttitle} for the title.}
+\begin{paracol}{2}
+\switchEng
 A book's title is typeset by \cmd{\printbooktitle} using the font specified 
 by \cmd{\booktitlefont}. 
 By default this is a \cmd{\bfseries} font in the \cmd{\Huge} size. This can
 be changed to have, say, the title set raggedleft in a small caps font by
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \renewcommand{\booktitlefont}{\normalfont\Huge\scshape\raggedleft}
 \end{lcode}
-
+\begin{paracol}{2}
+\switchEng
     Similarly a part's title is typeset by \cmd{\printparttitle} using 
 the font specified by \cmd{\parttitlefont}. 
 By default this is a \cmd{\bfseries} font in the \cmd{\Huge} size. 
+\switchFrench\TS{0}
 
+\switchEng
     The \cmd{\parttitlefont} font is also used by 
 \cmd{\appendixpage}, or its starred version, when
 typesetting an appendix\index{appendix} page.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\bookpagemark}\marg{title} \\
 \cmd{\partmark}\marg{title} \\
@@ -10084,14 +10271,24 @@ typesetting an appendix\index{appendix} page.
 \glossary(partmark)%
   {\cs{partmark}\marg{title}}%
   {For setting any marks with the title from a \cs{part} for a running header.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\book} code includes \cmd{\bookpagemark}\marg{title} for capturing
 the \meta{title} of the book division if it is going to be used, 
 for example, in page headers. Its definition is simply:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand*{\bookpagemark}[1]{}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 There is the corresponding \cmd{\partmark} for the title of \cmd{\part} 
 divisions.
+\switchFrench\TS{0}
+
+\end{paracol}
 
 \begin{syntax}
 \cmd{\bookpageend} \cmd{\bookblankpage} \cmd{\nobookblankpage} \\
@@ -10116,6 +10313,8 @@ divisions.
   {\cs{nopartblankpage}}%
   {Do not follow a part title page with a blank page.}
 
+\begin{paracol}{2}
+\switchEng
 The macro \cmd{\bookpageend} finishes off a book title page. It first
 calls \cmd{\afterbookskip}. If the \cmd{\nobookblankpage} is in effect
 it does nothing more. If the declaration \cmd{\bookblankpage} (the default)
@@ -10123,13 +10322,18 @@ is in effect then it finishes the current page, outputs a blank page and then,
 if twocolumn typesetting was in effect before \cmd{\book} then it restores
 twocolumn typesetting. The macro \cmd{\partpageend} performs similar
 functions for \cmd{\part} pages.
+\switchFrench\TS{0}
 
+\switchEng
 \LMnote{2011/02/06}{This now uncommented text is wrong!}
 %     If, for example, you wish to put something on a \cmd{\part} page, and maybe
 % something on the following normally blank page, then this is a possible way
 % of doing it:\index{text on a part page}
 So to add something on the back side of a \cmd{\part} page (assuming
 twoside) use something similar to
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 ...
 \nopartblankpage
@@ -10139,12 +10343,19 @@ Text on the following (normally blank page)
 \clearpage
 ...
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
     Alternatively you can redefine \cmd{\partpageend}.
- 
+\switchFrench\TS{0}
+
+\switchEng
    If you use the declaration \cmd{\nopartblankpage} (or \cmd{\nobookblankpage})
 then you are responsible for setting everything correctly to end off the
 \cmd{\part} (or \cmd{\book}) page. This is the default definition of 
 \cmd{\partpageend} (that for \cmd{\bookpageend} is similar):
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand{\partpageend}{%
   \afterpartskip
@@ -10162,22 +10373,34 @@ then you are responsible for setting everything correctly to end off the
     \twocolumn
   \fi}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 Here with the default definitions, \cmd{\afterpartskip} ends off the
 \cmd{\part} page, and then the rest of the code in \cmd{\partpageend}
 takes care of typesetting the blank back side of the \cmd{\part} page
 (or send us back to twocolumn mode).
+\switchFrench\TS{0}
 
+\switchEng
 \LMnote{2011/02/06}{Added the example below}
 If on the other hand we actually want to write something below the
 part title on the \cmd{\part} page, then we need a different
 route. The `air' above and below the part title is by default defined as
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
   \newcommand*{\beforepartskip}{\null\vfil}
   \newcommand*{\afterpartskip}{\vfil\newpage}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 Thus we need to redefined this such that it does not change the page
 and such that it add useful spacing above and below the part
 titling. Something like this may do the trick
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \makeatletter
   \newcommand*{\beforepartskip}{\null\vskip4cm}
@@ -10185,7 +10408,7 @@ titling. Something like this may do the trick
     \@afterindentfalse\@afterheading} 
 \makeatother
 \end{lcode}
-\end{paracol}
+
 
 
 \index{heading!part|)}
@@ -10193,8 +10416,6 @@ titling. Something like this may do the trick
 
 \subsection{Leadpage}
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
 \cmd{\newleadpage}\oarg{page-style}\marg{cmdname}\marg{title} \\
 %\cmd{\newleadpage*}\oarg{page-style}\marg{cmdname}\marg{title} \\
@@ -10208,6 +10429,8 @@ page. Very similar to \cs{appendixpage}.}
 \glossary(renewleadpage)%
 {\cs{renewleadpage}\oarg{page-style}\marg{cmdname}\marg{title}}%
 {Redefines an existing new lead page macro.}
+\begin{paracol}{2}
+\switchEng
 The \cmd{\newleadpage}\footnote{The suggestions for this came from
 Danie Els\index{Els, Danie} and Lars Madsen\index{Madsen, Lars}.}
 command defines a macro \verb?\cmdname? that when called 
@@ -10217,15 +10440,23 @@ the page. The default is the \pstyle{empty} pagestyle. The macro
 \cmd{\renewleadpage} redefines an existing leadpage command. 
 \cmd{\cmdname} will add an entry to the TOC, the similarly defined
 \cmd{\cmdname*} will not.
+\switchFrench\TS{0}
 
-
+\switchEng
 As an example:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newleadpage{plates}{Picture Gallery}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 creates the new command \cs{plates} which when called generates an unnumbered
 part-like page with the title \textbf{Picture Gallery}.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\leadpagetoclevel} \\
 \end{syntax}
@@ -10233,21 +10464,34 @@ part-like page with the title \textbf{Picture Gallery}.
 {\cs{leadpagetoclevel}}%
 {Holds the default toc level for \cs{newleadpage} generated macros,
 default is \texttt{chapter}.}
+\begin{paracol}{2}
+\switchEng
 When \cs{(re)newleadpage} is used the resulting command adds \meta{title}
 to the \toc\ as though it was an unnumbered \cmd{\leadpagetoclevel} entry,
 whose definition is
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand*{\leadpagetoclevel}{chapter}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 If you wished them to be entered like a \cmd{\part} header then simply:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \renewcommand*{\leadpagetoclevel}{part}
 \end{lcode}
 
-
+\begin{paracol}{2}
+\switchEng
     The layout of the page matches that for unnumbered \cmd{\part} pages, and 
 internally the resulting commands use \cmd{\partmark} in case you 
 wish to capture the \meta{title} to use in running headers.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 
@@ -10260,13 +10504,18 @@ wish to capture the \meta{title} to use in running headers.
     The chapter headings are configurable in much the same way as book or part 
 headings, but in addition there are some built in chapter styles that you may
 wish to try, or define your own.
+\switchFrench\TS{0}
 
+\switchEng
     Chapters, except when the \Lopt{article} class option is used,
  \emph{always} start on a new page with the \pstyle{chapter}
 pagestyle. The particular page, recto or verso, that they start on is
 mainly controlled by the class options. If the \Lopt{oneside} option is used
 they start on the next new page, but if the \Lopt{twoside} option is
 used the starting page may differ, as follows.
+\switchFrench\TS{0}
+
+\switchEng
 \begin{itemize}
 \item[\Lopt{openright}] The chapter heading is typeset on the next recto page,
   which may leave a blank verso leaf.
@@ -10275,7 +10524,9 @@ used the starting page may differ, as follows.
 \item[\Lopt{openany}] The chapter heading is typeset on the next page and there
   will be no blank leaf.
 \end{itemize}
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\openright} \cmd{\openleft} \cmd{\openany} \\
 \end{syntax}
@@ -10288,13 +10539,20 @@ used the starting page may differ, as follows.
 \glossary(openany)%
   {\cs{openany}}%
   {Allow chapters to start on the next new page.}
+\begin{paracol}{2}
+\switchEng
 These three declarations have the same effect as the options of the same name.
 They can be used anywhere in the document to change the chapter opening page.
+\switchFrench\TS{0}
 
+\switchEng
 Ignoring many details, like the optional arguments, the code for 
 printing a \cmd{\chapter} heading is similar to that for \cmd{\book} 
 and \cmd{\part} (the \cs{chapterhead} command below is \emph{not}
 part of the class).
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand{\chapterhead}[1]{ % THIS IS A SIMPLIFIED VERSION
   \clearforchapter        % move to correct page
@@ -10306,7 +10564,11 @@ part of the class).
   \printchaptertitle{#1}  % title
   \afterchaptertitle}     % \afterchapskip space after title
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The general layout is shown in \fref{lay:chap}.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \begin{figure}
@@ -10318,14 +10580,14 @@ The general layout is shown in \fref{lay:chap}.
 \label{lay:chap}
 \end{figure}
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
 \cmd{\clearforchapter} \\
 \end{syntax}
 \glossary(clearforchapter)%
   {\cs{clearforchapter}}%
   {Selects a chapter's opening page.}
+\begin{paracol}{2}
+\switchEng
 The actual macro that sets the opening page for a chapter is 
 \cmd{\clearforchapter}. The class options \texttt{openright},
 \texttt{openleft} and \texttt{openany} (or their macro equivalents
@@ -10335,17 +10597,24 @@ The actual macro that sets the opening page for a chapter is
 \cmd{\cleartorecto}, \cmd{\cleartoverso} and \cmd{\clearpage}. You can
 obviously change \cmd{\clearforchapter} to do more than just start a
 new page.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\memendofchapterhook} 
 \end{syntax}
 \glossary(memendofchapterhook)%
   {\cs{memendofchapterhook}}%
   {Hook executed at the very end of the \cs{chapter} command.}
+\begin{paracol}{2}
+\switchEng
 Where \cmd{\clearforchapter} comes at the very beginning,
 \cmd{\memendofchapterhook} comes at the very end of the \cmd{\chapter}
 command. It does nothing by default, but could be redefined to insert,
 say, \cmd{\clearpage}:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{verbatim}
 \makeatletter
 \renewcommand\memendofchapterhook{%
@@ -10353,11 +10622,15 @@ say, \cmd{\clearpage}:
 \makeatother
 \end{verbatim}
 
-
+\begin{paracol}{2}
+\switchEng
     Some books have the chapter headings on a verso page, with perhaps
 an illustration\index{illustration} or epigraph\index{epigraph}, and 
 then the text starts on the opposite
 recto page. The effect can be achieved like:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \openleft                % chapter title on verso page
 \chapter{The title}      % chapter title
@@ -10393,21 +10666,32 @@ Start of the text        % chapter body
   {\cs{afterchapskip}}%
   {Space after chapter title.}
 
+\begin{paracol}{2}
+\switchEng
 The macro \cmd{\chapterheadstart} is called just before printing a chapter
 name and number. By default it inserts \lnc{\beforechapskip} space (default
 50pt).
+\switchFrench\TS{0}
 
+\switchEng
 The macro \cmd{\afterchapternum} is called just after printing a chapter
 number. By default it inserts \lnc{\midchapskip} space (default
 20pt).
+\switchFrench\TS{0}
 
+\switchEng
 The macro \cmd{\afterchaptertitle} is called just after printing a chapter
 title. By default it inserts \lnc{\afterchapskip} space (default
 40pt).
+\switchFrench\TS{0}
 
+\switchEng
 The lengths \lnc{\beforechapskip}, \lnc{\midchapskip} and \lnc{\afterchapskip}
 can all be changed by \cmd{\setlength} or \cmd{\addtolength}. Though
 as mentioned in \fref{lay:chap} they need some explanation:
+\switchFrench\TS{0}
+
+\switchEng
 \begingroup
 \medskip
 \setlength\overfullrule{5pt}
@@ -10433,12 +10717,13 @@ as mentioned in \fref{lay:chap} they need some explanation:
   get the distance baseline to baseline.
 \end{description}
 \endgroup
+\switchFrench\TS{0}
+
+
 \end{paracol}
 
 
 
-\begin{paracol}{2}
-\switchEng
 \begin{syntax}
 \cmd{\printchaptername} \cmd{\chapnamefont} \\
 \cmd{\chapternamenum} \\
@@ -10460,6 +10745,8 @@ as mentioned in \fref{lay:chap} they need some explanation:
 \glossary(chapnumfont)%
   {\cs{chapnumfont}}%
   {Font used by \cs{printchapternum}.}
+\begin{paracol}{2}
+\switchEng
 The macro \cmd{\printchaptername} typesets the chapter name 
 (default \texttt{Chapter} or \texttt{Appendix}) using the font 
 specified by \cmd{\chapnamefont}. The default is the \cmd{\bfseries} font in
@@ -10468,7 +10755,9 @@ the \cmd{\huge} size. Likewise the chapter number is typeset by
 which has the same default as \cmd{\chapnamefont}. The macro 
 \cmd{\chapternamenum}, which is defined to be a space, is called between 
 printing the chapter name and the number. 
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\printchaptertitle}\marg{title} \cmd{\chaptitlefont} \\
 \end{syntax}
@@ -10478,20 +10767,29 @@ printing the chapter name and the number.
 \glossary(chaptitlefont)%
   {\cs{chaptitlefont}}%
   {Font used by \cs{printchaptertitle}.}
+\begin{paracol}{2}
+\switchEng
 The title is typeset by \cmd{\printchaptertitle} using the font specified 
 by \cmd{\chaptitlefont}. 
 By default this is a \cmd{\bfseries} font in the \cmd{\Huge} size. 
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\printchapternonum} \\
 \end{syntax}
 \glossary(printchapternonum)%
   {\cs{printchapternonum}}%
   {Replaces printing the chapter name and number in unnumbered chapters.}
+\begin{paracol}{2}
+\switchEng
 If a chapter is unnumbered, perhaps because it is in the \cmd{\frontmatter}
 or because \cmd{\chapter*} is used, then when printing the command
 \cmd{\printchapternonum} is called instead of printing the name and number,
 as illustrated below:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand{\chapterhead}[1]{ % THIS IS A SIMPLIFIED VERSION
   \clearforchapter        % move to correct page
@@ -10507,8 +10805,13 @@ as illustrated below:
 %
 %
 \LMnote{2010/07/16}{added}
+\begin{paracol}{2}
+\switchEng
 By default the first paragraph following a \cs{chapter} is \emph{not}
 indented, this can be controlled by
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{syntax}
   \cmd{\indentafterchapter}\\
   \cmd{\noindentafterchapter}
@@ -10519,34 +10822,54 @@ indented, this can be controlled by
 \glossary(noindentafterchapter)%
 {\cs{noindentafterchapter}}%
 {Specifies that the first paragraph after a \cs{chapter} should \emph{not} be indented}
+\begin{paracol}{2}
+\switchEng
 The default is not to indent the first paragraph following a
 \cs{chapter}.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\insertchapterspace} \\
 \end{syntax}
 \glossary(insertchapterspace)%
   {\cs{insertchapterspace}}%
   {Called by \cs{chapter} to insert space into LoF and LoT.}
+\begin{paracol}{2}
+\switchEng
 By default a \cmd{\chapter} inserts a small amount of vertical space
 into the List of Figures and List of Tables. It calls \cmd{\insertchapterspace}
 to do this. The default definition is:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand{\insertchapterspace}{%
   \addtocontents{lof}{\protect\addvspace{10pt}}%
   \addtocontents{lot}{\protect\addvspace{10pt}}%
 }
 \end{lcode}
-If you would prefer no inserted spaces then 
+\begin{paracol}{2}
+\switchEng
+If you would prefer no inserted spaces then
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \renewcommand{\insertchapterspace}{}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 will do the job. 
 Different spacing can be inserted by
 changing the value of the length arguments to \cmd{\addvspace}.
+\switchFrench\TS{0}
 
+\switchEng
 By making suitable changes to the above macros you can make some
 simple modifications to the layout.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 \index{heading!chapter|)}
