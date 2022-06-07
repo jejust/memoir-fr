@@ -1,0 +1,47 @@
+STYLING THE THANKS
+
+The class provides a configurable "\thanks" command.
+
+Any "\thanks" are marked with symbols in the titling and footnotes. The command "\thanksmarkseries" can be used to change the marking style. The <format> argument is the name of one of the formats for printing a counter. The name is the same as that of a counter format but without the backslash. To have the "\thanks" marks as lowercase letters instead of symbols do:
+
+Just for convenience the "\symbolthanksmark" command sets the series to be footnote symbols. Using this class the potential names for <format> are: arabic, roman, Roman, alph, Alph, and fnsymbol.
+
+The "\thanks" command uses the footnote counter, and normally the counter is zeroed after the titling so that the footnote marks start from 1. If the counter should not be zeroed, then just specify "\continuousmarks". This might be required if numerals are used as the thanks markers.
+
+The "\thanksheadextra" command will insert <pre> and <post> before and after the thanks markers in the titling block. By default <pre> and <post> are empty. For example, to put parentheses round the titling markers do:
+
+It is sometimes desireable to have the same thanks text be applied to, say, four out of six authors, these being the first 3 and the last one. The command "\thanksmark{<n>}" is similar to "\footnotemark[<n>]" in that it prints a thanks mark identical to that of the <n>\u2019th "\thanks" command. No changes are made to any thanks in the footnotes. For instance, in the following the authors Alpha and Omega will have the same mark:
+
+By default the thanks mark at the foot is typeset as a superscript. In the class this is specifed via
+
+where "#1" will be replaced by the thanks mark symbol. You can change the mark styling if you wish. For example, to put parentheses round the mark and typeset it at normal size on the baseline:
+
+The thanks mark in the footnote is typeset right justified in a box of width "\thanksmarkwidth". The first line of the thanks text starts after this box. The initialisation is
+
+giving the default position.
+
+The value of the length "\thanksmarksep" controls the indentation the second and subsequent lines of the thanks text, with respect to the end of the mark box. As examples:
+
+will align the left hand ends of of a multiline thanks text, while:
+
+will left justify any second and subsequent lines of the thanks text. This last setting is the initialised value, giving the default appearance.
+
+A thanks mark in the footnote region is typeset by "\thanksfootmark". The code for this is roughly:
+
+You should not need to change the definition of "\thanksfootmark" but you may want to change the default definitions of one or more of the macros it uses.
+
+This is initially defined as:
+
+so that "\thanksscript" typesets its argument as a superscript, which is the default for thanks notes.
+
+The macro "\makethanksmark" typesets both the thanks marker (via "\thanksfootmark") and the thanks text. You probably will not need to change its default definition. Just in case, though, "\makethanksmark" calls the macro "\makethanksmarkhook" before it does any typesetting. The default definition of this is:
+
+which does nothing.
+
+You can redefine "\makethanksmarkhook" to do something useful. For example, if you wanted a slightly bigger baseline skip you could do:
+
+where the numbers 8 and 11 specify the point size of the font and the baseline skip respectively. In this example 8pt is the normal "\footnotesize" in a 10pt document, and 11pt is the baselineskip for "\footnotesize" text in an 11pt document (the normal baseline skip for "\footnotesize" in a 10pt document is 9.5pt); adjust these numbers to suit.
+
+By default, there is no rule above "\thanks" text that appears in a titlingpage environment. If you want a rule in that environment, put "\usethanksrule" before the "\maketitle" command, which will then print a rule according to the current definition of "\thanksrule". "\thanksrule" is initialised to be a copy of "\footnoterule" as it is defined at the end of the preamble. The definition of "\thanksrule" can be changed after "\begin{document}". If the definition of "\thanksrule" is modified and a "\usethanksrule" command has been issued, then the redefined rule may also be used for footnotes. Issuing the command "\cancelthanksrule" will cause the normal "\footnoterule" definition to be used from thereon; another "\usethanksrule" command can be issued later if you want to swap back again.
+
+The parameters for the vertical positioning of footnotes and thanks notes, and the default "\footnoterule" are the same (see Figure 12.1 on page 324). You will have to change one or more of these if the vertical spacings of footnotes and thanks notes are meant to be different.
