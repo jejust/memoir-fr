@@ -2846,7 +2846,7 @@ None of these options are defaulted.
 \begin{lcode}
 \documentclass[letterpaper,10pt,twoside,onecolumn,openright,final]{memoir}
 \end{lcode}
-   The source file for this manual starts
+   The source file for this manual starts with:
 \begin{lcode}
 \documentclass[letterpaper,10pt,extrafontsizes]{memoir}
 \end{lcode}
@@ -2914,7 +2914,7 @@ want to put \cmd{\raggedbottom} in the preamble\index{preamble}.
 \chapter{Laying out the page} \label{chap:layingpage}
 
 
-Up until this chapter the \pstyle{headings} pagestyle\index{pagestyle}
+Up until this chapter, the \pstyle{headings} pagestyle\index{pagestyle}
 has been used; pagestyles are described in \Sref{sec:pagestyles}.
 This, and later chapters, are typeset with the \pstyle{ruled} pagestyle.
 
@@ -3113,7 +3113,7 @@ provide settings for many other standard stock sizes, see
 If you have some other size that you want to use, the 
 command \cmd{\setstocksize} can be used to
 specify that the stock\index{stock!specifying size} size is 
-\meta{height} \index{stock!height} by \meta{width}\index{stock!width}. 
+\meta{height}\index{stock!height} by \meta{width}\index{stock!width}. 
 For example the following specifies a stock\index{stock!size} of 9 by 4 inches:
 \begin{lcode}
 \setstocksize{9in}{4in}
@@ -3401,7 +3401,7 @@ public disagreement'.
 
 
     The monospaced\index{font!monospaced}\index{monospaced font} fonts, 
-Courier\facesubseeidx{Courier} and Typewriter\facesubseeidx{Typewriter}
+Courier\facesubseeidx{Courier} and Typewriter\facesubseeidx{Typewriter},
 have no place in high quality typesetting except when typesetting computer
 code or the like, or when trying to fake text written on a real typewriter.
 Ignoring these, a quick glance at the \tablerefname{} shows that 
@@ -3460,7 +3460,7 @@ log file. There is, however, an easier method.
 The macros \cmd{\setxlvchars} and \cmd{\setlxvchars}, which were suggested
 by Morten H{\o}gholm\index{H{\o}gholm, Morten}, 
 set the lengths \lnc{\xlvchars} and \lnc{\lxvchars}
-respecively for the font \meta{fontspec}. The default for \meta{fontspec}
+respectively for the font \meta{fontspec}. The default for \meta{fontspec}
 is \cmd{\normalfont}. For example, the values of \lnc{\lxvchars} and
 \lnc{\xlvchars} after calling:
 \begin{lcode}
@@ -6094,7 +6094,7 @@ package form and post it to CTAN. \\
 \end{lcode}
 
 \indextwo{widow}{line}\indextwo{orphan}{line}
-    As you can see, perfect automatic widow/orphan control is problematic 
+    As you can see, perfect automatic widow/orphan control is problematic,
 though typographers are typically more concerned about widows than orphans ---
 a single line of a paragraph somehow looks worse at the top of a page than
 at the bottom. If all else fails, the solution is either to live with the 
@@ -6159,7 +6159,7 @@ change the case of any math sections in their arguments.
 \MakeTextUppercase{abc\ae\ \( a = b \)  and $\alpha \neq a$ 
   or even \ensuremath{x=y} and $\ensuremath{x=y}$}
 \end{verbatim}
-Should produce:
+should produce:
 \begin{quotation}
  ABC\AE\ \( a = b \)  AND $\alpha \neq a$ 
   OR EVEN \ensuremath{x=y} AND $\ensuremath{x=y}$
@@ -6270,7 +6270,7 @@ which produces
 \fancybreak{}
 
 See also \cite{textcase} for some information about upper casing
-citations using a non-nummeric style.
+citations using a non-numeric style.
 
 
 % \subsubsection{Citations}
@@ -6744,7 +6744,7 @@ example:
 \end{syntax}
 \glossary(title)
   {\cs{title}\marg{text}}%
-  {Used by \cs{maketitle} to typeset \meta{text} as the document  title.}
+  {Used by \cs{maketitle} to typeset \meta{text} as the document title.}
 \glossary(thetitle)
   {\cs{thetitle}}%
   {Copy of \meta{text} from \cs{title}.}
@@ -6778,7 +6778,7 @@ if desired.
   {Use within the argument to \cs{author} to separate author's names.}
 \glossary(andnext)%
   {\cs{andnext}}%
-  {Use within the argument to \cs{author} to insert a newline..}
+  {Use within the argument to \cs{author} to insert a newline.}
    The macro \cmd{\and} is used within the argument to the
 \cmd{\author} command to add some extra space between the author's names.
 The class \cmd{\andnext} macro inserts a newline instead of a space.
@@ -6911,10 +6911,10 @@ For example, to put parentheses round the titling markers do:
   {\cs{thanksmark}\marg{n}}%
   {Prints a thanks mark identical to the n'th (previously) printed mark.}
 It is sometimes desireable to have the same thanks text be applied to,
-say, four out of six authors, these being the first 3 and the last one.
+say, four out of six authors, these being the first~3 and the last one.
 The command \cmd{\thanksmark}\marg{n} is similar to 
 \cmd{\footnotemark}\oarg{n} in that it prints a thanks mark identical
-to that of the \meta{n}'th  \cmd{\thanks} command. No changes are made
+to that of the \meta{n}'th \cmd{\thanks} command. No changes are made
 to any thanks in the footnotes\index{footnote}. For instance, in the following
 the authors Alpha and Omega will have the same mark:
 \begin{lcode}
@@ -6970,7 +6970,7 @@ mark and typeset it at normal size on the baseline:
   {Width of box for the thanks marks at the foot.}
  The thanks mark in the footnote\index{footnote} is typeset right justified in a box
 of width \lnc{\thanksmarkwidth}. The first line of the thanks text starts
-after this box. The initialisation is 
+after this box. The initialisation is
 \begin{lcode}
 \setlength{\thanksmarkwidth}{1.8em}
 \end{lcode}
@@ -6985,11 +6985,11 @@ giving the default position.
 The value of the length
  \lnc{\thanksmarksep} controls the indentation the
 second and subsequent lines of the thanks text, with respect to
-the end of the mark box. As examples: 
+the end of the mark box. As examples:
 \begin{lcode}
 \setlength{\thanksmarksep}{0em}
 \end{lcode}
- will align the left hand ends of of a multiline thanks text, while: 
+ will align the left hand ends of of a multiline thanks text, while:
 \begin{lcode}
 \setlength{\thanksmarksep}{-\thanksmarkwidth}
 \end{lcode}
@@ -7022,7 +7022,7 @@ of the macros it uses.
 \glossary(thanksfootmark)%
   {\cs{thanksfootmark}}%
   {Handle the inner part of the thanks mark at the foot.}
-This is initially defined as: 
+This is initially defined as:
 \begin{lcode}
 \newcommand{\thanksscript}[1]{\textsuperscript{#1}}
 \end{lcode}
@@ -7491,11 +7491,11 @@ optional argument of the \cmd{\twocolumn} command. In fact,
 
 \chapter{Document divisions}
 
-For this chapter the \cstyle{pedersen} chapterstyle has been used in
+For this chapter, the \cstyle{pedersen} chapterstyle has been used in
 order to demonstrate how it appears.
 
 
-In this chapter I first discuss the various kinds of divisions within
+In this chapter, I first discuss the various kinds of divisions within
 a book and the commands for typesetting these.
 
 After that I describe the class methods for modifying the appearance
@@ -10382,8 +10382,8 @@ normal size by the time subsubsection heads are reached, or before.
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2019-11-11 16:55:48 +0100 (Mon, 11 Nov 2019) $}
-{$LastChangedRevision: 661 $}
+{$LastChangedDate: 2022-05-10 12:36:03 +0200 (Tue, 10 May 2022) $}
+{$LastChangedRevision: 725 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 \chapterstyle{demo3}
@@ -10699,9 +10699,9 @@ Main macro & default mark definition \\ \midrule
 \cs{subsubsection(*)}   & \verb?\newcommand*{\subsubsectionmark}[1]{}? \\
 \cs{paragraph(*)}       & \verb?\newcommand*{\paragraphmark}[1]{}? \\
 \cs{subparagraph(*)}    & \verb?\newcommand*{\subparagraphmark}[1]{}? \\
-\cs{tableofcontents(*)} & \verb?\newcommand*{\tocmark}[1]{}? \\
-\cs{listoffigures(*)}   & \verb?\newcommand*{\lofmark}[1]{}? \\
-\cs{listoftables(*)}    & \verb?\newcommand*{\lotmark}[1]{}? \\
+\cs{tableofcontents(*)} & \verb?\newcommand*{\tocmark}{}? \\
+\cs{listoffigures(*)}   & \verb?\newcommand*{\lofmark}{}? \\
+\cs{listoftables(*)}    & \verb?\newcommand*{\lotmark}{}? \\
 \cs{thebibliography}    & \verb?\newcommand*{\bibmark}{}? \\
 \cs{theindex}           & \verb?\newcommand*{\indexmark}{}? \\
 \cs{theglossary}        & \verb?\newcommand*{\glossarymark}{}? \\
@@ -14968,11 +14968,12 @@ everything back to normal.
   \renewcommand{\cftchapterbreak}{\par\addpenalty{-\@highpenalty}}
   \setpnumwidth{2.55em}
   \setrmarg{3.55em}
-  \setcounter{tocdepth}{2}}
+  \setcounter{tocdepth}{2}
   \let\cftpartformatpnum\oldcftpartformatpnum
     \addtodef{\cftpartbreak}{\par}{}
   \let\cftbookformatpnum\oldcftbookformatpnum
     \addtodef{\cftbookbreak}{\par}{}
+  }
 \end{lcode}
 The first few lines restore some macros to their original definitions.
 \begin{lcode}
@@ -15467,7 +15468,7 @@ before the stuff you want to have moved out of, say, a part.
 
 
     A float\index{float} environment is a particular kind of 
-box\index{box}  --- one that \ltx\ decides where it should go although
+box\index{box} --- one that \ltx\ decides where it should go although
 you can provide hints as to where it should be placed; 
 all other boxes are put at the point where they are defined. 
 Within reason you can put what you like within a float but it is 
@@ -18332,8 +18333,8 @@ package can be used with the class, but there are a few caveats:
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2018-09-06 15:05:23 +0200 (Thu, 06 Sep 2018) $}
-{$LastChangedRevision: 612 $}
+{$LastChangedDate: 2021-06-28 13:55:32 +0200 (Mon, 28 Jun 2021) $}
+{$LastChangedRevision: 715 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 
@@ -30975,7 +30976,7 @@ of the standard commands needs to be replaced.
 
 \section{Introduction}
 
-    In this chapter I will work through a reasonably complete design
+    In this chapter, I will work through a reasonably complete design
 exercise. Rather than trying to invent something myself I am taking the design
 of Bringhurst's 
 \textit{The Elements of Typographic Style}~\cite{BRINGHURST99}
