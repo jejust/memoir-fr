@@ -10889,24 +10889,37 @@ simple modifications to the layout.
 \switchEng
     The class provides many ways in which you can implement your designs
 for chapter headings.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\chapterstyle}\marg{style} \\
 \end{syntax}
 \glossary(chapterstyle)%
   {\cs{chapterstyle}\marg{style}}%
   {Sets chapter heading layout to \meta{style}.}
+\begin{paracol}{2}
+\switchEng
 The macro \cmd{\chapterstyle} is rather like the \cmd{\pagestyle} command in 
 that it sets the style of any subsequent chapter headings to be \meta{style}.
+\switchFrench\TS{0}
 
+\switchEng
     The class provides some predefined chapter styles, including the 
 \cstyle{default} style which is the familiar LaTeX \Lclass{book} class chapter
 headings style. To use the chapterstyle \cstyle{fred} just issue the command
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \chapterstyle{fred}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 Different styles can be used in the same document.
+\switchFrench\TS{0}
 
+\switchEng
 The simpler predefined styles include:
 \LMnote{2011/05/25}{I've moved the chapter style images to the
   showcase appendix to save some space in the main part of the manual}
@@ -10974,13 +10987,20 @@ as shown in \fref{dcarticle}.
 %%   hand you can look at \Cref{chap:verse} on \pref{chap:verse} to see
 %%   what it looks like.
 \end{itemize}
+\switchFrench\TS{0}
 
+\switchEng
     If you use only the predefined chapterstyles there is no need to
 plough through the rest of this section, except to look at the illustrations
 of the remaining predefined chapterstyles shown a little later.
+\switchFrench\TS{0}
 
+\switchEng
 The various macros shown in the \cs{chapterhead} code above are initially 
-set up as (the code is known as the \cstyle{default} style): 
+set up as (the code is known as the \cstyle{default} style):
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \newcommand{\chapterheadstart}{\vspace*{\beforechapskip}}
 \newcommand{\printchaptername}{\chapnamefont \@chapapp}
@@ -10997,6 +11017,8 @@ set up as (the code is known as the \cstyle{default} style):
 \setlength{\midchapskip}{20pt}
 \setlength{\afterchapskip}{40pt}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 (The mysterious \cmd{\@chapapp} is the internal macro that \ltx\ uses
 to store normally the chapter name.\footnote{Remember, if you use
 a macro that has an \texttt{@} in its name it must be in a place
@@ -11006,20 +11028,28 @@ set automatically, when typesetting a chapter in the main body
 (e.g., \texttt{Chapter}) or in the appendices\index{appendix} where
 it would usually be set to \texttt{Appendix}, but you can specify
 these names yourself.)
+\switchFrench\TS{0}
 
 
-
+\switchEng
     A new style is specified by changing the definitions of this last set of 
 macros and/or the various font and skip specifications.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \cmd{\makechapterstyle}\marg{style}\marg{text} \\
 \end{syntax}
+\begin{paracol}{2}
+\switchEng
 Chapter styles are defined via the \cmd{\makechapterstyle} command, where
 \meta{style} is the style being defined and \meta{text} is the LaTeX code 
 defining the style. Please note that the \meta{text} \emph{always}
 start by resetting macros and lengths to the values shown above. That
 is what you actually get is is the same as
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{syntax}
 \cmd{\makechapterstyle}\marg{style}\{\\
   \cmd{\chapterstyle}\{default\}\\
@@ -11028,22 +11058,32 @@ is what you actually get is is the same as
 \end{syntax}
 
 
-
+\begin{paracol}{2}
+\switchEng
     To start things off,  the \cstyle{default} chapter
 style, which mimics the chapter heads in the standard \Lclass{book} and 
 \Lclass{report} classes, as it appears in \file{memoir.cls}:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \makechapterstyle{default}{}
 \chapterstyle{default}
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 -- since the \cstyle{default} style \emph{is} the initial value of
 \cmd{\makechapterstyle}. The actual code is seen above. 
+\switchFrench\TS{0}
 
 
-
+\switchEng
     As an example of setting up a simple chapterstyle, here is the code for 
 defining the \cstyle{section} chapterstyle. In this case it is principally
 a question of eliminating most of the printing and zeroing some spacing.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \makechapterstyle{section}{%
   \renewcommand*{\printchaptername}{}
@@ -11053,11 +11093,15 @@ a question of eliminating most of the printing and zeroing some spacing.
   \renewcommand*{\afterchapternum}{}
 }
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 In this style, \cmd{\printchaptername} is vacuous, so the normal `Chapter'
 is never typeset. The same font is used for the number and the title, and
 the number is typeset with a space after it. The macro \cmd{\afterchapternum}
 is vacuous, so the chapter title will be typeset immediately after the number.
+\switchFrench\TS{0}
 
+\switchEng
     In the standard classes the title of an unnumbered chapter is typeset
 at the same position on the page as the word `Chapter' for numbered chapters.
 The macro \cmd{\printchapternonum} is called just before an unnumbered 
@@ -11068,9 +11112,14 @@ the page then you could redefine \cmd{\printchapternonum} to insert
 the amount of vertical space taken by any `Chapter N' line. For example,
 as \cmd{\printchapternonum} is vaucuous in the \cstyle{default} chapterstyle
 the vertical position of a title depends on whether or not it is numbered.
+\switchFrench\TS{0}
 
+\switchEng
 The \cstyle{hangnum} style, which is like \cstyle{section} except that it
 puts the number in the margin, is defined as follows:
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \makechapterstyle{hangnum}{%
   \renewcommand*{\chapnumfont}{\chaptitlefont}
@@ -11085,20 +11134,31 @@ puts the number in the margin, is defined as follows:
   \renewcommand*{\afterchapternum}{}
 }
 \end{lcode}
+\begin{paracol}{2}
+\switchEng
 The chapter number is put at the left of a box wide enough for three digits.
 The box is put into the margin, via \cmd{\llap}, for typesetting. The
 chapter title is then typeset, starting at the left margin.
+\switchFrench\TS{0}
 
+\end{paracol}
 \begin{syntax}
 \lnc{\chapindent} \\
 \end{syntax}
 \glossary(chapindent)%
   {\cs{chapindent}}%
   {A length you can use in a defining chapter style (or anything else).}
+\begin{paracol}{2}
+\switchEng
 The length \lnc{\chapindent} is provided for use in specifying chapterstyles,
 but you could use it for any other purposes.
+\switchFrench\TS{0}
 
+\switchEng
     The definition of the \cstyle{companion} chapterstyle is more complicated.
+\switchFrench\TS{0}
+
+\end{paracol}
 \begin{lcode}
 \makechapterstyle{companion}{%
   \renewcommand*{\chapnamefont}{\normalfont\LARGE\scshape}
@@ -11114,11 +11174,15 @@ but you could use it for any other purposes.
 }
 \end{lcode}
 \PWnote{2009/09/07}{Fixed adjuswidth typo.}
+\begin{paracol}{2}
+\switchEng
 As shown in \fref{dccompanion} the chapter name is in small caps and set
 flushright. The title is also set flushright aligned with the outermost 
 part of the marginal notes. This is achieved by use of the \Ie{adjustwidth}
 environment\footnote{See \S\ref{sec:adjustwidth}.} to make \ltx\ think
 that the typeblock is locally wider than it actually is.
+\switchFrench\TS{0}
+
 \end{paracol}
 
 
