@@ -10382,8 +10382,8 @@ normal size by the time subsubsection heads are reached, or before.
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2019-11-11 16:55:48 +0100 (Mon, 11 Nov 2019) $}
-{$LastChangedRevision: 661 $}
+{$LastChangedDate: 2022-05-10 12:36:03 +0200 (Tue, 10 May 2022) $}
+{$LastChangedRevision: 725 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 \chapterstyle{demo3}
@@ -10699,9 +10699,9 @@ Main macro & default mark definition \\ \midrule
 \cs{subsubsection(*)}   & \verb?\newcommand*{\subsubsectionmark}[1]{}? \\
 \cs{paragraph(*)}       & \verb?\newcommand*{\paragraphmark}[1]{}? \\
 \cs{subparagraph(*)}    & \verb?\newcommand*{\subparagraphmark}[1]{}? \\
-\cs{tableofcontents(*)} & \verb?\newcommand*{\tocmark}[1]{}? \\
-\cs{listoffigures(*)}   & \verb?\newcommand*{\lofmark}[1]{}? \\
-\cs{listoftables(*)}    & \verb?\newcommand*{\lotmark}[1]{}? \\
+\cs{tableofcontents(*)} & \verb?\newcommand*{\tocmark}{}? \\
+\cs{listoffigures(*)}   & \verb?\newcommand*{\lofmark}{}? \\
+\cs{listoftables(*)}    & \verb?\newcommand*{\lotmark}{}? \\
 \cs{thebibliography}    & \verb?\newcommand*{\bibmark}{}? \\
 \cs{theindex}           & \verb?\newcommand*{\indexmark}{}? \\
 \cs{theglossary}        & \verb?\newcommand*{\glossarymark}{}? \\
@@ -13141,8 +13141,8 @@ other environments.
 
 \svnidlong
 {$Ignore: $}
-{$LastChangedDate: 2018-09-14 11:13:10 +0200 (Fri, 14 Sep 2018) $}
-{$LastChangedRevision: 620 $}
+{$LastChangedDate: 2021-06-28 13:55:32 +0200 (Mon, 28 Jun 2021) $}
+{$LastChangedRevision: 715 $}
 {$LastChangedBy: daleif@math.au.dk $}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -14968,11 +14968,12 @@ everything back to normal.
   \renewcommand{\cftchapterbreak}{\par\addpenalty{-\@highpenalty}}
   \setpnumwidth{2.55em}
   \setrmarg{3.55em}
-  \setcounter{tocdepth}{2}}
+  \setcounter{tocdepth}{2}
   \let\cftpartformatpnum\oldcftpartformatpnum
     \addtodef{\cftpartbreak}{\par}{}
   \let\cftbookformatpnum\oldcftbookformatpnum
     \addtodef{\cftbookbreak}{\par}{}
+  }
 \end{lcode}
 The first few lines restore some macros to their original definitions.
 \begin{lcode}

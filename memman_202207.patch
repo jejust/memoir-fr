@@ -1,0 +1,91 @@
+--- memman.tex	2021-03-23 23:28:54.000000000 +0100
++++ memman_202207.tex	2022-07-29 23:00:22.000000000 +0200
+@@ -10377,18 +10377,18 @@
+ 
+ 
+ 
+ %#% extend
+ %#% extstart include pagination-and-headers.tex
+ 
+ \svnidlong
+ {$Ignore: $}
+-{$LastChangedDate: 2019-11-11 16:55:48 +0100 (Mon, 11 Nov 2019) $}
+-{$LastChangedRevision: 661 $}
++{$LastChangedDate: 2022-05-10 12:36:03 +0200 (Tue, 10 May 2022) $}
++{$LastChangedRevision: 725 $}
+ {$LastChangedBy: daleif@math.au.dk $}
+ 
+ \chapterstyle{demo3}
+ 
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \chapter{Pagination and headers} \label{chap:pagination}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+@@ -10694,19 +10694,19 @@
+ \cs{book(*)}            & \verb?\newcommand*{\bookpagemark}[1]{}? \\
+ \cs{part(*)}            & \verb?\newcommand*{\partmark}[1]{}? \\
+ \cs{chapter(*)}         & \verb?\newcommand*{\chaptermark}[1]{}? \\
+ \cs{section(*)}         & \verb?\newcommand*{\sectionmark}[1]{}? \\
+ \cs{subsection(*)}      & \verb?\newcommand*{\subsectionmark}[1]{}? \\
+ \cs{subsubsection(*)}   & \verb?\newcommand*{\subsubsectionmark}[1]{}? \\
+ \cs{paragraph(*)}       & \verb?\newcommand*{\paragraphmark}[1]{}? \\
+ \cs{subparagraph(*)}    & \verb?\newcommand*{\subparagraphmark}[1]{}? \\
+-\cs{tableofcontents(*)} & \verb?\newcommand*{\tocmark}[1]{}? \\
+-\cs{listoffigures(*)}   & \verb?\newcommand*{\lofmark}[1]{}? \\
+-\cs{listoftables(*)}    & \verb?\newcommand*{\lotmark}[1]{}? \\
++\cs{tableofcontents(*)} & \verb?\newcommand*{\tocmark}{}? \\
++\cs{listoffigures(*)}   & \verb?\newcommand*{\lofmark}{}? \\
++\cs{listoftables(*)}    & \verb?\newcommand*{\lotmark}{}? \\
+ \cs{thebibliography}    & \verb?\newcommand*{\bibmark}{}? \\
+ \cs{theindex}           & \verb?\newcommand*{\indexmark}{}? \\
+ \cs{theglossary}        & \verb?\newcommand*{\glossarymark}{}? \\
+ \cs{PoemTitle}          & \verb?\newcommand*{\poemtitlemark}[1]{}? \\
+ \cs{PoemTitle*}         & \verb?\newcommand*{\poemtitlestarmark}[1]{}? \\
+ \bottomrule
+ \end{tabular}
+ \end{table}
+@@ -13136,18 +13136,18 @@
+ 
+ \index{list|)} %|
+ 
+ %#% extend
+ %#% extstart include content-lists.tex
+ 
+ \svnidlong
+ {$Ignore: $}
+-{$LastChangedDate: 2018-09-14 11:13:10 +0200 (Fri, 14 Sep 2018) $}
+-{$LastChangedRevision: 620 $}
++{$LastChangedDate: 2021-06-28 13:55:32 +0200 (Mon, 28 Jun 2021) $}
++{$LastChangedRevision: 715 $}
+ {$LastChangedBy: daleif@math.au.dk $}
+ 
+ %%%%%%%%%%%%%%%%%%%%%%%%%%
+ %%\chapterstyle{section}
+ %%%%%%%%%%%%%%%%%%%%%%%%%%
+ %\chapter{Tops and tails} \label{chap:topsandtails}
+ \chapter{Contents lists} \label{chap:toc}
+ 
+@@ -14963,21 +14963,22 @@
+   \addtodef{\cftchapterbreak}{\par}{}
+   \renewcommand*{\cftchapterfont}{\normalfont\sffamily}
+   \renewcommand*{\cftchapterleader}{%
+                  \sffamily\cftdotfill{\cftchapterdotsep}}
+   \renewcommand*{\cftchapterafterpnum}{}
+   \renewcommand{\cftchapterbreak}{\par\addpenalty{-\@highpenalty}}
+   \setpnumwidth{2.55em}
+   \setrmarg{3.55em}
+-  \setcounter{tocdepth}{2}}
++  \setcounter{tocdepth}{2}
+   \let\cftpartformatpnum\oldcftpartformatpnum
+     \addtodef{\cftpartbreak}{\par}{}
+   \let\cftbookformatpnum\oldcftbookformatpnum
+     \addtodef{\cftbookbreak}{\par}{}
++  }
+ \end{lcode}
+ The first few lines restore some macros to their original definitions.
+ \begin{lcode}
+ \addtodef{\cftchapterbreak}{\par}{}
+ \end{lcode}
+ ensures that a chapter entry starts off with a \piif{par}; this is needed
+ when the previous entry is a group of subsections and their paragraph
+ has to be ended. The remaining code lines simply set the appearance of 
